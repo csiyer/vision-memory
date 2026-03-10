@@ -1,6 +1,53 @@
 import json
 import matplotlib.pyplot as plt
 import numpy as np
+from scipy.stats import spearmanr
+
+def plot_memorability_correlation(group_name, group_models, data, colors_map):
+    if not group_models:
+        return
+
+    plt.figure(figsize=(10, 8))
+    
+    for model in group_models:
+        if "image_performance" not in data[model] or "lamem_scores" not in data[model]:
+            continue
+            
+        model_perf = data[model]["image_performance"]
+        lamem_perf = data[model]["lamem_scores"]
+        
+        # Align data
+        common_images = sorted(list(set(model_perf.keys()) & set(lamem_perf.keys())))
+        if not common_images:
+            continue
+            
+        x = [lamem_perf[img] for img in common_images]
+        y = [model_perf[img] for img in common_images]
+        
+        # Calculate Spearman correlation
+        corr, p_val = spearmanr(x, y)
+        
+        # Scatter plot
+        plt.scatter(x, y, alpha=0.5, label=f"{model} (ρ={corr:.2f})", color=colors_map[model])
+        
+        # Add regression line
+        if len(x) > 1:
+            z = np.polyfit(x, y, 1)
+            p = np.poly1d(z)
+            plt.plot(sorted(x), p(sorted(x)), "--", color=colors_map[model], alpha=0.8)
+
+    plt.xlabel("LaMem Ground Truth Score")
+    plt.ylabel("Model Hit Rate (Per Image)")
+    plt.title(f"Memorability Correlation ({group_name})")
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.5)
+    plt.xlim(0, 1)
+    plt.ylim(0, 1.1)
+    
+    filename = f"memorability_correlation_{group_name}.png"
+    plt.savefig(filename)
+    print(f"Saved {filename}")
+    plt.close()
 
 def plot_group(group_name, group_models, data, colors_map):
     if not group_models:
@@ -51,6 +98,9 @@ def plot_group(group_name, group_models, data, colors_map):
     plt.savefig(filename_hr)
     print(f"Saved {filename_hr}")
     plt.close()
+    
+    # --- Plot 3: Memorability Correlation ---
+    plot_memorability_correlation(group_name, group_models, data, colors_map)
 
 def plot_results(results_file="benchmark_results.json"):
     with open(results_file, "r") as f:
