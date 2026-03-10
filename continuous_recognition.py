@@ -37,12 +37,19 @@ class ContinuousRecognitionSequence:
 
             # if any images are overdue, show one
             if must_repeat:
-                img_id, t_first = waiting_room.pop(must_repeat[0])
+                img_id, t_first = waiting_room.pop(0) # Oldest must go
                 sequence.append((img_id, True, t - t_first - 1))
             
             # if no new images are left, show an old image
             elif not new_image_pool:
-                img_id, t_first = waiting_room.pop( random.choice(eligible_to_repeat) )
+                if not eligible_to_repeat:
+                    # Fallback: waiting room is not empty but none are 'old' enough
+                    # We take the oldest one anyway to avoid hanging
+                    idx_to_pop = 0
+                else:
+                    idx_to_pop = random.choice(eligible_to_repeat)
+                
+                img_id, t_first = waiting_room.pop(idx_to_pop)
                 sequence.append((img_id, True, t - t_first - 1))
 
             # no images ready to be repeated, show a new image and add to waiting room
