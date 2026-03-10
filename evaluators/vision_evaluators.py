@@ -122,24 +122,36 @@ class MambaVisionEvaluator(RecurrentVisionEvaluator):
             self.prev_state = features
             return float(score)
 
+class TitansNeuralMemory(torch.nn.Module):
+    """A small MLP that acts as the long-term memory for Titans."""
+    def __init__(self, dim=768):
+        super().__init__()
+        self.net = torch.nn.Sequential(
+            torch.nn.Linear(dim, dim),
+            torch.nn.ReLU(),
+            torch.nn.Linear(dim, dim)
+        )
+    def forward(self, x):
+        return self.net(x)
+
 class VisionTitansEvaluator(RecurrentVisionEvaluator):
     def __init__(self, model_name="vit_base_patch16_224", device="cuda"):
         super().__init__("vision_titans", device)
         import timm
-        # 1. Official Pre-trained 'Eyes' (ViT Backbone)
+        # 1. Official Pre-trained 'Eyes'
         self.backbone = timm.create_model(model_name, pretrained=True).to(device)
         self.backbone.eval()
         
-        # 2. Titans Neural Memory Parameters
+        # 2. Titans Nonlinear Neural Memory (MLP)
         self.dim = 768
-        # Memory Matrix M
-        self.M = torch.zeros(self.dim, self.dim).to(device)
-        # Gating/Learning rate parameters from paper
-        self.eta = 0.5   # Learning rate for memory update
-        self.alpha = 0.1 # Decay/Forgetting factor
+        self.memory_net = TitansNeuralMemory(self.dim).to(device)
+        self.optimizer = torch.optim.SGD(self.memory_net.parameters(), lr=0.1)
         
     def reset(self):
-        self.M = torch.zeros(self.dim, self.dim).to(self.device)
+        # Re-initialize weights to 'blank slate' for a new sequence
+        for layer in self.memory_net.net:
+            if hasattr(layer, 'reset_parameters'):
+                layer.reset_parameters()
 
     def process_trial(self, image, prompt=None):
         from torchvision import transforms
@@ -152,31 +164,29 @@ class VisionTitansEvaluator(RecurrentVisionEvaluator):
         img_tensor = transform(image).unsqueeze(0).to(self.device)
         
         with torch.no_grad():
-            # A. Extract Features (Pre-trained official weights)
+            # A. Extract Features
             features = self.backbone.forward_features(img_tensor)
             if hasattr(self.backbone, 'global_pool') and self.backbone.global_pool:
                 x = self.backbone.forward_head(features, pre_logits=True)
             else:
-                x = features[:, 0] # CLS token
-            
-            x = F.normalize(x, p=2, dim=-1).squeeze(0) # [dim]
-            
-            # B. Readout from Memory (Recognition Signal)
-            # Before we update the memory with the current image, we 'ask' the memory if it knows it.
-            # y_hat = M * x
-            prediction = torch.matmul(self.M, x)
-            
-            # Match score is the similarity between the current feature and what the memory predicted.
-            # If the memory 'knows' this image, the prediction will be high similarity to x.
-            match_score = F.cosine_similarity(x.unsqueeze(0), prediction.unsqueeze(0)).item()
-            
-            # C. Titans Update Rule (Learning to Memorize)
-            # M_t = M_{t-1} + eta * (x - M_{t-1} * x) @ x.T
-            # This is the 'Surprise-driven' update described in the paper
-            residual = x - prediction
-            update = self.eta * torch.outer(residual, x)
-            
-            # Apply update + slight weight decay (forgetting)
-            self.M = (1 - self.alpha) * self.M + update
-            
-            return float(match_score)
+                x = features[:, 0]
+            x = F.normalize(x, p=2, dim=-1) # [1, dim]
+
+        # B. Probe Memory (Recognition)
+        # We check how well the MLP can reconstruct the current signal BEFORE learning it.
+        # High reconstruction accuracy = High recognition.
+        self.memory_net.eval()
+        prediction = self.memory_net(x)
+        # Cosine similarity as match score (0 to 1)
+        match_score = F.cosine_similarity(x, prediction).item()
+        
+        # C. Titans 'Learning to Memorize' Update
+        # We perform 1 step of gradient descent to 'store' the current image in the MLPs weights.
+        self.memory_net.train()
+        self.optimizer.zero_grad()
+        output = self.memory_net(x)
+        loss = F.mse_loss(output, x)
+        loss.backward()
+        self.optimizer.step()
+        
+        return float(match_score)
