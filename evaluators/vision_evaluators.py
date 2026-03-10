@@ -91,6 +91,9 @@ class MambaVisionEvaluator(RecurrentVisionEvaluator):
             
         self.prev_state = None
 
+    def reset(self):
+        self.prev_state = None
+
     def process_trial(self, image, prompt=None):
         if self.model is None:
             return 0.5 # Fallback if library missing
