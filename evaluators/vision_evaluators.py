@@ -138,17 +138,16 @@ class VisionTitansEvaluator(RecurrentVisionEvaluator):
     def __init__(self, model_name="vit_base_patch16_224", device="cuda"):
         super().__init__("vision_titans", device)
         import timm
-        # 1. Official Pre-trained 'Eyes'
+        # 1. Pre-trained ViT Backbone
         self.backbone = timm.create_model(model_name, pretrained=True).to(device)
         self.backbone.eval()
         
-        # 2. Titans Nonlinear Neural Memory (MLP)
+        # 2. Titans Parameters
         self.dim = 768
         self.memory_net = TitansNeuralMemory(self.dim).to(device)
-        self.optimizer = torch.optim.SGD(self.memory_net.parameters(), lr=0.1)
+        self.eta = 0.5 # Base learning rate
         
     def reset(self):
-        # Re-initialize weights to 'blank slate' for a new sequence
         for layer in self.memory_net.net:
             if hasattr(layer, 'reset_parameters'):
                 layer.reset_parameters()
@@ -164,7 +163,6 @@ class VisionTitansEvaluator(RecurrentVisionEvaluator):
         img_tensor = transform(image).unsqueeze(0).to(self.device)
         
         with torch.no_grad():
-            # A. Extract Features
             features = self.backbone.forward_features(img_tensor)
             if hasattr(self.backbone, 'global_pool') and self.backbone.global_pool:
                 x = self.backbone.forward_head(features, pre_logits=True)
@@ -172,21 +170,38 @@ class VisionTitansEvaluator(RecurrentVisionEvaluator):
                 x = features[:, 0]
             x = F.normalize(x, p=2, dim=-1) # [1, dim]
 
-        # B. Probe Memory (Recognition)
-        # We check how well the MLP can reconstruct the current signal BEFORE learning it.
-        # High reconstruction accuracy = High recognition.
+        # --- OFFICIAL TITANS LOGIC ---
+        
+        # 1. Readout & Surprise Calculation
         self.memory_net.eval()
         prediction = self.memory_net(x)
-        # Cosine similarity as match score (0 to 1)
-        match_score = F.cosine_similarity(x, prediction).item()
         
-        # C. Titans 'Learning to Memorize' Update
-        # We perform 1 step of gradient descent to 'store' the current image in the MLPs weights.
+        # MSE Loss as the base for surprise
+        loss = F.mse_loss(prediction, x)
+        
+        # Surprise Signal s_t in [0, 1]
+        # In the paper, s_t = sigmoid(w * loss + b). 
+        # For zero-shot, we can use a sharp sigmoid on the loss.
+        surprise = torch.sigmoid(loss * 10 - 2).item() # Sharp transition
+        
+        # Recognition Score is (1 - surprise)
+        # Low surprise = We've seen this before = High Recognition Score
+        match_score = 1.0 - surprise
+
+        # 2. Surprise-Gated Update
+        # theta_t = theta_{t-1} - s_t * eta * grad(Loss)
         self.memory_net.train()
-        self.optimizer.zero_grad()
-        output = self.memory_net(x)
-        loss = F.mse_loss(output, x)
-        loss.backward()
-        self.optimizer.step()
+        
+        # Manual parameter update to allow surprise gating
+        current_prediction = self.memory_net(x)
+        update_loss = F.mse_loss(current_prediction, x)
+        
+        # Compute gradients
+        grads = torch.autograd.grad(update_loss, self.memory_net.parameters())
+        
+        # Apply Gated Update: update = surprise * learning_rate * gradients
+        with torch.no_grad():
+            for param, grad in zip(self.memory_net.parameters(), grads):
+                param -= surprise * self.eta * grad
         
         return float(match_score)
