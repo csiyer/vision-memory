@@ -1,5 +1,5 @@
 import os
-import google.generativeai as genai
+import google.genai as genai
 from openai import OpenAI
 from evaluators.base import BaseEvaluator
 
