@@ -1,7 +1,25 @@
 import torch
 import torch.nn.functional as F
 import numpy as np
+import os
 from evaluators.base import BaseEvaluator
+
+# Force slow but compatible path if kernels aren't installed correctly
+os.environ["MAMBA_SKIP_CUDA_KERNEL"] = "1"
+os.environ["CAUSAL_CONV1D_FORCE_SYCL"] = "0"
+
+try:
+    import mamba_ssm
+    from mamba_ssm import Mamba
+except ImportError:
+    mamba_ssm = None
+    print("Warning: mamba_ssm not found. RecurrentVisionEvaluator may fail.")
+
+try:
+    import causal_conv1d
+except ImportError:
+    causal_conv1d = None
+    print("Warning: causal_conv1d not found. Some SSM architectures may fail.")
 
 class ViTEvaluator(BaseEvaluator):
     def __init__(self, model_name="vit_base_patch16_224", device="cuda"):
