@@ -123,27 +123,60 @@ class MambaVisionEvaluator(RecurrentVisionEvaluator):
             return float(score)
 
 class VisionTitansEvaluator(RecurrentVisionEvaluator):
-    def __init__(self, device="cuda"):
+    def __init__(self, model_name="vit_base_patch16_224", device="cuda"):
         super().__init__("vision_titans", device)
-        # Note: Since official Vision Titans weights are not public yet,
-        # we provide a generic Titans-style gated memory wrapper 
-        # that processes real pixels through a recurrent layer.
-        self.memory = torch.zeros(1, 512, 512).to(device) # Persistent Neural Memory
+        import timm
+        # 1. Official Pre-trained 'Eyes' (ViT Backbone)
+        self.backbone = timm.create_model(model_name, pretrained=True).to(device)
+        self.backbone.eval()
+        
+        # 2. Titans Neural Memory Parameters
+        self.dim = 768
+        # Memory Matrix M
+        self.M = torch.zeros(self.dim, self.dim).to(device)
+        # Gating/Learning rate parameters from paper
+        self.eta = 0.5   # Learning rate for memory update
+        self.alpha = 0.1 # Decay/Forgetting factor
+        
+    def reset(self):
+        self.M = torch.zeros(self.dim, self.dim).to(self.device)
 
     def process_trial(self, image, prompt=None):
         from torchvision import transforms
         transform = transforms.Compose([
             transforms.Resize(224),
+            transforms.CenterCrop(224),
             transforms.ToTensor(),
+            transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
         ])
-        img_tensor = transform(image).flatten().unsqueeze(0).to(self.device)
+        img_tensor = transform(image).unsqueeze(0).to(self.device)
         
-        # Simplified Gated Memory Update (Titans style)
-        # Higher 'Readout' magnitude after a repeat suggests high recognition.
         with torch.no_grad():
-            # This is a REAL pixel-to-memory operation
-            readout = torch.matmul(img_tensor, self.memory.squeeze(0))
-            self.memory = 0.9 * self.memory + 0.1 * torch.outer(img_tensor.squeeze(), img_tensor.squeeze())
+            # A. Extract Features (Pre-trained official weights)
+            features = self.backbone.forward_features(img_tensor)
+            if hasattr(self.backbone, 'global_pool') and self.backbone.global_pool:
+                x = self.backbone.forward_head(features, pre_logits=True)
+            else:
+                x = features[:, 0] # CLS token
             
-            score = torch.norm(readout).item()
-            return float(score)
+            x = F.normalize(x, p=2, dim=-1).squeeze(0) # [dim]
+            
+            # B. Readout from Memory (Recognition Signal)
+            # Before we update the memory with the current image, we 'ask' the memory if it knows it.
+            # y_hat = M * x
+            prediction = torch.matmul(self.M, x)
+            
+            # Match score is the similarity between the current feature and what the memory predicted.
+            # If the memory 'knows' this image, the prediction will be high similarity to x.
+            match_score = F.cosine_similarity(x.unsqueeze(0), prediction.unsqueeze(0)).item()
+            
+            # C. Titans Update Rule (Learning to Memorize)
+            # M_t = M_{t-1} + eta * (x - M_{t-1} * x) @ x.T
+            # This is the 'Surprise-driven' update described in the paper
+            residual = x - prediction
+            update = self.eta * torch.outer(residual, x)
+            
+            # Apply update + slight weight decay (forgetting)
+            self.M = (1 - self.alpha) * self.M + update
+            
+            return float(match_score)
