@@ -94,7 +94,7 @@ if __name__ == "__main__":
                         choices=["vit", "gemini", "gpt4o", "mambavision", "titans", "all"])
     parser.add_argument("--device", type=str, default="cuda")
     parser.add_argument("--n_runs", type=int, default=1)
-    parser.add_argument("--n_images", type=int, default=100)
+    parser.add_argument("--n_images", type=int, default=50)
     args = parser.parse_args()
 
     dataset = DirectoryDataset("datasets/sample-lamem") 
