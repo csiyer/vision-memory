@@ -66,11 +66,22 @@ class OpenAIEvaluator(BaseEvaluator):
 class Qwen2VLEvaluator(BaseEvaluator):
     def __init__(self, model_id="Qwen/Qwen2-VL-7B-Instruct"):
         super().__init__("qwen2-vl-7b")
-        from transformers import Qwen2VLForConditionalGeneration, AutoProcessor
+        from transformers import Qwen2VLForConditionalGeneration, AutoProcessor, BitsAndBytesConfig
         from torch import bfloat16
-        # Use 4-bit quantization to fit on Colab
+        
+        # Correct way to load in 4-bit using BitsAndBytesConfig
+        quant_config = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_compute_dtype=bfloat16,
+            bnb_4bit_use_double_quant=True,
+            bnb_4bit_quant_type="nf4",
+        )
+        
         self.model = Qwen2VLForConditionalGeneration.from_pretrained(
-            model_id, torch_dtype=bfloat16, device_map="auto", load_in_4bit=True
+            model_id, 
+            torch_dtype=bfloat16, 
+            device_map="auto", 
+            quantization_config=quant_config
         )
         self.processor = AutoProcessor.from_pretrained(model_id)
         self.history = []
@@ -100,12 +111,23 @@ class Qwen2VLEvaluator(BaseEvaluator):
 class InternVLEvaluator(BaseEvaluator):
     def __init__(self, model_id="OpenGVLab/InternVL2-8B"):
         super().__init__("internvl2-8b")
-        from transformers import AutoModel, AutoTokenizer
+        from transformers import AutoModel, AutoTokenizer, BitsAndBytesConfig
         import torch
-        # Standard InternVL2 loading with 4-bit quantization
+        
+        quant_config = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_compute_dtype=torch.bfloat16,
+            bnb_4bit_use_double_quant=True,
+            bnb_4bit_quant_type="nf4",
+        )
+        
         self.model = AutoModel.from_pretrained(
-            model_id, torch_dtype=torch.bfloat16, low_cpu_mem_usage=True, 
-            trust_remote_code=True, device_map="auto", load_in_4bit=True
+            model_id, 
+            torch_dtype=torch.bfloat16, 
+            low_cpu_mem_usage=True, 
+            trust_remote_code=True, 
+            device_map="auto", 
+            quantization_config=quant_config
         ).eval()
         self.tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True, use_fast=False)
         self.history = None 
