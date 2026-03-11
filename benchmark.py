@@ -1,14 +1,14 @@
 import json
-import numpy as np
 import os
+import torch
 from continuous_recognition import run_task
 from stimuli import DirectoryDataset
 from metrics import calculate_metrics
-from evaluators.vlm_evaluators import GeminiEvaluator, OpenAIEvaluator
+from evaluators.vlm_evaluators import GeminiEvaluator, OpenAIEvaluator, Qwen2VLEvaluator, InternVLEvaluator
 
 import argparse
 
-def run_benchmark(dataset, models, min_delay=2, max_delay=100, n_images=50, n_runs=1):
+def run_benchmark(dataset, model_names, min_delay=2, max_delay=100, n_images=50, n_runs=1):
     results_path = "benchmark_results.json"
     scores_path = "datasets/sample_lamem_scores.json"
     
@@ -23,36 +23,44 @@ def run_benchmark(dataset, models, min_delay=2, max_delay=100, n_images=50, n_ru
         with open(scores_path, "r") as f:
             lamem_scores = json.load(f)
 
-    for model in models:
-        model_name = model.get_name()
-        print(f"\n>>> Starting benchmark for: {model_name} ({n_runs} runs) <<<")
+    for model_name_key in model_names:
+        # Instantiate model ONLY when needed to save VRAM
+        print(f"\n--- Loading Model: {model_name_key} ---")
+        if model_name_key == "gemini":
+            model = GeminiEvaluator("gemini-1.5-pro")
+        elif model_name_key == "gpt4o":
+            model = OpenAIEvaluator("gpt-4o-mini")
+        elif model_name_key == "qwen2":
+            model = Qwen2VLEvaluator()
+        elif model_name_key == "internvl2":
+            model = InternVLEvaluator()
+        else:
+            continue
+
+        model_display_name = model.get_name()
+        print(f"\n>>> Starting benchmark for: {model_display_name} ({n_runs} runs) <<<")
         
-        # Initialize aggregate stats for this model
         all_responses = []
         all_targets = []
         all_delays = []
-        image_stats = {} # name -> {"hits": 0, "total": 0}
+        image_stats = {} 
 
         for run_idx in range(n_runs):
             if n_runs > 1:
                 print(f"Run {run_idx+1}/{n_runs}...", end="\r")
             
             model.reset()
-            # Generate a fresh sequence for each run
             trials = run_task(dataset, min_delay, max_delay, n_images)
             
             for trial in trials:
                 score = model.process_trial(trial["image"], trial["prompt"])
-                # For VLMs, the score is typically categorical or based on text response
                 response = 1 if score > 0.5 else 0 
                 
-                # Global metrics
                 all_responses.append(response)
                 all_targets.append(trial["target"])
                 if trial["target"] == 1:
                     all_delays.append(trial["delay"])
 
-                # Per-image Stats (only for the 'repeat' trial)
                 if trial["target"] == 1:
                     img_name = trial["metadata"]["name"]
                     if img_name not in image_stats:
@@ -61,20 +69,16 @@ def run_benchmark(dataset, models, min_delay=2, max_delay=100, n_images=50, n_ru
                     if response == 1:
                         image_stats[img_name]["hits"] += 1
 
-        print(f"\nCompleted {n_runs} runs for {model_name}.")
+        print(f"\nCompleted {n_runs} runs for {model_display_name}.")
         
-        # Calculate metrics over all runs
         model_metrics = calculate_metrics(all_responses, all_targets)
-        
-        # Prepare delay-hit pairs for plotting
         hits_by_delay = [all_responses[i] for i in range(len(all_targets)) if all_targets[i] == 1]
         
-        # Prepare correlation data
         model_memorability = {}
         for img, stats in image_stats.items():
             model_memorability[img] = stats["hits"] / stats["total"] if stats["total"] > 0 else 0
             
-        results[model_name] = {
+        results[model_display_name] = {
             "metrics": model_metrics,
             "delays": all_delays,
             "hits": hits_by_delay,
@@ -85,12 +89,17 @@ def run_benchmark(dataset, models, min_delay=2, max_delay=100, n_images=50, n_ru
         with open(results_path, "w") as f:
             json.dump(results, f, indent=4)
             
+        # CLEAR MEMORY before next model
+        del model
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            
     return results
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, default="all", 
-                        choices=["gemini", "gpt4o", "all"])
+                        choices=["gemini", "gpt4o", "qwen2", "internvl2", "all"])
     parser.add_argument("--device", type=str, default="cuda")
     parser.add_argument("--n_runs", type=int, default=1)
     parser.add_argument("--n_images", type=int, default=50)
@@ -98,17 +107,13 @@ if __name__ == "__main__":
 
     dataset = DirectoryDataset("datasets/sample-lamem") 
     
-    models_to_test = []
-    if args.model in ["gemini", "all"]:
-        models_to_test.append(GeminiEvaluator("gemini-1.5-flash"))
-    if args.model in ["gpt4o", "all"]:
-        models_to_test.append(OpenAIEvaluator("gpt-4o"))
-    
-    if not models_to_test:
-        print(f"Error: Model {args.model} not implemented or selected.")
+    selected_models = []
+    if args.model == "all":
+        selected_models = ["gemini", "gpt4o", "qwen2", "internvl2"]
     else:
-        run_benchmark(dataset, models_to_test, 
-                      min_delay=2, max_delay=100, 
-                      n_images=args.n_images, 
-                      n_runs=args.n_runs)
-        print("\nBenchmark completed.")
+        selected_models = [args.model]
+    
+    run_benchmark(dataset, selected_models, 
+                  min_delay=2, max_delay=100, 
+                  n_images=args.n_images, 
+                  n_runs=args.n_runs)

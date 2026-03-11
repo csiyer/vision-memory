@@ -1,12 +1,16 @@
-numpy
-scipy
-matplotlib
-pillow
+transformers>=4.45.0
+qwen_vl_utils
+bitsandbytes
+accelerate
 torch
 torchvision
 timm
-openai
 google-genai
-transformers
+openai
+scipy
+matplotlib
+pillow
+numpy
+sentencepiece
 # Note: causal-conv1d and mamba-ssm are required for Mamba/Titans but
 # must be installed manually on GPU-enabled Linux (Colab).
