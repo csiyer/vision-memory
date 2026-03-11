@@ -108,25 +108,20 @@ def plot_results(results_file="benchmark_results.json"):
         
     all_models = list(data.keys())
     # Define groups
-    vision_keywords = ["vit", "mamba", "titans", "recurrent"]
     vlm_keywords = ["gemini", "gpt", "qwen", "intern"]
     
-    vision_models = []
     vlm_models = []
     
     for m in all_models:
         m_lower = m.lower()
         if any(kw in m_lower for kw in vlm_keywords):
             vlm_models.append(m)
-        else:
-            vision_models.append(m)
             
     # Stable color mapping
     cmap = plt.cm.get_cmap("tab10")
     colors_map = {m: cmap(i % 10) for i, m in enumerate(all_models)}
 
     # Generate plots
-    plot_group("vision-0shot", vision_models, data, colors_map)
     plot_group("vlm", vlm_models, data, colors_map)
 
 if __name__ == "__main__":
