@@ -15,15 +15,15 @@ class SourceMemoryTask:
         n = min(self.n_images, len(self.dataset))
         indices = list(range(n))
         random.shuffle(indices)
-        
+
         study_sequence = [self.dataset.get_image(i) for i in indices]
-        
+
         # Test phase: for each image, ask for its position (1 to n)
         test_phase = []
         # We test in a random order
         test_indices = list(range(n))
         random.shuffle(test_indices)
-        
+
         for i in test_indices:
             test_phase.append({
                 "image": study_sequence[i],
@@ -31,7 +31,7 @@ class SourceMemoryTask:
                 "target": i + 1,
                 "metadata": self.dataset.get_metadata(indices[i])
             })
-            
+
         return {
             "study_prompt": f"Here is a sequence of {n} images to remember.",
             "study_sequence": study_sequence,

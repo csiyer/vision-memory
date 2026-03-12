@@ -8,7 +8,7 @@ class ContinuousRecognitionTask:
         self.min_delay = min_delay
         self.max_delay = max_delay
         self.p_old = p_old
-        
+
         if dataset_name == 'things':
             # We need n_images unique images, but some will be repeated.
             # p_old is the probability that a trial is an 'old' trial.
@@ -30,13 +30,13 @@ class ContinuousRecognitionTask:
         n_unique = min(self.n_images, len(self.dataset))
         total_trials = int(n_unique / (1 - self.p_old))
         n_old_needed = total_trials - n_unique
-        
+
         sequence = []
         new_indices = list(range(n_unique))
         random.shuffle(new_indices)
-        
+
         waiting_room = [] # (img_idx, introduction_time)
-        
+
         current_time = 0
         while len(sequence) < total_trials:
             eligible_to_repeat = [
@@ -47,7 +47,7 @@ class ContinuousRecognitionTask:
                 (idx, img_idx, t_intro) for idx, (img_idx, t_intro) in enumerate(waiting_room)
                 if (current_time - t_intro - 1) >= self.max_delay
             ]
-            
+
             # Decide whether to show 'old' or 'new'
             show_old = False
             if must_repeat:
@@ -58,7 +58,7 @@ class ContinuousRecognitionTask:
                 # Weighted choice to maintain p_old
                 if random.random() < self.p_old:
                     show_old = True
-            
+
             if show_old and eligible_to_repeat:
                 # Pick one from eligible
                 if must_repeat:
@@ -66,7 +66,7 @@ class ContinuousRecognitionTask:
                     idx_in_waiting, img_idx, t_intro = must_repeat[0]
                 else:
                     idx_in_waiting, img_idx, t_intro = random.choice(eligible_to_repeat)
-                
+
                 waiting_room.pop(idx_in_waiting)
                 sequence.append({
                     "image_idx": img_idx,
@@ -93,9 +93,9 @@ class ContinuousRecognitionTask:
                     })
                 else:
                     break # Out of images
-            
+
             current_time += 1
-            
+
         return sequence
 
     def get_trials(self):

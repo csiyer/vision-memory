@@ -7,7 +7,7 @@ class AFCRecognitionTask:
         self.n_images = n_images
         self.foil_type = foil_type
         self.dataset_name = dataset_name
-        
+
         if dataset_name == 'things':
             if foil_type == 'state':
                 raise ValueError("State foils not supported for THINGS dataset.")
@@ -25,11 +25,11 @@ class AFCRecognitionTask:
                 # For 'all', we split half/half novel/exemplar (since state isn't supported)
                 n_novel = n if foil_type == 'novel' else n // 2
                 n_exemplar = n - n_novel
-                
+
                 # Novel: random categories
                 indices = list(range(len(self.dataset)))
                 random.shuffle(indices)
-                
+
                 # First n_novel pairs use two different categories
                 for i in range(0, n_novel * 2, 2):
                     pairs.append({
@@ -37,7 +37,7 @@ class AFCRecognitionTask:
                         "foil": self.dataset.get_image(indices[i+1], 0),
                         "type": "novel"
                     })
-                
+
                 # Remaining n_exemplar pairs use two exemplars of the same category
                 # We start from where we left off in 'indices' if any left, or just use new ones
                 start_idx = n_novel * 2
@@ -89,29 +89,29 @@ class AFCRecognitionTask:
              pairs += self._get_pairs('novel', n3)
              pairs += self._get_pairs('exemplar', n3)
              pairs += self._get_pairs('state', n - 2*n3)
-             
+
         return pairs
 
     def get_trials(self):
         pairs = self._get_pairs(self.foil_type, self.n_images)
         random.shuffle(pairs)
-        
+
         study_sequence = [p['original'] for p in pairs]
-        
+
         test_phase = []
         for p in pairs:
             # Randomly swap order for 2-AFC
             images = [p['original'], p['foil']]
             random.shuffle(images)
             target = 1 if images[0] == p['original'] else 2
-            
+
             test_phase.append({
                 "images": images,
                 "prompt": "Which of these two images was in the sequence before? (1 or 2)",
                 "target": target,
                 "type": p['type']
             })
-            
+
         return {
             "study_prompt": "Here is a sequence of images to remember.",
             "study_sequence": study_sequence,

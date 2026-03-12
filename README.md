@@ -3,7 +3,7 @@
 NOTE: make sure to unzip the memory_datasets if using the Brady stimulus sets; code should work fine for the THINGS dataset.
 
 ### 1. Continuous Recognition
-Show a sequence of images, for each image respond if the image has already appeared in the sequence or not. 
+Show a sequence of images, for each image respond if the image has already appeared in the sequence or not.
 
 By default, images are streamed from the [THINGS Dataset](https://things-initiative.org) via [HuggingFace](https://huggingface.co/datasets/Haitao999/things-eeg).
 

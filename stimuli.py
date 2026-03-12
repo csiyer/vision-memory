@@ -8,7 +8,7 @@ class DirectoryDataset():
     def __init__(self, image_dir, extensions=(".jpg", ".jpeg", ".png", ".bmp", ".webp")):
         self.image_dir = Path(image_dir)
         self.image_paths = sorted([
-            p for p in self.image_dir.iterdir() 
+            p for p in self.image_dir.iterdir()
             if p.suffix.lower() in extensions
         ])
         if not self.image_paths:
@@ -42,14 +42,14 @@ class ThingsDataset:
                     break
                 except:
                     continue
-            
+
             if self.ds is None:
                 raise ValueError("Could not find THINGS dataset on Hugging Face. Please verify the dataset name.")
-            
+
             # Map category name to list of images
-            self.category_groups = {} 
+            self.category_groups = {}
             self.category_names = [] # Maintain order of arrival
-            
+
             # For ImageFolder style datasets, we need the names from features
             meta_ds = load_dataset(self.name, split="train") # Small download for metadata
             if hasattr(meta_ds, 'features') and 'label' in meta_ds.features:
@@ -65,27 +65,27 @@ class ThingsDataset:
                     cat = id_to_name[label]
                 else:
                     cat = item.get('category') or item.get('concept') or f"cat_{label}"
-                
+
                 if cat not in self.category_groups:
                     if n_categories and len(self.category_groups) >= n_categories:
                         continue
                     self.category_groups[cat] = []
                     self.category_names.append(cat)
-                
+
                 if len(self.category_groups[cat]) < exemplars_per_category:
                     img = item['image']
                     if not isinstance(img, Image.Image):
                         img = Image.fromarray(np.array(img))
                     self.category_groups[cat].append(img.convert("RGB"))
-                
+
                 # Check if we have enough
                 if n_categories and len(self.category_groups) >= n_categories:
                     # Check if all have enough exemplars
                     if all(len(self.category_groups[c]) >= exemplars_per_category for c in self.category_names):
                         break
-            
+
             print(f"Loaded {len(self.category_groups)} categories with up to {exemplars_per_category} exemplars each.")
-            
+
         except Exception as e:
             print(f"Error loading THINGS dataset: {e}")
             self.category_groups = {}
@@ -113,7 +113,7 @@ class BradyDataset:
         else:
              # Default to Brady2008 prefix if just 'Objects', 'Exemplar', 'State'
              self.path = self.root / f"Brady2008{type}"
-        
+
         self.image_paths = sorted([p for p in self.path.glob('*') if p.suffix.lower() in ('.jpg', '.png', '.jpeg')])
 
     def __len__(self):
@@ -128,17 +128,17 @@ class BradyDataset:
 
 class LaMemDataset():
     """
-    Skeleton for LaMem dataset. 
+    Skeleton for LaMem dataset.
     In a real scenario, this would handle downloading and metadata parsing.
     """
     def __init__(self, root_dir):
         self.root_dir = Path(root_dir)
         self.image_dir = self.root_dir / "images"
         self.metadata_file = self.root_dir / "lamem_score.txt" # Common filename for LaMem
-        
+
         self.image_paths = []
         self.scores = {} # image_name -> score
-        
+
         if self.metadata_file.exists():
             with open(self.metadata_file, "r") as f:
                 for line in f:
@@ -173,32 +173,32 @@ class LaMemDataset():
 def generate_color_palette(n_colors=36):
     """Generates a visual palette with numbered colors."""
     import colorsys
-    
+
     tile_size = 100
     cols = 6
     rows = (n_colors + cols - 1) // cols
     palette = Image.new("RGB", (cols * tile_size, rows * tile_size), (255, 255, 255))
     draw = ImageDraw.Draw(palette)
-    
+
     try:
         font = ImageFont.truetype("Arial.ttf", 24)
     except:
         font = ImageFont.load_default()
 
     hues = np.linspace(0, 1.0, n_colors, endpoint=False)
-    
+
     for i, hue in enumerate(hues):
         r_idx = i // cols
         c_idx = i % cols
-        
+
         rgb = colorsys.hsv_to_rgb(hue, 1.0, 1.0)
         color = tuple(int(x * 255) for x in rgb)
-        
+
         x0, y0 = c_idx * tile_size, r_idx * tile_size
         x1, y1 = x0 + tile_size, y0 + tile_size
         draw.rectangle([x0, y0, x1, y1], fill=color, outline="black")
         draw.text((x0 + 5, y0 + 5), str(i + 1), fill=(0, 0, 0), font=font)
-        
+
     return palette
 
 
