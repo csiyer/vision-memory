@@ -1,131 +1,132 @@
 import json
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.stats import spearmanr
+from pathlib import Path
 
-def plot_memorability_correlation(group_name, group_models, data, colors_map):
-    if not group_models:
-        return
+def load_target_data():
+    target_path = Path("memory_datasets/target_data.json")
+    if target_path.exists():
+        with open(target_path, "r") as f:
+            return json.load(f)
+    return {}
 
-    plt.figure(figsize=(10, 8))
+def plot_continuous_recognition(models_data, output_dir="plots"):
+    """
+    Plots d-prime, weighted F1, and hit rate vs delay for continuous recognition.
+    """
+    Path(output_dir).mkdir(exist_ok=True)
+    target_data = load_target_data().get("Brady2008Continuous", {})
     
-    for model in group_models:
-        if "image_performance" not in data[model] or "lamem_scores" not in data[model]:
-            continue
-            
-        model_perf = data[model]["image_performance"]
-        lamem_perf = data[model]["lamem_scores"]
-        
-        # Align data
-        common_images = sorted(list(set(model_perf.keys()) & set(lamem_perf.keys())))
-        if not common_images:
-            continue
-            
-        x = [lamem_perf[img] for img in common_images]
-        y = [model_perf[img] for img in common_images]
-        
-        # Calculate Spearman correlation
-        corr, p_val = spearmanr(x, y)
-        
-        # Scatter plot
-        plt.scatter(x, y, alpha=0.5, label=f"{model} (ρ={corr:.2f})", color=colors_map[model])
-        
-        # Add regression line
-        if len(x) > 1:
-            z = np.polyfit(x, y, 1)
-            p = np.poly1d(z)
-            plt.plot(sorted(x), p(sorted(x)), "--", color=colors_map[model], alpha=0.8)
-
-    plt.xlabel("LaMem Ground Truth Score")
-    plt.ylabel("Model Hit Rate (Per Image)")
-    plt.title(f"Memorability Correlation ({group_name})")
+    # D-prime and F1
+    plt.figure(figsize=(12, 5))
+    models = list(models_data.keys())
+    d_primes = [models_data[m].get("d_prime", 0) for m in models]
+    f1s = [models_data[m].get("weighted_f1", 0) for m in models]
+    
+    x = np.arange(len(models))
+    width = 0.35
+    
+    plt.subplot(1, 2, 1)
+    plt.bar(x - width/2, d_primes, width, label='d-prime')
+    plt.bar(x + width/2, f1s, width, label='weighted F1')
+    plt.xticks(x, models, rotation=45)
+    plt.ylabel("Score")
+    plt.title("Continuous Recognition Performance")
     plt.legend()
-    plt.grid(True, linestyle='--', alpha=0.5)
-    plt.xlim(0, 1)
-    plt.ylim(0, 1.1)
     
-    filename = f"memorability_correlation_{group_name}.png"
-    plt.savefig(filename)
-    print(f"Saved {filename}")
-    plt.close()
-
-def plot_group(group_name, group_models, data, colors_map):
-    if not group_models:
-        return
-
-    # --- Plot 1: D-Prime ---
-    plt.figure(figsize=(10, 6))
-    d_primes = [data[m]["metrics"]["d_prime"] for m in group_models]
+    # Hit rate vs delay
+    plt.subplot(1, 2, 2)
+    if "hit_rate_delays" in target_data:
+        plt.plot(target_data["hit_rate_delays"], target_data["hit_rate_by_delay"][:len(target_data["hit_rate_delays"])], 
+                 'k--', marker='s', label='Human (Brady2008)')
     
-    plt.bar(group_models, d_primes, color=[colors_map[m] for m in group_models])
-    plt.ylabel("d' (Sensitivity)")
-    plt.title(f"Recognition Memory Sensitivity ({group_name})")
-    plt.grid(axis='y', linestyle='--', alpha=0.7)
-    filename_dp = f"dprimes_{group_name}.png"
-    plt.savefig(filename_dp)
-    print(f"Saved {filename_dp}")
-    plt.close()
-    
-    # --- Plot 2: Hit Rate by Delay ---
-    plt.figure(figsize=(12, 6))
-    bins = np.arange(0, 110, 10)
-    bin_centers = (bins[:-1] + bins[1:]) / 2
-
-    for model in group_models:
-        delays = np.array(data[model]["delays"])
-        hits = np.array(data[model]["hits"])
-        
-        bin_means = []
-        for j in range(len(bins)-1):
-            mask = (delays >= bins[j]) & (delays < bins[j+1])
-            if np.any(mask):
-                bin_means.append(np.mean(hits[mask]))
-            else:
-                bin_means.append(np.nan)
-        
-        bin_means = np.array(bin_means)
-        valid_mask = ~np.isnan(bin_means)
-        
-        plt.plot(bin_centers[valid_mask], bin_means[valid_mask], marker='o', label=model, color=colors_map[model], linewidth=2)
-        
-    plt.xlabel("Delay (Number of intermediate images)")
+    for m in models:
+        hr_delay = models_data[m].get("hit_rate_by_delay", {})
+        if hr_delay:
+            delays = sorted([int(d) for d in hr_delay.keys()])
+            rates = [hr_delay[str(d)] for d in delays]
+            plt.plot(delays, rates, marker='o', label=m)
+            
+    plt.xscale('log')
+    plt.xlabel("Delay (images)")
     plt.ylabel("Hit Rate")
-    plt.title(f"Memory Decay: Hit Rate vs. Delay ({group_name})")
+    plt.title("Hit Rate by Delay")
     plt.legend()
-    plt.grid(True, linestyle='--', alpha=0.5)
-    plt.ylim(0, 1.1)
-    filename_hr = f"hitrate_delay_{group_name}.png"
-    plt.savefig(filename_hr)
-    print(f"Saved {filename_hr}")
+    
+    plt.tight_layout()
+    plt.savefig(f"{output_dir}/continuous_recognition.png")
     plt.close()
-    
-    # --- Plot 3: Memorability Correlation ---
-    plot_memorability_correlation(group_name, group_models, data, colors_map)
 
-def plot_results(results_file="benchmark_results.json"):
-    with open(results_file, "r") as f:
-        data = json.load(f)
+def plot_2afc(models_data, output_dir="plots"):
+    """Plots accuracy by foil type for 2-AFC."""
+    Path(output_dir).mkdir(exist_ok=True)
+    target_data = load_target_data().get("Brady2008AFC", {}).get("accuracy", {})
+    
+    plt.figure(figsize=(10, 6))
+    foil_types = ["novel", "exemplar", "state"]
+    models = list(models_data.keys())
+    
+    x = np.arange(len(foil_types))
+    width = 0.8 / (len(models) + 1)
+    
+    # Human data
+    human_accs = [target_data.get(f, 0) for f in foil_types]
+    plt.bar(x - (len(models)*width)/2, human_accs, width, color='gray', alpha=0.5, label='Human')
+    
+    for i, m in enumerate(models):
+        accs = [models_data[m].get("accuracy_by_type", {}).get(f, 0) for f in foil_types]
+        plt.bar(x - (len(models)*width)/2 + (i+1)*width, accs, width, label=m)
         
-    all_models = list(data.keys())
-    # Define groups
-    vlm_keywords = ["gemini", "gpt", "qwen", "intern"]
+    plt.xticks(x, foil_types)
+    plt.ylabel("Accuracy")
+    plt.title("2-AFC Recognition Accuracy")
+    plt.legend()
+    plt.ylim(0.5, 1.0)
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
     
-    vlm_models = []
+    plt.savefig(f"{output_dir}/afc_recognition.png")
+    plt.close()
+
+def plot_source_memory(models_data, output_dir="plots"):
+    """Plots average error for source memory."""
+    Path(output_dir).mkdir(exist_ok=True)
+    plt.figure(figsize=(8, 6))
+    models = list(models_data.keys())
+    errors = [models_data[m].get("average_error", 0) for m in models]
     
-    for m in all_models:
-        m_lower = m.lower()
-        if any(kw in m_lower for kw in vlm_keywords):
-            vlm_models.append(m)
-            
-    # Stable color mapping
-    cmap = plt.cm.get_cmap("tab10")
-    colors_map = {m: cmap(i % 10) for i, m in enumerate(all_models)}
+    plt.bar(models, errors)
+    plt.ylabel("Average Position Error")
+    plt.title("Source Memory Error")
+    plt.savefig(f"{output_dir}/source_memory.png")
+    plt.close()
 
-    # Generate plots
-    plot_group("vlm", vlm_models, data, colors_map)
-
-if __name__ == "__main__":
-    try:
-        plot_results()
-    except FileNotFoundError:
-        print("Error: benchmark_results.json not found. Run benchmark.py first.")
+def plot_color_memory(models_data, output_dir="plots"):
+    """Plots precision and guess rate for color memory."""
+    Path(output_dir).mkdir(exist_ok=True)
+    target_data = load_target_data().get("Brady2013Color", {}).get("long_term_memory", {})
+    
+    plt.figure(figsize=(12, 5))
+    models = list(models_data.keys())
+    
+    # Guess rate
+    plt.subplot(1, 2, 1)
+    guess_rates = [models_data[m].get("guess_rate_heuristic", 0) for m in models]
+    plt.bar(models, guess_rates, label='Model')
+    if "guess_rate" in target_data:
+        plt.axhline(y=target_data["guess_rate"], color='r', linestyle='--', label='Human (LTM)')
+    plt.ylabel("Guess Rate")
+    plt.title("Color Memory: Guess Rate")
+    plt.legend()
+    
+    # Precision
+    plt.subplot(1, 2, 2)
+    precisions = [models_data[m].get("precision_heuristic", 0) for m in models]
+    plt.bar(models, precisions, label='Model')
+    # Target precision is often in SD degrees, our heuristic is 1/std
+    # This is a bit loose but shows the idea.
+    plt.ylabel("Precision (1/std)")
+    plt.title("Color Memory: Precision")
+    
+    plt.tight_layout()
+    plt.savefig(f"{output_dir}/color_memory.png")
+    plt.close()
