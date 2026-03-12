@@ -1,5 +1,7 @@
 # Vision Memory Tasks
 
+NOTE: make sure to unzip the memory_datasets if using the Brady stimulus sets; code should work fine for the THINGS dataset.
+
 ### 1. Continuous Recognition
 Show a sequence of images, for each image respond if the image has already appeared in the sequence or not. 
 
