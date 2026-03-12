@@ -94,4 +94,25 @@ def calculate_color_metrics(reported_colors, actual_colors, n_colors=36):
         "guess_rate_heuristic": float(guess_rate),
         "precision_heuristic": float(1.0 / np.std(diff)) if np.std(diff) > 0 else 0
     }
+
+def calculate_pam_metrics(results):
+    """Calculates accuracy for Paired Associate Memory."""
+    if not results:
+        return {"accuracy": 0, "n_correct": 0, "total": 0}
+    
+    n_correct = 0
+    total = len(results)
+    
+    for res in results:
+        target = str(res.get('target', '')).strip().lower()
+        reported = str(res.get('reported', '')).strip().lower()
+        if target == reported:
+            n_correct += 1
+            
+    accuracy = n_correct / total if total > 0 else 0
+    return {
+        "accuracy": accuracy,
+        "n_correct": n_correct,
+        "total": total
+    }
 #
