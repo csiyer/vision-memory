@@ -17,11 +17,11 @@ class ContinuousRecognitionTask:
             # n_new = n_images (unique images).
             # T = n_images / (1 - p_old).
             total_trials = int(n_images / (1 - p_old))
-            self.dataset = ThingsDataset(n_images=n_images)
+            self.dataset = ThingsDataset(n_categories=n_images)
         elif dataset_name == 'Brady2008':
             self.dataset = BradyDataset(type='Objects')
         else:
-            self.dataset = ThingsDataset(n_images=n_images)
+            self.dataset = ThingsDataset(n_categories=n_images)
 
     def generate_sequence(self):
         """

@@ -5,11 +5,11 @@ class SourceMemoryTask:
     def __init__(self, dataset_name='things', n_images=20):
         self.n_images = n_images
         if dataset_name == 'things':
-            self.dataset = ThingsDataset(n_images=n_images)
+            self.dataset = ThingsDataset(n_categories=n_images)
         elif dataset_name == 'Brady2008':
             self.dataset = BradyDataset(type='Objects')
         else:
-            self.dataset = ThingsDataset(n_images=n_images)
+            self.dataset = ThingsDataset(n_categories=n_images)
 
     def get_trials(self):
         n = min(self.n_images, len(self.dataset))

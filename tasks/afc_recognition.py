@@ -11,7 +11,9 @@ class AFCRecognitionTask:
         if dataset_name == 'things':
             if foil_type == 'state':
                 raise ValueError("State foils not supported for THINGS dataset.")
-            self.dataset = ThingsDataset(n_images=n_images * 2) # Get extra for novel foils
+            # If we need exemplars, we need 2 per category
+            exemplars = 2 if foil_type in ['exemplar', 'all'] else 1
+            self.dataset = ThingsDataset(n_categories=n_images, exemplars_per_category=exemplars)
         else:
             self.dataset = BradyDataset(type='Objects')
 
@@ -19,29 +21,43 @@ class AFCRecognitionTask:
         pairs = []
         if self.dataset_name == 'things':
             # Handle THINGS
-            unique_images = [self.dataset.get_image(i) for i in range(len(self.dataset))]
             if foil_type == 'novel' or foil_type == 'all':
-                # Split half/half novel/exemplar if 'all'
+                # For 'all', we split half/half novel/exemplar (since state isn't supported)
                 n_novel = n if foil_type == 'novel' else n // 2
                 n_exemplar = n - n_novel
                 
-                # Novel: random pairing
-                indices = list(range(len(unique_images)))
+                # Novel: random categories
+                indices = list(range(len(self.dataset)))
                 random.shuffle(indices)
+                
+                # First n_novel pairs use two different categories
                 for i in range(0, n_novel * 2, 2):
                     pairs.append({
-                        "original": unique_images[indices[i]],
-                        "foil": unique_images[indices[i+1]],
+                        "original": self.dataset.get_image(indices[i], 0),
+                        "foil": self.dataset.get_image(indices[i+1], 0),
                         "type": "novel"
                     })
                 
-                # Exemplar for things? The user said "split half/half between novel and exemplar".
-                # But THINGS doesn't have explicit exemplars. I'll just use novel for both or 
-                # maybe just pick different categories.
-                for i in range(n_novel * 2, (n_novel + n_exemplar) * 2, 2):
-                     pairs.append({
-                        "original": unique_images[indices[i]],
-                        "foil": unique_images[indices[i+1]],
+                # Remaining n_exemplar pairs use two exemplars of the same category
+                # We start from where we left off in 'indices' if any left, or just use new ones
+                start_idx = n_novel * 2
+                for i in range(start_idx, start_idx + n_exemplar):
+                    if i < len(indices):
+                        idx = indices[i]
+                        pairs.append({
+                            "original": self.dataset.get_image(idx, 0),
+                            "foil": self.dataset.get_image(idx, 1),
+                            "type": "exemplar"
+                        })
+            elif foil_type == 'exemplar':
+                # All pairs are exemplars of the same category
+                indices = list(range(len(self.dataset)))
+                random.shuffle(indices)
+                for i in range(min(n, len(indices))):
+                    idx = indices[i]
+                    pairs.append({
+                        "original": self.dataset.get_image(idx, 0),
+                        "foil": self.dataset.get_image(idx, 1),
                         "type": "exemplar"
                     })
             return pairs

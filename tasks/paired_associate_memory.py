@@ -9,7 +9,7 @@ class PairedAssociateMemoryTask:
         
         # Load images
         if dataset_name == 'things':
-            self.dataset = ThingsDataset(n_images=n_images)
+            self.dataset = ThingsDataset(n_categories=n_images)
         else:
             self.dataset = BradyDataset(type='Objects')
             

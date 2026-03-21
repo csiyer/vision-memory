@@ -26,16 +26,19 @@ class DirectoryDataset():
 
 class ThingsDataset:
     """Gets images from the THINGS dataset via Hugging Face."""
-    def __init__(self, n_images=None):
+    def __init__(self, n_categories=None, exemplars_per_category=1):
         try:
             from datasets import load_dataset
-            # Try a few common names
-            names = ["He-Bart/THINGS", "Hebart/THINGS", "THINGS-data/THINGS", "RAIlab/THINGS"]
+            # Prioritize the one the user mentioned
+            names = ["Haitao999/things-eeg", "He-Bart/THINGS", "Hebart/THINGS", "THINGS-data/THINGS", "RAIlab/THINGS"]
             self.ds = None
+            self.name = None
             for name in names:
                 try:
+                    # Use streaming=True to avoid downloading 30GB at once
                     self.ds = load_dataset(name, split="train", streaming=True)
-                    print(f"Successfully loaded THINGS via {name}")
+                    self.name = name
+                    print(f"Successfully connected to THINGS via {name}")
                     break
                 except:
                     continue
@@ -43,38 +46,62 @@ class ThingsDataset:
             if self.ds is None:
                 raise ValueError("Could not find THINGS dataset on Hugging Face. Please verify the dataset name.")
             
-            self.images = []
-            self.metadata = []
-            self.categories_seen = set()
+            # Map category name to list of images
+            self.category_groups = {} 
+            self.category_names = [] # Maintain order of arrival
             
-            # Fetch images with unique categories
-            count = 0
+            # For ImageFolder style datasets, we need the names from features
+            meta_ds = load_dataset(self.name, split="train") # Small download for metadata
+            if hasattr(meta_ds, 'features') and 'label' in meta_ds.features:
+                id_to_name = meta_ds.features['label'].names
+            else:
+                id_to_name = None
+
+            print("Fetching images from streaming dataset...")
             for item in self.ds:
-                cat = item.get('category') or item.get('concept')
-                if cat not in self.categories_seen:
-                    # Pre-load image to avoid streaming issues later
+                # Determine category name
+                label = item.get('label')
+                if label is not None and id_to_name:
+                    cat = id_to_name[label]
+                else:
+                    cat = item.get('category') or item.get('concept') or f"cat_{label}"
+                
+                if cat not in self.category_groups:
+                    if n_categories and len(self.category_groups) >= n_categories:
+                        continue
+                    self.category_groups[cat] = []
+                    self.category_names.append(cat)
+                
+                if len(self.category_groups[cat]) < exemplars_per_category:
                     img = item['image']
                     if not isinstance(img, Image.Image):
                         img = Image.fromarray(np.array(img))
-                    self.images.append(img.convert("RGB"))
-                    self.metadata.append({"category": cat, "id": count})
-                    self.categories_seen.add(cat)
-                    count += 1
-                if n_images and count >= n_images:
-                    break
+                    self.category_groups[cat].append(img.convert("RGB"))
+                
+                # Check if we have enough
+                if n_categories and len(self.category_groups) >= n_categories:
+                    # Check if all have enough exemplars
+                    if all(len(self.category_groups[c]) >= exemplars_per_category for c in self.category_names):
+                        break
+            
+            print(f"Loaded {len(self.category_groups)} categories with up to {exemplars_per_category} exemplars each.")
+            
         except Exception as e:
             print(f"Error loading THINGS dataset: {e}")
-            self.images = []
-            self.metadata = []
+            self.category_groups = {}
+            self.category_names = []
 
     def __len__(self):
-        return len(self.images)
+        return len(self.category_names)
 
-    def get_image(self, index):
-        return self.images[index]
+    def get_image(self, index, exemplar_index=0):
+        cat = self.category_names[index]
+        exemplars = self.category_groups[cat]
+        return exemplars[exemplar_index % len(exemplars)]
 
-    def get_metadata(self, index):
-        return self.metadata[index]
+    def get_metadata(self, index, exemplar_index=0):
+        cat = self.category_names[index]
+        return {"category": cat, "category_id": index, "exemplar_id": exemplar_index}
 
 
 class BradyDataset:
