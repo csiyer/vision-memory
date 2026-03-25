@@ -115,4 +115,64 @@ def calculate_pam_metrics(results):
         "n_correct": n_correct,
         "total": total
     }
-#
+
+
+def calculate_2afc_metrics(trials):
+    """
+    Calculate memory score metrics for 2-AFC recognition task.
+
+    For 2-AFC, d' = sqrt(2) * z(accuracy) since it's a forced choice between two options.
+
+    Args:
+        trials: List of trial dicts with 'correct', 'response', 'target', 'foil_type' keys
+
+    Returns:
+        Dict with accuracy, d', mem_score, and per-foil-type breakdowns
+    """
+    if not trials:
+        return {"accuracy": 0, "d_prime": 0, "mem_score": 0}
+
+    n_correct = sum(1 for t in trials if t.get('correct', 0) == 1)
+    n_total = len(trials)
+    accuracy = n_correct / n_total if n_total > 0 else 0
+
+    # Exclude parsing failures (response = -1) for valid accuracy
+    valid_trials = [t for t in trials if t.get('response', -1) != -1]
+    n_valid = len(valid_trials)
+    n_valid_correct = sum(1 for t in valid_trials if t.get('correct', 0) == 1)
+    valid_accuracy = n_valid_correct / n_valid if n_valid > 0 else 0
+
+    # d' for 2-AFC: d' = sqrt(2) * z(accuracy)
+    # Using adjusted accuracy to avoid infinity
+    adj_acc = (n_valid_correct + 0.5) / (n_valid + 1) if n_valid > 0 else 0.5
+    d_prime = np.sqrt(2) * norm.ppf(adj_acc)
+
+    # Memory score: accuracy above chance (0.5), scaled to 0-1
+    mem_score = max(0, min(1, 2 * (valid_accuracy - 0.5)))
+
+    # Breakdown by foil type
+    accuracy_by_type = {}
+    d_prime_by_type = {}
+    foil_types = set(t.get('foil_type', 'unknown') for t in trials)
+
+    for ftype in foil_types:
+        ftype_trials = [t for t in valid_trials if t.get('foil_type') == ftype]
+        if ftype_trials:
+            fc = sum(1 for t in ftype_trials if t.get('correct', 0) == 1)
+            fn = len(ftype_trials)
+            accuracy_by_type[ftype] = fc / fn
+            adj = (fc + 0.5) / (fn + 1)
+            d_prime_by_type[ftype] = float(np.sqrt(2) * norm.ppf(adj))
+
+    return {
+        "accuracy": float(accuracy),
+        "valid_accuracy": float(valid_accuracy),
+        "d_prime": float(d_prime),
+        "mem_score": float(mem_score),
+        "n_trials": n_total,
+        "n_valid_trials": n_valid,
+        "n_correct": n_correct,
+        "n_parse_failures": n_total - n_valid,
+        "accuracy_by_type": accuracy_by_type,
+        "d_prime_by_type": d_prime_by_type
+    }

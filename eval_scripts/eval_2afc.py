@@ -22,16 +22,41 @@ from tasks.afc_recognition import AFCRecognitionTask
 from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
+from metrics import calculate_2afc_metrics
+from plotting import plot_2afc_metrics
 
 
-def build_messages(evaluator, study_images, study_prompt, test_images, test_prompt):
-    """Build API messages for 2-AFC trial with simulated acknowledgment."""
+def build_messages(evaluator, study_images, study_prompt, test_images, test_prompt, max_context_images=None):
+    """Build API messages for 2-AFC trial with simulated acknowledgment.
+
+    Args:
+        evaluator: The evaluator instance
+        study_images: List of study phase images
+        study_prompt: Prompt for study phase
+        test_images: List of test images (usually 2 for 2-AFC)
+        test_prompt: Prompt for test phase
+        max_context_images: Max images to send in context. If None, uses provider defaults.
+    """
+    # Determine max study images based on provider limits and user config
+    if "Anthropic" in type(evaluator).__name__:
+        provider_limit = 100 - len(test_images)  # Reserve space for test images
+    else:
+        provider_limit = len(study_images)  # No limit for other providers
+
+    if max_context_images is not None:
+        max_study = min(max_context_images, provider_limit)
+    else:
+        max_study = provider_limit
+
+    if len(study_images) > max_study:
+        study_images = study_images[:max_study]
+
     # Study phase
     study_content = [{"type": "text", "text": study_prompt}]
     for img in study_images:
         study_content.append(evaluator._encode_image(img))
 
-    # Test phase (2 images)
+    # Test phase
     test_content = [{"type": "text", "text": test_prompt}]
     for img in test_images:
         test_content.append(evaluator._encode_image(img))
@@ -57,14 +82,30 @@ def parse_response(text):
     return -1
 
 
-def run_evaluation(evaluators, n_images=20, foil_type='novel', dataset='things'):
-    """Run 2-AFC evaluation on all evaluators."""
+def run_evaluation(evaluators, n_images=20, foil_type='novel', dataset='things', max_context_images=None):
+    """Run 2-AFC evaluation on all evaluators.
+
+    Args:
+        evaluators: List of evaluator instances
+        n_images: Number of images/trials to run
+        foil_type: Type of foils ('novel', 'exemplar', 'state', 'all')
+        dataset: Dataset to use ('things', 'Brady2008')
+        max_context_images: Max images to send in context per trial. If None, sends all study images.
+    """
     task = AFCRecognitionTask(dataset_name=dataset, n_images=n_images, foil_type=foil_type)
     trial_data = task.get_trials()
 
     all_results = {}
     for evaluator in evaluators:
         print(f"\n=== {evaluator.get_name()} ===")
+
+        # Warn if images will be truncated
+        actual_context = max_context_images if max_context_images else len(trial_data['study_sequence'])
+        if "Anthropic" in type(evaluator).__name__:
+            actual_context = min(actual_context, 98)
+        if actual_context < len(trial_data['study_sequence']):
+            print(f"  Note: Sending {actual_context} of {len(trial_data['study_sequence'])} study images to context")
+
         results = []
 
         for i, test_trial in enumerate(trial_data['test_phase']):
@@ -73,7 +114,8 @@ def run_evaluation(evaluators, n_images=20, foil_type='novel', dataset='things')
                 trial_data['study_sequence'],
                 trial_data['study_prompt'],
                 test_trial['images'],
-                test_trial['prompt']
+                test_trial['prompt'],
+                max_context_images=max_context_images
             )
             response_text = evaluator._call_api(messages)
             response = parse_response(response_text)
@@ -90,9 +132,14 @@ def run_evaluation(evaluators, n_images=20, foil_type='novel', dataset='things')
             status = '✓' if correct else '✗'
             print(f"  Trial {i+1}/{len(trial_data['test_phase'])}: {status}", end="\r")
 
-        accuracy = sum(r['correct'] for r in results) / len(results)
-        print(f"\n  Accuracy: {accuracy:.1%}")
-        all_results[evaluator.get_name()] = {'trials': results, 'accuracy': accuracy}
+        # Calculate metrics using the new function
+        metrics = calculate_2afc_metrics(results)
+        print(f"\n  Accuracy: {metrics['accuracy']:.1%} | d': {metrics['d_prime']:.2f} | Mem Score: {metrics['mem_score']:.2f}")
+
+        all_results[evaluator.get_name()] = {
+            'trials': results,
+            **metrics
+        }
 
     return all_results
 
@@ -102,13 +149,17 @@ def main():
     parser.add_argument("--models", nargs="+", default=["gpt-4o", "claude", "gemini"],
                         help="Models to evaluate: gpt-4o, claude, gemini")
     parser.add_argument("--n-images", type=int, default=20,
-                        help="Number of images in study sequence")
+                        help="Number of images in study sequence (also determines n trials)")
+    parser.add_argument("--max-context-images", type=int, default=None,
+                        help="Max images to send in context per trial (default: all study images)")
     parser.add_argument("--foil-type", choices=["novel", "exemplar", "state", "all"], default="novel",
                         help="Type of foils to use")
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
                         help="Dataset to use")
     parser.add_argument("--output", type=str, default=None,
                         help="Output file path (default: results_2afc_<timestamp>.json)")
+    parser.add_argument("--plot", action="store_true",
+                        help="Generate plots after evaluation")
     args = parser.parse_args()
 
     evaluators = []
@@ -126,10 +177,40 @@ def main():
     print(f"Running 2-AFC evaluation:")
     print(f"  Models: {[e.get_name() for e in evaluators]}")
     print(f"  N images: {args.n_images}")
+    print(f"  Max context images: {args.max_context_images or 'all'}")
     print(f"  Foil type: {args.foil_type}")
     print(f"  Dataset: {args.dataset}")
 
-    results = run_evaluation(evaluators, args.n_images, args.foil_type, args.dataset)
+    results = run_evaluation(
+        evaluators,
+        args.n_images,
+        args.foil_type,
+        args.dataset,
+        max_context_images=args.max_context_images
+    )
+
+    # Build output with metadata at the top
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_data = {
+        "_metadata": {
+            "task": "2-AFC Recognition",
+            "timestamp": timestamp,
+            "n_images": args.n_images,
+            "max_context_images": args.max_context_images,
+            "foil_type": args.foil_type,
+            "dataset": args.dataset,
+            "models": [e.get_name() for e in evaluators],
+            "summary": {
+                model: {
+                    "accuracy": results[model]["accuracy"],
+                    "d_prime": results[model]["d_prime"],
+                    "mem_score": results[model]["mem_score"]
+                }
+                for model in results
+            }
+        },
+        **results
+    }
 
     # Save results to results folder
     results_dir = Path(__file__).parent.parent / "results"
@@ -138,12 +219,17 @@ def main():
     if args.output:
         output_path = results_dir / args.output
     else:
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         output_path = results_dir / f"results_2afc_{timestamp}.json"
 
     with open(output_path, "w") as f:
-        json.dump(results, f, indent=2)
+        json.dump(output_data, f, indent=2)
     print(f"\nSaved to {output_path}")
+
+    # Generate plots if requested
+    if args.plot:
+        plots_dir = Path(__file__).parent.parent / "plots"
+        plot_2afc_metrics(results, output_dir=str(plots_dir))
+        print(f"Plots saved to {plots_dir}/afc_metrics.png")
 
 
 if __name__ == "__main__":
