@@ -6,7 +6,7 @@ Task: Study N images, then for each test trial show 2 images (original + foil)
       and ask which was in the study sequence.
 
 Usage:
-    python -m eval_scripts.eval_2afc --models gpt-4o claude gemini --n-images 20 --foil-type novel
+    python -m eval_scripts.eval_2afc --models gpt-4o --n-images 100 --n-trials 100 --foil-type novel
     python -m eval_scripts.eval_2afc --models gpt-4o --n-images 5  # pilot run
 """
 import sys
@@ -23,7 +23,7 @@ from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
 from metrics import calculate_2afc_metrics
-from plotting import plot_2afc_metrics
+from plotting import plot_2afc
 
 
 def build_messages(evaluator, study_images, study_prompt, test_images, test_prompt, max_context_images=None):
@@ -70,6 +70,8 @@ def build_messages(evaluator, study_images, study_prompt, test_images, test_prom
 
 def parse_response(text):
     """Parse 1 or 2 from response."""
+    if text is None:
+        return -1
     text = text.strip()
     if "1" in text and "2" not in text:
         return 1
@@ -82,17 +84,18 @@ def parse_response(text):
     return -1
 
 
-def run_evaluation(evaluators, n_images=20, foil_type='novel', dataset='things', max_context_images=None):
+def run_evaluation(evaluators, n_images=20, n_trials=None, foil_type='novel', dataset='things', max_context_images=None):
     """Run 2-AFC evaluation on all evaluators.
 
     Args:
         evaluators: List of evaluator instances
-        n_images: Number of images/trials to run
+        n_images: Number of images in study sequence
+        n_trials: Number of test trials (defaults to n_images if not specified)
         foil_type: Type of foils ('novel', 'exemplar', 'state', 'all')
         dataset: Dataset to use ('things', 'Brady2008')
         max_context_images: Max images to send in context per trial. If None, sends all study images.
     """
-    task = AFCRecognitionTask(dataset_name=dataset, n_images=n_images, foil_type=foil_type)
+    task = AFCRecognitionTask(dataset_name=dataset, n_images=n_images, n_trials=n_trials, foil_type=foil_type)
     trial_data = task.get_trials()
 
     all_results = {}
@@ -149,7 +152,9 @@ def main():
     parser.add_argument("--models", nargs="+", default=["gpt-4o", "claude", "gemini"],
                         help="Models to evaluate: gpt-4o, claude, gemini")
     parser.add_argument("--n-images", type=int, default=20,
-                        help="Number of images in study sequence (also determines n trials)")
+                        help="Number of images in study sequence")
+    parser.add_argument("--n-trials", type=int, default=None,
+                        help="Number of test trials (default: same as n-images)")
     parser.add_argument("--max-context-images", type=int, default=None,
                         help="Max images to send in context per trial (default: all study images)")
     parser.add_argument("--foil-type", choices=["novel", "exemplar", "state", "all"], default="novel",
@@ -174,9 +179,12 @@ def main():
         print("No valid models specified. Use --models gpt-4o claude gemini")
         return
 
+    n_trials = args.n_trials if args.n_trials is not None else args.n_images
+
     print(f"Running 2-AFC evaluation:")
     print(f"  Models: {[e.get_name() for e in evaluators]}")
-    print(f"  N images: {args.n_images}")
+    print(f"  N images (study): {args.n_images}")
+    print(f"  N trials (test): {n_trials}")
     print(f"  Max context images: {args.max_context_images or 'all'}")
     print(f"  Foil type: {args.foil_type}")
     print(f"  Dataset: {args.dataset}")
@@ -184,6 +192,7 @@ def main():
     results = run_evaluation(
         evaluators,
         args.n_images,
+        args.n_trials,
         args.foil_type,
         args.dataset,
         max_context_images=args.max_context_images
@@ -196,6 +205,7 @@ def main():
             "task": "2-AFC Recognition",
             "timestamp": timestamp,
             "n_images": args.n_images,
+            "n_trials": n_trials,
             "max_context_images": args.max_context_images,
             "foil_type": args.foil_type,
             "dataset": args.dataset,
@@ -228,7 +238,7 @@ def main():
     # Generate plots if requested
     if args.plot:
         plots_dir = Path(__file__).parent.parent / "plots"
-        plot_2afc_metrics(results, output_dir=str(plots_dir))
+        plot_2afc(results, output_dir=str(plots_dir))
         print(f"Plots saved to {plots_dir}/afc_metrics.png")
 
 

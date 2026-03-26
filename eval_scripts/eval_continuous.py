@@ -6,6 +6,7 @@ Task: Show images sequentially. For each image, ask if it has appeared before.
 
 Usage:
     python -m eval_scripts.eval_continuous --models gpt-4o claude gemini --n-images 50
+    python -m eval_scripts.eval_continuous --models gpt-4o --n-images 100 --n-trials 100
     python -m eval_scripts.eval_continuous --models gpt-4o --n-images 10  # pilot run
 """
 import sys
@@ -34,9 +35,9 @@ def parse_yes_no(text):
     return -1
 
 
-def run_evaluation(evaluators, n_images=50, dataset='things'):
+def run_evaluation(evaluators, n_images=50, n_trials=None, dataset='things'):
     """Run continuous recognition evaluation on all evaluators."""
-    task = ContinuousRecognitionTask(dataset_name=dataset, n_images=n_images)
+    task = ContinuousRecognitionTask(dataset_name=dataset, n_images=n_images, n_trials=n_trials)
     trials = task.get_trials()
 
     all_results = {}
@@ -88,6 +89,8 @@ def main():
                         help="Models to evaluate: gpt-4o, claude, gemini")
     parser.add_argument("--n-images", type=int, default=50,
                         help="Number of unique images")
+    parser.add_argument("--n-trials", type=int, default=None,
+                        help="Number of total trials (default: computed from n-images and p_old)")
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
                         help="Dataset to use")
     parser.add_argument("--output", type=str, default=None,
@@ -106,12 +109,15 @@ def main():
         print("No valid models specified. Use --models gpt-4o claude gemini")
         return
 
+    n_trials = args.n_trials if args.n_trials is not None else int(args.n_images / 0.5)  # Default p_old=0.5
+
     print(f"Running continuous recognition evaluation:")
     print(f"  Models: {[e.get_name() for e in evaluators]}")
     print(f"  N images: {args.n_images}")
+    print(f"  N trials: {n_trials}")
     print(f"  Dataset: {args.dataset}")
 
-    results = run_evaluation(evaluators, args.n_images, args.dataset)
+    results = run_evaluation(evaluators, args.n_images, args.n_trials, args.dataset)
 
     # Save results to results folder
     results_dir = Path(__file__).parent.parent / "results"
