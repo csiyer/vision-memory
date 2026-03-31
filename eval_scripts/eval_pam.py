@@ -24,6 +24,7 @@ from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
 from metrics import calculate_pam_metrics
+from plotting import default_plots_dir, plot_pam
 
 
 def build_messages(evaluator, study_sequence, study_prompt, test_image, test_prompt, max_context_pairs=None):
@@ -182,6 +183,10 @@ def main():
                         help="Dataset to use")
     parser.add_argument("--output", type=str, default=None,
                         help="Output file path (default: results_pam_<timestamp>.json)")
+    parser.add_argument("--plot", action="store_true",
+                        help="Write figures under output/plots (or --plot-dir)")
+    parser.add_argument("--plot-dir", type=str, default=None,
+                        help="Directory for figures (default: repo output/plots)")
     args = parser.parse_args()
 
     evaluators = []
@@ -209,26 +214,28 @@ def main():
         max_context_pairs=args.max_context_pairs
     )
 
-    # Build output with metadata at the top
+    # Build output with metadata at the top (base keys align with eval_continuous / eval_2afc)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    n_trials = len(next(iter(results.values()))["trials"]) if results else 0
     output_data = {
         "_metadata": {
             "task": "Paired Associate Memory",
             "timestamp": timestamp,
-            "n_images": args.n_images,
-            "max_context_pairs": args.max_context_pairs,
             "dataset": args.dataset,
+            "n_images": args.n_images,
+            "n_trials": n_trials,
             "models": [e.get_name() for e in evaluators],
             "summary": {
                 model: {
                     "accuracy": results[model]["accuracy"],
                     "n_correct": results[model]["n_correct"],
-                    "total": results[model]["total"]
+                    "total": results[model]["total"],
                 }
                 for model in results
-            }
+            },
+            "max_context_pairs": args.max_context_pairs,
         },
-        **results
+        **results,
     }
 
     # Save results to results folder
@@ -243,6 +250,11 @@ def main():
     with open(output_path, "w") as f:
         json.dump(output_data, f, indent=2)
     print(f"\nSaved to {output_path}")
+
+    if args.plot:
+        plot_dir = Path(args.plot_dir) if args.plot_dir else default_plots_dir()
+        fig_path = plot_pam(output_data, output_dir=plot_dir)
+        print(f"Plot saved to {fig_path}")
 
 
 if __name__ == "__main__":

@@ -23,7 +23,7 @@ from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
 from metrics import calculate_2afc_metrics
-from plotting import plot_2afc
+from plotting import default_plots_dir, plot_2afc_all
 
 
 def build_messages(evaluator, study_images, study_prompt, test_images, test_prompt, max_context_images=None):
@@ -164,7 +164,9 @@ def main():
     parser.add_argument("--output", type=str, default=None,
                         help="Output file path (default: results_2afc_<timestamp>.json)")
     parser.add_argument("--plot", action="store_true",
-                        help="Generate plots after evaluation")
+                        help="Write figures under output/plots (or --plot-dir)")
+    parser.add_argument("--plot-dir", type=str, default=None,
+                        help="Directory for figures (default: repo output/plots)")
     args = parser.parse_args()
 
     evaluators = []
@@ -204,22 +206,22 @@ def main():
         "_metadata": {
             "task": "2-AFC Recognition",
             "timestamp": timestamp,
+            "dataset": args.dataset,
             "n_images": args.n_images,
             "n_trials": n_trials,
-            "max_context_images": args.max_context_images,
-            "foil_type": args.foil_type,
-            "dataset": args.dataset,
             "models": [e.get_name() for e in evaluators],
             "summary": {
                 model: {
                     "accuracy": results[model]["accuracy"],
                     "d_prime": results[model]["d_prime"],
-                    "mem_score": results[model]["mem_score"]
+                    "mem_score": results[model]["mem_score"],
                 }
                 for model in results
-            }
+            },
+            "max_context_images": args.max_context_images,
+            "foil_type": args.foil_type,
         },
-        **results
+        **results,
     }
 
     # Save results to results folder
@@ -235,11 +237,10 @@ def main():
         json.dump(output_data, f, indent=2)
     print(f"\nSaved to {output_path}")
 
-    # Generate plots if requested
     if args.plot:
-        plots_dir = Path(__file__).parent.parent / "plots"
-        plot_2afc(results, output_dir=str(plots_dir))
-        print(f"Plots saved to {plots_dir}/afc_metrics.png")
+        plot_dir = Path(args.plot_dir) if args.plot_dir else default_plots_dir()
+        p_acc, p_met = plot_2afc_all(output_data, output_dir=plot_dir)
+        print(f"Plots saved to {p_acc} and {p_met}")
 
 
 if __name__ == "__main__":
