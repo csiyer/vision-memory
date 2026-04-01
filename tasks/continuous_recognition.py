@@ -85,12 +85,13 @@ class ContinuousRecognitionTask:
             else:
                 # This case shouldn't happen if math is right, but fallback
                 if waiting_room:
-                    idx_in_waiting, img_idx, t_intro = waiting_room.pop(0)
+                    img_idx, t_intro = waiting_room.pop(0)
                     sequence.append({
                         "image_idx": img_idx,
                         "target": 1,
                         "delay": current_time - t_intro - 1
                     })
+                    n_old_needed -= 1
                 else:
                     break # Out of images
 

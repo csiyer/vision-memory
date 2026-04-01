@@ -28,7 +28,7 @@ class ThingsDataset:
     """Gets images from the THINGS dataset via Hugging Face."""
     def __init__(self, n_categories=None, exemplars_per_category=1):
         try:
-            from datasets import load_dataset
+            from datasets import load_dataset, load_dataset_builder
             # Prioritize the one the user mentioned
             names = ["Haitao999/things-eeg", "He-Bart/THINGS", "Hebart/THINGS", "THINGS-data/THINGS", "RAIlab/THINGS"]
             self.ds = None
@@ -50,12 +50,23 @@ class ThingsDataset:
             self.category_groups = {}
             self.category_names = [] # Maintain order of arrival
 
-            # For ImageFolder style datasets, we need the names from features
-            meta_ds = load_dataset(self.name, split="train") # Small download for metadata
-            if hasattr(meta_ds, 'features') and 'label' in meta_ds.features:
-                id_to_name = meta_ds.features['label'].names
-            else:
-                id_to_name = None
+            # Label id -> name without downloading the full split (non-streaming load_dataset caches everything).
+            id_to_name = None
+            ds_features = getattr(self.ds, "features", None)
+            if ds_features is not None and "label" in ds_features:
+                lf = ds_features["label"]
+                if hasattr(lf, "names") and lf.names is not None:
+                    id_to_name = list(lf.names)
+            if id_to_name is None:
+                try:
+                    builder = load_dataset_builder(self.name)
+                    bfeat = builder.info.features
+                    if bfeat is not None and "label" in bfeat:
+                        lf = bfeat["label"]
+                        if hasattr(lf, "names") and lf.names is not None:
+                            id_to_name = list(lf.names)
+                except Exception:
+                    pass
 
             print("Fetching images from streaming dataset...")
             for item in self.ds:
