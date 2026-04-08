@@ -1,5 +1,6 @@
 import os
 import random
+import re
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
@@ -115,6 +116,7 @@ class BradyDataset:
              self.path = self.root / f"Brady2008{type}"
         
         self.image_paths = sorted([p for p in self.path.glob('*') if p.suffix.lower() in ('.jpg', '.png', '.jpeg')])
+        self.pair_paths = self._build_pair_paths()
 
     def __len__(self):
         return len(self.image_paths)
@@ -124,6 +126,29 @@ class BradyDataset:
 
     def get_metadata(self, index):
         return {"path": str(self.image_paths[index]), "name": self.image_paths[index].name}
+
+    def _build_pair_paths(self):
+        if self.path.name not in {"Brady2008Exemplar", "Brady2008State"}:
+            return []
+
+        groups = {}
+        for path in self.image_paths:
+            match = re.match(r"^(.*?)(\d+)?$", path.stem)
+            base_name = match.group(1).lower() if match else path.stem.lower()
+            groups.setdefault(base_name, []).append(path)
+
+        pair_paths = []
+        for base_name in sorted(groups):
+            paths = sorted(groups[base_name], key=lambda p: p.name.lower())
+            if len(paths) == 2:
+                pair_paths.append(tuple(paths))
+        return pair_paths
+
+    def get_pair(self, index):
+        if not self.pair_paths:
+            raise ValueError("Pair access is only supported for Brady2008Exemplar and Brady2008State.")
+        original_path, foil_path = self.pair_paths[index]
+        return Image.open(original_path).convert("RGB"), Image.open(foil_path).convert("RGB")
 
 
 class LaMemDataset():

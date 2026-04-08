@@ -75,12 +75,11 @@ class AFCRecognitionTask:
                  })
         elif foil_type == 'exemplar' or foil_type == 'state':
              ds = BradyDataset(type='Exemplar' if foil_type == 'exemplar' else 'State')
-             # Pair adjacent images (assuming they are pairs as seen in list_dir)
-             all_paths = ds.image_paths
-             for i in range(0, min(n * 2, len(all_paths) - 1), 2):
+             for i in range(min(n, len(ds.pair_paths))):
+                 original, foil = ds.get_pair(i)
                  pairs.append({
-                     "original": ds.get_image(i),
-                     "foil": ds.get_image(i+1),
+                     "original": original,
+                     "foil": foil,
                      "type": foil_type
                  })
         elif foil_type == 'all':
