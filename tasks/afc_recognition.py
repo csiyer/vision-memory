@@ -2,9 +2,18 @@ import random
 from pathlib import Path
 from stimuli import ThingsDataset, BradyDataset
 
+# Same prompts for THINGS and Brady2008 so results are comparable.
+AFC_STUDY_PROMPT = "Here is a sequence of images to remember."
+AFC_TEST_PROMPT = (
+    "Which of these two images was in the study sequence? "
+    "The first image below is 1, the second is 2. "
+    "Reply with only the digit 1 or 2 and nothing else."
+)
+
 class AFCRecognitionTask:
-    def __init__(self, dataset_name='things', n_images=20, foil_type='all'):
+    def __init__(self, dataset_name='things', n_images=20, n_trials=None, foil_type='all'):
         self.n_images = n_images
+        self.n_trials = n_trials if n_trials is not None else n_images
         self.foil_type = foil_type
         self.dataset_name = dataset_name
 
@@ -62,17 +71,31 @@ class AFCRecognitionTask:
                     })
             return pairs
 
-        # Handle Brady
+        # Handle Brady (self.dataset is BradyDataset(type='Objects') for Brady2008)
         if foil_type == 'novel':
-             obj_ds = BradyDataset(type='Objects')
-             indices = list(range(len(obj_ds)))
-             random.shuffle(indices)
-             for i in range(0, n * 2, 2):
-                 pairs.append({
-                     "original": obj_ds.get_image(indices[i]),
-                     "foil": obj_ds.get_image(indices[i+1]),
-                     "type": "novel"
-                 })
+            obj_ds = self.dataset
+            n_available = len(obj_ds)
+            if n_available == 0:
+                raise ValueError(
+                    f"No Brady object images found under '{obj_ds.path}'. "
+                    "Populate that folder with Brady et al. (2008) object images, or use --dataset things."
+                )
+            need = n * 2
+            if n_available < need:
+                max_study = n_available // 2
+                raise ValueError(
+                    f"Brady Objects at '{obj_ds.path}' has {n_available} images; "
+                    f"novel foils need 2 distinct images per study item ({need} for n_images={n}). "
+                    f"Add more images or set --n-images to at most {max_study}."
+                )
+            indices = list(range(n_available))
+            random.shuffle(indices)
+            for i in range(0, n * 2, 2):
+                pairs.append({
+                    "original": obj_ds.get_image(indices[i]),
+                    "foil": obj_ds.get_image(indices[i + 1]),
+                    "type": "novel"
+                })
         elif foil_type == 'exemplar' or foil_type == 'state':
              ds = BradyDataset(type='Exemplar' if foil_type == 'exemplar' else 'State')
              # Pair adjacent images (assuming they are pairs as seen in list_dir)
@@ -107,13 +130,16 @@ class AFCRecognitionTask:
 
             test_phase.append({
                 "images": images,
-                "prompt": "Which of these two images was in the sequence before? (1 or 2)",
+                "prompt": AFC_TEST_PROMPT,
                 "target": target,
                 "type": p['type']
             })
 
+        if self.n_trials < len(test_phase):
+            test_phase = random.sample(test_phase, self.n_trials)
+
         return {
-            "study_prompt": "Here is a sequence of images to remember.",
+            "study_prompt": AFC_STUDY_PROMPT,
             "study_sequence": study_sequence,
             "test_phase": test_phase
         }

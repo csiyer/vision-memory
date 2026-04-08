@@ -17,6 +17,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import argparse
 import json
+import re
 from datetime import datetime
 from tasks.afc_recognition import AFCRecognitionTask
 from evaluators.openai_evaluator import OpenAIEvaluator
@@ -69,7 +70,7 @@ def build_messages(evaluator, study_images, study_prompt, test_images, test_prom
 
 
 def parse_response(text):
-    """Parse 1 or 2 from response."""
+    """Parse 1 or 2 from response (digits or common paraphrases like 'first' / 'second')."""
     if text is None:
         return -1
     text = text.strip()
@@ -80,6 +81,14 @@ def parse_response(text):
     elif text.startswith("1"):
         return 1
     elif text.startswith("2"):
+        return 2
+    # Models often answer "The first image..." — no digit `1` in "first"
+    lower = text.lower()
+    has_first = re.search(r"\bfirst\b", lower) is not None
+    has_second = re.search(r"\bsecond\b", lower) is not None
+    if has_first and not has_second:
+        return 1
+    if has_second and not has_first:
         return 2
     return -1
 
@@ -150,7 +159,7 @@ def run_evaluation(evaluators, n_images=20, n_trials=None, foil_type='novel', da
 def main():
     parser = argparse.ArgumentParser(description="2-AFC Recognition Evaluation")
     parser.add_argument("--models", nargs="+", default=["gpt-4o", "claude", "gemini"],
-                        help="Models to evaluate: gpt-4o, claude, gemini")
+                        help="Models to evaluate. Supports aliases (gpt-4o, claude, gemini) or provider model IDs.")
     parser.add_argument("--n-images", type=int, default=20,
                         help="Number of images in study sequence")
     parser.add_argument("--n-trials", type=int, default=None,
@@ -170,15 +179,25 @@ def main():
     args = parser.parse_args()
 
     evaluators = []
-    if "gpt-4o" in args.models:
-        evaluators.append(OpenAIEvaluator("gpt-4o"))
-    if "claude" in args.models:
-        evaluators.append(AnthropicEvaluator())
-    if "gemini" in args.models:
-        evaluators.append(GoogleEvaluator())
+    for model in args.models:
+        m = model.strip()
+        if not m:
+            continue
+        if m == "gpt-4o":
+            evaluators.append(OpenAIEvaluator("gpt-4o"))
+        elif m == "claude":
+            evaluators.append(AnthropicEvaluator())
+        elif m == "gemini":
+            evaluators.append(GoogleEvaluator())
+        elif m.startswith("claude"):
+            evaluators.append(AnthropicEvaluator(m))
+        elif m.startswith("gemini"):
+            evaluators.append(GoogleEvaluator(m))
+        else:
+            evaluators.append(OpenAIEvaluator(m))
 
     if not evaluators:
-        print("No valid models specified. Use --models gpt-4o claude gemini")
+        print("No valid models specified. Pass at least one model alias or provider model ID.")
         return
 
     n_trials = args.n_trials if args.n_trials is not None else args.n_images
@@ -194,7 +213,7 @@ def main():
     results = run_evaluation(
         evaluators,
         args.n_images,
-        args.n_trials,
+        n_trials,
         args.foil_type,
         args.dataset,
         max_context_images=args.max_context_images

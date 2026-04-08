@@ -4,3 +4,9 @@
 **__pycache__**
 memory_datasets/*/*.jpg
 archive
+memory_datasets/Brady2008*
+# Same data lives under dataset/ (root `memory_datasets` is a symlink)
+dataset/memory_datasets/*/*.jpg
+dataset/memory_datasets/Brady2008*
+dataset/
+annotations/
