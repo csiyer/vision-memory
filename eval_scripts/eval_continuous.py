@@ -22,6 +22,7 @@ from tasks.continuous_recognition import ContinuousRecognitionTask
 from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
+from evaluators.qwen_evaluator import QwenEvaluator
 from metrics import calculate_metrics, calculate_hit_rate_by_delay
 from plotting import default_plots_dir, plot_continuous_recognition
 
@@ -106,7 +107,7 @@ def run_evaluation(evaluators, n_images=50, dataset='things'):
 def main():
     parser = argparse.ArgumentParser(description="Continuous Recognition Evaluation")
     parser.add_argument("--models", nargs="+", default=["gpt-4o", "claude", "gemini"],
-                        help="Models to evaluate: gpt-4o, claude, gemini")
+                        help="Models to evaluate: gpt-4o, claude, gemini, qwen")
     parser.add_argument("--n-images", type=int, default=50,
                         help="Number of unique images")
     parser.add_argument("--n-trials", type=int, default=None,
@@ -128,9 +129,11 @@ def main():
         evaluators.append(AnthropicEvaluator())
     if "gemini" in args.models:
         evaluators.append(GoogleEvaluator())
+    if "qwen" in args.models:
+        evaluators.append(QwenEvaluator("Qwen/Qwen2.5-VL-7B-Instruct"))
 
     if not evaluators:
-        print("No valid models specified. Use --models gpt-4o claude gemini")
+        print("No valid models specified. Use --models gpt-4o claude gemini qwen")
         return
 
     print(f"Running continuous recognition evaluation:")

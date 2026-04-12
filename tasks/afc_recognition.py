@@ -21,8 +21,10 @@ class AFCRecognitionTask:
             if foil_type == 'state':
                 raise ValueError("State foils not supported for THINGS dataset.")
             # If we need exemplars, we need 2 per category
+            # For novel foils, we need 2x categories (one for original, one for foil)
             exemplars = 2 if foil_type in ['exemplar', 'all'] else 1
-            self.dataset = ThingsDataset(n_categories=n_images, exemplars_per_category=exemplars)
+            n_cats = n_images * 2 if foil_type == 'novel' else n_images
+            self.dataset = ThingsDataset(n_categories=n_cats, exemplars_per_category=exemplars)
         else:
             self.dataset = BradyDataset(type='Objects')
 
@@ -121,8 +123,11 @@ class AFCRecognitionTask:
 
         study_sequence = [p['original'] for p in pairs]
 
+        # Limit test trials if n_trials < n_images
+        test_pairs = pairs[:self.n_trials]
+
         test_phase = []
-        for p in pairs:
+        for p in test_pairs:
             # Randomly swap order for 2-AFC
             images = [p['original'], p['foil']]
             random.shuffle(images)

@@ -4,6 +4,13 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
 
+# Load .env for HF_TOKEN
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).parent / '.env')
+except ImportError:
+    pass
+
 class DirectoryDataset():
     def __init__(self, image_dir, extensions=(".jpg", ".jpeg", ".png", ".bmp", ".webp")):
         self.image_dir = Path(image_dir)
@@ -68,14 +75,11 @@ class ThingsDataset:
                 except Exception:
                     pass
 
+
             print("Fetching images from streaming dataset...")
             for item in self.ds:
-                # Determine category name
-                label = item.get('label')
-                if label is not None and id_to_name:
-                    cat = id_to_name[label]
-                else:
-                    cat = item.get('category') or item.get('concept') or f"cat_{label}"
+                # Determine category name - use category/concept field or fallback to label number
+                cat = item.get('category') or item.get('concept') or f"cat_{item.get('label', 0)}"
 
                 if cat not in self.category_groups:
                     if n_categories and len(self.category_groups) >= n_categories:

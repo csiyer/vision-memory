@@ -23,6 +23,7 @@ from tasks.afc_recognition import AFCRecognitionTask
 from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
+from evaluators.qwen_evaluator import QwenEvaluator
 from metrics import calculate_2afc_metrics
 from plotting import default_plots_dir, plot_2afc_all
 
@@ -159,7 +160,7 @@ def run_evaluation(evaluators, n_images=20, n_trials=None, foil_type='novel', da
 def main():
     parser = argparse.ArgumentParser(description="2-AFC Recognition Evaluation")
     parser.add_argument("--models", nargs="+", default=["gpt-4o", "claude", "gemini"],
-                        help="Models to evaluate. Supports aliases (gpt-4o, claude, gemini) or provider model IDs.")
+                        help="Models to evaluate: gpt-4o, claude, gemini, qwen (or provider model IDs)")
     parser.add_argument("--n-images", type=int, default=20,
                         help="Number of images in study sequence")
     parser.add_argument("--n-trials", type=int, default=None,
@@ -189,15 +190,19 @@ def main():
             evaluators.append(AnthropicEvaluator())
         elif m == "gemini":
             evaluators.append(GoogleEvaluator())
+        elif m == "qwen":
+            evaluators.append(QwenEvaluator("Qwen/Qwen2.5-VL-7B-Instruct"))
         elif m.startswith("claude"):
             evaluators.append(AnthropicEvaluator(m))
         elif m.startswith("gemini"):
             evaluators.append(GoogleEvaluator(m))
+        elif m.startswith("qwen") or m.startswith("Qwen"):
+            evaluators.append(QwenEvaluator(m))
         else:
             evaluators.append(OpenAIEvaluator(m))
 
     if not evaluators:
-        print("No valid models specified. Pass at least one model alias or provider model ID.")
+        print("No valid models specified. Use --models gpt-4o claude gemini qwen")
         return
 
     n_trials = args.n_trials if args.n_trials is not None else args.n_images

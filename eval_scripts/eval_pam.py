@@ -23,6 +23,7 @@ from tasks.paired_associate_memory import PairedAssociateMemoryTask
 from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
+from evaluators.qwen_evaluator import QwenEvaluator
 from metrics import calculate_pam_metrics
 from plotting import default_plots_dir, plot_pam
 
@@ -174,7 +175,7 @@ def run_evaluation(evaluators, n_images=20, dataset='things', max_context_pairs=
 def main():
     parser = argparse.ArgumentParser(description="Paired Associate Memory Evaluation")
     parser.add_argument("--models", nargs="+", default=["gpt-4o", "claude", "gemini"],
-                        help="Models to evaluate: gpt-4o, claude, gemini")
+                        help="Models to evaluate: gpt-4o, claude, gemini, qwen")
     parser.add_argument("--n-images", type=int, default=20,
                         help="Number of image-word pairs to study")
     parser.add_argument("--max-context-pairs", type=int, default=None,
@@ -196,9 +197,11 @@ def main():
         evaluators.append(AnthropicEvaluator())
     if "gemini" in args.models:
         evaluators.append(GoogleEvaluator())
+    if "qwen" in args.models:
+        evaluators.append(QwenEvaluator("Qwen/Qwen2.5-VL-7B-Instruct"))
 
     if not evaluators:
-        print("No valid models specified. Use --models gpt-4o claude gemini")
+        print("No valid models specified. Use --models gpt-4o claude gemini qwen")
         return
 
     print(f"Running Paired Associate Memory evaluation:")
