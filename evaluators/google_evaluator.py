@@ -1,9 +1,11 @@
 import os
+import time
 from io import BytesIO
 from typing import Any, Dict, List
 from PIL import Image
 from google import genai
 from google.genai import types
+from google.genai.errors import ClientError
 from .base import BaseEvaluator
 
 
@@ -41,8 +43,17 @@ class GoogleEvaluator(BaseEvaluator):
                 parts = [self._to_part(item) for item in msg["content"]]
             contents.append(types.Content(role=role, parts=parts))
 
-        resp = self.client.models.generate_content(
-            model=self.model_id,
-            contents=contents
-        )
-        return resp.text
+        for attempt in range(8):
+            try:
+                resp = self.client.models.generate_content(
+                    model=self.model_id,
+                    contents=contents
+                )
+                return resp.text
+            except ClientError as e:
+                if e.code == 429 and attempt < 7:
+                    wait = 30 * (2 ** attempt)  # 30, 60, 120, 240 ... seconds
+                    print(f"\n  Gemini 429 rate limit, waiting {wait}s (attempt {attempt+1}/8)...")
+                    time.sleep(wait)
+                else:
+                    raise

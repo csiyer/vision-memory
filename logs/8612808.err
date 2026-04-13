@@ -1,0 +1,1839 @@
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [06:51<?, ?it/s]
+Error in sys.excepthook:
+
+Original exception was:
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 78: 644694 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_2afc --models "$MODEL" --n-images "$size" --n-trials "$trials" --foil-type "$foil" --dataset "$dataset"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+    response.raise_for_status()
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+    response = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 476, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors (Request ID: Root=1-69dc391e-2a56237412f0ac872801f3c7;a10038f3-b5e3-4e5e-96d1-b7cf4b870f4d)
+
+We had to rate limit you, you hit the quota of 5000 resolvers requests per 5 minutes period. Upgrade to a PRO user or Team/Enterprise organization account (https://hf.co/pricing) to get higher limits. See https://huggingface.co/docs/hub/rate-limits
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1665, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 271, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 194, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 553, in cached_files
+    raise OSError(
+OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+    response.raise_for_status()
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+    response = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 476, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors (Request ID: Root=1-69dc3928-7f10882d387c761a57499944;2e88d76e-a4d7-4ce8-86c0-a9efffdb7507)
+
+We had to rate limit you, you hit the quota of 5000 resolvers requests per 5 minutes period. Upgrade to a PRO user or Team/Enterprise organization account (https://hf.co/pricing) to get higher limits. See https://huggingface.co/docs/hub/rate-limits
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1665, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 271, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 194, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 553, in cached_files
+    raise OSError(
+OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+    response.raise_for_status()
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+    response = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 476, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors (Request ID: Root=1-69dc3930-14ddd6b452777073782726c5;4ebe24c9-9656-4528-8294-c4ae2bf04141)
+
+We had to rate limit you, you hit the quota of 5000 resolvers requests per 5 minutes period. Upgrade to a PRO user or Team/Enterprise organization account (https://hf.co/pricing) to get higher limits. See https://huggingface.co/docs/hub/rate-limits
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1665, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 271, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 194, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 553, in cached_files
+    raise OSError(
+OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+    response.raise_for_status()
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+    response = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 476, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors (Request ID: Root=1-69dc3938-4a93f3415b2291fa6ff3d5e7;73ae732b-1689-417b-8a77-de4bfb5ec8ef)
+
+We had to rate limit you, you hit the quota of 5000 resolvers requests per 5 minutes period. Upgrade to a PRO user or Team/Enterprise organization account (https://hf.co/pricing) to get higher limits. See https://huggingface.co/docs/hub/rate-limits
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1665, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 271, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 194, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 553, in cached_files
+    raise OSError(
+OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+    response.raise_for_status()
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+    response = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 476, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors (Request ID: Root=1-69dc3940-4d85cf8b2427198f3548ae70;cf6fd4d4-a60a-4950-8f3e-705db6c81ef1)
+
+We had to rate limit you, you hit the quota of 5000 resolvers requests per 5 minutes period. Upgrade to a PRO user or Team/Enterprise organization account (https://hf.co/pricing) to get higher limits. See https://huggingface.co/docs/hub/rate-limits
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1665, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 271, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 194, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 553, in cached_files
+    raise OSError(
+OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+    response.raise_for_status()
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+    response = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 476, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors (Request ID: Root=1-69dc3948-7b03e00c69a20a4b48205fa3;2624a267-f335-40c2-982e-979333c0b8aa)
+
+We had to rate limit you, you hit the quota of 5000 resolvers requests per 5 minutes period. Upgrade to a PRO user or Team/Enterprise organization account (https://hf.co/pricing) to get higher limits. See https://huggingface.co/docs/hub/rate-limits
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1665, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 271, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 194, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 553, in cached_files
+    raise OSError(
+OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [03:19<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 271, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 194, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: IO Error: Disk quota exceeded (os error 122)
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 78: 653837 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_2afc --models "$MODEL" --n-images "$size" --n-trials "$trials" --foil-type "$foil" --dataset "$dataset"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+    response.raise_for_status()
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+    response = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 476, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors (Request ID: Root=1-69dc3a33-5fc6e52d722c3587275b5a7e;875bf5b5-6fb3-423e-9a06-4d1dfe32c56e)
+
+We had to rate limit you, you hit the quota of 5000 resolvers requests per 5 minutes period. Upgrade to a PRO user or Team/Enterprise organization account (https://hf.co/pricing) to get higher limits. See https://huggingface.co/docs/hub/rate-limits
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1665, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 193, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 133, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 553, in cached_files
+    raise OSError(
+OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+    response.raise_for_status()
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+    response = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 476, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors (Request ID: Root=1-69dc3a3b-1717d3be74837c8d3cea6041;3cc62b7d-7f6f-46f5-938b-6612836497dd)
+
+We had to rate limit you, you hit the quota of 5000 resolvers requests per 5 minutes period. Upgrade to a PRO user or Team/Enterprise organization account (https://hf.co/pricing) to get higher limits. See https://huggingface.co/docs/hub/rate-limits
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1665, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 193, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 133, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 553, in cached_files
+    raise OSError(
+OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [01:48<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 193, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 133, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: IO Error: Disk quota exceeded (os error 122)
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 113: 658692 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_continuous --models "$MODEL" --n-images "$size" --dataset "$dataset"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [03:47<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 193, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 133, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: IO Error: Disk quota exceeded (os error 122)
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 113: 661376 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_continuous --models "$MODEL" --n-images "$size" --dataset "$dataset"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [02:05<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 193, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 133, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: IO Error: Disk quota exceeded (os error 122)
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 113: 665364 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_continuous --models "$MODEL" --n-images "$size" --dataset "$dataset"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [02:17<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 193, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 133, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: IO Error: Disk quota exceeded (os error 122)
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 113: 667653 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_continuous --models "$MODEL" --n-images "$size" --dataset "$dataset"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [02:21<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 264, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 201, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: IO Error: Disk quota exceeded (os error 122)
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 135: 670592 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_pam --models "$MODEL" --n-images "$size" --dataset "$dataset"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [02:18<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 264, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 201, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: IO Error: Disk quota exceeded (os error 122)
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 135: 672835 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_pam --models "$MODEL" --n-images "$size" --dataset "$dataset"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [02:41<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 264, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 201, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: IO Error: Disk quota exceeded (os error 122)
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 135: 675850 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_pam --models "$MODEL" --n-images "$size" --dataset "$dataset"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [03:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 264, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 201, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: IO Error: Disk quota exceeded (os error 122)
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 135: 679180 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_pam --models "$MODEL" --n-images "$size" --dataset "$dataset"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [02:58<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 264, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 201, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: IO Error: Disk quota exceeded (os error 122)
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 135: 691009 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_pam --models "$MODEL" --n-images "$size" --dataset "$dataset"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+    response.raise_for_status()
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+    response = _request_wrapper(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_http.py", line 476, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 429 Client Error: Too Many Requests for url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/resolve/0c351dd01ed87e9c1b53cbc748cba10e6187ff3b/model-00001-of-00004.safetensors (Request ID: Root=1-69dc4040-36077232130713db0bf03800;afc5bb60-bd52-49b4-9185-449a4b896e7a)
+
+We had to rate limit you, you hit the quota of 5000 resolvers requests per 5 minutes period. Upgrade to a PRO user or Team/Enterprise organization account (https://hf.co/pricing) to get higher limits. See https://huggingface.co/docs/hub/rate-limits
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1665, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 264, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 201, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 553, in cached_files
+    raise OSError(
+OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 135: 704971 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_pam --models "$MODEL" --n-images "$size" --dataset "$dataset"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [03:06<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 264, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 201, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: IO Error: Disk quota exceeded (os error 122)
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 135: 706581 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_pam --models "$MODEL" --n-images "$size" --dataset "$dataset"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [02:40<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 264, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 201, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: Internal Writer Error: Background writer channel closed
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 135: 709519 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_pam --models "$MODEL" --n-images "$size" --dataset "$dataset"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [03:14<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_visual_haystacks.py", line 195, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_visual_haystacks.py", line 147, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: IO Error: Disk quota exceeded (os error 122)
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 154: 719861 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_visual_haystacks --models "$MODEL" --n-images "$size" --n-trials "$trials"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [02:55<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_visual_haystacks.py", line 195, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_visual_haystacks.py", line 147, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: IO Error: Disk quota exceeded (os error 122)
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 154: 725868 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_visual_haystacks --models "$MODEL" --n-images "$size" --n-trials "$trials"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [02:57<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_visual_haystacks.py", line 195, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_visual_haystacks.py", line 147, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: IO Error: Disk quota exceeded (os error 122)
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 154: 729978 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_visual_haystacks --models "$MODEL" --n-images "$size" --n-trials "$trials"
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [03:04<?, ?it/s]
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_visual_haystacks.py", line 195, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_visual_haystacks.py", line 147, in main
+    evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 18, in __init__
+    self._load_model()
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/qwen_evaluator.py", line 27, in _load_model
+    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/modeling_utils.py", line 1200, in _get_resolved_checkpoint_files
+    checkpoint_files, sharded_metadata = get_checkpoint_shard_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 1084, in get_checkpoint_shard_files
+    cached_filenames = cached_files(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 567, in cached_files
+    raise e
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/transformers/utils/hub.py", line 494, in cached_files
+    snapshot_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 332, in snapshot_download
+    thread_map(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/_snapshot_download.py", line 306, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Data processing error: File reconstruction error: IO Error: Disk quota exceeded (os error 122)
+/var/spool/slurm/slurmd/job8612808/slurm_script: line 154: 734409 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_visual_haystacks --models "$MODEL" --n-images "$size" --n-trials "$trials"

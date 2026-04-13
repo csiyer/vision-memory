@@ -1,0 +1,94 @@
+==============================================
+Vision Memory Experiments: gemini
+==============================================
+
+========== 2-AFC Recognition ==========
+--- Dataset: things ---
+  [RUN] things | novel | 1 images
+  [ERROR] things | novel | 1
+  [RUN] things | novel | 10 images
+  [ERROR] things | novel | 10
+  [RUN] things | novel | 100 images
+  [ERROR] things | novel | 100
+  [SKIP-LIMIT] things | novel | 1000
+  [RUN] things | exemplar | 1 images
+  [ERROR] things | exemplar | 1
+  [RUN] things | exemplar | 10 images
+  [ERROR] things | exemplar | 10
+  [RUN] things | exemplar | 100 images
+  [ERROR] things | exemplar | 100
+  [RUN] things | exemplar | 1000 images
+  [ERROR] things | exemplar | 1000
+--- Dataset: Brady2008 ---
+  [RUN] Brady2008 | novel | 1 images
+  [ERROR] Brady2008 | novel | 1
+  [RUN] Brady2008 | novel | 10 images
+  [ERROR] Brady2008 | novel | 10
+  [RUN] Brady2008 | novel | 100 images
+  [ERROR] Brady2008 | novel | 100
+  [RUN] Brady2008 | novel | 1000 images
+  [ERROR] Brady2008 | novel | 1000
+  [RUN] Brady2008 | exemplar | 1 images
+  [ERROR] Brady2008 | exemplar | 1
+  [RUN] Brady2008 | exemplar | 10 images
+  [ERROR] Brady2008 | exemplar | 10
+  [SKIP-LIMIT] Brady2008 | exemplar | 100
+  [SKIP-LIMIT] Brady2008 | exemplar | 1000
+  [RUN] Brady2008 | state | 1 images
+  [ERROR] Brady2008 | state | 1
+  [RUN] Brady2008 | state | 10 images
+  [ERROR] Brady2008 | state | 10
+  [SKIP-LIMIT] Brady2008 | state | 100
+  [SKIP-LIMIT] Brady2008 | state | 1000
+
+========== Continuous Recognition ==========
+--- Dataset: things ---
+  [SKIP-LIMIT] things | 1 (too small)
+  [RUN] things | 10 images
+  [ERROR] things | 10
+  [RUN] things | 100 images
+  [ERROR] things | 100
+  [RUN] things | 1000 images
+  [ERROR] things | 1000
+--- Dataset: Brady2008 ---
+  [SKIP-LIMIT] Brady2008 | 1 (too small)
+  [RUN] Brady2008 | 10 images
+  [ERROR] Brady2008 | 10
+  [RUN] Brady2008 | 100 images
+  [ERROR] Brady2008 | 100
+  [RUN] Brady2008 | 1000 images
+  [ERROR] Brady2008 | 1000
+
+========== Paired Associate Memory ==========
+--- Dataset: things ---
+  [RUN] things | 1 pairs
+  [ERROR] things | 1
+  [RUN] things | 10 pairs
+  [ERROR] things | 10
+  [RUN] things | 100 pairs
+  [ERROR] things | 100
+  [RUN] things | 1000 pairs
+  [ERROR] things | 1000
+--- Dataset: Brady2008 ---
+  [RUN] Brady2008 | 1 pairs
+  [ERROR] Brady2008 | 1
+  [RUN] Brady2008 | 10 pairs
+  [ERROR] Brady2008 | 10
+  [RUN] Brady2008 | 100 pairs
+  [ERROR] Brady2008 | 100
+  [RUN] Brady2008 | 1000 pairs
+  [ERROR] Brady2008 | 1000
+
+========== Visual Haystacks ==========
+  [RUN] 1 images
+  [ERROR] 1
+  [RUN] 10 images
+  [ERROR] 10
+  [RUN] 100 images
+  [ERROR] 100
+  [RUN] 1000 images
+  [ERROR] 1000
+
+==============================================
+gemini experiments completed!
+==============================================

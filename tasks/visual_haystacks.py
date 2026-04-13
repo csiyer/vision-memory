@@ -241,7 +241,7 @@ class VisualHaystacksTaskSimple:
             random.shuffle(images)
 
             # Create question
-            question = f"For the image with a {needle_cat}, is there also a {target_cat}?"
+            question = f"In the set of images shown, there is an image of a {needle_cat}. Is there also a separate image of a {target_cat} anywhere in the set?"
             answer = "yes" if target_present else "no"
 
             trials.append(

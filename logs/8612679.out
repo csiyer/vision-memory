@@ -1,0 +1,41 @@
+==============================================
+Vision Memory Experiments: gemini
+==============================================
+
+========== 2-AFC Recognition ==========
+--- Dataset: things ---
+  [RUN] things | novel | 1 images
+Running 2-AFC evaluation:
+  Models: ['gemini-2.5-flash']
+  N images (study): 1
+  N trials (test): 1
+  Max context images: all
+  Foil type: novel
+  Dataset: things
+Successfully connected to THINGS via Haitao999/things-eeg
+Fetching images from streaming dataset...
+Loaded 2 categories with up to 1 exemplars each.
+
+=== gemini-2.5-flash ===
+  Trial 1/1: ✓
+  Accuracy: 100.0% | d': 0.95 | Mem Score: 1.00
+
+Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_201643.json
+  [RUN] things | novel | 10 images
+Running 2-AFC evaluation:
+  Models: ['gemini-2.5-flash']
+  N images (study): 10
+  N trials (test): 10
+  Max context images: all
+  Foil type: novel
+  Dataset: things
+Successfully connected to THINGS via Haitao999/things-eeg
+Fetching images from streaming dataset...
+Loaded 20 categories with up to 1 exemplars each.
+
+=== gemini-2.5-flash ===
+  Trial 1/10: ✓  Trial 2/10: ✓  Trial 3/10: ✓  Trial 4/10: ✓  Trial 5/10: ✓  Trial 6/10: ✓  Trial 7/10: ✓  Trial 8/10: ✓  Trial 9/10: ✓  Trial 10/10: ✓
+  Accuracy: 100.0% | d': 2.39 | Mem Score: 1.00
+
+Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_201736.json
+  [RUN] things | novel | 100 images

@@ -39,7 +39,12 @@ def parse_yes_no(text):
 
 def build_messages(evaluator, prompt, images, max_context_images=None):
     # Anthropic commonly has lower practical image count limits.
-    provider_limit = 100 if "Anthropic" in type(evaluator).__name__ else len(images)
+    if "Anthropic" in type(evaluator).__name__:
+        provider_limit = 100
+    elif "OpenAI" in type(evaluator).__name__:
+        provider_limit = 500  # GPT-4o: max 500 images per request
+    else:
+        provider_limit = len(images)
     if max_context_images is not None:
         n_ctx = min(max_context_images, provider_limit)
     else:

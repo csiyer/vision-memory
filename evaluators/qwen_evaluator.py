@@ -19,16 +19,15 @@ class QwenEvaluator(BaseEvaluator):
 
     def _load_model(self):
         """Load Qwen3-VL model and processor."""
-        from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
+        from transformers import Qwen3VLForConditionalGeneration, AutoProcessor
 
         print(f"Loading {self.model_id}...")
 
         # Use bfloat16 for better memory efficiency on GPU
-        self.model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
+        self.model = Qwen3VLForConditionalGeneration.from_pretrained(
             self.model_id,
-            torch_dtype=torch.bfloat16,
+            dtype=torch.bfloat16,
             device_map="auto",
-            attn_implementation="flash_attention_2"  # Faster attention if available
         )
 
         self.processor = AutoProcessor.from_pretrained(self.model_id)

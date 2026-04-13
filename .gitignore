@@ -1,12 +1,12 @@
 .gitignore
 .DS_Store
+**/.DS_Store
+__MACOSX/
 .env
-**__pycache__**
-memory_datasets/*/*.jpg
-archive
-memory_datasets/Brady2008*
-# Same data lives under dataset/ (root `memory_datasets` is a symlink)
-dataset/memory_datasets/*/*.jpg
-dataset/memory_datasets/Brady2008*
-dataset/
+**/__pycache__/
+memory_datasets/
+archive/
 annotations/
+venv/
+tasks/*.zip
+brady_dataset.zip

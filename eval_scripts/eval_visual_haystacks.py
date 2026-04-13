@@ -144,7 +144,7 @@ def main():
     if "gemini" in args.models:
         evaluators.append(GoogleEvaluator())
     if "qwen" in args.models:
-        evaluators.append(QwenEvaluator("Qwen/Qwen2.5-VL-7B-Instruct"))
+        evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
 
     if not evaluators:
         print("No valid models specified.")

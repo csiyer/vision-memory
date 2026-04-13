@@ -1,0 +1,98 @@
+==============================================
+Vision Memory Experiments: gpt-4o
+==============================================
+
+========== 2-AFC Recognition ==========
+--- Dataset: things ---
+  [EXISTS] things | novel | 1 images
+  [EXISTS] things | novel | 10 images
+  [EXISTS] things | novel | 100 images
+  [RUN] things | novel | 500 images
+Running 2-AFC evaluation:
+  Models: ['gpt-4o']
+  N images (study): 500
+  N trials (test): 50
+  Max context images: all
+  Foil type: novel
+  Dataset: things
+Loaded 1000 THINGS categories from local cache.
+
+=== gpt-4o ===
+  Trial 1/50: ✓  Trial 2/50: ✓  [ERROR] things | novel | 500
+  [EXISTS] things | exemplar | 1 images
+  [EXISTS] things | exemplar | 10 images
+  [EXISTS] things | exemplar | 100 images
+  [RUN] things | exemplar | 500 images
+Running 2-AFC evaluation:
+  Models: ['gpt-4o']
+  N images (study): 500
+  N trials (test): 50
+  Max context images: all
+  Foil type: exemplar
+  Dataset: things
+Loaded 500 THINGS categories from local cache.
+
+=== gpt-4o ===
+  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✓  Trial 4/50: ✓  Trial 5/50: ✓  Trial 6/50: ✓  Trial 7/50: ✓  Trial 8/50: ✓  Trial 9/50: ✓  Trial 10/50: ✓  Trial 11/50: ✓  Trial 12/50: ✓  Trial 13/50: ✓  Trial 14/50: ✓  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✓  Trial 18/50: ✓  Trial 19/50: ✓  Trial 20/50: ✓  Trial 21/50: ✓  Trial 22/50: ✓  Trial 23/50: ✓  Trial 24/50: ✓  Trial 25/50: ✓  Trial 26/50: ✓  Trial 27/50: ✓  Trial 28/50: ✓  Trial 29/50: ✓  Trial 30/50: ✓  Trial 31/50: ✓  Trial 32/50: ✓  Trial 33/50: ✓  Trial 34/50: ✓  Trial 35/50: ✓  Trial 36/50: ✓  Trial 37/50: ✓  Trial 38/50: ✓  Trial 39/50: ✓  Trial 40/50: ✓  Trial 41/50: ✓  Trial 42/50: ✓  Trial 43/50: ✓  Trial 44/50: ✓  Trial 45/50: ✓  Trial 46/50: ✓  Trial 47/50: ✓  Trial 48/50: ✓  Trial 49/50: ✓  Trial 50/50: ✓
+  Accuracy: 100.0% | d': 3.30 | Mem Score: 1.00
+
+Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260413_112226.json
+--- Dataset: Brady2008 ---
+  [EXISTS] Brady2008 | novel | 1 images
+  [EXISTS] Brady2008 | novel | 10 images
+  [EXISTS] Brady2008 | novel | 100 images
+  [RUN] Brady2008 | novel | 500 images
+Running 2-AFC evaluation:
+  Models: ['gpt-4o']
+  N images (study): 500
+  N trials (test): 50
+  Max context images: all
+  Foil type: novel
+  Dataset: Brady2008
+
+=== gpt-4o ===
+  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✓  Trial 4/50: ✓  Trial 5/50: ✓  Trial 6/50: ✓  Trial 7/50: ✓  Trial 8/50: ✓  Trial 9/50: ✓  Trial 10/50: ✓  Trial 11/50: ✓  Trial 12/50: ✓  Trial 13/50: ✓  Trial 14/50: ✓  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✓  Trial 18/50: ✓  Trial 19/50: ✓  Trial 20/50: ✓  Trial 21/50: ✓  Trial 22/50: ✓  Trial 23/50: ✓  Trial 24/50: ✓  Trial 25/50: ✓  Trial 26/50: ✓  Trial 27/50: ✓  Trial 28/50: ✓  Trial 29/50: ✓  Trial 30/50: ✓  Trial 31/50: ✓  Trial 32/50: ✓  Trial 33/50: ✓  Trial 34/50: ✓  Trial 35/50: ✓  Trial 36/50: ✓  Trial 37/50: ✓  Trial 38/50: ✓  Trial 39/50: ✓  Trial 40/50: ✓  Trial 41/50: ✓  Trial 42/50: ✓  Trial 43/50: ✓  Trial 44/50: ✓  Trial 45/50: ✓  Trial 46/50: ✓  Trial 47/50: ✓  Trial 48/50: ✓  Trial 49/50: ✓  Trial 50/50: ✓
+  Accuracy: 100.0% | d': 3.30 | Mem Score: 1.00
+
+Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260413_114443.json
+  [EXISTS] Brady2008 | exemplar | 1 images
+  [EXISTS] Brady2008 | exemplar | 10 images
+  [RUN] Brady2008 | exemplar | 100 images
+Running 2-AFC evaluation:
+  Models: ['gpt-4o']
+  N images (study): 100
+  N trials (test): 50
+  Max context images: all
+  Foil type: exemplar
+  Dataset: Brady2008
+
+=== gpt-4o ===
+  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✓  Trial 4/50: ✓  Trial 5/50: ✓  Trial 6/50: ✓  Trial 7/50: ✓  Trial 8/50: ✓  Trial 9/50: ✓  Trial 10/50: ✓  Trial 11/50: ✓  Trial 12/50: ✓  Trial 13/50: ✓  Trial 14/50: ✓  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✓  Trial 18/50: ✓  Trial 19/50: ✓  Trial 20/50: ✓  Trial 21/50: ✓  Trial 22/50: ✓  Trial 23/50: ✓  Trial 24/50: ✓  Trial 25/50: ✓  Trial 26/50: ✓  Trial 27/50: ✓  Trial 28/50: ✓  Trial 29/50: ✓  Trial 30/50: ✓  Trial 31/50: ✓  Trial 32/50: ✓  Trial 33/50: ✓  Trial 34/50: ✓  Trial 35/50: ✓  Trial 36/50: ✓  Trial 37/50: ✓  Trial 38/50: ✓  Trial 39/50: ✓  Trial 40/50: ✓  Trial 41/50: ✓  Trial 42/50: ✓  Trial 43/50: ✓  Trial 44/50: ✓  Trial 45/50: ✓  Trial 46/50: ✓  Trial 47/50: ✓  Trial 48/50: ✓  Trial 49/50: ✓  Trial 50/50: ✓
+  Accuracy: 100.0% | d': 3.30 | Mem Score: 1.00
+
+Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260413_115018.json
+  [SKIP-LIMIT] Brady2008 | exemplar | 500
+  [EXISTS] Brady2008 | state | 1 images
+  [EXISTS] Brady2008 | state | 10 images
+  [RUN] Brady2008 | state | 100 images
+Running 2-AFC evaluation:
+  Models: ['gpt-4o']
+  N images (study): 100
+  N trials (test): 50
+  Max context images: all
+  Foil type: state
+  Dataset: Brady2008
+
+=== gpt-4o ===
+  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✓  Trial 4/50: ✓  Trial 5/50: ✓  Trial 6/50: ✓  Trial 7/50: ✓  Trial 8/50: ✓  Trial 9/50: ✓  Trial 10/50: ✓  Trial 11/50: ✓  Trial 12/50: ✓  Trial 13/50: ✓  Trial 14/50: ✓  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✓  Trial 18/50: ✓  Trial 19/50: ✓  Trial 20/50: ✓  Trial 21/50: ✓  Trial 22/50: ✓  Trial 23/50: ✓  Trial 24/50: ✓  Trial 25/50: ✓  Trial 26/50: ✓  Trial 27/50: ✓  Trial 28/50: ✓  Trial 29/50: ✓  Trial 30/50: ✓  Trial 31/50: ✓  Trial 32/50: ✓  Trial 33/50: ✓  Trial 34/50: ✓  Trial 35/50: ✓  Trial 36/50: ✓  Trial 37/50: ✓  Trial 38/50: ✗  Trial 39/50: ✓  Trial 40/50: ✓  Trial 41/50: ✓  Trial 42/50: ✓  Trial 43/50: ✓  Trial 44/50: ✓  Trial 45/50: ✓  Trial 46/50: ✓  Trial 47/50: ✓  Trial 48/50: ✓  Trial 49/50: ✓  Trial 50/50: ✓
+  Accuracy: 98.0% | d': 2.67 | Mem Score: 0.96
+
+Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260413_115602.json
+  [SKIP-LIMIT] Brady2008 | state | 500
+
+========== Continuous Recognition ==========
+--- Dataset: things ---
+  [SKIP-LIMIT] things | 1 (too small)
+  [EXISTS] things | 10 images
+  [EXISTS] things | 100 images
+  [RUN] things | 500 images

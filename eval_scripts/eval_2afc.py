@@ -191,7 +191,7 @@ def main():
         elif m == "gemini":
             evaluators.append(GoogleEvaluator())
         elif m == "qwen":
-            evaluators.append(QwenEvaluator("Qwen/Qwen2.5-VL-7B-Instruct"))
+            evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
         elif m.startswith("claude"):
             evaluators.append(AnthropicEvaluator(m))
         elif m.startswith("gemini"):

@@ -1,0 +1,121 @@
+==============================================
+Vision Memory Experiments: qwen
+==============================================
+
+========== 2-AFC Recognition ==========
+--- Dataset: things ---
+  [EXISTS] things | novel | 1 images
+  [EXISTS] things | novel | 10 images
+  [EXISTS] things | novel | 100 images
+  [RUN] things | novel | 500 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] things | novel | 500
+  [EXISTS] things | exemplar | 1 images
+  [EXISTS] things | exemplar | 10 images
+  [EXISTS] things | exemplar | 100 images
+  [RUN] things | exemplar | 500 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] things | exemplar | 500
+--- Dataset: Brady2008 ---
+  [RUN] Brady2008 | novel | 1 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | novel | 1
+  [RUN] Brady2008 | novel | 10 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | novel | 10
+  [RUN] Brady2008 | novel | 100 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | novel | 100
+  [RUN] Brady2008 | novel | 500 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | novel | 500
+  [RUN] Brady2008 | exemplar | 1 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | exemplar | 1
+  [RUN] Brady2008 | exemplar | 10 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | exemplar | 10
+  [RUN] Brady2008 | exemplar | 100 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | exemplar | 100
+  [SKIP-LIMIT] Brady2008 | exemplar | 500
+  [RUN] Brady2008 | state | 1 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | state | 1
+  [RUN] Brady2008 | state | 10 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | state | 10
+  [RUN] Brady2008 | state | 100 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | state | 100
+  [SKIP-LIMIT] Brady2008 | state | 500
+
+========== Continuous Recognition ==========
+--- Dataset: things ---
+  [SKIP-LIMIT] things | 1 (too small)
+  [RUN] things | 10 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] things | 10
+  [RUN] things | 100 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] things | 100
+  [RUN] things | 500 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] things | 500
+--- Dataset: Brady2008 ---
+  [SKIP-LIMIT] Brady2008 | 1 (too small)
+  [RUN] Brady2008 | 10 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | 10
+  [RUN] Brady2008 | 100 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | 100
+  [RUN] Brady2008 | 500 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | 500
+
+========== Paired Associate Memory ==========
+--- Dataset: things ---
+  [RUN] things | 1 pairs
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] things | 1
+  [RUN] things | 10 pairs
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] things | 10
+  [RUN] things | 100 pairs
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] things | 100
+  [RUN] things | 500 pairs
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] things | 500
+--- Dataset: Brady2008 ---
+  [RUN] Brady2008 | 1 pairs
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | 1
+  [RUN] Brady2008 | 10 pairs
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | 10
+  [RUN] Brady2008 | 100 pairs
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | 100
+  [RUN] Brady2008 | 500 pairs
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] Brady2008 | 500
+
+========== Visual Haystacks ==========
+  [RUN] 1 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] 1
+  [RUN] 10 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] 10
+  [RUN] 100 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] 100
+  [RUN] 500 images
+Loading Qwen/Qwen3-VL-8B-Instruct...
+  [ERROR] 500
+
+==============================================
+qwen experiments completed!
+==============================================

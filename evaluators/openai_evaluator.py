@@ -1,9 +1,10 @@
 import os
+import time
 import base64
 from io import BytesIO
 from typing import List, Dict, Any
 from PIL import Image
-from openai import OpenAI
+from openai import OpenAI, RateLimitError
 from .base import BaseEvaluator
 
 
@@ -40,9 +41,18 @@ class OpenAIEvaluator(BaseEvaluator):
 
     def _call_api(self, messages: List[Dict]) -> str:
         """Make API call and return response text."""
-        resp = self.client.chat.completions.create(
-            model=self.model_id,
-            messages=messages,
-            max_tokens=10
-        )
-        return resp.choices[0].message.content
+        for attempt in range(8):
+            try:
+                resp = self.client.chat.completions.create(
+                    model=self.model_id,
+                    messages=messages,
+                    max_tokens=10
+                )
+                return resp.choices[0].message.content
+            except RateLimitError:
+                if attempt < 7:
+                    wait = 30 * (2 ** attempt)  # 30, 60, 120, 240 ... seconds
+                    print(f"\n  GPT 429 rate limit, waiting {wait}s (attempt {attempt+1}/8)...")
+                    time.sleep(wait)
+                else:
+                    raise

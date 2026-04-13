@@ -1,0 +1,39 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260412_164111",
+    "dataset": "things",
+    "n_images": 1,
+    "n_trials": 1,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 1.0,
+        "n_correct": 1,
+        "total": 1
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "WORD802",
+        "reported": "word802",
+        "correct": 1,
+        "raw_response": "The word paired with that image was **WORD802**.",
+        "metadata": {
+          "category": "cat_0",
+          "category_id": 0,
+          "exemplar_id": 0
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 1,
+    "total": 1
+  }
+}

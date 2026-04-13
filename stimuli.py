@@ -32,79 +32,58 @@ class DirectoryDataset():
 
 
 class ThingsDataset:
-    """Gets images from the THINGS dataset via Hugging Face."""
+    """THINGS dataset. Uses local files if available (run download_things.py first),
+    otherwise streams from HuggingFace."""
+
+    LOCAL_DIR = Path(__file__).parent / "memory_datasets" / "THINGS" / "images"
+
     def __init__(self, n_categories=None, exemplars_per_category=1):
-        try:
-            from datasets import load_dataset, load_dataset_builder
-            # Prioritize the one the user mentioned
-            names = ["Haitao999/things-eeg", "He-Bart/THINGS", "Hebart/THINGS", "THINGS-data/THINGS", "RAIlab/THINGS"]
-            self.ds = None
-            self.name = None
-            for name in names:
-                try:
-                    # Use streaming=True to avoid downloading 30GB at once
-                    self.ds = load_dataset(name, split="train", streaming=True)
-                    self.name = name
-                    print(f"Successfully connected to THINGS via {name}")
-                    break
-                except:
-                    continue
+        self.category_groups = {}
+        self.category_names = []
 
-            if self.ds is None:
-                raise ValueError("Could not find THINGS dataset on Hugging Face. Please verify the dataset name.")
+        if self.LOCAL_DIR.exists() and any(self.LOCAL_DIR.iterdir()):
+            self._load_local(n_categories, exemplars_per_category)
+        else:
+            print("THINGS local cache not found, streaming from HuggingFace (slow, may hit rate limits).")
+            print("Run `python3 download_things.py` once to cache locally.")
+            self._load_streaming(n_categories, exemplars_per_category)
 
-            # Map category name to list of images
-            self.category_groups = {}
-            self.category_names = [] # Maintain order of arrival
+    def _load_local(self, n_categories, exemplars_per_category):
+        """Load from memory_datasets/THINGS/images/<category>/<n>.jpg"""
+        cat_dirs = sorted(self.LOCAL_DIR.iterdir())
+        for cat_dir in cat_dirs:
+            if not cat_dir.is_dir():
+                continue
+            if n_categories and len(self.category_names) >= n_categories:
+                break
+            exemplar_paths = sorted(cat_dir.glob("*.jpg"))[:exemplars_per_category]
+            if not exemplar_paths:
+                continue
+            cat = cat_dir.name
+            self.category_names.append(cat)
+            self.category_groups[cat] = exemplar_paths  # Store paths, load lazily
+        print(f"Loaded {len(self.category_names)} THINGS categories from local cache.")
 
-            # Label id -> name without downloading the full split (non-streaming load_dataset caches everything).
-            id_to_name = None
-            ds_features = getattr(self.ds, "features", None)
-            if ds_features is not None and "label" in ds_features:
-                lf = ds_features["label"]
-                if hasattr(lf, "names") and lf.names is not None:
-                    id_to_name = list(lf.names)
-            if id_to_name is None:
-                try:
-                    builder = load_dataset_builder(self.name)
-                    bfeat = builder.info.features
-                    if bfeat is not None and "label" in bfeat:
-                        lf = bfeat["label"]
-                        if hasattr(lf, "names") and lf.names is not None:
-                            id_to_name = list(lf.names)
-                except Exception:
-                    pass
-
-
-            print("Fetching images from streaming dataset...")
-            for item in self.ds:
-                # Determine category name - use category/concept field or fallback to label number
-                cat = item.get('category') or item.get('concept') or f"cat_{item.get('label', 0)}"
-
-                if cat not in self.category_groups:
-                    if n_categories and len(self.category_groups) >= n_categories:
-                        continue
-                    self.category_groups[cat] = []
-                    self.category_names.append(cat)
-
-                if len(self.category_groups[cat]) < exemplars_per_category:
-                    img = item['image']
-                    if not isinstance(img, Image.Image):
-                        img = Image.fromarray(np.array(img))
-                    self.category_groups[cat].append(img.convert("RGB"))
-
-                # Check if we have enough
+    def _load_streaming(self, n_categories, exemplars_per_category):
+        from datasets import load_dataset
+        ds = load_dataset("Haitao999/things-eeg", split="train", streaming=True)
+        print("Fetching images from HuggingFace...")
+        for item in ds:
+            cat = item.get("category") or item.get("concept") or f"cat_{item.get('label', 0)}"
+            if cat not in self.category_groups:
                 if n_categories and len(self.category_groups) >= n_categories:
-                    # Check if all have enough exemplars
-                    if all(len(self.category_groups[c]) >= exemplars_per_category for c in self.category_names):
-                        break
-
-            print(f"Loaded {len(self.category_groups)} categories with up to {exemplars_per_category} exemplars each.")
-
-        except Exception as e:
-            print(f"Error loading THINGS dataset: {e}")
-            self.category_groups = {}
-            self.category_names = []
+                    continue
+                self.category_groups[cat] = []
+                self.category_names.append(cat)
+            if len(self.category_groups[cat]) < exemplars_per_category:
+                img = item["image"]
+                if not isinstance(img, Image.Image):
+                    img = Image.fromarray(np.array(img))
+                self.category_groups[cat].append(img.convert("RGB"))
+            if n_categories and len(self.category_groups) >= n_categories:
+                if all(len(self.category_groups[c]) >= exemplars_per_category for c in self.category_names):
+                    break
+        print(f"Loaded {len(self.category_groups)} THINGS categories from HuggingFace.")
 
     def __len__(self):
         return len(self.category_names)
@@ -112,6 +91,8 @@ class ThingsDataset:
     def get_image(self, index, exemplar_index=0):
         cat = self.category_names[index]
         exemplars = self.category_groups[cat]
+        if isinstance(exemplars[0], Path):
+            return Image.open(exemplars[exemplar_index % len(exemplars)]).convert("RGB")
         return exemplars[exemplar_index % len(exemplars)]
 
     def get_metadata(self, index, exemplar_index=0):
