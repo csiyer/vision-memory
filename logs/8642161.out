@@ -8,3 +8,89 @@ Vision Memory Experiments: gemini
   [EXISTS] things | novel | 10 images
   [EXISTS] things | novel | 100 images
   [RUN] things | novel | 500 images
+Running 2-AFC evaluation:
+  Models: ['gemini-2.5-flash']
+  N images (study): 500
+  N trials (test): 50
+  Max context images: all
+  Foil type: novel
+  Dataset: things
+Loaded 1000 THINGS categories from local cache.
+
+=== gemini-2.5-flash ===
+
+  Gemini 429 rate limit, waiting 30s (attempt 1/8)...
+
+  Gemini 429 rate limit, waiting 60s (attempt 2/8)...
+
+  Gemini 429 rate limit, waiting 120s (attempt 3/8)...
+
+  Gemini 429 rate limit, waiting 240s (attempt 4/8)...
+
+  Gemini 429 rate limit, waiting 480s (attempt 5/8)...
+
+  Gemini 429 rate limit, waiting 960s (attempt 6/8)...
+
+  Gemini 429 rate limit, waiting 1920s (attempt 7/8)...
+  [ERROR] things | novel | 500
+  [EXISTS] things | exemplar | 1 images
+  [EXISTS] things | exemplar | 10 images
+  [EXISTS] things | exemplar | 100 images
+  [RUN] things | exemplar | 500 images
+Running 2-AFC evaluation:
+  Models: ['gemini-2.5-flash']
+  N images (study): 500
+  N trials (test): 50
+  Max context images: all
+  Foil type: exemplar
+  Dataset: things
+Loaded 500 THINGS categories from local cache.
+
+=== gemini-2.5-flash ===
+
+  Gemini 429 rate limit, waiting 30s (attempt 1/8)...
+
+  Gemini 429 rate limit, waiting 60s (attempt 2/8)...
+
+  Gemini 429 rate limit, waiting 120s (attempt 3/8)...
+
+  Gemini 429 rate limit, waiting 240s (attempt 4/8)...
+
+  Gemini 429 rate limit, waiting 480s (attempt 5/8)...
+
+  Gemini 429 rate limit, waiting 960s (attempt 6/8)...
+
+  Gemini 429 rate limit, waiting 1920s (attempt 7/8)...
+  [ERROR] things | exemplar | 500
+--- Dataset: Brady2008 ---
+  [EXISTS] Brady2008 | novel | 1 images
+  [EXISTS] Brady2008 | novel | 10 images
+  [EXISTS] Brady2008 | novel | 100 images
+  [RUN] Brady2008 | novel | 500 images
+Running 2-AFC evaluation:
+  Models: ['gemini-2.5-flash']
+  N images (study): 500
+  N trials (test): 50
+  Max context images: all
+  Foil type: novel
+  Dataset: Brady2008
+
+=== gemini-2.5-flash ===
+
+  Gemini 429 rate limit, waiting 30s (attempt 1/8)...
+
+  Gemini 429 rate limit, waiting 60s (attempt 2/8)...
+
+  Gemini 429 rate limit, waiting 120s (attempt 3/8)...
+
+  Gemini 429 rate limit, waiting 240s (attempt 4/8)...
+
+  Gemini 429 rate limit, waiting 480s (attempt 5/8)...
+
+  Gemini 429 rate limit, waiting 960s (attempt 6/8)...
+
+  Gemini 429 rate limit, waiting 1920s (attempt 7/8)...
+  [ERROR] Brady2008 | novel | 500
+  [EXISTS] Brady2008 | exemplar | 1 images
+  [EXISTS] Brady2008 | exemplar | 10 images
+  [RUN] Brady2008 | exemplar | 100 images

@@ -1,31 +1,36 @@
 #!/bin/bash
-#SBATCH --job-name=vismem_gemini
+#SBATCH --job-name=vismem_qwen_pam
 #SBATCH --partition=short
 #SBATCH --account=zgroup
 #SBATCH --output=logs/%j.out
 #SBATCH --error=logs/%j.err
-#SBATCH --time=12:00:00
-#SBATCH --mem=16G
+#SBATCH --time=08:00:00
+#SBATCH --mem=48G
 #SBATCH --cpus-per-task=4
+#SBATCH --gres=gpu:1
+#SBATCH --constraint=A6000
 
-# Gemini experiments (API-based, no GPU needed)
+# Qwen PAM + Haystacks (excluded from continuous job)
 
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
 source "$SCRIPT_DIR/venv/bin/activate"
 
-MODEL="gemini"
+export HF_HOME="/insomnia001/home/pm3361/.cache/huggingface"
+export TRANSFORMERS_OFFLINE=1
+export HF_DATASETS_OFFLINE=1
+
+MODEL="qwen"
 N_TRIALS=50
 RESULTS_DIR="$SCRIPT_DIR/results"
 SIZES=(1 10 100 500)
 DATASETS=("things" "Brady2008")
-FOIL_TYPES=("novel" "exemplar" "state")
 
 mkdir -p "$RESULTS_DIR" logs
 
 echo "=============================================="
-echo "Vision Memory Experiments: $MODEL"
+echo "Vision Memory Experiments: $MODEL (PAM + Haystacks)"
 echo "=============================================="
 
 check_existing_result() {
@@ -62,65 +67,6 @@ sys.exit(0)
     done
     return 1
 }
-
-# ============================================================================
-# 2-AFC RECOGNITION
-# ============================================================================
-echo ""
-echo "========== 2-AFC Recognition =========="
-
-for dataset in "${DATASETS[@]}"; do
-    echo "--- Dataset: $dataset ---"
-    for foil in "${FOIL_TYPES[@]}"; do
-        if [ "$dataset" = "things" ] && [ "$foil" = "state" ]; then continue; fi
-        for size in "${SIZES[@]}"; do
-            skip=false
-            if [ "$dataset" = "Brady2008" ]; then
-                [ "$foil" = "state" ]    && [ "$size" -gt 100 ] && skip=true
-                [ "$foil" = "exemplar" ] && [ "$size" -gt 100 ] && skip=true
-            fi
-            if [ "$dataset" = "things" ]; then
-                :
-            fi
-            [ "$skip" = true ] && echo "  [SKIP-LIMIT] $dataset | $foil | $size" && continue
-            if check_existing_result "2afc" "$MODEL" "$dataset" "$size" "$foil"; then
-                echo "  [EXISTS] $dataset | $foil | $size images"
-                continue
-            fi
-            echo "  [RUN] $dataset | $foil | $size images"
-            trials=$N_TRIALS
-            [ "$size" -lt "$N_TRIALS" ] && trials=$size
-            python3 -m eval_scripts.eval_2afc \
-                --models "$MODEL" \
-                --n-images "$size" \
-                --n-trials "$trials" \
-                --foil-type "$foil" \
-                --dataset "$dataset" || echo "  [ERROR] $dataset | $foil | $size"
-        done
-    done
-done
-
-# ============================================================================
-# CONTINUOUS RECOGNITION
-# ============================================================================
-echo ""
-echo "========== Continuous Recognition =========="
-
-for dataset in "${DATASETS[@]}"; do
-    echo "--- Dataset: $dataset ---"
-    for size in "${SIZES[@]}"; do
-        if [ "$size" -lt 10 ]; then echo "  [SKIP-LIMIT] $dataset | $size (too small)"; continue; fi
-        if check_existing_result "continuous" "$MODEL" "$dataset" "$size" ""; then
-            echo "  [EXISTS] $dataset | $size images"
-            continue
-        fi
-        echo "  [RUN] $dataset | $size images"
-        python3 -m eval_scripts.eval_continuous \
-            --models "$MODEL" \
-            --n-images "$size" \
-            --dataset "$dataset" || echo "  [ERROR] $dataset | $size"
-    done
-done
 
 # ============================================================================
 # PAIRED ASSOCIATE MEMORY
@@ -165,5 +111,5 @@ done
 
 echo ""
 echo "=============================================="
-echo "$MODEL experiments completed!"
+echo "$MODEL PAM + Haystacks completed!"
 echo "=============================================="

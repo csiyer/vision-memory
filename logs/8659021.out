@@ -1,0 +1,94 @@
+==============================================
+Vision Memory Experiments: gpt-4o
+==============================================
+
+========== 2-AFC Recognition ==========
+--- Dataset: things ---
+  [EXISTS] things | novel | 1 images
+  [EXISTS] things | novel | 10 images
+  [EXISTS] things | novel | 100 images
+  [SKIP-LIMIT] things | novel | 500
+  [EXISTS] things | exemplar | 1 images
+  [EXISTS] things | exemplar | 10 images
+  [EXISTS] things | exemplar | 100 images
+  [SKIP-LIMIT] things | exemplar | 500
+--- Dataset: Brady2008 ---
+  [EXISTS] Brady2008 | novel | 1 images
+  [EXISTS] Brady2008 | novel | 10 images
+  [EXISTS] Brady2008 | novel | 100 images
+  [SKIP-LIMIT] Brady2008 | novel | 500
+  [EXISTS] Brady2008 | exemplar | 1 images
+  [EXISTS] Brady2008 | exemplar | 10 images
+  [EXISTS] Brady2008 | exemplar | 100 images
+  [SKIP-LIMIT] Brady2008 | exemplar | 500
+  [EXISTS] Brady2008 | state | 1 images
+  [EXISTS] Brady2008 | state | 10 images
+  [EXISTS] Brady2008 | state | 100 images
+  [SKIP-LIMIT] Brady2008 | state | 500
+
+========== Continuous Recognition ==========
+--- Dataset: things ---
+  [SKIP-LIMIT] things | 1 (too small)
+  [EXISTS] things | 10 images
+  [EXISTS] things | 100 images
+  [SKIP-LIMIT] things | 500 (GPT body size limit)
+--- Dataset: Brady2008 ---
+  [SKIP-LIMIT] Brady2008 | 1 (too small)
+  [EXISTS] Brady2008 | 10 images
+  [EXISTS] Brady2008 | 100 images
+  [SKIP-LIMIT] Brady2008 | 500 (GPT body size limit)
+
+========== Paired Associate Memory ==========
+--- Dataset: things ---
+  [EXISTS] things | 1 pairs
+  [EXISTS] things | 10 pairs
+  [EXISTS] things | 100 pairs
+  [SKIP-LIMIT] things | 500 (GPT body size limit)
+--- Dataset: Brady2008 ---
+  [EXISTS] Brady2008 | 1 pairs
+  [EXISTS] Brady2008 | 10 pairs
+  [EXISTS] Brady2008 | 100 pairs
+  [SKIP-LIMIT] Brady2008 | 500 (GPT body size limit)
+
+========== Visual Haystacks ==========
+  [RUN] 1 images
+Running Visual Haystacks evaluation:
+  Models: ['gpt-4o']
+  N images (haystack): 1
+  N trials: 20
+Loaded 100 THINGS categories from local cache.
+
+=== gpt-4o ===
+  Trial 1/20: ✗  Trial 2/20: ✓  Trial 3/20: ✗  Trial 4/20: ✗  Trial 5/20: ✓  Trial 6/20: ✓  Trial 7/20: ✓  Trial 8/20: ✗  Trial 9/20: ✗  Trial 10/20: ✗  Trial 11/20: ✗  Trial 12/20: ✗  Trial 13/20: ✓  Trial 14/20: ✓  Trial 15/20: ✗  Trial 16/20: ✓  Trial 17/20: ✓  Trial 18/20: ✓  Trial 19/20: ✗  Trial 20/20: ✗
+  Accuracy: 45.0% | Hit: 0.0% | CR: 100.0%
+
+Saved to /insomnia001/home/pm3361/vision-memory/results/results_haystacks_20260413_163805.json
+  [RUN] 10 images
+Running Visual Haystacks evaluation:
+  Models: ['gpt-4o']
+  N images (haystack): 10
+  N trials: 50
+Loaded 100 THINGS categories from local cache.
+
+=== gpt-4o ===
+  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✗  Trial 4/50: ✗  Trial 5/50: ✗  Trial 6/50: ✓  Trial 7/50: ✗  Trial 8/50: ✗  Trial 9/50: ✓  Trial 10/50: ✗  Trial 11/50: ✗  Trial 12/50: ✗  Trial 13/50: ✓  Trial 14/50: ✗  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✓  Trial 18/50: ✗  Trial 19/50: ✓  Trial 20/50: ✓  Trial 21/50: ✗  Trial 22/50: ✓  Trial 23/50: ✓  Trial 24/50: ✗  Trial 25/50: ✓  Trial 26/50: ✓  Trial 27/50: ✓  Trial 28/50: ✗  Trial 29/50: ✓  Trial 30/50: ✓  Trial 31/50: ✓  Trial 32/50: ✓  Trial 33/50: ✗  Trial 34/50: ✓  Trial 35/50: ✗  Trial 36/50: ✗  Trial 37/50: ✗  Trial 38/50: ✗  Trial 39/50: ✗  Trial 40/50: ✓  Trial 41/50: ✗  Trial 42/50: ✓  Trial 43/50: ✓  Trial 44/50: ✓  Trial 45/50: ✗  Trial 46/50: ✗  Trial 47/50: ✓  Trial 48/50: ✓  Trial 49/50: ✓  Trial 50/50: ✓
+  Accuracy: 56.0% | Hit: 0.0% | CR: 100.0%
+
+Saved to /insomnia001/home/pm3361/vision-memory/results/results_haystacks_20260413_163931.json
+  [RUN] 100 images
+Running Visual Haystacks evaluation:
+  Models: ['gpt-4o']
+  N images (haystack): 100
+  N trials: 50
+Loaded 200 THINGS categories from local cache.
+
+=== gpt-4o ===
+  Trial 1/50: ✗  Trial 2/50: ✗  Trial 3/50: ✓  Trial 4/50: ✗  Trial 5/50: ✗  Trial 6/50: ✗  Trial 7/50: ✗  Trial 8/50: ✗  Trial 9/50: ✓  Trial 10/50: ✗  Trial 11/50: ✗  Trial 12/50: ✓  Trial 13/50: ✓  Trial 14/50: ✗  Trial 15/50: ✗  Trial 16/50: ✓  Trial 17/50: ✗  Trial 18/50: ✗  Trial 19/50: ✗  Trial 20/50: ✗  Trial 21/50: ✓  Trial 22/50: ✗  Trial 23/50: ✗  Trial 24/50: ✗  Trial 25/50: ✓  Trial 26/50: ✗  Trial 27/50: ✓  Trial 28/50: ✗  Trial 29/50: ✗  Trial 30/50: ✓  Trial 31/50: ✗  Trial 32/50: ✗  Trial 33/50: ✗  Trial 34/50: ✗  Trial 35/50: ✗  Trial 36/50: ✗  Trial 37/50: ✗  Trial 38/50: ✗  Trial 39/50: ✓  Trial 40/50: ✗  Trial 41/50: ✗  Trial 42/50: ✓  Trial 43/50: ✓  Trial 44/50: ✗  Trial 45/50: ✓  Trial 46/50: ✗  Trial 47/50: ✓  Trial 48/50: ✓  Trial 49/50: ✓  Trial 50/50: ✓
+  Accuracy: 34.0% | Hit: 0.0% | CR: 100.0%
+
+Saved to /insomnia001/home/pm3361/vision-memory/results/results_haystacks_20260413_164603.json
+  [SKIP-LIMIT] 500 (GPT body size limit)
+
+==============================================
+gpt-4o experiments completed!
+==============================================

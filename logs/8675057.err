@@ -2,46 +2,6 @@
   warnings.warn(eol_message.format("3.9"), FutureWarning)
 /insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
   warnings.warn(eol_message.format("3.9"), FutureWarning)
-Traceback (most recent call last):
-  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
-    exec(code, run_globals)
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 271, in <module>
-    main()
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 218, in main
-    results = run_evaluation(
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 133, in run_evaluation
-    response_text = evaluator._call_api(messages)
-  File "/insomnia001/home/pm3361/vision-memory/evaluators/google_evaluator.py", line 48, in _call_api
-    resp = self.client.models.generate_content(
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/models.py", line 5020, in generate_content
-    response = self._generate_content(
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/models.py", line 3832, in _generate_content
-    response = self._api_client.request(
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/_api_client.py", line 1331, in request
-    response = self._request(http_request, http_options, stream=False)
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/_api_client.py", line 1167, in _request
-    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tenacity/__init__.py", line 477, in __call__
-    do = self.iter(retry_state=retry_state)
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tenacity/__init__.py", line 378, in iter
-    result = action(retry_state)
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tenacity/__init__.py", line 420, in exc_check
-    raise retry_exc.reraise()
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tenacity/__init__.py", line 187, in reraise
-    raise self.last_attempt.result()
-  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
-    return self.__get_result()
-  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
-    raise self._exception
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tenacity/__init__.py", line 480, in __call__
-    result = fn(*args, **kwargs)
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/_api_client.py", line 1144, in _request_once
-    errors.APIError.raise_for_response(response)
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/errors.py", line 108, in raise_for_response
-    raise ClientError(status_code, response_json, response)
-google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
 /insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
   warnings.warn(eol_message.format("3.9"), FutureWarning)
 /insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
@@ -83,6 +43,72 @@ Traceback (most recent call last):
     result = fn(*args, **kwargs)
   File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/_api_client.py", line 1144, in _request_once
     errors.APIError.raise_for_response(response)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/errors.py", line 110, in raise_for_response
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The service is currently unavailable.', 'status': 'UNAVAILABLE'}}
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 193, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 144, in main
+    results, task_info = run_evaluation(evaluators, args.n_images, args.dataset)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 75, in run_evaluation
+    response = parse_yes_no(response_text)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 32, in parse_yes_no
+    text = text.lower().strip()
+AttributeError: 'NoneType' object has no attribute 'lower'
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 193, in <module>
+    main()
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 144, in main
+    results, task_info = run_evaluation(evaluators, args.n_images, args.dataset)
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_continuous.py", line 72, in run_evaluation
+    response_text = evaluator._call_api(history)
+  File "/insomnia001/home/pm3361/vision-memory/evaluators/google_evaluator.py", line 48, in _call_api
+    resp = self.client.models.generate_content(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/models.py", line 5020, in generate_content
+    response = self._generate_content(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/models.py", line 3832, in _generate_content
+    response = self._api_client.request(
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/_api_client.py", line 1331, in request
+    response = self._request(http_request, http_options, stream=False)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/_api_client.py", line 1167, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tenacity/__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tenacity/__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/_api_client.py", line 1144, in _request_once
+    errors.APIError.raise_for_response(response)
   File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/errors.py", line 108, in raise_for_response
     raise ClientError(status_code, response_json, response)
 google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
@@ -95,11 +121,11 @@ Traceback (most recent call last):
     return _run_code(code, main_globals, None,
   File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
     exec(code, run_globals)
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 271, in <module>
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 264, in <module>
     main()
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 218, in main
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 213, in main
     results = run_evaluation(
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_2afc.py", line 133, in run_evaluation
+  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_pam.py", line 146, in run_evaluation
     response_text = evaluator._call_api(messages)
   File "/insomnia001/home/pm3361/vision-memory/evaluators/google_evaluator.py", line 48, in _call_api
     resp = self.client.models.generate_content(
@@ -134,4 +160,4 @@ google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429,
   warnings.warn(eol_message.format("3.9"), FutureWarning)
 /insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
   warnings.warn(eol_message.format("3.9"), FutureWarning)
-[2026-04-13T16:34:19.016] error: *** JOB 8642161 ON ins070 CANCELLED AT 2026-04-13T16:34:19 DUE TO TIME LIMIT ***
+[2026-04-14T15:04:48.018] error: *** JOB 8675057 ON ins094 CANCELLED AT 2026-04-14T15:04:48 DUE TO TIME LIMIT ***
