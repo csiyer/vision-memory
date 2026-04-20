@@ -21,6 +21,7 @@ from tasks.visual_haystacks import VisualHaystacksTask
 from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
+from evaluators.qwen_evaluator import QwenEvaluator
 
 
 def parse_yes_no(text):
@@ -141,7 +142,7 @@ def main():
         "--models",
         nargs="+",
         default=["gpt-4o", "claude", "gemini"],
-        help="Models to evaluate: gpt-4o, claude, gemini",
+        help="Models to evaluate: gpt-4o, claude, gemini, qwen",
     )
     parser.add_argument(
         "--mode",
@@ -217,8 +218,10 @@ def main():
         evaluators.append(AnthropicEvaluator())
     if "gemini" in args.models:
         evaluators.append(GoogleEvaluator())
+    if "qwen" in args.models:
+        evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
     if not evaluators:
-        print("No valid models specified. Use --models gpt-4o claude gemini")
+        print("No valid models specified. Use --models gpt-4o claude gemini qwen")
         return
 
     print("Running Visual Haystacks evaluation:")

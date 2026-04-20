@@ -187,6 +187,11 @@ class VisualHaystacksTaskSimple:
             n_trials: Number of trials
             n_needles: Number of needle images (default 1)
         """
+        if n_images < n_needles + 1:
+            raise ValueError(
+                f"n_images ({n_images}) must be at least n_needles + 1 ({n_needles + 1}) "
+                f"to fit both needle(s) and a potential target image."
+            )
         self.n_images = n_images
         self.n_trials = n_trials
         self.n_needles = n_needles
@@ -218,25 +223,29 @@ class VisualHaystacksTaskSimple:
             # Decide if target should be present (50/50)
             target_present = random.random() < 0.5
 
-            # Build haystack
+            # Build haystack — always exactly n_images images
             images = []
 
             # Add needle image(s)
             for i in range(self.n_needles):
                 images.append(self.dataset.get_image(needle_idx, 0))
 
-            # Add target if present
+            # Add target if present, otherwise add an extra distractor in its slot
             start_idx = 2
             if target_present:
                 images.append(self.dataset.get_image(target_idx, 0))
                 start_idx = 3
 
-            # Fill rest with distractors (not needle or target)
+            # Fill remaining slots with distractors (not needle or target)
             n_distractors = self.n_images - len(images)
             distractor_indices = indices[start_idx : start_idx + n_distractors]
 
             for idx in distractor_indices:
                 images.append(self.dataset.get_image(idx, 0))
+
+            assert len(images) == self.n_images, (
+                f"Haystack size mismatch: expected {self.n_images}, got {len(images)}"
+            )
 
             random.shuffle(images)
 
