@@ -27,7 +27,7 @@ source venv/bin/activate
 MODELS="gpt-4o gemini qwen"
 MAX_SAMPLES=100
 
-for IMAGE_COUNT in 2 5 10 50 100; do
+for IMAGE_COUNT in 5 10 50 100; do
     echo "=============================="
     echo "Multi-needle | haystack=$IMAGE_COUNT"
     echo "=============================="

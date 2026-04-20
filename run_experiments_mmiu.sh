@@ -30,6 +30,7 @@ echo "Models: $MODELS"
 echo "=============================="
 
 python -m eval_scripts.eval_mmiu \
-    --models $MODELS
+    --models $MODELS \
+    --image-root /tmp/mmiu
 
 echo "Done — results saved to results/results_mmiu_*.json"

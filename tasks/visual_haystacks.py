@@ -12,159 +12,200 @@ Task types:
 - Multi-needle (all): "For all images with [anchor], do all of them contain [target]?"
 - Multi-needle (any): "For all images with [anchor], do any of them contain [target]?"
 """
+import json
 import random
+import urllib.request
 from pathlib import Path
 from PIL import Image
 
+COCO_IMAGE_BASE_URL = "https://images.cocodataset.org"
+
+# Map split name -> COCO subdirectory
+_SPLIT_TO_SUBDIR = {
+    "train2017": "train2017",
+    "val2017": "val2017",
+    "test2017": "test2017",
+}
+
+
+def _resolve_image_path(image_root: Path, image_path: str) -> Path:
+    """Resolve a VHS image path (e.g. 'val2017/000000123.jpg') under image_root."""
+    return image_root / image_path
+
+
+def _fetch_image(
+    image_root: Path,
+    image_path: str,
+    coco_base_url: str = COCO_IMAGE_BASE_URL,
+    fetch_timeout_s: int = 120,
+) -> None:
+    """Download a single COCO image into image_root if it doesn't exist."""
+    dest = _resolve_image_path(image_root, image_path)
+    if dest.exists():
+        return
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    url = f"{coco_base_url.rstrip('/')}/{image_path}"
+    urllib.request.urlretrieve(url, dest)  # noqa: S310 — controlled URL
+
+
+def iter_unique_image_paths_in_vhs_qa(qa_root) -> list:
+    """Return sorted list of unique image paths referenced across all VHS QA JSONs."""
+    qa_root = Path(qa_root)
+    paths = set()
+    for json_file in qa_root.glob("visual_haystack_*.json"):
+        with open(json_file) as f:
+            data = json.load(f)
+        for item in data:
+            for p in item.get("image", []):
+                paths.add(p)
+    return sorted(paths)
+
+
+def prefetch_vhs_coco_images(
+    qa_root,
+    image_root,
+    coco_base_url: str = COCO_IMAGE_BASE_URL,
+    fetch_timeout_s: int = 120,
+    skip_existing: bool = True,
+) -> dict:
+    """Download every COCO image referenced in VHS QA JSONs.
+
+    Returns a stats dict with counts of downloaded, skipped, and failed images.
+    """
+    image_root = Path(image_root)
+    unique_paths = iter_unique_image_paths_in_vhs_qa(qa_root)
+    stats = {"total": len(unique_paths), "downloaded": 0, "skipped": 0, "failed": 0}
+    for image_path in unique_paths:
+        dest = _resolve_image_path(image_root, image_path)
+        if skip_existing and dest.exists():
+            stats["skipped"] += 1
+            continue
+        try:
+            _fetch_image(image_root, image_path, coco_base_url, fetch_timeout_s)
+            stats["downloaded"] += 1
+        except Exception as e:
+            print(f"Failed to fetch {image_path}: {e}")
+            stats["failed"] += 1
+    return stats
+
+
+def _build_qa_filename(mode: str, split: str, image_count: str) -> str:
+    """Build the expected VHS QA JSON path (relative to qa_root) from eval args.
+
+    Actual layout on disk:
+      multi_needle/visual_haystack_{image_count}.json
+      single_needle/{split}/visual_haystack_{image_count}.json
+    """
+    if mode == "single_needle":
+        return f"single_needle/{split}/visual_haystack_{image_count}.json"
+    elif mode == "multi_needle":
+        return f"multi_needle/visual_haystack_{image_count}.json"
+    else:
+        raise ValueError(f"Unknown mode: {mode!r}. Expected 'single_needle' or 'multi_needle'.")
+
 
 class VisualHaystacksTask:
-    """Visual Haystacks task using HuggingFace dataset or local COCO images."""
+    """Visual Haystacks task loaded from local QA JSON files + COCO images."""
 
     def __init__(
         self,
-        n_images: int = 10,
-        task_type: str = "single",  # "single", "multi_all", "multi_any"
-        use_hf_dataset: bool = True,
-        coco_root: str = None,
-        n_trials: int = None,
+        qa_root: str = "dataset/VHs_qa",
+        image_root: str = "dataset/coco",
+        mode: str = "single_needle",
+        split: str = "VHs_large",
+        image_count: str = "10",
+        max_samples: int = None,
+        shuffle_images: bool = True,
+        seed: int = 0,
+        fetch_missing_coco: bool = False,
+        coco_base_url: str = COCO_IMAGE_BASE_URL,
+        fetch_timeout_s: int = 120,
     ):
-        """
-        Args:
-            n_images: Total number of images in the haystack (1 to 10000)
-            task_type: Type of question ("single", "multi_all", "multi_any")
-            use_hf_dataset: If True, load from HuggingFace. If False, use local COCO.
-            coco_root: Path to local COCO dataset (required if use_hf_dataset=False)
-            n_trials: Number of trials to run (defaults to available in dataset)
-        """
-        self.n_images = n_images
-        self.task_type = task_type
-        self.n_trials = n_trials
-        self.use_hf_dataset = use_hf_dataset
-        self.coco_root = Path(coco_root) if coco_root else None
+        self.qa_root = Path(qa_root)
+        self.image_root = Path(image_root)
+        self.mode = mode
+        self.split = split
+        self.image_count = image_count
+        self.max_samples = max_samples
+        self.shuffle_images = shuffle_images
+        self.seed = seed
+        self.fetch_missing_coco = fetch_missing_coco
+        self.coco_base_url = coco_base_url
+        self.fetch_timeout_s = fetch_timeout_s
 
-        self.dataset = None
-        self.filtered_data = []
-
+        self._rng = random.Random(seed)
+        self._data = []
         self._load_data()
 
     def _load_data(self):
-        """Load and filter the Visual Haystacks dataset."""
-        if self.use_hf_dataset:
-            from datasets import load_dataset
-
-            print("Loading Visual Haystacks from HuggingFace...")
-            self.dataset = load_dataset("tsunghanwu/visual_haystacks", split="train")
-
-            # Filter by task type and haystack size
-            for item in self.dataset:
-                # Determine task type from question
-                question = item["conversations"][0]["value"].lower()
-
-                if self.task_type == "single" and "for the image with" in question:
-                    pass  # Single needle
-                elif self.task_type == "multi_all" and "do all of them" in question:
-                    pass  # Multi-needle all
-                elif self.task_type == "multi_any" and "do any of them" in question:
-                    pass  # Multi-needle any
-                else:
-                    continue
-
-                # Check haystack size (neg_image count + pos_image count)
-                total_images = len(item["pos_image"]) + len(item["neg_image"])
-
-                # Accept if we can construct a haystack of requested size
-                if total_images >= self.n_images:
-                    self.filtered_data.append(item)
-
-            print(f"Found {len(self.filtered_data)} trials matching criteria")
-
-            if self.n_trials:
-                self.filtered_data = self.filtered_data[: self.n_trials]
-        else:
-            raise NotImplementedError(
-                "Local COCO loading not implemented. Use use_hf_dataset=True"
+        filename = _build_qa_filename(self.mode, self.split, self.image_count)
+        qa_file = self.qa_root / filename
+        if not qa_file.exists():
+            raise FileNotFoundError(
+                f"VHS QA file not found: {qa_file}\n"
+                f"Download the Visual Haystacks dataset and place QA JSONs under {self.qa_root}."
             )
+        with open(qa_file) as f:
+            data = json.load(f)
+        if self.max_samples is not None:
+            data = data[: self.max_samples]
+        self._data = data
+        print(f"Loaded {len(self._data)} trials from {qa_file.name}")
 
-    def _load_coco_image(self, image_path: str) -> Image.Image:
-        """Load a COCO image from path reference."""
-        if self.coco_root:
-            full_path = self.coco_root / image_path
-            return Image.open(full_path).convert("RGB")
-        else:
-            # Try to load from HuggingFace cached images
-            # The dataset stores paths like "train2017/000000402000.jpg"
-            # We need COCO images downloaded separately
-            raise ValueError(
-                "COCO images must be downloaded separately. "
-                "Set coco_root to the path containing train2017/ and val2017/ folders."
-            )
+    def _load_image(self, image_path: str) -> Image.Image:
+        dest = _resolve_image_path(self.image_root, image_path)
+        if not dest.exists():
+            if self.fetch_missing_coco:
+                _fetch_image(self.image_root, image_path, self.coco_base_url, self.fetch_timeout_s)
+            else:
+                raise FileNotFoundError(
+                    f"Image not found: {dest}. "
+                    f"Run prefetch_vhs_coco or use --fetch-missing-coco."
+                )
+        return Image.open(dest).convert("RGB")
 
     def get_trials(self):
-        """Generate trials for the Visual Haystacks task.
-
-        Returns:
-            List of trial dicts with:
-                - images: List of PIL Images (haystack)
-                - prompt: Question to ask
-                - target: Expected answer ("yes" or "no")
-                - metadata: Additional info (needle, target object, etc.)
-        """
+        """Return list of trial dicts with keys: images, prompt, target, metadata."""
         trials = []
+        for item in self._data:
+            image_paths = item.get("image", [])
+            if self.shuffle_images:
+                image_paths = list(image_paths)
+                self._rng.shuffle(image_paths)
 
-        for item in self.filtered_data:
-            try:
-                # Get positive and negative image paths
-                pos_paths = item["pos_image"]
-                neg_paths = item["neg_image"]
+            images = []
+            missing = []
+            for p in image_paths:
+                try:
+                    images.append(self._load_image(p))
+                except Exception as e:
+                    missing.append(p)
+                    print(f"Warning: could not load {p}: {e}")
 
-                # Construct haystack of requested size
-                # Include all positive images, fill rest with negatives
-                n_neg_needed = self.n_images - len(pos_paths)
+            if missing:
+                continue  # skip trials with missing images
 
-                if n_neg_needed > len(neg_paths):
-                    # Not enough images, skip this trial
-                    continue
-
-                selected_neg = random.sample(neg_paths, n_neg_needed)
-                all_paths = pos_paths + selected_neg
-                random.shuffle(all_paths)
-
-                # Load images
-                images = []
-                for path in all_paths:
-                    try:
-                        img = self._load_coco_image(path)
-                        images.append(img)
-                    except Exception as e:
-                        print(f"Warning: Could not load {path}: {e}")
-                        continue
-
-                if len(images) < self.n_images:
-                    continue
-
-                # Get question and answer
-                question = item["conversations"][0]["value"]
-                answer = item["conversations"][1]["value"].lower().strip()
-
-                trials.append(
-                    {
-                        "images": images,
-                        "prompt": question + " Answer with only 'yes' or 'no'.",
-                        "target": answer,
-                        "metadata": {
-                            "needle": item["needle"],
-                            "target_object": item["target"],
-                            "n_positive": len(pos_paths),
-                            "n_negative": n_neg_needed,
-                            "id": item["id"],
-                        },
-                    }
-                )
-
-            except Exception as e:
-                print(f"Error processing trial: {e}")
+            # VHS QA items: {"image": [...], "conversations": [{"from": "human", "value": "..."}, {"from": "gpt", "value": "yes/no"}]}
+            conversations = item.get("conversations", [])
+            if len(conversations) < 2:
                 continue
+            prompt = conversations[0]["value"]
+            target = conversations[1]["value"].lower().strip()
 
+            trials.append(
+                {
+                    "images": images,
+                    "prompt": prompt + " Answer with only 'yes' or 'no'.",
+                    "target": target,
+                    "metadata": {
+                        "id": item.get("id"),
+                        "mode": self.mode,
+                        "split": self.split,
+                        "image_count": self.image_count,
+                        "n_images": len(images),
+                    },
+                }
+            )
         return trials
 
 

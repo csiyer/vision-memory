@@ -21,7 +21,7 @@ set -e
 cd /insomnia001/home/pm3361/vision-memory
 source venv/bin/activate
 
-MODELS="gpt-4o gemini qwen"
+MODELS="${MODELS:-gpt-4o gemini qwen}"
 
 echo "=============================="
 echo "MuirBench — all tasks"

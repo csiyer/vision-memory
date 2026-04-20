@@ -54,7 +54,7 @@ def load_dataset(max_samples=None, tasks=None, image_root=None):
     from datasets import load_dataset as hf_load
     print(f"Loading MMIU from HuggingFace ({MMIU_DATASET})...")
     print("  Note: full dataset is ~25 GB; first run will download/cache images.")
-    ds = hf_load(MMIU_DATASET, split="dev")
+    ds = hf_load(MMIU_DATASET, split="test")
 
     samples = []
     for row in ds:
@@ -109,8 +109,14 @@ def _get_images(row, image_root=None):
         result = []
         for rel_path in row["input_image_path"]:
             # Paths are like "./Low-level-semantic/task/task_0_0.jpg"
+            # but extracted structure is flat: mmiu/task/task_0_0.jpg
             clean = rel_path.lstrip("./")
             full = root / clean
+            if not full.exists():
+                # Try skipping the category prefix (e.g. "Low-level-semantic/")
+                parts = Path(clean).parts
+                if len(parts) > 2:
+                    full = root / Path(*parts[1:])
             if full.exists():
                 result.append(Image.open(full).convert("RGB"))
         return result

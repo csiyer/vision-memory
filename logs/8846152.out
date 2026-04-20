@@ -1,0 +1,16 @@
+==============================
+Single-needle | haystack=2
+==============================
+Loading Qwen/Qwen3-VL-8B-Instruct...
+Model loaded on cuda:0
+Running Visual Haystacks evaluation:
+  Models: ['gpt-4o', 'gemini-2.5-flash', 'qwen3-vl-8b']
+  Mode: single_needle
+  Split: VHs_large
+  Image count: 2
+  QA root: dataset/VHs_qa
+  Image root: dataset/coco
+  Max samples: 100
+  Max context images: all
+  Fetch missing COCO images: True
+  COCO base URL: https://images.cocodataset.org
