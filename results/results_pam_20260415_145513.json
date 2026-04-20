@@ -1,0 +1,38 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260415_145513",
+    "dataset": "Brady2008",
+    "n_images": 1,
+    "n_trials": 1,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 1.0,
+        "n_correct": 1,
+        "total": 1
+      }
+    },
+    "max_context_pairs": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "FUNERAL",
+        "reported": "funeral",
+        "correct": 1,
+        "raw_response": "The word paired with this image is **FUNERAL**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/ADRUM.jpg",
+          "name": "ADRUM.jpg"
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 1,
+    "total": 1
+  }
+}

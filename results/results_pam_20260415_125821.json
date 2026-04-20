@@ -1,0 +1,39 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260415_125821",
+    "dataset": "things",
+    "n_images": 1,
+    "n_trials": 1,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 1.0,
+        "n_correct": 1,
+        "total": 1
+      }
+    },
+    "max_context_pairs": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "SIRLOIN",
+        "reported": "sirloin",
+        "correct": 1,
+        "raw_response": "Based on the image provided, the word paired with it was **SIRLOIN**.\n\nThis",
+        "metadata": {
+          "category": "cat_0",
+          "category_id": 0,
+          "exemplar_id": 0
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 1,
+    "total": 1
+  }
+}
