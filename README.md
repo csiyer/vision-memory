@@ -2,7 +2,7 @@
 
 This repository implements several classic psychological tasks that measure episodic memory. They progress in difficulty, and vary in the degree they rely strictly on hippocampal mechanisms. Note that many of these tasks are frequently implemented with word stimuli in the literature, but here we use images to evaluate memory when learning representations from raw sensory data (i.e., pixels). 
 
-NOTE: make sure to unzip the memory_datasets if using the Brady stimulus sets; code should work fine for streaming the THINGS dataset from HuggingFace.
+NOTE: make sure to unzip `memory_datasets.zip` into `memory_datasets/` before running tasks that rely on the Brady stimulus sets, local THINGS assets, or other bundled dataset files. Continuous recognition can still stream THINGS from HuggingFace when local files are unavailable.
 
 ### 1. Recognition Memory
 
