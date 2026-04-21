@@ -1,9 +1,11 @@
 import os
 import random
 import re
+from numbers import Number
+from pathlib import Path
+
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
-from pathlib import Path
 
 class DirectoryDataset():
     def __init__(self, image_dir, extensions=(".jpg", ".jpeg", ".png", ".bmp", ".webp")):
@@ -26,19 +28,50 @@ class DirectoryDataset():
 
 
 class ThingsDataset:
-    """Gets images from the THINGS dataset via Hugging Face."""
-    def __init__(self, n_categories=None, exemplars_per_category=1):
+    """Gets images from a local THINGS install when available, else via Hugging Face."""
+    def __init__(
+        self,
+        n_categories=None,
+        exemplars_per_category=1,
+        local_root='memory_datasets/THINGS/object_images',
+        source="auto",
+        excluded_categories=None,
+    ):
+        self.local_root = Path(local_root)
+        self.source = source
+        self.excluded_categories = {self._normalize_category_name(category) for category in (excluded_categories or [])}
+        self.category_metadata = {}
         try:
+            if source not in {"auto", "local", "streaming"}:
+                raise ValueError(f"Unsupported THINGS source={source!r}. Expected 'auto', 'local', or 'streaming'.")
+
+            if source in {"auto", "local"} and self._load_from_local_cache(
+                n_categories=n_categories,
+                exemplars_per_category=exemplars_per_category,
+            ):
+                print(f"Loaded THINGS from local files: {self.local_root}")
+                return
+            if source == "auto":
+                print(f"Local THINGS files not available at {self.local_root}; falling back to Hugging Face streaming.")
+            if source == "local":
+                raise ValueError(f"Could not load THINGS from local files: {self.local_root}")
+
             from datasets import load_dataset
+            hf_token = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_HUB_TOKEN")
             # Prioritize the one the user mentioned
             names = ["Haitao999/things-eeg", "He-Bart/THINGS", "Hebart/THINGS", "THINGS-data/THINGS", "RAIlab/THINGS"]
             self.ds = None
             self.name = None
+            id_to_name = None
             for name in names:
                 try:
                     # Use streaming=True to avoid downloading 30GB at once
-                    self.ds = load_dataset(name, split="train", streaming=True)
+                    self.ds = load_dataset(name, split="train", streaming=True, token=hf_token)
                     self.name = name
+                    if hasattr(self.ds, 'features') and 'label' in self.ds.features:
+                        label_feature = self.ds.features['label']
+                        if hasattr(label_feature, 'names'):
+                            id_to_name = label_feature.names
                     print(f"Successfully connected to THINGS via {name}")
                     break
                 except:
@@ -50,13 +83,7 @@ class ThingsDataset:
             # Map category name to list of images
             self.category_groups = {} 
             self.category_names = [] # Maintain order of arrival
-            
-            # For ImageFolder style datasets, we need the names from features
-            meta_ds = load_dataset(self.name, split="train") # Small download for metadata
-            if hasattr(meta_ds, 'features') and 'label' in meta_ds.features:
-                id_to_name = meta_ds.features['label'].names
-            else:
-                id_to_name = None
+            self.category_metadata = {}
 
             print("Fetching images from streaming dataset...")
             for item in self.ds:
@@ -66,11 +93,16 @@ class ThingsDataset:
                     cat = id_to_name[label]
                 else:
                     cat = item.get('category') or item.get('concept') or f"cat_{label}"
+                cat = self._normalize_category_name(cat)
+
+                if cat in self.excluded_categories:
+                    continue
                 
                 if cat not in self.category_groups:
                     if n_categories and len(self.category_groups) >= n_categories:
                         continue
                     self.category_groups[cat] = []
+                    self.category_metadata[cat] = []
                     self.category_names.append(cat)
                 
                 if len(self.category_groups[cat]) < exemplars_per_category:
@@ -78,6 +110,7 @@ class ThingsDataset:
                     if not isinstance(img, Image.Image):
                         img = Image.fromarray(np.array(img))
                     self.category_groups[cat].append(img.convert("RGB"))
+                    self.category_metadata[cat].append(self._build_stream_metadata(item=item, category=cat))
                 
                 # Check if we have enough
                 if n_categories and len(self.category_groups) >= n_categories:
@@ -91,6 +124,88 @@ class ThingsDataset:
             print(f"Error loading THINGS dataset: {e}")
             self.category_groups = {}
             self.category_names = []
+            self.category_metadata = {}
+
+    def _normalize_category_name(self, category):
+        return re.sub(r"^\d+_", "", str(category))
+
+    def _jsonable_scalar(self, value):
+        if value is None or isinstance(value, (str, bool, int, float)):
+            return value
+        if isinstance(value, Number):
+            return value.item() if hasattr(value, "item") else float(value)
+        if isinstance(value, Path):
+            return str(value)
+        return str(value)
+
+    def _build_stream_metadata(self, item, category):
+        metadata = {
+            "source": "streaming",
+            "dataset_name": self.name,
+            "category": category,
+        }
+        for key, value in item.items():
+            if key == "image":
+                continue
+            if isinstance(value, (list, dict, tuple)):
+                continue
+            metadata[key] = self._jsonable_scalar(value)
+
+        image_obj = item.get("image")
+        for attr_name, key_name in (
+            ("filename", "image_filename"),
+            ("path", "image_path"),
+            ("format", "image_format"),
+        ):
+            attr_value = getattr(image_obj, attr_name, None)
+            if attr_value is not None:
+                metadata[key_name] = self._jsonable_scalar(attr_value)
+        return metadata
+
+    def _load_from_local_cache(self, n_categories=None, exemplars_per_category=1):
+        if not self.local_root.exists():
+            return False
+
+        category_dirs = sorted([path for path in self.local_root.iterdir() if path.is_dir()], key=lambda p: p.name.lower())
+        if not category_dirs:
+            return False
+
+        self.category_groups = {}
+        self.category_names = []
+        self.category_metadata = {}
+        for category_dir in category_dirs:
+            image_paths = sorted(
+                [
+                    path
+                    for path in category_dir.iterdir()
+                    if path.is_file() and path.suffix.lower() in {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
+                ],
+                key=lambda p: p.name.lower(),
+            )
+            if len(image_paths) < exemplars_per_category:
+                continue
+            if n_categories and len(self.category_groups) >= n_categories:
+                break
+
+            category_name = self._normalize_category_name(category_dir.name)
+            if category_name in self.excluded_categories:
+                continue
+            self.category_names.append(category_name)
+            chosen_paths = image_paths[:exemplars_per_category]
+            self.category_groups[category_name] = [
+                Image.open(path).convert("RGB") for path in chosen_paths
+            ]
+            self.category_metadata[category_name] = [
+                {
+                    "source": "local_files",
+                    "category": category_name,
+                    "local_path": str(path),
+                    "local_filename": path.name,
+                }
+                for path in chosen_paths
+            ]
+
+        return bool(self.category_groups)
 
     def __len__(self):
         return len(self.category_names)
@@ -102,7 +217,13 @@ class ThingsDataset:
 
     def get_metadata(self, index, exemplar_index=0):
         cat = self.category_names[index]
-        return {"category": cat, "category_id": index, "exemplar_id": exemplar_index}
+        exemplars = self.category_groups[cat]
+        exemplar_id = exemplar_index % len(exemplars)
+        metadata = {"category": cat, "category_id": index, "exemplar_id": exemplar_id}
+        extra = self.category_metadata.get(cat, [])
+        if exemplar_id < len(extra):
+            metadata.update(extra[exemplar_id])
+        return metadata
 
 
 class BradyDataset:

@@ -87,8 +87,8 @@ def plot_2afc(models_data, output_dir="plots"):
     plt.savefig(f"{output_dir}/afc_recognition.png")
     plt.close()
 
-def plot_source_memory(models_data, output_dir="plots"):
-    """Plots average error for source memory."""
+def plot_serial_order_memory(models_data, output_dir="plots"):
+    """Plots average error for serial order memory."""
     Path(output_dir).mkdir(exist_ok=True)
     plt.figure(figsize=(8, 6))
     models = list(models_data.keys())
@@ -96,9 +96,34 @@ def plot_source_memory(models_data, output_dir="plots"):
     
     plt.bar(models, errors)
     plt.ylabel("Average Position Error")
-    plt.title("Source Memory Error")
-    plt.savefig(f"{output_dir}/source_memory.png")
+    plt.title("Serial Order Memory Error")
+    plt.savefig(f"{output_dir}/serial_order_memory.png")
     plt.close()
+
+def plot_afc_serial_order_memory(models_data, output_dir="plots"):
+    """Plots 2-AFC serial order memory accuracy by distance."""
+    Path(output_dir).mkdir(exist_ok=True)
+    plt.figure(figsize=(8, 6))
+    models = list(models_data.keys())
+
+    for model_name in models:
+        accuracy_by_distance = models_data[model_name].get("accuracy_by_distance", {})
+        if not accuracy_by_distance:
+            continue
+        distances = sorted(int(distance) for distance in accuracy_by_distance.keys())
+        accuracies = [accuracy_by_distance[str(distance)] if str(distance) in accuracy_by_distance else accuracy_by_distance[distance] for distance in distances]
+        plt.plot(distances, accuracies, marker="o", label=model_name)
+
+    plt.xlabel("Distance (items between probes)")
+    plt.ylabel("Accuracy")
+    plt.title("2-AFC Serial Order Accuracy by Distance")
+    plt.ylim(0, 1.0)
+    plt.grid(axis="y", linestyle="--", alpha=0.7)
+    if models:
+        plt.legend()
+    plt.savefig(f"{output_dir}/afc_serial_order_memory.png")
+    plt.close()
+
 
 def plot_color_memory(models_data, output_dir="plots"):
     """Plots precision and guess rate for color memory."""
@@ -129,4 +154,19 @@ def plot_color_memory(models_data, output_dir="plots"):
     
     plt.tight_layout()
     plt.savefig(f"{output_dir}/color_memory.png")
+    plt.close()
+
+def plot_associative_inference(models_data, output_dir="plots"):
+    """Plots associative inference accuracy."""
+    Path(output_dir).mkdir(exist_ok=True)
+    plt.figure(figsize=(8, 6))
+    models = list(models_data.keys())
+    accuracies = [models_data[m].get("accuracy", 0) for m in models]
+
+    plt.bar(models, accuracies)
+    plt.ylabel("Accuracy")
+    plt.title("Associative Inference Accuracy")
+    plt.ylim(0, 1.0)
+    plt.grid(axis="y", linestyle="--", alpha=0.7)
+    plt.savefig(f"{output_dir}/associative_inference.png")
     plt.close()

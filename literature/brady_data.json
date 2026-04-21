@@ -1,0 +1,53 @@
+{
+    "Brady2008AFC": {
+        "n_images_train": 2500,
+        "accuracy": {
+            "novel": 0.93,
+            "exemplar": 0.88,
+            "state": 0.87
+        }
+    },
+    "Brady2008Continuous": {
+        "false_alarm_rate": 0.013,
+        "hit_rate_mean": 0.96,
+        "hit_rate_delays": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64,
+            128,
+            512,
+            1024
+        ],
+        "hit_rate_by_delay": [
+            1.0,
+            0.99,
+            0.99,
+            0.99,
+            0.98,
+            0.96,
+            0.96,
+            0.92,
+            0.88,
+            0.83,
+            0.79
+        ]
+    },
+    "Brady2013Color": {
+        "perception": {
+            "precision": 5.7,
+            "guess_rate": 0.003
+        },
+        "working_memory": {
+            "precision": 18.4,
+            "guess_rate": 0.085
+        },
+        "long_term_memory": {
+            "precision": 19.8,
+            "guess_rate": 0.605
+        }
+    }
+}
