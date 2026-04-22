@@ -1,239 +1,0 @@
-==============================================
-Vision Memory Experiments: qwen
-==============================================
-
-========== 2-AFC Recognition ==========
---- Dataset: things ---
-  [RUN] things | novel | 1 images
-Loading Qwen/Qwen2.5-VL-7B-Instruct...
-Model loaded on cuda:0
-Running 2-AFC evaluation:
-  Models: ['qwen3-vl']
-  N images (study): 1
-  N trials (test): 1
-  Max context images: all
-  Foil type: novel
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 2 categories with up to 1 exemplars each.
-
-=== qwen3-vl ===
-  Trial 1/1: ✓
-  Accuracy: 100.0% | d': 0.95 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_160323.json
-  [RUN] things | novel | 10 images
-Loading Qwen/Qwen2.5-VL-7B-Instruct...
-Model loaded on cuda:0
-Running 2-AFC evaluation:
-  Models: ['qwen3-vl']
-  N images (study): 10
-  N trials (test): 10
-  Max context images: all
-  Foil type: novel
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 20 categories with up to 1 exemplars each.
-
-=== qwen3-vl ===
-  Trial 1/10: ✓  Trial 2/10: ✓  Trial 3/10: ✗  Trial 4/10: ✗  Trial 5/10: ✓  Trial 6/10: ✓  Trial 7/10: ✗  Trial 8/10: ✗  Trial 9/10: ✓  Trial 10/10: ✗
-  Accuracy: 50.0% | d': 0.00 | Mem Score: 0.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_160428.json
-  [RUN] things | novel | 100 images
-Loading Qwen/Qwen2.5-VL-7B-Instruct...
-Model loaded on cuda:0
-Running 2-AFC evaluation:
-  Models: ['qwen3-vl']
-  N images (study): 100
-  N trials (test): 50
-  Max context images: all
-  Foil type: novel
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 200 categories with up to 1 exemplars each.
-
-=== qwen3-vl ===
-  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✗  Trial 4/50: ✓  Trial 5/50: ✓  Trial 6/50: ✗  Trial 7/50: ✓  Trial 8/50: ✓  Trial 9/50: ✓  Trial 10/50: ✓  Trial 11/50: ✓  Trial 12/50: ✗  Trial 13/50: ✓  Trial 14/50: ✗  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✓  Trial 18/50: ✗  Trial 19/50: ✗  Trial 20/50: ✓  Trial 21/50: ✓  Trial 22/50: ✓  Trial 23/50: ✓  Trial 24/50: ✓  Trial 25/50: ✗  Trial 26/50: ✓  Trial 27/50: ✓  Trial 28/50: ✓  Trial 29/50: ✗  Trial 30/50: ✓  Trial 31/50: ✗  Trial 32/50: ✓  Trial 33/50: ✗  Trial 34/50: ✗  Trial 35/50: ✓  Trial 36/50: ✗  Trial 37/50: ✗  Trial 38/50: ✗  Trial 39/50: ✗  Trial 40/50: ✗  Trial 41/50: ✓  Trial 42/50: ✗  Trial 43/50: ✓  Trial 44/50: ✓  Trial 45/50: ✗  Trial 46/50: ✓  Trial 47/50: ✗  Trial 48/50: ✓  Trial 49/50: ✗  Trial 50/50: ✓
-  Accuracy: 60.0% | d': 0.35 | Mem Score: 0.20
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_161023.json
-  [SKIP-LIMIT] things | novel | 1000
-  [RUN] things | exemplar | 1 images
-Loading Qwen/Qwen2.5-VL-7B-Instruct...
-Model loaded on cuda:0
-Running 2-AFC evaluation:
-  Models: ['qwen3-vl']
-  N images (study): 1
-  N trials (test): 1
-  Max context images: all
-  Foil type: exemplar
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 1 categories with up to 2 exemplars each.
-
-=== qwen3-vl ===
-  Trial 1/1: ✓
-  Accuracy: 100.0% | d': 0.95 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_161100.json
-  [RUN] things | exemplar | 10 images
-Loading Qwen/Qwen2.5-VL-7B-Instruct...
-Model loaded on cuda:0
-Running 2-AFC evaluation:
-  Models: ['qwen3-vl']
-  N images (study): 10
-  N trials (test): 10
-  Max context images: all
-  Foil type: exemplar
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 10 categories with up to 2 exemplars each.
-
-=== qwen3-vl ===
-  Trial 1/10: ✗  Trial 2/10: ✗  Trial 3/10: ✗  Trial 4/10: ✗  Trial 5/10: ✗  Trial 6/10: ✓  Trial 7/10: ✗  Trial 8/10: ✓  Trial 9/10: ✓  Trial 10/10: ✓
-  Accuracy: 40.0% | d': -0.33 | Mem Score: 0.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_161143.json
-  [RUN] things | exemplar | 100 images
-Loading Qwen/Qwen2.5-VL-7B-Instruct...
-Model loaded on cuda:0
-Running 2-AFC evaluation:
-  Models: ['qwen3-vl']
-  N images (study): 100
-  N trials (test): 50
-  Max context images: all
-  Foil type: exemplar
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 100 categories with up to 2 exemplars each.
-
-=== qwen3-vl ===
-  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✗  Trial 4/50: ✓  Trial 5/50: ✓  Trial 6/50: ✓  Trial 7/50: ✗  Trial 8/50: ✗  Trial 9/50: ✗  Trial 10/50: ✗  Trial 11/50: ✓  Trial 12/50: ✓  Trial 13/50: ✓  Trial 14/50: ✗  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✓  Trial 18/50: ✓  Trial 19/50: ✓  Trial 20/50: ✗  Trial 21/50: ✓  Trial 22/50: ✗  Trial 23/50: ✗  Trial 24/50: ✓  Trial 25/50: ✗  Trial 26/50: ✓  Trial 27/50: ✗  Trial 28/50: ✓  Trial 29/50: ✓  Trial 30/50: ✓  Trial 31/50: ✓  Trial 32/50: ✗  Trial 33/50: ✗  Trial 34/50: ✓  Trial 35/50: ✗  Trial 36/50: ✓  Trial 37/50: ✓  Trial 38/50: ✗  Trial 39/50: ✓  Trial 40/50: ✓  Trial 41/50: ✓  Trial 42/50: ✗  Trial 43/50: ✓  Trial 44/50: ✓  Trial 45/50: ✓  Trial 46/50: ✓  Trial 47/50: ✓  Trial 48/50: ✗  Trial 49/50: ✓  Trial 50/50: ✓
-  Accuracy: 66.0% | d': 0.57 | Mem Score: 0.32
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_161458.json
-  [RUN] things | exemplar | 1000 images
-Loading Qwen/Qwen2.5-VL-7B-Instruct...
-Model loaded on cuda:0
-Running 2-AFC evaluation:
-  Models: ['qwen3-vl']
-  N images (study): 1000
-  N trials (test): 50
-  Max context images: all
-  Foil type: exemplar
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 1000 categories with up to 2 exemplars each.
-
-=== qwen3-vl ===
-  Trial 1/50: ✗  Trial 2/50: ✗  Trial 3/50: ✗  Trial 4/50: ✗  Trial 5/50: ✓  Trial 6/50: ✗  Trial 7/50: ✓  Trial 8/50: ✗  Trial 9/50: ✓  Trial 10/50: ✓  Trial 11/50: ✗  Trial 12/50: ✓  Trial 13/50: ✗  Trial 14/50: ✗  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✗  Trial 18/50: ✓  Trial 19/50: ✗  Trial 20/50: ✓  Trial 21/50: ✓  Trial 22/50: ✗  Trial 23/50: ✗  Trial 24/50: ✗  Trial 25/50: ✓  Trial 26/50: ✓  Trial 27/50: ✓  Trial 28/50: ✗  Trial 29/50: ✓  Trial 30/50: ✗  Trial 31/50: ✗  Trial 32/50: ✓  Trial 33/50: ✓  Trial 34/50: ✓  Trial 35/50: ✓  Trial 36/50: ✓  Trial 37/50: ✗  Trial 38/50: ✗  Trial 39/50: ✗  Trial 40/50: ✗  Trial 41/50: ✗  Trial 42/50: ✓  Trial 43/50: ✗  Trial 44/50: ✗  Trial 45/50: ✓  Trial 46/50: ✓  Trial 47/50: ✓  Trial 48/50: ✗  Trial 49/50: ✗  Trial 50/50: ✓
-  Accuracy: 48.0% | d': -0.07 | Mem Score: 0.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_165054.json
---- Dataset: Brady2008 ---
-  [RUN] Brady2008 | novel | 1 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] Brady2008 | novel | 1
-  [RUN] Brady2008 | novel | 10 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] Brady2008 | novel | 10
-  [RUN] Brady2008 | novel | 100 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] Brady2008 | novel | 100
-  [RUN] Brady2008 | novel | 1000 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] Brady2008 | novel | 1000
-  [RUN] Brady2008 | exemplar | 1 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] Brady2008 | exemplar | 1
-  [RUN] Brady2008 | exemplar | 10 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] Brady2008 | exemplar | 10
-  [SKIP-LIMIT] Brady2008 | exemplar | 100
-  [SKIP-LIMIT] Brady2008 | exemplar | 1000
-  [RUN] Brady2008 | state | 1 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] Brady2008 | state | 1
-  [RUN] Brady2008 | state | 10 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] Brady2008 | state | 10
-  [SKIP-LIMIT] Brady2008 | state | 100
-  [SKIP-LIMIT] Brady2008 | state | 1000
-
-========== Continuous Recognition ==========
---- Dataset: things ---
-  [SKIP-LIMIT] things | 1 (too small)
-  [RUN] things | 10 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] things | 10
-  [RUN] things | 100 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] things | 100
-  [RUN] things | 1000 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] things | 1000
---- Dataset: Brady2008 ---
-  [SKIP-LIMIT] Brady2008 | 1 (too small)
-  [RUN] Brady2008 | 10 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] Brady2008 | 10
-  [RUN] Brady2008 | 100 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] Brady2008 | 100
-  [RUN] Brady2008 | 1000 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] Brady2008 | 1000
-
-========== Paired Associate Memory ==========
---- Dataset: things ---
-  [RUN] things | 1 pairs
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] things | 1
-  [RUN] things | 10 pairs
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] things | 10
-  [RUN] things | 100 pairs
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] things | 100
-  [RUN] things | 1000 pairs
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] things | 1000
---- Dataset: Brady2008 ---
-  [RUN] Brady2008 | 1 pairs
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] Brady2008 | 1
-  [RUN] Brady2008 | 10 pairs
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] Brady2008 | 10
-  [RUN] Brady2008 | 100 pairs
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] Brady2008 | 100
-  [RUN] Brady2008 | 1000 pairs
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] Brady2008 | 1000
-
-========== Visual Haystacks ==========
-  [RUN] 1 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] 1
-  [RUN] 10 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] 10
-  [RUN] 100 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] 100
-  [RUN] 1000 images
-Loading Qwen/Qwen3-VL-8B-Instruct...
-  [ERROR] 1000
-
-==============================================
-qwen experiments completed!
-==============================================

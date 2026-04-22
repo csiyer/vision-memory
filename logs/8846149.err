@@ -1,48 +1,0 @@
-/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-  warnings.warn(eol_message.format("3.9"), FutureWarning)
-/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-  warnings.warn(eol_message.format("3.9"), FutureWarning)
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:05<00:17,  5.74s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:13<00:13,  6.94s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:16<00:05,  5.09s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:17<00:00,  3.45s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:17<00:00,  4.34s/it]
-Could not set the permissions on the file '/insomnia001/home/pm3361/.cache/huggingface/hub/models--Qwen--Qwen3-VL-8B-Instruct/blobs/e116347d7ef42621c7a5957f82c015c38d939c1f.incomplete'. Error: [Errno 2] No such file or directory: '/insomnia001/home/pm3361/.cache/huggingface/hub/models--Qwen--Qwen3-VL-8B-Instruct/blobs/e116347d7ef42621c7a5957f82c015c38d939c1f.incomplete'.
-Continuing without setting permissions.
-Generating test split:   0%|          | 0/2600 [00:00<?, ? examples/s]Generating test split:   4%|▍         | 100/2600 [00:02<01:05, 37.96 examples/s]Generating test split:  24%|██▍       | 620/2600 [00:03<00:09, 211.54 examples/s]Generating test split:  44%|████▍     | 1140/2600 [00:04<00:03, 390.27 examples/s]Generating test split:  64%|██████▍   | 1660/2600 [00:04<00:01, 611.70 examples/s]Generating test split:  72%|███████▏  | 1860/2600 [00:04<00:01, 509.37 examples/s]Generating test split:  92%|█████████▏| 2380/2600 [00:05<00:00, 819.46 examples/s]Generating test split: 100%|██████████| 2600/2600 [00:05<00:00, 514.99 examples/s]
-Traceback (most recent call last):
-  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
-    exec(code, run_globals)
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_muirbench.py", line 264, in <module>
-    main()
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_muirbench.py", line 228, in main
-    results = run_evaluation(evaluators, samples)
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_muirbench.py", line 143, in run_evaluation
-    raw = evaluator._call_api(messages)
-  File "/insomnia001/home/pm3361/vision-memory/evaluators/google_evaluator.py", line 48, in _call_api
-    resp = self.client.models.generate_content(
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/models.py", line 5020, in generate_content
-    response = self._generate_content(
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/models.py", line 3832, in _generate_content
-    response = self._api_client.request(
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/_api_client.py", line 1331, in request
-    response = self._request(http_request, http_options, stream=False)
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/_api_client.py", line 1167, in _request
-    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tenacity/__init__.py", line 477, in __call__
-    do = self.iter(retry_state=retry_state)
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tenacity/__init__.py", line 378, in iter
-    result = action(retry_state)
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tenacity/__init__.py", line 420, in exc_check
-    raise retry_exc.reraise()
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tenacity/__init__.py", line 187, in reraise
-    raise self.last_attempt.result()
-  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
-    return self.__get_result()
-  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
-    raise self._exception
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/tenacity/__init__.py", line 480, in __call__
-    result = fn(*args, **kwargs)
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/_api_client.py", line 1144, in _request_once
-    errors.APIError.raise_for_response(response)
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/genai/errors.py", line 110, in raise_for_response
-    raise ServerError(status_code, response_json, response)
-google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The request timed out. Please try again.', 'status': 'UNAVAILABLE'}}

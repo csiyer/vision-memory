@@ -1,110 +1,0 @@
-==============================================
-Vision Memory Experiments: gpt-4o
-==============================================
-
-========== 2-AFC Recognition ==========
---- Dataset: things ---
-  [EXISTS] things | novel | 1 images
-  [EXISTS] things | novel | 10 images
-  [EXISTS] things | novel | 100 images
-  [SKIP-LIMIT] things | novel | 1000
-  [EXISTS] things | exemplar | 1 images
-  [EXISTS] things | exemplar | 10 images
-  [EXISTS] things | exemplar | 100 images
-  [RUN] things | exemplar | 1000 images
-Running 2-AFC evaluation:
-  Models: ['gpt-4o']
-  N images (study): 1000
-  N trials (test): 50
-  Max context images: all
-  Foil type: exemplar
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 1000 categories with up to 2 exemplars each.
-
-=== gpt-4o ===
-  [ERROR] things | exemplar | 1000
---- Dataset: Brady2008 ---
-  [RUN] Brady2008 | novel | 1 images
-Running 2-AFC evaluation:
-  Models: ['gpt-4o']
-  N images (study): 1
-  N trials (test): 1
-  Max context images: all
-  Foil type: novel
-  Dataset: Brady2008
-
-=== gpt-4o ===
-  Trial 1/1: ✓
-  Accuracy: 100.0% | d': 0.95 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_203724.json
-  [RUN] Brady2008 | novel | 10 images
-Running 2-AFC evaluation:
-  Models: ['gpt-4o']
-  N images (study): 10
-  N trials (test): 10
-  Max context images: all
-  Foil type: novel
-  Dataset: Brady2008
-
-=== gpt-4o ===
-  Trial 1/10: ✓  Trial 2/10: ✓  Trial 3/10: ✓  Trial 4/10: ✓  Trial 5/10: ✓  Trial 6/10: ✓  Trial 7/10: ✓  Trial 8/10: ✓  Trial 9/10: ✓  Trial 10/10: ✓
-  Accuracy: 100.0% | d': 2.39 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_203747.json
-  [RUN] Brady2008 | novel | 100 images
-Running 2-AFC evaluation:
-  Models: ['gpt-4o']
-  N images (study): 100
-  N trials (test): 50
-  Max context images: all
-  Foil type: novel
-  Dataset: Brady2008
-
-=== gpt-4o ===
-  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✓  Trial 4/50: ✓  Trial 5/50: ✓  Trial 6/50: ✓  Trial 7/50: ✓  Trial 8/50: ✓  Trial 9/50: ✓  Trial 10/50: ✓  Trial 11/50: ✓  Trial 12/50: ✓  Trial 13/50: ✓  Trial 14/50: ✓  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✓  Trial 18/50: ✓  Trial 19/50: ✓  Trial 20/50: ✓  Trial 21/50: ✓  Trial 22/50: ✓  Trial 23/50: ✓  Trial 24/50: ✓  Trial 25/50: ✓  Trial 26/50: ✓  Trial 27/50: ✓  Trial 28/50: ✓  Trial 29/50: ✓  Trial 30/50: ✓  Trial 31/50: ✓  Trial 32/50: ✓  Trial 33/50: ✓  Trial 34/50: ✓  Trial 35/50: ✓  Trial 36/50: ✓  Trial 37/50: ✓  Trial 38/50: ✓  Trial 39/50: ✓  Trial 40/50: ✓  Trial 41/50: ✓  Trial 42/50: ✓  Trial 43/50: ✓  Trial 44/50: ✓  Trial 45/50: ✓  Trial 46/50: ✓  Trial 47/50: ✓  Trial 48/50: ✓  Trial 49/50: ✓  Trial 50/50: ✓
-  Accuracy: 100.0% | d': 3.30 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_204343.json
-  [RUN] Brady2008 | novel | 1000 images
-Running 2-AFC evaluation:
-  Models: ['gpt-4o']
-  N images (study): 1000
-  N trials (test): 50
-  Max context images: all
-  Foil type: novel
-  Dataset: Brady2008
-
-=== gpt-4o ===
-  [ERROR] Brady2008 | novel | 1000
-  [EXISTS] Brady2008 | exemplar | 1 images
-  [EXISTS] Brady2008 | exemplar | 10 images
-  [SKIP-LIMIT] Brady2008 | exemplar | 100
-  [SKIP-LIMIT] Brady2008 | exemplar | 1000
-  [EXISTS] Brady2008 | state | 1 images
-  [EXISTS] Brady2008 | state | 10 images
-  [SKIP-LIMIT] Brady2008 | state | 100
-  [SKIP-LIMIT] Brady2008 | state | 1000
-
-========== Continuous Recognition ==========
---- Dataset: things ---
-  [SKIP-LIMIT] things | 1 (too small)
-  [RUN] things | 10 images
-Running continuous recognition evaluation:
-  Models: ['gpt-4o']
-  N images: 10
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 10 categories with up to 1 exemplars each.
-
-=== gpt-4o ===
-  Trial 1/20  Trial 2/20  Trial 3/20  Trial 4/20  Trial 5/20  Trial 6/20  Trial 7/20  Trial 8/20  Trial 9/20  Trial 10/20  Trial 11/20  Trial 12/20  Trial 13/20  Trial 14/20  Trial 15/20  Trial 16/20  Trial 17/20  Trial 18/20  Trial 19/20  Trial 20/20
-  d'=3.22, hit=1.00, fa=0.00
-  N trials (generated): 20
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_continuous_20260412_204541.json
-  [EXISTS] things | 100 images
-  [RUN] things | 1000 images

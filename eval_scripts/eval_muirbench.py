@@ -171,6 +171,21 @@ def run_evaluation(evaluators, samples):
     return all_results
 
 
+def _find_completed_models(results_dir, **match_fields):
+    """Return set of model names that already have a completed result matching the given metadata fields."""
+    completed = set()
+    for path in Path(results_dir).glob("results_muirbench_*.json"):
+        try:
+            with open(path) as f:
+                data = json.load(f)
+            meta = data.get("_metadata", {})
+            if all(str(meta.get(k)) == str(v) for k, v in match_fields.items() if v is not None):
+                completed.update(meta.get("models", []))
+        except Exception:
+            pass
+    return completed
+
+
 def main():
     parser = argparse.ArgumentParser(description="MuirBench Multi-Image Evaluation")
     parser.add_argument(
@@ -187,28 +202,35 @@ def main():
                         help="Output filename under results/ (default: results_muirbench_<ts>.json)")
     args = parser.parse_args()
 
+    results_dir = Path(__file__).parent.parent / "results"
+    done = _find_completed_models(results_dir, task="MuirBench", max_samples=args.max_samples)
+    if done:
+        print(f"Skipping already-completed models: {sorted(done)}")
+
     evaluators = []
     for m in args.models:
         m = m.strip()
         if m == "gpt-4o":
-            evaluators.append(OpenAIEvaluator("gpt-4o"))
+            ev = OpenAIEvaluator("gpt-4o")
         elif m == "claude":
-            evaluators.append(AnthropicEvaluator())
+            ev = AnthropicEvaluator()
         elif m == "gemini":
-            evaluators.append(GoogleEvaluator())
+            ev = GoogleEvaluator()
         elif m == "qwen":
-            evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+            ev = QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct")
         elif m.startswith("claude"):
-            evaluators.append(AnthropicEvaluator(m))
+            ev = AnthropicEvaluator(m)
         elif m.startswith("gemini"):
-            evaluators.append(GoogleEvaluator(m))
+            ev = GoogleEvaluator(m)
         elif m.startswith("qwen") or m.startswith("Qwen"):
-            evaluators.append(QwenEvaluator(m))
+            ev = QwenEvaluator(m)
         else:
-            evaluators.append(OpenAIEvaluator(m))
+            ev = OpenAIEvaluator(m)
+        if ev.get_name() not in done:
+            evaluators.append(ev)
 
     if not evaluators:
-        print("No valid models specified.")
+        print("No valid models specified (or all already completed).")
         return
 
     samples = load_dataset(

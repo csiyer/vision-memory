@@ -5,7 +5,7 @@ from typing import Any, Dict, List
 from PIL import Image
 from google import genai
 from google.genai import types
-from google.genai.errors import ClientError
+from google.genai.errors import ClientError, ServerError
 from .base import BaseEvaluator
 
 
@@ -54,6 +54,13 @@ class GoogleEvaluator(BaseEvaluator):
                 if e.code == 429 and attempt < 7:
                     wait = 30 * (2 ** attempt)  # 30, 60, 120, 240 ... seconds
                     print(f"\n  Gemini 429 rate limit, waiting {wait}s (attempt {attempt+1}/8)...")
+                    time.sleep(wait)
+                else:
+                    raise
+            except ServerError as e:
+                if attempt < 7:
+                    wait = 30 * (2 ** attempt)
+                    print(f"\n  Gemini 5xx ({e.code}), waiting {wait}s (attempt {attempt+1}/8)...")
                     time.sleep(wait)
                 else:
                     raise

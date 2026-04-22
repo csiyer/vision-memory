@@ -1,475 +1,0 @@
-==============================================
-Vision Memory Experiments: gemini
-==============================================
-
-========== 2-AFC Recognition ==========
---- Dataset: things ---
-  [RUN] things | novel | 1 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 1
-  N trials (test): 1
-  Max context images: all
-  Foil type: novel
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 2 categories with up to 1 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/1: ✓
-  Accuracy: 100.0% | d': 0.95 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_153554.json
-  [RUN] things | novel | 10 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 10
-  N trials (test): 10
-  Max context images: all
-  Foil type: novel
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 20 categories with up to 1 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/10: ✓  Trial 2/10: ✓  Trial 3/10: ✓  Trial 4/10: ✓  Trial 5/10: ✓  Trial 6/10: ✓  Trial 7/10: ✓  Trial 8/10: ✓  Trial 9/10: ✓  Trial 10/10: ✓
-  Accuracy: 100.0% | d': 2.39 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_153652.json
-  [RUN] things | novel | 100 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 100
-  N trials (test): 50
-  Max context images: all
-  Foil type: novel
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 200 categories with up to 1 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✓  Trial 4/50: ✓  Trial 5/50: ✓  Trial 6/50: ✓  Trial 7/50: ✓  Trial 8/50: ✓  Trial 9/50: ✓  Trial 10/50: ✓  Trial 11/50: ✓  Trial 12/50: ✓  Trial 13/50: ✓  Trial 14/50: ✓  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✓  Trial 18/50: ✓  Trial 19/50: ✓  Trial 20/50: ✓  Trial 21/50: ✓  Trial 22/50: ✓  Trial 23/50: ✓  Trial 24/50: ✓  Trial 25/50: ✓  Trial 26/50: ✓  Trial 27/50: ✓  Trial 28/50: ✓  Trial 29/50: ✓  Trial 30/50: ✓  Trial 31/50: ✓  Trial 32/50: ✓  Trial 33/50: ✓  Trial 34/50: ✓  Trial 35/50: ✓  Trial 36/50: ✓  Trial 37/50: ✓  Trial 38/50: ✓  Trial 39/50: ✓  Trial 40/50: ✓  Trial 41/50: ✓  Trial 42/50: ✓  Trial 43/50: ✓  Trial 44/50: ✓  Trial 45/50: ✓  Trial 46/50: ✓  Trial 47/50: ✓  Trial 48/50: ✓  Trial 49/50: ✓  Trial 50/50: ✓
-  Accuracy: 100.0% | d': 3.30 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_154322.json
-  [SKIP-LIMIT] things | novel | 1000
-  [RUN] things | exemplar | 1 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 1
-  N trials (test): 1
-  Max context images: all
-  Foil type: exemplar
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 1 categories with up to 2 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/1: ✓
-  Accuracy: 100.0% | d': 0.95 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_154344.json
-  [RUN] things | exemplar | 10 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 10
-  N trials (test): 10
-  Max context images: all
-  Foil type: exemplar
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 10 categories with up to 2 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/10: ✓  Trial 2/10: ✓  Trial 3/10: ✓  Trial 4/10: ✗  Trial 5/10: ✓  Trial 6/10: ✓  Trial 7/10: ✓  Trial 8/10: ✓  Trial 9/10: ✓  Trial 10/10: ✓
-  Accuracy: 90.0% | d': 2.33 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_154435.json
-  [RUN] things | exemplar | 100 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 100
-  N trials (test): 50
-  Max context images: all
-  Foil type: exemplar
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 100 categories with up to 2 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✓  Trial 4/50: ✓  Trial 5/50: ✓  Trial 6/50: ✓  Trial 7/50: ✓  Trial 8/50: ✓  Trial 9/50: ✓  Trial 10/50: ✓  Trial 11/50: ✓  Trial 12/50: ✓  Trial 13/50: ✓  Trial 14/50: ✓  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✓  Trial 18/50: ✓  Trial 19/50: ✓  Trial 20/50: ✓  Trial 21/50: ✓  Trial 22/50: ✓  Trial 23/50: ✓  Trial 24/50: ✓  Trial 25/50: ✓  Trial 26/50: ✓  Trial 27/50: ✓  Trial 28/50: ✓  Trial 29/50: ✓  Trial 30/50: ✓  Trial 31/50: ✓  Trial 32/50: ✓  Trial 33/50: ✓  Trial 34/50: ✓  Trial 35/50: ✓  Trial 36/50: ✓  Trial 37/50: ✓  Trial 38/50: ✓  Trial 39/50: ✓  Trial 40/50: ✓  Trial 41/50: ✓  Trial 42/50: ✓  Trial 43/50: ✓  Trial 44/50: ✓  Trial 45/50: ✓  Trial 46/50: ✓  Trial 47/50: ✓  Trial 48/50: ✓  Trial 49/50: ✓  Trial 50/50: ✓
-  Accuracy: 100.0% | d': 3.30 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_154919.json
-  [RUN] things | exemplar | 1000 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 1000
-  N trials (test): 50
-  Max context images: all
-  Foil type: exemplar
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 1000 categories with up to 2 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✓  Trial 4/50: ✓  Trial 5/50: ✓  Trial 6/50: ✓  Trial 7/50: ✓  Trial 8/50: ✓  Trial 9/50: ✓  Trial 10/50: ✓  Trial 11/50: ✓  Trial 12/50: ✓  Trial 13/50: ✓  Trial 14/50: ✓  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✓  Trial 18/50: ✓  Trial 19/50: ✓  Trial 20/50: ✓  Trial 21/50: ✓  Trial 22/50: ✓  Trial 23/50: ✓  Trial 24/50: ✓  Trial 25/50: ✓  Trial 26/50: ✓  Trial 27/50: ✓  Trial 28/50: ✓  Trial 29/50: ✓  Trial 30/50: ✓  Trial 31/50: ✓  Trial 32/50: ✓  [ERROR] things | exemplar | 1000
---- Dataset: Brady2008 ---
-  [RUN] Brady2008 | novel | 1 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 1
-  N trials (test): 1
-  Max context images: all
-  Foil type: novel
-  Dataset: Brady2008
-  [ERROR] Brady2008 | novel | 1
-  [RUN] Brady2008 | novel | 10 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 10
-  N trials (test): 10
-  Max context images: all
-  Foil type: novel
-  Dataset: Brady2008
-  [ERROR] Brady2008 | novel | 10
-  [RUN] Brady2008 | novel | 100 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 100
-  N trials (test): 50
-  Max context images: all
-  Foil type: novel
-  Dataset: Brady2008
-  [ERROR] Brady2008 | novel | 100
-  [RUN] Brady2008 | novel | 1000 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 1000
-  N trials (test): 50
-  Max context images: all
-  Foil type: novel
-  Dataset: Brady2008
-  [ERROR] Brady2008 | novel | 1000
-  [RUN] Brady2008 | exemplar | 1 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 1
-  N trials (test): 1
-  Max context images: all
-  Foil type: exemplar
-  Dataset: Brady2008
-
-=== gemini-2.5-flash ===
-
-  Accuracy: 0.0% | d': 0.00 | Mem Score: 0.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_162111.json
-  [RUN] Brady2008 | exemplar | 10 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 10
-  N trials (test): 10
-  Max context images: all
-  Foil type: exemplar
-  Dataset: Brady2008
-
-=== gemini-2.5-flash ===
-
-  Accuracy: 0.0% | d': 0.00 | Mem Score: 0.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_162117.json
-  [SKIP-LIMIT] Brady2008 | exemplar | 100
-  [SKIP-LIMIT] Brady2008 | exemplar | 1000
-  [RUN] Brady2008 | state | 1 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 1
-  N trials (test): 1
-  Max context images: all
-  Foil type: state
-  Dataset: Brady2008
-
-=== gemini-2.5-flash ===
-
-  Accuracy: 0.0% | d': 0.00 | Mem Score: 0.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_162122.json
-  [RUN] Brady2008 | state | 10 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 10
-  N trials (test): 10
-  Max context images: all
-  Foil type: state
-  Dataset: Brady2008
-
-=== gemini-2.5-flash ===
-
-  Accuracy: 0.0% | d': 0.00 | Mem Score: 0.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_162128.json
-  [SKIP-LIMIT] Brady2008 | state | 100
-  [SKIP-LIMIT] Brady2008 | state | 1000
-
-========== Continuous Recognition ==========
---- Dataset: things ---
-  [SKIP-LIMIT] things | 1 (too small)
-  [RUN] things | 10 images
-Running continuous recognition evaluation:
-  Models: ['gemini-2.5-flash']
-  N images: 10
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 10 categories with up to 1 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/20  Trial 2/20  Trial 3/20  Trial 4/20  Trial 5/20  Trial 6/20  Trial 7/20  Trial 8/20  Trial 9/20  Trial 10/20  Trial 11/20  Trial 12/20  Trial 13/20  Trial 14/20  Trial 15/20  Trial 16/20  Trial 17/20  Trial 18/20  Trial 19/20  Trial 20/20
-  d'=3.38, hit=1.00, fa=0.00
-  N trials (generated): 20
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_continuous_20260412_162211.json
-  [RUN] things | 100 images
-Running continuous recognition evaluation:
-  Models: ['gemini-2.5-flash']
-  N images: 100
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 100 categories with up to 1 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/200  Trial 2/200  Trial 3/200  Trial 4/200  Trial 5/200  Trial 6/200  Trial 7/200  Trial 8/200  Trial 9/200  Trial 10/200  Trial 11/200  Trial 12/200  Trial 13/200  Trial 14/200  Trial 15/200  Trial 16/200  Trial 17/200  Trial 18/200  Trial 19/200  Trial 20/200  Trial 21/200  Trial 22/200  Trial 23/200  Trial 24/200  Trial 25/200  Trial 26/200  Trial 27/200  [ERROR] things | 100
-  [RUN] things | 1000 images
-Running continuous recognition evaluation:
-  Models: ['gemini-2.5-flash']
-  N images: 1000
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 1000 categories with up to 1 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/2000  Trial 2/2000  Trial 3/2000  Trial 4/2000  Trial 5/2000  Trial 6/2000  Trial 7/2000  Trial 8/2000  Trial 9/2000  Trial 10/2000  Trial 11/2000  Trial 12/2000  Trial 13/2000  Trial 14/2000  Trial 15/2000  Trial 16/2000  Trial 17/2000  Trial 18/2000  Trial 19/2000  Trial 20/2000  Trial 21/2000  Trial 22/2000  Trial 23/2000  Trial 24/2000  Trial 25/2000  Trial 26/2000  Trial 27/2000  Trial 28/2000  Trial 29/2000  Trial 30/2000  Trial 31/2000  Trial 32/2000  Trial 33/2000  Trial 34/2000  Trial 35/2000  Trial 36/2000  Trial 37/2000  Trial 38/2000  Trial 39/2000  Trial 40/2000  Trial 41/2000  Trial 42/2000  Trial 43/2000  Trial 44/2000  Trial 45/2000  Trial 46/2000  Trial 47/2000  Trial 48/2000  Trial 49/2000  Trial 50/2000  Trial 51/2000  Trial 52/2000  Trial 53/2000  Trial 54/2000  Trial 55/2000  Trial 56/2000  Trial 57/2000  Trial 58/2000  Trial 59/2000  Trial 60/2000  Trial 61/2000  Trial 62/2000  Trial 63/2000  Trial 64/2000  Trial 65/2000  [ERROR] things | 1000
---- Dataset: Brady2008 ---
-  [SKIP-LIMIT] Brady2008 | 1 (too small)
-  [RUN] Brady2008 | 10 images
-Running continuous recognition evaluation:
-  Models: ['gemini-2.5-flash']
-  N images: 10
-  Dataset: Brady2008
-
-=== gemini-2.5-flash ===
-
-  d'=0.00, hit=0.00, fa=0.00
-  N trials (generated): 0
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_continuous_20260412_164031.json
-  [RUN] Brady2008 | 100 images
-Running continuous recognition evaluation:
-  Models: ['gemini-2.5-flash']
-  N images: 100
-  Dataset: Brady2008
-
-=== gemini-2.5-flash ===
-
-  d'=0.00, hit=0.00, fa=0.00
-  N trials (generated): 0
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_continuous_20260412_164037.json
-  [RUN] Brady2008 | 1000 images
-Running continuous recognition evaluation:
-  Models: ['gemini-2.5-flash']
-  N images: 1000
-  Dataset: Brady2008
-
-=== gemini-2.5-flash ===
-
-  d'=0.00, hit=0.00, fa=0.00
-  N trials (generated): 0
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_continuous_20260412_164042.json
-
-========== Paired Associate Memory ==========
---- Dataset: things ---
-  [RUN] things | 1 pairs
-Running Paired Associate Memory evaluation:
-  Models: ['gemini-2.5-flash']
-  N pairs: 1
-  Max context pairs: all
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 1 categories with up to 1 exemplars each.
-Warning: Wordpool not found at memory_datasets/wasnorm_wordpool.txt, using dummy words.
-
-=== gemini-2.5-flash ===
-  Trial 1/1: ✓ (target: WORD802, got: word802)
-  Accuracy: 100.0% (1/1)
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_pam_20260412_164111.json
-  [RUN] things | 10 pairs
-Running Paired Associate Memory evaluation:
-  Models: ['gemini-2.5-flash']
-  N pairs: 10
-  Max context pairs: all
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 10 categories with up to 1 exemplars each.
-Warning: Wordpool not found at memory_datasets/wasnorm_wordpool.txt, using dummy words.
-
-=== gemini-2.5-flash ===
-  Trial 1/10: ✓ (target: WORD195, got: word195)  Trial 2/10: ✓ (target: WORD365, got: word365)  Trial 3/10: ✓ (target: WORD624, got: word624)  Trial 4/10: ✓ (target: WORD502, got: word502)  Trial 5/10: ✓ (target: WORD353, got: word353)  Trial 6/10: ✓ (target: WORD486, got: word486)  Trial 7/10: ✓ (target: WORD568, got: word568)  Trial 8/10: ✓ (target: WORD150, got: word150)  Trial 9/10: ✓ (target: WORD692, got: word692)  Trial 10/10: ✓ (target: WORD829, got: word829)
-  Accuracy: 100.0% (10/10)
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_pam_20260412_164154.json
-  [RUN] things | 100 pairs
-Running Paired Associate Memory evaluation:
-  Models: ['gemini-2.5-flash']
-  N pairs: 100
-  Max context pairs: all
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 100 categories with up to 1 exemplars each.
-Warning: Wordpool not found at memory_datasets/wasnorm_wordpool.txt, using dummy words.
-
-=== gemini-2.5-flash ===
-  Trial 1/100: ✓ (target: WORD611, got: word611)  Trial 2/100: ✓ (target: WORD942, got: word942)  Trial 3/100: ✓ (target: WORD112, got: word112)  Trial 4/100: ✓ (target: WORD287, got: word287)  Trial 5/100: ✓ (target: WORD422, got: word422)  Trial 6/100: ✓ (target: WORD59, got: word59)  Trial 7/100: ✓ (target: WORD378, got: word378)  Trial 8/100: ✓ (target: WORD653, got: word653)  Trial 9/100: ✓ (target: WORD402, got: word402)  Trial 10/100: ✓ (target: WORD36, got: word36)  Trial 11/100: ✓ (target: WORD922, got: word922)  Trial 12/100: ✓ (target: WORD451, got: word451)  Trial 13/100: ✓ (target: WORD452, got: word452)  Trial 14/100: ✓ (target: WORD650, got: word650)  Trial 15/100: ✓ (target: WORD701, got: word701)  Trial 16/100: ✓ (target: WORD54, got: word54)  Trial 17/100: ✓ (target: WORD481, got: word481)  Trial 18/100: ✓ (target: WORD592, got: word592)  Trial 19/100: ✓ (target: WORD62, got: word62)  Trial 20/100: ✓ (target: WORD902, got: word902)  Trial 21/100: ✓ (target: WORD5, got: word5)  Trial 22/100: ✓ (target: WORD810, got: word810)  Trial 23/100: ✓ (target: WORD908, got: word908)  Trial 24/100: ✓ (target: WORD589, got: word589)  Trial 25/100: ✓ (target: WORD94, got: word94)  Trial 26/100: ✓ (target: WORD25, got: word25)  Trial 27/100: ✓ (target: WORD923, got: word923)  Trial 28/100: ✓ (target: WORD292, got: word292)  Trial 29/100: ✓ (target: WORD782, got: word782)  Trial 30/100: ✓ (target: WORD738, got: word738)  Trial 31/100: ✓ (target: WORD884, got: word884)  Trial 32/100: ✓ (target: WORD844, got: word844)  Trial 33/100: ✓ (target: WORD123, got: word123)  Trial 34/100: ✓ (target: WORD87, got: word87)  Trial 35/100: ✓ (target: WORD920, got: word920)  Trial 36/100: ✓ (target: WORD185, got: word185)  Trial 37/100: ✓ (target: WORD293, got: word293)  Trial 38/100: ✓ (target: WORD80, got: word80)  Trial 39/100: ✓ (target: WORD282, got: word282)  Trial 40/100: ✓ (target: WORD607, got: word607)  Trial 41/100: ✓ (target: WORD642, got: word642)  Trial 42/100: ✓ (target: WORD891, got: word891)  Trial 43/100: ✓ (target: WORD558, got: word558)  Trial 44/100: ✓ (target: WORD536, got: word536)  Trial 45/100: ✓ (target: WORD893, got: word893)  Trial 46/100: ✓ (target: WORD127, got: word127)  Trial 47/100: ✓ (target: WORD380, got: word380)  Trial 48/100: ✓ (target: WORD832, got: word832)  Trial 49/100: ✓ (target: WORD412, got: word412)  Trial 50/100: ✓ (target: WORD314, got: word314)  Trial 51/100: ✓ (target: WORD680, got: word680)  Trial 52/100: ✓ (target: WORD560, got: word560)  Trial 53/100: ✓ (target: WORD257, got: word257)  Trial 54/100: ✓ (target: WORD142, got: word142)  Trial 55/100: ✓ (target: WORD710, got: word710)  Trial 56/100: ✓ (target: WORD3, got: word3)  Trial 57/100: ✓ (target: WORD564, got: word564)  Trial 58/100: ✓ (target: WORD645, got: word645)  Trial 59/100: ✓ (target: WORD81, got: word81)  Trial 60/100: ✓ (target: WORD840, got: word840)  Trial 61/100: ✓ (target: WORD437, got: word437)  Trial 62/100: ✓ (target: WORD484, got: word484)  Trial 63/100: ✓ (target: WORD239, got: word239)  Trial 64/100: ✓ (target: WORD397, got: word397)  Trial 65/100: ✓ (target: WORD917, got: word917)  Trial 66/100: ✓ (target: WORD431, got: word431)  Trial 67/100: ✓ (target: WORD857, got: word857)  Trial 68/100: ✓ (target: WORD955, got: word955)  Trial 69/100: ✓ (target: WORD367, got: word367)  Trial 70/100: ✓ (target: WORD980, got: word980)  Trial 71/100: ✓ (target: WORD534, got: word534)  Trial 72/100: ✓ (target: WORD386, got: word386)  Trial 73/100: ✓ (target: WORD168, got: word168)  Trial 74/100: ✓ (target: WORD649, got: word649)  Trial 75/100: ✓ (target: WORD703, got: word703)  Trial 76/100: ✓ (target: WORD699, got: word699)  Trial 77/100: ✓ (target: WORD26, got: word26)  Trial 78/100: ✓ (target: WORD663, got: word663)  Trial 79/100: ✓ (target: WORD260, got: word260)  Trial 80/100: ✓ (target: WORD747, got: word747)  Trial 81/100: ✓ (target: WORD225, got: word225)  Trial 82/100: ✓ (target: WORD460, got: word460)  Trial 83/100: ✓ (target: WORD549, got: word549)  Trial 84/100: ✓ (target: WORD302, got: word302)  Trial 85/100: ✓ (target: WORD693, got: word693)  Trial 86/100: ✓ (target: WORD717, got: word717)  Trial 87/100: ✓ (target: WORD298, got: word298)  Trial 88/100: ✓ (target: WORD33, got: word33)  Trial 89/100: ✓ (target: WORD329, got: word329)  Trial 90/100: ✓ (target: WORD984, got: word984)  Trial 91/100: ✓ (target: WORD76, got: word76)  Trial 92/100: ✓ (target: WORD722, got: word722)  Trial 93/100: ✓ (target: WORD496, got: word496)  Trial 94/100: ✓ (target: WORD885, got: word885)  Trial 95/100: ✓ (target: WORD944, got: word944)  Trial 96/100: ✓ (target: WORD37, got: word37)  Trial 97/100: ✓ (target: WORD101, got: word101)  Trial 98/100: ✓ (target: WORD995, got: word995)  Trial 99/100: ✓ (target: WORD924, got: word924)  Trial 100/100: ✓ (target: WORD817, got: word817)
-  Accuracy: 100.0% (100/100)
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_pam_20260412_164905.json
-  [RUN] things | 1000 pairs
-Running Paired Associate Memory evaluation:
-  Models: ['gemini-2.5-flash']
-  N pairs: 1000
-  Max context pairs: all
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 1000 categories with up to 1 exemplars each.
-Warning: Wordpool not found at memory_datasets/wasnorm_wordpool.txt, using dummy words.
-
-=== gemini-2.5-flash ===
-  Trial 1/1000: ✓ (target: WORD112, got: word112)  Trial 2/1000: ✓ (target: WORD39, got: word39)  Trial 3/1000: ✓ (target: WORD777, got: word777)  Trial 4/1000: ✓ (target: WORD21, got: word21)  [ERROR] things | 1000
---- Dataset: Brady2008 ---
-  [RUN] Brady2008 | 1 pairs
-Running Paired Associate Memory evaluation:
-  Models: ['gemini-2.5-flash']
-  N pairs: 1
-  Max context pairs: all
-  Dataset: Brady2008
-Warning: Wordpool not found at memory_datasets/wasnorm_wordpool.txt, using dummy words.
-
-=== gemini-2.5-flash ===
-
-  Accuracy: 0.0% (0/0)
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_pam_20260412_170051.json
-  [RUN] Brady2008 | 10 pairs
-Running Paired Associate Memory evaluation:
-  Models: ['gemini-2.5-flash']
-  N pairs: 10
-  Max context pairs: all
-  Dataset: Brady2008
-Warning: Wordpool not found at memory_datasets/wasnorm_wordpool.txt, using dummy words.
-
-=== gemini-2.5-flash ===
-
-  Accuracy: 0.0% (0/0)
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_pam_20260412_170057.json
-  [RUN] Brady2008 | 100 pairs
-Running Paired Associate Memory evaluation:
-  Models: ['gemini-2.5-flash']
-  N pairs: 100
-  Max context pairs: all
-  Dataset: Brady2008
-Warning: Wordpool not found at memory_datasets/wasnorm_wordpool.txt, using dummy words.
-
-=== gemini-2.5-flash ===
-
-  Accuracy: 0.0% (0/0)
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_pam_20260412_170102.json
-  [RUN] Brady2008 | 1000 pairs
-Running Paired Associate Memory evaluation:
-  Models: ['gemini-2.5-flash']
-  N pairs: 1000
-  Max context pairs: all
-  Dataset: Brady2008
-Warning: Wordpool not found at memory_datasets/wasnorm_wordpool.txt, using dummy words.
-
-=== gemini-2.5-flash ===
-
-  Accuracy: 0.0% (0/0)
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_pam_20260412_170108.json
-
-========== Visual Haystacks ==========
-  [RUN] 1 images
-Running Visual Haystacks evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (haystack): 1
-  N trials: 20
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 100 categories with up to 1 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/20: ✓  Trial 2/20: ✓  Trial 3/20: ✗  Trial 4/20: ✓  Trial 5/20: ✗  Trial 6/20: ✓  Trial 7/20: ✗  Trial 8/20: ✓  Trial 9/20: ✗  Trial 10/20: ✗  Trial 11/20: ✗  Trial 12/20: ✗  Trial 13/20: ✗  Trial 14/20: ✓  Trial 15/20: ✓  Trial 16/20: ✓  Trial 17/20: ✓  Trial 18/20: ✗  Trial 19/20: ✗  Trial 20/20: ✓
-  Accuracy: 50.0% | Hit: 0.0% | CR: 90.9%
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_haystacks_20260412_170334.json
-  [RUN] 10 images
-Running Visual Haystacks evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (haystack): 10
-  N trials: 50
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 100 categories with up to 1 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/50: ✗  Trial 2/50: ✗  Trial 3/50: ✗  Trial 4/50: ✓  Trial 5/50: ✗  Trial 6/50: ✓  Trial 7/50: ✓  Trial 8/50: ✓  Trial 9/50: ✗  Trial 10/50: ✗  Trial 11/50: ✗  Trial 12/50: ✗  Trial 13/50: ✗  Trial 14/50: ✓  Trial 15/50: ✓  Trial 16/50: ✗  Trial 17/50: ✗  Trial 18/50: ✓  Trial 19/50: ✗  Trial 20/50: ✗  Trial 21/50: ✓  Trial 22/50: ✓  Trial 23/50: ✓  Trial 24/50: ✗  Trial 25/50: ✗  Trial 26/50: ✗  Trial 27/50: ✗  Trial 28/50: ✓  Trial 29/50: ✗  Trial 30/50: ✓  Trial 31/50: ✓  Trial 32/50: ✗  Trial 33/50: ✗  Trial 34/50: ✓  Trial 35/50: ✓  Trial 36/50: ✗  Trial 37/50: ✓  Trial 38/50: ✗  Trial 39/50: ✗  Trial 40/50: ✗  Trial 41/50: ✓  Trial 42/50: ✗  Trial 43/50: ✓  Trial 44/50: ✗  Trial 45/50: ✓  Trial 46/50: ✓  Trial 47/50: ✓  Trial 48/50: ✗  Trial 49/50: ✓  Trial 50/50: ✓
-  Accuracy: 46.0% | Hit: 0.0% | CR: 100.0%
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_haystacks_20260412_170816.json
-  [RUN] 100 images
-Running Visual Haystacks evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (haystack): 100
-  N trials: 50
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 200 categories with up to 1 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✓  Trial 4/50: ✗  Trial 5/50: ✗  Trial 6/50: ✗  Trial 7/50: ✗  Trial 8/50: ✗  Trial 9/50: ✓  Trial 10/50: ✓  Trial 11/50: ✓  Trial 12/50: ✓  Trial 13/50: ✓  Trial 14/50: ✗  Trial 15/50: ✓  Trial 16/50: ✗  Trial 17/50: ✓  Trial 18/50: ✗  Trial 19/50: ✗  Trial 20/50: ✗  Trial 21/50: ✓  Trial 22/50: ✗  Trial 23/50: ✗  Trial 24/50: ✗  Trial 25/50: ✗  Trial 26/50: ✓  Trial 27/50: ✓  Trial 28/50: ✓  Trial 29/50: ✓  Trial 30/50: ✓  Trial 31/50: ✓  Trial 32/50: ✓  Trial 33/50: ✗  Trial 34/50: ✗  Trial 35/50: ✓  Trial 36/50: ✗  Trial 37/50: ✓  Trial 38/50: ✓  Trial 39/50: ✓  Trial 40/50: ✓  Trial 41/50: ✗  Trial 42/50: ✓  Trial 43/50: ✗  Trial 44/50: ✗  Trial 45/50: ✓  Trial 46/50: ✓  Trial 47/50: ✗  Trial 48/50: ✓  Trial 49/50: ✓  Trial 50/50: ✓
-  Accuracy: 58.0% | Hit: 0.0% | CR: 96.7%
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_haystacks_20260412_171846.json
-  [RUN] 1000 images
-Running Visual Haystacks evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (haystack): 1000
-  N trials: 50
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 1654 categories with up to 1 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/50: ✗  Trial 2/50: ✗  Trial 3/50: ✗  Trial 4/50: ✗  [ERROR] 1000
-
-==============================================
-gemini experiments completed!
-==============================================

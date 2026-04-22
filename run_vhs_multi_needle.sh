@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --job-name=vismem_multi_vhs
-#SBATCH --partition=short
+#SBATCH --partition=zgroup1
 #SBATCH --account=zgroup
 #SBATCH --output=logs/%j.out
 #SBATCH --error=logs/%j.err
-#SBATCH --time=08:00:00
+#SBATCH --time=24:00:00
 #SBATCH --mem=48G
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1

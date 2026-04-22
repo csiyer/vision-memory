@@ -1,17 +1,0 @@
-/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-  warnings.warn(eol_message.format("3.9"), FutureWarning)
-/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-  warnings.warn(eol_message.format("3.9"), FutureWarning)
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:16<00:48, 16.26s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:30<00:30, 15.18s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:46<00:15, 15.46s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:55<00:00, 12.82s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:55<00:00, 13.81s/it]
-Traceback (most recent call last):
-  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
-    exec(code, run_globals)
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_vhs.py", line 281, in <module>
-    main()
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_vhs.py", line 240, in main
-    results, n_trials = run_evaluation(evaluators, args)
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_vhs.py", line 82, in run_evaluation
-    task = VisualHaystacksTask(
-TypeError: __init__() got an unexpected keyword argument 'qa_root'

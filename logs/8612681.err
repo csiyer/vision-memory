@@ -1,23 +1,0 @@
-/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-  warnings.warn(eol_message.format("3.9"), FutureWarning)
-/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-  warnings.warn(eol_message.format("3.9"), FutureWarning)
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [03:33<?, ?it/s]
-Error in sys.excepthook:
-
-Original exception was:
-/var/spool/slurm/slurmd/job8612681/slurm_script: line 78: 637813 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_2afc --models "$MODEL" --n-images "$size" --n-trials "$trials" --foil-type "$foil" --dataset "$dataset"
-/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-  warnings.warn(eol_message.format("3.9"), FutureWarning)
-/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-  warnings.warn(eol_message.format("3.9"), FutureWarning)
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:   0%|          | 0/4 [01:43<?, ?it/s]
-Error in sys.excepthook:
-
-Original exception was:
-/var/spool/slurm/slurmd/job8612681/slurm_script: line 78: 640871 Segmentation fault      (core dumped) python3 -m eval_scripts.eval_2afc --models "$MODEL" --n-images "$size" --n-trials "$trials" --foil-type "$foil" --dataset "$dataset"
-/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-  warnings.warn(eol_message.format("3.9"), FutureWarning)
-/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-  warnings.warn(eol_message.format("3.9"), FutureWarning)
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s][2026-04-12T20:22:36.693] error: *** JOB 8612681 ON ins081 CANCELLED AT 2026-04-12T20:22:36 DUE to SIGNAL Terminated ***

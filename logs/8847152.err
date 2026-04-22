@@ -1,22 +1,0 @@
-/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-  warnings.warn(eol_message.format("3.9"), FutureWarning)
-/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-  warnings.warn(eol_message.format("3.9"), FutureWarning)
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:09<00:28,  9.35s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:18<00:18,  9.31s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:28<00:09,  9.48s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:33<00:00,  7.75s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:33<00:00,  8.35s/it]
-Traceback (most recent call last):
-  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
-    exec(code, run_globals)
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_vhs.py", line 281, in <module>
-    main()
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_vhs.py", line 240, in main
-    results, n_trials = run_evaluation(evaluators, args)
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_vhs.py", line 82, in run_evaluation
-    task = VisualHaystacksTask(
-  File "/insomnia001/home/pm3361/vision-memory/tasks/visual_haystacks.py", line 133, in __init__
-    self._load_data()
-  File "/insomnia001/home/pm3361/vision-memory/tasks/visual_haystacks.py", line 139, in _load_data
-    raise FileNotFoundError(
-FileNotFoundError: VHS QA file not found: dataset/VHs_qa/visual_haystack_single_needle_VHs_large_2.json
-Download the Visual Haystacks dataset and place QA JSONs under dataset/VHs_qa.

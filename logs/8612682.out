@@ -1,118 +1,0 @@
-==============================================
-Vision Memory Experiments: gemini
-==============================================
-
-========== 2-AFC Recognition ==========
---- Dataset: things ---
-  [EXISTS] things | novel | 1 images
-  [EXISTS] things | novel | 10 images
-  [EXISTS] things | novel | 100 images
-  [SKIP-LIMIT] things | novel | 1000
-  [EXISTS] things | exemplar | 1 images
-  [EXISTS] things | exemplar | 10 images
-  [EXISTS] things | exemplar | 100 images
-  [RUN] things | exemplar | 1000 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 1000
-  N trials (test): 50
-  Max context images: all
-  Foil type: exemplar
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 1000 categories with up to 2 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✓  Trial 4/50: ✓  [ERROR] things | exemplar | 1000
---- Dataset: Brady2008 ---
-  [RUN] Brady2008 | novel | 1 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 1
-  N trials (test): 1
-  Max context images: all
-  Foil type: novel
-  Dataset: Brady2008
-
-=== gemini-2.5-flash ===
-  Trial 1/1: ✓
-  Accuracy: 100.0% | d': 0.95 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_203841.json
-  [RUN] Brady2008 | novel | 10 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 10
-  N trials (test): 10
-  Max context images: all
-  Foil type: novel
-  Dataset: Brady2008
-
-=== gemini-2.5-flash ===
-  Trial 1/10: ✓  Trial 2/10: ✓  Trial 3/10: ✓  Trial 4/10: ✓  Trial 5/10: ✓  Trial 6/10: ✓  Trial 7/10: ✓  Trial 8/10: ✓  Trial 9/10: ✓  Trial 10/10: ✓
-  Accuracy: 100.0% | d': 2.39 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_203914.json
-  [RUN] Brady2008 | novel | 100 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 100
-  N trials (test): 50
-  Max context images: all
-  Foil type: novel
-  Dataset: Brady2008
-
-=== gemini-2.5-flash ===
-  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✓  Trial 4/50: ✓  Trial 5/50: ✓  Trial 6/50: ✓  Trial 7/50: ✓  Trial 8/50: ✓  Trial 9/50: ✓  Trial 10/50: ✓  Trial 11/50: ✓  Trial 12/50: ✓  Trial 13/50: ✓  Trial 14/50: ✓  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✓  Trial 18/50: ✓  Trial 19/50: ✓  Trial 20/50: ✓  Trial 21/50: ✓  Trial 22/50: ✓  Trial 23/50: ✓  Trial 24/50: ✓  Trial 25/50: ✓  Trial 26/50: ✓  Trial 27/50: ✓  Trial 28/50: ✓  Trial 29/50: ✓  Trial 30/50: ✓  Trial 31/50: ✓  Trial 32/50: ✓  Trial 33/50: ✓  Trial 34/50: ✓  Trial 35/50: ✓  Trial 36/50: ✓  Trial 37/50: ✓  Trial 38/50: ✓  Trial 39/50: ✓  Trial 40/50: ✓  Trial 41/50: ✓  Trial 42/50: ✓  Trial 43/50: ✓  Trial 44/50: ✓  Trial 45/50: ✓  Trial 46/50: ✓  Trial 47/50: ✓  Trial 48/50: ✓  Trial 49/50: ✓  Trial 50/50: ✓
-  Accuracy: 100.0% | d': 3.30 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260412_204420.json
-  [RUN] Brady2008 | novel | 1000 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 1000
-  N trials (test): 50
-  Max context images: all
-  Foil type: novel
-  Dataset: Brady2008
-
-=== gemini-2.5-flash ===
-  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✓  Trial 4/50: ✓  Trial 5/50: ✓  Trial 6/50: ✓  Trial 7/50: ✓  Trial 8/50: ✓  Trial 9/50: ✓  Trial 10/50: ✓  Trial 11/50: ✓  Trial 12/50: ✓  Trial 13/50: ✓  Trial 14/50: ✓  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✓  Trial 18/50: ✓  Trial 19/50: ✓  Trial 20/50: ✓  Trial 21/50: ✓  Trial 22/50: ✓  Trial 23/50: ✓  Trial 24/50: ✓  Trial 25/50: ✓  Trial 26/50: ✓  [ERROR] Brady2008 | novel | 1000
-  [EXISTS] Brady2008 | exemplar | 1 images
-  [EXISTS] Brady2008 | exemplar | 10 images
-  [SKIP-LIMIT] Brady2008 | exemplar | 100
-  [SKIP-LIMIT] Brady2008 | exemplar | 1000
-  [EXISTS] Brady2008 | state | 1 images
-  [EXISTS] Brady2008 | state | 10 images
-  [SKIP-LIMIT] Brady2008 | state | 100
-  [SKIP-LIMIT] Brady2008 | state | 1000
-
-========== Continuous Recognition ==========
---- Dataset: things ---
-  [SKIP-LIMIT] things | 1 (too small)
-  [EXISTS] things | 10 images
-  [EXISTS] things | 100 images
-  [RUN] things | 1000 images
-Running continuous recognition evaluation:
-  Models: ['gemini-2.5-flash']
-  N images: 1000
-  Dataset: things
-Successfully connected to THINGS via Haitao999/things-eeg
-Fetching images from streaming dataset...
-Loaded 1000 categories with up to 1 exemplars each.
-
-=== gemini-2.5-flash ===
-  Trial 1/2000  Trial 2/2000  Trial 3/2000  Trial 4/2000  Trial 5/2000  Trial 6/2000  Trial 7/2000  Trial 8/2000  Trial 9/2000  Trial 10/2000  Trial 11/2000  Trial 12/2000  Trial 13/2000  Trial 14/2000  Trial 15/2000  Trial 16/2000  Trial 17/2000  Trial 18/2000  Trial 19/2000  Trial 20/2000  Trial 21/2000  Trial 22/2000  Trial 23/2000  Trial 24/2000  Trial 25/2000  Trial 26/2000  Trial 27/2000  Trial 28/2000  Trial 29/2000  Trial 30/2000  Trial 31/2000  Trial 32/2000  Trial 33/2000  Trial 34/2000  Trial 35/2000  Trial 36/2000  Trial 37/2000  Trial 38/2000  Trial 39/2000  Trial 40/2000  Trial 41/2000  Trial 42/2000  Trial 43/2000  Trial 44/2000  Trial 45/2000  Trial 46/2000  Trial 47/2000  Trial 48/2000  Trial 49/2000  Trial 50/2000  Trial 51/2000  Trial 52/2000  Trial 53/2000  Trial 54/2000  Trial 55/2000  Trial 56/2000  Trial 57/2000  Trial 58/2000  Trial 59/2000  Trial 60/2000  Trial 61/2000  Trial 62/2000  Trial 63/2000  Trial 64/2000  Trial 65/2000  Trial 66/2000  Trial 67/2000  Trial 68/2000  Trial 69/2000  Trial 70/2000  Trial 71/2000  Trial 72/2000  Trial 73/2000  Trial 74/2000  Trial 75/2000  Trial 76/2000  Trial 77/2000  Trial 78/2000  Trial 79/2000  Trial 80/2000  Trial 81/2000  Trial 82/2000  Trial 83/2000  Trial 84/2000  Trial 85/2000  Trial 86/2000  Trial 87/2000  Trial 88/2000  Trial 89/2000  Trial 90/2000  Trial 91/2000  Trial 92/2000  Trial 93/2000  Trial 94/2000  Trial 95/2000  Trial 96/2000  Trial 97/2000  Trial 98/2000  Trial 99/2000  Trial 100/2000  Trial 101/2000  Trial 102/2000  Trial 103/2000  Trial 104/2000  Trial 105/2000  Trial 106/2000  Trial 107/2000  Trial 108/2000  Trial 109/2000  Trial 110/2000  Trial 111/2000  Trial 112/2000  Trial 113/2000  Trial 114/2000  Trial 115/2000  Trial 116/2000  Trial 117/2000  Trial 118/2000  Trial 119/2000  Trial 120/2000  Trial 121/2000  Trial 122/2000  Trial 123/2000  Trial 124/2000  Trial 125/2000  Trial 126/2000  Trial 127/2000  Trial 128/2000  Trial 129/2000  Trial 130/2000  Trial 131/2000  Trial 132/2000  Trial 133/2000  Trial 134/2000  Trial 135/2000  Trial 136/2000  Trial 137/2000  Trial 138/2000  Trial 139/2000  Trial 140/2000  Trial 141/2000  Trial 142/2000  Trial 143/2000  Trial 144/2000  Trial 145/2000  Trial 146/2000  Trial 147/2000  Trial 148/2000  Trial 149/2000  Trial 150/2000  Trial 151/2000  Trial 152/2000  Trial 153/2000  Trial 154/2000  Trial 155/2000  Trial 156/2000  Trial 157/2000  Trial 158/2000  Trial 159/2000  Trial 160/2000  Trial 161/2000  Trial 162/2000  Trial 163/2000  Trial 164/2000  Trial 165/2000  Trial 166/2000  Trial 167/2000  Trial 168/2000  Trial 169/2000  Trial 170/2000  Trial 171/2000  Trial 172/2000  Trial 173/2000  Trial 174/2000  Trial 175/2000  Trial 176/2000  Trial 177/2000  Trial 178/2000  Trial 179/2000  Trial 180/2000  Trial 181/2000  Trial 182/2000  Trial 183/2000  Trial 184/2000  Trial 185/2000  Trial 186/2000  Trial 187/2000  Trial 188/2000  Trial 189/2000  Trial 190/2000  Trial 191/2000  Trial 192/2000  Trial 193/2000  Trial 194/2000  Trial 195/2000  Trial 196/2000  Trial 197/2000  Trial 198/2000  Trial 199/2000  Trial 200/2000  Trial 201/2000  Trial 202/2000  Trial 203/2000  Trial 204/2000  Trial 205/2000  Trial 206/2000  Trial 207/2000  Trial 208/2000  Trial 209/2000  Trial 210/2000  Trial 211/2000  Trial 212/2000  Trial 213/2000  Trial 214/2000  Trial 215/2000  Trial 216/2000  Trial 217/2000  Trial 218/2000  Trial 219/2000  Trial 220/2000  Trial 221/2000  Trial 222/2000  Trial 223/2000  Trial 224/2000  Trial 225/2000  Trial 226/2000  Trial 227/2000  Trial 228/2000  Trial 229/2000  Trial 230/2000  Trial 231/2000  Trial 232/2000  Trial 233/2000  Trial 234/2000  Trial 235/2000  Trial 236/2000  Trial 237/2000  Trial 238/2000  Trial 239/2000  Trial 240/2000  Trial 241/2000  Trial 242/2000  Trial 243/2000  Trial 244/2000  Trial 245/2000  Trial 246/2000  Trial 247/2000  Trial 248/2000  Trial 249/2000  Trial 250/2000  Trial 251/2000  Trial 252/2000  Trial 253/2000  Trial 254/2000  Trial 255/2000  Trial 256/2000  Trial 257/2000  Trial 258/2000  Trial 259/2000  Trial 260/2000  Trial 261/2000  Trial 262/2000  Trial 263/2000  Trial 264/2000  Trial 265/2000  Trial 266/2000  Trial 267/2000  Trial 268/2000  Trial 269/2000  Trial 270/2000  Trial 271/2000  Trial 272/2000  Trial 273/2000  Trial 274/2000  Trial 275/2000  Trial 276/2000  Trial 277/2000  Trial 278/2000  Trial 279/2000  Trial 280/2000  Trial 281/2000  Trial 282/2000  Trial 283/2000  Trial 284/2000  Trial 285/2000  Trial 286/2000  Trial 287/2000  Trial 288/2000  Trial 289/2000  Trial 290/2000  Trial 291/2000  Trial 292/2000  Trial 293/2000  Trial 294/2000  Trial 295/2000  Trial 296/2000  Trial 297/2000  Trial 298/2000  Trial 299/2000  Trial 300/2000  Trial 301/2000  Trial 302/2000  Trial 303/2000  Trial 304/2000  Trial 305/2000  Trial 306/2000  Trial 307/2000  Trial 308/2000  Trial 309/2000  Trial 310/2000  Trial 311/2000  Trial 312/2000  Trial 313/2000  Trial 314/2000  Trial 315/2000  Trial 316/2000  Trial 317/2000  Trial 318/2000  Trial 319/2000  Trial 320/2000  Trial 321/2000  Trial 322/2000  Trial 323/2000  Trial 324/2000  Trial 325/2000  Trial 326/2000  Trial 327/2000  Trial 328/2000  Trial 329/2000  Trial 330/2000  Trial 331/2000  Trial 332/2000  Trial 333/2000  Trial 334/2000  Trial 335/2000  Trial 336/2000  Trial 337/2000  Trial 338/2000  Trial 339/2000  Trial 340/2000  Trial 341/2000  Trial 342/2000  Trial 343/2000  Trial 344/2000  Trial 345/2000  Trial 346/2000  Trial 347/2000  Trial 348/2000  Trial 349/2000  Trial 350/2000  Trial 351/2000  Trial 352/2000  Trial 353/2000  Trial 354/2000  Trial 355/2000  Trial 356/2000  Trial 357/2000  Trial 358/2000  Trial 359/2000  Trial 360/2000  Trial 361/2000  Trial 362/2000  Trial 363/2000  Trial 364/2000  Trial 365/2000  Trial 366/2000  Trial 367/2000  Trial 368/2000  Trial 369/2000  Trial 370/2000  Trial 371/2000  Trial 372/2000  Trial 373/2000  Trial 374/2000  Trial 375/2000  Trial 376/2000  Trial 377/2000  Trial 378/2000  Trial 379/2000  Trial 380/2000  Trial 381/2000  Trial 382/2000  Trial 383/2000  Trial 384/2000  Trial 385/2000  Trial 386/2000  Trial 387/2000  Trial 388/2000  Trial 389/2000  Trial 390/2000  Trial 391/2000  Trial 392/2000  Trial 393/2000  Trial 394/2000  Trial 395/2000  Trial 396/2000  Trial 397/2000  Trial 398/2000  Trial 399/2000  Trial 400/2000  Trial 401/2000  Trial 402/2000  Trial 403/2000  Trial 404/2000  Trial 405/2000  Trial 406/2000  Trial 407/2000  Trial 408/2000  Trial 409/2000  Trial 410/2000  Trial 411/2000  Trial 412/2000  Trial 413/2000  Trial 414/2000  Trial 415/2000  Trial 416/2000  Trial 417/2000  Trial 418/2000  Trial 419/2000  Trial 420/2000  Trial 421/2000  Trial 422/2000  Trial 423/2000  Trial 424/2000  Trial 425/2000  Trial 426/2000  Trial 427/2000  Trial 428/2000  Trial 429/2000  Trial 430/2000  Trial 431/2000  Trial 432/2000  Trial 433/2000  Trial 434/2000  Trial 435/2000  Trial 436/2000  Trial 437/2000  Trial 438/2000  Trial 439/2000  Trial 440/2000  Trial 441/2000  Trial 442/2000  Trial 443/2000  Trial 444/2000  Trial 445/2000  Trial 446/2000  Trial 447/2000  Trial 448/2000  Trial 449/2000  Trial 450/2000  Trial 451/2000  Trial 452/2000  Trial 453/2000  Trial 454/2000  Trial 455/2000  Trial 456/2000  Trial 457/2000  Trial 458/2000  Trial 459/2000  Trial 460/2000  Trial 461/2000  Trial 462/2000  Trial 463/2000  Trial 464/2000  Trial 465/2000  Trial 466/2000  Trial 467/2000  Trial 468/2000  Trial 469/2000  Trial 470/2000  Trial 471/2000  Trial 472/2000  Trial 473/2000  [ERROR] things | 1000
---- Dataset: Brady2008 ---
-  [SKIP-LIMIT] Brady2008 | 1 (too small)
-  [EXISTS] Brady2008 | 10 images
-  [EXISTS] Brady2008 | 100 images
-  [EXISTS] Brady2008 | 1000 images
-
-========== Paired Associate Memory ==========
---- Dataset: things ---
-  [EXISTS] things | 1 pairs
-  [EXISTS] things | 10 pairs
-  [EXISTS] things | 100 pairs
-  [RUN] things | 1000 pairs

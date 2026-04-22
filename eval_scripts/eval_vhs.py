@@ -136,6 +136,21 @@ def run_evaluation(evaluators, args):
     return all_results, len(trials)
 
 
+def _find_completed_models(results_dir, prefix, **match_fields):
+    """Return set of model names that already have a completed result matching the given metadata fields."""
+    completed = set()
+    for path in Path(results_dir).glob(f"{prefix}*.json"):
+        try:
+            with open(path) as f:
+                data = json.load(f)
+            meta = data.get("_metadata", {})
+            if all(str(meta.get(k)) == str(v) for k, v in match_fields.items() if v is not None):
+                completed.update(meta.get("models", []))
+        except Exception:
+            pass
+    return completed
+
+
 def main():
     parser = argparse.ArgumentParser(description="Visual Haystacks Benchmark Evaluation")
     parser.add_argument(
@@ -211,17 +226,26 @@ def main():
     )
     args = parser.parse_args()
 
+    results_dir = Path(__file__).parent.parent / "results"
+    done = _find_completed_models(
+        results_dir, prefix="results_vhs_",
+        task="Visual Haystacks", mode=args.mode,
+        image_count=str(args.image_count), max_samples=args.max_samples,
+    )
+    if done:
+        print(f"Skipping already-completed models: {sorted(done)}")
+
     evaluators = []
-    if "gpt-4o" in args.models:
+    if "gpt-4o" in args.models and "gpt-4o" not in done:
         evaluators.append(OpenAIEvaluator("gpt-4o"))
-    if "claude" in args.models:
+    if "claude" in args.models and "claude" not in done:
         evaluators.append(AnthropicEvaluator())
-    if "gemini" in args.models:
+    if "gemini" in args.models and "gemini-2.5-flash" not in done:
         evaluators.append(GoogleEvaluator())
-    if "qwen" in args.models:
+    if "qwen" in args.models and "Qwen/Qwen3-VL-8B-Instruct" not in done:
         evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
     if not evaluators:
-        print("No valid models specified. Use --models gpt-4o claude gemini qwen")
+        print("No valid models specified (or all already completed). Use --models gpt-4o claude gemini qwen")
         return
 
     print("Running Visual Haystacks evaluation:")

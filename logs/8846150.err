@@ -1,40 +1,0 @@
-/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-  warnings.warn(eol_message.format("3.9"), FutureWarning)
-/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-  warnings.warn(eol_message.format("3.9"), FutureWarning)
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:05<00:17,  5.84s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:13<00:13,  6.98s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:16<00:05,  5.11s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:17<00:00,  3.47s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:17<00:00,  4.36s/it]
-Generating test split:   0%|          | 0/11698 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 11698/11698 [00:00<00:00, 20716.84 examples/s]Generating test split: 100%|██████████| 11698/11698 [00:00<00:00, 20528.12 examples/s]
-Traceback (most recent call last):
-  File "/usr/lib64/python3.9/runpy.py", line 197, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-  File "/usr/lib64/python3.9/runpy.py", line 87, in _run_code
-    exec(code, run_globals)
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_mmiu.py", line 329, in <module>
-    main()
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_mmiu.py", line 278, in main
-    samples = load_dataset(
-  File "/insomnia001/home/pm3361/vision-memory/eval_scripts/eval_mmiu.py", line 57, in load_dataset
-    ds = hf_load(MMIU_DATASET, split="dev")
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/datasets/load.py", line 1520, in load_dataset
-    ds = builder_instance.as_dataset(split=split, verification_mode=verification_mode, in_memory=keep_in_memory)
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/datasets/builder.py", line 1052, in as_dataset
-    datasets = map_nested(
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/datasets/utils/py_utils.py", line 493, in map_nested
-    mapped = function(data_struct)
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/datasets/builder.py", line 1082, in _build_single_dataset
-    ds = self._as_dataset(
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/datasets/builder.py", line 1156, in _as_dataset
-    dataset_kwargs = ArrowReader(cache_dir, self.info).read(
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/datasets/arrow_reader.py", line 248, in read
-    files = self.get_file_instructions(name, instructions, split_infos)
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/datasets/arrow_reader.py", line 221, in get_file_instructions
-    file_instructions = make_file_instructions(
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/datasets/arrow_reader.py", line 130, in make_file_instructions
-    absolute_instructions = instruction.to_absolute(name2len)
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/datasets/arrow_reader.py", line 620, in to_absolute
-    return [_rel_to_abs_instr(rel_instr, name2len) for rel_instr in self._relative_instructions]
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/datasets/arrow_reader.py", line 620, in <listcomp>
-    return [_rel_to_abs_instr(rel_instr, name2len) for rel_instr in self._relative_instructions]
-  File "/insomnia001/home/pm3361/vision-memory/venv/lib64/python3.9/site-packages/datasets/arrow_reader.py", line 437, in _rel_to_abs_instr
-    raise ValueError(f'Unknown split "{split}". Should be one of {list(name2len)}.')
-ValueError: Unknown split "dev". Should be one of ['test'].

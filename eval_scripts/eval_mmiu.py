@@ -50,37 +50,66 @@ Respond with only the letter of the correct answer (A, B, C, or D).
 Answer:"""
 
 
+MMIU_PARQUET = (
+    Path.home() / ".cache/huggingface/hub"
+    / "datasets--FanqingM--MMIU-Benchmark"
+    / "snapshots/03bf7d143d920e97a757f606b6b7baee161b019b/all.parquet"
+)
+
+
+def _ensure_image_root(image_root: Path) -> Path:
+    """Check that image_root exists and has been extracted."""
+    subdirs = [p for p in image_root.iterdir() if p.is_dir()] if image_root.exists() else []
+    if not subdirs:
+        raise FileNotFoundError(
+            f"MMIU image root '{image_root}' is missing or empty.\n"
+            f"Run first:  bash download_mmiu.sh"
+        )
+    return image_root
+
+
 def load_dataset(max_samples=None, tasks=None, image_root=None):
-    from datasets import load_dataset as hf_load
-    print(f"Loading MMIU from HuggingFace ({MMIU_DATASET})...")
-    print("  Note: full dataset is ~25 GB; first run will download/cache images.")
-    ds = hf_load(MMIU_DATASET, split="test")
+    import pyarrow.parquet as pq
+
+    if image_root is None:
+        raise ValueError("--image-root is required for MMIU. Use --image-root dataset/mmiu")
+
+    root = Path(image_root)
+    _ensure_image_root(root)
+
+    print(f"Loading MMIU from parquet + image root '{root}'...")
+    table = pq.read_table(str(MMIU_PARQUET))
+    rows = table.to_pydict()
+    n_rows = len(rows["task"])
 
     samples = []
-    for row in ds:
-        if tasks and row["task"] not in tasks:
+    n_skipped = 0
+    for i in range(n_rows):
+        task = rows["task"][i]
+        if tasks and task not in tasks:
             continue
 
-        # Resolve images: HuggingFace provides them directly in the row
-        # as a list in the `images` column (PIL Images).
-        # Fall back to loading from local image_root if provided.
-        images = _get_images(row, image_root)
+        row = {k: rows[k][i] for k in rows}
+        images = _get_images(row, root)
         if not images:
-            continue  # skip rows where we can't load images
+            n_skipped += 1
+            continue
 
         samples.append({
-            "task": row["task"],
-            "visual_input_component": row.get("visual_input_component", ""),
+            "task": task,
+            "visual_input_component": row.get("visual_input_component") or "",
             "question": row["question"],
-            "context": row.get("context", ""),
-            "options": row["options"],  # string like "A: foo\nB: bar\n..."
+            "context": row.get("context") or "",
+            "options": row["options"],
             "answer": row["output"],
             "images": images,
-            "image_paths": row.get("input_image_path", []),
+            "image_paths": row.get("input_image_path") or [],
         })
         if max_samples and len(samples) >= max_samples:
             break
 
+    if n_skipped:
+        print(f"  WARNING: skipped {n_skipped} rows with no loadable images.")
     print(f"  Loaded {len(samples)} samples")
     return samples
 
@@ -241,6 +270,21 @@ def run_evaluation(evaluators, samples):
     return all_results
 
 
+def _find_completed_models(results_dir, **match_fields):
+    """Return set of model names that already have a completed result matching the given metadata fields."""
+    completed = set()
+    for path in Path(results_dir).glob("results_mmiu_*.json"):
+        try:
+            with open(path) as f:
+                data = json.load(f)
+            meta = data.get("_metadata", {})
+            if all(str(meta.get(k)) == str(v) for k, v in match_fields.items() if v is not None):
+                completed.update(meta.get("models", []))
+        except Exception:
+            pass
+    return completed
+
+
 def main():
     parser = argparse.ArgumentParser(description="MMIU Multi-Image Evaluation")
     parser.add_argument(
@@ -257,28 +301,35 @@ def main():
                         help="Output filename under results/ (default: results_mmiu_<ts>.json)")
     args = parser.parse_args()
 
+    results_dir = Path(__file__).parent.parent / "results"
+    done = _find_completed_models(results_dir, task="MMIU", max_samples=args.max_samples)
+    if done:
+        print(f"Skipping already-completed models: {sorted(done)}")
+
     evaluators = []
     for m in args.models:
         m = m.strip()
         if m == "gpt-4o":
-            evaluators.append(OpenAIEvaluator("gpt-4o"))
+            ev = OpenAIEvaluator("gpt-4o")
         elif m == "claude":
-            evaluators.append(AnthropicEvaluator())
+            ev = AnthropicEvaluator()
         elif m == "gemini":
-            evaluators.append(GoogleEvaluator())
+            ev = GoogleEvaluator()
         elif m == "qwen":
-            evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+            ev = QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct")
         elif m.startswith("claude"):
-            evaluators.append(AnthropicEvaluator(m))
+            ev = AnthropicEvaluator(m)
         elif m.startswith("gemini"):
-            evaluators.append(GoogleEvaluator(m))
+            ev = GoogleEvaluator(m)
         elif m.startswith("qwen") or m.startswith("Qwen"):
-            evaluators.append(QwenEvaluator(m))
+            ev = QwenEvaluator(m)
         else:
-            evaluators.append(OpenAIEvaluator(m))
+            ev = OpenAIEvaluator(m)
+        if ev.get_name() not in done:
+            evaluators.append(ev)
 
     if not evaluators:
-        print("No valid models specified.")
+        print("No valid models specified (or all already completed).")
         return
 
     samples = load_dataset(

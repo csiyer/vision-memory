@@ -1,163 +1,0 @@
-==============================================
-Vision Memory Experiments: gemini
-==============================================
-
-========== 2-AFC Recognition ==========
---- Dataset: things ---
-  [EXISTS] things | novel | 1 images
-  [EXISTS] things | novel | 10 images
-  [EXISTS] things | novel | 100 images
-  [RUN] things | novel | 500 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 500
-  N trials (test): 50
-  Max context images: all
-  Foil type: novel
-  Dataset: things
-Loaded 1000 THINGS categories from local cache.
-
-=== gemini-2.5-flash ===
-  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✓  Trial 4/50: ✓  Trial 5/50: ✓  Trial 6/50: ✓  Trial 7/50: ✓  Trial 8/50: ✓  Trial 9/50: ✓  Trial 10/50: ✓  Trial 11/50: ✓  Trial 12/50: ✓  Trial 13/50: ✓  Trial 14/50: ✓  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✓  Trial 18/50: ✓  Trial 19/50: ✓  Trial 20/50: ✓  Trial 21/50: ✓  Trial 22/50: ✓  Trial 23/50: ✓  Trial 24/50: ✓  Trial 25/50: ✓  Trial 26/50: ✓  Trial 27/50: ✓  Trial 28/50: ✓  Trial 29/50: ✓  Trial 30/50: ✓  Trial 31/50: ✓  Trial 32/50: ✓  Trial 33/50: ✓  Trial 34/50: ✓  Trial 35/50: ✓  Trial 36/50: ✓  Trial 37/50: ✓  Trial 38/50: ✓  Trial 39/50: ✓  Trial 40/50: ✓  Trial 41/50: ✗  Trial 42/50: ✓  Trial 43/50: ✓  Trial 44/50: ✓  Trial 45/50: ✓  Trial 46/50: ✓  Trial 47/50: ✓  Trial 48/50: ✓  Trial 49/50: ✓  Trial 50/50: ✓
-  Accuracy: 98.0% | d': 3.29 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260414_111840.json
-  [EXISTS] things | exemplar | 1 images
-  [EXISTS] things | exemplar | 10 images
-  [EXISTS] things | exemplar | 100 images
-  [RUN] things | exemplar | 500 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 500
-  N trials (test): 50
-  Max context images: all
-  Foil type: exemplar
-  Dataset: things
-Loaded 500 THINGS categories from local cache.
-
-=== gemini-2.5-flash ===
-  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✓  Trial 4/50: ✓  Trial 5/50: ✓  Trial 6/50: ✓  [ERROR] things | exemplar | 500
---- Dataset: Brady2008 ---
-  [EXISTS] Brady2008 | novel | 1 images
-  [EXISTS] Brady2008 | novel | 10 images
-  [EXISTS] Brady2008 | novel | 100 images
-  [RUN] Brady2008 | novel | 500 images
-Running 2-AFC evaluation:
-  Models: ['gemini-2.5-flash']
-  N images (study): 500
-  N trials (test): 50
-  Max context images: all
-  Foil type: novel
-  Dataset: Brady2008
-
-=== gemini-2.5-flash ===
-  Trial 1/50: ✓  Trial 2/50: ✓  Trial 3/50: ✓  Trial 4/50: ✓  Trial 5/50: ✓  Trial 6/50: ✓  Trial 7/50: ✓  Trial 8/50: ✓  Trial 9/50: ✓  Trial 10/50: ✓  Trial 11/50: ✓  Trial 12/50: ✓  Trial 13/50: ✓  Trial 14/50: ✓  Trial 15/50: ✓  Trial 16/50: ✓  Trial 17/50: ✓  Trial 18/50: ✓  Trial 19/50: ✓  Trial 20/50: ✓  Trial 21/50: ✓  Trial 22/50: ✓  Trial 23/50: ✓  Trial 24/50: ✓  Trial 25/50: ✓  Trial 26/50: ✓  Trial 27/50: ✓  Trial 28/50: ✓  Trial 29/50: ✓  Trial 30/50: ✓  Trial 31/50: ✓  Trial 32/50: ✓  Trial 33/50: ✓  Trial 34/50: ✓  Trial 35/50: ✓  Trial 36/50: ✓  Trial 37/50: ✓  Trial 38/50: ✓  Trial 39/50: ✓  Trial 40/50: ✓  Trial 41/50: ✓  Trial 42/50: ✓  Trial 43/50: ✓  Trial 44/50: ✓  Trial 45/50: ✓  Trial 46/50: ✓  Trial 47/50: ✓  Trial 48/50: ✓  Trial 49/50: ✓  Trial 50/50: ✓
-  Accuracy: 100.0% | d': 3.30 | Mem Score: 1.00
-
-Saved to /insomnia001/home/pm3361/vision-memory/results/results_2afc_20260414_113333.json
-  [EXISTS] Brady2008 | exemplar | 1 images
-  [EXISTS] Brady2008 | exemplar | 10 images
-  [EXISTS] Brady2008 | exemplar | 100 images
-  [SKIP-LIMIT] Brady2008 | exemplar | 500
-  [EXISTS] Brady2008 | state | 1 images
-  [EXISTS] Brady2008 | state | 10 images
-  [EXISTS] Brady2008 | state | 100 images
-  [SKIP-LIMIT] Brady2008 | state | 500
-
-========== Continuous Recognition ==========
---- Dataset: things ---
-  [SKIP-LIMIT] things | 1 (too small)
-  [EXISTS] things | 10 images
-  [EXISTS] things | 100 images
-  [RUN] things | 500 images
-Running continuous recognition evaluation:
-  Models: ['gemini-2.5-flash']
-  N images: 500
-  Dataset: things
-Loaded 500 THINGS categories from local cache.
-
-=== gemini-2.5-flash ===
-  Trial 1/1000  Trial 2/1000  Trial 3/1000  Trial 4/1000  Trial 5/1000  Trial 6/1000  Trial 7/1000  Trial 8/1000  Trial 9/1000  Trial 10/1000  Trial 11/1000  Trial 12/1000  Trial 13/1000  Trial 14/1000  Trial 15/1000  Trial 16/1000  Trial 17/1000  Trial 18/1000  Trial 19/1000  Trial 20/1000  Trial 21/1000  Trial 22/1000  Trial 23/1000  Trial 24/1000  Trial 25/1000  Trial 26/1000  Trial 27/1000  Trial 28/1000  Trial 29/1000  Trial 30/1000  Trial 31/1000  Trial 32/1000  Trial 33/1000  Trial 34/1000  Trial 35/1000  Trial 36/1000  Trial 37/1000  Trial 38/1000  Trial 39/1000  Trial 40/1000  Trial 41/1000  Trial 42/1000  Trial 43/1000  Trial 44/1000  Trial 45/1000  Trial 46/1000  Trial 47/1000  Trial 48/1000  Trial 49/1000  Trial 50/1000  Trial 51/1000  Trial 52/1000  Trial 53/1000  Trial 54/1000  Trial 55/1000  Trial 56/1000  Trial 57/1000  Trial 58/1000  Trial 59/1000  Trial 60/1000  Trial 61/1000  Trial 62/1000  Trial 63/1000  Trial 64/1000  Trial 65/1000  Trial 66/1000  Trial 67/1000  Trial 68/1000  Trial 69/1000  Trial 70/1000  Trial 71/1000  Trial 72/1000  Trial 73/1000  Trial 74/1000  Trial 75/1000  Trial 76/1000  Trial 77/1000  Trial 78/1000  Trial 79/1000  Trial 80/1000  Trial 81/1000  Trial 82/1000  Trial 83/1000  Trial 84/1000  Trial 85/1000  Trial 86/1000  Trial 87/1000  Trial 88/1000  Trial 89/1000  Trial 90/1000  Trial 91/1000  Trial 92/1000  Trial 93/1000  Trial 94/1000  Trial 95/1000  Trial 96/1000  Trial 97/1000  Trial 98/1000  Trial 99/1000  Trial 100/1000  Trial 101/1000  Trial 102/1000  Trial 103/1000  Trial 104/1000  Trial 105/1000  Trial 106/1000  Trial 107/1000  Trial 108/1000  Trial 109/1000  Trial 110/1000  Trial 111/1000  Trial 112/1000  Trial 113/1000  Trial 114/1000  Trial 115/1000  Trial 116/1000  Trial 117/1000  Trial 118/1000  Trial 119/1000  Trial 120/1000  Trial 121/1000  Trial 122/1000  Trial 123/1000  Trial 124/1000  Trial 125/1000  Trial 126/1000  Trial 127/1000  Trial 128/1000  Trial 129/1000  Trial 130/1000  Trial 131/1000  Trial 132/1000  Trial 133/1000  Trial 134/1000  Trial 135/1000  Trial 136/1000  Trial 137/1000  Trial 138/1000  Trial 139/1000  Trial 140/1000  Trial 141/1000  Trial 142/1000  Trial 143/1000  Trial 144/1000  Trial 145/1000  Trial 146/1000  Trial 147/1000  Trial 148/1000  Trial 149/1000  Trial 150/1000  Trial 151/1000  Trial 152/1000  Trial 153/1000  Trial 154/1000  Trial 155/1000  Trial 156/1000  Trial 157/1000  Trial 158/1000  Trial 159/1000  Trial 160/1000  Trial 161/1000  Trial 162/1000  Trial 163/1000  Trial 164/1000  Trial 165/1000  Trial 166/1000  Trial 167/1000  Trial 168/1000  Trial 169/1000  Trial 170/1000  Trial 171/1000  Trial 172/1000  Trial 173/1000  Trial 174/1000  Trial 175/1000  Trial 176/1000  Trial 177/1000  Trial 178/1000  Trial 179/1000  Trial 180/1000  Trial 181/1000  Trial 182/1000  Trial 183/1000  Trial 184/1000  Trial 185/1000  Trial 186/1000  Trial 187/1000  Trial 188/1000  Trial 189/1000  Trial 190/1000  Trial 191/1000  Trial 192/1000  Trial 193/1000  Trial 194/1000  Trial 195/1000  Trial 196/1000  Trial 197/1000  Trial 198/1000  Trial 199/1000  Trial 200/1000  Trial 201/1000  Trial 202/1000  Trial 203/1000  Trial 204/1000  [ERROR] things | 500
---- Dataset: Brady2008 ---
-  [SKIP-LIMIT] Brady2008 | 1 (too small)
-  [EXISTS] Brady2008 | 10 images
-  [EXISTS] Brady2008 | 100 images
-  [RUN] Brady2008 | 500 images
-Running continuous recognition evaluation:
-  Models: ['gemini-2.5-flash']
-  N images: 500
-  Dataset: Brady2008
-
-=== gemini-2.5-flash ===
-  Trial 1/1000  Trial 2/1000  Trial 3/1000  Trial 4/1000  Trial 5/1000  Trial 6/1000  Trial 7/1000  Trial 8/1000  Trial 9/1000  Trial 10/1000  Trial 11/1000  Trial 12/1000  Trial 13/1000  Trial 14/1000  Trial 15/1000  Trial 16/1000  Trial 17/1000  Trial 18/1000  Trial 19/1000  Trial 20/1000  Trial 21/1000  Trial 22/1000  Trial 23/1000  Trial 24/1000  Trial 25/1000  Trial 26/1000  Trial 27/1000  Trial 28/1000  Trial 29/1000  Trial 30/1000  Trial 31/1000  Trial 32/1000  Trial 33/1000  Trial 34/1000  Trial 35/1000  Trial 36/1000  Trial 37/1000  Trial 38/1000  Trial 39/1000  Trial 40/1000  Trial 41/1000  Trial 42/1000  Trial 43/1000  Trial 44/1000  Trial 45/1000  Trial 46/1000  Trial 47/1000  Trial 48/1000  Trial 49/1000  Trial 50/1000  Trial 51/1000  Trial 52/1000  Trial 53/1000  Trial 54/1000  Trial 55/1000  Trial 56/1000  Trial 57/1000  Trial 58/1000  Trial 59/1000  Trial 60/1000  Trial 61/1000  Trial 62/1000  Trial 63/1000  Trial 64/1000  Trial 65/1000  Trial 66/1000  Trial 67/1000  Trial 68/1000  Trial 69/1000  Trial 70/1000  Trial 71/1000  Trial 72/1000  Trial 73/1000  Trial 74/1000  Trial 75/1000  Trial 76/1000  Trial 77/1000  Trial 78/1000  Trial 79/1000  Trial 80/1000  Trial 81/1000  Trial 82/1000  Trial 83/1000  Trial 84/1000  Trial 85/1000  Trial 86/1000  Trial 87/1000  Trial 88/1000  Trial 89/1000  Trial 90/1000  Trial 91/1000  Trial 92/1000  Trial 93/1000  Trial 94/1000  Trial 95/1000  Trial 96/1000  Trial 97/1000  Trial 98/1000  Trial 99/1000  Trial 100/1000  Trial 101/1000  Trial 102/1000  Trial 103/1000  Trial 104/1000  Trial 105/1000  Trial 106/1000  Trial 107/1000  Trial 108/1000  Trial 109/1000  Trial 110/1000  Trial 111/1000  Trial 112/1000  Trial 113/1000  Trial 114/1000  Trial 115/1000  Trial 116/1000  Trial 117/1000  Trial 118/1000  Trial 119/1000  Trial 120/1000  Trial 121/1000  Trial 122/1000  Trial 123/1000  Trial 124/1000  Trial 125/1000  Trial 126/1000  Trial 127/1000  Trial 128/1000  Trial 129/1000  Trial 130/1000  Trial 131/1000  Trial 132/1000  Trial 133/1000  Trial 134/1000  Trial 135/1000  Trial 136/1000  Trial 137/1000  Trial 138/1000  Trial 139/1000  Trial 140/1000  Trial 141/1000  Trial 142/1000  Trial 143/1000  Trial 144/1000  Trial 145/1000  Trial 146/1000  Trial 147/1000  Trial 148/1000  Trial 149/1000  Trial 150/1000  Trial 151/1000  Trial 152/1000  Trial 153/1000  Trial 154/1000  Trial 155/1000  Trial 156/1000  Trial 157/1000  Trial 158/1000  Trial 159/1000  Trial 160/1000  Trial 161/1000  Trial 162/1000  Trial 163/1000  Trial 164/1000  Trial 165/1000  Trial 166/1000  Trial 167/1000  Trial 168/1000  Trial 169/1000  Trial 170/1000  Trial 171/1000  Trial 172/1000  Trial 173/1000  Trial 174/1000  Trial 175/1000  Trial 176/1000  Trial 177/1000  Trial 178/1000  Trial 179/1000  Trial 180/1000  Trial 181/1000  Trial 182/1000  Trial 183/1000  Trial 184/1000  Trial 185/1000  Trial 186/1000  Trial 187/1000  Trial 188/1000  Trial 189/1000  Trial 190/1000  Trial 191/1000  Trial 192/1000  Trial 193/1000  Trial 194/1000  Trial 195/1000  Trial 196/1000  Trial 197/1000  Trial 198/1000  Trial 199/1000  Trial 200/1000  Trial 201/1000  Trial 202/1000  Trial 203/1000  Trial 204/1000  Trial 205/1000  Trial 206/1000  Trial 207/1000  Trial 208/1000  Trial 209/1000  Trial 210/1000  Trial 211/1000  Trial 212/1000  Trial 213/1000  Trial 214/1000  Trial 215/1000  Trial 216/1000  Trial 217/1000  Trial 218/1000  Trial 219/1000  Trial 220/1000  Trial 221/1000  Trial 222/1000  Trial 223/1000  Trial 224/1000  Trial 225/1000  Trial 226/1000  Trial 227/1000  Trial 228/1000  Trial 229/1000  Trial 230/1000  Trial 231/1000  Trial 232/1000  Trial 233/1000  Trial 234/1000  Trial 235/1000  Trial 236/1000  Trial 237/1000  Trial 238/1000  Trial 239/1000  Trial 240/1000  Trial 241/1000  Trial 242/1000  Trial 243/1000  Trial 244/1000  Trial 245/1000  Trial 246/1000  Trial 247/1000  Trial 248/1000  Trial 249/1000
-  Gemini 429 rate limit, waiting 30s (attempt 1/8)...
-
-  Gemini 429 rate limit, waiting 60s (attempt 2/8)...
-
-  Gemini 429 rate limit, waiting 120s (attempt 3/8)...
-
-  Gemini 429 rate limit, waiting 240s (attempt 4/8)...
-
-  Gemini 429 rate limit, waiting 480s (attempt 5/8)...
-  Trial 250/1000  Trial 251/1000  Trial 252/1000  Trial 253/1000
-  Gemini 429 rate limit, waiting 30s (attempt 1/8)...
-
-  Gemini 429 rate limit, waiting 60s (attempt 2/8)...
-
-  Gemini 429 rate limit, waiting 120s (attempt 3/8)...
-
-  Gemini 429 rate limit, waiting 240s (attempt 4/8)...
-
-  Gemini 429 rate limit, waiting 480s (attempt 5/8)...
-
-  Gemini 429 rate limit, waiting 960s (attempt 6/8)...
-  Trial 254/1000  Trial 255/1000  Trial 256/1000
-  Gemini 429 rate limit, waiting 30s (attempt 1/8)...
-
-  Gemini 429 rate limit, waiting 60s (attempt 2/8)...
-
-  Gemini 429 rate limit, waiting 120s (attempt 3/8)...
-
-  Gemini 429 rate limit, waiting 240s (attempt 4/8)...
-
-  Gemini 429 rate limit, waiting 480s (attempt 5/8)...
-
-  Gemini 429 rate limit, waiting 960s (attempt 6/8)...
-
-  Gemini 429 rate limit, waiting 1920s (attempt 7/8)...
-  [ERROR] Brady2008 | 500
-
-========== Paired Associate Memory ==========
---- Dataset: things ---
-  [EXISTS] things | 1 pairs
-  [EXISTS] things | 10 pairs
-  [EXISTS] things | 100 pairs
-  [RUN] things | 500 pairs
-Running Paired Associate Memory evaluation:
-  Models: ['gemini-2.5-flash']
-  N pairs: 500
-  Max context pairs: all
-  Dataset: things
-Loaded 500 THINGS categories from local cache.
-
-=== gemini-2.5-flash ===
-
-  Gemini 429 rate limit, waiting 30s (attempt 1/8)...
-
-  Gemini 429 rate limit, waiting 60s (attempt 2/8)...
-
-  Gemini 429 rate limit, waiting 120s (attempt 3/8)...
-
-  Gemini 429 rate limit, waiting 240s (attempt 4/8)...
-
-  Gemini 429 rate limit, waiting 480s (attempt 5/8)...
-
-  Gemini 429 rate limit, waiting 960s (attempt 6/8)...
-
-  Gemini 429 rate limit, waiting 1920s (attempt 7/8)...
-  [ERROR] things | 500
---- Dataset: Brady2008 ---
-  [EXISTS] Brady2008 | 1 pairs
-  [EXISTS] Brady2008 | 10 pairs
-  [EXISTS] Brady2008 | 100 pairs
-  [RUN] Brady2008 | 500 pairs
