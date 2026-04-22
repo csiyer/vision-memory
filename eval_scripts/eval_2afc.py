@@ -24,8 +24,8 @@ from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
 from evaluators.qwen_evaluator import QwenEvaluator
-from metrics import calculate_2afc_metrics
-from plotting import default_plots_dir, plot_2afc_all
+from src.metrics import calculate_2afc_metrics
+from src.plotting import default_plots_dir, plot_2afc_all
 
 
 def build_messages(evaluator, study_images, study_prompt, test_images, test_prompt, max_context_images=None):

@@ -1,6 +1,9 @@
 import random
+import sys
 from pathlib import Path
-from stimuli import ThingsDataset, BradyDataset
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.stimuli import ThingsDataset, BradyDataset
 
 class PairedAssociateMemoryTask:
     def __init__(self, dataset_name='things', n_images=20, wordpool_path='memory_datasets/wasnorm_wordpool.txt'):

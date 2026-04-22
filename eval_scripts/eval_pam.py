@@ -24,8 +24,8 @@ from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
 from evaluators.qwen_evaluator import QwenEvaluator
-from metrics import calculate_pam_metrics
-from plotting import default_plots_dir, plot_pam
+from src.metrics import calculate_pam_metrics
+from src.plotting import default_plots_dir, plot_pam
 
 
 def build_messages(evaluator, study_sequence, study_prompt, test_image, test_prompt, max_context_pairs=None):

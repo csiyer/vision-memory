@@ -6,7 +6,9 @@ import json
 import sys
 from pathlib import Path
 from collections import defaultdict
-from plotting import plot_continuous_recognition, plot_2afc, plot_source_memory
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.plotting import plot_continuous_recognition, plot_2afc, plot_source_memory
 
 def load_results(results_dir="results"):
     """Load all result files and organize by task type."""

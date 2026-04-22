@@ -1,6 +1,9 @@
 import random
+import sys
 from pathlib import Path
-from stimuli import ThingsDataset, BradyDataset
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.stimuli import ThingsDataset, BradyDataset
 
 # Same prompts for THINGS and Brady2008 so results are comparable.
 AFC_STUDY_PROMPT = "Here is a sequence of images to remember."

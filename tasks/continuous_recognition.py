@@ -1,6 +1,10 @@
 import random
+import sys
+from pathlib import Path
 import numpy as np
-from stimuli import ThingsDataset, BradyDataset
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.stimuli import ThingsDataset, BradyDataset
 
 class ContinuousRecognitionTask:
     def __init__(self, dataset_name='things', n_images=50, n_trials=None, min_delay=2, max_delay=15, p_old=0.5):

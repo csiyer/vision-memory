@@ -23,8 +23,8 @@ from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
 from evaluators.qwen_evaluator import QwenEvaluator
-from metrics import calculate_metrics, calculate_hit_rate_by_delay
-from plotting import default_plots_dir, plot_continuous_recognition
+from src.metrics import calculate_metrics, calculate_hit_rate_by_delay
+from src.plotting import default_plots_dir, plot_continuous_recognition
 
 
 def parse_yes_no(text):

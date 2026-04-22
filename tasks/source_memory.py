@@ -1,5 +1,9 @@
 import random
-from stimuli import ThingsDataset, BradyDataset
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.stimuli import ThingsDataset, BradyDataset
 
 class SourceMemoryTask:
     def __init__(self, dataset_name='things', n_images=20):

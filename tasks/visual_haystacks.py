@@ -237,7 +237,7 @@ class VisualHaystacksTaskSimple:
         self.n_trials = n_trials
         self.n_needles = n_needles
 
-        from stimuli import ThingsDataset
+        from src.stimuli import ThingsDataset
 
         # Need enough categories for haystack + needle + target variations
         n_cats = max(n_images * 2, 100)
