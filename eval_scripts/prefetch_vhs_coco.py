@@ -8,7 +8,7 @@ significant disk — same images as a full local COCO mirror for *those* paths, 
 you never store the unused remainder of each zip.
 
 Usage:
-  python -m eval_scripts.prefetch_vhs_coco --qa-root dataset/VHs_qa --image-root dataset/coco
+  python -m eval_scripts.prefetch_vhs_coco --qa-root datasets/VHs_qa --image-root datasets/coco
 """
 import argparse
 import json
@@ -26,11 +26,11 @@ from tasks.visual_haystacks import (
 
 def main():
     parser = argparse.ArgumentParser(description="Prefetch COCO images for Visual Haystacks")
-    parser.add_argument("--qa-root", type=str, default="dataset/VHs_qa", help="VHs QA directory")
+    parser.add_argument("--qa-root", type=str, default="datasets/VHs_qa", help="VHs QA directory")
     parser.add_argument(
         "--image-root",
         type=str,
-        default="dataset/coco",
+        default="datasets/coco",
         help="Where to write train2017/val2017/test2017 JPEGs",
     )
     parser.add_argument(

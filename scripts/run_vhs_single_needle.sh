@@ -15,12 +15,12 @@
 #
 # Usage: bash eval_scripts/run_vhs_single_needle.sh
 #
-# Requires: dataset/VHs_qa and dataset/coco to be present,
+# Requires: datasets/VHs_qa and datasets/coco to be present,
 #           or pass --fetch-missing-coco to download COCO images on demand.
 
 set -e
 cd /insomnia001/home/pm3361/vision-memory
-source venv/bin/activate
+# source venv/bin/activate  # venv incomplete; use system python3 (~/.local has all packages)
 
 MODELS="gpt-4o gemini qwen"
 SPLIT="VHs_large"

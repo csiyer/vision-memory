@@ -1,10 +1,10 @@
-"""Download THINGS dataset images to memory_datasets/THINGS/images/.
+"""Download THINGS dataset images to datasets/THINGS/images/.
 
 Run once on the login node before submitting SLURM jobs:
-    python3 download_things.py
+    python3 src/download_things.py
 
 Images are saved as:
-    memory_datasets/THINGS/images/<category_name>/<exemplar_index>.jpg
+    datasets/THINGS/images/<category_name>/<exemplar_index>.jpg
 """
 
 import os
@@ -15,7 +15,7 @@ load_dotenv(Path(__file__).parent / ".env")
 from datasets import load_dataset
 from PIL import Image
 
-DEST = Path(__file__).parent / "memory_datasets" / "THINGS" / "images"
+DEST = Path(__file__).parent.parent / "datasets" / "THINGS" / "images"
 DATASET_NAME = "Haitao999/things-eeg"
 EXEMPLARS_PER_CATEGORY = 10  # Download up to 10 exemplars per category
 

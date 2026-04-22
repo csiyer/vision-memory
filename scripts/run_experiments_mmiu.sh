@@ -18,11 +18,11 @@
 #   bash   run_experiments_mmiu.sh            # local run
 #
 # For a quick pilot, add --max-samples 200 to the python call below.
-# If you've downloaded the dataset locally, add --image-root dataset/mmiu
+# If you've downloaded the dataset locally, add --image-root datasets/mmiu
 
 set -e
 cd /insomnia001/home/pm3361/vision-memory
-source venv/bin/activate
+# source venv/bin/activate  # venv incomplete; use system python3 (~/.local has all packages)
 
 MODELS="gpt-4o gemini qwen"
 IMAGE_ROOT=/tmp/mmiu

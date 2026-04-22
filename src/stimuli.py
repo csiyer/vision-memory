@@ -35,7 +35,7 @@ class ThingsDataset:
     """THINGS dataset. Uses local files if available (run download_things.py first),
     otherwise streams from HuggingFace."""
 
-    LOCAL_DIR = Path(__file__).parent / "memory_datasets" / "THINGS" / "images"
+    LOCAL_DIR = Path(__file__).parent.parent / "datasets" / "THINGS" / "images"
 
     def __init__(self, n_categories=None, exemplars_per_category=1):
         self.category_groups = {}
@@ -49,7 +49,7 @@ class ThingsDataset:
             self._load_streaming(n_categories, exemplars_per_category)
 
     def _load_local(self, n_categories, exemplars_per_category):
-        """Load from memory_datasets/THINGS/images/<category>/<n>.jpg"""
+        """Load from datasets/THINGS/images/<category>/<n>.jpg"""
         cat_dirs = sorted(self.LOCAL_DIR.iterdir())
         for cat_dir in cat_dirs:
             if not cat_dir.is_dir():
@@ -102,7 +102,7 @@ class ThingsDataset:
 
 class BradyDataset:
     """Handles Brady2008 and Brady2013 datasets."""
-    def __init__(self, type='Objects', root_dir='memory_datasets'):
+    def __init__(self, type='Objects', root_dir='datasets'):
         self.root = Path(root_dir)
         if 'Brady' in type:
              self.path = self.root / type

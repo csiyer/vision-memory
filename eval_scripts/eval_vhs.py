@@ -180,13 +180,13 @@ def main():
     parser.add_argument(
         "--qa-root",
         type=str,
-        default="dataset/VHs_qa",
+        default="datasets/VHs_qa",
         help="Path to downloaded Visual Haystacks QA files",
     )
     parser.add_argument(
         "--image-root",
         type=str,
-        default="dataset/coco",
+        default="datasets/coco",
         help="Path to COCO root containing val2017/test2017 directories",
     )
     parser.add_argument(

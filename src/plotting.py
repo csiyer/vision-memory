@@ -13,7 +13,7 @@ import numpy as np
 
 _REPO_ROOT = Path(__file__).resolve().parent
 DEFAULT_PLOTS_DIR = _REPO_ROOT / "output" / "plots"
-TARGET_DATA_PATH = _REPO_ROOT / "memory_datasets" / "target_data.json"
+TARGET_DATA_PATH = _REPO_ROOT.parent / "datasets" / "target_data.json"
 
 
 def default_plots_dir() -> Path:

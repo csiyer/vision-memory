@@ -109,8 +109,8 @@ class VisualHaystacksTask:
 
     def __init__(
         self,
-        qa_root: str = "dataset/VHs_qa",
-        image_root: str = "dataset/coco",
+        qa_root: str = "datasets/VHs_qa",
+        image_root: str = "datasets/coco",
         mode: str = "single_needle",
         split: str = "VHs_large",
         image_count: str = "10",

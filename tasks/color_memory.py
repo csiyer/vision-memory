@@ -6,7 +6,7 @@ from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.stimuli import BradyDataset, generate_color_palette
-from memory_datasets.Brady2013ColorRotate import rotate_image_hue
+from datasets.Brady2013ColorRotate import rotate_image_hue
 
 class ColorMemoryTask:
     def __init__(self, n_images=10, n_colors=36):

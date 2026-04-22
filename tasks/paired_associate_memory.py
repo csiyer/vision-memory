@@ -6,7 +6,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.stimuli import ThingsDataset, BradyDataset
 
 class PairedAssociateMemoryTask:
-    def __init__(self, dataset_name='things', n_images=20, wordpool_path='memory_datasets/wasnorm_wordpool.txt'):
+    def __init__(self, dataset_name='things', n_images=20, wordpool_path='datasets/wasnorm_wordpool.txt'):
         self.n_images = n_images
         self.dataset_name = dataset_name
         

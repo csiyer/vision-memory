@@ -16,7 +16,7 @@ Usage:
   python -m eval_scripts.eval_mmiu --models gpt-4o gemini --max-samples 100
   python -m eval_scripts.eval_mmiu --models gpt-4o --tasks forensic_detection_blink scene_comparison
   python -m eval_scripts.eval_mmiu --models gpt-4o gemini qwen --max-samples 500
-  python -m eval_scripts.eval_mmiu --models gpt-4o --image-root dataset/mmiu
+  python -m eval_scripts.eval_mmiu --models gpt-4o --image-root datasets/mmiu
 """
 import sys
 from pathlib import Path
@@ -72,7 +72,7 @@ def load_dataset(max_samples=None, tasks=None, image_root=None):
     import pyarrow.parquet as pq
 
     if image_root is None:
-        raise ValueError("--image-root is required for MMIU. Use --image-root dataset/mmiu")
+        raise ValueError("--image-root is required for MMIU. Use --image-root datasets/mmiu")
 
     root = Path(image_root)
     _ensure_image_root(root)

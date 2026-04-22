@@ -1,12 +1,12 @@
 #!/bin/bash
-# Download and extract MMIU dataset images to dataset/mmiu/
+# Download and extract MMIU dataset images to datasets/mmiu/
 # Run this once before sbatch run_experiments_mmiu.sh
 # Total size: ~25 GB
 
 set -e
 cd /insomnia001/home/pm3361/vision-memory
 
-DEST=dataset/mmiu
+DEST=datasets/mmiu
 HF_BASE="https://huggingface.co/datasets/FanqingM/MMIU-Benchmark/resolve/main"
 
 mkdir -p "$DEST"
