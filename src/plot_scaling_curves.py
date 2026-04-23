@@ -30,16 +30,34 @@ plt.rcParams.update({
 
 # Colors matching the reference plot
 FOIL_COLORS = {
-    'novel': '#E24A33',      # Red
-    'exemplar': '#348ABD',   # Blue
-    'state': '#B8860B',      # Dark goldenrod/olive
+    'novel': '#E24A33',
+    'exemplar': '#348ABD',
+    'state': '#B8860B',
+    'all': '#348ABD',
 }
 
 FOIL_LABELS = {
     'novel': 'Novel',
     'exemplar': 'Exemplar',
     'state': 'State',
+    'all': 'Accuracy',
 }
+
+
+def _apply_axis_style(ax, sizes):
+    """Apply standard axis styling; use log scale only when x values are positive."""
+    if sizes and max(sizes) > 0:
+        ax.set_xscale('log')
+        ax.set_xticks([1, 10, 100, 1000])
+        ax.set_xticklabels(['1', '10', '100', '1000'])
+        ax.set_xlim(0.8, 1500)
+    ax.set_ylim(0, 105)
+    ax.set_yticks([0, 20, 40, 60, 80, 100])
+    ax.axhline(y=50, color='gray', linestyle='--', alpha=0.5, linewidth=1)
+    ax.grid(True, alpha=0.3)
+    handles, labels = ax.get_legend_handles_labels()
+    if handles:
+        ax.legend(loc='upper right')
 
 
 TASK_GLOB_MAP = {
@@ -70,7 +88,7 @@ def load_results(results_dir="results"):
 
                 models = metadata.get("models", [])
                 foil_type = metadata.get("foil_type", "all")
-                n_images = metadata.get("n_images", 0)
+                n_images = metadata.get("n_images") or int(metadata.get("image_count", 0) or 0)
                 dataset = metadata.get("dataset", "unknown")
                 summary = metadata.get("summary", {})
 
@@ -99,15 +117,14 @@ def plot_model_scaling(data, task, model, dataset, output_dir="plots"):
         print(f"No data for {model} on {dataset}")
         return
 
-    # Plot each foil type
-    for foil_type in ['novel', 'exemplar', 'state']:
+    all_sizes = []
+    for foil_type in model_data:
         foil_data = model_data.get(foil_type, {})
         if not foil_data:
             continue
-
         sizes = sorted(foil_data.keys())
+        all_sizes.extend(sizes)
         accuracies = [foil_data[s] for s in sizes]
-
         ax.plot(sizes, accuracies,
                 marker='o',
                 markersize=8,
@@ -115,29 +132,10 @@ def plot_model_scaling(data, task, model, dataset, output_dir="plots"):
                 color=FOIL_COLORS.get(foil_type, 'gray'),
                 label=FOIL_LABELS.get(foil_type, foil_type))
 
-    # Styling
-    ax.set_xscale('log')
     ax.set_xlabel('Study sequence length')
     ax.set_ylabel('Accuracy (%)')
     ax.set_title(f'{model} on {dataset} ({task})')
-
-    # Set x-ticks to match reference (1, 10, 100, 1000)
-    ax.set_xticks([1, 10, 100, 1000])
-    ax.set_xticklabels(['1', '10', '100', '1000'])
-    ax.set_xlim(0.8, 1500)
-
-    # Y-axis from 0 to 100
-    ax.set_ylim(0, 105)
-    ax.set_yticks([0, 20, 40, 60, 80, 100])
-
-    # Chance line
-    ax.axhline(y=50, color='gray', linestyle='--', alpha=0.5, linewidth=1)
-
-    # Legend
-    ax.legend(loc='upper right')
-
-    # Grid
-    ax.grid(True, alpha=0.3)
+    _apply_axis_style(ax, all_sizes)
 
     plt.tight_layout()
 
@@ -183,36 +181,21 @@ def plot_comparison_grid(data, task, output_dir="plots"):
             ax = axes[row, col]
             model_data = task_data.get(model, {}).get(dataset, {})
 
-            has_data = False
-            foil_types = list(model_data.keys()) or ['novel', 'exemplar', 'state']
-            for foil_type in foil_types:
+            all_sizes = []
+            for foil_type in model_data:
                 foil_data = model_data.get(foil_type, {})
                 if not foil_data:
                     continue
-
-                has_data = True
                 sizes = sorted(foil_data.keys())
-                accuracies = [foil_data[s] for s in sizes]
-
-                ax.plot(sizes, accuracies,
-                        marker='o',
-                        markersize=6,
-                        linewidth=2,
+                all_sizes.extend(sizes)
+                ax.plot(sizes, [foil_data[s] for s in sizes],
+                        marker='o', markersize=6, linewidth=2,
                         color=FOIL_COLORS.get(foil_type, 'gray'),
                         label=FOIL_LABELS.get(foil_type, foil_type))
 
-            if not has_data:
+            if not all_sizes:
                 ax.text(0.5, 0.5, 'No data', ha='center', va='center',
                         transform=ax.transAxes, fontsize=12, color='gray')
-
-            ax.set_xscale('log')
-            ax.set_xticks([1, 10, 100, 1000])
-            ax.set_xticklabels(['1', '10', '100', '1000'])
-            ax.set_xlim(0.8, 1500)
-            ax.set_ylim(0, 105)
-            ax.set_yticks([0, 20, 40, 60, 80, 100])
-            ax.axhline(y=50, color='gray', linestyle='--', alpha=0.5, linewidth=1)
-            ax.grid(True, alpha=0.3)
 
             if row == n_rows - 1:
                 ax.set_xlabel('Study sequence length')
@@ -220,9 +203,7 @@ def plot_comparison_grid(data, task, output_dir="plots"):
                 ax.set_ylabel('Accuracy (%)')
 
             ax.set_title(f'{model} - {dataset}')
-
-            if row == 0 and col == n_cols - 1:
-                ax.legend(loc='upper right')
+            _apply_axis_style(ax, all_sizes)
 
     plt.suptitle(f'{task}: Accuracy vs Study Sequence Length', fontsize=16, y=1.02)
     plt.tight_layout()
@@ -261,34 +242,22 @@ def plot_single_dataset_comparison(data, task, dataset, output_dir="plots"):
         ax = axes[idx]
         model_data = task_data[model][dataset]
 
-        foil_types = list(model_data.keys()) or ['novel', 'exemplar', 'state']
-        for foil_type in foil_types:
+        all_sizes = []
+        for foil_type in model_data:
             foil_data = model_data.get(foil_type, {})
             if not foil_data:
                 continue
-
             sizes = sorted(foil_data.keys())
-            accuracies = [foil_data[s] for s in sizes]
-
-            ax.plot(sizes, accuracies,
-                    marker='o',
-                    markersize=8,
-                    linewidth=2,
+            all_sizes.extend(sizes)
+            ax.plot(sizes, [foil_data[s] for s in sizes],
+                    marker='o', markersize=8, linewidth=2,
                     color=FOIL_COLORS.get(foil_type, 'gray'),
                     label=FOIL_LABELS.get(foil_type, foil_type))
 
-        ax.set_xscale('log')
         ax.set_xlabel('Study sequence length')
         ax.set_ylabel('Accuracy (%)')
         ax.set_title(model)
-        ax.set_xticks([1, 10, 100, 1000])
-        ax.set_xticklabels(['1', '10', '100', '1000'])
-        ax.set_xlim(0.8, 1500)
-        ax.set_ylim(0, 105)
-        ax.set_yticks([0, 20, 40, 60, 80, 100])
-        ax.axhline(y=50, color='gray', linestyle='--', alpha=0.5, linewidth=1)
-        ax.grid(True, alpha=0.3)
-        ax.legend(loc='upper right')
+        _apply_axis_style(ax, all_sizes)
 
     for idx in range(len(models), len(axes)):
         axes[idx].set_visible(False)
