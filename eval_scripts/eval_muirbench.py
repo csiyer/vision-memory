@@ -22,9 +22,6 @@ import re
 from collections import defaultdict
 from datetime import datetime
 
-from evaluators.openai_evaluator import OpenAIEvaluator
-from evaluators.anthropic_evaluator import AnthropicEvaluator
-from evaluators.google_evaluator import GoogleEvaluator
 from evaluators.qwen_evaluator import QwenEvaluator
 
 
@@ -189,7 +186,7 @@ def _find_completed_models(results_dir, **match_fields):
 def main():
     parser = argparse.ArgumentParser(description="MuirBench Multi-Image Evaluation")
     parser.add_argument(
-        "--models", nargs="+", default=["gpt-4o", "gemini"],
+        "--models", nargs="+", default=["qwen"],
         help="Models: gpt-4o, claude, gemini, qwen",
     )
     parser.add_argument("--max-samples", type=int, default=None,
@@ -210,22 +207,25 @@ def main():
     evaluators = []
     for m in args.models:
         m = m.strip()
-        if m == "gpt-4o":
-            ev = OpenAIEvaluator("gpt-4o")
-        elif m == "claude":
-            ev = AnthropicEvaluator()
-        elif m == "gemini":
-            ev = GoogleEvaluator()
-        elif m == "qwen":
+        if m == "qwen":
             ev = QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct")
-        elif m.startswith("claude"):
-            ev = AnthropicEvaluator(m)
-        elif m.startswith("gemini"):
-            ev = GoogleEvaluator(m)
         elif m.startswith("qwen") or m.startswith("Qwen"):
             ev = QwenEvaluator(m)
-        else:
+        elif m == "gpt-4o" or (not m.startswith("claude") and not m.startswith("gemini")):
+            from evaluators.openai_evaluator import OpenAIEvaluator
             ev = OpenAIEvaluator(m)
+        elif m == "claude":
+            from evaluators.anthropic_evaluator import AnthropicEvaluator
+            ev = AnthropicEvaluator()
+        elif m.startswith("claude"):
+            from evaluators.anthropic_evaluator import AnthropicEvaluator
+            ev = AnthropicEvaluator(m)
+        elif m == "gemini":
+            from evaluators.google_evaluator import GoogleEvaluator
+            ev = GoogleEvaluator()
+        else:
+            from evaluators.google_evaluator import GoogleEvaluator
+            ev = GoogleEvaluator(m)
         if ev.get_name() not in done:
             evaluators.append(ev)
 

@@ -1,12 +1,21 @@
 #!/bin/bash
-# Download and extract MMIU dataset images to datasets/mmiu/
-# Run this once before sbatch run_experiments_mmiu.sh
-# Total size: ~25 GB
+#SBATCH --job-name=mmiu_download
+#SBATCH --partition=zgroup1
+#SBATCH --account=zgroup
+#SBATCH --output=logs/%j.out
+#SBATCH --error=logs/%j.err
+#SBATCH --time=04:00:00
+#SBATCH --mem=16G
+#SBATCH --cpus-per-task=4
+# Download and extract MMIU dataset images (~25 GB) to shared data dir.
+# Usage:
+#   sbatch download_mmiu.sh     # via slurm
+#   bash   download_mmiu.sh     # interactively
 
 set -e
 cd /insomnia001/home/pm3361/vision-memory
 
-DEST=datasets/mmiu
+DEST=/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/data/mmiu
 HF_BASE="https://huggingface.co/datasets/FanqingM/MMIU-Benchmark/resolve/main"
 
 mkdir -p "$DEST"
@@ -23,7 +32,6 @@ ZIPS=(
 
 for ZIP in "${ZIPS[@]}"; do
     CATEGORY="${ZIP%.zip}"
-    # Skip if already extracted (check for the directory)
     if [ -d "$DEST/$CATEGORY" ]; then
         echo "Already extracted: $CATEGORY — skipping"
         continue

@@ -23,7 +23,7 @@ set -e
 cd /insomnia001/home/pm3361/vision-memory
 # source venv/bin/activate  # venv incomplete; use system python3 (~/.local has all packages)
 
-MODELS="${MODELS:-gpt-4o gemini qwen}"
+MODELS="${MODELS:-qwen}"
 
 echo "=============================="
 echo "MuirBench — all tasks"
