@@ -146,7 +146,6 @@ def calculate_pam_metrics(results):
         "total": total
     }
 
-<<<<<<< HEAD:src/metrics.py
 
 def calculate_2afc_metrics(trials):
     """

@@ -23,4 +23,22 @@
 
 ### Qwen (Qwen3-VL-8B-Instruct)
 - Local inference, no API limits. Requires GPU (A6000) and all model weights present in `$HF_HOME/hub/`.
+- **N>=500 skipped across all tasks** — VRAM exhaustion at large haystack sizes on A6000 (48GB).
 - Model weights are split across two cache locations — shards 1–2 in `~/.cache/huggingface/models--Qwen--Qwen3-VL-8B-Instruct/` and shards 3–4 in `~/.cache/huggingface/hub/models--Qwen--Qwen3-VL-8B-Instruct/`. Symlinks resolve this.
+- **Model name bug (fixed):** `get_name()` used case-sensitive `"8B" in self.model_id`, causing results to be labeled `qwen3-vl` instead of `qwen3-vl-8b` when the model ID contained lowercase `8b`. Fixed to use `.upper()`. Affected result files have been patched.
+
+## Task Scope
+
+### Visual Haystacks (VHS benchmark)
+- Uses the published VHs benchmark (`eval_vhs.py`) with `single_needle` and `multi_needle` modes.
+- Haystack sizes are **fixed by the benchmark's file structure**: valid `--image-count` values are `2, 3, 5, 10, 20, 50, 100`. Arbitrary sizes (e.g. 1, 500, 1000) are not supported.
+- The custom `eval_visual_haystacks.py` (results prefix `results_haystacks_*`) is a separate internal task and is **not included in final results**.
+
+### Foil Types (2-AFC)
+- **THINGS dataset:** supports `novel`, `exemplar`, `all` (mixed novel+exemplar). `state` is **not supported** (no within-object state variation in THINGS).
+- **Brady2008 dataset:** supports `novel`, `exemplar`, `state`, and `all` (mixed novel+exemplar+state).
+- Older runs used `foil_type: "all"` or `foil_type: "accuracy"` to indicate a mixed/undifferentiated foil condition. These have been renamed to `"all"` for consistency and are plotted as a separate series.
+
+## Result File Conventions
+- Standard sizes for all tasks: N = 1, 5, 10, 100, 500, 1000 (subject to per-model and per-task limits above).
+- Non-standard sizes (3, 6, 20, 50, 200, 300, 400, etc.) have been moved to `results_archive/` and are excluded from analysis.

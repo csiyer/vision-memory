@@ -133,8 +133,9 @@ class QwenEvaluator(BaseEvaluator):
 
     def get_name(self) -> str:
         """Return short name for results."""
-        if "8B" in self.model_id:
+        model_upper = self.model_id.upper()
+        if "8B" in model_upper:
             return "qwen3-vl-8b"
-        elif "4B" in self.model_id:
+        elif "4B" in model_upper:
             return "qwen3-vl-4b"
         return "qwen3-vl"
