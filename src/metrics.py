@@ -57,8 +57,8 @@ def calculate_hit_rate_by_delay(responses, targets, delays):
 
     return hr_by_delay
 
-def calculate_source_metrics(reported_positions, actual_positions):
-    """Metrics for source memory task."""
+def calculate_serial_order_metrics(reported_positions, actual_positions):
+    """Metrics for serial order memory tasks with position reports."""
     reported = np.array(reported_positions)
     actual = np.array(actual_positions)
 
@@ -70,6 +70,36 @@ def calculate_source_metrics(reported_positions, actual_positions):
         "average_error": float(avg_error),
         "n_correct": int(correct),
         "accuracy": float(correct / len(actual)) if len(actual) > 0 else 0
+    }
+
+def calculate_afc_serial_order_metrics(results):
+    """Metrics for 2-AFC serial order memory using stored probe distances."""
+    if not results:
+        return {"accuracy": 0, "n_correct": 0, "total": 0, "accuracy_by_distance": {}}
+
+    n_correct = 0
+    accuracy_by_distance = {}
+
+    for res in results:
+        target = res.get("target")
+        reported = res.get("reported")
+        metadata = res.get("metadata", {})
+        distance = metadata.get("distance")
+        correct = int(target == reported)
+        n_correct += correct
+
+        if distance is not None:
+            accuracy_by_distance.setdefault(int(distance), []).append(correct)
+
+    total = len(results)
+    return {
+        "accuracy": n_correct / total if total > 0 else 0,
+        "n_correct": n_correct,
+        "total": total,
+        "accuracy_by_distance": {
+            distance: float(np.mean(values))
+            for distance, values in sorted(accuracy_by_distance.items())
+        },
     }
 
 def calculate_color_metrics(reported_colors, actual_colors, n_colors=36):
@@ -116,6 +146,7 @@ def calculate_pam_metrics(results):
         "total": total
     }
 
+<<<<<<< HEAD:src/metrics.py
 
 def calculate_2afc_metrics(trials):
     """
@@ -175,4 +206,23 @@ def calculate_2afc_metrics(trials):
         "n_parse_failures": n_total - n_valid,
         "accuracy_by_type": accuracy_by_type,
         "d_prime_by_type": d_prime_by_type
+    }
+
+
+def calculate_associative_inference_metrics(results):
+    """Calculates 2-AFC associative inference accuracy."""
+    if not results:
+        return {"accuracy": 0, "n_correct": 0, "total": 0}
+
+    n_correct = 0
+    total = len(results)
+
+    for res in results:
+        if res.get("target") == res.get("reported"):
+            n_correct += 1
+
+    return {
+        "accuracy": n_correct / total if total > 0 else 0,
+        "n_correct": n_correct,
+        "total": total,
     }

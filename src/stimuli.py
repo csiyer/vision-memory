@@ -1,8 +1,11 @@
 import os
 import random
+import re
+from numbers import Number
+from pathlib import Path
+
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
-from pathlib import Path
 
 # Load .env for HF_TOKEN
 try:
@@ -32,58 +35,184 @@ class DirectoryDataset():
 
 
 class ThingsDataset:
-    """THINGS dataset. Uses local files if available (run download_things.py first),
-    otherwise streams from HuggingFace."""
+    """Gets images from a local THINGS install when available, else via Hugging Face."""
+    def __init__(
+        self,
+        n_categories=None,
+        exemplars_per_category=1,
+        local_root='memory_datasets/THINGS/object_images',
+        source="auto",
+        excluded_categories=None,
+    ):
+        self.local_root = Path(local_root)
+        self.source = source
+        self.excluded_categories = {self._normalize_category_name(category) for category in (excluded_categories or [])}
+        self.category_metadata = {}
+        try:
+            if source not in {"auto", "local", "streaming"}:
+                raise ValueError(f"Unsupported THINGS source={source!r}. Expected 'auto', 'local', or 'streaming'.")
 
-    LOCAL_DIR = Path(__file__).parent.parent / "datasets" / "THINGS" / "images"
+            if source in {"auto", "local"} and self._load_from_local_cache(
+                n_categories=n_categories,
+                exemplars_per_category=exemplars_per_category,
+            ):
+                print(f"Loaded THINGS from local files: {self.local_root}")
+                return
+            if source == "auto":
+                print(f"Local THINGS files not available at {self.local_root}; falling back to Hugging Face streaming.")
+            if source == "local":
+                raise ValueError(f"Could not load THINGS from local files: {self.local_root}")
 
-    def __init__(self, n_categories=None, exemplars_per_category=1):
+            from datasets import load_dataset
+            hf_token = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_HUB_TOKEN")
+            # Prioritize the one the user mentioned
+            names = ["Haitao999/things-eeg", "He-Bart/THINGS", "Hebart/THINGS", "THINGS-data/THINGS", "RAIlab/THINGS"]
+            self.ds = None
+            self.name = None
+            id_to_name = None
+            for name in names:
+                try:
+                    # Use streaming=True to avoid downloading 30GB at once
+                    self.ds = load_dataset(name, split="train", streaming=True, token=hf_token)
+                    self.name = name
+                    if hasattr(self.ds, 'features') and 'label' in self.ds.features:
+                        label_feature = self.ds.features['label']
+                        if hasattr(label_feature, 'names'):
+                            id_to_name = label_feature.names
+                    print(f"Successfully connected to THINGS via {name}")
+                    break
+                except:
+                    continue
+            
+            if self.ds is None:
+                raise ValueError("Could not find THINGS dataset on Hugging Face. Please verify the dataset name.")
+            
+            # Map category name to list of images
+            self.category_groups = {} 
+            self.category_names = [] # Maintain order of arrival
+            self.category_metadata = {}
+
+            print("Fetching images from streaming dataset...")
+            for item in self.ds:
+                # Determine category name
+                label = item.get('label')
+                if label is not None and id_to_name:
+                    cat = id_to_name[label]
+                else:
+                    cat = item.get('category') or item.get('concept') or f"cat_{label}"
+                cat = self._normalize_category_name(cat)
+
+                if cat in self.excluded_categories:
+                    continue
+                
+                if cat not in self.category_groups:
+                    if n_categories and len(self.category_groups) >= n_categories:
+                        continue
+                    self.category_groups[cat] = []
+                    self.category_metadata[cat] = []
+                    self.category_names.append(cat)
+                
+                if len(self.category_groups[cat]) < exemplars_per_category:
+                    img = item['image']
+                    if not isinstance(img, Image.Image):
+                        img = Image.fromarray(np.array(img))
+                    self.category_groups[cat].append(img.convert("RGB"))
+                    self.category_metadata[cat].append(self._build_stream_metadata(item=item, category=cat))
+                
+                # Check if we have enough
+                if n_categories and len(self.category_groups) >= n_categories:
+                    # Check if all have enough exemplars
+                    if all(len(self.category_groups[c]) >= exemplars_per_category for c in self.category_names):
+                        break
+            
+            print(f"Loaded {len(self.category_groups)} categories with up to {exemplars_per_category} exemplars each.")
+            
+        except Exception as e:
+            print(f"Error loading THINGS dataset: {e}")
+            self.category_groups = {}
+            self.category_names = []
+            self.category_metadata = {}
+
+    def _normalize_category_name(self, category):
+        return re.sub(r"^\d+_", "", str(category))
+
+    def _jsonable_scalar(self, value):
+        if value is None or isinstance(value, (str, bool, int, float)):
+            return value
+        if isinstance(value, Number):
+            return value.item() if hasattr(value, "item") else float(value)
+        if isinstance(value, Path):
+            return str(value)
+        return str(value)
+
+    def _build_stream_metadata(self, item, category):
+        metadata = {
+            "source": "streaming",
+            "dataset_name": self.name,
+            "category": category,
+        }
+        for key, value in item.items():
+            if key == "image":
+                continue
+            if isinstance(value, (list, dict, tuple)):
+                continue
+            metadata[key] = self._jsonable_scalar(value)
+
+        image_obj = item.get("image")
+        for attr_name, key_name in (
+            ("filename", "image_filename"),
+            ("path", "image_path"),
+            ("format", "image_format"),
+        ):
+            attr_value = getattr(image_obj, attr_name, None)
+            if attr_value is not None:
+                metadata[key_name] = self._jsonable_scalar(attr_value)
+        return metadata
+
+    def _load_from_local_cache(self, n_categories=None, exemplars_per_category=1):
+        if not self.local_root.exists():
+            return False
+
+        category_dirs = sorted([path for path in self.local_root.iterdir() if path.is_dir()], key=lambda p: p.name.lower())
+        if not category_dirs:
+            return False
+
         self.category_groups = {}
         self.category_names = []
-
-        if self.LOCAL_DIR.exists() and any(self.LOCAL_DIR.iterdir()):
-            self._load_local(n_categories, exemplars_per_category)
-        else:
-            print("THINGS local cache not found, streaming from HuggingFace (slow, may hit rate limits).")
-            print("Run `python3 download_things.py` once to cache locally.")
-            self._load_streaming(n_categories, exemplars_per_category)
-
-    def _load_local(self, n_categories, exemplars_per_category):
-        """Load from datasets/THINGS/images/<category>/<n>.jpg"""
-        cat_dirs = sorted(self.LOCAL_DIR.iterdir())
-        for cat_dir in cat_dirs:
-            if not cat_dir.is_dir():
+        self.category_metadata = {}
+        for category_dir in category_dirs:
+            image_paths = sorted(
+                [
+                    path
+                    for path in category_dir.iterdir()
+                    if path.is_file() and path.suffix.lower() in {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
+                ],
+                key=lambda p: p.name.lower(),
+            )
+            if len(image_paths) < exemplars_per_category:
                 continue
-            if n_categories and len(self.category_names) >= n_categories:
-                break
-            exemplar_paths = sorted(cat_dir.glob("*.jpg"))[:exemplars_per_category]
-            if not exemplar_paths:
-                continue
-            cat = cat_dir.name
-            self.category_names.append(cat)
-            self.category_groups[cat] = exemplar_paths  # Store paths, load lazily
-        print(f"Loaded {len(self.category_names)} THINGS categories from local cache.")
-
-    def _load_streaming(self, n_categories, exemplars_per_category):
-        from datasets import load_dataset
-        ds = load_dataset("Haitao999/things-eeg", split="train", streaming=True)
-        print("Fetching images from HuggingFace...")
-        for item in ds:
-            cat = item.get("category") or item.get("concept") or f"cat_{item.get('label', 0)}"
-            if cat not in self.category_groups:
-                if n_categories and len(self.category_groups) >= n_categories:
-                    continue
-                self.category_groups[cat] = []
-                self.category_names.append(cat)
-            if len(self.category_groups[cat]) < exemplars_per_category:
-                img = item["image"]
-                if not isinstance(img, Image.Image):
-                    img = Image.fromarray(np.array(img))
-                self.category_groups[cat].append(img.convert("RGB"))
             if n_categories and len(self.category_groups) >= n_categories:
-                if all(len(self.category_groups[c]) >= exemplars_per_category for c in self.category_names):
-                    break
-        print(f"Loaded {len(self.category_groups)} THINGS categories from HuggingFace.")
+                break
+
+            category_name = self._normalize_category_name(category_dir.name)
+            if category_name in self.excluded_categories:
+                continue
+            self.category_names.append(category_name)
+            chosen_paths = image_paths[:exemplars_per_category]
+            self.category_groups[category_name] = [
+                Image.open(path).convert("RGB") for path in chosen_paths
+            ]
+            self.category_metadata[category_name] = [
+                {
+                    "source": "local_files",
+                    "category": category_name,
+                    "local_path": str(path),
+                    "local_filename": path.name,
+                }
+                for path in chosen_paths
+            ]
+
+        return bool(self.category_groups)
 
     def __len__(self):
         return len(self.category_names)
@@ -97,7 +226,13 @@ class ThingsDataset:
 
     def get_metadata(self, index, exemplar_index=0):
         cat = self.category_names[index]
-        return {"category": cat, "category_id": index, "exemplar_id": exemplar_index}
+        exemplars = self.category_groups[cat]
+        exemplar_id = exemplar_index % len(exemplars)
+        metadata = {"category": cat, "category_id": index, "exemplar_id": exemplar_id}
+        extra = self.category_metadata.get(cat, [])
+        if exemplar_id < len(extra):
+            metadata.update(extra[exemplar_id])
+        return metadata
 
 
 class BradyDataset:
@@ -111,6 +246,7 @@ class BradyDataset:
              self.path = self.root / f"Brady2008{type}"
 
         self.image_paths = sorted([p for p in self.path.glob('*') if p.suffix.lower() in ('.jpg', '.png', '.jpeg')])
+        self.pair_paths = self._build_pair_paths()
 
     def __len__(self):
         return len(self.image_paths)
@@ -120,6 +256,29 @@ class BradyDataset:
 
     def get_metadata(self, index):
         return {"path": str(self.image_paths[index]), "name": self.image_paths[index].name}
+
+    def _build_pair_paths(self):
+        if self.path.name not in {"Brady2008Exemplar", "Brady2008State"}:
+            return []
+
+        groups = {}
+        for path in self.image_paths:
+            match = re.match(r"^(.*?)(\d+)?$", path.stem)
+            base_name = match.group(1).lower() if match else path.stem.lower()
+            groups.setdefault(base_name, []).append(path)
+
+        pair_paths = []
+        for base_name in sorted(groups):
+            paths = sorted(groups[base_name], key=lambda p: p.name.lower())
+            if len(paths) == 2:
+                pair_paths.append(tuple(paths))
+        return pair_paths
+
+    def get_pair(self, index):
+        if not self.pair_paths:
+            raise ValueError("Pair access is only supported for Brady2008Exemplar and Brady2008State.")
+        original_path, foil_path = self.pair_paths[index]
+        return Image.open(original_path).convert("RGB"), Image.open(foil_path).convert("RGB")
 
 
 class LaMemDataset():
