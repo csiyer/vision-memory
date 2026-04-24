@@ -86,18 +86,22 @@ class ContinuousRecognitionTask:
                     "target": 0,
                     "delay": None
                 })
-            else:
-                # This case shouldn't happen if math is right, but fallback
-                if waiting_room:
-                    img_idx, t_intro = waiting_room.pop(0)
+            elif waiting_room:
+                # All new images exhausted; wait until the oldest waiting image
+                # becomes eligible (respects min_delay) before repeating.
+                img_idx, t_intro = waiting_room[0]
+                delay = current_time - t_intro - 1
+                if delay >= self.min_delay:
+                    waiting_room.pop(0)
                     sequence.append({
                         "image_idx": img_idx,
                         "target": 1,
-                        "delay": current_time - t_intro - 1
+                        "delay": delay
                     })
                     n_old_needed -= 1
-                else:
-                    break # Out of images
+                # else: not yet eligible — advance current_time and retry
+            else:
+                break  # Out of images
 
             current_time += 1
 

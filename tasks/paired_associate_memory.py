@@ -53,7 +53,7 @@ class PairedAssociateMemoryTask:
         for i in test_indices:
             test_phase.append({
                 "image": pairs[i]["image"],
-                "prompt": "What was the word paired with this image?",
+                "prompt": "What was the word paired with this image? Respond with only the single word, nothing else.",
                 "target": pairs[i]["word"],
                 "metadata": pairs[i]["metadata"]
             })

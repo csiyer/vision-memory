@@ -6,7 +6,7 @@
 |-----------|-------|--------|
 | Brady2008 \| exemplar \| N>100 | SKIP | Only ~200 images in dataset |
 | Brady2008 \| state \| N>100 | SKIP | Only ~200 images in dataset |
-| Continuous recognition \| N<10 | SKIP | Too few images to construct valid trials |
+| Continuous recognition \| N<5 | SKIP | Too few trials to be a meaningful experiment (N=1 → 2 total trials; N<5 excluded by convention) |
 
 ## Model/API Limits
 
@@ -32,7 +32,10 @@
 ### Visual Haystacks (VHS benchmark)
 - Uses the published VHs benchmark (`eval_vhs.py`) with `single_needle` and `multi_needle` modes.
 - Haystack sizes are **fixed by the benchmark's file structure**: valid `--image-count` values are `2, 3, 5, 10, 20, 50, 100`. Arbitrary sizes (e.g. 1, 500, 1000) are not supported.
+- **multi_needle does not have a size-2 file** (`visual_haystack_2.json` only exists for single_needle). Multi-needle valid sizes: `5, 10, 50, 100`.
 - The custom `eval_visual_haystacks.py` (results prefix `results_haystacks_*`) is a separate internal task and is **not included in final results**.
+- **N=1 skipped** — requires at least `n_needles + 1 = 2` images; raises `ValueError` for N=1.
+- **N=500 skipped** — only 224 THINGS images are available for this task; raises `AssertionError: Haystack size mismatch: expected 500, got 224`. Valid sizes: N=10, 100. Applies to all models.
 
 ### Foil Types (2-AFC)
 - **THINGS dataset:** supports `novel`, `exemplar`, `all` (mixed novel+exemplar). `state` is **not supported** (no within-object state variation in THINGS).

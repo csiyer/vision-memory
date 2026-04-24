@@ -33,6 +33,6 @@ class AnthropicEvaluator(BaseEvaluator):
         resp = self.client.messages.create(
             model=self.model_id,
             messages=messages,
-            max_tokens=10
+            max_tokens=20
         )
         return resp.content[0].text

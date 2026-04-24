@@ -51,10 +51,6 @@ sys.exit(0)
 echo "========== VHS single_needle: $MODEL =========="
 
 for size in "${SIZES[@]}"; do
-    if [ "$size" -ge 50 ]; then
-        echo "  [SKIP-LIMIT] image_count=$size (Qwen VRAM limit)"
-        continue
-    fi
     if check_existing_result "$size"; then
         echo "  [EXISTS] image_count=$size"
         continue

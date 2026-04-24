@@ -9,7 +9,7 @@
 #SBATCH --cpus-per-task=4
 
 # Continuous Recognition: gemini-2.5-flash
-# 1M token context => all sizes supported; skip n<10
+# 1M token context => all sizes supported; skip n<5 (degenerate trial count)
 
 set -e
 
@@ -51,8 +51,8 @@ echo "========== Continuous Recognition: $MODEL =========="
 for dataset in "${DATASETS[@]}"; do
     echo "--- Dataset: $dataset ---"
     for size in "${SIZES[@]}"; do
-        if [ "$size" -lt 10 ]; then
-            echo "  [SKIP-LIMIT] $dataset | n=$size (too small for continuous task)"
+        if [ "$size" -lt 5 ]; then
+            echo "  [SKIP-LIMIT] $dataset | n=$size (too few unique images for a meaningful continuous task)"
             continue
         fi
         if check_existing_result "$dataset" "$size"; then

@@ -29,6 +29,8 @@ from src.plotting import default_plots_dir, plot_continuous_recognition
 
 def parse_yes_no(text):
     """Parse yes/no from response."""
+    if text is None:
+        return -1
     text = text.lower().strip()
     if "yes" in text:
         return 1

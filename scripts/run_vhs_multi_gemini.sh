@@ -18,7 +18,7 @@ source "$SCRIPT_DIR/venv/bin/activate"
 
 MODEL="gemini"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(2 5 10 50 100)
+SIZES=(5 10 50 100)
 
 mkdir -p "$RESULTS_DIR" logs
 

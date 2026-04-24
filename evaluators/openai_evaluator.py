@@ -46,7 +46,7 @@ class OpenAIEvaluator(BaseEvaluator):
                 resp = self.client.chat.completions.create(
                     model=self.model_id,
                     messages=messages,
-                    max_tokens=10
+                    max_tokens=20
                 )
                 return resp.choices[0].message.content
             except RateLimitError:

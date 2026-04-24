@@ -1,11 +1,11 @@
 #!/bin/bash
 #SBATCH --job-name=mmiu
-#SBATCH --partition=zgroup1
+#SBATCH --partition=short
 #SBATCH --account=zgroup
 #SBATCH --output=logs/%j.out
 #SBATCH --error=logs/%j.err
-#SBATCH --time=24:00:00
-#SBATCH --mem=64G
+#SBATCH --time=12:00:00
+#SBATCH --mem=128G
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1
 #SBATCH --constraint=A6000
@@ -21,7 +21,7 @@
 
 set -e
 cd /insomnia001/home/pm3361/vision-memory
-# source venv/bin/activate  # venv incomplete; use system python3 (~/.local has all packages)
+source /insomnia001/home/pm3361/vision-memory/venv/bin/activate
 
 MODELS="qwen"
 IMAGE_ROOT=/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/data/mmiu

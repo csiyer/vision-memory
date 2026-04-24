@@ -11,7 +11,7 @@
 #SBATCH --constraint=A6000
 
 # Continuous Recognition: qwen3-vl-8b (local inference, requires GPU)
-# A6000 48GB VRAM => skip n>=500; skip n<10
+# A6000 48GB VRAM => skip n>=500; skip n<5 (degenerate trial count)
 
 set -e
 
@@ -57,8 +57,8 @@ echo "========== Continuous Recognition: $MODEL =========="
 for dataset in "${DATASETS[@]}"; do
     echo "--- Dataset: $dataset ---"
     for size in "${SIZES[@]}"; do
-        if [ "$size" -lt 10 ]; then
-            echo "  [SKIP-LIMIT] $dataset | n=$size (too small for continuous task)"
+        if [ "$size" -lt 5 ]; then
+            echo "  [SKIP-LIMIT] $dataset | n=$size (too few unique images for a meaningful continuous task)"
             continue
         fi
         if [ "$size" -ge 500 ]; then

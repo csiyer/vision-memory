@@ -20,7 +20,7 @@
 
 set -e
 cd /insomnia001/home/pm3361/vision-memory
-# source venv/bin/activate  # venv incomplete; use system python3 (~/.local has all packages)
+source /insomnia001/home/pm3361/vision-memory/venv/bin/activate
 
 MODELS="gpt-4o gemini qwen"
 SPLIT="VHs_large"
