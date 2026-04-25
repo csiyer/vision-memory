@@ -88,11 +88,29 @@ def parse_position_response(text, n):
     """Parse an integer position 1-N from free-report response."""
     if text is None:
         return -1
-    nums = re.findall(r"\b(\d+)\b", text)
-    for num_str in nums:
+
+    # ordinal words for small N
+    ordinal_words = {
+        "first": 1, "second": 2, "third": 3, "fourth": 4, "fifth": 5,
+        "sixth": 6, "seventh": 7, "eighth": 8, "ninth": 9, "tenth": 10,
+    }
+    lower = text.lower()
+    for word, val in ordinal_words.items():
+        if re.search(rf"\b{word}\b", lower) and 1 <= val <= n:
+            return val
+
+    # digit ordinals: 1st, 2nd, 3rd, 4th, ...
+    for m in re.finditer(r"\b(\d+)(?:st|nd|rd|th)\b", text, re.IGNORECASE):
+        val = int(m.group(1))
+        if 1 <= val <= n:
+            return val
+
+    # plain integers
+    for num_str in re.findall(r"\b(\d+)\b", text):
         val = int(num_str)
         if 1 <= val <= n:
             return val
+
     return -1
 
 

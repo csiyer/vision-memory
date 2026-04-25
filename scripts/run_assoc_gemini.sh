@@ -10,6 +10,7 @@
 
 # Associative Inference: gemini-2.5-flash
 # 1M token context => all sizes supported
+# n<4 skipped: task requires at least 2 chains (4 images minimum)
 
 set -e
 
@@ -20,6 +21,7 @@ MODEL="gemini"
 RESULTS_DIR="$SCRIPT_DIR/results"
 SIZES=(1 5 10 100 500 1000)
 DATASETS=("things" "Brady2008")
+SLEEP_BETWEEN=5
 
 mkdir -p "$RESULTS_DIR" logs
 
@@ -51,6 +53,10 @@ echo "========== Associative Inference: $MODEL =========="
 for dataset in "${DATASETS[@]}"; do
     echo "--- Dataset: $dataset ---"
     for size in "${SIZES[@]}"; do
+        if [ "$size" -lt 4 ]; then
+            echo "  [SKIP] $dataset | n=$size (requires at least 2 chains)"
+            continue
+        fi
         if check_existing_result "$dataset" "$size"; then
             echo "  [EXISTS] $dataset | n=$size"
             continue
@@ -60,6 +66,7 @@ for dataset in "${DATASETS[@]}"; do
             --models "$MODEL" \
             --n-images "$size" \
             --dataset "$dataset" || echo "  [ERROR] $dataset | n=$size"
+        sleep "$SLEEP_BETWEEN"
     done
 done
 

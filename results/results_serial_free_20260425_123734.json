@@ -1,0 +1,107 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (Free Report)",
+    "variant": "free",
+    "timestamp": "20260425_123734",
+    "dataset": "things",
+    "n_images": 5,
+    "n_trials": 5,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 0
+      }
+    },
+    "max_context_images": null
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "This image occurred second in the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 1,
+        "target": 5,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "This image occurred 5th in the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "This was the 1st image in the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 3,
+        "target": 4,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "This image was the 4th in the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 4,
+        "target": 3,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "This image occurred **3rd** in the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      }
+    ],
+    "average_error": NaN,
+    "n_correct": 0,
+    "accuracy": 0,
+    "n_parse_failures": 5
+  }
+}

@@ -3,7 +3,8 @@ import sys
 from itertools import combinations
 from pathlib import Path
 
-from stimuli import BradyDataset, ThingsDataset
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.stimuli import BradyDataset, ThingsDataset
 
 
 class SerialOrderMemoryBase:

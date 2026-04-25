@@ -51,6 +51,10 @@ echo "========== Associative Inference: $MODEL =========="
 for dataset in "${DATASETS[@]}"; do
     echo "--- Dataset: $dataset ---"
     for size in "${SIZES[@]}"; do
+        if [ "$size" -lt 4 ]; then
+            echo "  [SKIP] $dataset | n=$size (requires at least 2 chains)"
+            continue
+        fi
         if [ "$size" -ge 500 ]; then
             echo "  [SKIP-LIMIT] $dataset | n=$size (GPT-4o context limit)"
             continue

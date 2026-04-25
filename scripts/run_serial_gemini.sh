@@ -21,6 +21,7 @@ RESULTS_DIR="$SCRIPT_DIR/results"
 SIZES=(1 5 10 100 500 1000)
 DATASETS=("things" "Brady2008")
 VARIANTS=("free" "afc")
+SLEEP_BETWEEN=5
 
 mkdir -p "$RESULTS_DIR" logs
 
@@ -66,6 +67,7 @@ for dataset in "${DATASETS[@]}"; do
                 --n-images "$size" \
                 --variant "$variant" \
                 --dataset "$dataset" || echo "  [ERROR] $dataset | $variant | n=$size"
+            sleep "$SLEEP_BETWEEN"
         done
     done
 done
