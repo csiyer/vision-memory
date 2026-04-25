@@ -5,7 +5,7 @@
 #SBATCH --output=logs/%j.out
 #SBATCH --error=logs/%j.err
 #SBATCH --time=12:00:00
-#SBATCH --mem=128G
+#SBATCH --mem=192G
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1
 #SBATCH --constraint=A6000
