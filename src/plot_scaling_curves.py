@@ -43,6 +43,12 @@ FOIL_LABELS = {
     'all': 'Accuracy',
 }
 
+# Consistent foil ordering across all subplots
+FOIL_ORDER = ['novel', 'exemplar', 'state', 'all']
+
+# Only include these study sequence lengths
+VALID_N_IMAGES = {1, 5, 10, 100, 1000}
+
 
 def _apply_axis_style(ax, sizes):
     """Apply standard axis styling; use log scale only when x values are positive."""
@@ -57,19 +63,22 @@ def _apply_axis_style(ax, sizes):
     ax.grid(True, alpha=0.3)
     handles, labels = ax.get_legend_handles_labels()
     if handles:
-        ax.legend(loc='upper right')
+        # Sort legend entries by FOIL_ORDER
+        order_map = {FOIL_LABELS[f]: i for i, f in enumerate(FOIL_ORDER) if f in FOIL_LABELS}
+        paired = sorted(zip(labels, handles), key=lambda x: order_map.get(x[0], 99))
+        labels_sorted, handles_sorted = zip(*paired) if paired else (labels, handles)
+        ax.legend(handles_sorted, labels_sorted, loc='upper right')
 
 
 TASK_GLOB_MAP = {
     "2afc":       "results_2afc_*.json",
     "continuous": "results_continuous_*.json",
     "pam":        "results_pam_*.json",
-    "haystacks":  "results_haystacks_*.json",
     "vhs":        "results_vhs_*.json",
 }
 
 
-def load_results(results_dir="results"):
+def load_results(results_dir="final_results"):
     """Load all task results and organize by task, model, dataset, foil, size."""
     results_path = Path(results_dir)
 
@@ -89,10 +98,16 @@ def load_results(results_dir="results"):
                 models = metadata.get("models", [])
                 foil_type = metadata.get("foil_type", "all")
                 n_images = metadata.get("n_images") or int(metadata.get("image_count", 0) or 0)
-                dataset = metadata.get("dataset", "unknown")
+                raw_dataset = metadata.get("dataset")
+                task_name = metadata.get("task", task_key)
+                dataset = raw_dataset if raw_dataset else task_name
                 summary = metadata.get("summary", {})
 
                 for model in models:
+                    if model == "qwen3-vl":
+                        continue
+                    if n_images not in VALID_N_IMAGES:
+                        continue
                     if model in summary:
                         accuracy = summary[model].get("accuracy", 0)
                         data[task_key][model][dataset][foil_type][n_images] = accuracy * 100
@@ -118,7 +133,7 @@ def plot_model_scaling(data, task, model, dataset, output_dir="plots"):
         return
 
     all_sizes = []
-    for foil_type in model_data:
+    for foil_type in FOIL_ORDER:
         foil_data = model_data.get(foil_type, {})
         if not foil_data:
             continue
@@ -182,7 +197,7 @@ def plot_comparison_grid(data, task, output_dir="plots"):
             model_data = task_data.get(model, {}).get(dataset, {})
 
             all_sizes = []
-            for foil_type in model_data:
+            for foil_type in FOIL_ORDER:
                 foil_data = model_data.get(foil_type, {})
                 if not foil_data:
                     continue
@@ -243,7 +258,7 @@ def plot_single_dataset_comparison(data, task, dataset, output_dir="plots"):
         model_data = task_data[model][dataset]
 
         all_sizes = []
-        for foil_type in model_data:
+        for foil_type in FOIL_ORDER:
             foil_data = model_data.get(foil_type, {})
             if not foil_data:
                 continue

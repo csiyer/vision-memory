@@ -21,7 +21,6 @@ MODEL="gemini"
 RESULTS_DIR="$SCRIPT_DIR/results"
 SIZES=(1 5 10 100 500 1000)
 DATASETS=("things" "Brady2008")
-SLEEP_BETWEEN=5
 
 mkdir -p "$RESULTS_DIR" logs
 
@@ -53,20 +52,21 @@ echo "========== Associative Inference: $MODEL =========="
 for dataset in "${DATASETS[@]}"; do
     echo "--- Dataset: $dataset ---"
     for size in "${SIZES[@]}"; do
-        if [ "$size" -lt 4 ]; then
-            echo "  [SKIP] $dataset | n=$size (requires at least 2 chains)"
+        # Round up to even (task requires pairs of chains)
+        n=$(( size % 2 == 0 ? size : size + 1 ))
+        if [ "$n" -lt 4 ]; then
+            echo "  [SKIP] $dataset | n=$n (requires at least 2 chains)"
             continue
         fi
-        if check_existing_result "$dataset" "$size"; then
-            echo "  [EXISTS] $dataset | n=$size"
+        if check_existing_result "$dataset" "$n"; then
+            echo "  [EXISTS] $dataset | n=$n"
             continue
         fi
-        echo "  [RUN] $dataset | n=$size"
+        echo "  [RUN] $dataset | n=$n"
         python3 -m eval_scripts.eval_associative_inference \
             --models "$MODEL" \
-            --n-images "$size" \
-            --dataset "$dataset" || echo "  [ERROR] $dataset | n=$size"
-        sleep "$SLEEP_BETWEEN"
+            --n-images "$n" \
+            --dataset "$dataset" || echo "  [ERROR] $dataset | n=$n"
     done
 done
 

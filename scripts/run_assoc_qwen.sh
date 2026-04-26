@@ -57,23 +57,24 @@ echo "========== Associative Inference: $MODEL =========="
 for dataset in "${DATASETS[@]}"; do
     echo "--- Dataset: $dataset ---"
     for size in "${SIZES[@]}"; do
-        if [ "$size" -lt 4 ]; then
-            echo "  [SKIP] $dataset | n=$size (requires at least 2 chains)"
+        n=$(( size % 2 == 0 ? size : size + 1 ))
+        if [ "$n" -lt 4 ]; then
+            echo "  [SKIP] $dataset | n=$n (requires at least 2 chains)"
             continue
         fi
-        if [ "$size" -ge 500 ]; then
-            echo "  [SKIP-LIMIT] $dataset | n=$size (VRAM limit)"
+        if [ "$n" -ge 500 ]; then
+            echo "  [SKIP-LIMIT] $dataset | n=$n (VRAM limit)"
             continue
         fi
-        if check_existing_result "$dataset" "$size"; then
-            echo "  [EXISTS] $dataset | n=$size"
+        if check_existing_result "$dataset" "$n"; then
+            echo "  [EXISTS] $dataset | n=$n"
             continue
         fi
-        echo "  [RUN] $dataset | n=$size"
+        echo "  [RUN] $dataset | n=$n"
         python3 -m eval_scripts.eval_associative_inference \
             --models "$MODEL" \
-            --n-images "$size" \
-            --dataset "$dataset" || echo "  [ERROR] $dataset | n=$size"
+            --n-images "$n" \
+            --dataset "$dataset" || echo "  [ERROR] $dataset | n=$n"
     done
 done
 

@@ -1,0 +1,131 @@
+{
+  "_metadata": {
+    "task": "Visual Haystacks",
+    "timestamp": "20260407_113956",
+    "mode": "single_needle",
+    "split": "VHs_large",
+    "image_count": "5",
+    "qa_root": "dataset/VHs_qa",
+    "image_root": "dataset/coco",
+    "n_trials": 3,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 0.6666666666666666,
+        "valid_accuracy": 0.6666666666666666,
+        "compliance": 1.0
+      }
+    },
+    "max_samples": 3,
+    "max_context_images": null,
+    "seed": 0,
+    "shuffle_images": true,
+    "fetch_missing_coco": true
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 5,
+        "metadata": {
+          "mode": "single_needle",
+          "split": "VHs_large",
+          "image_count": "5",
+          "n_images": 5,
+          "pos_images": [
+            "train2017/000000368875.jpg"
+          ],
+          "neg_images": [
+            "train2017/000000019463.jpg",
+            "train2017/000000285633.jpg",
+            "train2017/000000450500.jpg",
+            "train2017/000000121521.jpg"
+          ],
+          "shuffled_image_paths": [
+            "train2017/000000285633.jpg",
+            "train2017/000000019463.jpg",
+            "train2017/000000368875.jpg",
+            "train2017/000000121521.jpg",
+            "train2017/000000450500.jpg"
+          ]
+        }
+      },
+      {
+        "trial": 1,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 5,
+        "metadata": {
+          "mode": "single_needle",
+          "split": "VHs_large",
+          "image_count": "5",
+          "n_images": 5,
+          "pos_images": [
+            "train2017/000000412491.jpg"
+          ],
+          "neg_images": [
+            "train2017/000000385971.jpg",
+            "train2017/000000567686.jpg",
+            "train2017/000000018873.jpg",
+            "train2017/000000412001.jpg"
+          ],
+          "shuffled_image_paths": [
+            "train2017/000000412491.jpg",
+            "train2017/000000567686.jpg",
+            "train2017/000000385971.jpg",
+            "train2017/000000018873.jpg",
+            "train2017/000000412001.jpg"
+          ]
+        }
+      },
+      {
+        "trial": 2,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 5,
+        "metadata": {
+          "mode": "single_needle",
+          "split": "VHs_large",
+          "image_count": "5",
+          "n_images": 5,
+          "pos_images": [
+            "val2017/000000458768.jpg"
+          ],
+          "neg_images": [
+            "train2017/000000010591.jpg",
+            "train2017/000000475889.jpg",
+            "train2017/000000487404.jpg",
+            "train2017/000000126992.jpg"
+          ],
+          "shuffled_image_paths": [
+            "train2017/000000010591.jpg",
+            "val2017/000000458768.jpg",
+            "train2017/000000126992.jpg",
+            "train2017/000000475889.jpg",
+            "train2017/000000487404.jpg"
+          ]
+        }
+      }
+    ],
+    "accuracy": 0.6666666666666666,
+    "valid_accuracy": 0.6666666666666666,
+    "compliance": 1.0,
+    "n_trials": 3,
+    "n_valid_trials": 3,
+    "n_correct": 2,
+    "n_parse_failures": 0
+  }
+}

@@ -10,7 +10,7 @@ from collections import defaultdict
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.plotting import plot_continuous_recognition, plot_2afc, plot_source_memory
 
-def load_results(results_dir="results"):
+def load_results(results_dir="final_results"):
     """Load all result files and organize by task type."""
     results_path = Path(results_dir)
 

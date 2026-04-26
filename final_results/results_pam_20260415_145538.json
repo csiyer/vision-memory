@@ -1,0 +1,137 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260415_145538",
+    "dataset": "Brady2008",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.5,
+        "n_correct": 5,
+        "total": 10
+      }
+    },
+    "max_context_pairs": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "CRAYON",
+        "reported": "crayon",
+        "correct": 1,
+        "raw_response": "CRAYON",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/8258007.thl.jpg",
+          "name": "8258007.thl.jpg"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "PICNIC",
+        "reported": "picnic",
+        "correct": 1,
+        "raw_response": "PICNIC",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/30835757.thl.jpg",
+          "name": "30835757.thl.jpg"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "TENT",
+        "reported": "was",
+        "correct": 0,
+        "raw_response": "Based on the image you provided, which shows a yellow toy crane, the word paired with it was",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/ACRANE9.jpg",
+          "name": "ACRANE9.jpg"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "CARTON",
+        "reported": "the",
+        "correct": 0,
+        "raw_response": "Based on the image provided, which shows a hand puppet of a king or a similar figure, the",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/Atoydoll12.jpg",
+          "name": "Atoydoll12.jpg"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "HEATER",
+        "reported": "connectors",
+        "correct": 0,
+        "raw_response": "Based on the image you provided, which shows a metal electronic component with multiple coaxial cable connectors,",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/8258244.thl.jpg",
+          "name": "8258244.thl.jpg"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "GARAGE",
+        "reported": "garage",
+        "correct": 1,
+        "raw_response": "GARAGE",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/ADRIARRA2.jpg",
+          "name": "ADRIARRA2.jpg"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "MONSTER",
+        "reported": "was",
+        "correct": 0,
+        "raw_response": "Based on the image you provided, which shows a vintage-style radio, the word paired with it was",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/26428753.thl.jpg",
+          "name": "26428753.thl.jpg"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "BLANKET",
+        "reported": "the",
+        "correct": 0,
+        "raw_response": "Based on the image you provided, which shows a woven straw sombrero with a yellow trim, the",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/ACOWBOYH3.jpg",
+          "name": "ACOWBOYH3.jpg"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "SKETCH",
+        "reported": "sketch",
+        "correct": 1,
+        "raw_response": "SKETCH",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/ATICKETBO.jpg",
+          "name": "ATICKETBO.jpg"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "PALM",
+        "reported": "palm",
+        "correct": 1,
+        "raw_response": "PALM",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/8020414.thl.jpg",
+          "name": "8020414.thl.jpg"
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "n_correct": 5,
+    "total": 10
+  }
+}

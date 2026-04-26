@@ -1,55 +1,55 @@
 {
   "_metadata": {
     "task": "2-AFC Recognition",
-    "timestamp": "20260412_165054",
-    "dataset": "things",
-    "n_images": 1000,
+    "timestamp": "20260413_131256",
+    "dataset": "Brady2008",
+    "n_images": 100,
     "n_trials": 50,
     "models": [
-      "qwen3-vl"
+      "qwen3-vl-8b"
     ],
     "summary": {
-      "qwen3-vl": {
-        "accuracy": 0.48,
-        "d_prime": -0.06953600269120601,
-        "mem_score": 0.0
+      "qwen3-vl-8b": {
+        "accuracy": 1.0,
+        "d_prime": 3.300447169932385,
+        "mem_score": 1.0
       }
     },
     "max_context_images": null,
-    "foil_type": "exemplar"
+    "foil_type": "novel"
   },
-  "qwen3-vl": {
+  "qwen3-vl-8b": {
     "trials": [
       {
         "trial": 0,
         "target": 2,
-        "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "response": 2,
+        "correct": 1,
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 1,
         "target": 2,
-        "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "response": 2,
+        "correct": 1,
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 2,
-        "target": 2,
+        "target": 1,
         "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
+        "correct": 1,
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 3,
-        "target": 2,
+        "target": 1,
         "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
+        "correct": 1,
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
@@ -57,31 +57,31 @@
         "target": 1,
         "response": 1,
         "correct": 1,
-        "foil_type": "exemplar",
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 5,
         "target": 2,
-        "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "response": 2,
+        "correct": 1,
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 6,
-        "target": 1,
-        "response": 1,
+        "target": 2,
+        "response": 2,
         "correct": 1,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 7,
-        "target": 2,
+        "target": 1,
         "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
+        "correct": 1,
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
@@ -89,23 +89,23 @@
         "target": 1,
         "response": 1,
         "correct": 1,
-        "foil_type": "exemplar",
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 9,
-        "target": 2,
-        "response": 2,
+        "target": 1,
+        "response": 1,
         "correct": 1,
-        "foil_type": "exemplar",
-        "raw_response": "2"
+        "foil_type": "novel",
+        "raw_response": "1"
       },
       {
         "trial": 10,
-        "target": 2,
+        "target": 1,
         "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
+        "correct": 1,
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
@@ -113,23 +113,23 @@
         "target": 1,
         "response": 1,
         "correct": 1,
-        "foil_type": "exemplar",
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 12,
-        "target": 2,
+        "target": 1,
         "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
+        "correct": 1,
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 13,
-        "target": 2,
+        "target": 1,
         "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
+        "correct": 1,
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
@@ -137,7 +137,7 @@
         "target": 2,
         "response": 2,
         "correct": 1,
-        "foil_type": "exemplar",
+        "foil_type": "novel",
         "raw_response": "2"
       },
       {
@@ -145,159 +145,159 @@
         "target": 1,
         "response": 1,
         "correct": 1,
-        "foil_type": "exemplar",
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 16,
-        "target": 2,
+        "target": 1,
         "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
+        "correct": 1,
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 17,
-        "target": 2,
-        "response": 2,
+        "target": 1,
+        "response": 1,
         "correct": 1,
-        "foil_type": "exemplar",
-        "raw_response": "2"
+        "foil_type": "novel",
+        "raw_response": "1"
       },
       {
         "trial": 18,
         "target": 2,
-        "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "response": 2,
+        "correct": 1,
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 19,
         "target": 1,
         "response": 1,
         "correct": 1,
-        "foil_type": "exemplar",
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 20,
-        "target": 1,
-        "response": 1,
+        "target": 2,
+        "response": 2,
         "correct": 1,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 21,
         "target": 2,
-        "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "response": 2,
+        "correct": 1,
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 22,
         "target": 2,
-        "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "response": 2,
+        "correct": 1,
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 23,
         "target": 1,
-        "response": 2,
-        "correct": 0,
-        "foil_type": "exemplar",
-        "raw_response": "2"
+        "response": 1,
+        "correct": 1,
+        "foil_type": "novel",
+        "raw_response": "1"
       },
       {
         "trial": 24,
-        "target": 1,
-        "response": 1,
+        "target": 2,
+        "response": 2,
         "correct": 1,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 25,
-        "target": 1,
-        "response": 1,
+        "target": 2,
+        "response": 2,
         "correct": 1,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 26,
-        "target": 1,
-        "response": 1,
+        "target": 2,
+        "response": 2,
         "correct": 1,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 27,
-        "target": 2,
+        "target": 1,
         "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
+        "correct": 1,
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 28,
-        "target": 1,
-        "response": 1,
+        "target": 2,
+        "response": 2,
         "correct": 1,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 29,
-        "target": 2,
+        "target": 1,
         "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
+        "correct": 1,
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 30,
         "target": 2,
-        "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "response": 2,
+        "correct": 1,
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 31,
-        "target": 1,
-        "response": 1,
+        "target": 2,
+        "response": 2,
         "correct": 1,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 32,
         "target": 1,
         "response": 1,
         "correct": 1,
-        "foil_type": "exemplar",
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 33,
-        "target": 2,
-        "response": 2,
+        "target": 1,
+        "response": 1,
         "correct": 1,
-        "foil_type": "exemplar",
-        "raw_response": "2"
+        "foil_type": "novel",
+        "raw_response": "1"
       },
       {
         "trial": 34,
         "target": 1,
         "response": 1,
         "correct": 1,
-        "foil_type": "exemplar",
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
@@ -305,47 +305,47 @@
         "target": 1,
         "response": 1,
         "correct": 1,
-        "foil_type": "exemplar",
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 36,
         "target": 1,
-        "response": 2,
-        "correct": 0,
-        "foil_type": "exemplar",
-        "raw_response": "2"
+        "response": 1,
+        "correct": 1,
+        "foil_type": "novel",
+        "raw_response": "1"
       },
       {
         "trial": 37,
-        "target": 2,
+        "target": 1,
         "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
+        "correct": 1,
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 38,
         "target": 2,
-        "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "response": 2,
+        "correct": 1,
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 39,
-        "target": 2,
+        "target": 1,
         "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
+        "correct": 1,
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 40,
-        "target": 2,
+        "target": 1,
         "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
+        "correct": 1,
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
@@ -353,31 +353,31 @@
         "target": 1,
         "response": 1,
         "correct": 1,
-        "foil_type": "exemplar",
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 42,
-        "target": 1,
+        "target": 2,
         "response": 2,
-        "correct": 0,
-        "foil_type": "exemplar",
+        "correct": 1,
+        "foil_type": "novel",
         "raw_response": "2"
       },
       {
         "trial": 43,
         "target": 2,
-        "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "response": 2,
+        "correct": 1,
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 44,
         "target": 1,
         "response": 1,
         "correct": 1,
-        "foil_type": "exemplar",
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
@@ -385,55 +385,55 @@
         "target": 1,
         "response": 1,
         "correct": 1,
-        "foil_type": "exemplar",
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 46,
-        "target": 1,
-        "response": 1,
+        "target": 2,
+        "response": 2,
         "correct": 1,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "foil_type": "novel",
+        "raw_response": "2"
       },
       {
         "trial": 47,
-        "target": 2,
+        "target": 1,
         "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
+        "correct": 1,
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 48,
-        "target": 2,
+        "target": 1,
         "response": 1,
-        "correct": 0,
-        "foil_type": "exemplar",
+        "correct": 1,
+        "foil_type": "novel",
         "raw_response": "1"
       },
       {
         "trial": 49,
-        "target": 1,
-        "response": 1,
+        "target": 2,
+        "response": 2,
         "correct": 1,
-        "foil_type": "exemplar",
-        "raw_response": "1"
+        "foil_type": "novel",
+        "raw_response": "2"
       }
     ],
-    "accuracy": 0.48,
-    "valid_accuracy": 0.48,
-    "d_prime": -0.06953600269120601,
-    "mem_score": 0.0,
+    "accuracy": 1.0,
+    "valid_accuracy": 1.0,
+    "d_prime": 3.300447169932385,
+    "mem_score": 1.0,
     "n_trials": 50,
     "n_valid_trials": 50,
-    "n_correct": 24,
+    "n_correct": 50,
     "n_parse_failures": 0,
     "accuracy_by_type": {
-      "exemplar": 0.48
+      "novel": 1.0
     },
     "d_prime_by_type": {
-      "exemplar": -0.06953600269120601
+      "novel": 3.300447169932385
     }
   }
 }
