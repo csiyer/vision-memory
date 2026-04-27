@@ -294,7 +294,8 @@ def main():
 
     results_dir = Path(__file__).parent.parent / "results"
     results_dir.mkdir(exist_ok=True)
-    output_path = results_dir / (args.output if args.output else f"results_vhs_{timestamp}.json")
+    model_str = "+".join(e.get_name() for e in evaluators)
+    output_path = results_dir / (args.output if args.output else f"results_vhs_{model_str}_n{args.image_count}_{args.split}_{args.mode}.json")
     with open(output_path, "w") as f:
         json.dump(output_data, f, indent=2)
 

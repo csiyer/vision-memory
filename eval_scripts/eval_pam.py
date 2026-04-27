@@ -87,8 +87,10 @@ def parse_word_response(text, target_word):
 
     text = text.strip()
 
-    # Simple extraction: look for the word in the response
-    # This handles cases like "The word was: APPLE" or just "APPLE"
+    # Strip Qwen3 thinking blocks (<think>...</think>)
+    import re
+    text = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
+
     words = text.split()
 
     # If response is a single word, return it
@@ -96,11 +98,16 @@ def parse_word_response(text, target_word):
         return words[0].lower().strip('.,;:!?"\'')
 
     # Look for the target word in the response (case insensitive)
-    text_lower = text.lower()
-    if target_word.lower() in text_lower:
+    if target_word.lower() in text.lower():
         return target_word.lower()
 
-    # Try to extract last capitalized word or last word
+    # Wordpool words are ALL_CAPS — prefer the first all-caps token in the response
+    for word in words:
+        cleaned = word.strip('.,;:!?"\'')
+        if cleaned and cleaned.isupper() and len(cleaned) > 1:
+            return cleaned.lower()
+
+    # Last resort: return the last non-empty token
     for word in reversed(words):
         cleaned = word.strip('.,;:!?"\'')
         if cleaned:
@@ -248,7 +255,8 @@ def main():
     if args.output:
         output_path = results_dir / args.output
     else:
-        output_path = results_dir / f"results_pam_{timestamp}.json"
+        model_str = "+".join(e.get_name() for e in evaluators)
+        output_path = results_dir / f"results_pam_{model_str}_n{args.n_images}_{args.dataset}.json"
 
     with open(output_path, "w") as f:
         json.dump(output_data, f, indent=2)

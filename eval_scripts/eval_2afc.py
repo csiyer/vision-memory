@@ -255,7 +255,8 @@ def main():
     if args.output:
         output_path = results_dir / args.output
     else:
-        output_path = results_dir / f"results_2afc_{timestamp}.json"
+        model_str = "+".join(e.get_name() for e in evaluators)
+        output_path = results_dir / f"results_2afc_{model_str}_n{args.n_images}_{args.dataset}_{args.foil_type}.json"
 
     with open(output_path, "w") as f:
         json.dump(output_data, f, indent=2)

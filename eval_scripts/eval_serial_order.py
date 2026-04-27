@@ -315,7 +315,8 @@ def main():
     results_dir = Path(__file__).parent.parent / "results"
     results_dir.mkdir(exist_ok=True)
 
-    default_name = f"results_serial_{args.variant}_{timestamp}.json"
+    model_str = "+".join(e.get_name() for e in evaluators)
+    default_name = f"results_serial_{args.variant}_{model_str}_n{args.n_images}_{args.dataset}.json"
     output_path = results_dir / (args.output if args.output else default_name)
     with open(output_path, "w") as f:
         json.dump(output_data, f, indent=2)

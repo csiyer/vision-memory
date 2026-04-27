@@ -117,7 +117,7 @@ class QwenEvaluator(BaseEvaluator):
         with torch.no_grad():
             output_ids = self.model.generate(
                 **inputs,
-                max_new_tokens=20,
+                max_new_tokens=100,
                 do_sample=False
             )
 

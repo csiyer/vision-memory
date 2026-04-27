@@ -19,7 +19,7 @@ source "$SCRIPT_DIR/venv/bin/activate"
 MODEL="gemini"
 N_TRIALS=50
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 5 10 100 500 1000)
+SIZES=(1 2 5 10 100 250 500 1000)
 DATASETS=("things" "Brady2008")
 FOIL_TYPES=("novel" "exemplar" "state" "all")
 
@@ -29,25 +29,7 @@ check_existing_result() {
     local dataset="$1"
     local n_images="$2"
     local foil_type="$3"
-    for f in "$RESULTS_DIR"/results_2afc_*.json; do
-        [ -f "$f" ] || continue
-        if python3 -c "
-import json, sys
-d = json.load(open('$f'))
-m = d.get('_metadata', {})
-if not m: sys.exit(1)
-if '2-AFC' not in m.get('task', ''): sys.exit(1)
-if not any('gemini' in x for x in m.get('models', [])): sys.exit(1)
-if m.get('dataset') != '$dataset': sys.exit(1)
-if m.get('n_images') != $n_images: sys.exit(1)
-if m.get('foil_type') != '$foil_type': sys.exit(1)
-if not any('gemini' in k for k in m.get('summary', {})): sys.exit(1)
-sys.exit(0)
-" 2>/dev/null; then
-            return 0
-        fi
-    done
-    return 1
+    [ -f "$RESULTS_DIR/results_2afc_gemini-2.5-flash_n${n_images}_${dataset}_${foil_type}.json" ]
 }
 
 echo "========== 2-AFC Recognition: $MODEL =========="

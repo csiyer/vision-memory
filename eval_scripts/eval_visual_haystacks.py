@@ -184,7 +184,8 @@ def main():
     if args.output:
         output_path = results_dir / args.output
     else:
-        output_path = results_dir / f"results_haystacks_{timestamp}.json"
+        model_str = "+".join(e.get_name() for e in evaluators)
+        output_path = results_dir / f"results_haystacks_{model_str}_n{args.n_images}.json"
 
     with open(output_path, "w") as f:
         json.dump(output_data, f, indent=2)

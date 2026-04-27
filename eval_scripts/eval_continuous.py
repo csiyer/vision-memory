@@ -179,7 +179,8 @@ def main():
     if args.output:
         output_path = results_dir / args.output
     else:
-        output_path = results_dir / f"results_continuous_{timestamp}.json"
+        model_str = "+".join(ev.get_name() for ev in evaluators)
+        output_path = results_dir / f"results_continuous_{model_str}_n{args.n_images}_{args.dataset}.json"
 
     with open(output_path, "w") as f:
         json.dump(output_data, f, indent=2)

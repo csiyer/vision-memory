@@ -24,28 +24,13 @@ export HF_DATASETS_OFFLINE=1
 
 MODEL="qwen"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(2 5 10 50 100)
+SIZES=(2 5 10 50 100 250 500)
 
 mkdir -p "$RESULTS_DIR" logs
 
 check_existing_result() {
     local image_count="$1"
-    for f in "$RESULTS_DIR"/results_vhs_*.json; do
-        [ -f "$f" ] || continue
-        if python3 -c "
-import json, sys
-d = json.load(open('$f'))
-m = d.get('_metadata', {})
-if not m: sys.exit(1)
-if m.get('mode') != 'single_needle': sys.exit(1)
-if str(m.get('image_count')) != '$image_count': sys.exit(1)
-if not any('qwen' in k for k in m.get('summary', {})): sys.exit(1)
-sys.exit(0)
-" 2>/dev/null; then
-            return 0
-        fi
-    done
-    return 1
+    [ -f "$RESULTS_DIR/results_vhs_qwen3-vl-8b_n${image_count}_VHs_large_single_needle.json" ]
 }
 
 echo "========== VHS single_needle: $MODEL =========="

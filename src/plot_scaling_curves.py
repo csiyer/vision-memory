@@ -47,15 +47,15 @@ FOIL_LABELS = {
 FOIL_ORDER = ['novel', 'exemplar', 'state', 'all']
 
 # Only include these study sequence lengths
-VALID_N_IMAGES = {1, 5, 10, 100, 1000}
+VALID_N_IMAGES = {1, 5, 10, 100, 250, 500, 1000}
 
 
 def _apply_axis_style(ax, sizes):
     """Apply standard axis styling; use log scale only when x values are positive."""
     if sizes and max(sizes) > 0:
         ax.set_xscale('log')
-        ax.set_xticks([1, 10, 100, 1000])
-        ax.set_xticklabels(['1', '10', '100', '1000'])
+        ax.set_xticks([1, 10, 100, 500, 1000])
+        ax.set_xticklabels(['1', '10', '100', '500', '1000'])
         ax.set_xlim(0.8, 1500)
     ax.set_ylim(0, 105)
     ax.set_yticks([0, 20, 40, 60, 80, 100])
@@ -287,8 +287,20 @@ def plot_single_dataset_comparison(data, task, dataset, output_dir="plots"):
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="Generate scaling curve plots")
+    parser.add_argument("--results-dir", default="final_results",
+                        help="Directory to load results from (default: final_results)")
+    parser.add_argument("--output-dir", default="plots",
+                        help="Directory to save plots (default: plots)")
+    parser.add_argument("--comparison-grid", action="store_true",
+                        help="Also generate comparison grid plots")
+    parser.add_argument("--all-models", action="store_true",
+                        help="Also generate per-dataset all-models plots")
+    args = parser.parse_args()
+
     print("Loading results...")
-    data = load_results()
+    data = load_results(args.results_dir)
 
     if not data:
         print("No results found in results/ directory")
@@ -299,28 +311,28 @@ def main():
         for model in data[task]:
             print(f"  {task} / {model}: {list(data[task][model].keys())}")
 
-    output_dir = "plots"
+    output_dir = args.output_dir
 
     for task in data:
         task_data = data[task]
 
-        # Individual model/dataset plots
+        # Individual model/dataset plots (always generated)
         print(f"\nGenerating individual plots for task '{task}'...")
         for model in task_data:
             for dataset in task_data[model]:
                 plot_model_scaling(data, task, model, dataset, output_dir)
 
-        # Comparison grid
-        print(f"Generating comparison grid for task '{task}'...")
-        plot_comparison_grid(data, task, output_dir)
+        if args.comparison_grid:
+            print(f"Generating comparison grid for task '{task}'...")
+            plot_comparison_grid(data, task, output_dir)
 
-        # Per-dataset all-model comparison
-        print(f"Generating per-dataset comparisons for task '{task}'...")
-        datasets = set()
-        for model_data in task_data.values():
-            datasets.update(model_data.keys())
-        for dataset in datasets:
-            plot_single_dataset_comparison(data, task, dataset, output_dir)
+        if args.all_models:
+            print(f"Generating per-dataset all-model comparisons for task '{task}'...")
+            datasets = set()
+            for model_data in task_data.values():
+                datasets.update(model_data.keys())
+            for dataset in datasets:
+                plot_single_dataset_comparison(data, task, dataset, output_dir)
 
     print(f"\nAll plots saved to '{output_dir}/' directory")
 
