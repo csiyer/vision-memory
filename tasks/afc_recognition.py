@@ -26,7 +26,12 @@ class AFCRecognitionTask:
             # If we need exemplars, we need 2 per category
             # For novel foils, we need 2x categories (one for original, one for foil)
             exemplars = 2 if foil_type in ['exemplar', 'all'] else 1
-            n_cats = n_images * 2 if foil_type == 'novel' else n_images
+            if foil_type == 'novel':
+                n_cats = n_images * 2
+            elif foil_type == 'all':
+                n_cats = (n_images * 3 + 1) // 2  # half novel pairs need 2 cats each, half exemplar need 1
+            else:
+                n_cats = n_images
             self.dataset = ThingsDataset(n_categories=n_cats, exemplars_per_category=exemplars)
         else:
             self.dataset = BradyDataset(type='Objects')

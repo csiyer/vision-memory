@@ -439,7 +439,7 @@ def main():
                 plot_single_dataset_comparison(data, task, dataset, output_dir)
 
         if args.overlap:
-            overlap_tasks = {"2afc", "serial_free", "pam"}
+            overlap_tasks = {"2afc", "serial_free", "pam", "vhs_single", "vhs_multi"}
             if task in overlap_tasks:
                 print(f"Generating overlap plots for task '{task}'...")
                 datasets = set()

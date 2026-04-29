@@ -98,7 +98,8 @@ class Molmo2Evaluator(BaseEvaluator):
             return_dict=True,
         )
 
-        inputs = {k: v.to(self.model.device) for k, v in inputs.items()}
+        device = next(self.model.parameters()).device
+        inputs = {k: v.to(device) if hasattr(v, "to") else v for k, v in inputs.items()}
 
         with torch.inference_mode():
             generated_ids = self.model.generate(
