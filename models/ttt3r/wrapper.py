@@ -129,19 +129,26 @@ class TTT3RMemoryWrapper:
         views: Sequence[dict[str, Any]],
         keep_outputs: bool = True,
     ) -> list[FrameReadout]:
+        frame_readouts, _ = self.study_views(views, keep_outputs=keep_outputs)
+        return frame_readouts
+
+    @torch.no_grad()
+    def study_views(
+        self,
+        views: Sequence[dict[str, Any]],
+        keep_outputs: bool = True,
+    ) -> tuple[list[FrameReadout], TTT3RMemoryState]:
         frame_readouts: list[FrameReadout] = []
         state: TTT3RMemoryState | None = None
         for raw_view in views:
             readout, state = self.step(raw_view, state=state, keep_output=keep_outputs)
             frame_readouts.append(readout)
-        return frame_readouts
+        assert state is not None
+        return frame_readouts, state
 
     @torch.no_grad()
     def encode_views(self, views: Sequence[dict[str, Any]]) -> TTT3RMemoryState:
-        state: TTT3RMemoryState | None = None
-        for raw_view in views:
-            _, state = self.step(raw_view, state=state, keep_output=False)
-        assert state is not None
+        _, state = self.study_views(views, keep_outputs=False)
         return state
 
     @torch.no_grad()
