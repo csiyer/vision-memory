@@ -1,10 +1,25 @@
 {
-    "Dubrow2014": {
-        "n_subjects": 25,
-        "sequence_length": 25,
-        "accuracy": 0.77,
-        "accuracy_1_trial_apart": 0.66,
-        "accuracy_3_trials_apart": 0.79,
-        "accuracy_more_trials_apart": 0.85
+    "free": {
+        "Sherman2025": {
+            "n_subjects": 200,
+            "sequence_length": 250,
+            "rank_correlation_with_truth": 0.245
+        }
+    },
+    "2afc": {
+        "Dubrow2014": {
+            "n_subjects": 25,
+            "sequence_length": 25,
+            "accuracy": 0.77,
+            "accuracy_1_trial_apart": 0.66,
+            "accuracy_3_trials_apart": 0.79,
+            "accuracy_more_trials_apart": 0.85
+        },
+        "Sherman 2025": {
+            "n_subjects": 50,
+            "sequence_length": 250,
+            "accuracy": 0.78,
+            "accuracy_1_trial_apart": 0.78
+        }
     }
 }
