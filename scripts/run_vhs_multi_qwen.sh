@@ -11,20 +11,19 @@
 #SBATCH --constraint=A6000
 
 # VHS multi-needle: qwen3-vl-8b
-# VRAM limited => skip image_count>=50
 
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
 source "$SCRIPT_DIR/venv/bin/activate"
 
-export HF_HOME="/insomnia001/home/pm3361/.cache/huggingface"
+export HF_HOME="/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/hf_cache"
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 
 MODEL="qwen"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(2 5 10 50 100 250 500)
+SIZES=(5 10 20 50 100 500)
 
 mkdir -p "$RESULTS_DIR" logs
 
@@ -36,10 +35,6 @@ check_existing_result() {
 echo "========== VHS multi_needle: $MODEL =========="
 
 for size in "${SIZES[@]}"; do
-    if [ "$size" -ge 50 ]; then
-        echo "  [SKIP-LIMIT] image_count=$size (Qwen VRAM limit)"
-        continue
-    fi
     if check_existing_result "$size"; then
         echo "  [EXISTS] image_count=$size"
         continue

@@ -22,6 +22,7 @@ from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
 from evaluators.qwen_evaluator import QwenEvaluator
+from evaluators.molmo2_evaluator import Molmo2Evaluator
 
 
 def parse_yes_no(text):
@@ -157,7 +158,7 @@ def main():
         "--models",
         nargs="+",
         default=["gpt-4o", "claude", "gemini"],
-        help="Models to evaluate: gpt-4o, claude, gemini, qwen",
+        help="Models to evaluate: gpt-4o, claude, gemini, qwen, molmo2",
     )
     parser.add_argument(
         "--mode",
@@ -244,8 +245,10 @@ def main():
         evaluators.append(GoogleEvaluator())
     if "qwen" in args.models and "Qwen/Qwen3-VL-8B-Instruct" not in done:
         evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+    if "molmo2" in args.models and "molmo2-8b" not in done:
+        evaluators.append(Molmo2Evaluator("allenai/Molmo2-8B"))
     if not evaluators:
-        print("No valid models specified (or all already completed). Use --models gpt-4o claude gemini qwen")
+        print("No valid models specified (or all already completed). Use --models gpt-4o claude gemini qwen molmo2")
         return
 
     print("Running Visual Haystacks evaluation:")

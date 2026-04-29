@@ -9,17 +9,20 @@
 #SBATCH --cpus-per-task=4
 
 # VHS single-needle: gpt-4o
-# Sizes fixed by benchmark: 2 5 10 50 100
-# GPT-4o context limit => skip image_count>=500 (all valid VHS sizes are fine)
 
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
 source "$SCRIPT_DIR/venv/bin/activate"
+export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
+
+# Stagger start to avoid concurrent API hammering
+sleep 300
 
 MODEL="gpt-4o"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(2 5 10 50 100 250 500)
+SIZES=(oracle 2 5 10 50 100 250)
+QA_ROOT="$SCRIPT_DIR/datasets/VHs_qa"
 
 mkdir -p "$RESULTS_DIR" logs
 
@@ -28,9 +31,18 @@ check_existing_result() {
     [ -f "$RESULTS_DIR/results_vhs_gpt-4o_n${image_count}_VHs_large_single_needle.json" ]
 }
 
+check_qa_file_exists() {
+    local image_count="$1"
+    [ -f "$QA_ROOT/single_needle/VHs_large/visual_haystack_${image_count}.json" ]
+}
+
 echo "========== VHS single_needle: $MODEL =========="
 
 for size in "${SIZES[@]}"; do
+    if ! check_qa_file_exists "$size"; then
+        echo "  [SKIP] image_count=$size (no QA file)"
+        continue
+    fi
     if check_existing_result "$size"; then
         echo "  [EXISTS] image_count=$size"
         continue

@@ -141,8 +141,21 @@ class VisualHaystacksTask:
         filename = _build_qa_filename(self.mode, self.split, self.image_count)
         qa_file = self.qa_root / filename
         if not qa_file.exists():
+            # Collect valid sizes from files actually present for this mode/split
+            if self.mode == "multi_needle":
+                search_dir = self.qa_root / "multi_needle"
+            else:
+                search_dir = self.qa_root / "single_needle" / self.split
+            valid_sizes = sorted(
+                int(p.stem.split("_")[-1])
+                for p in search_dir.glob("visual_haystack_*.json")
+                if p.stem.split("_")[-1].isdigit()
+            ) if search_dir.exists() else []
             raise FileNotFoundError(
                 f"VHS QA file not found: {qa_file}\n"
+                f"Valid image counts for mode={self.mode!r}"
+                + (f", split={self.split!r}" if self.mode == "single_needle" else "")
+                + f": {valid_sizes}\n"
                 f"Download the Visual Haystacks dataset and place QA JSONs under {self.qa_root}."
             )
         with open(qa_file) as f:
@@ -168,7 +181,12 @@ class VisualHaystacksTask:
         """Return list of trial dicts with keys: images, prompt, target, metadata."""
         trials = []
         for item in self._data:
-            image_paths = item.get("image", [])
+            # Oracle format uses pos_image/neg_image; other sizes use image
+            if "image" in item:
+                image_paths = item["image"]
+            else:
+                image_paths = item.get("pos_image", []) + item.get("neg_image", [])
+
             if self.shuffle_images:
                 image_paths = list(image_paths)
                 self._rng.shuffle(image_paths)
@@ -185,7 +203,6 @@ class VisualHaystacksTask:
             if missing:
                 continue  # skip trials with missing images
 
-            # VHS QA items: {"image": [...], "conversations": [{"from": "human", "value": "..."}, {"from": "gpt", "value": "yes/no"}]}
             conversations = item.get("conversations", [])
             if len(conversations) < 2:
                 continue
@@ -195,7 +212,11 @@ class VisualHaystacksTask:
             trials.append(
                 {
                     "images": images,
-                    "prompt": prompt + " Answer with only 'yes' or 'no'.",
+                    "prompt": (
+                        prompt
+                        + " The answer is 'yes' for approximately half of all questions."
+                        + " Answer with only 'yes' or 'no'."
+                    ),
                     "target": target,
                     "metadata": {
                         "id": item.get("id"),

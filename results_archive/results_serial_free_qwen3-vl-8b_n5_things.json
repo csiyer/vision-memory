@@ -1,0 +1,1627 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (Free Report)",
+    "variant": "free",
+    "timestamp": "20260428_215712",
+    "dataset": "things",
+    "n_images": 5,
+    "n_trials": 100,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 1.0
+      }
+    },
+    "max_context_images": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 1,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position 2 of the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 3,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position 2 of the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image occurred at position 1 in the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 6,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 7,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position **4** of the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image occurred at position 1 in the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 9,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 10,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 11,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 12,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 13,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position 2 of the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 14,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 15,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 16,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 17,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image occurred at position 1 in the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 18,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 19,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image occurred at position 1 in the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 20,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position 2 of the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 21,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 22,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position **2** of the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 23,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 24,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image is the 5th in the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 25,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position 2 of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 26,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position 2 of the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 27,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position **4** of the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 28,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 29,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 30,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 31,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 32,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 33,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 34,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 35,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image is the 5th in the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 36,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 37,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 38,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 39,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 40,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image is the 5th in the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 41,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 42,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image occurred at position 1 in the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 43,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position 2 of the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 44,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 45,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 46,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position **2** of the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 47,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 48,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image is the 5th in the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 49,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 50,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position 2 of the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 51,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position 2 of the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 52,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 53,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position 2 of the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 54,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 55,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position 2 of the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 56,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image occurred at position 1 in the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 57,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image occurred at position 1 in the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 58,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 59,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position 2 of the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 60,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 61,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 62,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position **3** of the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 63,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image is the 5th in the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 64,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image occurred at position 1 in the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 65,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 66,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image occurred at position 1 in the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 67,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 68,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image occurred at position 1 in the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 69,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 70,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image is the 5th in the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 71,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 72,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 73,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 74,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 75,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 76,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 77,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 78,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 79,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 80,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 81,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 82,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 83,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position **3** of the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 84,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 85,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 86,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 87,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 88,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image occurred at position 5 in the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 89,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position **2** of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 90,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position 2 of the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 91,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 92,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 93,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position **4** of the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 94,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image occurred in position 3 of the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 95,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image occurred in position 4 of the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 96,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred in position 2 of the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 97,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image occurred at position 1 in the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 98,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image occurred at position 1 in the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 99,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image occurred at position 1 in the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      }
+    ],
+    "average_error": 0.0,
+    "n_correct": 100,
+    "accuracy": 1.0,
+    "n_parse_failures": 0
+  }
+}

@@ -1,7 +1,7 @@
 {
   "_metadata": {
     "task": "Visual Haystacks",
-    "timestamp": "20260423_144622",
+    "timestamp": "20260428_093909",
     "mode": "single_needle",
     "split": "VHs_large",
     "image_count": "2",
@@ -14,8 +14,8 @@
     "summary": {
       "gemini-2.5-flash": {
         "accuracy": 0.01,
-        "valid_accuracy": 0.017543859649122806,
-        "compliance": 0.57
+        "valid_accuracy": 0.02,
+        "compliance": 0.5
       }
     },
     "max_samples": 100,
@@ -31,7 +31,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see the image, so I don't know if there is a traffic light.",
+        "raw_response": "I cannot answer 'yes' or 'no' because I do not have access to any image.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -45,9 +45,9 @@
       {
         "trial": 1,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot see any image. Therefore, I cannot tell you if there is a car.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -61,9 +61,9 @@
       {
         "trial": 2,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot see the image. Therefore, I cannot answer whether there is a bench.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -77,9 +77,9 @@
       {
         "trial": 3,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot see the image, so I don't know.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -109,9 +109,9 @@
       {
         "trial": 5,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image, so I am unable to answer.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -125,9 +125,9 @@
       {
         "trial": 6,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot see the image, so I don't know if there is a laptop.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -157,9 +157,9 @@
       {
         "trial": 8,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot see the image you are referring to, so I am unable to answer 'yes' or 'no'.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -175,7 +175,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I need to see the image to answer that question. I cannot perceive images directly.",
+        "raw_response": "I cannot see any image.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -191,7 +191,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see the image, so I don't know if there is a potted plant.",
+        "raw_response": "I cannot see the image, so I am unable to answer whether there is a potted plant.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -205,9 +205,9 @@
       {
         "trial": 11,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I am sorry, but I cannot see any image. Therefore, I cannot tell you if there is a bed in it.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -223,7 +223,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I need to see the image to answer that question. Please provide the image.",
+        "raw_response": "I cannot see the image you are referring to, so I cannot answer whether there is a dog in it.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -237,9 +237,9 @@
       {
         "trial": 13,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot see the image, so I cannot tell you if there is a couch.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -253,9 +253,9 @@
       {
         "trial": 14,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -269,9 +269,9 @@
       {
         "trial": 15,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image, so I cannot answer whether there is a bottle.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -301,9 +301,9 @@
       {
         "trial": 17,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot answer that question because I do not have access to the image you are referring to.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -317,9 +317,9 @@
       {
         "trial": 18,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot see images. Therefore, I cannot tell you if there is a truck in the image with a cow.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -333,9 +333,9 @@
       {
         "trial": 19,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot see the image you are referring to. As an AI, I need the image to be provided or described to answer your question.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -351,7 +351,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see the image, so I don't know if there is a cup.",
+        "raw_response": "I cannot see any image, so I cannot tell you if there is a cup.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -381,9 +381,9 @@
       {
         "trial": 22,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image you are referring to. Therefore, I cannot answer whether there is a fork in it.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -397,9 +397,9 @@
       {
         "trial": 23,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot answer without an image.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -431,7 +431,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see the image, so I don't know if there is a truck.",
+        "raw_response": "I cannot see the image you are referring to. Therefore, I cannot answer whether there is a truck.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -463,7 +463,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see the image, so I don't know if there is a couch. Therefore, I cannot answer with 'yes' or 'no'.",
+        "raw_response": "I cannot see the image, so I cannot tell you if there is a couch.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -479,7 +479,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see the image you are referring to, so I cannot answer whether there is a traffic light present.",
+        "raw_response": "I cannot see the image you are referring to. Therefore, I cannot answer whether there is a traffic light present.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -493,9 +493,9 @@
       {
         "trial": 29,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot see images, so I am unable to answer 'yes' or 'no'.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -527,7 +527,7 @@
         "target": "yes",
         "response": "no",
         "parsed_response": "no",
-        "raw_response": "no",
+        "raw_response": "No",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -559,7 +559,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot answer 'yes' or 'no' because I haven't been provided with the image to analyze.",
+        "raw_response": "I cannot see the image you are referring to. Therefore, I cannot answer whether there is a cell phone in it.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -575,7 +575,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see the image.",
+        "raw_response": "I cannot see the image, so I cannot answer whether there is a truck.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -589,9 +589,9 @@
       {
         "trial": 35,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see images. Therefore, I cannot tell you if there is a cup in the image.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -607,7 +607,7 @@
         "target": "yes",
         "response": "no",
         "parsed_response": "no",
-        "raw_response": "No",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -621,9 +621,9 @@
       {
         "trial": 37,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -637,9 +637,9 @@
       {
         "trial": 38,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image. Therefore, I cannot tell you if there is a sports ball.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -655,7 +655,7 @@
         "target": "yes",
         "response": "no",
         "parsed_response": "no",
-        "raw_response": "No",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -671,7 +671,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see the image you are referring to, so I cannot determine if there is a sports ball.",
+        "raw_response": "I cannot answer this question as I am unable to see the image.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -703,7 +703,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I am sorry, but I do not have access to any image you might be referring to. Therefore, I cannot answer whether there is a bowl in it.",
+        "raw_response": "I cannot answer without seeing the image.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -719,7 +719,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see the image, so I cannot answer.",
+        "raw_response": "I cannot see images. Therefore, I cannot tell if there is a couch in the image with a bowl.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -733,9 +733,9 @@
       {
         "trial": 44,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot see the image you are referring to, therefore I cannot answer whether there is a cat.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -751,7 +751,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see the image, so I cannot answer whether there is a car.",
+        "raw_response": "I cannot see the image you are referring to. Therefore, I cannot answer whether there is a car in it.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -781,9 +781,9 @@
       {
         "trial": 47,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image, so I cannot answer.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -797,9 +797,9 @@
       {
         "trial": 48,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image you are referring to, so I cannot tell you if there is a bench.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -813,9 +813,9 @@
       {
         "trial": 49,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see images, so I don't know what the image with an orange looks like or if it contains a car.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -829,9 +829,9 @@
       {
         "trial": 50,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I am sorry, but I cannot see images. Therefore, I cannot tell you if there is a surfboard in the image you are referring to.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -847,7 +847,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot answer this question without seeing the image. I am unable to view images.",
+        "raw_response": "I cannot see the image you are referring to, so I cannot answer your question.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -877,9 +877,9 @@
       {
         "trial": 53,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image you are referring to, so I cannot tell you if there is a dog.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -909,10 +909,10 @@
       {
         "trial": 55,
         "target": "yes",
-        "response": "yes",
-        "parsed_response": "yes",
-        "raw_response": "yes",
-        "correct": 1,
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
         "n_images_sent": 0,
         "metadata": {
           "id": "SdEkP7mb8mysHvhzp6nyQZ",
@@ -957,9 +957,9 @@
       {
         "trial": 58,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot see the image, so I cannot answer 'yes' or 'no'.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -973,9 +973,9 @@
       {
         "trial": 59,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I don't have access to the image, so I cannot tell you if there is a bench. I cannot answer with only 'yes' or 'no' without seeing the image.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -989,9 +989,9 @@
       {
         "trial": 60,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I am sorry, but I cannot see images. Therefore, I cannot tell you if there is a dining table in the image you are referring to.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1005,9 +1005,9 @@
       {
         "trial": 61,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image, so I cannot determine if there is a traffic light.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1021,9 +1021,9 @@
       {
         "trial": 62,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I am sorry, but I need to see the image to answer your question. As an AI, I do not have access to external content like specific images unless they are provided to me.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1037,9 +1037,9 @@
       {
         "trial": 63,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image. Therefore, I cannot tell you if there is a truck in it.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1055,7 +1055,7 @@
         "target": "yes",
         "response": "no",
         "parsed_response": "no",
-        "raw_response": "no",
+        "raw_response": "No",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1069,9 +1069,9 @@
       {
         "trial": 65,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image to determine if there is a bus. Therefore, I cannot answer with 'yes' or 'no'.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1087,7 +1087,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see images, so I am unable to answer whether there is a chair in the image.",
+        "raw_response": "I cannot see images. Therefore, I cannot tell you if there is a chair in the image.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1117,10 +1117,10 @@
       {
         "trial": 68,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I am sorry, but I cannot see the image you are referring to. Therefore, I cannot answer whether there is a chair.",
-        "correct": 0,
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
         "n_images_sent": 0,
         "metadata": {
           "id": "BrJCuP8qqDj4BfQ8s5M57W",
@@ -1149,9 +1149,9 @@
       {
         "trial": 70,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "No",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot answer 'yes' or 'no' because no image was provided for me to analyze.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1165,9 +1165,9 @@
       {
         "trial": 71,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image you are referring to, so I am unable to determine if there is a cell phone.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1183,7 +1183,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see any image. Therefore, I cannot determine if there is a cat.",
+        "raw_response": "I cannot see images, so I don't know if there is a cat in the image with an umbrella.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1197,9 +1197,9 @@
       {
         "trial": 73,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "No",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image you are referring to, so I cannot answer whether there is a bench.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1215,7 +1215,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see the image, so I don't know if there is a dining table.",
+        "raw_response": "I cannot see the image, so I cannot answer whether there is a dining table.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1229,9 +1229,9 @@
       {
         "trial": 75,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot see the image, so I don't know if there is a tie.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1245,9 +1245,9 @@
       {
         "trial": 76,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image, so I cannot answer your question.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1263,7 +1263,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot answer as the image was not provided.",
+        "raw_response": "I cannot see images, so I don't know if there is a truck in the image you are referring to. I am unable to answer with only 'yes' or 'no'.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1277,9 +1277,9 @@
       {
         "trial": 78,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot see the image you are referring to, so I cannot tell you if there is a dog in it.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1325,9 +1325,9 @@
       {
         "trial": 81,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image, so I don't have the information to answer 'yes' or 'no'.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1341,9 +1341,9 @@
       {
         "trial": 82,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot answer this question as I do not have access to the image.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1359,7 +1359,7 @@
         "target": "yes",
         "response": "no",
         "parsed_response": "no",
-        "raw_response": "no",
+        "raw_response": "No",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1375,7 +1375,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see the image with the mouse. Therefore, I cannot answer 'yes' or 'no'.",
+        "raw_response": "I cannot see the image. Therefore, I cannot tell if there is a bottle.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1389,9 +1389,9 @@
       {
         "trial": 85,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image, so I cannot answer your question.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1421,9 +1421,9 @@
       {
         "trial": 87,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "I cannot answer that question as no image was provided for me to analyze.",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I need to see the image to answer your question. Please provide the image.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1469,9 +1469,9 @@
       {
         "trial": 90,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see images.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1485,9 +1485,9 @@
       {
         "trial": 91,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I am sorry, but I cannot see the image you are referring to. Therefore, I cannot tell you if there is a tennis racket.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1503,7 +1503,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see the image you are referring to, so I am unable to tell you if there is a chair.",
+        "raw_response": "I cannot answer with 'yes' or 'no' because I do not have access to the image you are referring to.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1581,9 +1581,9 @@
       {
         "trial": 97,
         "target": "yes",
-        "response": "unknown",
-        "parsed_response": "unknown",
-        "raw_response": "I cannot see any image. Please provide the image so I can answer your question.",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1597,9 +1597,9 @@
       {
         "trial": 98,
         "target": "yes",
-        "response": "no",
-        "parsed_response": "no",
-        "raw_response": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot see the image, so I cannot answer your question.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1615,7 +1615,7 @@
         "target": "yes",
         "response": "unknown",
         "parsed_response": "unknown",
-        "raw_response": "I cannot see the image, so I cannot tell you if there is a bowl.",
+        "raw_response": "I cannot see the image you are referring to, so I am unable to answer 'yes' or 'no'.",
         "correct": 0,
         "n_images_sent": 0,
         "metadata": {
@@ -1628,11 +1628,11 @@
       }
     ],
     "accuracy": 0.01,
-    "valid_accuracy": 0.017543859649122806,
-    "compliance": 0.57,
+    "valid_accuracy": 0.02,
+    "compliance": 0.5,
     "n_trials": 100,
-    "n_valid_trials": 57,
+    "n_valid_trials": 50,
     "n_correct": 1,
-    "n_parse_failures": 43
+    "n_parse_failures": 50
   }
 }

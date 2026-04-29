@@ -1,0 +1,57 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260427_111030",
+    "dataset": "things",
+    "n_images": 2,
+    "n_trials": 2,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0,
+        "n_correct": 2,
+        "total": 2
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "PEDAL",
+        "reported": "pedal",
+        "correct": 1,
+        "raw_response": "PEDAL",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "TUNNEL",
+        "reported": "tunnel",
+        "correct": 1,
+        "raw_response": "TUNNEL",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 2,
+    "total": 2
+  }
+}

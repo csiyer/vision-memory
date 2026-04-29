@@ -15,10 +15,14 @@ set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
 source "$SCRIPT_DIR/venv/bin/activate"
+export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
+
+# Stagger start to avoid concurrent API hammering
+sleep 240
 
 MODEL="gemini"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250 500 1000)
+SIZES=(1 2 5 10 100 250)
 DATASETS=("things" "Brady2008")
 
 mkdir -p "$RESULTS_DIR" logs
@@ -42,7 +46,8 @@ for dataset in "${DATASETS[@]}"; do
         python3 -m eval_scripts.eval_pam \
             --models "$MODEL" \
             --n-images "$size" \
-            --dataset "$dataset" || echo "  [ERROR] $dataset | n=$size"
+            --dataset "$dataset" \
+            --n-trials 100 || echo "  [ERROR] $dataset | n=$size"
     done
 done
 

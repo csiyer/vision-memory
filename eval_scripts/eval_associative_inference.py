@@ -23,6 +23,7 @@ from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
 from evaluators.qwen_evaluator import QwenEvaluator
+from evaluators.molmo2_evaluator import Molmo2Evaluator
 from src.metrics import calculate_associative_inference_metrics
 
 
@@ -67,18 +68,16 @@ def build_messages(evaluator, study_sequence, study_prompt, cue_image, test_imag
 
 
 def parse_response(text):
-    """Parse 1 or 2 from response."""
+    """Parse 1 or 2 from response, taking the last standalone digit to handle verbose responses."""
     if text is None:
         return -1
     text = text.strip()
-    if "1" in text and "2" not in text:
-        return 1
-    elif "2" in text and "1" not in text:
-        return 2
-    elif text.startswith("1"):
-        return 1
-    elif text.startswith("2"):
-        return 2
+
+    # Find all standalone 1s and 2s (not part of larger numbers), take the last one
+    matches = [(m.start(), int(m.group())) for m in re.finditer(r"(?<!\d)[12](?!\d)", text)]
+    if matches:
+        return max(matches, key=lambda x: x[0])[1]
+
     lower = text.lower()
     has_first = re.search(r"\bfirst\b", lower) is not None
     has_second = re.search(r"\bsecond\b", lower) is not None
@@ -89,23 +88,20 @@ def parse_response(text):
     return -1
 
 
-def run_evaluation(evaluators, n_images=20, dataset="things", max_context_pairs=None):
-    task = AssociativeInferenceTask(dataset_name=dataset, n_trials=n_images)
-    trial_data = task.get_trials()
+def run_evaluation(evaluators, n_images=20, dataset="things", max_context_pairs=None, n_trials=None):
+    """Each trial is an independent study+test episode with a fresh sample of n_images chains."""
+    n_trials = n_trials if n_trials is not None else n_images // 2
 
     all_results = {}
     for evaluator in evaluators:
         print(f"\n=== {evaluator.get_name()} ===")
-
-        actual_context = max_context_pairs if max_context_pairs else len(trial_data["study_sequence"])
-        if "Anthropic" in type(evaluator).__name__:
-            actual_context = min(actual_context, 97)
-        if actual_context < len(trial_data["study_sequence"]):
-            print(f"  Note: Sending {actual_context} of {len(trial_data['study_sequence'])} study pairs to context")
-
         results = []
 
-        for i, test_trial in enumerate(trial_data["test_phase"]):
+        for i in range(n_trials):
+            task = AssociativeInferenceTask(dataset_name=dataset, n_trials=n_images)
+            trial_data = task.get_trials()
+            test_trial = trial_data["test_phase"][0]
+
             messages = build_messages(
                 evaluator,
                 trial_data["study_sequence"],
@@ -128,7 +124,7 @@ def run_evaluation(evaluators, n_images=20, dataset="things", max_context_pairs=
                 "metadata": test_trial["metadata"],
             })
             status = "✓" if correct else "✗"
-            print(f"  Trial {i+1}/{len(trial_data['test_phase'])}: {status}", end="\r")
+            print(f"  Trial {i+1}/{n_trials}: {status}", end="\r")
 
         metrics = calculate_associative_inference_metrics(results)
         print(f"\n  Accuracy: {metrics['accuracy']:.1%} ({metrics['n_correct']}/{metrics['total']})")
@@ -141,9 +137,11 @@ def run_evaluation(evaluators, n_images=20, dataset="things", max_context_pairs=
 def main():
     parser = argparse.ArgumentParser(description="Associative Inference Evaluation")
     parser.add_argument("--models", nargs="+", default=["gpt-4o", "claude", "gemini"],
-                        help="Models to evaluate: gpt-4o, claude, gemini, qwen")
+                        help="Models to evaluate: gpt-4o, claude, gemini, qwen, molmo2")
     parser.add_argument("--n-images", type=int, default=20,
                         help="Number of trials (must be even; sets number of A-B and B-C pairs = n/2 each)")
+    parser.add_argument("--n-trials", type=int, default=None,
+                        help="Number of test trials (default: n-images/2 chains; resamples with replacement if larger)")
     parser.add_argument("--max-context-pairs", type=int, default=None,
                         help="Max study pairs to send in context per trial (default: all)")
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
@@ -165,12 +163,16 @@ def main():
             evaluators.append(GoogleEvaluator())
         elif m == "qwen":
             evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+        elif m == "molmo2":
+            evaluators.append(Molmo2Evaluator("allenai/Molmo2-8B"))
         elif m.startswith("claude"):
             evaluators.append(AnthropicEvaluator(m))
         elif m.startswith("gemini"):
             evaluators.append(GoogleEvaluator(m))
         elif m.startswith("qwen") or m.startswith("Qwen"):
             evaluators.append(QwenEvaluator(m))
+        elif m.startswith("molmo") or m.startswith("allenai"):
+            evaluators.append(Molmo2Evaluator(m))
         else:
             evaluators.append(OpenAIEvaluator(m))
 
@@ -185,11 +187,12 @@ def main():
 
     print(f"Running Associative Inference evaluation:")
     print(f"  Models: {[e.get_name() for e in evaluators]}")
-    print(f"  N trials: {args.n_images} ({args.n_images // 2} chains)")
+    print(f"  N chains: {args.n_images // 2} ({args.n_images} study pairs)")
+    print(f"  N trials: {args.n_trials or args.n_images // 2}")
     print(f"  Max context pairs: {args.max_context_pairs or 'all'}")
     print(f"  Dataset: {args.dataset}")
 
-    results = run_evaluation(evaluators, args.n_images, args.dataset, args.max_context_pairs)
+    results = run_evaluation(evaluators, args.n_images, args.dataset, args.max_context_pairs, n_trials=args.n_trials)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     n_trials = len(next(iter(results.values()))["trials"]) if results else 0

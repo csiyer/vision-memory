@@ -1,7 +1,7 @@
 {
   "_metadata": {
     "task": "Visual Haystacks",
-    "timestamp": "20260415_165253",
+    "timestamp": "20260424_043122",
     "n_images": 100,
     "n_trials": 50,
     "models": [
@@ -9,7 +9,7 @@
     ],
     "summary": {
       "qwen3-vl-8b": {
-        "accuracy": 0.58,
+        "accuracy": 0.46,
         "hit_rate": 0.0,
         "correct_rejection_rate": 1.0
       }
@@ -19,10 +19,10 @@
     "trials": [
       {
         "trial": 0,
-        "target": "yes",
+        "target": "no",
         "response": "no",
-        "correct": false,
-        "target_present": true,
+        "correct": true,
+        "target_present": false,
         "raw_response": "no"
       },
       {
@@ -35,34 +35,34 @@
       },
       {
         "trial": 2,
-        "target": "no",
+        "target": "yes",
         "response": "no",
-        "correct": true,
-        "target_present": false,
+        "correct": false,
+        "target_present": true,
         "raw_response": "no"
       },
       {
         "trial": 3,
-        "target": "no",
+        "target": "yes",
         "response": "no",
-        "correct": true,
-        "target_present": false,
+        "correct": false,
+        "target_present": true,
         "raw_response": "no"
       },
       {
         "trial": 4,
-        "target": "no",
+        "target": "yes",
         "response": "no",
-        "correct": true,
-        "target_present": false,
+        "correct": false,
+        "target_present": true,
         "raw_response": "no"
       },
       {
         "trial": 5,
-        "target": "no",
+        "target": "yes",
         "response": "no",
-        "correct": true,
-        "target_present": false,
+        "correct": false,
+        "target_present": true,
         "raw_response": "no"
       },
       {
@@ -83,10 +83,10 @@
       },
       {
         "trial": 8,
-        "target": "no",
+        "target": "yes",
         "response": "no",
-        "correct": true,
-        "target_present": false,
+        "correct": false,
+        "target_present": true,
         "raw_response": "no"
       },
       {
@@ -99,10 +99,10 @@
       },
       {
         "trial": 10,
-        "target": "no",
+        "target": "yes",
         "response": "no",
-        "correct": true,
-        "target_present": false,
+        "correct": false,
+        "target_present": true,
         "raw_response": "no"
       },
       {
@@ -123,10 +123,10 @@
       },
       {
         "trial": 13,
-        "target": "yes",
+        "target": "no",
         "response": "no",
-        "correct": false,
-        "target_present": true,
+        "correct": true,
+        "target_present": false,
         "raw_response": "no"
       },
       {
@@ -139,10 +139,10 @@
       },
       {
         "trial": 15,
-        "target": "no",
+        "target": "yes",
         "response": "no",
-        "correct": true,
-        "target_present": false,
+        "correct": false,
+        "target_present": true,
         "raw_response": "no"
       },
       {
@@ -163,10 +163,10 @@
       },
       {
         "trial": 18,
-        "target": "no",
+        "target": "yes",
         "response": "no",
-        "correct": true,
-        "target_present": false,
+        "correct": false,
+        "target_present": true,
         "raw_response": "no"
       },
       {
@@ -179,10 +179,10 @@
       },
       {
         "trial": 20,
-        "target": "yes",
+        "target": "no",
         "response": "no",
-        "correct": false,
-        "target_present": true,
+        "correct": true,
+        "target_present": false,
         "raw_response": "no"
       },
       {
@@ -195,10 +195,10 @@
       },
       {
         "trial": 22,
-        "target": "yes",
+        "target": "no",
         "response": "no",
-        "correct": false,
-        "target_present": true,
+        "correct": true,
+        "target_present": false,
         "raw_response": "no"
       },
       {
@@ -219,14 +219,6 @@
       },
       {
         "trial": 25,
-        "target": "no",
-        "response": "no",
-        "correct": true,
-        "target_present": false,
-        "raw_response": "no"
-      },
-      {
-        "trial": 26,
         "target": "yes",
         "response": "no",
         "correct": false,
@@ -234,11 +226,19 @@
         "raw_response": "no"
       },
       {
-        "trial": 27,
+        "trial": 26,
         "target": "no",
         "response": "no",
         "correct": true,
         "target_present": false,
+        "raw_response": "no"
+      },
+      {
+        "trial": 27,
+        "target": "yes",
+        "response": "no",
+        "correct": false,
+        "target_present": true,
         "raw_response": "no"
       },
       {
@@ -259,10 +259,10 @@
       },
       {
         "trial": 30,
-        "target": "no",
+        "target": "yes",
         "response": "no",
-        "correct": true,
-        "target_present": false,
+        "correct": false,
+        "target_present": true,
         "raw_response": "no"
       },
       {
@@ -275,18 +275,18 @@
       },
       {
         "trial": 32,
-        "target": "no",
-        "response": "no",
-        "correct": true,
-        "target_present": false,
-        "raw_response": "no"
-      },
-      {
-        "trial": 33,
         "target": "yes",
         "response": "no",
         "correct": false,
         "target_present": true,
+        "raw_response": "no"
+      },
+      {
+        "trial": 33,
+        "target": "no",
+        "response": "no",
+        "correct": true,
+        "target_present": false,
         "raw_response": "no"
       },
       {
@@ -371,10 +371,10 @@
       },
       {
         "trial": 44,
-        "target": "yes",
+        "target": "no",
         "response": "no",
-        "correct": false,
-        "target_present": true,
+        "correct": true,
+        "target_present": false,
         "raw_response": "no"
       },
       {
@@ -387,10 +387,10 @@
       },
       {
         "trial": 46,
-        "target": "no",
+        "target": "yes",
         "response": "no",
-        "correct": true,
-        "target_present": false,
+        "correct": false,
+        "target_present": true,
         "raw_response": "no"
       },
       {
@@ -418,11 +418,11 @@
         "raw_response": "no"
       }
     ],
-    "accuracy": 0.58,
-    "valid_accuracy": 0.58,
+    "accuracy": 0.46,
+    "valid_accuracy": 0.46,
     "n_trials": 50,
     "n_valid": 50,
-    "n_correct": 29,
+    "n_correct": 23,
     "hit_rate": 0.0,
     "correct_rejection_rate": 1.0
   }

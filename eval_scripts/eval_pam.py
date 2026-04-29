@@ -24,6 +24,7 @@ from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
 from evaluators.qwen_evaluator import QwenEvaluator
+from evaluators.molmo2_evaluator import Molmo2Evaluator
 from src.metrics import calculate_pam_metrics
 from src.plotting import default_plots_dir, plot_pam
 
@@ -116,32 +117,40 @@ def parse_word_response(text, target_word):
     return text.lower()
 
 
-def run_evaluation(evaluators, n_images=20, dataset='things', max_context_pairs=None):
+def run_evaluation(evaluators, n_images=20, dataset='things', max_context_pairs=None, n_trials=None):
     """Run paired associate memory evaluation on all evaluators.
+
+    Each trial is an independent study+test episode: a fresh set of n_images
+    image-word pairs is sampled, studied, then tested (one test question per episode).
+    n_trials controls how many independent episodes are run.
 
     Args:
         evaluators: List of evaluator instances
-        n_images: Number of image-word pairs to study
+        n_images: Number of image-word pairs to study per trial
         dataset: Dataset to use ('things', 'Brady2008')
         max_context_pairs: Max pairs to send in context per trial. If None, sends all pairs.
+        n_trials: Number of independent study+test episodes (default: n_images).
     """
-    task = PairedAssociateMemoryTask(dataset_name=dataset, n_images=n_images)
-    trial_data = task.get_trials()
+    n_trials = n_trials if n_trials is not None else n_images
 
     all_results = {}
     for evaluator in evaluators:
         print(f"\n=== {evaluator.get_name()} ===")
 
-        # Warn if pairs will be truncated
-        actual_context = max_context_pairs if max_context_pairs else len(trial_data['study_sequence'])
+        actual_context = max_context_pairs if max_context_pairs else n_images
         if "Anthropic" in type(evaluator).__name__:
             actual_context = min(actual_context, 98)
-        if actual_context < len(trial_data['study_sequence']):
-            print(f"  Note: Sending {actual_context} of {len(trial_data['study_sequence'])} pairs to context")
+        if actual_context < n_images:
+            print(f"  Note: Sending {actual_context} of {n_images} pairs to context")
 
         results = []
 
-        for i, test_trial in enumerate(trial_data['test_phase']):
+        for i in range(n_trials):
+            task = PairedAssociateMemoryTask(dataset_name=dataset, n_images=n_images)
+            trial_data = task.get_trials()
+            # Each episode: study all pairs, test on one randomly chosen pair
+            test_trial = trial_data['test_phase'][0]
+
             messages = build_messages(
                 evaluator,
                 trial_data['study_sequence'],
@@ -153,7 +162,6 @@ def run_evaluation(evaluators, n_images=20, dataset='things', max_context_pairs=
             response_text = evaluator._call_api(messages)
             reported_word = parse_word_response(response_text, test_trial['target'])
 
-            # Check if correct (case-insensitive comparison)
             correct = 1 if reported_word.lower() == test_trial['target'].lower() else 0
 
             results.append({
@@ -165,9 +173,8 @@ def run_evaluation(evaluators, n_images=20, dataset='things', max_context_pairs=
                 'metadata': test_trial['metadata']
             })
             status = '✓' if correct else '✗'
-            print(f"  Trial {i+1}/{len(trial_data['test_phase'])}: {status} (target: {test_trial['target']}, got: {reported_word})", end="\r")
+            print(f"  Trial {i+1}/{n_trials}: {status} (target: {test_trial['target']}, got: {reported_word})", end="\r")
 
-        # Calculate metrics
         metrics = calculate_pam_metrics(results)
         print(f"\n  Accuracy: {metrics['accuracy']:.1%} ({metrics['n_correct']}/{metrics['total']})")
 
@@ -182,9 +189,11 @@ def run_evaluation(evaluators, n_images=20, dataset='things', max_context_pairs=
 def main():
     parser = argparse.ArgumentParser(description="Paired Associate Memory Evaluation")
     parser.add_argument("--models", nargs="+", default=["gpt-4o", "claude", "gemini"],
-                        help="Models to evaluate: gpt-4o, claude, gemini, qwen")
+                        help="Models to evaluate: gpt-4o, claude, gemini, qwen, molmo2")
     parser.add_argument("--n-images", type=int, default=20,
                         help="Number of image-word pairs to study")
+    parser.add_argument("--n-trials", type=int, default=None,
+                        help="Number of test trials (default: n-images; resamples with replacement if larger)")
     parser.add_argument("--max-context-pairs", type=int, default=None,
                         help="Max pairs to send in context per trial (default: all pairs)")
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
@@ -206,14 +215,17 @@ def main():
         evaluators.append(GoogleEvaluator())
     if "qwen" in args.models:
         evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+    if "molmo2" in args.models:
+        evaluators.append(Molmo2Evaluator("allenai/Molmo2-8B"))
 
     if not evaluators:
-        print("No valid models specified. Use --models gpt-4o claude gemini qwen")
+        print("No valid models specified. Use --models gpt-4o claude gemini qwen molmo2")
         return
 
     print(f"Running Paired Associate Memory evaluation:")
     print(f"  Models: {[e.get_name() for e in evaluators]}")
     print(f"  N pairs: {args.n_images}")
+    print(f"  N trials: {args.n_trials or args.n_images}")
     print(f"  Max context pairs: {args.max_context_pairs or 'all'}")
     print(f"  Dataset: {args.dataset}")
 
@@ -221,7 +233,8 @@ def main():
         evaluators,
         args.n_images,
         args.dataset,
-        max_context_pairs=args.max_context_pairs
+        max_context_pairs=args.max_context_pairs,
+        n_trials=args.n_trials,
     )
 
     # Build output with metadata at the top (base keys align with eval_continuous / eval_2afc)

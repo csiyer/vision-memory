@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate scaling curve plots matching the ViT^3 Base reference style.
+Generate scaling curve plots.
 
 Creates plots showing:
 - X-axis: Study sequence length (1, 10, 100, 1000) on log scale
@@ -8,7 +8,6 @@ Creates plots showing:
 - Separate lines for each foil type (Novel, Exemplar, State)
 - Separate subplots for each model/readout method
 
-Reference: ViT^3 Base on Brady 2008 2-AFC Recognition plot
 """
 import json
 import matplotlib.pyplot as plt
@@ -33,30 +32,30 @@ FOIL_COLORS = {
     'novel': '#E24A33',
     'exemplar': '#348ABD',
     'state': '#B8860B',
-    'all': '#348ABD',
+    'all': '#7A378B',
 }
 
 FOIL_LABELS = {
     'novel': 'Novel',
     'exemplar': 'Exemplar',
     'state': 'State',
-    'all': 'Accuracy',
+    'all': 'All',
 }
 
 # Consistent foil ordering across all subplots
 FOIL_ORDER = ['novel', 'exemplar', 'state', 'all']
 
-# Only include these study sequence lengths
-VALID_N_IMAGES = {1, 5, 10, 100, 250, 500, 1000}
+# Only include these study sequence lengths (cap at 250)
+VALID_N_IMAGES = {1, 2, 4, 5, 6, 10, 100, 250}
 
 
 def _apply_axis_style(ax, sizes):
     """Apply standard axis styling; use log scale only when x values are positive."""
     if sizes and max(sizes) > 0:
         ax.set_xscale('log')
-        ax.set_xticks([1, 10, 100, 500, 1000])
-        ax.set_xticklabels(['1', '10', '100', '500', '1000'])
-        ax.set_xlim(0.8, 1500)
+        ax.set_xticks([1, 10, 100, 250])
+        ax.set_xticklabels(['1', '10', '100', '250'])
+        ax.set_xlim(0.8, 300)
     ax.set_ylim(0, 105)
     ax.set_yticks([0, 20, 40, 60, 80, 100])
     ax.axhline(y=50, color='gray', linestyle='--', alpha=0.5, linewidth=1)
@@ -71,14 +70,18 @@ def _apply_axis_style(ax, sizes):
 
 
 TASK_GLOB_MAP = {
-    "2afc":       "results_2afc_*.json",
-    "continuous": "results_continuous_*.json",
-    "pam":        "results_pam_*.json",
-    "vhs":        "results_vhs_*.json",
+    "2afc":          "results_2afc_*.json",
+    "continuous":    "results_continuous_*.json",
+    "pam":           "results_pam_*.json",
+    "vhs_single":    "results_vhs_*single_needle*.json",
+    "vhs_multi":     "results_vhs_*multi_needle*.json",
+    "serial_free":   "results_serial_free_*.json",
+    "serial_afc":    "results_serial_afc_*.json",
+    "assoc":         "results_assoc_*.json",
 }
 
 
-def load_results(results_dir="final_results"):
+def load_results(results_dir="results"):
     """Load all task results and organize by task, model, dataset, foil, size."""
     results_path = Path(results_dir)
 
@@ -107,6 +110,8 @@ def load_results(results_dir="final_results"):
                     if model == "qwen3-vl":
                         continue
                     if n_images not in VALID_N_IMAGES:
+                        continue
+                    if foil_type == "accuracy":
                         continue
                     if model in summary:
                         accuracy = summary[model].get("accuracy", 0)
@@ -289,7 +294,7 @@ def plot_single_dataset_comparison(data, task, dataset, output_dir="plots"):
 def main():
     import argparse
     parser = argparse.ArgumentParser(description="Generate scaling curve plots")
-    parser.add_argument("--results-dir", default="final_results",
+    parser.add_argument("--results-dir", default="results",
                         help="Directory to load results from (default: final_results)")
     parser.add_argument("--output-dir", default="plots",
                         help="Directory to save plots (default: plots)")

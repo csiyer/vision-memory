@@ -23,6 +23,7 @@ from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
 from evaluators.qwen_evaluator import QwenEvaluator
+from evaluators.molmo2_evaluator import Molmo2Evaluator
 from src.metrics import calculate_metrics, calculate_hit_rate_by_delay
 from src.plotting import default_plots_dir, plot_continuous_recognition
 
@@ -39,13 +40,13 @@ def parse_yes_no(text):
     return -1
 
 
-def run_evaluation(evaluators, n_images=50, dataset='things'):
+def run_evaluation(evaluators, n_images=50, dataset='things', n_trials=None):
     """Run continuous recognition evaluation on all evaluators.
 
     Returns:
         tuple: (all_results, task_info) where task_info has n_trials and task hyperparameters.
     """
-    task = ContinuousRecognitionTask(dataset_name=dataset, n_images=n_images)
+    task = ContinuousRecognitionTask(dataset_name=dataset, n_images=n_images, n_trials=n_trials)
     trials = task.get_trials()
     task_info = {
         "n_trials": len(trials),
@@ -79,6 +80,7 @@ def run_evaluation(evaluators, n_images=50, dataset='things'):
                 'trial': i,
                 'target': trial['target'],
                 'response': response,
+                'correct': 1 if response == trial['target'] else (0 if response != -1 else None),
                 'raw_response': response_text,
                 'metadata': trial['metadata'],
             })
@@ -109,11 +111,11 @@ def run_evaluation(evaluators, n_images=50, dataset='things'):
 def main():
     parser = argparse.ArgumentParser(description="Continuous Recognition Evaluation")
     parser.add_argument("--models", nargs="+", default=["gpt-4o", "claude", "gemini"],
-                        help="Models to evaluate: gpt-4o, claude, gemini, qwen")
+                        help="Models to evaluate: gpt-4o, claude, gemini, qwen, molmo2")
     parser.add_argument("--n-images", type=int, default=50,
                         help="Number of unique images")
     parser.add_argument("--n-trials", type=int, default=None,
-                        help="Ignored; sequence length is derived from n-images and task p_old (kept for CLI compatibility)")
+                        help="Total sequence length (new + repeated). If omitted, derived from n-images and p_old=0.5")
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
                         help="Dataset to use")
     parser.add_argument("--output", type=str, default=None,
@@ -133,9 +135,11 @@ def main():
         evaluators.append(GoogleEvaluator())
     if "qwen" in args.models:
         evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+    if "molmo2" in args.models:
+        evaluators.append(Molmo2Evaluator("allenai/Molmo2-8B"))
 
     if not evaluators:
-        print("No valid models specified. Use --models gpt-4o claude gemini qwen")
+        print("No valid models specified. Use --models gpt-4o claude gemini qwen molmo2")
         return
 
     print(f"Running continuous recognition evaluation:")
@@ -143,7 +147,7 @@ def main():
     print(f"  N images: {args.n_images}")
     print(f"  Dataset: {args.dataset}")
 
-    results, task_info = run_evaluation(evaluators, args.n_images, args.dataset)
+    results, task_info = run_evaluation(evaluators, args.n_images, args.dataset, n_trials=args.n_trials)
     print(f"  N trials (generated): {task_info['n_trials']}")
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

@@ -1,0 +1,102 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260427_131747",
+    "dataset": "things",
+    "n_images": 5,
+    "n_trials": 5,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 1.0,
+        "n_correct": 5,
+        "total": 5
+      }
+    },
+    "max_context_pairs": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "GRADUATE",
+        "reported": "graduate",
+        "correct": 1,
+        "raw_response": "GRADUATE",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "PENDULUM",
+        "reported": "pendulum",
+        "correct": 1,
+        "raw_response": "PENDULUM",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "WOMAN",
+        "reported": "woman",
+        "correct": 1,
+        "raw_response": "WOMAN",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "GORILLA",
+        "reported": "gorilla",
+        "correct": 1,
+        "raw_response": "GORILLA",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "PARTNER",
+        "reported": "partner",
+        "correct": 1,
+        "raw_response": "PARTNER",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 5,
+    "total": 5
+  }
+}

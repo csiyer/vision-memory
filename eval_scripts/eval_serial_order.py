@@ -24,6 +24,7 @@ from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
 from evaluators.qwen_evaluator import QwenEvaluator
+from evaluators.molmo2_evaluator import Molmo2Evaluator
 from src.metrics import calculate_serial_order_metrics, calculate_afc_serial_order_metrics
 
 
@@ -85,48 +86,61 @@ def build_messages_afc(evaluator, study_sequence, study_prompt, test_images, tes
 
 
 def parse_position_response(text, n):
-    """Parse an integer position 1-N from free-report response."""
+    """Parse an integer position 1-N from free-report response.
+
+    Takes the last candidate value since models typically state their final
+    answer at the end of a verbose response.
+    """
     if text is None:
         return -1
 
-    # ordinal words for small N
-    ordinal_words = {
-        "first": 1, "second": 2, "third": 3, "fourth": 4, "fifth": 5,
-        "sixth": 6, "seventh": 7, "eighth": 8, "ninth": 9, "tenth": 10,
-    }
-    lower = text.lower()
-    for word, val in ordinal_words.items():
-        if re.search(rf"\b{word}\b", lower) and 1 <= val <= n:
-            return val
+    candidates = []
 
     # digit ordinals: 1st, 2nd, 3rd, 4th, ...
     for m in re.finditer(r"\b(\d+)(?:st|nd|rd|th)\b", text, re.IGNORECASE):
         val = int(m.group(1))
         if 1 <= val <= n:
-            return val
+            candidates.append((m.start(), val))
 
     # plain integers
-    for num_str in re.findall(r"\b(\d+)\b", text):
-        val = int(num_str)
+    for m in re.finditer(r"\b(\d+)\b", text):
+        val = int(m.group(1))
         if 1 <= val <= n:
-            return val
+            candidates.append((m.start(), val))
+
+    if candidates:
+        # take the last match
+        return max(candidates, key=lambda x: x[0])[1]
+
+    # ordinal words fallback for small N
+    ordinal_words = {
+        "first": 1, "second": 2, "third": 3, "fourth": 4, "fifth": 5,
+        "sixth": 6, "seventh": 7, "eighth": 8, "ninth": 9, "tenth": 10,
+    }
+    lower = text.lower()
+    last_word_match = None
+    for m in re.finditer(r"\b(" + "|".join(ordinal_words) + r")\b", lower):
+        val = ordinal_words[m.group(1)]
+        if 1 <= val <= n:
+            last_word_match = val
+    if last_word_match is not None:
+        return last_word_match
 
     return -1
 
 
 def parse_afc_response(text):
-    """Parse 1 or 2 from AFC response."""
+    """Parse 1 or 2 from AFC response, taking the first standalone digit since
+    models typically lead with their answer (e.g. 'Image 1 appeared first...')."""
     if text is None:
         return -1
     text = text.strip()
-    if "1" in text and "2" not in text:
-        return 1
-    elif "2" in text and "1" not in text:
-        return 2
-    elif text.startswith("1"):
-        return 1
-    elif text.startswith("2"):
-        return 2
+
+    # First standalone 1 or 2 (not part of a larger number)
+    m = re.search(r"(?<!\d)[12](?!\d)", text)
+    if m:
+        return int(m.group())
+
     lower = text.lower()
     has_first = re.search(r"\bfirst\b", lower) is not None
     has_second = re.search(r"\bsecond\b", lower) is not None
@@ -137,23 +151,21 @@ def parse_afc_response(text):
     return -1
 
 
-def run_free_evaluation(evaluators, n_images=20, dataset="things", max_context_images=None):
-    task = SerialOrderMemoryTask(dataset_name=dataset, n_images=n_images)
-    trial_data = task.get_trials()
-    n = len(trial_data["study_sequence"])
+def run_free_evaluation(evaluators, n_images=20, dataset="things", max_context_images=None, n_trials=None):
+    """Each trial is an independent study+test episode with a fresh sample of n_images."""
+    n_trials = n_trials if n_trials is not None else n_images
 
     all_results = {}
     for evaluator in evaluators:
         print(f"\n=== {evaluator.get_name()} ===")
-
-        actual_context = max_context_images if max_context_images else n
-        if "Anthropic" in type(evaluator).__name__:
-            actual_context = min(actual_context, 99)
-        if actual_context < n:
-            print(f"  Note: Sending {actual_context} of {n} study images to context")
-
         results = []
-        for i, test_trial in enumerate(trial_data["test_phase"]):
+
+        for i in range(n_trials):
+            task = SerialOrderMemoryTask(dataset_name=dataset, n_images=n_images)
+            trial_data = task.get_trials()
+            n = len(trial_data["study_sequence"])
+            test_trial = trial_data["test_phase"][0]
+
             messages = build_messages_free(
                 evaluator,
                 trial_data["study_sequence"],
@@ -175,7 +187,7 @@ def run_free_evaluation(evaluators, n_images=20, dataset="things", max_context_i
                 "metadata": test_trial["metadata"],
             })
             status = "✓" if correct else "✗"
-            print(f"  Trial {i+1}/{len(trial_data['test_phase'])}: {status} (target={test_trial['target']}, got={reported})", end="\r")
+            print(f"  Trial {i+1}/{n_trials}: {status} (target={test_trial['target']}, got={reported})", end="\r")
 
         reported_positions = [r["reported"] for r in results if r["reported"] != -1]
         actual_positions = [r["target"] for r in results if r["reported"] != -1]
@@ -188,23 +200,23 @@ def run_free_evaluation(evaluators, n_images=20, dataset="things", max_context_i
     return all_results
 
 
-def run_afc_evaluation(evaluators, n_images=20, dataset="things", max_context_images=None):
-    task = AFCSerialOrderMemoryTask(dataset_name=dataset, n_images=n_images)
-    trial_data = task.get_trials()
-    n = len(trial_data["study_sequence"])
+def run_afc_evaluation(evaluators, n_images=20, dataset="things", max_context_images=None, n_trials=None):
+    """Each trial is an independent study+test episode with a fresh sample of n_images."""
+    if n_images < 2:
+        print(f"[SKIP] AFC serial order requires at least 2 images, got n_images={n_images}")
+        return {}
+    n_trials = n_trials if n_trials is not None else n_images
 
     all_results = {}
     for evaluator in evaluators:
         print(f"\n=== {evaluator.get_name()} ===")
-
-        actual_context = max_context_images if max_context_images else n
-        if "Anthropic" in type(evaluator).__name__:
-            actual_context = min(actual_context, 98)
-        if actual_context < n:
-            print(f"  Note: Sending {actual_context} of {n} study images to context")
-
         results = []
-        for i, test_trial in enumerate(trial_data["test_phase"]):
+
+        for i in range(n_trials):
+            task = AFCSerialOrderMemoryTask(dataset_name=dataset, n_images=n_images, n_tests=1)
+            trial_data = task.get_trials()
+            test_trial = trial_data["test_phase"][0]
+
             messages = build_messages_afc(
                 evaluator,
                 trial_data["study_sequence"],
@@ -226,7 +238,7 @@ def run_afc_evaluation(evaluators, n_images=20, dataset="things", max_context_im
                 "metadata": test_trial["metadata"],
             })
             status = "✓" if correct else "✗"
-            print(f"  Trial {i+1}/{len(trial_data['test_phase'])}: {status}", end="\r")
+            print(f"  Trial {i+1}/{n_trials}: {status}", end="\r")
 
         metrics = calculate_afc_serial_order_metrics(results)
         print(f"\n  Accuracy: {metrics['accuracy']:.1%} ({metrics['n_correct']}/{metrics['total']})")
@@ -239,11 +251,13 @@ def run_afc_evaluation(evaluators, n_images=20, dataset="things", max_context_im
 def main():
     parser = argparse.ArgumentParser(description="Serial Order Memory Evaluation")
     parser.add_argument("--models", nargs="+", default=["gpt-4o", "claude", "gemini"],
-                        help="Models to evaluate: gpt-4o, claude, gemini, qwen")
+                        help="Models to evaluate: gpt-4o, claude, gemini, qwen, molmo2")
     parser.add_argument("--n-images", type=int, default=20,
                         help="Number of images in study sequence")
     parser.add_argument("--variant", choices=["free", "afc"], default="afc",
                         help="free=report position 1-N; afc=which image came first (default: afc)")
+    parser.add_argument("--n-trials", type=int, default=None,
+                        help="Number of test trials (default: n-images; resamples with replacement if larger)")
     parser.add_argument("--max-context-images", type=int, default=None,
                         help="Max study images to send in context per trial (default: all)")
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
@@ -265,12 +279,16 @@ def main():
             evaluators.append(GoogleEvaluator())
         elif m == "qwen":
             evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+        elif m == "molmo2":
+            evaluators.append(Molmo2Evaluator("allenai/Molmo2-8B"))
         elif m.startswith("claude"):
             evaluators.append(AnthropicEvaluator(m))
         elif m.startswith("gemini"):
             evaluators.append(GoogleEvaluator(m))
         elif m.startswith("qwen") or m.startswith("Qwen"):
             evaluators.append(QwenEvaluator(m))
+        elif m.startswith("molmo") or m.startswith("allenai"):
+            evaluators.append(Molmo2Evaluator(m))
         else:
             evaluators.append(OpenAIEvaluator(m))
 
@@ -281,15 +299,16 @@ def main():
     print(f"Running Serial Order Memory ({args.variant}) evaluation:")
     print(f"  Models: {[e.get_name() for e in evaluators]}")
     print(f"  N images: {args.n_images}")
+    print(f"  N trials: {args.n_trials or args.n_images}")
     print(f"  Variant: {args.variant}")
     print(f"  Max context images: {args.max_context_images or 'all'}")
     print(f"  Dataset: {args.dataset}")
 
     if args.variant == "free":
-        results = run_free_evaluation(evaluators, args.n_images, args.dataset, args.max_context_images)
+        results = run_free_evaluation(evaluators, args.n_images, args.dataset, args.max_context_images, n_trials=args.n_trials)
         task_name = "Serial Order Memory (Free Report)"
     else:
-        results = run_afc_evaluation(evaluators, args.n_images, args.dataset, args.max_context_images)
+        results = run_afc_evaluation(evaluators, args.n_images, args.dataset, args.max_context_images, n_trials=args.n_trials)
         task_name = "Serial Order Memory (AFC)"
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

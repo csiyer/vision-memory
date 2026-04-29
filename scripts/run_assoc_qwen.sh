@@ -11,20 +11,19 @@
 #SBATCH --constraint=A6000
 
 # Associative Inference: qwen3-vl-8b (local inference, requires GPU)
-# A6000 48GB VRAM => skip n>=500
 
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
 source "$SCRIPT_DIR/venv/bin/activate"
 
-export HF_HOME="/insomnia001/home/pm3361/.cache/huggingface"
+export HF_HOME="/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/hf_cache"
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 
 MODEL="qwen"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250 500 1000)
+SIZES=(2 4 6 10 100 250)
 DATASETS=("things" "Brady2008")
 
 mkdir -p "$RESULTS_DIR" logs
@@ -39,16 +38,7 @@ echo "========== Associative Inference: $MODEL =========="
 
 for dataset in "${DATASETS[@]}"; do
     echo "--- Dataset: $dataset ---"
-    for size in "${SIZES[@]}"; do
-        n=$(( size % 2 == 0 ? size : size + 1 ))
-        if [ "$n" -lt 4 ]; then
-            echo "  [SKIP] $dataset | n=$n (requires at least 2 chains)"
-            continue
-        fi
-        if [ "$n" -ge 500 ]; then
-            echo "  [SKIP-LIMIT] $dataset | n=$n (VRAM limit)"
-            continue
-        fi
+    for n in "${SIZES[@]}"; do
         if check_existing_result "$dataset" "$n"; then
             echo "  [EXISTS] $dataset | n=$n"
             continue
@@ -57,7 +47,8 @@ for dataset in "${DATASETS[@]}"; do
         python3 -m eval_scripts.eval_associative_inference \
             --models "$MODEL" \
             --n-images "$n" \
-            --dataset "$dataset" || echo "  [ERROR] $dataset | n=$n"
+            --dataset "$dataset" \
+            --n-trials 100 || echo "  [ERROR] $dataset | n=$n"
     done
 done
 

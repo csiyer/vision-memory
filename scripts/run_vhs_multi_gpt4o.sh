@@ -9,17 +9,19 @@
 #SBATCH --cpus-per-task=4
 
 # VHS multi-needle: gpt-4o
-# Sizes fixed by benchmark: 2 5 10 50 100
-# GPT-4o context limit => skip image_count>=500 (all valid VHS sizes are fine)
 
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
 source "$SCRIPT_DIR/venv/bin/activate"
+export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
+
+# Stagger start to avoid concurrent API hammering
+sleep 360
 
 MODEL="gpt-4o"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(2 5 10 50 100 250 500)
+SIZES=(5 10 20 50 100 500)
 
 mkdir -p "$RESULTS_DIR" logs
 

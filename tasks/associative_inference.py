@@ -18,6 +18,9 @@ class AssociativeInferenceTask:
 
     def _load_dataset(self):
         n_required_images = self.n_pairs * 3
+        # When there's only 1 chain, load one extra image to serve as a novel foil
+        if self.n_pairs < 2:
+            n_required_images += 1
         if self.dataset_name == "things":
             return ThingsDataset(n_categories=n_required_images)
         if self.dataset_name == "Brady2008":
@@ -27,12 +30,17 @@ class AssociativeInferenceTask:
     def get_trials(self):
         n_available = len(self.dataset)
         n_pairs = min(self.n_pairs, n_available // 3)
-        if n_pairs < 2:
-            raise ValueError("Associative inference requires at least 2 latent ABC chains.")
+        if n_pairs < 1:
+            raise ValueError(
+                f"Associative inference requires at least 1 ABC chain (3 images), "
+                f"but dataset only has {n_available} images."
+            )
 
         indices = list(range(n_available))
         random.shuffle(indices)
         selected_indices = indices[: n_pairs * 3]
+        # Reserve remaining indices as novel-foil pool for single-chain case
+        foil_pool_indices = indices[n_pairs * 3 :]
 
         a_indices = selected_indices[:n_pairs]
         b_indices = selected_indices[n_pairs : 2 * n_pairs]
@@ -103,21 +111,34 @@ class AssociativeInferenceTask:
                 }
             )
 
-        test_phase = []
+        base_test_phase = []
         foil_candidates = list(range(n_pairs))
         random.shuffle(foil_candidates)
+        novel_foil_pool = list(foil_pool_indices)
+        random.shuffle(novel_foil_pool)
 
         for chain in chain_items:
             foil_options = [idx for idx in foil_candidates if idx != chain["chain_index"]]
-            if not foil_options:
-                foil_options = [idx for idx in range(n_pairs) if idx != chain["chain_index"]]
-            foil_chain = chain_items[random.choice(foil_options)]
+            if foil_options:
+                # Normal case: use another chain's C image as foil
+                foil_chain = chain_items[random.choice(foil_options)]
+                foil_image = foil_chain["C"]["image"]
+                foil_meta = foil_chain["C"]["metadata"]
+            else:
+                # Single-chain case: use an unstudied novel image as foil
+                if not novel_foil_pool:
+                    raise ValueError(
+                        "Not enough images for a novel foil — dataset too small for single-chain mode."
+                    )
+                foil_idx = novel_foil_pool.pop()
+                foil_image = self.dataset.get_image(foil_idx)
+                foil_meta = {**self.dataset.get_metadata(foil_idx), "role": "foil", "chain_index": -1}
 
-            options = [chain["C"], foil_chain["C"]]
+            options = [chain["C"], {"image": foil_image, "metadata": foil_meta}]
             random.shuffle(options)
             target = 1 if options[0]["metadata"]["chain_index"] == chain["chain_index"] else 2
 
-            test_phase.append(
+            base_test_phase.append(
                 {
                     "cue_image": chain["A"]["image"],
                     "images": [options[0]["image"], options[1]["image"]],
@@ -128,7 +149,7 @@ class AssociativeInferenceTask:
                         "bridge_item": chain["B"]["metadata"],
                         "cue_item": chain["A"]["metadata"],
                         "correct_option": chain["C"]["metadata"],
-                        "foil_option": foil_chain["C"]["metadata"],
+                        "foil_option": foil_meta,
                     },
                 }
             )
@@ -139,7 +160,7 @@ class AssociativeInferenceTask:
                 "Later you will infer which C image goes with each A image."
             ),
             "study_sequence": study_sequence,
-            "test_phase": test_phase,
+            "test_phase": base_test_phase,
         }
 
 

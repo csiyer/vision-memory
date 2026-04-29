@@ -24,6 +24,7 @@ from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
 from evaluators.qwen_evaluator import QwenEvaluator
+from evaluators.molmo2_evaluator import Molmo2Evaluator
 from src.metrics import calculate_2afc_metrics
 from src.plotting import default_plots_dir, plot_2afc_all
 
@@ -97,31 +98,37 @@ def parse_response(text):
 def run_evaluation(evaluators, n_images=20, n_trials=None, foil_type='novel', dataset='things', max_context_images=None):
     """Run 2-AFC evaluation on all evaluators.
 
+    Each trial is an independent study+test episode: a fresh set of n_images is
+    sampled, studied, then tested on one 2-AFC question. n_trials controls how
+    many independent episodes are run.
+
     Args:
         evaluators: List of evaluator instances
-        n_images: Number of images in study sequence
-        n_trials: Number of test trials (defaults to n_images if not specified)
+        n_images: Number of images in study sequence per trial
+        n_trials: Number of independent study+test episodes (default: n_images)
         foil_type: Type of foils ('novel', 'exemplar', 'state', 'all')
         dataset: Dataset to use ('things', 'Brady2008')
         max_context_images: Max images to send in context per trial. If None, sends all study images.
     """
-    task = AFCRecognitionTask(dataset_name=dataset, n_images=n_images, n_trials=n_trials, foil_type=foil_type)
-    trial_data = task.get_trials()
+    n_trials = n_trials if n_trials is not None else n_images
 
     all_results = {}
     for evaluator in evaluators:
         print(f"\n=== {evaluator.get_name()} ===")
 
-        # Warn if images will be truncated
-        actual_context = max_context_images if max_context_images else len(trial_data['study_sequence'])
+        actual_context = max_context_images if max_context_images else n_images
         if "Anthropic" in type(evaluator).__name__:
             actual_context = min(actual_context, 98)
-        if actual_context < len(trial_data['study_sequence']):
-            print(f"  Note: Sending {actual_context} of {len(trial_data['study_sequence'])} study images to context")
+        if actual_context < n_images:
+            print(f"  Note: Sending {actual_context} of {n_images} study images to context")
 
         results = []
 
-        for i, test_trial in enumerate(trial_data['test_phase']):
+        for i in range(n_trials):
+            task = AFCRecognitionTask(dataset_name=dataset, n_images=n_images, n_trials=1, foil_type=foil_type)
+            trial_data = task.get_trials()
+            test_trial = trial_data['test_phase'][0]
+
             messages = build_messages(
                 evaluator,
                 trial_data['study_sequence'],
@@ -143,9 +150,8 @@ def run_evaluation(evaluators, n_images=20, n_trials=None, foil_type='novel', da
                 'raw_response': response_text
             })
             status = '✓' if correct else '✗'
-            print(f"  Trial {i+1}/{len(trial_data['test_phase'])}: {status}", end="\r")
+            print(f"  Trial {i+1}/{n_trials}: {status}", end="\r")
 
-        # Calculate metrics using the new function
         metrics = calculate_2afc_metrics(results)
         print(f"\n  Accuracy: {metrics['accuracy']:.1%} | d': {metrics['d_prime']:.2f} | Mem Score: {metrics['mem_score']:.2f}")
 
@@ -160,7 +166,7 @@ def run_evaluation(evaluators, n_images=20, n_trials=None, foil_type='novel', da
 def main():
     parser = argparse.ArgumentParser(description="2-AFC Recognition Evaluation")
     parser.add_argument("--models", nargs="+", default=["gpt-4o", "claude", "gemini"],
-                        help="Models to evaluate: gpt-4o, claude, gemini, qwen (or provider model IDs)")
+                        help="Models to evaluate: gpt-4o, claude, gemini, qwen, molmo2 (or provider model IDs)")
     parser.add_argument("--n-images", type=int, default=20,
                         help="Number of images in study sequence")
     parser.add_argument("--n-trials", type=int, default=None,
@@ -192,17 +198,21 @@ def main():
             evaluators.append(GoogleEvaluator())
         elif m == "qwen":
             evaluators.append(QwenEvaluator("Qwen/Qwen3-VL-8B-Instruct"))
+        elif m == "molmo2":
+            evaluators.append(Molmo2Evaluator("allenai/Molmo2-8B"))
         elif m.startswith("claude"):
             evaluators.append(AnthropicEvaluator(m))
         elif m.startswith("gemini"):
             evaluators.append(GoogleEvaluator(m))
         elif m.startswith("qwen") or m.startswith("Qwen"):
             evaluators.append(QwenEvaluator(m))
+        elif m.startswith("molmo") or m.startswith("allenai"):
+            evaluators.append(Molmo2Evaluator(m))
         else:
             evaluators.append(OpenAIEvaluator(m))
 
     if not evaluators:
-        print("No valid models specified. Use --models gpt-4o claude gemini qwen")
+        print("No valid models specified. Use --models gpt-4o claude gemini qwen molmo2")
         return
 
     n_trials = args.n_trials if args.n_trials is not None else args.n_images

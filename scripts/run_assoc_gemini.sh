@@ -10,16 +10,19 @@
 
 # Associative Inference: gemini-2.5-flash
 # 1M token context => all sizes supported
-# n<4 skipped: task requires at least 2 chains (4 images minimum)
 
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
 source "$SCRIPT_DIR/venv/bin/activate"
+export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
+
+# Stagger start to avoid concurrent API hammering
+sleep 120
 
 MODEL="gemini"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250 500 1000)
+SIZES=(2 4 6 10 100 250)
 DATASETS=("things" "Brady2008")
 
 mkdir -p "$RESULTS_DIR" logs
@@ -34,13 +37,7 @@ echo "========== Associative Inference: $MODEL =========="
 
 for dataset in "${DATASETS[@]}"; do
     echo "--- Dataset: $dataset ---"
-    for size in "${SIZES[@]}"; do
-        # Round up to even (task requires pairs of chains)
-        n=$(( size % 2 == 0 ? size : size + 1 ))
-        if [ "$n" -lt 4 ]; then
-            echo "  [SKIP] $dataset | n=$n (requires at least 2 chains)"
-            continue
-        fi
+    for n in "${SIZES[@]}"; do
         if check_existing_result "$dataset" "$n"; then
             echo "  [EXISTS] $dataset | n=$n"
             continue
@@ -49,7 +46,8 @@ for dataset in "${DATASETS[@]}"; do
         python3 -m eval_scripts.eval_associative_inference \
             --models "$MODEL" \
             --n-images "$n" \
-            --dataset "$dataset" || echo "  [ERROR] $dataset | n=$n"
+            --dataset "$dataset" \
+            --n-trials 100 || echo "  [ERROR] $dataset | n=$n"
     done
 done
 

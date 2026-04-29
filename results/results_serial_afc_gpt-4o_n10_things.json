@@ -1,0 +1,184 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260428_115137",
+    "dataset": "things",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.5
+      }
+    },
+    "max_context_images": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The first image appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 5,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The first image appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 10,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The second image (neck) appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 10,
+          "serial_lag": 8,
+          "distance": 7,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The first image (nail clipper) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The second image appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The first image (napkin) appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 9,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The second image (needles) appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 8,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The first image appeared earlier in the sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 8,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The second image (nail polish bottles) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 7,
+          "second_serial_position": 9,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The first image (nail clippers) appeared before the second image (napkin) in the",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 4
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "n_correct": 5,
+    "total": 10,
+    "accuracy_by_distance": {
+      "1": 0.5,
+      "2": 0.0,
+      "4": 0.5,
+      "5": 1.0,
+      "6": 1.0,
+      "7": 0.0
+    }
+  }
+}

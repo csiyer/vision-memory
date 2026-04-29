@@ -30,9 +30,9 @@ class PairedAssociateMemoryTask:
         indices = list(range(len(self.dataset)))
         random.shuffle(indices)
         selected_indices = indices[:n]
-        
+
         words = random.sample(self.wordpool, n)
-        
+
         study_sequence = []
         pairs = []
         for i in range(n):
@@ -44,12 +44,11 @@ class PairedAssociateMemoryTask:
                 "word": word,
                 "metadata": self.dataset.get_metadata(selected_indices[i])
             })
-            
-        # Test phase: show image, ask for word
-        test_phase = []
+
         test_indices = list(range(n))
         random.shuffle(test_indices)
-        
+
+        test_phase = []
         for i in test_indices:
             test_phase.append({
                 "image": pairs[i]["image"],
@@ -57,7 +56,7 @@ class PairedAssociateMemoryTask:
                 "target": pairs[i]["word"],
                 "metadata": pairs[i]["metadata"]
             })
-            
+
         return {
             "study_prompt": "Remember the word paired with each image.",
             "study_sequence": study_sequence,

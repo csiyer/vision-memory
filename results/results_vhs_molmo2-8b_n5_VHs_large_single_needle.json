@@ -1,0 +1,37 @@
+{
+  "_metadata": {
+    "task": "Visual Haystacks",
+    "timestamp": "20260428_223708",
+    "mode": "single_needle",
+    "split": "VHs_large",
+    "image_count": "5",
+    "qa_root": "datasets/VHs_qa",
+    "image_root": "datasets/coco",
+    "n_trials": 0,
+    "models": [
+      "molmo2-8b"
+    ],
+    "summary": {
+      "molmo2-8b": {
+        "accuracy": 0.0,
+        "valid_accuracy": 0.0,
+        "compliance": 0.0
+      }
+    },
+    "max_samples": 100,
+    "max_context_images": null,
+    "seed": 0,
+    "shuffle_images": true,
+    "fetch_missing_coco": true
+  },
+  "molmo2-8b": {
+    "trials": [],
+    "accuracy": 0.0,
+    "valid_accuracy": 0.0,
+    "compliance": 0.0,
+    "n_trials": 0,
+    "n_valid_trials": 0,
+    "n_correct": 0,
+    "n_parse_failures": 0
+  }
+}

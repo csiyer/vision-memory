@@ -11,21 +11,20 @@
 #SBATCH --constraint=A6000
 
 # 2-AFC Recognition: qwen3-vl-8b (local inference, requires GPU)
-# A6000 48GB VRAM => skip n>=500
 
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
 source "$SCRIPT_DIR/venv/bin/activate"
 
-export HF_HOME="/insomnia001/home/pm3361/.cache/huggingface"
+export HF_HOME="/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/hf_cache"
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 
 MODEL="qwen"
-N_TRIALS=50
+N_TRIALS=100
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250 500 1000)
+SIZES=(1 2 5 10 100 250)
 DATASETS=("things" "Brady2008")
 FOIL_TYPES=("novel" "exemplar" "state" "all")
 
@@ -48,8 +47,8 @@ for dataset in "${DATASETS[@]}"; do
             continue
         fi
         for size in "${SIZES[@]}"; do
-            if [ "$size" -ge 500 ]; then
-                echo "  [SKIP-LIMIT] $dataset | $foil | n=$size (VRAM limit)"
+            if [ "$dataset" = "things" ] && [ "$size" -ge 250 ] && { [ "$foil" = "novel" ] || [ "$foil" = "all" ]; }; then
+                echo "  [SKIP] things | $foil | n=$size (needs 2x categories, THINGS only has 225)"
                 continue
             fi
             if check_existing_result "$dataset" "$size" "$foil"; then
@@ -58,7 +57,6 @@ for dataset in "${DATASETS[@]}"; do
             fi
             echo "  [RUN] $dataset | $foil | n=$size"
             trials=$N_TRIALS
-            [ "$size" -lt "$N_TRIALS" ] && trials=$size
             python3 -m eval_scripts.eval_2afc \
                 --models "$MODEL" \
                 --n-images "$size" \

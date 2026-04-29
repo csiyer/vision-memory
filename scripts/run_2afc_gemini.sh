@@ -15,11 +15,15 @@ set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
 source "$SCRIPT_DIR/venv/bin/activate"
+export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
+
+# Stagger start to avoid concurrent API hammering
+sleep 0
 
 MODEL="gemini"
-N_TRIALS=50
+N_TRIALS=100
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250 500 1000)
+SIZES=(1 2 5 10 100 250)
 DATASETS=("things" "Brady2008")
 FOIL_TYPES=("novel" "exemplar" "state" "all")
 
@@ -42,13 +46,16 @@ for dataset in "${DATASETS[@]}"; do
             continue
         fi
         for size in "${SIZES[@]}"; do
+            if [ "$dataset" = "things" ] && [ "$size" -ge 250 ] && { [ "$foil" = "novel" ] || [ "$foil" = "all" ]; }; then
+                echo "  [SKIP] things | $foil | n=$size (needs 2x categories, THINGS only has 225)"
+                continue
+            fi
             if check_existing_result "$dataset" "$size" "$foil"; then
                 echo "  [EXISTS] $dataset | $foil | n=$size"
                 continue
             fi
             echo "  [RUN] $dataset | $foil | n=$size"
             trials=$N_TRIALS
-            [ "$size" -lt "$N_TRIALS" ] && trials=$size
             python3 -m eval_scripts.eval_2afc \
                 --models "$MODEL" \
                 --n-images "$size" \

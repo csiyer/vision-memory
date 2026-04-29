@@ -1,7 +1,7 @@
 {
   "_metadata": {
     "task": "Paired Associate Memory",
-    "timestamp": "20260423_152553",
+    "timestamp": "20260428_103548",
     "dataset": "things",
     "n_images": 5,
     "n_trials": 5,
@@ -10,8 +10,8 @@
     ],
     "summary": {
       "gpt-4o": {
-        "accuracy": 0.4,
-        "n_correct": 2,
+        "accuracy": 1.0,
+        "n_correct": 5,
         "total": 5
       }
     },
@@ -21,10 +21,10 @@
     "trials": [
       {
         "trial": 0,
-        "target": "STEREO",
-        "reported": "stere",
-        "correct": 0,
-        "raw_response": "The word paired with this image was \"STERE",
+        "target": "ANTENNA",
+        "reported": "antenna",
+        "correct": 1,
+        "raw_response": "ANTENNA",
         "metadata": {
           "category": "cat_1129",
           "category_id": 2,
@@ -36,40 +36,25 @@
       },
       {
         "trial": 1,
-        "target": "SLEEVE",
-        "reported": "slee",
-        "correct": 0,
-        "raw_response": "The word paired with that image is \"SLEE",
+        "target": "JELLY",
+        "reported": "jelly",
+        "correct": 1,
+        "raw_response": "JELLY",
         "metadata": {
-          "category": "cat_1130",
-          "category_id": 3,
+          "category": "cat_1128",
+          "category_id": 1,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
           "local_filename": "0.jpg"
         }
       },
       {
         "trial": 2,
-        "target": "WELL",
-        "reported": "well",
+        "target": "SEED",
+        "reported": "seed",
         "correct": 1,
-        "raw_response": "The word paired with this image was \"WELL",
-        "metadata": {
-          "category": "cat_1127",
-          "category_id": 0,
-          "exemplar_id": 0,
-          "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
-          "local_filename": "0.jpg"
-        }
-      },
-      {
-        "trial": 3,
-        "target": "PURSE",
-        "reported": "purse",
-        "correct": 1,
-        "raw_response": "The word paired with this image was \"PURSE",
+        "raw_response": "SEED",
         "metadata": {
           "category": "cat_1131",
           "category_id": 4,
@@ -80,23 +65,38 @@
         }
       },
       {
-        "trial": 4,
-        "target": "CIGARETTE",
-        "reported": "cig",
-        "correct": 0,
-        "raw_response": "The word paired with this image is \"CIG",
+        "trial": 3,
+        "target": "LAGOON",
+        "reported": "lagoon",
+        "correct": 1,
+        "raw_response": "LAGOON",
         "metadata": {
-          "category": "cat_1128",
-          "category_id": 1,
+          "category": "cat_1130",
+          "category_id": 3,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "BOY",
+        "reported": "boy",
+        "correct": 1,
+        "raw_response": "BOY",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
           "local_filename": "0.jpg"
         }
       }
     ],
-    "accuracy": 0.4,
-    "n_correct": 2,
+    "accuracy": 1.0,
+    "n_correct": 5,
     "total": 5
   }
 }

@@ -1,0 +1,1638 @@
+{
+  "_metadata": {
+    "task": "Visual Haystacks",
+    "timestamp": "20260428_103737",
+    "mode": "multi_needle",
+    "split": "VHs_large",
+    "image_count": "10",
+    "qa_root": "datasets/VHs_qa",
+    "image_root": "datasets/coco",
+    "n_trials": 100,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.57,
+        "valid_accuracy": 0.59375,
+        "compliance": 0.96
+      }
+    },
+    "max_samples": 100,
+    "max_context_images": null,
+    "seed": 0,
+    "shuffle_images": true,
+    "fetch_missing_coco": true
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "gUJAfLpzyWZatVUyWnaUfE",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 1,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "TkDNRVCgpWg8Gr3uHuFsgk",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 2,
+        "target": "yes",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I'm sorry, but I can't view images or analyze image content.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "8EuypHgm6RXbEuKHCnzBZw",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 3,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "c8RpwT5bh9FTxCWjMV3TMm",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 4,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "Cd4v2HRJDeGSzmjCNeFWA2",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 5,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "fQPXQmjJe7fB7fnMUYn6pp",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 6,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "YXmy4TERDb5pdQeyVvi4sR",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 7,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "FeEgHXJJ4jm2GBDHFmo2j7",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 8,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "Lk6KWmHwiSnV6trK5PKru9",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 9,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "6xAMoEJvxmwQbmpT5z63YG",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 10,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "UHsSxz4vKNnFqL77M3GHNb",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 11,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "WWBtaAbAzxRP8ygeAoKms6",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 12,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "YmzYw6Hd324WSVGQCEra2n",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 13,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "JRK43uYaS4UGo5TDAv83KM",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 14,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "8V4QxU8pGztxAps4wEmiem",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 15,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "jn8TrpmEyoEs7ndZxLwHsL",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 16,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "MGAedBTvMGr94VmHZCByAg",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 17,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "EMN3fqehBDVvYiMjfrh8nD",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 18,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "RR6kMnQLpPGATsA5NoWW9a",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 19,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "nZpS46XPJP3sBn9HhCuSJM",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 20,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "XxRXV9yM82QnCZSfkvbv9y",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 21,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "LaJACNJta5ve3whHwK6dFd",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 22,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "UYJqECkkBV74Zb2hiNRz5T",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 23,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "8cC4rCg95qegqxx8zBtmtC",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 24,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "RTsmoSa37yZsw5m8QKptuf",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 25,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "UW7Wef5pujNUi8wHmJ7fMP",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 26,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "AXNcahGyVawDQ6FM6iuVva",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 27,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "HzbpakkmKngxzfuh5NFRz2",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 28,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "MVnpKNnCT8xthrCJDfL7jY",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 29,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "h3K5HacxLk9jppiZTig6A3",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 30,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "5gk8MmYoKuuekUM97fRYN6",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 31,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "5FNePoXP6Q4FzJ3WALkWgH",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 32,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "eJkKLt5Een5XYjuzufNuCf",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 33,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "eGy8tFpbHeSZZ7xbgkRu5B",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 34,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "j3rbjcckXGJHCZxeK4x7Wh",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 35,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "4qXCXGTAP7whdKJaaM4564",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 36,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "Grsm4gHyL6JeazBbEE7VQU",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 37,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "gKzxPzK9BWWhRzGUC3Hxxp",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 38,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "H7VbwTFzoTyEShf9YCFG8K",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 39,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "JYaVWWnpCTHkdWJ7bY2duZ",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 40,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "UGhkUKb83W65LMuz3nbDBv",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 41,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "bkrL3gPPiE3p68jr9FVHQQ",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 42,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "UY7cuXbx6MQTtnboAFJapY",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 43,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "H9GA5zJUff53CfRWTHVZNs",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 44,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "YcudyW24XFBiNwEcxgNgNQ",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 45,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "Hc2wVADJ9TuNtjB2axFpAM",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 46,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "ews3YXyEojdT3887KuncZX",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 47,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "NXkToiPXLNmtVpRLQ4NsdY",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 48,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "MryV9P9aMYWK9BbEuszkCN",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 49,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "UNPHzhhs4MARK6zBz7NuLf",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 50,
+        "target": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I'm unable to view images, so I cannot determine whether any images with an umbrella also contain a p",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "2dNH9NvCZ8QjNgi3DLVrEU",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 51,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "UN5WWz2jzvAWjzFtnLMzoZ",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 52,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "kfQ7kpeRQsWvCuLat63ZVj",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 53,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "6ASGq6YeQLfscWAN4Bdjkt",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 54,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "dHqtDacvdMspzJsVKFzAwR",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 55,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "8FVX2fqf7xk6pPJg2kiWHw",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 56,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "nWXVNbzM8J4BKgcKhEYHFE",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 57,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "N5QCzVaDS5mz6WGu2MFkyu",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 58,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "3b2cG7cwwA6t3xtBNLp8J3",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 59,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "R6kwRh7XQtcfB2BZVDMLbb",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 60,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "jJgX6thjPiFcsT6ij7v2cr",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 61,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "QcEa8YZkrGYm59wwKeuuRv",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 62,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "n69EpfiL3Q6ZyZWXFNcNQj",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 63,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "HrpBkkdEG7wG5ZV6TiHfFw",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 64,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "Z3ecB9oz4vBMhx3BCwSzZm",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 65,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "baCj2NBpd3jSgtMrvg6aoi",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 66,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "UXsfGB2ds5TJNYcgQQpUbt",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 67,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "UeJhuuxDpDYz7M6HN54x8r",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 68,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "RCEpzA84d9Gd9YrLKn3rkf",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 69,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "CBHNsUh9TWq3HXrjFnAVEw",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 70,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "gkkEYEbBtdQELYatSFyPJm",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 71,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "ePpJyFGdoaD2RHDAq8jr82",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 72,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "PWJcgsGC6W6sBXo97URYdv",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 73,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "iDgzq96pk3cPLbsG6EZoig",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 74,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "3quzTjBXigqWrrebgtLJW8",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 75,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "ZpF5EfBwG2tqwz9oWTCCbE",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 76,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "JXu4r4ta8jheAG77jigKpA",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 77,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "chdw6Pa2oubdPfwczY78D8",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 78,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "PeWNSgb5bcjgoeMS6L2xrW",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 79,
+        "target": "yes",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I'm sorry, but I can't analyze images directly.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "Semq6Pap4NM4MbxD73iWds",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 80,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "Jd6djkeu3AyQfmyWAB96XW",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 81,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "Py9XtkgRpFbnjz3K4Dscn4",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 82,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "3aH5Vxe4h2NKGPcFgWmAUP",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 83,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "Uchcz2ynZjruqdATFazUj8",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 84,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "cEJMNSgPFbUL6pEAaZEvYD",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 85,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "YnCRNiUjb5XCvbxUUaxpm4",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 86,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "2auSGGAvjpBJwsaBQeuEQM",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 87,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "GYcpuxmRn6JwnLZ6MPJ98z",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 88,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "82te7tRnsu5fyep2JPb3UH",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 89,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "76Jr33ZntYAL2EmxUgqi5Z",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 90,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "VgsfZnBH6okpXayxz6Zp8s",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 91,
+        "target": "yes",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I'm sorry, but I can't see or analyze images directly.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "46fpXYETpvRRNTGQhEGFvU",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 92,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "N7zAgMMex5aekjmTRyAmLm",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 93,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "AZkw5AWg97FQLwGdFB5XGP",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 94,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "5rW3mdAEmSSLuUZuuGSK2a",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 95,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "GKfeAxir9MxUGU4kvpFePc",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 96,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "DL38MzjTMEG57pQETJtKFt",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 97,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 0,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "SiFhkorV4d8AiMacoGWrpn",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 98,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "nCTGNnWFwE7MSWwWvbdu3z",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 99,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes.",
+        "correct": 1,
+        "n_images_sent": 500,
+        "metadata": {
+          "id": "ChdUCMG7kwdqi7Mo8bpxNL",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "10",
+          "n_images": 0
+        }
+      }
+    ],
+    "accuracy": 0.57,
+    "valid_accuracy": 0.59375,
+    "compliance": 0.96,
+    "n_trials": 100,
+    "n_valid_trials": 96,
+    "n_correct": 57,
+    "n_parse_failures": 4
+  }
+}

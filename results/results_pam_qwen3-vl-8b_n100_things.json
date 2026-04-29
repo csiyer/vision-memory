@@ -1,7 +1,7 @@
 {
   "_metadata": {
     "task": "Paired Associate Memory",
-    "timestamp": "20260415_130317",
+    "timestamp": "20260428_214602",
     "dataset": "things",
     "n_images": 100,
     "n_trials": 100,
@@ -10,8 +10,8 @@
     ],
     "summary": {
       "qwen3-vl-8b": {
-        "accuracy": 0.2,
-        "n_correct": 20,
+        "accuracy": 0.18,
+        "n_correct": 18,
         "total": 100
       }
     },
@@ -21,1207 +21,1507 @@
     "trials": [
       {
         "trial": 0,
-        "target": "NOMAD",
-        "reported": "field",
-        "correct": 0,
-        "raw_response": "Based on the image provided, which shows a llama standing in a grassy, mountainous field,",
+        "target": "CABLE",
+        "reported": "cable",
+        "correct": 1,
+        "raw_response": "CABLE",
         "metadata": {
-          "category": "cat_1028",
-          "category_id": 32,
-          "exemplar_id": 0
+          "category": "cat_1178",
+          "category_id": 51,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1178/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 1,
-        "target": "TRAIN",
-        "reported": "path",
+        "target": "TRIANGLE",
+        "reported": "peach",
         "correct": 0,
-        "raw_response": "PATH",
+        "raw_response": "PEACH",
         "metadata": {
-          "category": "cat_1058",
-          "category_id": 63,
-          "exemplar_id": 0
+          "category": "cat_1199",
+          "category_id": 72,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1199/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 2,
-        "target": "NICOTINE",
-        "reported": "page",
+        "target": "GARDEN",
+        "reported": "cafe",
         "correct": 0,
-        "raw_response": "PAGE",
+        "raw_response": "CAFE",
         "metadata": {
-          "category": "cat_1042",
-          "category_id": 47,
-          "exemplar_id": 0
+          "category": "cat_1154",
+          "category_id": 27,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1154/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 3,
-        "target": "ITEM",
-        "reported": "car",
+        "target": "BUN",
+        "reported": "pea",
         "correct": 0,
-        "raw_response": "CAR",
+        "raw_response": "PEA",
         "metadata": {
-          "category": "cat_1052",
-          "category_id": 57,
-          "exemplar_id": 0
+          "category": "cat_1198",
+          "category_id": 71,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1198/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 4,
-        "target": "POLE",
-        "reported": "teenager",
-        "correct": 0,
-        "raw_response": "TEENAGER",
+        "target": "MAGNET",
+        "reported": "magnet",
+        "correct": 1,
+        "raw_response": "MAGNET",
         "metadata": {
-          "category": "cat_1056",
-          "category_id": 61,
-          "exemplar_id": 0
+          "category": "cat_1194",
+          "category_id": 67,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1194/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 5,
-        "target": "TEENAGER",
-        "reported": "hoe",
+        "target": "DRESS",
+        "reported": "blossom",
         "correct": 0,
-        "raw_response": "HOE",
+        "raw_response": "BLOSSOM",
         "metadata": {
-          "category": "cat_1076",
-          "category_id": 82,
-          "exemplar_id": 0
+          "category": "cat_1174",
+          "category_id": 47,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1174/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 6,
-        "target": "BLOCKADE",
-        "reported": "knot",
+        "target": "BLUEPRINT",
+        "reported": "chairperson",
         "correct": 0,
-        "raw_response": "KNOT",
+        "raw_response": "CHAIRPERSON",
         "metadata": {
-          "category": "cat_1053",
-          "category_id": 58,
-          "exemplar_id": 0
+          "category": "cat_1194",
+          "category_id": 67,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1194/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 7,
-        "target": "ANTEATER",
-        "reported": "anteater",
-        "correct": 1,
-        "raw_response": "ANTEATER",
+        "target": "TUNNEL",
+        "reported": "dart",
+        "correct": 0,
+        "raw_response": "DART",
         "metadata": {
-          "category": "cat_1049",
-          "category_id": 54,
-          "exemplar_id": 0
+          "category": "cat_1195",
+          "category_id": 68,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1195/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 8,
-        "target": "SENATE",
-        "reported": "is",
+        "target": "STEAM",
+        "reported": "lawn",
         "correct": 0,
-        "raw_response": "Based on the image provided, which shows a set of bagpipes, the word paired with it is",
+        "raw_response": "LAWN",
         "metadata": {
-          "category": "cat_106",
-          "category_id": 65,
-          "exemplar_id": 0
+          "category": "cat_1152",
+          "category_id": 25,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1152/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 9,
-        "target": "MULE",
-        "reported": "mule",
-        "correct": 1,
-        "raw_response": "MULE",
+        "target": "CARDINAL",
+        "reported": "bolt",
+        "correct": 0,
+        "raw_response": "BOLT",
         "metadata": {
-          "category": "cat_1024",
-          "category_id": 28,
-          "exemplar_id": 0
+          "category": "cat_1189",
+          "category_id": 62,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1189/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 10,
-        "target": "WAREHOUSE",
-        "reported": "mask",
+        "target": "DIARY",
+        "reported": "nut",
         "correct": 0,
-        "raw_response": "MASK",
+        "raw_response": "NUT",
         "metadata": {
-          "category": "cat_1029",
-          "category_id": 33,
-          "exemplar_id": 0
+          "category": "cat_1193",
+          "category_id": 66,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1193/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 11,
-        "target": "SYRINGE",
-        "reported": "beaker",
+        "target": "ACID",
+        "reported": "friar",
         "correct": 0,
-        "raw_response": "BEAKER",
+        "raw_response": "FRIAR",
         "metadata": {
-          "category": "cat_1065",
-          "category_id": 71,
-          "exemplar_id": 0
+          "category": "cat_1209",
+          "category_id": 82,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1209/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 12,
-        "target": "STOCKING",
-        "reported": "snob",
+        "target": "RATTLE",
+        "reported": "pelican",
         "correct": 0,
-        "raw_response": "SNOB",
+        "raw_response": "PELICAN",
         "metadata": {
-          "category": "cat_1009",
-          "category_id": 12,
-          "exemplar_id": 0
+          "category": "cat_1209",
+          "category_id": 82,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1209/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 13,
-        "target": "UNCLE",
-        "reported": "senate",
+        "target": "HELICOPTER",
+        "reported": "ram",
         "correct": 0,
-        "raw_response": "SENATE",
+        "raw_response": "RAM",
         "metadata": {
-          "category": "cat_1002",
-          "category_id": 5,
-          "exemplar_id": 0
+          "category": "cat_1216",
+          "category_id": 89,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1216/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 14,
-        "target": "DIME",
-        "reported": "eyelash",
-        "correct": 0,
-        "raw_response": "EYELASH",
+        "target": "PORCH",
+        "reported": "porch",
+        "correct": 1,
+        "raw_response": "PORCH",
         "metadata": {
-          "category": "cat_1005",
-          "category_id": 8,
-          "exemplar_id": 0
+          "category": "cat_1191",
+          "category_id": 64,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1191/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 15,
-        "target": "DAUGHTER",
-        "reported": "rag",
+        "target": "BALCONY",
+        "reported": "victor",
         "correct": 0,
-        "raw_response": "RAG",
+        "raw_response": "VICTOR",
         "metadata": {
-          "category": "cat_1032",
-          "category_id": 36,
-          "exemplar_id": 0
+          "category": "cat_1192",
+          "category_id": 65,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1192/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 16,
-        "target": "SCARF",
-        "reported": "typist",
+        "target": "STREAM",
+        "reported": "army",
         "correct": 0,
-        "raw_response": "TYPIST",
+        "raw_response": "ARMY",
         "metadata": {
-          "category": "cat_1080",
-          "category_id": 87,
-          "exemplar_id": 0
+          "category": "cat_1154",
+          "category_id": 27,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1154/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 17,
-        "target": "CITY",
-        "reported": "city",
-        "correct": 1,
-        "raw_response": "CITY",
+        "target": "LETTUCE",
+        "reported": "consumer",
+        "correct": 0,
+        "raw_response": "CONSUMER",
         "metadata": {
-          "category": "cat_1013",
-          "category_id": 16,
-          "exemplar_id": 0
+          "category": "cat_1194",
+          "category_id": 67,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1194/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 18,
-        "target": "GENERAL",
-        "reported": "bay",
+        "target": "REPORT",
+        "reported": "caboose",
         "correct": 0,
-        "raw_response": "BAY",
+        "raw_response": "CABOOSE",
         "metadata": {
-          "category": "cat_1088",
-          "category_id": 95,
-          "exemplar_id": 0
+          "category": "cat_1189",
+          "category_id": 62,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1189/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 19,
-        "target": "HUT",
-        "reported": "article",
+        "target": "GRASSHOPPER",
+        "reported": "dial",
         "correct": 0,
-        "raw_response": "ARTICLE",
+        "raw_response": "DIAL",
         "metadata": {
-          "category": "cat_1045",
-          "category_id": 50,
-          "exemplar_id": 0
+          "category": "cat_1180",
+          "category_id": 53,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1180/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 20,
-        "target": "CAR",
-        "reported": "senator",
+        "target": "MOVIE",
+        "reported": "curb",
         "correct": 0,
-        "raw_response": "SENATOR",
+        "raw_response": "Curb",
         "metadata": {
-          "category": "cat_1016",
-          "category_id": 19,
-          "exemplar_id": 0
+          "category": "cat_1190",
+          "category_id": 63,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1190/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 21,
-        "target": "SENATOR",
-        "reported": "medal",
+        "target": "BLOCKADE",
+        "reported": "oregano",
         "correct": 0,
-        "raw_response": "MEDAL",
+        "raw_response": "OREGANO",
         "metadata": {
-          "category": "cat_1022",
-          "category_id": 26,
-          "exemplar_id": 0
+          "category": "cat_1138",
+          "category_id": 11,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 22,
-        "target": "PANTS",
-        "reported": "basket",
-        "correct": 0,
-        "raw_response": "BASKET",
+        "target": "DRINK",
+        "reported": "drink",
+        "correct": 1,
+        "raw_response": "DRINK",
         "metadata": {
-          "category": "cat_1086",
-          "category_id": 93,
-          "exemplar_id": 0
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 23,
-        "target": "BAY",
-        "reported": "fence",
+        "target": "INDIAN",
+        "reported": "table",
         "correct": 0,
-        "raw_response": "FENCE",
+        "raw_response": "TABLE",
         "metadata": {
-          "category": "cat_1019",
-          "category_id": 22,
-          "exemplar_id": 0
+          "category": "cat_1136",
+          "category_id": 9,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 24,
+        "target": "FUNERAL",
+        "reported": "bush",
+        "correct": 0,
+        "raw_response": "BUSH",
+        "metadata": {
+          "category": "cat_1177",
+          "category_id": 50,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1177/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 25,
+        "target": "DICTIONARY",
+        "reported": "dictionary",
+        "correct": 1,
+        "raw_response": "DICTIONARY",
+        "metadata": {
+          "category": "cat_1160",
+          "category_id": 33,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1160/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 26,
+        "target": "BANJO",
+        "reported": "banjo",
+        "correct": 1,
+        "raw_response": "BANJO",
+        "metadata": {
+          "category": "cat_1171",
+          "category_id": 44,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1171/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 27,
+        "target": "RAIL",
+        "reported": "luggage",
+        "correct": 0,
+        "raw_response": "LUGGAGE",
+        "metadata": {
+          "category": "cat_1184",
+          "category_id": 57,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1184/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 28,
+        "target": "LABEL",
+        "reported": "antenna",
+        "correct": 0,
+        "raw_response": "ANTENNA",
+        "metadata": {
+          "category": "cat_1213",
+          "category_id": 86,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1213/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 29,
         "target": "DEPARTMENT",
         "reported": "department",
         "correct": 1,
         "raw_response": "DEPARTMENT",
         "metadata": {
-          "category": "cat_1037",
-          "category_id": 41,
-          "exemplar_id": 0
-        }
-      },
-      {
-        "trial": 25,
-        "target": "EYELASH",
-        "reported": "orange",
-        "correct": 0,
-        "raw_response": "ORANGE",
-        "metadata": {
-          "category": "cat_1015",
-          "category_id": 18,
-          "exemplar_id": 0
-        }
-      },
-      {
-        "trial": 26,
-        "target": "FRANCE",
-        "reported": "basement",
-        "correct": 0,
-        "raw_response": "BASEMENT",
-        "metadata": {
-          "category": "cat_1090",
-          "category_id": 97,
-          "exemplar_id": 0
-        }
-      },
-      {
-        "trial": 27,
-        "target": "TACK",
-        "reported": "antelope",
-        "correct": 0,
-        "raw_response": "ANTELOPE",
-        "metadata": {
-          "category": "cat_1050",
-          "category_id": 55,
-          "exemplar_id": 0
-        }
-      },
-      {
-        "trial": 28,
-        "target": "HOE",
-        "reported": "syringe",
-        "correct": 0,
-        "raw_response": "SYRINGE",
-        "metadata": {
-          "category": "cat_1035",
-          "category_id": 39,
-          "exemplar_id": 0
-        }
-      },
-      {
-        "trial": 29,
-        "target": "QUAIL",
-        "reported": "daughter",
-        "correct": 0,
-        "raw_response": "DAUGHTER",
-        "metadata": {
-          "category": "cat_1038",
-          "category_id": 42,
-          "exemplar_id": 0
+          "category": "cat_1159",
+          "category_id": 32,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1159/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 30,
-        "target": "HORIZON",
-        "reported": "tack",
-        "correct": 0,
-        "raw_response": "TACK",
+        "target": "AUNT",
+        "reported": "aunt",
+        "correct": 1,
+        "raw_response": "AUNT",
         "metadata": {
-          "category": "cat_1034",
-          "category_id": 38,
-          "exemplar_id": 0
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 31,
-        "target": "EDITOR",
-        "reported": "chemical",
+        "target": "DYNAMITE",
+        "reported": "chick",
         "correct": 0,
-        "raw_response": "CHEMICAL",
+        "raw_response": "CHICK",
         "metadata": {
-          "category": "cat_1030",
-          "category_id": 34,
-          "exemplar_id": 0
+          "category": "cat_1163",
+          "category_id": 36,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1163/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 32,
-        "target": "WINDOW",
-        "reported": "horizon",
+        "target": "PASTA",
+        "reported": "bethan",
         "correct": 0,
-        "raw_response": "HORIZON",
+        "raw_response": "BETHAN",
         "metadata": {
-          "category": "cat_1092",
-          "category_id": 99,
-          "exemplar_id": 0
+          "category": "cat_1217",
+          "category_id": 90,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1217/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 33,
-        "target": "RIFLE",
-        "reported": "checkers",
+        "target": "NOMAD",
+        "reported": "dart",
         "correct": 0,
-        "raw_response": "CHECKERS",
+        "raw_response": "DART",
         "metadata": {
-          "category": "cat_1075",
+          "category": "cat_1208",
           "category_id": 81,
-          "exemplar_id": 0
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1208/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 34,
-        "target": "RASH",
-        "reported": "rash",
+        "target": "GHOST",
+        "reported": "ghost",
         "correct": 1,
-        "raw_response": "RASH",
+        "raw_response": "GHOST",
         "metadata": {
-          "category": "cat_1066",
-          "category_id": 72,
-          "exemplar_id": 0
+          "category": "cat_1153",
+          "category_id": 26,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1153/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 35,
-        "target": "ATTORNEY",
-        "reported": "milk",
+        "target": "GLASSES",
+        "reported": "bait",
         "correct": 0,
-        "raw_response": "MILK",
+        "raw_response": "BAIT",
         "metadata": {
-          "category": "cat_1041",
-          "category_id": 46,
-          "exemplar_id": 0
+          "category": "cat_1149",
+          "category_id": 22,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1149/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 36,
-        "target": "ARTICLE",
-        "reported": "tube",
-        "correct": 0,
-        "raw_response": "TUBE",
+        "target": "TUBA",
+        "reported": "tuba",
+        "correct": 1,
+        "raw_response": "TUBA",
         "metadata": {
-          "category": "cat_1060",
-          "category_id": 66,
-          "exemplar_id": 0
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 37,
-        "target": "PITCHFORK",
-        "reported": "shrine",
-        "correct": 0,
-        "raw_response": "SHRINE",
+        "target": "RACCOON",
+        "reported": "raccoon",
+        "correct": 1,
+        "raw_response": "RACCOON",
         "metadata": {
-          "category": "cat_1055",
-          "category_id": 60,
-          "exemplar_id": 0
+          "category": "cat_1180",
+          "category_id": 53,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1180/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 38,
-        "target": "FIELD",
-        "reported": "champagne",
+        "target": "FUNGUS",
+        "reported": "bethan",
         "correct": 0,
-        "raw_response": "CHAMPAGNE",
+        "raw_response": "BETHAN",
         "metadata": {
-          "category": "cat_1025",
-          "category_id": 29,
-          "exemplar_id": 0
+          "category": "cat_1217",
+          "category_id": 90,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1217/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 39,
-        "target": "PILL",
-        "reported": "flea",
+        "target": "DUST",
+        "reported": "padding",
         "correct": 0,
-        "raw_response": "FLEA",
+        "raw_response": "PADDING",
         "metadata": {
-          "category": "cat_1001",
-          "category_id": 4,
-          "exemplar_id": 0
+          "category": "cat_1187",
+          "category_id": 60,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1187/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 40,
-        "target": "CHEMICAL",
-        "reported": "pants",
+        "target": "SHERIFF",
+        "reported": "otter",
         "correct": 0,
-        "raw_response": "PANTS",
+        "raw_response": "OTTER",
         "metadata": {
-          "category": "cat_1004",
-          "category_id": 7,
-          "exemplar_id": 0
+          "category": "cat_1158",
+          "category_id": 31,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1158/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 41,
-        "target": "GREASE",
-        "reported": "companion",
+        "target": "VEGETABLE",
+        "reported": "article",
         "correct": 0,
-        "raw_response": "COMPANION",
+        "raw_response": "ARTICLE",
         "metadata": {
-          "category": "cat_1089",
-          "category_id": 96,
-          "exemplar_id": 0
+          "category": "cat_1201",
+          "category_id": 74,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1201/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 42,
-        "target": "MEDAL",
-        "reported": "stocking",
+        "target": "VEGETABLE",
+        "reported": "trousers",
         "correct": 0,
-        "raw_response": "STOCKING",
+        "raw_response": "TROUSERS",
         "metadata": {
-          "category": "cat_1077",
-          "category_id": 83,
-          "exemplar_id": 0
+          "category": "cat_1138",
+          "category_id": 11,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 43,
-        "target": "HOME",
-        "reported": "home",
-        "correct": 1,
-        "raw_response": "HOME",
+        "target": "MOAT",
+        "reported": "acorn",
+        "correct": 0,
+        "raw_response": "ACORN",
         "metadata": {
-          "category": "cat_102",
-          "category_id": 23,
-          "exemplar_id": 0
+          "category": "cat_1192",
+          "category_id": 65,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1192/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 44,
-        "target": "TYPIST",
-        "reported": "physician",
+        "target": "PAIL",
+        "reported": "atom",
         "correct": 0,
-        "raw_response": "PHYSICIAN",
+        "raw_response": "ATOM",
         "metadata": {
-          "category": "cat_1067",
+          "category": "cat_1200",
           "category_id": 73,
-          "exemplar_id": 0
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1200/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 45,
-        "target": "MINK",
-        "reported": "flipper",
+        "target": "SHACK",
+        "reported": "building",
         "correct": 0,
-        "raw_response": "FLIPPER",
+        "raw_response": "BUILDING",
         "metadata": {
-          "category": "cat_1074",
-          "category_id": 80,
-          "exemplar_id": 0
+          "category": "cat_1173",
+          "category_id": 46,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1173/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 46,
-        "target": "MILK",
-        "reported": "milk",
-        "correct": 1,
-        "raw_response": "MILK",
+        "target": "SPIT",
+        "reported": "dwarf",
+        "correct": 0,
+        "raw_response": "DWARF",
         "metadata": {
-          "category": "cat_1062",
-          "category_id": 68,
-          "exemplar_id": 0
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 47,
-        "target": "DRUM",
-        "reported": "inn",
+        "target": "HUMAN",
+        "reported": "cobra",
         "correct": 0,
-        "raw_response": "INN",
+        "raw_response": "COBRA",
         "metadata": {
-          "category": "cat_1084",
-          "category_id": 91,
-          "exemplar_id": 0
+          "category": "cat_1154",
+          "category_id": 27,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1154/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 48,
-        "target": "XEROX",
-        "reported": "xerox",
+        "target": "CRUMB",
+        "reported": "crumb",
         "correct": 1,
-        "raw_response": "XEROX",
+        "raw_response": "CRUMB",
         "metadata": {
-          "category": "cat_1051",
-          "category_id": 56,
-          "exemplar_id": 0
+          "category": "cat_1154",
+          "category_id": 27,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1154/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 49,
-        "target": "STAPLE",
-        "reported": "ocean",
+        "target": "WIDOW",
+        "reported": "register",
         "correct": 0,
-        "raw_response": "OCEAN",
+        "raw_response": "REGISTER",
         "metadata": {
-          "category": "cat_1010",
-          "category_id": 13,
-          "exemplar_id": 0
+          "category": "cat_1189",
+          "category_id": 62,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1189/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 50,
-        "target": "TUBE",
-        "reported": "dime",
-        "correct": 0,
-        "raw_response": "DIME",
+        "target": "WILDERNESS",
+        "reported": "wilderness",
+        "correct": 1,
+        "raw_response": "WILDERNESS",
         "metadata": {
-          "category": "cat_1008",
-          "category_id": 11,
-          "exemplar_id": 0
+          "category": "cat_1160",
+          "category_id": 33,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1160/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 51,
-        "target": "SERGEANT",
-        "reported": "sergeant",
-        "correct": 1,
-        "raw_response": "SERGEANT",
+        "target": "TILE",
+        "reported": "author",
+        "correct": 0,
+        "raw_response": "AUTHOR",
         "metadata": {
-          "category": "cat_1083",
-          "category_id": 90,
-          "exemplar_id": 0
+          "category": "cat_1166",
+          "category_id": 39,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1166/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 52,
-        "target": "CHAMPAGNE",
-        "reported": "flea",
+        "target": "ANTEATER",
+        "reported": "stallion",
         "correct": 0,
-        "raw_response": "FLEA",
+        "raw_response": "STALLION",
         "metadata": {
-          "category": "cat_1012",
-          "category_id": 15,
-          "exemplar_id": 0
+          "category": "cat_1174",
+          "category_id": 47,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1174/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 53,
-        "target": "PERISCOPE",
-        "reported": "stranger",
-        "correct": 0,
-        "raw_response": "STRANGER",
+        "target": "IDOL",
+        "reported": "idol",
+        "correct": 1,
+        "raw_response": "IDOL",
         "metadata": {
-          "category": "cat_1068",
-          "category_id": 74,
-          "exemplar_id": 0
+          "category": "cat_1156",
+          "category_id": 29,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1156/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 54,
-        "target": "SNOB",
-        "reported": "mink",
+        "target": "LITTER",
+        "reported": "pea",
         "correct": 0,
-        "raw_response": "MINK",
+        "raw_response": "PEA",
         "metadata": {
-          "category": "cat_1073",
-          "category_id": 79,
-          "exemplar_id": 0
+          "category": "cat_1198",
+          "category_id": 71,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1198/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 55,
-        "target": "CHECKERS",
-        "reported": "nicotine",
+        "target": "CITRUS",
+        "reported": "lighter",
         "correct": 0,
-        "raw_response": "NICOTINE",
+        "raw_response": "LIGHTER",
         "metadata": {
-          "category": "cat_10",
-          "category_id": 1,
-          "exemplar_id": 0
+          "category": "cat_1166",
+          "category_id": 39,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1166/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 56,
-        "target": "EXPERT",
-        "reported": "expert",
-        "correct": 1,
-        "raw_response": "EXPERT",
+        "target": "PUBLISHER",
+        "reported": "nose",
+        "correct": 0,
+        "raw_response": "NOSE",
         "metadata": {
-          "category": "cat_1018",
-          "category_id": 21,
-          "exemplar_id": 0
+          "category": "cat_1142",
+          "category_id": 15,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1142/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 57,
-        "target": "RADIO",
-        "reported": "hut",
+        "target": "BUTCHER",
+        "reported": "crab",
         "correct": 0,
-        "raw_response": "HUT",
+        "raw_response": "CRAB",
         "metadata": {
-          "category": "cat_1078",
-          "category_id": 84,
-          "exemplar_id": 0
+          "category": "cat_1159",
+          "category_id": 32,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1159/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 58,
-        "target": "KNOT",
-        "reported": "pole",
+        "target": "TEACHER",
+        "reported": "husband",
         "correct": 0,
-        "raw_response": "POLE",
+        "raw_response": "HUSBAND",
         "metadata": {
-          "category": "cat_1007",
-          "category_id": 10,
-          "exemplar_id": 0
+          "category": "cat_1145",
+          "category_id": 18,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1145/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 59,
-        "target": "WATERFALL",
-        "reported": "waterfall",
-        "correct": 1,
-        "raw_response": "WATERFALL",
+        "target": "BEEF",
+        "reported": "tribe",
+        "correct": 0,
+        "raw_response": "TRIBE",
         "metadata": {
-          "category": "cat_1006",
-          "category_id": 9,
-          "exemplar_id": 0
+          "category": "cat_1178",
+          "category_id": 51,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1178/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 60,
-        "target": "RAG",
-        "reported": "field",
+        "target": "LIGHTER",
+        "reported": "african",
         "correct": 0,
-        "raw_response": "FIELD",
+        "raw_response": "African",
         "metadata": {
-          "category": "cat_1081",
-          "category_id": 88,
-          "exemplar_id": 0
+          "category": "cat_1170",
+          "category_id": 43,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1170/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 61,
-        "target": "COMPANION",
-        "reported": "dad",
+        "target": "CARPET",
+        "reported": "cigar",
         "correct": 0,
-        "raw_response": "DAD",
+        "raw_response": "CIGAR",
         "metadata": {
-          "category": "cat_1039",
-          "category_id": 43,
-          "exemplar_id": 0
+          "category": "cat_1202",
+          "category_id": 75,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1202/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 62,
-        "target": "ANTELOPE",
-        "reported": "sculpture",
+        "target": "SWAMP",
+        "reported": "cord",
         "correct": 0,
-        "raw_response": "SCULPTURE",
+        "raw_response": "CORD",
         "metadata": {
-          "category": "cat_1059",
-          "category_id": 64,
-          "exemplar_id": 0
+          "category": "cat_1213",
+          "category_id": 86,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1213/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 63,
-        "target": "WALRUS",
-        "reported": "pants",
+        "target": "GROOM",
+        "reported": "paint",
         "correct": 0,
-        "raw_response": "PANTS",
+        "raw_response": "PAINT",
         "metadata": {
-          "category": "cat_1061",
-          "category_id": 67,
-          "exemplar_id": 0
+          "category": "cat_1170",
+          "category_id": 43,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1170/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 64,
-        "target": "DAD",
-        "reported": "pill",
+        "target": "ANTENNA",
+        "reported": "stairs",
         "correct": 0,
-        "raw_response": "PILL",
+        "raw_response": "STAIRS",
         "metadata": {
-          "category": "cat_1070",
-          "category_id": 76,
-          "exemplar_id": 0
+          "category": "cat_1197",
+          "category_id": 70,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1197/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 65,
-        "target": "FLEA",
-        "reported": "scarf",
+        "target": "TRUCK",
+        "reported": "ghetto",
         "correct": 0,
-        "raw_response": "SCARF",
+        "raw_response": "GHETTO",
         "metadata": {
-          "category": "cat_1023",
-          "category_id": 27,
-          "exemplar_id": 0
+          "category": "cat_1157",
+          "category_id": 30,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1157/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 66,
-        "target": "DOVE",
-        "reported": "dove",
-        "correct": 1,
-        "raw_response": "DOVE",
+        "target": "LIME",
+        "reported": "award",
+        "correct": 0,
+        "raw_response": "AWARD",
         "metadata": {
-          "category": "cat_1091",
-          "category_id": 98,
-          "exemplar_id": 0
+          "category": "cat_1219",
+          "category_id": 92,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1219/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 67,
-        "target": "PHYSICIAN",
-        "reported": "dough",
+        "target": "LUMBER",
+        "reported": "tuxedo",
         "correct": 0,
-        "raw_response": "DOUGH",
+        "raw_response": "TUXEDO",
         "metadata": {
-          "category": "cat_104",
-          "category_id": 44,
-          "exemplar_id": 0
+          "category": "cat_1180",
+          "category_id": 53,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1180/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 68,
-        "target": "ORANGE",
-        "reported": "france",
+        "target": "NUN",
+        "reported": "stake",
         "correct": 0,
-        "raw_response": "FRANCE",
+        "raw_response": "STAKE",
         "metadata": {
-          "category": "cat_1071",
-          "category_id": 77,
-          "exemplar_id": 0
+          "category": "cat_1173",
+          "category_id": 46,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1173/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 69,
-        "target": "VOLCANO",
-        "reported": "blockade",
+        "target": "WILDERNESS",
+        "reported": "keg",
         "correct": 0,
-        "raw_response": "BLOCKADE",
+        "raw_response": "KEG",
         "metadata": {
-          "category": "cat_1044",
-          "category_id": 49,
-          "exemplar_id": 0
+          "category": "cat_1185",
+          "category_id": 58,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1185/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 70,
-        "target": "FENCE",
-        "reported": "grease",
+        "target": "PATIENT",
+        "reported": "suburb",
         "correct": 0,
-        "raw_response": "GREASE",
+        "raw_response": "SUBURB",
         "metadata": {
-          "category": "cat_1087",
-          "category_id": 94,
-          "exemplar_id": 0
+          "category": "cat_1193",
+          "category_id": 66,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1193/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 71,
-        "target": "BEAKER",
-        "reported": "staple",
+        "target": "GROOM",
+        "reported": "stewardess",
         "correct": 0,
-        "raw_response": "STAPLE",
+        "raw_response": "STEWARDESS",
         "metadata": {
-          "category": "cat_1064",
-          "category_id": 70,
-          "exemplar_id": 0
+          "category": "cat_1142",
+          "category_id": 15,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1142/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 72,
-        "target": "STRANGER",
-        "reported": "stranger",
-        "correct": 1,
-        "raw_response": "STRANGER",
+        "target": "FINGER",
+        "reported": "bethan",
+        "correct": 0,
+        "raw_response": "BETHAN",
         "metadata": {
-          "category": "cat_1040",
-          "category_id": 45,
-          "exemplar_id": 0
+          "category": "cat_1217",
+          "category_id": 90,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1217/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 73,
-        "target": "JET",
-        "reported": "general",
+        "target": "SLACKS",
+        "reported": "fleet",
         "correct": 0,
-        "raw_response": "GENERAL",
+        "raw_response": "FLEET",
         "metadata": {
-          "category": "cat_1000",
-          "category_id": 3,
-          "exemplar_id": 0
+          "category": "cat_1173",
+          "category_id": 46,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1173/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 74,
-        "target": "POWDER",
-        "reported": "powder",
-        "correct": 1,
-        "raw_response": "POWDER",
+        "target": "CHEESE",
+        "reported": "attire",
+        "correct": 0,
+        "raw_response": "ATTIRE",
         "metadata": {
-          "category": "cat_1020",
-          "category_id": 24,
-          "exemplar_id": 0
+          "category": "cat_1160",
+          "category_id": 33,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1160/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 75,
-        "target": "PAGE",
-        "reported": "quail",
+        "target": "TRAY",
+        "reported": "acid",
         "correct": 0,
-        "raw_response": "QUAIL",
+        "raw_response": "ACID",
         "metadata": {
-          "category": "cat_1054",
-          "category_id": 59,
-          "exemplar_id": 0
+          "category": "cat_1224",
+          "category_id": 97,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1224/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 76,
-        "target": "FACTORY",
-        "reported": "factory",
+        "target": "DESSERT",
+        "reported": "dessert",
         "correct": 1,
-        "raw_response": "FACTORY",
+        "raw_response": "DESSERT",
         "metadata": {
-          "category": "cat_1085",
-          "category_id": 92,
-          "exemplar_id": 0
+          "category": "cat_1226",
+          "category_id": 99,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1226/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 77,
-        "target": "HOSTESS",
-        "reported": "frost",
-        "correct": 0,
-        "raw_response": "FROST",
+        "target": "THRONE",
+        "reported": "throne",
+        "correct": 1,
+        "raw_response": "THRONE",
         "metadata": {
-          "category": "cat_1027",
-          "category_id": 31,
-          "exemplar_id": 0
+          "category": "cat_1209",
+          "category_id": 82,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1209/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 78,
-        "target": "VALLEY",
-        "reported": "valley",
-        "correct": 1,
-        "raw_response": "VALLEY",
+        "target": "WAITRESS",
+        "reported": "bug",
+        "correct": 0,
+        "raw_response": "BUG",
         "metadata": {
-          "category": "cat_1033",
-          "category_id": 37,
-          "exemplar_id": 0
+          "category": "cat_1192",
+          "category_id": 65,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1192/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 79,
-        "target": "FATHER",
-        "reported": "jet",
+        "target": "FRAGRANCE",
+        "reported": "tower",
         "correct": 0,
-        "raw_response": "JET",
+        "raw_response": "TOWER",
         "metadata": {
-          "category": "cat_1017",
-          "category_id": 20,
-          "exemplar_id": 0
+          "category": "cat_1225",
+          "category_id": 98,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1225/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 80,
-        "target": "DOUGH",
-        "reported": "badger",
+        "target": "BUFFALO",
+        "reported": "limb",
         "correct": 0,
-        "raw_response": "BADGER",
+        "raw_response": "LIMB",
         "metadata": {
-          "category": "cat_100",
-          "category_id": 2,
-          "exemplar_id": 0
+          "category": "cat_1152",
+          "category_id": 25,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1152/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 81,
-        "target": "GARDEN",
-        "reported": "lightning",
-        "correct": 0,
-        "raw_response": "LIGHTNING",
-        "metadata": {
-          "category": "cat_1026",
-          "category_id": 30,
-          "exemplar_id": 0
-        }
-      },
-      {
-        "trial": 82,
-        "target": "MASK",
+        "target": "SCRIBBLE",
         "reported": "teenager",
         "correct": 0,
         "raw_response": "TEENAGER",
         "metadata": {
-          "category": "cat_1003",
-          "category_id": 6,
-          "exemplar_id": 0
+          "category": "cat_1181",
+          "category_id": 54,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1181/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 82,
+        "target": "BANDIT",
+        "reported": "calendar",
+        "correct": 0,
+        "raw_response": "CALENDAR",
+        "metadata": {
+          "category": "cat_1208",
+          "category_id": 81,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1208/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 83,
-        "target": "FROST",
-        "reported": "frost",
-        "correct": 1,
-        "raw_response": "FROST",
+        "target": "BIOLOGIST",
+        "reported": "hand",
+        "correct": 0,
+        "raw_response": "HAND",
         "metadata": {
-          "category": "cat_1014",
-          "category_id": 17,
-          "exemplar_id": 0
+          "category": "cat_1143",
+          "category_id": 16,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1143/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 84,
-        "target": "WINGS",
-        "reported": "companion",
-        "correct": 0,
-        "raw_response": "COMPANION",
+        "target": "KEY",
+        "reported": "key",
+        "correct": 1,
+        "raw_response": "KEY",
         "metadata": {
-          "category": "cat_1057",
-          "category_id": 62,
-          "exemplar_id": 0
+          "category": "cat_1142",
+          "category_id": 15,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1142/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 85,
-        "target": "OCEAN",
-        "reported": "radio",
+        "target": "WITCH",
+        "reported": "jug",
         "correct": 0,
-        "raw_response": "RADIO",
+        "raw_response": "JUG",
         "metadata": {
-          "category": "cat_1048",
-          "category_id": 53,
-          "exemplar_id": 0
+          "category": "cat_1152",
+          "category_id": 25,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1152/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 86,
-        "target": "BASKET",
-        "reported": "uncle",
+        "target": "PEDAL",
+        "reported": "bethan",
         "correct": 0,
-        "raw_response": "UNCLE",
+        "raw_response": "BETHAN",
         "metadata": {
-          "category": "cat_1069",
-          "category_id": 75,
-          "exemplar_id": 0
+          "category": "cat_1217",
+          "category_id": 90,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1217/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 87,
-        "target": "SCULPTURE",
-        "reported": "garden",
+        "target": "ACROBAT",
+        "reported": "marsh",
         "correct": 0,
-        "raw_response": "GARDEN",
+        "raw_response": "MARSH",
         "metadata": {
-          "category": "cat_1063",
-          "category_id": 69,
-          "exemplar_id": 0
+          "category": "cat_1202",
+          "category_id": 75,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1202/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 88,
-        "target": "LIGHTNING",
-        "reported": "walrus",
+        "target": "CASHIER",
+        "reported": "moth",
         "correct": 0,
-        "raw_response": "WALRUS",
+        "raw_response": "MOTH",
         "metadata": {
-          "category": "cat_1082",
-          "category_id": 89,
-          "exemplar_id": 0
+          "category": "cat_1156",
+          "category_id": 29,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1156/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 89,
-        "target": "EGYPT",
-        "reported": "egypt",
-        "correct": 1,
-        "raw_response": "EGYPT",
+        "target": "WINNER",
+        "reported": "goddess",
+        "correct": 0,
+        "raw_response": "GODDESS",
         "metadata": {
-          "category": "cat_1021",
-          "category_id": 25,
-          "exemplar_id": 0
+          "category": "cat_1180",
+          "category_id": 53,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1180/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 90,
-        "target": "SHRINE",
-        "reported": "drum",
+        "target": "CANDY",
+        "reported": "bear",
         "correct": 0,
-        "raw_response": "DRUM",
+        "raw_response": "BEAR",
         "metadata": {
-          "category": "cat_1072",
-          "category_id": 78,
-          "exemplar_id": 0
+          "category": "cat_1158",
+          "category_id": 31,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1158/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 91,
-        "target": "ADOLESCENT",
-        "reported": "periscope",
+        "target": "OVAL",
+        "reported": "chemical",
         "correct": 0,
-        "raw_response": "PERISCOPE",
+        "raw_response": "CHEMICAL",
         "metadata": {
-          "category": "cat_1047",
-          "category_id": 52,
-          "exemplar_id": 0
+          "category": "cat_1159",
+          "category_id": 32,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1159/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 92,
-        "target": "CAMERA",
-        "reported": "pistachios",
+        "target": "JAW",
+        "reported": "juggler",
         "correct": 0,
-        "raw_response": "Based on the image provided, which shows a slice of baklava topped with chopped pistachios",
+        "raw_response": "JUGGLER",
         "metadata": {
-          "category": "cat_108",
-          "category_id": 86,
-          "exemplar_id": 0
+          "category": "cat_1156",
+          "category_id": 29,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1156/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 93,
-        "target": "CANYON",
-        "reported": "anteater",
+        "target": "BRIDGE",
+        "reported": "gazelle",
         "correct": 0,
-        "raw_response": "ANTEATER",
+        "raw_response": "GAZELLE",
         "metadata": {
-          "category": "cat_0",
-          "category_id": 0,
-          "exemplar_id": 0
+          "category": "cat_1200",
+          "category_id": 73,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1200/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 94,
-        "target": "RIDER",
-        "reported": "rider",
-        "correct": 1,
-        "raw_response": "The word paired with the image of the letter opener is **RIDER**.",
+        "target": "CURTAIN",
+        "reported": "cemetery",
+        "correct": 0,
+        "raw_response": "CEMETERY",
         "metadata": {
-          "category": "cat_1011",
-          "category_id": 14,
-          "exemplar_id": 0
+          "category": "cat_1219",
+          "category_id": 92,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1219/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 95,
-        "target": "INN",
-        "reported": "item",
+        "target": "CAVITY",
+        "reported": "jury",
         "correct": 0,
-        "raw_response": "ITEM",
+        "raw_response": "JURY",
         "metadata": {
-          "category": "cat_1036",
-          "category_id": 40,
-          "exemplar_id": 0
+          "category": "cat_1141",
+          "category_id": 14,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 96,
-        "target": "BASEMENT",
-        "reported": "editor",
-        "correct": 0,
-        "raw_response": "EDITOR",
+        "target": "WARDROBE",
+        "reported": "wardrobe",
+        "correct": 1,
+        "raw_response": "WARDROBE",
         "metadata": {
-          "category": "cat_1046",
-          "category_id": 51,
-          "exemplar_id": 0
+          "category": "cat_1214",
+          "category_id": 87,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1214/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 97,
-        "target": "PATH",
-        "reported": "pitchfork",
+        "target": "CHIMPANZEE",
+        "reported": "lodge",
         "correct": 0,
-        "raw_response": "PITCHFORK",
+        "raw_response": "LODGE",
         "metadata": {
-          "category": "cat_1043",
-          "category_id": 48,
-          "exemplar_id": 0
+          "category": "cat_1172",
+          "category_id": 45,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1172/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 98,
-        "target": "HIKER",
-        "reported": "hiker",
-        "correct": 1,
-        "raw_response": "HIKER",
+        "target": "MASK",
+        "reported": "atom",
+        "correct": 0,
+        "raw_response": "ATOM",
         "metadata": {
-          "category": "cat_1031",
-          "category_id": 35,
-          "exemplar_id": 0
+          "category": "cat_1175",
+          "category_id": 48,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1175/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 99,
-        "target": "FLIPPER",
-        "reported": "wings",
+        "target": "STOVE",
+        "reported": "mountain",
         "correct": 0,
-        "raw_response": "WINGS",
+        "raw_response": "MOUNTAIN",
         "metadata": {
-          "category": "cat_1079",
-          "category_id": 85,
-          "exemplar_id": 0
+          "category": "cat_1179",
+          "category_id": 52,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1179/0.jpg",
+          "local_filename": "0.jpg"
         }
       }
     ],
-    "accuracy": 0.2,
-    "n_correct": 20,
+    "accuracy": 0.18,
+    "n_correct": 18,
     "total": 100
   }
 }

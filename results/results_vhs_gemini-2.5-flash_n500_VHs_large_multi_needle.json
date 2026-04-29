@@ -1,0 +1,1638 @@
+{
+  "_metadata": {
+    "task": "Visual Haystacks",
+    "timestamp": "20260428_094423",
+    "mode": "multi_needle",
+    "split": "VHs_large",
+    "image_count": "500",
+    "qa_root": "datasets/VHs_qa",
+    "image_root": "datasets/coco",
+    "n_trials": 100,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 0.49,
+        "valid_accuracy": 0.5157894736842106,
+        "compliance": 0.95
+      }
+    },
+    "max_samples": 100,
+    "max_context_images": null,
+    "seed": 0,
+    "shuffle_images": true,
+    "fetch_missing_coco": true
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "ft5bqA7dJStL9WLPEmooPk",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 1,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "hM59Qr4BLtHA7XNijuEfsi",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 2,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "EtJfPvdnGAvqYpV6XM7N8x",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 3,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "JfWLLuDt6KiXZEF9mHSYHP",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 4,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "X7yPfcz8dAUE756crUgxM9",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 5,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "KjoPwjgzztwZAnHv4a8hNT",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 6,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "N5QCzVaDS5mz6WGu2MFkyu",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 7,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "QcEa8YZkrGYm59wwKeuuRv",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 8,
+        "target": "yes",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot perform visual analysis of \"all images\" in the world. As an AI, I don't have real-time access to and the ability to process the content of every image ever created to determine object co-occurrence. Therefore, I cannot answer this question with a definitive 'yes' or 'no'.",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "dDiNNfJLyDDoLPD4C3FaW2",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 9,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "RAmBYPSanQtWz7wTS9bzcL",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 10,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "5VCxGGJDShBp5pqAbbQQpi",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 11,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "cEJMNSgPFbUL6pEAaZEvYD",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 12,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "BqdkWSaSVj6CbfN3mrZYwp",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 13,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "PLcW4q4xTQfTnuhShAqXSH",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 14,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "YcudyW24XFBiNwEcxgNgNQ",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 15,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "K2UcFpcA9RjuGDxohavt5f",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 16,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "VXQbUHdW7tYPJEmeWrU3B3",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 17,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "HJSVqHw9e5xa6Zyaqz4zoX",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 18,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "Y2XphXkDLmHggQFsLwLSz5",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 19,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "bdtV4Z8wjCDCWZ4UHpVVZ4",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 20,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "8x6CDDdmCJsEV4yDZKypnd",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 21,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "UaQ3CwQ84jXNRFZiwDFWsU",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 22,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "5rW3mdAEmSSLuUZuuGSK2a",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 23,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "YPW2jdApBourjFqeK2TC2q",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 24,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "6cddgnF4Am2obUS9G3B4FZ",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 25,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "6ADntVQjmmUaXW85aWXcLS",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 26,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "kMqkKUhJguXgNZDstjrVCR",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 27,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "Yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "43qgjj9QGT3EaiFbJBBhxv",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 28,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "AiJcuBKRqa9hiDVmpwHXcU",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 29,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "c8RpwT5bh9FTxCWjMV3TMm",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 30,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "GFradbiBb7r9a3RJT88vA5",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 31,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "3srfuvKoaHT2ZSiUMdF7UY",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 32,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "H7VbwTFzoTyEShf9YCFG8K",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 33,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "Dx7TVGtmC5rhpVuj8mwWaE",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 34,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "V9R5KBDPSMnTWt2Pucavge",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 35,
+        "target": "yes",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "As an AI, I do not have access to or the ability to process visual information from images directly, nor do I have a database of all images. Therefore, I cannot determine if images with potted plants also contain dogs.",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "Fag5qowN9SapHjWcLCFHue",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 36,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "WyWM9PUP5ftkpDb66PGmdU",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 37,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "HGfhqTEvJxbCJVNcYhNYPp",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 38,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "K4fbK3a9kWWLd2iy8MuCAq",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 39,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "SiFhkorV4d8AiMacoGWrpn",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 40,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "7ptS2dbKoFzwbxsppbFsgP",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 41,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "kSXKPWwUK72rvdeUtgt2ca",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 42,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "hdmH7QYvXXqm9ENBYvfRUp",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 43,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "DxMWTpkTBcHqJppfbCgrRz",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 44,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "F4Z3PAWKLr8HPC3TMua8od",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 45,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "6NeDxpSAS6zDsVqmGDW5ef",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 46,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "CvNjPGczyfSNPjgt9LKVqU",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 47,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "TxbCXcL5NVdPHWEZDDaJMc",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 48,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "QerFMyfyjHHueYfaGYXZyT",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 49,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "5oieGHzqAkkBWs9iKTvAjV",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 50,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "YXmy4TERDb5pdQeyVvi4sR",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 51,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "YmzYw6Hd324WSVGQCEra2n",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 52,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "Z3ecB9oz4vBMhx3BCwSzZm",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 53,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "KHfMghEGyeh9oJgenSJNY8",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 54,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "izX5zxaJYRdrthaptqZphA",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 55,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "AQBWKpphfDqGuEwuLJuV2T",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 56,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "AQJemXNivLWjmuX9JBdif3",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 57,
+        "target": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot directly access or analyze images, so I cannot determine if any specific image contains both a skateboard and a dog. Therefore, I cannot answer with 'yes' or 'no'.",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "GLzid54Fnc3PD89LZ2nbhf",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 58,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "3mCY8jNuYisUKxSioM4zmG",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 59,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "VgsfZnBH6okpXayxz6Zp8s",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 60,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "5FduTXPEzQynQ5QQFpMNqe",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 61,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "h3ydBX3Cb5DXVdZbfDP7rA",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 62,
+        "target": "no",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot access or analyze image content to determine this.",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "JVQw64JWwNVMrv7Nuxu5CG",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 63,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "QmoRqtorMwaq5mrGFJkt2i",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 64,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "Yjqk859JujDVd9nZwdQM92",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 65,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "9HkjTCge7RzPogoR8x7ndm",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 66,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No.",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "5ddbEMvxCxWk8ZPQ8KaCzj",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 67,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "XukDv4cFjV4bbH3QdCUV3B",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 68,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "P2zyXvjbzGxu4bpwLf3UVr",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 69,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "B7iNh8dwBmk6R3vuZiuBZV",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 70,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "bUCi9FGvsxpsBiVd7atVtU",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 71,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "fPfPnZjqfA3dR6Wh4fG2Jn",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 72,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "Lhj8q6P9fQfJXooiYpDtvQ",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 73,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "HoixUTi9juSuzzJbgfFDD5",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 74,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "EsEUuwkucqxNW5EEbACfXW",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 75,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "AHEWF6W6ARiPCGJNMLFgZK",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 76,
+        "target": "yes",
+        "response": "unknown",
+        "parsed_response": "unknown",
+        "raw_response": "I cannot view and analyze images to determine their content, so I cannot answer with 'yes' or 'no'.",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "g4J79mYUWxVTKjAEzkuudy",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 77,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "ZXym46bidCFnzXAYi7Xrpk",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 78,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "btgCHi5QxvYegpbQyU3kfZ",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 79,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "cMdGYvJ2QeD3qh74yjTZn7",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 80,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "PWJcgsGC6W6sBXo97URYdv",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 81,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "dYN5XtupwLzsz7Ge9PmF5z",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 82,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "ZSfrVN2arDqWyYZBrCGa3t",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 83,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "o6ZRMFFyZv48ttkhszfCtb",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 84,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "9FzXCJEJa5He95oWzAdTdq",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 85,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "FK33W3JMQYA3Wd75qSzwjY",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 86,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "3on8W6choz4fPysFfY8MKe",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 87,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "VE5EHq8KLhcZkwXAz7vBfL",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 88,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "c3s9G2m4Fihpg3sFBLAo3B",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 89,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "PzQ5qK6fpeVUd3Kvxz5X3y",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 90,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "Cd4v2HRJDeGSzmjCNeFWA2",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 91,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "T9mJEtGKf4WRkLZRrSEA64",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 92,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "iDgzq96pk3cPLbsG6EZoig",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 93,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "oNezPw54RpBcUe34NXa3ip",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 94,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "No",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "cWBKmxtHRh9oZmBvqxchho",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 95,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "YremaZiM8N8gfce9kfsY5E",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 96,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "LWC548F3VwJ8ALgUiEmd9Y",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 97,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "SdEkP7mb8mysHvhzp6nyQZ",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 98,
+        "target": "no",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "kbiENqXS96VvQYtj5CnWHA",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 99,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "hsbqMaqhZT7DhDzAtYEanH",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "500",
+          "n_images": 0
+        }
+      }
+    ],
+    "accuracy": 0.49,
+    "valid_accuracy": 0.5157894736842106,
+    "compliance": 0.95,
+    "n_trials": 100,
+    "n_valid_trials": 95,
+    "n_correct": 49,
+    "n_parse_failures": 5
+  }
+}

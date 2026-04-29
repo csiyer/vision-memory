@@ -1,7 +1,7 @@
 {
   "_metadata": {
     "task": "Paired Associate Memory",
-    "timestamp": "20260412_164154",
+    "timestamp": "20260428_090524",
     "dataset": "things",
     "n_images": 10,
     "n_trials": 10,
@@ -10,8 +10,8 @@
     ],
     "summary": {
       "gemini-2.5-flash": {
-        "accuracy": 1.0,
-        "n_correct": 10,
+        "accuracy": 0.9,
+        "n_correct": 9,
         "total": 10
       }
     },
@@ -21,127 +21,157 @@
     "trials": [
       {
         "trial": 0,
-        "target": "WORD195",
-        "reported": "word195",
+        "target": "SAW",
+        "reported": "saw",
         "correct": 1,
-        "raw_response": "WORD195",
+        "raw_response": "SAW",
         "metadata": {
-          "category": "cat_14",
-          "category_id": 7,
-          "exemplar_id": 0
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 1,
-        "target": "WORD365",
-        "reported": "word365",
+        "target": "FLOUR",
+        "reported": "flour",
         "correct": 1,
-        "raw_response": "WORD365",
+        "raw_response": "FLOUR",
         "metadata": {
-          "category": "cat_0",
-          "category_id": 0,
-          "exemplar_id": 0
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 2,
-        "target": "WORD624",
-        "reported": "word624",
-        "correct": 1,
-        "raw_response": "WORD624",
+        "target": "PAGE",
+        "reported": "",
+        "correct": 0,
+        "raw_response": null,
         "metadata": {
-          "category": "cat_10",
+          "category": "cat_1132",
           "category_id": 5,
-          "exemplar_id": 0
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 3,
-        "target": "WORD502",
-        "reported": "word502",
+        "target": "OCEAN",
+        "reported": "ocean",
         "correct": 1,
-        "raw_response": "WORD502",
+        "raw_response": "OCEAN",
         "metadata": {
-          "category": "cat_6",
-          "category_id": 3,
-          "exemplar_id": 0
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 4,
-        "target": "WORD353",
-        "reported": "word353",
+        "target": "RAISIN",
+        "reported": "raisin",
         "correct": 1,
-        "raw_response": "WORD353",
+        "raw_response": "RAISIN",
         "metadata": {
-          "category": "cat_18",
-          "category_id": 9,
-          "exemplar_id": 0
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 5,
-        "target": "WORD486",
-        "reported": "word486",
+        "target": "MAP",
+        "reported": "map",
         "correct": 1,
-        "raw_response": "WORD486",
+        "raw_response": "MAP",
         "metadata": {
-          "category": "cat_2",
-          "category_id": 1,
-          "exemplar_id": 0
+          "category": "cat_1136",
+          "category_id": 9,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 6,
-        "target": "WORD568",
-        "reported": "word568",
+        "target": "TEMPLE",
+        "reported": "temple",
         "correct": 1,
-        "raw_response": "WORD568",
+        "raw_response": "TEMPLE",
         "metadata": {
-          "category": "cat_12",
-          "category_id": 6,
-          "exemplar_id": 0
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 7,
-        "target": "WORD150",
-        "reported": "word150",
+        "target": "LONDON",
+        "reported": "london",
         "correct": 1,
-        "raw_response": "WORD150",
+        "raw_response": "LONDON",
         "metadata": {
-          "category": "cat_8",
-          "category_id": 4,
-          "exemplar_id": 0
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 8,
-        "target": "WORD692",
-        "reported": "word692",
+        "target": "BABY",
+        "reported": "baby",
         "correct": 1,
-        "raw_response": "WORD692",
+        "raw_response": "BABY",
         "metadata": {
-          "category": "cat_16",
-          "category_id": 8,
-          "exemplar_id": 0
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 9,
-        "target": "WORD829",
-        "reported": "word829",
+        "target": "KIWI",
+        "reported": "kiwi",
         "correct": 1,
-        "raw_response": "WORD829",
+        "raw_response": "KIWI",
         "metadata": {
-          "category": "cat_4",
-          "category_id": 2,
-          "exemplar_id": 0
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
         }
       }
     ],
-    "accuracy": 1.0,
-    "n_correct": 10,
+    "accuracy": 0.9,
+    "n_correct": 9,
     "total": 10
   }
 }

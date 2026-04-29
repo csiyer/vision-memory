@@ -1,0 +1,49 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260427_133612",
+    "dataset": "Brady2008",
+    "n_images": 2,
+    "n_trials": 2,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 1.0,
+        "n_correct": 2,
+        "total": 2
+      }
+    },
+    "max_context_pairs": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "WAVE",
+        "reported": "wave",
+        "correct": 1,
+        "raw_response": "WAVE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Astereo30.jpg",
+          "name": "Astereo30.jpg"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "LAVA",
+        "reported": "lava",
+        "correct": 1,
+        "raw_response": "LAVA",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Ainflatable10.jpg",
+          "name": "Ainflatable10.jpg"
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 2,
+    "total": 2
+  }
+}

@@ -10,6 +10,11 @@ class ContinuousRecognitionTask:
     def __init__(self, dataset_name='things', n_images=50, n_trials=None, min_delay=2, max_delay=15, p_old=0.5):
         self.n_images = n_images
         self.n_trials = n_trials  # If None, computed from n_images and p_old
+        # For very small n, delay constraints can't be satisfied — drop them so
+        # every image is immediately eligible to repeat after first presentation.
+        if n_images < min_delay + 2:
+            min_delay = 0
+            max_delay = n_images
         self.min_delay = min_delay
         self.max_delay = max_delay
         self.p_old = p_old

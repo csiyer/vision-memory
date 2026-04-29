@@ -15,10 +15,14 @@ set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
 source "$SCRIPT_DIR/venv/bin/activate"
+export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
+
+# Stagger start to avoid concurrent API hammering
+sleep 300
 
 MODEL="gemini"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250 500 1000)
+SIZES=(1 2 5 10 100 250)
 DATASETS=("things" "Brady2008")
 VARIANTS=("free" "afc")
 
@@ -47,7 +51,8 @@ for dataset in "${DATASETS[@]}"; do
                 --models "$MODEL" \
                 --n-images "$size" \
                 --variant "$variant" \
-                --dataset "$dataset" || echo "  [ERROR] $dataset | $variant | n=$size"
+                --dataset "$dataset" \
+                --n-trials 100 || echo "  [ERROR] $dataset | $variant | n=$size"
         done
     done
 done

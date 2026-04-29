@@ -41,7 +41,7 @@ class OpenAIEvaluator(BaseEvaluator):
 
     def _call_api(self, messages: List[Dict]) -> str:
         """Make API call and return response text."""
-        for attempt in range(8):
+        for attempt in range(16):
             try:
                 resp = self.client.chat.completions.create(
                     model=self.model_id,
@@ -50,9 +50,9 @@ class OpenAIEvaluator(BaseEvaluator):
                 )
                 return resp.choices[0].message.content
             except RateLimitError:
-                if attempt < 7:
-                    wait = 30 * (2 ** attempt)  # 30, 60, 120, 240 ... seconds
-                    print(f"\n  GPT 429 rate limit, waiting {wait}s (attempt {attempt+1}/8)...")
+                if attempt < 15:
+                    wait = min(30 * (2 ** attempt), 600)  # cap at 10 min
+                    print(f"\n  GPT 429 rate limit, waiting {wait}s (attempt {attempt+1}/16)...")
                     time.sleep(wait)
                 else:
                     raise

@@ -85,12 +85,11 @@ class AFCSerialOrderMemoryTask(SerialOrderMemoryBase):
         pair_indices = list(combinations(range(n), 2))
         random.shuffle(pair_indices)
 
-        max_pairs = len(pair_indices)
-        n_tests = n if self.n_tests is None else self.n_tests
-        n_tests = min(n_tests, max_pairs)
+        n_tests = min(self.n_tests, len(pair_indices)) if self.n_tests is not None else min(n, len(pair_indices))
+        selected_pairs = pair_indices[:n_tests]
 
         test_phase = []
-        for left_idx, right_idx in pair_indices[:n_tests]:
+        for left_idx, right_idx in selected_pairs:
             first_item = study_items[left_idx]
             second_item = study_items[right_idx]
             pair = [first_item, second_item]

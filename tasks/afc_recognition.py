@@ -40,8 +40,21 @@ class AFCRecognitionTask:
                 n_novel = n if foil_type == 'novel' else n // 2
                 n_exemplar = n - n_novel
 
+                # Novel pairs need 2 distinct categories each; exemplar pairs reuse 1 category
+                n_needed = n_novel * 2 + n_exemplar
+                n_available = len(self.dataset)
+                if n_available < n_needed:
+                    raise ValueError(
+                        f"THINGS dataset has only {n_available} categories but "
+                        f"foil_type={foil_type!r} with n={n} requires {n_needed} "
+                        f"({n_novel} novel pairs need {n_novel*2} categories, "
+                        f"{n_exemplar} exemplar pairs need {n_exemplar} more). "
+                        f"Reduce --n-images to at most "
+                        f"{n_available // 2 if foil_type == 'novel' else (n_available * 2) // 3}."
+                    )
+
                 # Novel: random categories
-                indices = list(range(len(self.dataset)))
+                indices = list(range(n_available))
                 random.shuffle(indices)
 
                 # First n_novel pairs use two different categories
@@ -53,16 +66,14 @@ class AFCRecognitionTask:
                     })
 
                 # Remaining n_exemplar pairs use two exemplars of the same category
-                # We start from where we left off in 'indices' if any left, or just use new ones
                 start_idx = n_novel * 2
                 for i in range(start_idx, start_idx + n_exemplar):
-                    if i < len(indices):
-                        idx = indices[i]
-                        pairs.append({
-                            "original": self.dataset.get_image(idx, 0),
-                            "foil": self.dataset.get_image(idx, 1),
-                            "type": "exemplar"
-                        })
+                    idx = indices[i]
+                    pairs.append({
+                        "original": self.dataset.get_image(idx, 0),
+                        "foil": self.dataset.get_image(idx, 1),
+                        "type": "exemplar"
+                    })
             elif foil_type == 'exemplar':
                 # All pairs are exemplars of the same category
                 indices = list(range(len(self.dataset)))

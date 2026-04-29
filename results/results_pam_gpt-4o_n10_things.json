@@ -1,7 +1,7 @@
 {
   "_metadata": {
     "task": "Paired Associate Memory",
-    "timestamp": "20260413_143412",
+    "timestamp": "20260428_103610",
     "dataset": "things",
     "n_images": 10,
     "n_trials": 10,
@@ -10,8 +10,8 @@
     ],
     "summary": {
       "gpt-4o": {
-        "accuracy": 0.6,
-        "n_correct": 6,
+        "accuracy": 1.0,
+        "n_correct": 10,
         "total": 10
       }
     },
@@ -21,127 +21,157 @@
     "trials": [
       {
         "trial": 0,
-        "target": "VET",
-        "reported": "vet",
+        "target": "PREDATOR",
+        "reported": "predator",
         "correct": 1,
-        "raw_response": "The word paired with this image is \"VET",
+        "raw_response": "PREDATOR",
         "metadata": {
-          "category": "cat_10",
-          "category_id": 1,
-          "exemplar_id": 0
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 1,
-        "target": "COWBOY",
-        "reported": "cow",
-        "correct": 0,
-        "raw_response": "The word paired with this image is \"COW",
+        "target": "PALACE",
+        "reported": "palace",
+        "correct": 1,
+        "raw_response": "PALACE",
         "metadata": {
-          "category": "cat_1004",
-          "category_id": 7,
-          "exemplar_id": 0
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 2,
-        "target": "FIELD",
-        "reported": "field",
+        "target": "RACKET",
+        "reported": "racket",
         "correct": 1,
-        "raw_response": "FIELD",
+        "raw_response": "RACKET",
         "metadata": {
-          "category": "cat_1006",
-          "category_id": 9,
-          "exemplar_id": 0
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 3,
-        "target": "TERMINAL",
-        "reported": "termin",
-        "correct": 0,
-        "raw_response": "The word paired with this image is \"TERMIN",
+        "target": "PIGEON",
+        "reported": "pigeon",
+        "correct": 1,
+        "raw_response": "PIGEON",
         "metadata": {
-          "category": "cat_1003",
-          "category_id": 6,
-          "exemplar_id": 0
+          "category": "cat_1132",
+          "category_id": 5,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 4,
-        "target": "MASCARA",
-        "reported": "mascara",
+        "target": "SUBMARINE",
+        "reported": "submarine",
         "correct": 1,
-        "raw_response": "The word paired with this image is MASCARA",
+        "raw_response": "SUBMARINE",
         "metadata": {
-          "category": "cat_1002",
-          "category_id": 5,
-          "exemplar_id": 0
+          "category": "cat_1136",
+          "category_id": 9,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 5,
-        "target": "DRIVEWAY",
-        "reported": "drive",
-        "correct": 0,
-        "raw_response": "The word paired with this image is \"DRIVE",
+        "target": "GROUND",
+        "reported": "ground",
+        "correct": 1,
+        "raw_response": "GROUND",
         "metadata": {
-          "category": "cat_1001",
-          "category_id": 4,
-          "exemplar_id": 0
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 6,
-        "target": "LIME",
-        "reported": "lime",
+        "target": "PAD",
+        "reported": "pad",
         "correct": 1,
-        "raw_response": "The word paired with this image is \"LIME",
+        "raw_response": "PAD",
         "metadata": {
-          "category": "cat_100",
-          "category_id": 2,
-          "exemplar_id": 0
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 7,
-        "target": "LETTUCE",
-        "reported": "lett",
-        "correct": 0,
-        "raw_response": "The word paired with this image is \"LETT",
+        "target": "INTESTINE",
+        "reported": "intestine",
+        "correct": 1,
+        "raw_response": "INTESTINE",
         "metadata": {
-          "category": "cat_1005",
-          "category_id": 8,
-          "exemplar_id": 0
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 8,
-        "target": "WAGON",
-        "reported": "wagon",
+        "target": "LASH",
+        "reported": "lash",
         "correct": 1,
-        "raw_response": "The word paired with this image is \"WAGON",
+        "raw_response": "LASH",
         "metadata": {
-          "category": "cat_0",
-          "category_id": 0,
-          "exemplar_id": 0
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
         }
       },
       {
         "trial": 9,
-        "target": "BIRD",
-        "reported": "bird",
+        "target": "MANSION",
+        "reported": "mansion",
         "correct": 1,
-        "raw_response": "The word paired with that image is \"BIRD",
+        "raw_response": "MANSION",
         "metadata": {
-          "category": "cat_1000",
-          "category_id": 3,
-          "exemplar_id": 0
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
         }
       }
     ],
-    "accuracy": 0.6,
-    "n_correct": 6,
+    "accuracy": 1.0,
+    "n_correct": 10,
     "total": 10
   }
 }
