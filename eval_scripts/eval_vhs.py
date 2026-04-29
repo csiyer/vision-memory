@@ -146,7 +146,11 @@ def _find_completed_models(results_dir, prefix, **match_fields):
                 data = json.load(f)
             meta = data.get("_metadata", {})
             if all(str(meta.get(k)) == str(v) for k, v in match_fields.items() if v is not None):
-                completed.update(meta.get("models", []))
+                # Only count a model as completed if it actually ran trials
+                for model in meta.get("models", []):
+                    model_data = data.get(model, {})
+                    if isinstance(model_data, dict) and model_data.get("n_trials", 0) > 0:
+                        completed.add(model)
         except Exception:
             pass
     return completed

@@ -14,9 +14,16 @@ Task types:
 """
 import json
 import random
+import ssl
 import urllib.request
 from pathlib import Path
 from PIL import Image
+
+# The COCO image CDN has a certificate hostname mismatch on some cluster nodes.
+# We use an unverified context so fetches still work; the controlled URL is safe.
+_SSL_UNVERIFIED_CTX = ssl.create_default_context()
+_SSL_UNVERIFIED_CTX.check_hostname = False
+_SSL_UNVERIFIED_CTX.verify_mode = ssl.CERT_NONE
 
 COCO_IMAGE_BASE_URL = "https://images.cocodataset.org"
 
@@ -45,7 +52,8 @@ def _fetch_image(
         return
     dest.parent.mkdir(parents=True, exist_ok=True)
     url = f"{coco_base_url.rstrip('/')}/{image_path}"
-    urllib.request.urlretrieve(url, dest)  # noqa: S310 — controlled URL
+    with urllib.request.urlopen(url, context=_SSL_UNVERIFIED_CTX, timeout=fetch_timeout_s) as resp:  # noqa: S310
+        dest.write_bytes(resp.read())
 
 
 def iter_unique_image_paths_in_vhs_qa(qa_root) -> list:

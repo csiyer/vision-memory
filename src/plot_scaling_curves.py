@@ -100,7 +100,8 @@ def load_results(results_dir="results"):
 
                 models = metadata.get("models", [])
                 foil_type = metadata.get("foil_type", "all")
-                n_images = metadata.get("n_images") or int(metadata.get("image_count", 0) or 0)
+                raw_count = metadata.get("n_images") or metadata.get("image_count", 0) or 0
+                n_images = 1 if raw_count == "oracle" else int(raw_count)
                 raw_dataset = metadata.get("dataset")
                 task_name = metadata.get("task", task_key)
                 dataset = raw_dataset if raw_dataset else task_name
@@ -291,6 +292,102 @@ def plot_single_dataset_comparison(data, task, dataset, output_dir="plots"):
     print(f"Saved: {filename}")
 
 
+MODEL_STYLES = {
+    'qwen3-vl-8b': {'linestyle': '-',  'marker': 'o'},
+    'molmo2-8b':   {'linestyle': '--', 'marker': 's'},
+}
+
+MODEL_LABELS = {
+    'qwen3-vl-8b': 'Qwen3-VL-8B',
+    'molmo2-8b':   'Molmo2-8B',
+}
+
+
+def plot_model_overlap(data, task, dataset, models=None, output_dir="plots"):
+    """
+    Overlap two (or more) models on the same subplots.
+
+    Layout: one subplot per foil type that has data.
+    Each subplot shows both models as separate lines; models are distinguished
+    by linestyle/marker, foil types by color.
+    """
+    Path(output_dir).mkdir(exist_ok=True)
+
+    task_data = data.get(task, {})
+    if models is None:
+        models = list(task_data.keys())
+
+    # Collect foil types present across all models
+    foil_types_present = []
+    for ft in FOIL_ORDER:
+        for model in models:
+            if task_data.get(model, {}).get(dataset, {}).get(ft):
+                foil_types_present.append(ft)
+                break
+
+    if not foil_types_present:
+        print(f"No data for task '{task}', dataset '{dataset}', models {models}")
+        return
+
+    n_cols = min(len(foil_types_present), 3)
+    n_rows = (len(foil_types_present) + n_cols - 1) // n_cols
+
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(5 * n_cols, 4.5 * n_rows))
+    if n_rows == 1 and n_cols == 1:
+        axes = np.array([[axes]])
+    elif n_rows == 1:
+        axes = axes.reshape(1, -1)
+    elif n_cols == 1:
+        axes = axes.reshape(-1, 1)
+    axes_flat = axes.flatten()
+
+    for idx, foil_type in enumerate(foil_types_present):
+        ax = axes_flat[idx]
+        all_sizes = []
+
+        for model in models:
+            foil_data = task_data.get(model, {}).get(dataset, {}).get(foil_type, {})
+            if not foil_data:
+                continue
+            sizes = sorted(foil_data.keys())
+            all_sizes.extend(sizes)
+            style = MODEL_STYLES.get(model, {'linestyle': '-', 'marker': 'o'})
+            label = MODEL_LABELS.get(model, model)
+            ax.plot(sizes, [foil_data[s] for s in sizes],
+                    marker=style['marker'],
+                    linestyle=style['linestyle'],
+                    markersize=8, linewidth=2,
+                    color=FOIL_COLORS.get(foil_type, 'gray'),
+                    label=label)
+
+        ax.set_xlabel('Study sequence length')
+        ax.set_ylabel('Accuracy (%)')
+        ax.set_title(FOIL_LABELS.get(foil_type, foil_type))
+        if all_sizes and max(all_sizes) > 0:
+            ax.set_xscale('log')
+            ax.set_xticks([1, 10, 100, 250])
+            ax.set_xticklabels(['1', '10', '100', '250'])
+            ax.set_xlim(0.8, 300)
+        ax.set_ylim(0, 105)
+        ax.set_yticks([0, 20, 40, 60, 80, 100])
+        ax.axhline(y=50, color='gray', linestyle='--', alpha=0.5, linewidth=1)
+        ax.grid(True, alpha=0.3)
+        ax.legend(loc='upper right')
+
+    for idx in range(len(foil_types_present), len(axes_flat)):
+        axes_flat[idx].set_visible(False)
+
+    model_str = ' vs '.join(MODEL_LABELS.get(m, m) for m in models)
+    plt.suptitle(f'{task} — {dataset}\n{model_str}', fontsize=14, y=1.02)
+    plt.tight_layout()
+
+    models_slug = '_vs_'.join(models)
+    filename = f"{output_dir}/scaling_{task}_{models_slug}_{dataset}_overlap.png"
+    plt.savefig(filename, dpi=150, bbox_inches='tight')
+    plt.close()
+    print(f"Saved: {filename}")
+
+
 def main():
     import argparse
     parser = argparse.ArgumentParser(description="Generate scaling curve plots")
@@ -302,6 +399,8 @@ def main():
                         help="Also generate comparison grid plots")
     parser.add_argument("--all-models", action="store_true",
                         help="Also generate per-dataset all-models plots")
+    parser.add_argument("--overlap", action="store_true",
+                        help="Generate overlap plots comparing qwen3-vl-8b vs molmo2-8b")
     args = parser.parse_args()
 
     print("Loading results...")
@@ -338,6 +437,18 @@ def main():
                 datasets.update(model_data.keys())
             for dataset in datasets:
                 plot_single_dataset_comparison(data, task, dataset, output_dir)
+
+        if args.overlap:
+            overlap_tasks = {"2afc", "serial_free", "pam"}
+            if task in overlap_tasks:
+                print(f"Generating overlap plots for task '{task}'...")
+                datasets = set()
+                for model_data in task_data.values():
+                    datasets.update(model_data.keys())
+                for dataset in datasets:
+                    plot_model_overlap(data, task, dataset,
+                                       models=['qwen3-vl-8b', 'molmo2-8b'],
+                                       output_dir=output_dir)
 
     print(f"\nAll plots saved to '{output_dir}/' directory")
 
