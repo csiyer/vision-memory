@@ -1,0 +1,187 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (Free Report)",
+    "variant": "free",
+    "timestamp": "20260428_103608",
+    "dataset": "things",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0
+      }
+    },
+    "max_context_images": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 7,
+        "reported": 7,
+        "correct": 1,
+        "raw_response": "This image is the seventh in the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 7
+        }
+      },
+      {
+        "trial": 1,
+        "target": 9,
+        "reported": 9,
+        "correct": 1,
+        "raw_response": "This image is number 9 in the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 9
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image is the second in the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 3,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "This image is the fifth in the sequence.",
+        "metadata": {
+          "category": "cat_1132",
+          "category_id": 5,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 4,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "This image is the third one in the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 5,
+        "target": 10,
+        "reported": 10,
+        "correct": 1,
+        "raw_response": "This image is the 10th in the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 10
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image is the first one in the sequence.",
+        "metadata": {
+          "category": "cat_1136",
+          "category_id": 9,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 7,
+        "target": 6,
+        "reported": 6,
+        "correct": 1,
+        "raw_response": "This image appeared 6th in the sequence.",
+        "metadata": {
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 6
+        }
+      },
+      {
+        "trial": 8,
+        "target": 8,
+        "reported": 8,
+        "correct": 1,
+        "raw_response": "This image was 8th in the sequence.",
+        "metadata": {
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 8
+        }
+      },
+      {
+        "trial": 9,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "This image is number 4 in the sequence.",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 4
+        }
+      }
+    ],
+    "average_error": 0.0,
+    "n_correct": 10,
+    "accuracy": 1.0,
+    "n_parse_failures": 0
+  }
+}

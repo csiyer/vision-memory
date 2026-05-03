@@ -1,0 +1,61 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260428_104547",
+    "dataset": "Brady2008",
+    "n_images": 2,
+    "n_trials": 1,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 1.0,
+        "n_correct": 1,
+        "total": 1
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cue image (colorful swan ride) was paired with the retro TV.\nThe retro TV was then paired with the red wooden planter.\n\nTherefore, the red wooden planter (1) is indirectly associated with the cue image.\n\nThe answer is **1**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26378986.thl.jpg",
+            "name": "26378986.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Atoyhorse2.jpg",
+            "name": "Atoyhorse2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ABROWCONT.jpg",
+            "name": "ABROWCONT.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AHANDLE5.jpg",
+            "name": "AHANDLE5.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 1,
+    "total": 1
+  }
+}

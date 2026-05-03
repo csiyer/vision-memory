@@ -10,7 +10,7 @@ from .base import BaseEvaluator
 class AnthropicEvaluator(BaseEvaluator):
     """Anthropic Claude vision evaluator."""
 
-    def __init__(self, model_id: str = "claude-sonnet-4-20250514"):
+    def __init__(self, model_id: str = "claude-opus-4-7-20251001"):
         super().__init__(model_id)
         self.client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
@@ -33,6 +33,6 @@ class AnthropicEvaluator(BaseEvaluator):
         resp = self.client.messages.create(
             model=self.model_id,
             messages=messages,
-            max_tokens=10
+            max_tokens=20
         )
         return resp.content[0].text

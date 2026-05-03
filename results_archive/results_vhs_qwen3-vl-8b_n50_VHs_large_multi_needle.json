@@ -1,0 +1,1638 @@
+{
+  "_metadata": {
+    "task": "Visual Haystacks",
+    "timestamp": "20260424_091225",
+    "mode": "multi_needle",
+    "split": "VHs_large",
+    "image_count": "50",
+    "qa_root": "datasets/VHs_qa",
+    "image_root": "datasets/coco",
+    "n_trials": 100,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.57,
+        "valid_accuracy": 0.57,
+        "compliance": 1.0
+      }
+    },
+    "max_samples": 100,
+    "max_context_images": null,
+    "seed": 0,
+    "shuffle_images": true,
+    "fetch_missing_coco": true
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "V9R5KBDPSMnTWt2Pucavge",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 1,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "NXkToiPXLNmtVpRLQ4NsdY",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 2,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "BKia8Y8c5uqSpFFUauUmaB",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 3,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "gDsUqvfhSUgYuMcKdSxEmo",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 4,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "DoLW6rw9cr6RDEfcChA2AZ",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 5,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "7RkVUVZj77pextr7YEqfCd",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 6,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "MNTnEQwuXNfsaCx5jmakZQ",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 7,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "Jxna285i76Uua9MwqyvD9R",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 8,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "Ye2vAjxV2ivsKdnS3NcfvE",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 9,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "E2zWLJr6WfR2XxPPcj2tfD",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 10,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "CvEDig6LVwDGV2je7XQnpJ",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 11,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "JJQaSwecapF6ZMqm7C8jSD",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 12,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "8kshPZsZbVU3YDBbezKwbV",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 13,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "B3c8LLkRRQneFds2rUhb9M",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 14,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "XKyD5szkBbjCTXGoM7F23S",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 15,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "8cC4rCg95qegqxx8zBtmtC",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 16,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "esBwh6Cesj7r3ok2GLYGhD",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 17,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "7aH7cZ4p3Qpmoaurrzbu7k",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 18,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "gb4zp5rgFnMcysFfNU5v7A",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 19,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "VKJ5QTnAcXseHLGrPh5JCg",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 20,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "N62fhMgX7DoJv7HBjvqo67",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 21,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "6NeDxpSAS6zDsVqmGDW5ef",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 22,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "Jd6djkeu3AyQfmyWAB96XW",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 23,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "PWFYpU8Biao6Qhvpe7ux7Z",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 24,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "BF2oQTxRHXjVdYpUFMkzHL",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 25,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "Lcd2NgUGdycbaYDQpQ2frs",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 26,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "TnPN4TRGPB8VPhnt2Gd3Kx",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 27,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "RXKBBBydkUyMEAzmS7Uquu",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 28,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "dzGL7AyheWkpTtFqj2qd3K",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 29,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "a3qL36fNvqkEKBGhxgeVhR",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 30,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "45SprWevtvzrdyS9nZJyeH",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 31,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "fAEos9ZofuYhWiXRn9shvv",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 32,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "SFcjg76wpMzU4ExyTEwPJK",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 33,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "YF5GhUVrhP54LbYZM7U3wF",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 34,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "6GpUY9aifpMCq22DmDvn8Z",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 35,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "FzQgMDYyraSpnof8QTD2Qf",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 36,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "mdY9egfJmoyhuxGR3JxPTT",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 37,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "ajw6XHeZ2x2DjDQpnMytwQ",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 38,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "GHXCwEMaiAmboSmwhemPTr",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 39,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "GnY28NusEaVt3nZjHdKP8S",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 40,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "UGhkUKb83W65LMuz3nbDBv",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 41,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "V2cTBLFHHBoo6PweVY6oxP",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 42,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "kNwvUqoZKjsxzQD7DvTPNj",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 43,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "Fu6ztRZ79yJSTfMkuqYsQe",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 44,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "339YNevR4vQ5unFaFBrto9",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 45,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "Z5x5V7JreXCsdFce2kyZZy",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 46,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "GYcpuxmRn6JwnLZ6MPJ98z",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 47,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "2huAaKvhVH2R5h3hkVVZSR",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 48,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "KSrGRq2zzviRj73ENRS8Bt",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 49,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "AUewXJx5bqDHsb9gny8wdi",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 50,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "drAHmd6fB7iVc4ULSpt6AC",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 51,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "P4wamsa2t9biEsEQitpmgx",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 52,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "GJBqiYmXb8cDhBHpvAzPKV",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 53,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "FfDJjEdrXBsEYKTp7K6QsL",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 54,
+        "target": "yes",
+        "response": "yes",
+        "parsed_response": "yes",
+        "raw_response": "yes",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "FsKriBHY8Ri3rjbH4vfKEA",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 55,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "aEcvwNAtWjm9S67HZKjEPi",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 56,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "VXQbUHdW7tYPJEmeWrU3B3",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 57,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "LNc6a8XDdhT8y8eF6Wegav",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 58,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "hMH5eYzRwzaCPFy5uQk2QC",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 59,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "byR9z3EoZh75kbLLDZYabt",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 60,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "gBrwPfwSMHs2zNRifLGWrU",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 61,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "ChdUCMG7kwdqi7Mo8bpxNL",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 62,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "QLwCBn7yX9mwgmu5xipi4T",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 63,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "GFradbiBb7r9a3RJT88vA5",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 64,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "WqoZUdXAwF2zeN4zwEYpRo",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 65,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "9xq5aCNQpX56JFyGCsw5gx",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 66,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "5ddbEMvxCxWk8ZPQ8KaCzj",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 67,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "GpWYbev6GgCbd6tnxGJ4pV",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 68,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "avFAiLME3JHnfiXrXM9RTH",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 69,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "J6Tw4rWgtK5K272Vgf9vmw",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 70,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "4pTMnskCP34yuYT3AZe9yQ",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 71,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "ZXym46bidCFnzXAYi7Xrpk",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 72,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "GZStRB3wYiJ3hAaPkrEWPX",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 73,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "h84JXMV8hwj4NLD3Vgu2UW",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 74,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "LEjkegy7br2KPpuCyNsaJX",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 75,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "gUJAfLpzyWZatVUyWnaUfE",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 76,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "ZNk4Qx6E6JigLmEDG6qaib",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 77,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "TMPjECpTtFSM6RgxJGx9Lj",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 78,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "H9GA5zJUff53CfRWTHVZNs",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 79,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "JyvRzPzAzyh9RxX9pJrSvY",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 80,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "CgLU2aTcxhLfZrupM2FQC8",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 81,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "M6J6zf84suiprDmS84kqsG",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 82,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "Wpuc5JbF7KpEoh95Awsp5H",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 83,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "2Hjv3WxcT6cepGZAHJJMEF",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 84,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "dKyS8D2cpTq2f8cPKvNxce",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 85,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "BqdnNN65xGAioxW6Mo2brd",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 86,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "YfWXS2HuS8LWeDhFEUAYYx",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 87,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "CmrD6c48RxqowELDHGVTuV",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 88,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "RiskgUrcNGrjdP5RdUrpog",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 89,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "WsoRutsUDDJ42xH3xmpRUX",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 90,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "bZoUVs9PWa9ttQ97iCYKGr",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 91,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "iGuS9d8RzkHbFto6bTQXSj",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 92,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "NGEnwJTyZw6yqQgHkLkJ7T",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 93,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "chdw6Pa2oubdPfwczY78D8",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 94,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "coFxovdkrv4dAv5pYMfchx",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 95,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "a24weasB5vERRVNxau4KLw",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 96,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "3srfuvKoaHT2ZSiUMdF7UY",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 97,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "WkcTWUtLQV6rVuR9k5ro2b",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 98,
+        "target": "no",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 1,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "attRhAyZ49ijaXr3fyHYw4",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      },
+      {
+        "trial": 99,
+        "target": "yes",
+        "response": "no",
+        "parsed_response": "no",
+        "raw_response": "no",
+        "correct": 0,
+        "n_images_sent": 0,
+        "metadata": {
+          "id": "fKvFDSY38NNKZGDLy9gSpj",
+          "mode": "multi_needle",
+          "split": "VHs_large",
+          "image_count": "50",
+          "n_images": 0
+        }
+      }
+    ],
+    "accuracy": 0.57,
+    "valid_accuracy": 0.57,
+    "compliance": 1.0,
+    "n_trials": 100,
+    "n_valid_trials": 100,
+    "n_correct": 57,
+    "n_parse_failures": 0
+  }
+}

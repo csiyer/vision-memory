@@ -1,0 +1,197 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260426_202738",
+    "dataset": "Brady2008",
+    "n_images": 10,
+    "n_trials": 5,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 1.0,
+        "n_correct": 5,
+        "total": 5
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image (A) is the ceramic jug.\nThe A-B pair is: ceramic jug (A) - purple string cheese packaging (B).\nThe B-C pair is: purple string cheese packaging (B) - long, curved reception desk (C).\n\nTherefore, the image indirectly associated with the cue image is the long, curved reception desk.\n\nThe correct image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/stickcheese.jpg",
+            "name": "stickcheese.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Aceramicjug10.jpg",
+            "name": "Aceramicjug10.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aservicedesk.jpg",
+            "name": "Aservicedesk.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/8244991.thl.jpg",
+            "name": "8244991.thl.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cue image (Salt shaker) was paired with the Domino.\nThe Domino was then paired with image 1 (Wood plane).\n\nTherefore, image 1 is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 1,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/A4DOMINO.jpg",
+            "name": "A4DOMINO.jpg",
+            "role": "B",
+            "chain_index": 1
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Asaltgrinder.jpg",
+            "name": "Asaltgrinder.jpg",
+            "role": "A",
+            "chain_index": 1
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Awoodplaner2.jpg",
+            "name": "Awoodplaner2.jpg",
+            "role": "C",
+            "chain_index": 1
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/vampire.jpg",
+            "name": "vampire.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image (car seat) was paired with the metal detector (B image).\nThe metal detector (B image) was paired with the checkbook (C image).\n\nTherefore, image 2 (checkbook) is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 2,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AMETDETE2.jpg",
+            "name": "AMETDETE2.jpg",
+            "role": "B",
+            "chain_index": 2
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/carseat.jpg",
+            "name": "carseat.jpg",
+            "role": "A",
+            "chain_index": 2
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/8244991.thl.jpg",
+            "name": "8244991.thl.jpg",
+            "role": "C",
+            "chain_index": 2
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Awoodplaner2.jpg",
+            "name": "Awoodplaner2.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cue image (A) is associated with the red nail brush (B).\nThe red nail brush (B) is associated with the vampire costume (C).\n\nTherefore, the vampire costume (1) is indirectly associated with the cue image.\n\nThe answer is **1**.",
+        "metadata": {
+          "chain_index": 3,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Anailbrush3.jpg",
+            "name": "Anailbrush3.jpg",
+            "role": "B",
+            "chain_index": 3
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ACURLER.jpg",
+            "name": "ACURLER.jpg",
+            "role": "A",
+            "chain_index": 3
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/vampire.jpg",
+            "name": "vampire.jpg",
+            "role": "C",
+            "chain_index": 3
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/8244991.thl.jpg",
+            "name": "8244991.thl.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1",
+        "metadata": {
+          "chain_index": 4,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Acandlehold17.jpg",
+            "name": "Acandlehold17.jpg",
+            "role": "B",
+            "chain_index": 4
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/barssport.jpg",
+            "name": "barssport.jpg",
+            "role": "A",
+            "chain_index": 4
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AFBLADE.jpg",
+            "name": "AFBLADE.jpg",
+            "role": "C",
+            "chain_index": 4
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Aservicedesk.jpg",
+            "name": "Aservicedesk.jpg",
+            "role": "C",
+            "chain_index": 0
+          }
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 5,
+    "total": 5
+  }
+}

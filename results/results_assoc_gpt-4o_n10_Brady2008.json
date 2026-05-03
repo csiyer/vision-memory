@@ -1,0 +1,197 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260427_114535",
+    "dataset": "Brady2008",
+    "n_images": 10,
+    "n_trials": 5,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.8,
+        "n_correct": 4,
+        "total": 5
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is number 2.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/fireextinguisher.jpg",
+            "name": "fireextinguisher.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/22824840.thl.jpg",
+            "name": "22824840.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Agnu.jpg",
+            "name": "Agnu.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Abuilding5.jpg",
+            "name": "Abuilding5.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image (saxophone) is associated with the boots in the A-B pairs. The",
+        "metadata": {
+          "chain_index": 1,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Apairofrubbe3.jpg",
+            "name": "Apairofrubbe3.jpg",
+            "role": "B",
+            "chain_index": 1
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Asaxophone.jpg",
+            "name": "Asaxophone.jpg",
+            "role": "A",
+            "chain_index": 1
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Ablackboardw3.jpg",
+            "name": "Ablackboardw3.jpg",
+            "role": "C",
+            "chain_index": 1
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Achair618.jpg",
+            "name": "Achair618.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 1.",
+        "metadata": {
+          "chain_index": 2,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26387568.thl.jpg",
+            "name": "26387568.thl.jpg",
+            "role": "B",
+            "chain_index": 2
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AMEDIEQUI.jpg",
+            "name": "AMEDIEQUI.jpg",
+            "role": "A",
+            "chain_index": 2
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/bountytowel.jpg",
+            "name": "bountytowel.jpg",
+            "role": "C",
+            "chain_index": 2
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Ablackboardw3.jpg",
+            "name": "Ablackboardw3.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image is associated with image 2 (the chair).",
+        "metadata": {
+          "chain_index": 3,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ABAKINGPA.jpg",
+            "name": "ABAKINGPA.jpg",
+            "role": "B",
+            "chain_index": 3
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Atoydonkey.jpg",
+            "name": "Atoydonkey.jpg",
+            "role": "A",
+            "chain_index": 3
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Achair618.jpg",
+            "name": "Achair618.jpg",
+            "role": "C",
+            "chain_index": 3
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/bountytowel.jpg",
+            "name": "bountytowel.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 1.",
+        "metadata": {
+          "chain_index": 4,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Afloppydisk6.jpg",
+            "name": "Afloppydisk6.jpg",
+            "role": "B",
+            "chain_index": 4
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/bikewithbasket.jpg",
+            "name": "bikewithbasket.jpg",
+            "role": "A",
+            "chain_index": 4
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Abuilding5.jpg",
+            "name": "Abuilding5.jpg",
+            "role": "C",
+            "chain_index": 4
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Ablackboardw3.jpg",
+            "name": "Ablackboardw3.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      }
+    ],
+    "accuracy": 0.8,
+    "n_correct": 4,
+    "total": 5
+  }
+}

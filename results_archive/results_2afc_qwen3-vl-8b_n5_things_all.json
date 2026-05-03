@@ -1,0 +1,65 @@
+{
+  "_metadata": {
+    "task": "2-AFC Recognition",
+    "timestamp": "20260427_120331",
+    "dataset": "things",
+    "n_images": 5,
+    "n_trials": 5,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.6666666666666666,
+        "d_prime": 0.4506241100243562,
+        "mem_score": 0.33333333333333326
+      }
+    },
+    "max_context_images": null,
+    "foil_type": "all"
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "response": 2,
+        "correct": 1,
+        "foil_type": "novel",
+        "raw_response": "2"
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "response": 2,
+        "correct": 0,
+        "foil_type": "novel",
+        "raw_response": "2"
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "response": 1,
+        "correct": 1,
+        "foil_type": "exemplar",
+        "raw_response": "1"
+      }
+    ],
+    "accuracy": 0.6666666666666666,
+    "valid_accuracy": 0.6666666666666666,
+    "d_prime": 0.4506241100243562,
+    "mem_score": 0.33333333333333326,
+    "n_trials": 3,
+    "n_valid_trials": 3,
+    "n_correct": 2,
+    "n_parse_failures": 0,
+    "accuracy_by_type": {
+      "novel": 0.5,
+      "exemplar": 1.0
+    },
+    "d_prime_by_type": {
+      "novel": 0.0,
+      "exemplar": 0.9538725524089398
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "_metadata": {
+    "task": "2-AFC Recognition",
+    "timestamp": "20260429_031025",
+    "dataset": "Brady2008",
+    "n_images": 5,
+    "n_trials": 5,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 0.6,
+        "d_prime": 1.6268396951952369,
+        "mem_score": 1.0
+      }
+    },
+    "max_context_images": null,
+    "foil_type": "state"
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "response": 1,
+        "correct": 1,
+        "foil_type": "state",
+        "raw_response": "1"
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "response": -1,
+        "correct": 0,
+        "foil_type": "state",
+        "raw_response": null
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "response": -1,
+        "correct": 0,
+        "foil_type": "state",
+        "raw_response": null
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "response": 1,
+        "correct": 1,
+        "foil_type": "state",
+        "raw_response": "1"
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "response": 1,
+        "correct": 1,
+        "foil_type": "state",
+        "raw_response": "1"
+      }
+    ],
+    "accuracy": 0.6,
+    "valid_accuracy": 1.0,
+    "d_prime": 1.6268396951952369,
+    "mem_score": 1.0,
+    "n_trials": 5,
+    "n_valid_trials": 3,
+    "n_correct": 3,
+    "n_parse_failures": 2,
+    "accuracy_by_type": {
+      "state": 1.0
+    },
+    "d_prime_by_type": {
+      "state": 1.6268396951952369
+    }
+  }
+}

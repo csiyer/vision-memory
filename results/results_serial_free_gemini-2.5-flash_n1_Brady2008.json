@@ -1,0 +1,39 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (Free Report)",
+    "variant": "free",
+    "timestamp": "20260425_230823",
+    "dataset": "Brady2008",
+    "n_images": 1,
+    "n_trials": 1,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 1.0
+      }
+    },
+    "max_context_images": null
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image occurred at position **1**.",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Aeggcup224.jpg",
+          "name": "Aeggcup224.jpg",
+          "serial_position": 1
+        }
+      }
+    ],
+    "average_error": 0.0,
+    "n_correct": 1,
+    "accuracy": 1.0,
+    "n_parse_failures": 0
+  }
+}

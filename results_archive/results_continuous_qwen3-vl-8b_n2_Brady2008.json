@@ -1,0 +1,86 @@
+{
+  "_metadata": {
+    "task": "Continuous Recognition",
+    "timestamp": "20260428_214618",
+    "dataset": "Brady2008",
+    "n_images": 2,
+    "n_trials": 4,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.5,
+        "d_prime": 0.0,
+        "hit_rate": 0.5,
+        "false_alarm_rate": 0.5,
+        "weighted_f1": 0.5
+      }
+    },
+    "p_old": 0.5,
+    "min_delay": 0,
+    "max_delay": 2
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 0,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/03015528000.jpg",
+          "name": "03015528000.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/03015528000.jpg",
+          "name": "03015528000.jpg",
+          "delay": 0
+        }
+      },
+      {
+        "trial": 2,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/045.jpg",
+          "name": "045.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/045.jpg",
+          "name": "045.jpg",
+          "delay": 0
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "hit_rate": 0.5,
+    "false_alarm_rate": 0.5,
+    "d_prime": 0.0,
+    "weighted_f1": 0.5,
+    "counts": {
+      "hits": 1,
+      "misses": 1,
+      "false_alarms": 1,
+      "correct_rejections": 1
+    },
+    "hit_rate_by_delay": {
+      "0": 0.5
+    }
+  }
+}

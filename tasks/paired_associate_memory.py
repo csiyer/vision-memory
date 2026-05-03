@@ -1,9 +1,12 @@
 import random
+import sys
 from pathlib import Path
-from stimuli import ThingsDataset, BradyDataset
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.stimuli import ThingsDataset, BradyDataset
 
 class PairedAssociateMemoryTask:
-    def __init__(self, dataset_name='things', n_images=20, wordpool_path='memory_datasets/wasnorm_wordpool.txt'):
+    def __init__(self, dataset_name='things', n_images=20, wordpool_path='datasets/wasnorm_wordpool.txt'):
         self.n_images = n_images
         self.dataset_name = dataset_name
         
@@ -27,9 +30,9 @@ class PairedAssociateMemoryTask:
         indices = list(range(len(self.dataset)))
         random.shuffle(indices)
         selected_indices = indices[:n]
-        
+
         words = random.sample(self.wordpool, n)
-        
+
         study_sequence = []
         pairs = []
         for i in range(n):
@@ -41,20 +44,19 @@ class PairedAssociateMemoryTask:
                 "word": word,
                 "metadata": self.dataset.get_metadata(selected_indices[i])
             })
-            
-        # Test phase: show image, ask for word
-        test_phase = []
+
         test_indices = list(range(n))
         random.shuffle(test_indices)
-        
+
+        test_phase = []
         for i in test_indices:
             test_phase.append({
                 "image": pairs[i]["image"],
-                "prompt": "What was the word paired with this image?",
+                "prompt": "What was the word paired with this image? Respond with only the single word, nothing else.",
                 "target": pairs[i]["word"],
                 "metadata": pairs[i]["metadata"]
             })
-            
+
         return {
             "study_prompt": "Remember the word paired with each image.",
             "study_sequence": study_sequence,

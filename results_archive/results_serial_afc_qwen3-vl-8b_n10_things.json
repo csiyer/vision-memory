@@ -1,0 +1,1537 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260428_223436",
+    "dataset": "things",
+    "n_images": 10,
+    "n_trials": 100,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.54
+      }
+    },
+    "max_context_images": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A bird's nest\n2.  A person's navel\n3.  A person's neck and collarbone\n4.  A nail clipper\n5.  A nail file\n6.  A beaded necklace\n7.  Wooden bowls\n8.  Sewing pins\n9.  Nail polish bottles\n10. A white paper napkin\n\nThe first image in",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 5,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. A bird's nest\n2. The beaded necklace (Image 1)\n3. The neck (Image 2)\n\nTherefore, the beaded necklace (Image 1) is the second image, and the neck (Image 2) is the third image. The first image in the sequence is the bird's nest.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the bird's nest is the third image in the original sequence, while the image of the nail clipper is the sixth image. Therefore, the bird's nest image came before the nail clipper image in the sequence.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 6,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the wooden bowls) appeared first in the sequence.\n\nIn the original 10-image sequence, the wooden bowls are in image 7, and the white napkin is in image 5. Since 7 comes after 5, the napkin appeared first.\n\nTherefore, the correct answer is: **2**",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 7,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the necklace) appeared first in the sequence.\n\nThe sequence is as follows:\n1.  A necklace with purple and pink beads.\n2.  A collection of nail polish bottles.\n\nTherefore, the first image is the necklace.",
+        "metadata": {
+          "first_serial_position": 7,
+          "second_serial_position": 8,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the nail polish bottles is the 6th image in the sequence, while the image of the nail clipper is the 9th image. Therefore, the nail polish bottles appeared first.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 9,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence begins with the image of the white napkin (Image 1), followed by the bird's nest (Image 2). The image of the neck (Image 1) appears later in the sequence, at position 5.\n\nTherefore, the correct answer is 2.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the wooden bowls is the 4th image in the original sequence, while the image of the nail polish bottles is the 3rd image. Since the sequence is ordered from 1 to 10, the bowls (image 1) come after the nail polish (image 2) in the sequence.\n\nTherefore, the correct answer is: 2",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nThe image of the nail polish bottles is the 6th image in the sequence, while the image of the nail files is the 5th image. Since the sequence is ordered from 1 to 10, the nail files (image 2) came before the nail polish bottles (image 1).\n\nTherefore, the correct answer is: 2",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 6,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 7,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 10,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 11,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the white napkin is the 6th image in the original sequence, while the image of the wooden bowls is the 9th image. Therefore, the napkin image came first.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 9,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 12,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A bird's nest on a rock.\n2.  A metal nail clipper.\n3.  A beaded necklace.\n4.  A close-up of a person's neck and shoulders.\n5.  A collection of nail polish bottles.\n6.  A nail file.\n7.  Wooden bowls.\n8.  A white paper napkin.\n9.  A close-up of a belly button",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 13,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A bird's nest\n2.  A collection of nail polish bottles\n3.  Two wooden bowls\n4.  A close-up of a person's neck (Image 1)\n5.  A collection of sewing pins\n6.  A beaded necklace\n7.  A nail file\n8.  A close-up of a person's navel (Image 2)\n9.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 8,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 14,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 15,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the necklace (Image 1) is the 5th image in the original sequence.\nThe image of the nail file (Image 2) is the 9th image in the original sequence.\n\nTherefore, the necklace image came before the nail file image.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 9,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 16,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1.  A bird's nest\n2.  A nail file\n3.  A collection of nail polish bottles\n4.  A nail clipper\n5.  A white paper napkin\n6.  A close-up of a belly button\n7.  A collection of sewing pins\n8.  A close-up of a neck\n9.  Two wooden bowls\n10. A beaded necklace",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 9,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 17,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A bird's nest\n2.  A nail file\n3.  A nail clipper\n4.  A white paper napkin\n5.  A beaded necklace\n6.  A collection of nail polish bottles\n7.  Two wooden bowls\n8.  A close-up of a person's neck (Image 1)\n9.  A collection of pins or needles (Image",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 9,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 18,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the necklace) appeared first in the sequence. It is the 7th image in the original 10-image sequence. Image 2 (the wooden bowls) is the 10th image.",
+        "metadata": {
+          "first_serial_position": 7,
+          "second_serial_position": 10,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 19,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1. Navel\n2. Pins\n3. Necklace\n4. Nail polish\n5. Nail clipper\n6. Wooden bowls\n7. Neck\n8. Bird's nest\n9. Nail file\n10. Napkin\n\nThe bird's nest (Image 1) is the 8th image, while the pins (Image 2) are the 2nd image. Therefore, Image 2",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 8,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 20,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the necklace) appeared first in the sequence. It is the fourth image in the original list, while image 2 (the belly button) is the third. Since the question asks which appeared *first* in the study sequence, and image 1 comes after image 2 in the list, the correct answer is that image 2 appeared first.\n\nHowever, I must correct my previous response. I misread the question. The user is asking which of these two specific images appeared",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 21,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the bird's nest) appeared first in the sequence.\n\nThe sequence is as follows:\n1.  Wooden bowls\n2.  **Bird's nest** (Image 1)\n3.  Nail file\n4.  **Neck** (Image 2)\n5.  Pins\n6.  Necklace\n7.  Nail polish\n8.  Napkin\n9.  Navel\n10. Nail clipper\n\nTherefore, the bird's nest (",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 22,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  Image 1: A close-up of a person's neck and upper chest.\n2.  Image 2: A collection of nail polish bottles.\n\nTherefore, the first image in the sequence is Image 2.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 23,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  Image 1: A collection of metal pins on a wooden surface.\n2.  Image 2: Two Solingen brand nail files on a green background.\n3.  Image 3: A metal nail clipper.\n4.  Image 4: A collection of nail polish bottles.\n5.  Image 5: A close-up of a person's neck and collarbone.\n6.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 9,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 24,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the nail files (Image 1) is the 8th image in the sequence, while the image of the belly button (Image 2) is the 6th image. Since the sequence is ordered from 1 to 10, the 8th image comes after the 6th image.\n\nTherefore, the belly button image (Image 2) appeared first in the sequence, not the nail files.\n\n**Correction",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 8,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 25,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the necklace is the third image in the original sequence, while the image of the nail polish bottles is the sixth. Therefore, the necklace image came first.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 6,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 26,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1.  A collection of nail polish bottles.\n2.  A beaded necklace.\n3.  An empty bird's nest.\n4.  A close-up of a belly button.\n5.  Two wooden bowls.\n6.  A white paper napkin.\n7.  A close-up of a person's neck.\n8.  A metal nail clipper.\n9.  A collection of sewing pins.\n10",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 10,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 27,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the wooden bowls is the 4th image in the original sequence, while the image of the white napkin is the 6th image. Therefore, the wooden bowls appeared first.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 6,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 28,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 appeared first in the sequence.\n\nThe image of the white napkin is the 5th image in the sequence, while the image of the nail polish bottles is the 9th image. Therefore, the napkin image came first.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 9,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 29,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence begins with the image of the nail polish bottles (Image 1), followed by the nail file (Image 2), and then continues with the other images. The image of the bird's nest (Image 7) appears later in the sequence.\n\nTherefore, the correct answer is 2.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 7,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 30,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1. Nail clipper\n2. Beaded necklace\n3. White napkin\n4. Nail polish bottles\n5. Neck\n6. Wooden bowls\n7. Nail file\n8. Bird's nest\n9. Navel\n10. Pins\n\nThe white napkin (Image 3) is the third image in the sequence, while the pins (Image 1) are the tenth image. Therefore,",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 10,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 31,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence of 10 images is as follows:\n1.  A close-up of a person's neck and collarbone.\n2.  Two small wooden bowls.\n3.  A white paper napkin.\n4.  A metal nail clipper.\n5.  A close-up of a person's navel.\n6.  A collection of nail polish bottles.\n7.  Two nail files.\n8.  A collection of straight pins",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 10,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 32,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 9,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 33,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A close-up of a person's neck and upper chest.\n2.  A white paper napkin on a wooden surface.\n\nTherefore, the first image is the one showing the neck.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 8,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 34,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nThe image of the wooden bowls is the 5th image in the original sequence, while the image of the nail files is the 7th image. Therefore, the wooden bowls appeared first between the two.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 7,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 35,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence begins with the image of the pins on the wooden surface (Image 1), followed by the image of the nail polish bottles (Image 2). The image of the nail clipper is the last image in the sequence (Image 10).\n\nTherefore, the correct answer is 2.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 10,
+          "serial_lag": 9,
+          "distance": 8,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 36,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 37,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the second image in the original 10-image sequence, while Image 2 is the sixth image.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 6,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 38,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A close-up of a human navel.\n2.  A metal nail clipper.\n3.  A pair of Solingen brand nail files.\n4.  An empty bird's nest.\n5.  A collection of sewing pins.\n6.  A rack of nail polish bottles.\n7.  A person wearing a beaded necklace.\n8.  A close-up of a person's neck and",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 10,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 39,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  Wooden bowls\n2.  Bird's nest\n3.  Neck\n4.  Necklace\n5.  Pins (Image 1)\n6.  Navel\n7.  Nail clipper\n8.  Nail file\n9.  Napkin\n10. Nail polish bottles (Image 2)\n\nTherefore, the pins (Image 1) are the 5th image,",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 10,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 40,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence begins with the image of the wooden bowls (Image 1), followed by the image of the nail polish bottles (Image 2). The image of the neck (Image 1) appears later in the sequence, at position 5.\n\nTherefore, the correct answer is 2.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 41,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A bird's nest on a rock.\n2.  A necklace with pink and purple beads.\n3.  A close-up of a person's neck.\n4.  A white paper napkin.\n5.  A collection of nail polish bottles.\n6.  A close-up of a person's navel.\n7.  A metal nail clipper.\n8.  Two wooden bowls.\n9.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 42,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  Wooden bowls\n2.  Metal pins (this is the second image in the sequence)\n3.  Necklace\n4.  Nail clipper\n5.  Nail polish bottles\n6.  Bird's nest\n7.  Nail file\n8.  Napkin\n9.  Navel (this is the ninth image)\n10. Neck\n\nTherefore, the image of the metal pins",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 9,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 43,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the sequence.\n\nThe sequence is as follows:\n1.  A white paper napkin on a wooden surface.\n2.  A pair of Solingen nail files on a green surface.\n3.  A metal nail clipper on a dark, textured surface.\n4.  Two small, dark wooden bowls on a dark surface, with a white cloth in the background.\n5.  A collection of metal pins on a wooden surface.\n6.  A close-up of",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 8,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 44,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 45,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  Wooden bowls\n2.  **White napkin** (Image 1)\n3.  Metal pins\n4.  Navel\n5.  Bird's nest\n6.  Nail polish bottles\n7.  Nail clipper\n8.  Nail file (Image 2)\n9.  Beaded necklace\n10. Neck\n\nTherefore, the white napkin (Image 1",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 8,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 46,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A bird's nest\n2.  A white paper napkin\n3.  A metal nail clipper (Image 1)\n4.  A collection of nail polish bottles\n5.  Two wooden bowls\n6.  A beaded necklace\n7.  A close-up of a belly button\n8.  A collection of sewing pins (Image 2)\n9.  A nail",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 8,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 47,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the sequence.\n\nThe sequence is as follows:\n1.  Wooden bowls\n2.  Metal pins\n3.  **File (Image 2)**\n4.  Nail clipper\n5.  Napkin\n6.  Bird's nest\n7.  Nail polish bottles\n8.  Navel\n9.  Necklace\n10. Neck (Image 1)\n\nTherefore, the file (Image 2) is the third image, and",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 10,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 48,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the belly button is the 7th image in the sequence, while the image of the nail file is the 10th image. Therefore, the belly button image came first.",
+        "metadata": {
+          "first_serial_position": 7,
+          "second_serial_position": 10,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 49,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A collection of metal pins on a wooden surface.\n2.  A beaded necklace on a person's chest.\n3.  A metal nail clipper.\n4.  A collection of nail polish bottles.\n5.  Two wooden bowls.\n6.  A close-up of a person's navel.\n7.  An empty bird's nest.\n8.  A white paper napkin.\n9",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 7,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 50,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A white paper napkin on a wooden surface.\n2.  A collection of nail polish bottles.\n3.  **Image 1: Needles on a wooden surface.**\n4.  Two wooden bowls.\n5.  A metal nail clipper.\n6.  A person's neck.\n7.  An empty bird's nest.\n8.  A beaded necklace.\n9.  A",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 51,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1.  A bird's nest\n2.  A nail file\n3.  A nail clipper\n4.  A beaded necklace\n5.  A person's neck\n6.  Sewing pins\n7.  Nail polish bottles\n8.  Wooden bowls\n9.  A person's navel\n10. A white paper napkin\n\nThe first image (nail clipper)",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 7,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 52,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the bird's nest is the 4th image in the original sequence, while the image of the wooden bowls is the 8th image. Therefore, the bird's nest image came first.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 8,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 53,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the necklace) appeared first in the sequence. It is the fourth image in the original 10-image sequence, while the bird's nest is the fifth image.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 54,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the bird's nest) appeared first in the sequence.\n\nIt is the 6th image in the original 10-image sequence you provided. The white napkin is the 4th image.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 6,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 55,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A bird's nest on a rock.\n2.  A close-up of a person's neck and collarbone.\n3.  A nail file.\n4.  A nail clipper.\n5.  A collection of sewing pins on a wooden surface.\n6.  Two wooden bowls.\n7.  A beaded necklace.\n8.  A white paper napkin.\n9.  A collection of",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 56,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence begins with the image of the necklace on a green shirt (Image 1), followed by the image of the nail clipper (Image 2). Therefore, the nail clipper image (Image 2) is the second image, not the first.\n\nThe correct answer is: 1",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 57,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the metal pins on a wooden surface is the 8th image in the original sequence, while the image of the white napkin is the 10th image. Therefore, the pins image came first.",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 10,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 58,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the bird's nest is the second image in the original sequence, while the image of the necklace is the seventh. Therefore, the bird's nest image came first.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 7,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 59,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A metal nail clipper.\n2.  A collection of nail polish bottles.\n3.  Two Solingen brand nail files.\n4.  A beaded necklace.\n5.  An empty bird's nest.\n6.  A white paper napkin.\n7.  A person's neck and shoulder area.\n8.  A collection of sewing pins.\n9.  Two wooden bowls.\n10",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 60,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the belly button is the 6th image in the sequence, while the image of the wooden bowls is the 10th image. Therefore, the belly button image came first.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 10,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 61,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A metal nail clipper.\n2.  A white paper napkin.\n3.  A beaded necklace.\n4.  A nail file.\n5.  A collection of nail polish bottles.\n6.  An empty bird's nest.\n7.  Two wooden bowls.\n8.  A person's neck.\n9.  A person's navel.\n10. Metal pins on a wooden",
+        "metadata": {
+          "first_serial_position": 7,
+          "second_serial_position": 10,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 62,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nThe image of the white napkin is the second image in the original sequence you provided. The image of the nail polish bottles is the seventh image.\n\nTherefore, the white napkin (Image 1) came before the nail polish bottles (Image 2) in the study sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 7,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 63,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A close-up of a human navel.\n2.  An empty bird's nest.\n3.  Wooden bowls.\n4.  A nail file.\n5.  A white paper napkin.\n6.  A collection of nail polish bottles.\n7.  A close-up of a person's neck and collarbone (Image 1).\n8.  A metal nail clipper.\n9.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 7,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 64,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 (the bird's nest) appeared second in the sequence.\n\nThe first image in the sequence is the close-up of the neck and collarbone (image 2 in your list). The bird's nest (image 1 in your list) is the second image.\n\nTherefore, the correct answer is: 2",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 65,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the bird's nest is the 4th image in the original sequence, while the image of the nail clipper is the 7th image. Therefore, the bird's nest image came first.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 7,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 66,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the bird's nest is the 4th image in the original sequence, while the image of the wooden bowls is the 10th. Therefore, the bird's nest image came first.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 10,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 67,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe image of the neck (Image 2) is the third image in the original sequence, while the image of the necklace (Image 1) is the tenth image. Therefore, Image 2 comes before Image 1 in the sequence.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 10,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 68,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 10,
+          "serial_lag": 8,
+          "distance": 7,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 69,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the necklace) appeared first in the sequence.\n\nThe sequence is:\n1.  Neckline\n2.  Napkin\n3.  Navel\n4.  Nail polish bottles\n5.  Nail file\n6.  Pins\n7.  Nail clipper\n8.  Necklace (Image 1)\n9.  Wooden bowls\n10. Bird's nest\n\nThe nail polish bottles (Image 2) appear later, in position 4.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 8,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 70,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A pair of nail files.\n2.  An empty bird's nest.\n3.  A collection of sewing pins.\n4.  A rack of nail polish bottles.\n5.  A beaded necklace.\n6.  A close-up of a person's neck.\n7.  A close-up of a person's navel.\n8.  A pair of wooden bowls.\n9.  A white",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 71,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence of 10 images is as follows:\n1.  A pair of Solingen nail files.\n2.  A collection of nail polish bottles.\n3.  Two wooden bowls.\n4.  A close-up of a belly button.\n5.  A beaded necklace.\n6.  A close-up of a neck.\n7.  A pair of nail clippers.\n8.  An empty bird's nest.\n9.",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 10,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 72,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the nail files (Image 1) is the 7th image in the sequence, while the image of the white napkin (Image 2) is the 4th image. Since 7 comes after 4, the nail files appeared later in the sequence.\n\nTherefore, the correct answer is: **2**",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 7,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 73,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence begins with the image of the nail polish bottles (Image 1), and the image of the wooden bowls (Image 10) appears last.\n\nTherefore, the correct answer is **2**.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 10,
+          "serial_lag": 9,
+          "distance": 8,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 74,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the bird's nest is the second image in the original sequence, while the image of the white napkin is the ninth. Therefore, the bird's nest image came before the napkin image in the sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 9,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 75,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 7,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 76,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 77,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence begins with the image of the metal pins on a wooden surface (Image 1), followed by the image of the wooden bowls (Image 2). Therefore, Image 1 is the first image in the sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 10,
+          "serial_lag": 8,
+          "distance": 7,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 78,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the bird's nest is the 9th image in the sequence, while the image of the wooden bowls is the 10th. Therefore, the bird's nest image came first.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 10,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 79,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence begins with the image of the nail files (Image 1), followed by the image of the pins (Image 2). Therefore, Image 1 is the first image in the sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 9,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 80,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A close-up of a metal nail clipper.\n2.  A person wearing a colorful beaded necklace.\n3.  Two wooden bowls.\n4.  A close-up of a person's neck and collarbone (Image 1).\n5.  A collection of nail polish bottles.\n6.  A white paper napkin.\n7.  An empty bird's nest.\n8.  A collection",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 7,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 81,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the wooden bowls is the 6th image in the original sequence, while the image of the nail files is the 8th image. Therefore, the wooden bowls appeared first.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 8,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 82,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the belly button is the 8th image in the sequence, while the image of the nail polish bottles is the 5th image. Since 5 comes before 8, the nail polish bottles image appeared first.\n\nTherefore, the correct answer is: 2",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 8,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 83,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the nail files (Image 1) is the 9th image in the original sequence, while the image of the white napkin (Image 2) is the 10th image. Therefore, the nail files appeared first.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 10,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 84,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the bird's nest) appeared first in the sequence.\n\nIt is the fourth image in the original 10-image sequence, while image 2 (the nail clipper) is the eighth image.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 8,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 85,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the wooden bowls is the 4th image in the original sequence, while the image of the nail clipper is the 9th image.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 9,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 86,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A necklace with pink and purple beads.\n2.  A pair of nail files.\n3.  A nail clipper.\n4.  An empty bird's nest.\n5.  A close-up of a belly button.\n6.  Two wooden bowls.\n7.  A close-up of a neck.\n8.  A collection of nail polish bottles.\n9.  A white paper napkin.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 87,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the belly button is the 6th image in the sequence, while the image of the nail files is the 3rd image. Since 6 comes after 3, the belly button image appeared later in the sequence.\n\nTherefore, the correct answer is: **2** (the nail files image).",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 6,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 88,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A Solingen nail file\n2.  A white paper napkin\n3.  A close-up of a person's neck\n4.  A close-up of a person's navel\n5.  A beaded necklace\n6.  An empty bird's nest\n7.  A metal nail clipper\n8.  Two wooden bowls\n9.  A collection of sewing pins",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 89,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence begins with the image of the two Solingen nail files on a green background (Image 1), and the image of the metal nail clipper (Image 9) appears later in the sequence.\n\nTherefore, the correct answer is 2.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 9,
+          "serial_lag": 8,
+          "distance": 7,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 90,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the bird's nest is the 4th image in the original sequence, while the image of the wooden bowls is the 3rd image. Therefore, the bird's nest image came after the wooden bowls image.\n\nHowever, if you are asking which of these two specific images appeared first *among themselves* in the sequence, then the wooden bowls (image 2) appeared first, as it is the 3rd image in the",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 91,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A collection of nail polish bottles.\n2.  A metal nail clipper.\n3.  An empty bird's nest.\n4.  A beaded necklace.\n5.  A white paper napkin.\n6.  Two wooden bowls.\n7.  A nail file.\n8.  A collection of sewing pins.\n9.  A close-up of a belly button.\n10. A close",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 8,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 92,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 9,
+          "serial_lag": 8,
+          "distance": 7,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 93,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 94,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 10,
+          "serial_lag": 8,
+          "distance": 7,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 95,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the wooden bowls is the 5th image in the sequence, while the image of the belly button is the 7th image. Therefore, the wooden bowls image came first.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 7,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 96,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the bird's nest is the third image in the original sequence, while the image of the pins is the eighth. Therefore, the bird's nest image came first.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 8,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 97,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the necklace) appeared first in the sequence. It is the 6th image in the original 10-image sequence, while image 2 (the nail clipper) is the 4th image.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 6,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 98,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence begins with the image of the wooden bowls (Image 1), followed by the white napkin (Image 2). The image of the neck (Image 1) appears later in the sequence, at position 9.\n\nTherefore, the correct answer is 2.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 9,
+          "serial_lag": 8,
+          "distance": 7,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 99,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the sequence.\n\nThe sequence is as follows:\n1.  A person wearing a beaded necklace.\n2.  A metal nail clipper.\n3.  A white paper napkin.\n4.  A collection of nail polish bottles.\n5.  A nail file.\n6.  A close-up of a belly button.\n7.  An empty bird's nest.\n8.  A collection of sewing pins.\n9.  Two wooden bowls.\n10.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 8,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 2
+        }
+      }
+    ],
+    "accuracy": 0.54,
+    "n_correct": 54,
+    "total": 100,
+    "accuracy_by_distance": {
+      "0": 0.5333333333333333,
+      "1": 0.5294117647058824,
+      "2": 0.5789473684210527,
+      "3": 0.6,
+      "4": 0.7142857142857143,
+      "5": 0.5555555555555556,
+      "6": 0.3,
+      "7": 0.6666666666666666,
+      "8": 0.0
+    }
+  }
+}

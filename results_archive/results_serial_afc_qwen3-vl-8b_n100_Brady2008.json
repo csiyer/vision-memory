@@ -1,0 +1,1586 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260428_233946",
+    "dataset": "Brady2008",
+    "n_images": 100,
+    "n_trials": 100,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.46
+      }
+    },
+    "max_context_images": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence. It is the compass, which is the 45th image in the original list. Image 2, the blackberry, is the 51st image.",
+        "metadata": {
+          "first_serial_position": 59,
+          "second_serial_position": 77,
+          "serial_lag": 18,
+          "distance": 17,
+          "left_image_serial_position": 59,
+          "right_image_serial_position": 77
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 37,
+          "second_serial_position": 99,
+          "serial_lag": 62,
+          "distance": 61,
+          "left_image_serial_position": 37,
+          "right_image_serial_position": 99
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 21,
+          "second_serial_position": 39,
+          "serial_lag": 18,
+          "distance": 17,
+          "left_image_serial_position": 39,
+          "right_image_serial_position": 21
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the sequence.\n\nImage 2 is the pot of eggs, which is the 16th image in the sequence.\nImage 1 is the heart-shaped candy, which is the 50th image in the sequence.\n\nTherefore, the pot of eggs (Image 2) came before the candy (Image 1).",
+        "metadata": {
+          "first_serial_position": 17,
+          "second_serial_position": 97,
+          "serial_lag": 80,
+          "distance": 79,
+          "left_image_serial_position": 97,
+          "right_image_serial_position": 17
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 30,
+          "second_serial_position": 39,
+          "serial_lag": 9,
+          "distance": 8,
+          "left_image_serial_position": 30,
+          "right_image_serial_position": 39
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 33,
+          "second_serial_position": 52,
+          "serial_lag": 19,
+          "distance": 18,
+          "left_image_serial_position": 52,
+          "right_image_serial_position": 33
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe confetti popper (image 1) is the 42nd image in the sequence, while the hamster wheel (image 2) is the 43rd image. Therefore, the confetti popper appeared first.",
+        "metadata": {
+          "first_serial_position": 80,
+          "second_serial_position": 84,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 84,
+          "right_image_serial_position": 80
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 25,
+          "second_serial_position": 31,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 31,
+          "right_image_serial_position": 25
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 62,
+          "serial_lag": 53,
+          "distance": 52,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 62
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 74,
+          "second_serial_position": 86,
+          "serial_lag": 12,
+          "distance": 11,
+          "left_image_serial_position": 86,
+          "right_image_serial_position": 74
+        }
+      },
+      {
+        "trial": 10,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 28,
+          "second_serial_position": 89,
+          "serial_lag": 61,
+          "distance": 60,
+          "left_image_serial_position": 28,
+          "right_image_serial_position": 89
+        }
+      },
+      {
+        "trial": 11,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 49,
+          "second_serial_position": 99,
+          "serial_lag": 50,
+          "distance": 49,
+          "left_image_serial_position": 49,
+          "right_image_serial_position": 99
+        }
+      },
+      {
+        "trial": 12,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 37,
+          "second_serial_position": 81,
+          "serial_lag": 44,
+          "distance": 43,
+          "left_image_serial_position": 37,
+          "right_image_serial_position": 81
+        }
+      },
+      {
+        "trial": 13,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 51,
+          "second_serial_position": 88,
+          "serial_lag": 37,
+          "distance": 36,
+          "left_image_serial_position": 51,
+          "right_image_serial_position": 88
+        }
+      },
+      {
+        "trial": 14,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 21,
+          "second_serial_position": 58,
+          "serial_lag": 37,
+          "distance": 36,
+          "left_image_serial_position": 58,
+          "right_image_serial_position": 21
+        }
+      },
+      {
+        "trial": 15,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence. It is the dark green dumbbell, which is the 22nd image in the original list. Image 2, the ornate urn, is the 40th image.",
+        "metadata": {
+          "first_serial_position": 23,
+          "second_serial_position": 46,
+          "serial_lag": 23,
+          "distance": 22,
+          "left_image_serial_position": 23,
+          "right_image_serial_position": 46
+        }
+      },
+      {
+        "trial": 16,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 84,
+          "serial_lag": 76,
+          "distance": 75,
+          "left_image_serial_position": 84,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 17,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 31,
+          "serial_lag": 28,
+          "distance": 27,
+          "left_image_serial_position": 31,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 18,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 58,
+          "second_serial_position": 89,
+          "serial_lag": 31,
+          "distance": 30,
+          "left_image_serial_position": 58,
+          "right_image_serial_position": 89
+        }
+      },
+      {
+        "trial": 19,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the Mr. Potato Head toy is the 49th image in the sequence.\nThe image of the printing press is the 44th image in the sequence.\n\nTherefore, the printing press (image 2) appeared before the Mr. Potato Head toy (image 1) in the sequence.\n\nHowever, the question asks which of these two images appeared first. Since the printing press (image 2) is earlier in the",
+        "metadata": {
+          "first_serial_position": 52,
+          "second_serial_position": 83,
+          "serial_lag": 31,
+          "distance": 30,
+          "left_image_serial_position": 83,
+          "right_image_serial_position": 52
+        }
+      },
+      {
+        "trial": 20,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 53,
+          "serial_lag": 44,
+          "distance": 43,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 53
+        }
+      },
+      {
+        "trial": 21,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 25,
+          "second_serial_position": 91,
+          "serial_lag": 66,
+          "distance": 65,
+          "left_image_serial_position": 25,
+          "right_image_serial_position": 91
+        }
+      },
+      {
+        "trial": 22,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 32,
+          "second_serial_position": 57,
+          "serial_lag": 25,
+          "distance": 24,
+          "left_image_serial_position": 57,
+          "right_image_serial_position": 32
+        }
+      },
+      {
+        "trial": 23,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence. It is the stone owl figurine, which is the 13th image in the original list. Image 2, the blue traffic sign with a downward arrow, is the 42nd image.",
+        "metadata": {
+          "first_serial_position": 13,
+          "second_serial_position": 53,
+          "serial_lag": 40,
+          "distance": 39,
+          "left_image_serial_position": 13,
+          "right_image_serial_position": 53
+        }
+      },
+      {
+        "trial": 24,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nThe image of the seashell (Image 1) is the 34th image in the sequence.\nThe image of the almond (Image 2) is the 31st image in the sequence.\n\nTherefore, the almond image (Image 2) appeared before the seashell image (Image 1) in the study sequence.\n\n**Answer: 2**",
+        "metadata": {
+          "first_serial_position": 30,
+          "second_serial_position": 48,
+          "serial_lag": 18,
+          "distance": 17,
+          "left_image_serial_position": 48,
+          "right_image_serial_position": 30
+        }
+      },
+      {
+        "trial": 25,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 11,
+          "second_serial_position": 53,
+          "serial_lag": 42,
+          "distance": 41,
+          "left_image_serial_position": 53,
+          "right_image_serial_position": 11
+        }
+      },
+      {
+        "trial": 26,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nThe image of the \"Esc\" key cap is the 34th image in the sequence.\nThe image of the cassette recorder is the 35th image in the sequence.\n\nTherefore, the \"Esc\" key cap appeared first.",
+        "metadata": {
+          "first_serial_position": 51,
+          "second_serial_position": 52,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 52,
+          "right_image_serial_position": 51
+        }
+      },
+      {
+        "trial": 27,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 34,
+          "second_serial_position": 86,
+          "serial_lag": 52,
+          "distance": 51,
+          "left_image_serial_position": 34,
+          "right_image_serial_position": 86
+        }
+      },
+      {
+        "trial": 28,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 64,
+          "second_serial_position": 70,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 70,
+          "right_image_serial_position": 64
+        }
+      },
+      {
+        "trial": 29,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 43,
+          "second_serial_position": 63,
+          "serial_lag": 20,
+          "distance": 19,
+          "left_image_serial_position": 43,
+          "right_image_serial_position": 63
+        }
+      },
+      {
+        "trial": 30,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 38,
+          "second_serial_position": 83,
+          "serial_lag": 45,
+          "distance": 44,
+          "left_image_serial_position": 83,
+          "right_image_serial_position": 38
+        }
+      },
+      {
+        "trial": 31,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 49,
+          "second_serial_position": 66,
+          "serial_lag": 17,
+          "distance": 16,
+          "left_image_serial_position": 66,
+          "right_image_serial_position": 49
+        }
+      },
+      {
+        "trial": 32,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 50,
+          "second_serial_position": 71,
+          "serial_lag": 21,
+          "distance": 20,
+          "left_image_serial_position": 50,
+          "right_image_serial_position": 71
+        }
+      },
+      {
+        "trial": 33,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the decorative grape cluster is image 44 in the sequence.\nThe image of the chrome faucet handles is image 45 in the sequence.\n\nTherefore, the grape cluster image (1) came before the faucet handles image (2).",
+        "metadata": {
+          "first_serial_position": 56,
+          "second_serial_position": 88,
+          "serial_lag": 32,
+          "distance": 31,
+          "left_image_serial_position": 88,
+          "right_image_serial_position": 56
+        }
+      },
+      {
+        "trial": 34,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 87,
+          "second_serial_position": 92,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 92,
+          "right_image_serial_position": 87
+        }
+      },
+      {
+        "trial": 35,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 77,
+          "second_serial_position": 92,
+          "serial_lag": 15,
+          "distance": 14,
+          "left_image_serial_position": 92,
+          "right_image_serial_position": 77
+        }
+      },
+      {
+        "trial": 36,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nThe blue silicone ice cube tray is image 45 in the sequence.\nThe control panel is image 31 in the sequence.\n\nSince 31 comes before 45, the control panel appeared first.\n\nTherefore, the answer is: 2",
+        "metadata": {
+          "first_serial_position": 29,
+          "second_serial_position": 96,
+          "serial_lag": 67,
+          "distance": 66,
+          "left_image_serial_position": 96,
+          "right_image_serial_position": 29
+        }
+      },
+      {
+        "trial": 37,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the sequence.\n\nThe image of the colorful duck-shaped ride (Image 2) is the 5th image in the original sequence.\nThe image of the camouflage military jacket (Image 1) is the 42nd image in the original sequence.\n\nTherefore, the duck ride appeared earlier in the study sequence.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 74,
+          "serial_lag": 69,
+          "distance": 68,
+          "left_image_serial_position": 74,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 38,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence. It depicts a military tank, which is the 49th image in the original list. Image 2, showing blue riding breeches, is the 25th image. Therefore, Image 1 comes after Image 2 in the sequence.\n\nThe correct answer is: 1",
+        "metadata": {
+          "first_serial_position": 25,
+          "second_serial_position": 71,
+          "serial_lag": 46,
+          "distance": 45,
+          "left_image_serial_position": 71,
+          "right_image_serial_position": 25
+        }
+      },
+      {
+        "trial": 39,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 12,
+          "second_serial_position": 72,
+          "serial_lag": 60,
+          "distance": 59,
+          "left_image_serial_position": 72,
+          "right_image_serial_position": 12
+        }
+      },
+      {
+        "trial": 40,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence. It is the blue tricycle, which is the 41st image in the list. Image 2, the wooden barometer, is the 25th image. Since 41 comes after 25, the tricycle is later in the sequence.\n\nTherefore, the correct answer is: 2",
+        "metadata": {
+          "first_serial_position": 25,
+          "second_serial_position": 49,
+          "serial_lag": 24,
+          "distance": 23,
+          "left_image_serial_position": 49,
+          "right_image_serial_position": 25
+        }
+      },
+      {
+        "trial": 41,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 57,
+          "second_serial_position": 89,
+          "serial_lag": 32,
+          "distance": 31,
+          "left_image_serial_position": 57,
+          "right_image_serial_position": 89
+        }
+      },
+      {
+        "trial": 42,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the compass, which is the 44th image in the original sequence.\nImage 2, the turnbuckle, is the 45th image.\n\nTherefore, Image 1 (the compass) came before Image 2 (the turnbuckle).",
+        "metadata": {
+          "first_serial_position": 78,
+          "second_serial_position": 81,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 81,
+          "right_image_serial_position": 78
+        }
+      },
+      {
+        "trial": 43,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence. It is the yellow wicker baby carriage, which is the 32nd image in the original list. Image 2, the business card holder with a colorful design, is the 36th image.",
+        "metadata": {
+          "first_serial_position": 31,
+          "second_serial_position": 39,
+          "serial_lag": 8,
+          "distance": 7,
+          "left_image_serial_position": 31,
+          "right_image_serial_position": 39
+        }
+      },
+      {
+        "trial": 44,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 45,
+          "second_serial_position": 61,
+          "serial_lag": 16,
+          "distance": 15,
+          "left_image_serial_position": 61,
+          "right_image_serial_position": 45
+        }
+      },
+      {
+        "trial": 45,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the wedding dress) appeared first in the sequence. It is the 42nd image in the list, while Image 2 (the newspaper stand) is the 43rd image.",
+        "metadata": {
+          "first_serial_position": 61,
+          "second_serial_position": 88,
+          "serial_lag": 27,
+          "distance": 26,
+          "left_image_serial_position": 88,
+          "right_image_serial_position": 61
+        }
+      },
+      {
+        "trial": 46,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 63,
+          "second_serial_position": 87,
+          "serial_lag": 24,
+          "distance": 23,
+          "left_image_serial_position": 63,
+          "right_image_serial_position": 87
+        }
+      },
+      {
+        "trial": 47,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 31,
+          "second_serial_position": 37,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 31,
+          "right_image_serial_position": 37
+        }
+      },
+      {
+        "trial": 48,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nThe image of the colorful pot with a lid (Image 1) is the 40th image in the sequence.\nThe image of the pen on sticky notes (Image 2) is the 22nd image in the sequence.\n\nTherefore, Image 2 appeared first.",
+        "metadata": {
+          "first_serial_position": 22,
+          "second_serial_position": 56,
+          "serial_lag": 34,
+          "distance": 33,
+          "left_image_serial_position": 56,
+          "right_image_serial_position": 22
+        }
+      },
+      {
+        "trial": 49,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 70,
+          "second_serial_position": 100,
+          "serial_lag": 30,
+          "distance": 29,
+          "left_image_serial_position": 100,
+          "right_image_serial_position": 70
+        }
+      },
+      {
+        "trial": 50,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence. It is the Snoopy Pez dispenser, which is the 32nd image in the original list. Image 2, the walker, is the 43rd image.",
+        "metadata": {
+          "first_serial_position": 76,
+          "second_serial_position": 79,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 79,
+          "right_image_serial_position": 76
+        }
+      },
+      {
+        "trial": 51,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 40,
+          "second_serial_position": 62,
+          "serial_lag": 22,
+          "distance": 21,
+          "left_image_serial_position": 40,
+          "right_image_serial_position": 62
+        }
+      },
+      {
+        "trial": 52,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 48,
+          "second_serial_position": 49,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 49,
+          "right_image_serial_position": 48
+        }
+      },
+      {
+        "trial": 53,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 19,
+          "second_serial_position": 99,
+          "serial_lag": 80,
+          "distance": 79,
+          "left_image_serial_position": 99,
+          "right_image_serial_position": 19
+        }
+      },
+      {
+        "trial": 54,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 50,
+          "second_serial_position": 86,
+          "serial_lag": 36,
+          "distance": 35,
+          "left_image_serial_position": 50,
+          "right_image_serial_position": 86
+        }
+      },
+      {
+        "trial": 55,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 62,
+          "second_serial_position": 83,
+          "serial_lag": 21,
+          "distance": 20,
+          "left_image_serial_position": 62,
+          "right_image_serial_position": 83
+        }
+      },
+      {
+        "trial": 56,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 72,
+          "second_serial_position": 73,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 73,
+          "right_image_serial_position": 72
+        }
+      },
+      {
+        "trial": 57,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence. It is the orange and white cooler, which is the 12th image in the list. Image 2, the purple kazoo, is the 41st image.",
+        "metadata": {
+          "first_serial_position": 12,
+          "second_serial_position": 45,
+          "serial_lag": 33,
+          "distance": 32,
+          "left_image_serial_position": 12,
+          "right_image_serial_position": 45
+        }
+      },
+      {
+        "trial": 58,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence. It is the image of the calla lily, which is the 22nd image in the original list. Image 2, the hole puncher, is the 43rd image.",
+        "metadata": {
+          "first_serial_position": 24,
+          "second_serial_position": 88,
+          "serial_lag": 64,
+          "distance": 63,
+          "left_image_serial_position": 24,
+          "right_image_serial_position": 88
+        }
+      },
+      {
+        "trial": 59,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 38,
+          "second_serial_position": 82,
+          "serial_lag": 44,
+          "distance": 43,
+          "left_image_serial_position": 38,
+          "right_image_serial_position": 82
+        }
+      },
+      {
+        "trial": 60,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 23,
+          "second_serial_position": 41,
+          "serial_lag": 18,
+          "distance": 17,
+          "left_image_serial_position": 23,
+          "right_image_serial_position": 41
+        }
+      },
+      {
+        "trial": 61,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 8,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 62,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 19,
+          "second_serial_position": 43,
+          "serial_lag": 24,
+          "distance": 23,
+          "left_image_serial_position": 43,
+          "right_image_serial_position": 19
+        }
+      },
+      {
+        "trial": 63,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence. It is the image of the garden shears, which is the 35th image in the original list. Image 2, the helicopter, is the 41st image.",
+        "metadata": {
+          "first_serial_position": 43,
+          "second_serial_position": 73,
+          "serial_lag": 30,
+          "distance": 29,
+          "left_image_serial_position": 43,
+          "right_image_serial_position": 73
+        }
+      },
+      {
+        "trial": 64,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nThe fencing mask is image #35 in the sequence, while the yellow activity toy is image #15. Since 15 comes before 35, the yellow toy appeared first.",
+        "metadata": {
+          "first_serial_position": 15,
+          "second_serial_position": 42,
+          "serial_lag": 27,
+          "distance": 26,
+          "left_image_serial_position": 42,
+          "right_image_serial_position": 15
+        }
+      },
+      {
+        "trial": 65,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 59,
+          "second_serial_position": 70,
+          "serial_lag": 11,
+          "distance": 10,
+          "left_image_serial_position": 59,
+          "right_image_serial_position": 70
+        }
+      },
+      {
+        "trial": 66,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nImage 1 is the air filter, which is the 42nd image in the sequence.\nImage 2 is the box of chocolates, which is the 18th image in the sequence.\n\nTherefore, Image 2 appeared first.",
+        "metadata": {
+          "first_serial_position": 18,
+          "second_serial_position": 69,
+          "serial_lag": 51,
+          "distance": 50,
+          "left_image_serial_position": 69,
+          "right_image_serial_position": 18
+        }
+      },
+      {
+        "trial": 67,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nThe image of the orange, brain-like coral (Image 1) is the 34th image in the sequence.\nThe image of the air gun nozzle (Image 2) is the 5th image in the sequence.\n\nTherefore, Image 1 (the coral) appeared later in the sequence than Image 2 (the air gun nozzle).\n\nThe correct answer is: 2",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 63,
+          "serial_lag": 58,
+          "distance": 57,
+          "left_image_serial_position": 63,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 68,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 13,
+          "second_serial_position": 45,
+          "serial_lag": 32,
+          "distance": 31,
+          "left_image_serial_position": 45,
+          "right_image_serial_position": 13
+        }
+      },
+      {
+        "trial": 69,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 31,
+          "second_serial_position": 78,
+          "serial_lag": 47,
+          "distance": 46,
+          "left_image_serial_position": 31,
+          "right_image_serial_position": 78
+        }
+      },
+      {
+        "trial": 70,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 71,
+          "second_serial_position": 78,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 78,
+          "right_image_serial_position": 71
+        }
+      },
+      {
+        "trial": 71,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 10,
+          "second_serial_position": 17,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 17,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 72,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 49,
+          "second_serial_position": 66,
+          "serial_lag": 17,
+          "distance": 16,
+          "left_image_serial_position": 66,
+          "right_image_serial_position": 49
+        }
+      },
+      {
+        "trial": 73,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence. It is the image of the red bomb, which is the 41st image in the original list. Image 2, the aerial rigging, is the 7th image in the list. Since 41 comes after 7, the red bomb appeared later in the sequence.\n\nTherefore, the correct answer is: 2",
+        "metadata": {
+          "first_serial_position": 7,
+          "second_serial_position": 91,
+          "serial_lag": 84,
+          "distance": 83,
+          "left_image_serial_position": 91,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 74,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 77,
+          "second_serial_position": 90,
+          "serial_lag": 13,
+          "distance": 12,
+          "left_image_serial_position": 90,
+          "right_image_serial_position": 77
+        }
+      },
+      {
+        "trial": 75,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 72,
+          "second_serial_position": 89,
+          "serial_lag": 17,
+          "distance": 16,
+          "left_image_serial_position": 72,
+          "right_image_serial_position": 89
+        }
+      },
+      {
+        "trial": 76,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 25,
+          "second_serial_position": 27,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 25,
+          "right_image_serial_position": 27
+        }
+      },
+      {
+        "trial": 77,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 41,
+          "second_serial_position": 54,
+          "serial_lag": 13,
+          "distance": 12,
+          "left_image_serial_position": 54,
+          "right_image_serial_position": 41
+        }
+      },
+      {
+        "trial": 78,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 13,
+          "serial_lag": 12,
+          "distance": 11,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 13
+        }
+      },
+      {
+        "trial": 79,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 49,
+          "second_serial_position": 64,
+          "serial_lag": 15,
+          "distance": 14,
+          "left_image_serial_position": 49,
+          "right_image_serial_position": 64
+        }
+      },
+      {
+        "trial": 80,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 61,
+          "second_serial_position": 74,
+          "serial_lag": 13,
+          "distance": 12,
+          "left_image_serial_position": 61,
+          "right_image_serial_position": 74
+        }
+      },
+      {
+        "trial": 81,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nImage 1 is a yellow toy excavator, which is the 41st image in the sequence.\nImage 2 is a decorative chariot, which is the 42nd image in the sequence.\n\nTherefore, the excavator (Image 1) came before the chariot (Image 2).",
+        "metadata": {
+          "first_serial_position": 51,
+          "second_serial_position": 75,
+          "serial_lag": 24,
+          "distance": 23,
+          "left_image_serial_position": 75,
+          "right_image_serial_position": 51
+        }
+      },
+      {
+        "trial": 82,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 86,
+          "second_serial_position": 92,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 92,
+          "right_image_serial_position": 86
+        }
+      },
+      {
+        "trial": 83,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 51,
+          "serial_lag": 47,
+          "distance": 46,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 51
+        }
+      },
+      {
+        "trial": 84,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 14,
+          "second_serial_position": 90,
+          "serial_lag": 76,
+          "distance": 75,
+          "left_image_serial_position": 14,
+          "right_image_serial_position": 90
+        }
+      },
+      {
+        "trial": 85,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 21,
+          "second_serial_position": 37,
+          "serial_lag": 16,
+          "distance": 15,
+          "left_image_serial_position": 21,
+          "right_image_serial_position": 37
+        }
+      },
+      {
+        "trial": 86,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nThe image of the padlock is the 42nd image in the sequence, while the brass fitting is the 9th image. Therefore, the padlock image came later in the sequence than the brass fitting image.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 75,
+          "serial_lag": 66,
+          "distance": 65,
+          "left_image_serial_position": 75,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 87,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 13,
+          "second_serial_position": 29,
+          "serial_lag": 16,
+          "distance": 15,
+          "left_image_serial_position": 29,
+          "right_image_serial_position": 13
+        }
+      },
+      {
+        "trial": 88,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nImage 1 is the swing set, which is the 32nd image in the sequence.\nImage 2 is the space shuttle, which is the 6th image in the sequence.\n\nTherefore, the space shuttle (Image 2) appeared first.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 32,
+          "serial_lag": 26,
+          "distance": 25,
+          "left_image_serial_position": 32,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 89,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 61,
+          "serial_lag": 60,
+          "distance": 59,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 61
+        }
+      },
+      {
+        "trial": 90,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 30,
+          "second_serial_position": 49,
+          "serial_lag": 19,
+          "distance": 18,
+          "left_image_serial_position": 30,
+          "right_image_serial_position": 49
+        }
+      },
+      {
+        "trial": 91,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 47,
+          "second_serial_position": 80,
+          "serial_lag": 33,
+          "distance": 32,
+          "left_image_serial_position": 80,
+          "right_image_serial_position": 47
+        }
+      },
+      {
+        "trial": 92,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 14,
+          "second_serial_position": 95,
+          "serial_lag": 81,
+          "distance": 80,
+          "left_image_serial_position": 14,
+          "right_image_serial_position": 95
+        }
+      },
+      {
+        "trial": 93,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 62,
+          "second_serial_position": 98,
+          "serial_lag": 36,
+          "distance": 35,
+          "left_image_serial_position": 62,
+          "right_image_serial_position": 98
+        }
+      },
+      {
+        "trial": 94,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 69,
+          "serial_lag": 67,
+          "distance": 66,
+          "left_image_serial_position": 69,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 95,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 47,
+          "serial_lag": 43,
+          "distance": 42,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 47
+        }
+      },
+      {
+        "trial": 96,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence. It is the image of the spark plug, which is the 22nd image in the original list. Image 2, the parachute, is the 13th image. Therefore, the spark plug image came later in the sequence.\n\nThe correct answer is: 1",
+        "metadata": {
+          "first_serial_position": 13,
+          "second_serial_position": 23,
+          "serial_lag": 10,
+          "distance": 9,
+          "left_image_serial_position": 23,
+          "right_image_serial_position": 13
+        }
+      },
+      {
+        "trial": 97,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence. It is the security camera, which is the 35th image in the list. Image 2, the toy space shuttle, is the 50th image.",
+        "metadata": {
+          "first_serial_position": 43,
+          "second_serial_position": 89,
+          "serial_lag": 46,
+          "distance": 45,
+          "left_image_serial_position": 43,
+          "right_image_serial_position": 89
+        }
+      },
+      {
+        "trial": 98,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 49,
+          "second_serial_position": 60,
+          "serial_lag": 11,
+          "distance": 10,
+          "left_image_serial_position": 60,
+          "right_image_serial_position": 49
+        }
+      },
+      {
+        "trial": 99,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 43,
+          "second_serial_position": 92,
+          "serial_lag": 49,
+          "distance": 48,
+          "left_image_serial_position": 43,
+          "right_image_serial_position": 92
+        }
+      }
+    ],
+    "accuracy": 0.46,
+    "n_correct": 46,
+    "total": 100,
+    "accuracy_by_distance": {
+      "0": 0.0,
+      "1": 1.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.25,
+      "6": 0.3333333333333333,
+      "7": 1.0,
+      "8": 1.0,
+      "9": 0.0,
+      "10": 0.5,
+      "11": 0.5,
+      "12": 0.3333333333333333,
+      "14": 0.5,
+      "15": 0.3333333333333333,
+      "16": 0.3333333333333333,
+      "17": 0.5,
+      "18": 0.5,
+      "19": 1.0,
+      "20": 1.0,
+      "21": 1.0,
+      "22": 1.0,
+      "23": 0.25,
+      "24": 0.0,
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "29": 0.5,
+      "30": 0.5,
+      "31": 0.3333333333333333,
+      "32": 0.5,
+      "33": 0.0,
+      "35": 1.0,
+      "36": 0.5,
+      "39": 1.0,
+      "41": 0.0,
+      "42": 1.0,
+      "43": 1.0,
+      "44": 0.0,
+      "45": 0.5,
+      "46": 1.0,
+      "48": 1.0,
+      "49": 1.0,
+      "50": 0.0,
+      "51": 1.0,
+      "52": 1.0,
+      "57": 0.0,
+      "59": 0.5,
+      "60": 1.0,
+      "61": 1.0,
+      "63": 1.0,
+      "65": 0.5,
+      "66": 0.0,
+      "68": 0.0,
+      "75": 0.5,
+      "79": 0.0,
+      "80": 1.0,
+      "83": 0.0
+    }
+  }
+}

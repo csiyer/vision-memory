@@ -1,0 +1,1537 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260428_233358",
+    "dataset": "Brady2008",
+    "n_images": 10,
+    "n_trials": 100,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.5
+      }
+    },
+    "max_context_images": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence begins with the wetsuit (Image 1) and ends with the model car (Image 10). The model car is the last image in the sequence, not the second.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 10,
+          "serial_lag": 9,
+          "distance": 8,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the marker post (Image 1) is the 5th image in the original sequence, while the image of the padlock (Image 2) is the 6th image. Therefore, the marker post appeared first.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 6,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the \"Final clearance 50% off\" tag is the fourth image in the original sequence.\nThe image of the perforated metal tray is the sixth image in the original sequence.\n\nTherefore, the \"Final clearance 50% off\" tag (Image 1) appeared before the perforated metal tray (Image 2) in the study sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 6,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the Excedrin Migraine box) appeared first in the sequence.\n\nIt is the third image in the original 10-image sequence, while the bull mask is the sixth image.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 6,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1.  Baby car seat\n2.  Triangle ruler\n3.  Bread maker\n4.  Tall wooden dresser\n5.  Red tricycle\n6.  Wooden cutting board\n7.  Tacos\n8.  Coiled hose\n9.  Fire sprinkler head\n10. Bottle brush\n\nThe image of the tacos is image 7, and the triangle ruler is image 2.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 7,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the stone-like blocks) appeared first in the sequence.\n\nIt is the 6th image in the original 10-image sequence, while Image 2 (the rolled-up tube) is the 2nd image.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 6,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe first image in the sequence is the ornate, multi-colored vase with gold inlay (Image 1). The second image in the sequence is the solid blue, ribbed glass bottle (Image 2).\n\nTherefore, the correct answer is 1.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the brass faucet (Image 1) is the 6th image in the original sequence, while the image of the silver mug (Image 2) is the 10th image. Therefore, the faucet image appeared first.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 10,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the blue protractor) appeared first in the sequence.\n\nIt is the 9th image in the original 10-image sequence, while the plant (image 2) is the 3rd image.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 9,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the bottle is the 7th image in the sequence, while the image of the antique clock is the 4th image. Since 7 comes after 4, the bottle image appeared later in the sequence.\n\nTherefore, the correct answer is: 2",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 7,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 10,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the blue recycling bin) appeared first in the study sequence. It is the 5th image in the original list, while image 2 (the baby onesie) is the 10th.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 10,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 11,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the melon) appeared first in the sequence. It is the fourth image in the original 10-image sequence. Image 2 (the brass instrument) is the third image in the sequence. Therefore, the melon came before the brass instrument.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 12,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the rope keychain is the third image in the original sequence, while the basketball hoop is the seventh image. Therefore, the rope keychain appeared earlier in the sequence.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 7,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 13,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the first image you provided, showing a golden, brain-like coral or mushroom. The second image, showing the beige electronic device, is the eighth image in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 8,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 14,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe image of the blue traffic sign with a white arrow (Image 2) is the second image in the original sequence of 10. The image of the white citrus juicer (Image 1) is the seventh image in that sequence.\n\nTherefore, Image 2 came before Image 1.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 7,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 15,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the first image in the original list, showing a board game with ladders and a winding path. Image 2, showing boxes of Extra gum, is the 8th image in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 8,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 16,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the wooden boat-shaped house) appeared first in the sequence.\n\nIt is the fifth image in the original 10-image sequence, while the second image (the red and black light) is the fourth. Therefore, the wooden boat-shaped house came before the light in the study sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 17,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1. Graduation cap\n2. Baby bassinet\n3. Wind turbine\n4. Hole puncher\n5. Military cap\n6. String\n7. Whisk\n8. Yellow bucket and shovel\n9. Hair comb\n10. Sausage\n\nThe baby bassinet (Image 2) is the second image in the sequence, while the yellow bucket and shovel (Image 1) is the",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 8,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 18,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the octagonal plate with a Christmas-themed design (Image 1) is the 5th image in the original sequence. The image of the pink beach chair (Image 2) is the 9th image in the original sequence. Therefore, Image 1 comes before Image 2.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 9,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 19,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A purple and teal mop.\n2.  A wooden hand model.\n3.  Two white pillows.\n4.  A black stealth fighter jet.\n5.  An apple-shaped clock.\n6.  A yellow kitchen timer.\n7.  A wooden birdhouse.\n8.  A metal guitar bridge.\n9.  A wooden board game (likely checkers or a similar game).\n10.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 10,
+          "serial_lag": 8,
+          "distance": 7,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 20,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the board game) appeared first in the sequence.\n\nThe sequence is:\n1.  A clear plastic food container with a teal lid.\n2.  A layered dessert (yellow, dark, and white).\n3.  A metal bucket on wheels.\n4.  A small, decorated artificial Christmas tree.\n5.  An open black eyeshadow compact.\n6.  A plush stork toy.\n7.  A bronze sculpture of a torso with hands covering the chest.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 9,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 21,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the yellow and green toy hammer) appeared first in the sequence.\n\nIt is the 5th image in the original 10-image sequence, while the orange band-aid is the 4th image. Therefore, the toy hammer came after the band-aid in the sequence.\n\nHowever, if you are asking which of these two specific images appeared first *among themselves* in the sequence, then the answer is:\n\n**Image 2 (the orange band-aid)** appeared",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 22,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the plush bear holding a smaller bear is the 4th image in the original sequence.\nThe image of the vintage school desk is the 10th image in the original sequence.\n\nTherefore, the plush bear (Image 1) came before the school desk (Image 2) in the sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 10,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 23,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the wooden flute) appeared first in the study sequence.\n\nIt is the 9th image in the original 10-image sequence, while Image 2 (the Dial hand soap) is the 6th image.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 9,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 24,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the black hose with metal connectors is the 7th image in the original sequence, while the wooden bucket with a handle is the 10th image. Therefore, the hose image came first.",
+        "metadata": {
+          "first_serial_position": 7,
+          "second_serial_position": 10,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 25,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the silo) appeared first in the sequence.\n\nIt is the 6th image in the original 10-image sequence, while the French toast (image 2) is the 4th image. Since 6 comes before 4 in the sequence, the silo was seen first.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 6,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 26,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the hot dog is the 8th image in the sequence, while the arcade machine is the 10th image. Therefore, the hot dog image came first.",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 10,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 27,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the mermaid figurine) appeared first in the study sequence.\n\nIt is the 7th image in the original 10-image sequence, while the red flask is the 4th image.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 7,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 28,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A pair of pink satin shoes with bows.\n2.  A bundle of dried sage (this is the first image you asked about).\n3.  A hand saw.\n4.  A black metal fence.\n5.  A stack of paper forms.\n6.  A white video doorbell.\n7.  A red British-style postbox.\n8.  A carved pumpkin.\n9.  A",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 9,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 29,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the red bow tie) appeared first in the sequence.\n\nThe sequence is:\n1.  A silver desk with lamps\n2.  A plate of breakfast food\n3.  A red apple\n4.  A toy shark\n5.  A red bow tie\n6.  A sheep\n7.  A rolling pin\n8.  A wrench\n9.  A sword\n10. A harp\n\nThe red bow tie is image 5,",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 5,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 30,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence begins with the tall, ornate vase (Image 1), followed by the bar cabinet (Image 2). Therefore, Image 1 is the first one.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 6,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 31,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the fishing reel is the 4th image in the original sequence, while the image of the braided bread is the 7th image. Therefore, the fishing reel image came first.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 7,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 32,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the first image you provided, showing two shiny metal spheres. Image 2, the metal grater, is the third image in the original sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 33,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the statue of Jesus) appeared first in the sequence.\n\nThe sequence is:\n1.  Black leather case\n2.  Bottle with cork and twine\n3.  Horn\n4.  Statue of Jesus\n5.  NHL hockey puck\n6.  Bowling pin\n7.  Multi-tool\n8.  Red traffic light\n9.  Red wooden planter\n10. Potato peeler\n\nThe statue of Jesus is the 4th image,",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 34,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the fishing lure (Image 1) is the third image in the original sequence, while the image of the brooch (Image 2) is the second image. Therefore, the fishing lure appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 35,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the food (image 1) is the 4th image in the original sequence, while the image of the hose (image 2) is the 10th image. Therefore, the food image came first.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 10,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 36,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the metal drain grate is the 9th image in the sequence, while the image of the glass bowl is the 10th image. Therefore, the drain grate image came first.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 10,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 37,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the teapot set) appeared first in the sequence.\n\nIt is the 9th image in the original 10-image sequence, while the statue is the 8th image. Therefore, the teapot set came after the statue in the sequence.\n\nHowever, if you are asking which of these two specific images appeared first *among themselves* in the sequence, then the statue (image 2) appeared first, as it is the 8th image, and the te",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 9,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 38,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the floor lamp) appeared first in the sequence. It is the 5th image in the original list, while Image 2 (the wheel) is the 6th.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 6,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 39,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the metal pulley (Image 1) is the 5th image in the original sequence, while the \"CAFE OPEN\" sign (Image 2) is the 3rd image. Since the sequence is ordered from 1 to 10, the pulley image comes after the cafe sign in the sequence.\n\nTherefore, the correct answer is: **2**",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 5,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 40,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the first image in the original list, showing a cup of coffee with cinnamon on top. Image 2, the colander, is the second image in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 41,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence begins with the image of the post-hole digger (Image 1), followed by the Bounty paper towels (Image 2). Therefore, Image 1 is the first one.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 42,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the spinning wheel is the second image in the original sequence you provided, while the image of the berries and leaves is the tenth. Therefore, the spinning wheel image came first in the sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 10,
+          "serial_lag": 8,
+          "distance": 7,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 43,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the poker chip holder) appeared first in the study sequence.\n\nThe correct answer is: 1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 44,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the owl statue is the 9th image in the sequence, while the image of the breast pump is the 8th image. Since the sequence is ordered from 1 to 10, the owl statue (image 9) comes after the breast pump (image 8).\n\nTherefore, the correct answer is: **2**",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 9,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 45,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the ship in a bottle is the 8th image in the sequence, while the hazelnut is the 10th image. Therefore, the ship in a bottle appeared first.",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 10,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 46,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the vintage metal typewriter (image 1) is the 8th image in the original sequence, while the image of the sheer scarves (image 2) is the 9th image. Therefore, the typewriter image came first.",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 9,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 47,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the black leather case (Image 1) is the 10th image in the sequence, while the image of the curved pasta (Image 2) is the 6th image. Since the sequence is ordered from 1 to 10, the leather case image came later in the sequence.\n\nTherefore, the correct answer is: **1**",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 10,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 48,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the white webcam (Image 1) is the 7th image in the original sequence, while the image of the Y-shaped tool (Image 2) is the 3rd image. Therefore, the webcam image came later in the sequence.\n\nHowever, if the question is asking which of these two specific images appeared first *among themselves* in the original sequence, then the Y-shaped tool (Image 2) is the correct",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 7,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 49,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the pitch pipe is the 9th image in the sequence, while the decorated egg is the 7th image. Since the sequence is ordered from 1 to 10, the pitch pipe (image 1) comes after the decorated egg (image 2) in the sequence.\n\nTherefore, the correct answer is: **2**",
+        "metadata": {
+          "first_serial_position": 7,
+          "second_serial_position": 9,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 50,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the police helmet) appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A patterned necktie\n2.  A statue of a man\n3.  A basket with books\n4.  A cucumber\n5.  A nutcracker soldier\n6.  **A police helmet** (Image 1)\n7.  A pair of flip-flops (Image 2)\n8.  A pipe organ\n9.  A",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 8,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 51,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A wooden hockey stick\n2.  An open computer case\n3.  An orange Halloween bucket\n4.  A kangaroo with a joey\n5.  A wooden rocking chair\n6.  A person holding a bow and arrow\n7.  A metal clamp or vise\n8.  A beige skirt\n9.  A silver tray with red apples\n10.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 10,
+          "serial_lag": 9,
+          "distance": 8,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 52,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the galvanized milk can is the 6th image in the sequence, while the image of the children in the sandbox is the 5th image. Since the sequence is ordered from 1 to 10, the sandbox image (5) comes before the milk can image (6).\n\nTherefore, the correct answer is: 2",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 6,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 53,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the black cylindrical object with a hook) appeared first in the sequence.\n\nIt is the 10th image in the original list, while the jumper cables (Image 2) are the first image.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 10,
+          "serial_lag": 9,
+          "distance": 8,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 54,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the image of the medical IV bag, which is the first image in the original sequence you provided. Image 2, the black funnel, is the third image in that sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 55,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the pomegranate) appeared first in the sequence. It is the 4th image in the original list, while Image 2 (the watering can) is the 5th.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 56,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the mahjong set) appeared first in the study sequence.\n\nIt is the 7th image in the original 10-image sequence, while Image 2 (the spatula) is the 5th image. Since 7 comes after 5, the mahjong set was seen later in the sequence.\n\nTherefore, the spatula (Image 2) appeared first.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 7,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 57,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the red brush with pink bristles is the 7th image in the original sequence.\nThe image of the stone weights is the 9th image in the original sequence.\n\nTherefore, the brush (Image 1) came before the stone weights (Image 2) in the sequence.",
+        "metadata": {
+          "first_serial_position": 7,
+          "second_serial_position": 9,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 58,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the image of the castle figurine, which is the first image in the original 10-image sequence you provided. Image 2, showing the wooden salt and pepper shakers, is the fourth image in that sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 59,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the first image in the original list, showing a mobile, adjustable-height table on wheels. Image 2, the blue leather bag, is the second image in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 60,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the laboratory apparatus (image 1) is the 4th image in the original sequence, while the image of the film reel (image 2) is the 10th image. Therefore, image 1 comes before image 2 in the sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 10,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 61,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the red onion) appeared first in the study sequence.\n\nIt is the 5th image in the original sequence, while the spray bottle is the 7th image.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 7,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 62,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the wooden lectern (Image 1) is the 10th image in the original sequence. The image of the stroller (Image 2) is the 9th image in the original sequence.\n\nTherefore, the stroller (Image 2) appeared first in the sequence, not the lectern (Image 1).\n\n**Answer: 2**",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 10,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 63,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe Nerf gun is the 10th image in the original sequence, while the bandura is the 8th image. Therefore, the bandura appeared before the Nerf gun in the sequence.",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 10,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 64,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the deep fryer) appeared first in the study sequence.\n\nIt is the 6th image in the original 10-image sequence, while Image 2 (the barrel on a stand) is the 4th image. Since 6 comes after 4, the deep fryer is not the first. I apologize for the error in my previous response.\n\nLet me correct this: The barrel on a stand (Image 2) appeared earlier in the sequence than the deep",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 6,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 65,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (Kermit the Frog) appeared first in the study sequence.\n\nIt is the 4th image in the original 10-image sequence, while Image 2 (the green scarf) is the 7th image.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 7,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 66,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1. A decorative globe\n2. A metal stapler\n3. A clear ice cube\n4. An old cannon\n5. A fuse\n6. A football\n7. A metal spring\n8. A piece of driftwood\n9. A yellow electronic device\n10. A fish\n\nThe stapler (Image 2) is the second image in the sequence, while the yellow electronic device (Image",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 9,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 67,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the celestial globe (Image 1) is the 4th image in the original sequence, while the beaded headpiece (Image 2) is the 3rd image. Therefore, the celestial globe appeared later in the sequence than the beaded headpiece.\n\nHowever, the question asks which appeared *first* in the study sequence. Since the beaded headpiece is the 3rd image and the celestial globe is the",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 68,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1.  A rectangular gold picture frame.\n2.  A snow globe with a snowman.\n3.  A piece of construction equipment.\n4.  A large, wrapped package.\n5.  An oval gold picture frame. \u2190 This is Image 1\n6.  A chameleon figurine.\n7.  An old-style computer monitor.\n8.  A blue and gold menorah.\n9.  A",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 7,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 69,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the ping pong table) appeared first in the study sequence.\n\nIt is the 5th image in the original 10-image sequence, while the Campbell's soup can is the 7th image.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 7,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 70,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A black toggle switch labeled \"OFF / ON / FULL\".\n2.  A blue glass vase with a ribbed body.\n3.  A pair of tongs with black handles.\n4.  A bagel slicer with a bagel and two slices.\n5.  A red and white triangular road sign for a railway crossing.\n6.  A red and black cylindrical object, which is the",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 6,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 71,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the round, orange-brown tablet (Image 1) is the 5th image in the original sequence. The image of the metal vent grille (Image 2) is the 4th image. Since the sequence is ordered from 1 to 10, the vent grille (Image 2) came before the tablet (Image 1).\n\nTherefore, the correct answer is: **2**",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 72,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence begins with the image of the parking meter (Image 1), followed by the image of the pencil case (Image 2), and then continues with the other items. Therefore, Image 1 is the first image in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 73,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe microscope (Image 1) is the 10th image in the original sequence, while the Scrabble tile (Image 2) is the 9th image. Therefore, the microscope was seen later in the sequence than the Scrabble tile.\n\nHowever, if you are asking which of these two images appeared first *within* the original 10-image sequence, then the correct answer is Image 2 (the Scrabble tile),",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 10,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 74,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt shows a pile of coffee beans, which is the first image in the original 10-image sequence you provided. Image 2, the pretzel, is the fourth image in that sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 75,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt shows a yellow bowl filled with colorful crayons, which is the first image in the original 10-image sequence you provided. Image 2, the black walkie-talkie, is the fifth image in that sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 76,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the potted cactus) appeared first in the study sequence.\n\nIt is the 8th image in the original 10-image sequence you provided. Image 2 (the black lanyard) is the 3rd image in the sequence.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 8,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 77,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe green frog figurine is the 5th image in the sequence, while the large grey industrial machine is the 10th image. Therefore, the frog image came first.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 10,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 78,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the clown) appeared first in the study sequence.\n\nThe clown image is the 4th image in the original sequence, while the desk lamp is the 2nd image. Since the question asks which of these two appeared first, the clown (image 1) is correct.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 79,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the statue of the Virgin Mary is the 5th image in the original sequence, while the image of the medical imaging machine is the 9th image. Therefore, the statue image came first.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 9,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 80,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the blue and silver tool (Image 1) is the 5th image in the original sequence. The image of the branch with red berries (Image 2) is the 8th image in the original sequence. Therefore, Image 1 comes before Image 2.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 8,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 81,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the knitted hat) appeared first in the sequence.\n\nIt is the 7th image in the original 10-image sequence, while the chrome grab bar is the 9th image.",
+        "metadata": {
+          "first_serial_position": 7,
+          "second_serial_position": 9,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 82,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A red, two-part device with a transparent window.\n2.  A wooden chess bishop piece.\n3.  A model of a cruise ship.\n4.  A brown leather satchel.\n5.  A red and white barometer.\n6.  A rusty, barrel-shaped metal container.\n7.  A young boy in a white hat and blue shorts.\n8.  A box of",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 8,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 83,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the seashell) appeared first in the study sequence.\n\nThe sequence is:\n1.  A woven leaf-shaped object\n2.  A walkie-talkie on a stand\n3.  A seashell (Image 1)\n4.  A glass globe on a stand\n5.  A stone tower ruin\n6.  A baby doll\n7.  A toy carousel\n8.  A paper cutter\n9.  A traffic sign post",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 84,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the beetle) appeared first in the sequence.\n\nThe sequence is:\n1.  A grey tombstone\n2.  A baby doll in a blue outfit\n3.  A silver toaster\n4.  A red leather notebook and pen\n5.  A blue glass flower\n6.  A red and black golf bag with clubs\n7.  A green and red perfume bottle\n8.  An automatic can opener\n9.  A green and striped beetle",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 9,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 85,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the orange pepper) appeared first in the study sequence. It is the third image in the original 10-image sequence, while the wooden basket is the fourth.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 86,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the red and black jumper cables is the 7th image in the original sequence.\nThe image of the green and yellow parrot is the 5th image in the original sequence.\n\nTherefore, the jumper cables (Image 1) appeared after the parrot (Image 2) in the sequence.\n\nActually, I made an error in my previous response. Let me correct this.\n\nThe parrot (Image 2) is the",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 7,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 87,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the vintage cash register) appeared first in the sequence.\n\nIt is the 9th image in the original 10-image sequence, while Image 2 (the yellow parking meter) is the 5th image.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 9,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 88,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the golf cart) appeared first in the sequence.\n\nThe golf cart is the 8th image in the sequence, while the burrito is the 4th image. Since 8 comes after 4, the golf cart appeared later in the sequence.\n\nTherefore, the burrito (image 2) appeared first in the study sequence.\n\n**Answer: 2**",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 8,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 89,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the F1 keyboard key) appeared first in the sequence.\n\nIt is the 10th image in the original list, while Image 2 (the airbrush kit) is the 9th image. Since the question asks which appeared *first* in the study sequence, and the sequence is presented in order from 1 to 10, the F1 key is the later image.\n\nActually, I made an error in my previous response. Let me correct this.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 10,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 90,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the portable hard drive (image 1) is the 8th image in the original sequence, while the image of the axe (image 2) is the 6th image. Since the sequence is ordered from 1 to 10, the portable hard drive image comes after the axe image.\n\nTherefore, the axe image (image 2) appeared first in the study sequence.\n\n**Answer: 2**",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 8,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 91,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the glittery gold mask with purple antennae, which is the first image in the original 10-image sequence you provided. Image 2, the headlamp with a battery, is the fourth image in that sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 92,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1. A gorilla figurine\n2. A toothbrush\n3. A book with tickets\n4. A green lighter\n5. A blue mat\n6. A black stapler (Image 1)\n7. A stethoscope\n8. A red rose\n9. A French press\n10. A broom\n\nThe toothbrush (Image 2) is the second image in the sequence,",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 6,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 93,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the white electronic device (Image 1) is the 7th image in the original sequence, while the image of the green chainsaw (Image 2) is the 10th image. Therefore, the electronic device appeared first.",
+        "metadata": {
+          "first_serial_position": 7,
+          "second_serial_position": 10,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 94,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the kalimba (Image 1) is the third image in the original sequence, while the image of the physics apparatus (Image 2) is the fourth. Therefore, the kalimba image came first.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 95,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the candy gift box is the 5th image in the sequence, while the image of the bongo drums is the 6th image. Therefore, the candy box appeared first.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 6,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 96,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the nutcracker) appeared first in the study sequence.\n\nThe sequence is:\n1.  Hourglass\n2.  Magnifying glass\n3.  Broccoli\n4.  Net\n5.  Cable\n6.  Cadbury Flake\n7.  Bible Bar\n8.  Hand mixer\n9.  Pearl necklace\n10. Nutcracker\n\nThe nutcracker is the 10th image, and the pearl necklace is the",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 10,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 97,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence begins with the image of the model Ferris wheel (Image 1), followed by the image of the snow-covered house (Image 2). Therefore, Image 1 comes before Image 2.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 6,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 98,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the yellow play structure (Image 1) is the 6th image in the original sequence, while the image of the black coat (Image 2) is the 10th image. Therefore, the play structure appeared earlier.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 10,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 99,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe burrito is the 8th image in the sequence, while the muscular cutout is the 10th image.",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 10,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 10
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "n_correct": 50,
+    "total": 100,
+    "accuracy_by_distance": {
+      "0": 0.3076923076923077,
+      "1": 0.5652173913043478,
+      "2": 0.6428571428571429,
+      "3": 0.5714285714285714,
+      "4": 0.375,
+      "5": 0.5,
+      "6": 0.75,
+      "7": 1.0,
+      "8": 0.3333333333333333
+    }
+  }
+}

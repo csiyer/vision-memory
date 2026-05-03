@@ -30,3 +30,23 @@ class BaseEvaluator(ABC):
 
     def get_name(self) -> str:
         return self.model_id
+
+    def check_image_capacity(self, n_images: int) -> bool:
+        """Probe whether the model can handle n_images in a single request.
+
+        Sends n_images 1x1 white pixel images with a minimal prompt and catches
+        any 400/413/context-too-large errors from the provider.
+        Returns True if the probe succeeds, False if the model rejects it.
+        """
+        pixel = Image.new("RGB", (1, 1), (255, 255, 255))
+        encoded = [self._encode_image(pixel) for _ in range(n_images)]
+        content = [{"type": "text", "text": "Reply with the number 1."}] + encoded
+        messages = [{"role": "user", "content": content}]
+        try:
+            self._call_api(messages)
+            return True
+        except Exception as e:
+            msg = str(e).lower()
+            if any(tok in msg for tok in ("400", "413", "too large", "too many", "image", "limit", "exceed", "invalid")):
+                return False
+            raise

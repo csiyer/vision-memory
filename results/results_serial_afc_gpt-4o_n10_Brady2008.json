@@ -1,0 +1,184 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260428_141923",
+    "dataset": "Brady2008",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.6
+      }
+    },
+    "max_context_images": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The pyramid image appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 10,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The second image appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 9,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The first image appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The second image (the wheel tool) appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 6,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The first image appeared earlier in the sequence.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 10,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The first image appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The first image (the pincushion) appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 10,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The second image appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 8,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The first image appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 10,
+          "serial_lag": 9,
+          "distance": 8,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 10
+        }
+      }
+    ],
+    "accuracy": 0.6,
+    "n_correct": 6,
+    "total": 10,
+    "accuracy_by_distance": {
+      "0": 1.0,
+      "1": 0.6666666666666666,
+      "2": 1.0,
+      "3": 0.5,
+      "6": 0.0,
+      "8": 1.0
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (Free Report)",
+    "variant": "free",
+    "timestamp": "20260428_130357",
+    "dataset": "Brady2008",
+    "n_images": 2,
+    "n_trials": 2,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0
+      }
+    },
+    "max_context_images": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "This image occurred second in the sequence.",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/mixer.jpg",
+          "name": "mixer.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image appeared first in the sequence.",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26391079.thl.jpg",
+          "name": "26391079.thl.jpg",
+          "serial_position": 1
+        }
+      }
+    ],
+    "average_error": 0.0,
+    "n_correct": 2,
+    "accuracy": 1.0,
+    "n_parse_failures": 0
+  }
+}

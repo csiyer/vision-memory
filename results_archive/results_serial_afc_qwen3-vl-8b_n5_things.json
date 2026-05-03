@@ -1,0 +1,1532 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260428_222837",
+    "dataset": "things",
+    "n_images": 5,
+    "n_trials": 100,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.23
+      }
+    },
+    "max_context_images": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A metal nail clipper.\n2.  A collection of nail polish bottles.\n3.  Two wooden bowls.\n4.  A white paper napkin.\n5.  A nail file.\n\nTherefore, the first image is the nail clipper (Image 1), and the second image is the white paper napkin (Image 4).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1.  A collection of nail polish bottles.\n2.  A metal nail clipper.\n3.  A white paper napkin.\n4.  Two wooden bowls.\n5.  A nail file.\n\nThe image of the wooden bowls is image 4, and the image of the nail clipper is image 2. Since the question asks which of these two appeared first, the nail clipper (image 2)",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence was:\n1. A metal nail clipper\n2. A Solingen brand nail file\n3. Wooden bowls\n4. A white paper napkin\n5. A collection of nail polish bottles\n\nTherefore, the second image in the sequence (the nail file) is the correct answer.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence was:\n1.  Wooden bowls\n2.  Nail file\n3.  Napkin\n4.  Nail clipper\n5.  Nail polish bottles\n\nTherefore, the first image in the sequence was the wooden bowls (Image 1), and the second image was the nail file (Image 2). The nail clipper (Image 4) is the fourth image, and the wooden bowls (Image 1) is",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  The image of the wooden bowls.\n2.  The image of the white napkin.\n\nTherefore, the correct answer is 1.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1. Wooden bowls\n2. Nail clipper\n3. White napkin\n4. Nail polish bottles\n5. Nail file\n\nTherefore, the nail clipper (Image 2) is the second image in the sequence, making it the first of the two options you provided.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1.  A file with \"Solingen Germany\" written on it.\n2.  A white paper napkin.\n3.  A metal nail clipper.\n4.  Two wooden bowls.\n5.  A collection of nail polish bottles.\n\nTherefore, the nail clipper (Image 3) is the third image, and the nail polish bottles (Image 5) are the fifth image. The question asks which of",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 5,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence was:\n1.  The image of the two nail files (Solingen, Germany) on a green background.\n2.  The image of the white paper napkin on a wooden surface.\n3.  The image of the metal nail clipper.\n4.  The image of the collection of nail polish bottles.\n5.  The image of the two wooden bowls.\n\nTherefore, the first image in the sequence is the one showing the",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A metal nail clipper.\n2.  A Solingen brand nail file.\n3.  A white paper napkin.\n4.  Two wooden bowls.\n5.  A collection of nail polish bottles.\n\nThe image of the wooden bowls is the fourth image in the sequence, while the nail clipper is the first. Therefore, the nail clipper (image 1) appeared first.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A collection of nail polish bottles.\n2.  A white paper napkin.\n3.  A metal nail clipper.\n4.  Two nail files.\n5.  Two wooden bowls.\n\nTherefore, the white paper napkin (Image 1) is the second image in the sequence, and the nail files (Image 2) are the fourth. Since the question asks which of these two appeared *first",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 10,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A metal nail clipper.\n2.  A white paper napkin.\n3.  Two wooden bowls.\n4.  A collection of nail polish bottles.\n5.  A nail file.\n\nTherefore, the first image is the nail clipper (Image 1).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 11,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A white paper napkin on a wooden surface.\n2.  A collection of nail polish bottles.\n3.  A metal nail clipper.\n4.  A pair of nail files.\n5.  Two wooden bowls.\n\nTherefore, the first image in the sequence is the white paper napkin (Image 1), and the second image is the collection of nail polish bottles (Image 2). The",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 12,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1. White napkin\n2. Nail files\n3. Nail clipper\n4. Wooden bowls\n5. Nail polish bottles\n\nThe image of the wooden bowls is the fourth image in the sequence, and the image of the nail polish bottles is the fifth. Therefore, the wooden bowls (Image 2) appeared before the nail polish bottles (Image 1) in the sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 13,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1.  A metal nail clipper.\n2.  A collection of nail polish bottles.\n3.  A white paper napkin. (This is Image 1)\n4.  A nail file.\n5.  Two wooden bowls. (This is Image 2)\n\nTherefore, the white paper napkin (Image 1) is the third image in the sequence, while the wooden bowls (Image 2) are",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 5,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 14,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence was:\n1.  The image of the two nail files (Solingen, Germany).\n2.  The image of the wooden bowls.\n\nTherefore, the image of the nail files (Image 2) came first.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 15,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence was:\n1.  A pair of nail files (Solingen, Germany) on a green background.\n2.  A white paper napkin on a wooden surface.\n3.  A metal nail clipper on a dark, textured surface.\n4.  A collection of nail polish bottles.\n5.  Two wooden bowls on a dark surface.\n\nThe image you asked about, the nail clipper (Image 1), is the third",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 16,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A white paper napkin on a wooden surface.\n2.  The wooden bowls.\n3.  The nail clipper.\n4.  The nail files.\n5.  The collection of nail polish bottles.\n\nTherefore, the image of the wooden bowls (Image 1) is the second image in the sequence, while the nail files (Image 2) are the fourth. Since the question asks which of the",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 17,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  Wooden bowls\n2.  White napkin\n3.  Nail polish bottles\n4.  Nail file\n5.  Nail clipper\n\nTherefore, the first image is the one with the wooden bowls.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 18,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence was:\n1.  Image 1: The nail file.\n2.  Image 2: The nail clippers.\n\nTherefore, the nail file (Image 2) was the first image shown, and the nail clippers (Image 1) were shown second.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 19,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence was:\n1.  A collection of nail polish bottles.\n2.  Two wooden bowls.\n3.  A metal nail clipper.\n4.  A white paper napkin.\n5.  Two nail files.\n\nTherefore, the image of the wooden bowls (Image 2) is the second image in the sequence, making it the first of the two options you provided.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 20,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  Wooden bowls\n2.  Nail polish bottles\n3.  Nail file\n4.  Nail clipper\n5.  White napkin\n\nThe image of the white napkin is the fifth image in the sequence, while the image of the nail clipper is the fourth. Therefore, the nail clipper image (Image 2 in your query) appeared after the white napkin image (Image 1",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 21,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence was:\n1.  The image of the two nail files (Solingen, Germany).\n2.  The image of the metal nail clipper.\n3.  The image of the white paper napkin.\n4.  The image of the collection of nail polish bottles.\n5.  The image of the two wooden bowls.\n\nTherefore, the first image in the sequence is the one showing the nail files, which corresponds to image 2",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 22,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1.  The image of the nail files.\n2.  The image of the nail polish bottles.\n3.  The image of the nail clipper.\n4.  The image of the wooden bowls.\n5.  The image of the paper napkin.\n\nTherefore, the first image in the sequence is the one showing the nail files, which corresponds to image 1 in your query.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 23,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1.  Wooden bowls\n2.  White napkin\n3.  Nail files\n4.  Nail clipper\n5.  Nail polish bottles\n\nTherefore, the image of the nail files (Image 1) is the third image in the sequence, while the white napkin (Image 2) is the second. Since the question asks which of the two appeared *first*, the answer is Image 1",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 24,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A white paper napkin on a wooden surface.\n2.  A collection of nail polish bottles.\n3.  Two wooden bowls.\n4.  A metal nail clipper.\n5.  Two Solingen brand nail files.\n\nTherefore, the first image in the sequence is the white paper napkin (Image 1), and the second image is the collection of nail polish bottles (Image 2). The question",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 25,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1. White napkin\n2. Wooden bowls\n3. Nail clipper\n4. Nail file\n5. Nail polish bottles\n\nThe second image in the sequence is the wooden bowls, which corresponds to image 2 in your query. The nail file (image 4) appears after the nail clipper (image 3), and the nail polish bottles (image 5) appear last.\n\nTherefore, the correct answer",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 26,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  Wooden bowls\n2.  Nail clipper\n3.  White napkin\n4.  Nail file\n5.  Nail polish bottles\n\nTherefore, the nail clipper (Image 1) is the second image in the sequence, and the nail file (Image 2) is the fourth. Since the question asks which of these two appeared *first*, the answer is Image 1.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 27,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A metal nail clipper.\n2.  A Solingen brand nail file.\n3.  A white paper napkin.\n4.  A collection of nail polish bottles.\n5.  Two wooden bowls.\n\nTherefore, the first image is the nail clipper (Image 1), and the second image is the wooden bowls (Image 5).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 28,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 29,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1. A metal nail clipper\n2. A white paper napkin\n3. A collection of nail polish bottles\n4. Two wooden bowls\n5. A nail file\n\nTherefore, the second image in the sequence (the white paper napkin) is the correct answer.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 30,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1.  A collection of nail polish bottles.\n2.  A metal nail clipper.\n3.  Two wooden bowls.\n4.  A white paper napkin.\n5.  A nail file.\n\nThe image of the white paper napkin is the fourth image in the sequence, while the image of the wooden bowls is the third. Therefore, the napkin image (1) came after the bowls image (2)",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 31,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A white paper napkin on a wooden surface.\n2.  A collection of nail polish bottles.\n3.  Two wooden bowls on a dark surface.\n4.  Two nail files.\n5.  A metal nail clipper.\n\nThe image you asked about, the nail files, is image 4 in the sequence, which comes after the white napkin (image 1). Therefore, the white napkin",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 32,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  Wooden bowls\n2.  Nail clipper\n3.  Nail file\n4.  Napkin\n5.  Nail polish bottles\n\nTherefore, the nail clipper (Image 1) is the second image in the sequence, and the nail polish bottles (Image 2) are the fifth. Since the question asks which of the two appeared *first*, the answer is Image 1.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 33,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A collection of nail polish bottles.\n2.  A metal nail clipper.\n3.  A white paper napkin.\n4.  Two wooden bowls.\n5.  A nail file.\n\nTherefore, the white paper napkin (Image 1) is the third image in the sequence, while the nail clipper (Image 2) is the second. Since the question asks which of the two appeared *",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 34,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A metal nail clipper.\n2.  A white paper napkin.\n3.  A collection of nail polish bottles.\n4.  A pair of nail files.\n5.  Two wooden bowls.\n\nTherefore, the first image is the nail clipper (Image 1).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 35,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  Wooden bowls\n2.  Nail polish bottles\n3.  White napkin\n4.  Nail file\n5.  Nail clipper\n\nTherefore, the white napkin (Image 3) is the third image, and the nail polish bottles (Image 2) are the second image. The question asks which of the two appeared first, and since the white napkin is third and the",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 36,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence was:\n1. White napkin\n2. Nail file\n3. Nail polish bottles\n4. Wooden bowls\n5. Nail clipper\n\nTherefore, the white napkin (Image 1) is the first image, and the nail file (Image 2) is the second image. Since the question asks which of the two images (1 or 2) appeared first, and Image 2 is the second image in the",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 37,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1.  A metal nail clipper.\n2.  A white paper napkin.\n3.  A nail file.\n4.  A collection of nail polish bottles.\n5.  Two wooden bowls.\n\nTherefore, the white paper napkin (Image 1) is the second image in the sequence, and the wooden bowls (Image 2) are the fifth. Since the question asks which of these two appeared *first",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 38,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence was:\n1. A white paper napkin on a wooden surface.\n2. A collection of nail polish bottles.\n3. Two wooden bowls.\n4. A metal nail clipper.\n5. Two Solingen brand nail files.\n\nTherefore, the first image in the sequence is the white paper napkin (Image 1), and the second image is the collection of nail polish bottles (Image 2). The question asks which of the two",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 39,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A nail file\n2.  Wooden bowls\n3.  A nail clipper\n4.  A paper napkin\n5.  Nail polish bottles\n\nTherefore, the wooden bowls (Image 2) are the second image, and the nail file (Image 1) is the first.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 40,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1. Wooden bowls\n2. White napkin\n3. Nail polish bottles\n4. Nail clipper\n5. Nail file\n\nTherefore, the white napkin (Image 2) is the second image in the sequence, which means it appeared after the first image (wooden bowls) and before the third image (nail polish bottles). The question asks which of the two images appeared first, and since Image",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 41,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1. White napkin\n2. Nail polish bottles\n3. Nail clipper\n4. Nail file\n5. Wooden bowls\n\nThe image of the wooden bowls is Image 5, and the nail file is Image 4. Therefore, the nail file (Image 2 in your query) appeared after the wooden bowls (Image 1 in your query) in the original sequence.\n\nThe correct answer is: 1",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 42,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 43,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A white paper napkin on a wooden surface.\n2.  A metal nail clipper on a dark, textured surface.\n\nTherefore, the first image is the napkin.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 5,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 44,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1.  A metal nail clipper.\n2.  A Solingen brand nail file.\n3.  A collection of nail polish bottles.\n4.  A white paper napkin.\n5.  Two wooden bowls.\n\nThe image of the white paper napkin is the fourth image in the sequence, while the image of the nail file is the second. Therefore, the napkin image (1) came after the nail file",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 45,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1. White napkin\n2. Nail clipper\n3. Nail file\n4. Wooden bowls\n5. Nail polish bottles\n\nThe image of the wooden bowls is image 4, and the nail file is image 3. Therefore, the wooden bowls (image 1 in your query) appeared after the nail file (image 2 in your query) in the original sequence.\n\nHowever, if you are asking which",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 46,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  Wooden bowls\n2.  Nail polish bottles\n3.  Nail clipper\n4.  White napkin\n5.  Nail files\n\nTherefore, the second image in the sequence (the nail polish bottles) is the correct answer.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 47,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  The image of the wooden bowls.\n2.  The image of the nail clipper.\n\nTherefore, the correct answer is 1.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 48,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1.  The image of the two nail files.\n2.  The image of the nail polish bottles.\n3.  The image of the white napkin.\n4.  The image of the nail clipper.\n5.  The image of the wooden bowls.\n\nTherefore, the first image (Image 1) is the one showing the nail files.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 49,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1.  A pair of Solingen nail files.\n2.  A white paper napkin.\n3.  Two wooden bowls.\n4.  A collection of nail polish bottles.\n5.  A metal nail clipper.\n\nTherefore, the first image in the sequence is Image 1.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 50,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1.  A metal nail clipper.\n2.  A white paper napkin.\n3.  A nail file.\n4.  A collection of nail polish bottles.\n5.  Two wooden bowls.\n\nThe image of the wooden bowls is the fifth image in the sequence, while the image of the nail polish bottles is the fourth. Therefore, the image of the wooden bowls (Image 1) appeared after the image of",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 51,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1. White napkin\n2. **Silver nail file (Image 2)**\n3. Wooden bowls\n4. Nail polish bottles (Image 1)\n5. Metal nail clipper\n\nTherefore, the correct answer is 2.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 52,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  The image of the wooden bowls.\n2.  The image of the nail polish bottles.\n\nTherefore, the first image in the sequence is the one showing the wooden bowls, which corresponds to option 2.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 53,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A collection of nail polish bottles.\n2.  Two wooden bowls.\n3.  Two nail files.\n4.  A white paper napkin.\n5.  A metal nail clipper.\n\nThe image of the white paper napkin is the fourth image in the sequence, while the image of the nail files is the third. Therefore, the napkin image (1) came after the nail files image (2",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 54,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 (the white napkin) appeared second in the sequence.\n\nThe first image in the sequence was the collection of nail polish bottles.\n\nTherefore, the correct answer is: 2",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 55,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1.  A metal nail clipper.\n2.  The wooden bowls.\n3.  The nail file.\n4.  The white napkin.\n5.  The collection of nail polish bottles.\n\nTherefore, the wooden bowls (Image 2) are the second image in the sequence, and the nail clipper (Image 1) is the first.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 56,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1.  A metal nail clipper.\n2.  Two wooden bowls.\n3.  A nail file.\n4.  A white paper napkin.\n5.  A collection of nail polish bottles.\n\nThe image of the white paper napkin is the fourth image in the sequence, while the nail file is the third. Therefore, the napkin image (1) came after the nail file (2) in the sequence",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 57,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A white paper napkin on a wooden surface.\n2.  A metal nail clipper on a dark, textured surface.\n3.  Two Solingen brand nail files on a green surface.\n4.  Two small, dark wooden bowls on a dark surface.\n5.  A collection of nail polish bottles on a rack.\n\nTherefore, the nail clipper (Image 1) is the second image in the",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 58,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A white paper napkin on a wooden surface.\n2.  Two small wooden bowls on a dark surface.\n3.  A metal nail clipper on a dark, textured surface.\n4.  A collection of nail polish bottles.\n5.  Two Solingen brand nail files on a green surface.\n\nThe image you asked about (the nail clipper) is image 3, and the image you",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 5,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 59,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1.  The two nail files on a green background.\n2.  The metal nail clipper.\n3.  The white paper napkin.\n4.  The collection of nail polish bottles.\n5.  The two wooden bowls.\n\nTherefore, the first image in the sequence is Image 1.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 60,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1. White napkin\n2. Nail file\n3. Wooden bowls\n4. Nail clipper\n5. Nail polish bottles\n\nThe second image in the sequence is the wooden bowls, which corresponds to image 2 in your query. The nail polish bottles are the fifth image.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 5,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 61,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A collection of nail polish bottles.\n2.  A pair of nail files.\n3.  Two wooden bowls.\n4.  A white paper napkin.\n5.  A metal nail clipper.\n\nThe image of the white paper napkin is the fourth image in the sequence, while the image of the nail files is the second. Therefore, the napkin image (1) came after the nail files image",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 62,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1.  The image of the nail files.\n2.  The image of the white napkin.\n3.  The image of the nail clipper.\n4.  The image of the wooden bowls.\n5.  The image of the nail polish bottles.\n\nThe image of the nail polish bottles (Image 1) is the fifth image in the sequence, while the image of the wooden bowls (Image 2) is",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 63,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A white paper napkin on a wooden surface.\n2.  Two wooden bowls on a dark surface.\n\nTherefore, the first image is the white napkin.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 64,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1.  A collection of nail polish bottles.\n2.  A metal nail clipper.\n3.  Two wooden bowls.\n4.  Two nail files.\n5.  A white paper napkin.\n\nThe first image in this sequence is the one showing the nail polish bottles. The second image you asked about (the nail files) is the fourth image in the sequence.\n\nTherefore, the correct answer is **1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 65,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A pair of nail files.\n2.  A white paper napkin.\n3.  A collection of nail polish bottles.\n4.  A pair of wooden bowls.\n5.  A metal nail clipper.\n\nThe first image you provided (the nail clipper) is the fifth image in the sequence, while the second image (the nail polish bottles) is the third. Therefore, the nail clipper (",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 5,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 66,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  The image of the wooden bowls.\n2.  The image of the metal nail clipper.\n\nTherefore, the wooden bowls (Image 1) came before the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 67,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence was:\n1.  The image of the two nail files (Solingen, Germany).\n2.  The image of the collection of nail polish bottles.\n3.  The image of the metal nail clipper.\n4.  The image of the white paper napkin.\n5.  The image of the two wooden bowls.\n\nTherefore, the image of the nail files (Image 2) is the first one in the sequence, while",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 68,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence was:\n1.  Image 1: Wooden bowls\n2.  Image 2: Nail polish bottles\n3.  Image 3: Nail clipper\n4.  Image 4: White napkin\n5.  Image 5: Nail file\n\nTherefore, the image of the wooden bowls (Image 1) appeared first, not the nail clipper (Image 3). The question asks which of the two",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 69,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 (the white napkin) appeared second in the sequence.\n\nThe first image in the sequence was the metal nail clipper (Image 2).\n\nTherefore, the correct answer is: 2",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 70,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A collection of nail polish bottles.\n2.  A white paper napkin.\n3.  A metal nail clipper.\n4.  Two wooden bowls.\n5.  A nail file.\n\nTherefore, the nail clipper (Image 1) is the third image in the sequence, while the nail polish bottles (Image 2) are the first. So, Image 2 appeared first.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 71,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 72,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 (the white napkin) appeared second in the sequence.\n\nThe correct order is:\n1.  The image of the nail polish bottles.\n2.  The image of the nail files.\n3.  The image of the nail clipper.\n4.  The image of the white napkin.\n5.  The image of the wooden bowls.\n\nTherefore, the image of the nail polish bottles (Image 2 in your query) appeared first.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 73,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A collection of nail polish bottles.\n2.  A white paper napkin.\n3.  Two wooden bowls.\n4.  A metal nail clipper.\n5.  Two nail files.\n\nThe image of the nail clipper is the fourth image in the sequence, while the image of the nail files is the fifth. Therefore, the nail clipper (Image 1) appeared before the nail files (Image",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 74,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 (the white napkin) appeared first in the study sequence.\n\nThe correct order of the 5 images is:\n1.  White napkin\n2.  Nail file\n3.  Nail polish bottles\n4.  Wooden bowls\n5.  Nail clipper\n\nTherefore, the white napkin (Image 1) is the first image in the sequence, and the nail file (Image 2) is the second. The question asks which of the two *given",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 75,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1. Wooden bowls\n2. Nail clipper\n3. Nail file\n4. Napkin\n5. Nail polish bottles\n\nTherefore, the nail clipper (Image 2) is the second image in the sequence, which means it appeared after the first image (wooden bowls) and before the third (nail file). The question asks which of the two images appeared *first* in the sequence, and since",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 76,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1.  A collection of nail polish bottles.\n2.  A nail file.\n3.  A nail clipper.\n4.  A white paper napkin.\n5.  Two wooden bowls.\n\nTherefore, the first image in the sequence is the one with the nail polish bottles, which is Image 1.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 77,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the first image in the original sequence you provided, showing a white paper napkin on a wooden surface. Image 2, showing the nail clipper, is the fourth image in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 78,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A collection of nail polish bottles.\n2.  A nail file.\n3.  A white paper napkin.\n4.  Wooden bowls.\n5.  A nail clipper.\n\nTherefore, the white paper napkin (Image 1) is the third image in the sequence, while the nail file (Image 2) is the second. Since the question asks which of the two appeared *first*, the",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 79,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A pair of nail files.\n2.  A white paper napkin.\n3.  A pair of wooden bowls.\n4.  A collection of nail polish bottles.\n5.  A metal nail clipper.\n\nThe image of the wooden bowls is the third image in the sequence, while the image of the nail clipper is the fifth. Therefore, the wooden bowls appeared before the nail clipper.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 5,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 80,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A collection of nail polish bottles.\n2.  The two nail files.\n3.  The wooden bowls.\n4.  The white napkin.\n5.  The nail clipper.\n\nTherefore, the first image in the sequence is the one showing the nail files, which is Image 1.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 81,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. A white paper napkin on a wooden surface.\n2. Two Solingen brand nail files.\n3. Two wooden bowls on a dark surface.\n4. A metal nail clipper.\n5. A collection of nail polish bottles.\n\nTherefore, the image of the nail files (Image 2) is the second image in the sequence, and the image of the napkin (Image 1) is the first.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 82,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A white nail file with \"Solingen Germany\" printed on it.\n2.  A white paper napkin on a wooden surface.\n3.  A collection of nail polish bottles.\n4.  A metal nail clipper.\n5.  Two wooden bowls.\n\nTherefore, the white paper napkin (Image 2) is the second image in the sequence, and the nail file (Image 1",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 83,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  Wooden bowls\n2.  Metal nail clipper\n3.  Bottles of nail polish\n4.  White paper napkin\n5.  Nail files\n\nTherefore, the nail clipper (Image 2) is the second image in the sequence, while the nail files (Image 1) are the fifth.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 84,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is:\n1.  A collection of nail polish bottles.\n2.  A metal nail clipper.\n3.  A white paper napkin. (This is Image 1)\n4.  A nail file.\n5.  Two wooden bowls. (This is Image 2)\n\nTherefore, the white paper napkin (Image 1) came before the wooden bowls (Image 2).",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 5,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 85,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 86,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1.  A collection of nail polish bottles.\n2.  Two wooden bowls.\n3.  A metal nail clipper.\n4.  A white paper napkin.\n5.  Two nail files.\n\nTherefore, the image of the wooden bowls (Image 2) is the second image in the sequence, while the image of the nail polish bottles (Image 1) is the first. The question asks which of",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 87,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence was:\n1.  A metal nail clipper.\n2.  A collection of nail polish bottles.\n3.  A white paper napkin.\n4.  Two wooden bowls.\n5.  Two nail files.\n\nThe image you asked about, the nail files (Image 1), is the fifth image in the sequence. The nail clipper (Image 2) is the first image. Therefore, Image 2 appeared first.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 88,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 89,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  Wooden bowls\n2.  Nail clipper\n3.  White napkin\n4.  Nail polish bottles\n5.  Nail files\n\nThe first image (wooden bowls) is Image 1, and the second image (nail files) is Image 5. Therefore, Image 1 appeared first.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 90,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1.  A collection of nail polish bottles.\n2.  Two wooden bowls.\n3.  Two nail files.\n4.  A white paper napkin.\n5.  A metal nail clipper.\n\nThe image you asked about, showing the nail files, is Image 3 in the sequence. The image you asked about, showing the nail polish bottles, is Image 1 in the sequence.\n\nTherefore, the nail",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 91,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A file with \"Solingen Germany\" written on it.\n2.  A set of wooden bowls.\n3.  A collection of nail polish bottles.\n4.  A metal nail clipper.\n5.  A white paper napkin.\n\nThe image you asked about, showing the nail polish bottles, is Image 3. The image you asked about, showing the nail clipper, is Image 4.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 92,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  The image of the wooden bowls.\n2.  The image of the nail polish bottles.\n\nTherefore, the correct answer is 1.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 93,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A white paper napkin on a wooden surface.\n2.  A metal nail clipper on a dark, textured surface.\n3.  A collection of nail polish bottles.\n4.  Two wooden bowls on a dark surface.\n5.  A nail file.\n\nTherefore, the first image in the sequence is the nail clipper (Image 1), and the second is the nail polish bottles (Image 2",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 94,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence was:\n1.  A pair of nail files.\n2.  A collection of nail polish bottles.\n3.  Two wooden bowls.\n4.  A white paper napkin.\n5.  A metal nail clipper.\n\nTherefore, the image of the nail polish bottles (Image 2) came before the image of the nail clipper (Image 1).",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 95,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  The image of the wooden bowls.\n2.  The image of the nail clipper.\n\nTherefore, the nail clipper (Image 2) is the second image, and the wooden bowls (Image 1) are the first. The question asks which of the two *appeared first*, and the answer is the wooden bowls, which is Image 1.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 96,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the wooden bowls) appeared first in the study sequence.\n\nThe full sequence was:\n1.  A collection of nail polish bottles.\n2.  A nail file.\n3.  Wooden bowls.\n4.  A nail clipper.\n5.  A white paper napkin.\n\nTherefore, the wooden bowls (Image 3) came after the nail file (Image 2) in the sequence. The question asks which of the two images appeared first, and since Image 2",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 97,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence was:\n1. Wooden bowls\n2. Nail clipper\n3. White napkin\n4. Nail file\n5. Nail polish bottles\n\nThe second image in the sequence is the nail clipper (image 2), and the fifth image is the nail polish bottles (image 1). Therefore, image 2 came before image 1.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 98,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence is:\n1. White napkin\n2. Nail polish bottles\n3. Wooden bowls\n4. Nail clipper\n5. Nail file\n\nTherefore, the second image in the sequence (nail polish bottles) is the correct answer.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 99,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A collection of nail polish bottles.\n2.  Two wooden bowls.\n3.  A metal nail clipper.\n4.  A white paper napkin.\n5.  A nail file.\n\nThe image of the white paper napkin is the fourth image in the sequence, while the image of the metal nail clipper is the third. Therefore, the napkin image (1) appeared after the nail clipper",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 3
+        }
+      }
+    ],
+    "accuracy": 0.23,
+    "n_correct": 23,
+    "total": 100,
+    "accuracy_by_distance": {
+      "0": 0.17142857142857143,
+      "1": 0.3225806451612903,
+      "2": 0.2,
+      "3": 0.2222222222222222
+    }
+  }
+}

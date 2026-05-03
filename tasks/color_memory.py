@@ -1,13 +1,12 @@
 import random
-import numpy as np
-from PIL import Image
-from stimuli import BradyDataset, generate_color_palette
 import sys
 from pathlib import Path
+import numpy as np
+from PIL import Image
 
-# Add parent directory to path to import rotate_image_hue
-sys.path.append(str(Path(__file__).parent.parent))
-from memory_datasets.Brady2013ColorRotate import rotate_image_hue
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.stimuli import BradyDataset, generate_color_palette
+from datasets.Brady2013ColorRotate import rotate_image_hue
 
 class ColorMemoryTask:
     def __init__(self, n_images=10, n_colors=36):

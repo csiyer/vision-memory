@@ -1,0 +1,286 @@
+{
+  "_metadata": {
+    "task": "Continuous Recognition",
+    "timestamp": "20260412_204541",
+    "dataset": "things",
+    "n_images": 10,
+    "n_trials": 20,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0,
+        "d_prime": 3.224742173937445,
+        "hit_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "weighted_f1": 0.9117647058823529
+      }
+    },
+    "p_old": 0.5,
+    "min_delay": 2,
+    "max_delay": 15
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 0,
+        "response": -1,
+        "raw_response": "I'm unable to compare images or track sequences. If",
+        "metadata": {
+          "category": "cat_2",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 1,
+        "target": 0,
+        "response": -1,
+        "raw_response": "I'm unable to compare images or track sequences. If",
+        "metadata": {
+          "category": "cat_14",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 2,
+        "target": 0,
+        "response": -1,
+        "raw_response": "I'm unable to compare images or track sequences. If",
+        "metadata": {
+          "category": "cat_6",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "cat_2",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "cat_14",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 5,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "cat_18",
+          "category_id": 9,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "cat_6",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 7,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "cat_8",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "cat_18",
+          "category_id": 9,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 9,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "cat_0",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 10,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "cat_10",
+          "category_id": 5,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 11,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "cat_12",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 12,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "cat_8",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "delay": 4
+        }
+      },
+      {
+        "trial": 13,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "cat_4",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 14,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "cat_10",
+          "category_id": 5,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 15,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "cat_16",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 16,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "cat_4",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 17,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "cat_12",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "delay": 5
+        }
+      },
+      {
+        "trial": 18,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "cat_0",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "delay": 8
+        }
+      },
+      {
+        "trial": 19,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "cat_16",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "hit_rate": 1.0,
+    "false_alarm_rate": 0.0,
+    "d_prime": 3.224742173937445,
+    "weighted_f1": 0.9117647058823529,
+    "counts": {
+      "hits": 10,
+      "misses": 0,
+      "false_alarms": 0,
+      "correct_rejections": 7
+    },
+    "hit_rate_by_delay": {
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 1.0,
+      "8": 1.0
+    }
+  }
+}

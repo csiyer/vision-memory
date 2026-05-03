@@ -1,0 +1,91 @@
+{
+  "_metadata": {
+    "task": "2-AFC Recognition",
+    "timestamp": "20260403_131146",
+    "dataset": "Brady2008",
+    "n_images": 6,
+    "n_trials": 6,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0,
+        "d_prime": 2.072153501663234,
+        "mem_score": 1.0
+      }
+    },
+    "max_context_images": null,
+    "foil_type": "accuracy"
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "response": 1,
+        "correct": 1,
+        "foil_type": "exemplar",
+        "raw_response": "1"
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "response": 2,
+        "correct": 1,
+        "foil_type": "state",
+        "raw_response": "2"
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "response": 2,
+        "correct": 1,
+        "foil_type": "exemplar",
+        "raw_response": "2"
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "response": 2,
+        "correct": 1,
+        "foil_type": "novel",
+        "raw_response": "2"
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "response": 1,
+        "correct": 1,
+        "foil_type": "state",
+        "raw_response": "1"
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "response": 1,
+        "correct": 1,
+        "foil_type": "novel",
+        "raw_response": "1"
+      }
+    ],
+    "accuracy": 1.0,
+    "valid_accuracy": 1.0,
+    "d_prime": 2.072153501663234,
+    "mem_score": 1.0,
+    "n_trials": 6,
+    "n_valid_trials": 6,
+    "n_correct": 6,
+    "n_parse_failures": 0,
+    "accuracy_by_type": {
+      "exemplar": 1.0,
+      "novel": 1.0,
+      "state": 1.0
+    },
+    "d_prime_by_type": {
+      "exemplar": 1.3681406993132454,
+      "novel": 1.3681406993132454,
+      "state": 1.3681406993132454
+    }
+  }
+}

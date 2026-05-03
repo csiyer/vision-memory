@@ -1,0 +1,3777 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260427_114501",
+    "dataset": "things",
+    "n_images": 250,
+    "n_trials": 75,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.8933333333333333,
+        "n_correct": 67,
+        "total": 75
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is the first one.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1167",
+            "category_id": 40,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1167/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1225",
+            "category_id": 98,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1225/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1223",
+            "category_id": 96,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1223/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1308",
+            "category_id": 169,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1308/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 58
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2.",
+        "metadata": {
+          "chain_index": 1,
+          "bridge_item": {
+            "category": "cat_1272",
+            "category_id": 144,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1272/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 1
+          },
+          "cue_item": {
+            "category": "cat_1210",
+            "category_id": 83,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1210/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 1
+          },
+          "correct_option": {
+            "category": "cat_1253",
+            "category_id": 126,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1253/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          },
+          "foil_option": {
+            "category": "cat_1261",
+            "category_id": 134,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1261/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 28
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2 (the pool table).",
+        "metadata": {
+          "chain_index": 2,
+          "bridge_item": {
+            "category": "cat_1216",
+            "category_id": 89,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1216/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 2
+          },
+          "cue_item": {
+            "category": "cat_1404",
+            "category_id": 210,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1404/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 2
+          },
+          "correct_option": {
+            "category": "cat_1283",
+            "category_id": 152,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1283/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          },
+          "foil_option": {
+            "category": "cat_1200",
+            "category_id": 73,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1200/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 10
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2.",
+        "metadata": {
+          "chain_index": 3,
+          "bridge_item": {
+            "category": "cat_1190",
+            "category_id": 63,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1190/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 3
+          },
+          "cue_item": {
+            "category": "cat_1143",
+            "category_id": 16,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1143/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 3
+          },
+          "correct_option": {
+            "category": "cat_1447",
+            "category_id": 211,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1447/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          },
+          "foil_option": {
+            "category": "cat_1213",
+            "category_id": 86,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1213/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 42
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The first image is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 4,
+          "bridge_item": {
+            "category": "cat_1221",
+            "category_id": 94,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1221/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 4
+          },
+          "cue_item": {
+            "category": "cat_1151",
+            "category_id": 24,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1151/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 4
+          },
+          "correct_option": {
+            "category": "cat_1212",
+            "category_id": 85,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1212/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          },
+          "foil_option": {
+            "category": "cat_1354",
+            "category_id": 195,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1354/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 51
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 5,
+          "bridge_item": {
+            "category": "cat_1245",
+            "category_id": 118,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1245/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 5
+          },
+          "cue_item": {
+            "category": "cat_1232",
+            "category_id": 105,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1232/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 5
+          },
+          "correct_option": {
+            "category": "cat_1268",
+            "category_id": 140,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1268/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 5
+          },
+          "foil_option": {
+            "category": "cat_1211",
+            "category_id": 84,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1211/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 18
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cue image is indirectly associated with image 1.",
+        "metadata": {
+          "chain_index": 6,
+          "bridge_item": {
+            "category": "cat_1342",
+            "category_id": 188,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1342/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 6
+          },
+          "cue_item": {
+            "category": "cat_1306",
+            "category_id": 167,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1306/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 6
+          },
+          "correct_option": {
+            "category": "cat_1277",
+            "category_id": 147,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1277/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 6
+          },
+          "foil_option": {
+            "category": "cat_1372",
+            "category_id": 203,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1372/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 17
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2 (the pogo stick).",
+        "metadata": {
+          "chain_index": 7,
+          "bridge_item": {
+            "category": "cat_1265",
+            "category_id": 137,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1265/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 7
+          },
+          "cue_item": {
+            "category": "cat_1264",
+            "category_id": 136,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1264/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 7
+          },
+          "correct_option": {
+            "category": "cat_1269",
+            "category_id": 141,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1269/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 7
+          },
+          "foil_option": {
+            "category": "cat_1266",
+            "category_id": 138,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1266/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 54
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 1.",
+        "metadata": {
+          "chain_index": 8,
+          "bridge_item": {
+            "category": "cat_1370",
+            "category_id": 202,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1370/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 8
+          },
+          "cue_item": {
+            "category": "cat_1286",
+            "category_id": 154,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1286/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 8
+          },
+          "correct_option": {
+            "category": "cat_1238",
+            "category_id": 111,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1238/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 8
+          },
+          "foil_option": {
+            "category": "cat_1562",
+            "category_id": 219,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1562/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 44
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue is image 1.",
+        "metadata": {
+          "chain_index": 9,
+          "bridge_item": {
+            "category": "cat_1155",
+            "category_id": 28,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1155/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 9
+          },
+          "cue_item": {
+            "category": "cat_1230",
+            "category_id": 103,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1230/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 9
+          },
+          "correct_option": {
+            "category": "cat_1293",
+            "category_id": 158,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1293/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 9
+          },
+          "foil_option": {
+            "category": "cat_1372",
+            "category_id": 203,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1372/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 17
+          }
+        }
+      },
+      {
+        "trial": 10,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is the peacock (1).",
+        "metadata": {
+          "chain_index": 10,
+          "bridge_item": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 10
+          },
+          "cue_item": {
+            "category": "cat_1313",
+            "category_id": 173,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1313/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 10
+          },
+          "correct_option": {
+            "category": "cat_1200",
+            "category_id": 73,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1200/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 10
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 74
+          }
+        }
+      },
+      {
+        "trial": 11,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The second image (pants) is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 11,
+          "bridge_item": {
+            "category": "cat_1291",
+            "category_id": 157,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1291/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 11
+          },
+          "cue_item": {
+            "category": "cat_1329",
+            "category_id": 181,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1329/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 11
+          },
+          "correct_option": {
+            "category": "cat_1179",
+            "category_id": 52,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1179/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 11
+          },
+          "foil_option": {
+            "category": "cat_1238",
+            "category_id": 111,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1238/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 8
+          }
+        }
+      },
+      {
+        "trial": 12,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 12,
+          "bridge_item": {
+            "category": "cat_1172",
+            "category_id": 45,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1172/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 12
+          },
+          "cue_item": {
+            "category": "cat_1192",
+            "category_id": 65,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1192/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 12
+          },
+          "correct_option": {
+            "category": "cat_1279",
+            "category_id": 149,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1279/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 12
+          },
+          "foil_option": {
+            "category": "cat_1268",
+            "category_id": 140,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1268/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 5
+          }
+        }
+      },
+      {
+        "trial": 13,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2 (playing cards).",
+        "metadata": {
+          "chain_index": 13,
+          "bridge_item": {
+            "category": "cat_1183",
+            "category_id": 56,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1183/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 13
+          },
+          "cue_item": {
+            "category": "cat_1180",
+            "category_id": 53,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1180/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 13
+          },
+          "correct_option": {
+            "category": "cat_1262",
+            "category_id": 135,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1262/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 13
+          },
+          "foil_option": {
+            "category": "cat_1257",
+            "category_id": 130,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1257/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 73
+          }
+        }
+      },
+      {
+        "trial": 14,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cue image of paintbrushes is indirectly associated with image 1 (the pipe).",
+        "metadata": {
+          "chain_index": 14,
+          "bridge_item": {
+            "category": "cat_1152",
+            "category_id": 25,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1152/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 14
+          },
+          "cue_item": {
+            "category": "cat_1170",
+            "category_id": 43,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1170/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 14
+          },
+          "correct_option": {
+            "category": "cat_1249",
+            "category_id": 122,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1249/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 14
+          },
+          "foil_option": {
+            "category": "cat_1372",
+            "category_id": 203,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1372/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 17
+          }
+        }
+      },
+      {
+        "trial": 15,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2 (paper towels).",
+        "metadata": {
+          "chain_index": 15,
+          "bridge_item": {
+            "category": "cat_1156",
+            "category_id": 29,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1156/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 15
+          },
+          "cue_item": {
+            "category": "cat_1298",
+            "category_id": 162,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1298/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 15
+          },
+          "correct_option": {
+            "category": "cat_1186",
+            "category_id": 59,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1186/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 15
+          },
+          "foil_option": {
+            "category": "cat_1279",
+            "category_id": 149,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1279/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 12
+          }
+        }
+      },
+      {
+        "trial": 16,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2.",
+        "metadata": {
+          "chain_index": 16,
+          "bridge_item": {
+            "category": "cat_1307",
+            "category_id": 168,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1307/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 16
+          },
+          "cue_item": {
+            "category": "cat_1191",
+            "category_id": 64,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1191/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 16
+          },
+          "correct_option": {
+            "category": "cat_1243",
+            "category_id": 116,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1243/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 16
+          },
+          "foil_option": {
+            "category": "cat_1268",
+            "category_id": 140,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1268/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 5
+          }
+        }
+      },
+      {
+        "trial": 17,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image (pedometer) is image 2 (bread roll",
+        "metadata": {
+          "chain_index": 17,
+          "bridge_item": {
+            "category": "cat_1258",
+            "category_id": 131,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1258/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 17
+          },
+          "cue_item": {
+            "category": "cat_1206",
+            "category_id": 79,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1206/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 17
+          },
+          "correct_option": {
+            "category": "cat_1372",
+            "category_id": 203,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1372/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 17
+          },
+          "foil_option": {
+            "category": "cat_1142",
+            "category_id": 15,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1142/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 20
+          }
+        }
+      },
+      {
+        "trial": 18,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is the second one (pencils).",
+        "metadata": {
+          "chain_index": 18,
+          "bridge_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 18
+          },
+          "cue_item": {
+            "category": "cat_1158",
+            "category_id": 31,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1158/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 18
+          },
+          "correct_option": {
+            "category": "cat_1211",
+            "category_id": 84,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1211/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 18
+          },
+          "foil_option": {
+            "category": "cat_1249",
+            "category_id": 122,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1249/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 14
+          }
+        }
+      },
+      {
+        "trial": 19,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2 (the staple gun/rice image).",
+        "metadata": {
+          "chain_index": 19,
+          "bridge_item": {
+            "category": "cat_1366",
+            "category_id": 201,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1366/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 19
+          },
+          "cue_item": {
+            "category": "cat_1162",
+            "category_id": 35,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1162/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 19
+          },
+          "correct_option": {
+            "category": "cat_1567",
+            "category_id": 224,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1567/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 19
+          },
+          "foil_option": {
+            "category": "cat_1293",
+            "category_id": 158,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1293/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 9
+          }
+        }
+      },
+      {
+        "trial": 20,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image of the poppies is image 2.",
+        "metadata": {
+          "chain_index": 20,
+          "bridge_item": {
+            "category": "cat_1154",
+            "category_id": 27,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1154/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 20
+          },
+          "cue_item": {
+            "category": "cat_1284",
+            "category_id": 153,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1284/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 20
+          },
+          "correct_option": {
+            "category": "cat_1142",
+            "category_id": 15,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1142/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 20
+          },
+          "foil_option": {
+            "category": "cat_1168",
+            "category_id": 41,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1168/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 68
+          }
+        }
+      },
+      {
+        "trial": 21,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The indirectly associated image is 1.",
+        "metadata": {
+          "chain_index": 21,
+          "bridge_item": {
+            "category": "cat_1229",
+            "category_id": 102,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1229/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 21
+          },
+          "cue_item": {
+            "category": "cat_1228",
+            "category_id": 101,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1228/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 21
+          },
+          "correct_option": {
+            "category": "cat_1149",
+            "category_id": 22,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1149/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 21
+          },
+          "foil_option": {
+            "category": "cat_1184",
+            "category_id": 57,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1184/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 40
+          }
+        }
+      },
+      {
+        "trial": 22,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image that is indirectly associated with the cue image of peanut butter is image 2 (the ping",
+        "metadata": {
+          "chain_index": 22,
+          "bridge_item": {
+            "category": "cat_1349",
+            "category_id": 192,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1349/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 22
+          },
+          "cue_item": {
+            "category": "cat_1202",
+            "category_id": 75,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1202/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 22
+          },
+          "correct_option": {
+            "category": "cat_1247",
+            "category_id": 120,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1247/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 22
+          },
+          "foil_option": {
+            "category": "cat_1351",
+            "category_id": 193,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1351/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 23
+          }
+        }
+      },
+      {
+        "trial": 23,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image (peanuts) is the first one (refrigerator",
+        "metadata": {
+          "chain_index": 23,
+          "bridge_item": {
+            "category": "cat_1207",
+            "category_id": 80,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1207/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 23
+          },
+          "cue_item": {
+            "category": "cat_1201",
+            "category_id": 74,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1201/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 23
+          },
+          "correct_option": {
+            "category": "cat_1351",
+            "category_id": 193,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1351/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 23
+          },
+          "foil_option": {
+            "category": "cat_1269",
+            "category_id": 141,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1269/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 7
+          }
+        }
+      },
+      {
+        "trial": 24,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is the rice (2).",
+        "metadata": {
+          "chain_index": 24,
+          "bridge_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 24
+          },
+          "cue_item": {
+            "category": "cat_1565",
+            "category_id": 222,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1565/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 24
+          },
+          "correct_option": {
+            "category": "cat_1359",
+            "category_id": 197,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1359/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 24
+          },
+          "foil_option": {
+            "category": "cat_1266",
+            "category_id": 138,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1266/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 54
+          }
+        }
+      },
+      {
+        "trial": 25,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 1.",
+        "metadata": {
+          "chain_index": 25,
+          "bridge_item": {
+            "category": "cat_1157",
+            "category_id": 30,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1157/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 25
+          },
+          "cue_item": {
+            "category": "cat_1251",
+            "category_id": 124,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1251/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 25
+          },
+          "correct_option": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 25
+          },
+          "foil_option": {
+            "category": "cat_1308",
+            "category_id": 169,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1308/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 58
+          }
+        }
+      },
+      {
+        "trial": 26,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The second image is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 26,
+          "bridge_item": {
+            "category": "cat_1322",
+            "category_id": 177,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1322/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 26
+          },
+          "cue_item": {
+            "category": "cat_1563",
+            "category_id": 220,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1563/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 26
+          },
+          "correct_option": {
+            "category": "cat_1205",
+            "category_id": 78,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1205/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 26
+          },
+          "foil_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 34
+          }
+        }
+      },
+      {
+        "trial": 27,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is the second one: the quilt.",
+        "metadata": {
+          "chain_index": 27,
+          "bridge_item": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 27
+          },
+          "cue_item": {
+            "category": "cat_1300",
+            "category_id": 163,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1300/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 27
+          },
+          "correct_option": {
+            "category": "cat_1318",
+            "category_id": 175,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1318/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 27
+          },
+          "foil_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 34
+          }
+        }
+      },
+      {
+        "trial": 28,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2.",
+        "metadata": {
+          "chain_index": 28,
+          "bridge_item": {
+            "category": "cat_1348",
+            "category_id": 191,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1348/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 28
+          },
+          "cue_item": {
+            "category": "cat_1252",
+            "category_id": 125,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1252/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 28
+          },
+          "correct_option": {
+            "category": "cat_1261",
+            "category_id": 134,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1261/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 28
+          },
+          "foil_option": {
+            "category": "cat_1149",
+            "category_id": 22,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1149/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 21
+          }
+        }
+      },
+      {
+        "trial": 29,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The first image is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 29,
+          "bridge_item": {
+            "category": "cat_1203",
+            "category_id": 76,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1203/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 29
+          },
+          "cue_item": {
+            "category": "cat_1224",
+            "category_id": 97,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1224/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 29
+          },
+          "correct_option": {
+            "category": "cat_1505",
+            "category_id": 214,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1505/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 29
+          },
+          "foil_option": {
+            "category": "cat_1184",
+            "category_id": 57,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1184/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 40
+          }
+        }
+      },
+      {
+        "trial": 30,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The second image is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 30,
+          "bridge_item": {
+            "category": "cat_1241",
+            "category_id": 114,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1241/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 30
+          },
+          "cue_item": {
+            "category": "cat_1217",
+            "category_id": 90,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1217/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 30
+          },
+          "correct_option": {
+            "category": "cat_1254",
+            "category_id": 127,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1254/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 30
+          },
+          "foil_option": {
+            "category": "cat_1259",
+            "category_id": 132,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1259/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 66
+          }
+        }
+      },
+      {
+        "trial": 31,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cue image is indirectly associated with image 1.",
+        "metadata": {
+          "chain_index": 31,
+          "bridge_item": {
+            "category": "cat_1334",
+            "category_id": 183,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1334/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 31
+          },
+          "cue_item": {
+            "category": "cat_1488",
+            "category_id": 213,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1488/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 31
+          },
+          "correct_option": {
+            "category": "cat_1325",
+            "category_id": 180,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1325/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 31
+          },
+          "foil_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 34
+          }
+        }
+      },
+      {
+        "trial": 32,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2 (the pizza).",
+        "metadata": {
+          "chain_index": 32,
+          "bridge_item": {
+            "category": "cat_1295",
+            "category_id": 160,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1295/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 32
+          },
+          "cue_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 32
+          },
+          "correct_option": {
+            "category": "cat_1255",
+            "category_id": 128,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1255/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 32
+          },
+          "foil_option": {
+            "category": "cat_1173",
+            "category_id": 46,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1173/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 65
+          }
+        }
+      },
+      {
+        "trial": 33,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2.",
+        "metadata": {
+          "chain_index": 33,
+          "bridge_item": {
+            "category": "cat_1166",
+            "category_id": 39,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1166/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 33
+          },
+          "cue_item": {
+            "category": "cat_1270",
+            "category_id": 142,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1270/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 33
+          },
+          "correct_option": {
+            "category": "cat_1215",
+            "category_id": 88,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1215/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 33
+          },
+          "foil_option": {
+            "category": "cat_1311",
+            "category_id": 171,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1311/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 38
+          }
+        }
+      },
+      {
+        "trial": 34,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The second image is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 34,
+          "bridge_item": {
+            "category": "cat_1189",
+            "category_id": 62,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1189/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 34
+          },
+          "cue_item": {
+            "category": "cat_1337",
+            "category_id": 186,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1337/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 34
+          },
+          "correct_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 34
+          },
+          "foil_option": {
+            "category": "cat_1200",
+            "category_id": 73,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1200/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 10
+          }
+        }
+      },
+      {
+        "trial": 35,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2.",
+        "metadata": {
+          "chain_index": 35,
+          "bridge_item": {
+            "category": "cat_1346",
+            "category_id": 189,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1346/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 35
+          },
+          "cue_item": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 35
+          },
+          "correct_option": {
+            "category": "cat_1310",
+            "category_id": 170,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1310/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 35
+          },
+          "foil_option": {
+            "category": "cat_1564",
+            "category_id": 221,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1564/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 41
+          }
+        }
+      },
+      {
+        "trial": 36,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is the second one.",
+        "metadata": {
+          "chain_index": 36,
+          "bridge_item": {
+            "category": "cat_1196",
+            "category_id": 69,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1196/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 36
+          },
+          "cue_item": {
+            "category": "cat_1194",
+            "category_id": 67,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1194/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 36
+          },
+          "correct_option": {
+            "category": "cat_1165",
+            "category_id": 38,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1165/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 36
+          },
+          "foil_option": {
+            "category": "cat_1293",
+            "category_id": 158,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1293/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 9
+          }
+        }
+      },
+      {
+        "trial": 37,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 37,
+          "bridge_item": {
+            "category": "cat_1153",
+            "category_id": 26,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1153/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 37
+          },
+          "cue_item": {
+            "category": "cat_1188",
+            "category_id": 61,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1188/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 37
+          },
+          "correct_option": {
+            "category": "cat_1324",
+            "category_id": 179,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1324/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 37
+          },
+          "foil_option": {
+            "category": "cat_1198",
+            "category_id": 71,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1198/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 50
+          }
+        }
+      },
+      {
+        "trial": 38,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is number 2.",
+        "metadata": {
+          "chain_index": 38,
+          "bridge_item": {
+            "category": "cat_1222",
+            "category_id": 95,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1222/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 38
+          },
+          "cue_item": {
+            "category": "cat_1360",
+            "category_id": 198,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1360/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 38
+          },
+          "correct_option": {
+            "category": "cat_1311",
+            "category_id": 171,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1311/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 38
+          },
+          "foil_option": {
+            "category": "cat_1534",
+            "category_id": 215,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1534/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 53
+          }
+        }
+      },
+      {
+        "trial": 39,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2.",
+        "metadata": {
+          "chain_index": 39,
+          "bridge_item": {
+            "category": "cat_1271",
+            "category_id": 143,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1271/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 39
+          },
+          "cue_item": {
+            "category": "cat_1233",
+            "category_id": 106,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1233/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 39
+          },
+          "correct_option": {
+            "category": "cat_1560",
+            "category_id": 217,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1560/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 39
+          },
+          "foil_option": {
+            "category": "cat_1358",
+            "category_id": 196,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1358/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 64
+          }
+        }
+      },
+      {
+        "trial": 40,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2 (the brown paper bag).",
+        "metadata": {
+          "chain_index": 40,
+          "bridge_item": {
+            "category": "cat_1566",
+            "category_id": 223,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1566/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 40
+          },
+          "cue_item": {
+            "category": "cat_1377",
+            "category_id": 205,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1377/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 40
+          },
+          "correct_option": {
+            "category": "cat_1184",
+            "category_id": 57,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1184/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 40
+          },
+          "foil_option": {
+            "category": "cat_1255",
+            "category_id": 128,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1255/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 32
+          }
+        }
+      },
+      {
+        "trial": 41,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 41,
+          "bridge_item": {
+            "category": "cat_1185",
+            "category_id": 58,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1185/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 41
+          },
+          "cue_item": {
+            "category": "cat_1353",
+            "category_id": 194,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1353/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 41
+          },
+          "correct_option": {
+            "category": "cat_1564",
+            "category_id": 221,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1564/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 41
+          },
+          "foil_option": {
+            "category": "cat_1255",
+            "category_id": 128,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1255/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 32
+          }
+        }
+      },
+      {
+        "trial": 42,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 42,
+          "bridge_item": {
+            "category": "cat_1177",
+            "category_id": 50,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1177/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 42
+          },
+          "cue_item": {
+            "category": "cat_1175",
+            "category_id": 48,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1175/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 42
+          },
+          "correct_option": {
+            "category": "cat_1213",
+            "category_id": 86,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1213/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 42
+          },
+          "foil_option": {
+            "category": "cat_1205",
+            "category_id": 78,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1205/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 26
+          }
+        }
+      },
+      {
+        "trial": 43,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2.",
+        "metadata": {
+          "chain_index": 43,
+          "bridge_item": {
+            "category": "cat_1208",
+            "category_id": 81,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1208/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 43
+          },
+          "cue_item": {
+            "category": "cat_1312",
+            "category_id": 172,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1312/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 43
+          },
+          "correct_option": {
+            "category": "cat_1214",
+            "category_id": 87,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1214/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 43
+          },
+          "foil_option": {
+            "category": "cat_1387",
+            "category_id": 207,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1387/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 71
+          }
+        }
+      },
+      {
+        "trial": 44,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2.",
+        "metadata": {
+          "chain_index": 44,
+          "bridge_item": {
+            "category": "cat_1301",
+            "category_id": 164,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1301/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 44
+          },
+          "cue_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 44
+          },
+          "correct_option": {
+            "category": "cat_1562",
+            "category_id": 219,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1562/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 44
+          },
+          "foil_option": {
+            "category": "cat_1247",
+            "category_id": 120,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1247/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 22
+          }
+        }
+      },
+      {
+        "trial": 45,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 45,
+          "bridge_item": {
+            "category": "cat_1375",
+            "category_id": 204,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1375/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 45
+          },
+          "cue_item": {
+            "category": "cat_1559",
+            "category_id": 216,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1559/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 45
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 45
+          },
+          "foil_option": {
+            "category": "cat_1308",
+            "category_id": 169,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1308/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 58
+          }
+        }
+      },
+      {
+        "trial": 46,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image indirectly associated with the cue image is 2.",
+        "metadata": {
+          "chain_index": 46,
+          "bridge_item": {
+            "category": "cat_1227",
+            "category_id": 100,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1227/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 46
+          },
+          "cue_item": {
+            "category": "cat_1317",
+            "category_id": 174,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1317/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 46
+          },
+          "correct_option": {
+            "category": "cat_1276",
+            "category_id": 146,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1276/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 46
+          },
+          "foil_option": {
+            "category": "cat_1262",
+            "category_id": 135,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1262/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 13
+          }
+        }
+      },
+      {
+        "trial": 47,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The indirectly associated image with the cue image is the second one.",
+        "metadata": {
+          "chain_index": 47,
+          "bridge_item": {
+            "category": "cat_1193",
+            "category_id": 66,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1193/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 47
+          },
+          "cue_item": {
+            "category": "cat_1148",
+            "category_id": 21,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1148/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 47
+          },
+          "correct_option": {
+            "category": "cat_1274",
+            "category_id": 145,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1274/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 47
+          },
+          "foil_option": {
+            "category": "cat_1161",
+            "category_id": 34,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1161/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 72
+          }
+        }
+      },
+      {
+        "trial": 48,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is the first one, the painting of a tree.",
+        "metadata": {
+          "chain_index": 48,
+          "bridge_item": {
+            "category": "cat_1234",
+            "category_id": 107,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1234/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 48
+          },
+          "cue_item": {
+            "category": "cat_1163",
+            "category_id": 36,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1163/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 48
+          },
+          "correct_option": {
+            "category": "cat_1171",
+            "category_id": 44,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1171/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 48
+          },
+          "foil_option": {
+            "category": "cat_1213",
+            "category_id": 86,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1213/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 42
+          }
+        }
+      },
+      {
+        "trial": 49,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 49,
+          "bridge_item": {
+            "category": "cat_1336",
+            "category_id": 185,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1336/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 49
+          },
+          "cue_item": {
+            "category": "cat_1341",
+            "category_id": 187,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1341/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 49
+          },
+          "correct_option": {
+            "category": "cat_1150",
+            "category_id": 23,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1150/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 49
+          },
+          "foil_option": {
+            "category": "cat_1253",
+            "category_id": 126,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1253/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 50,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2 (green peas).",
+        "metadata": {
+          "chain_index": 50,
+          "bridge_item": {
+            "category": "cat_1169",
+            "category_id": 42,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1169/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 50
+          },
+          "cue_item": {
+            "category": "cat_1237",
+            "category_id": 110,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1237/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 50
+          },
+          "correct_option": {
+            "category": "cat_1198",
+            "category_id": 71,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1198/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 50
+          },
+          "foil_option": {
+            "category": "cat_1179",
+            "category_id": 52,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1179/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 11
+          }
+        }
+      },
+      {
+        "trial": 51,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The indirectly associated image with the cue image is the first one (1).",
+        "metadata": {
+          "chain_index": 51,
+          "bridge_item": {
+            "category": "cat_1282",
+            "category_id": 151,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1282/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 51
+          },
+          "cue_item": {
+            "category": "cat_1197",
+            "category_id": 70,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1197/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 51
+          },
+          "correct_option": {
+            "category": "cat_1354",
+            "category_id": 195,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1354/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 51
+          },
+          "foil_option": {
+            "category": "cat_1447",
+            "category_id": 211,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1447/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 52,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The plate image (1) is indirectly associated with the cue image (pelican).",
+        "metadata": {
+          "chain_index": 52,
+          "bridge_item": {
+            "category": "cat_1335",
+            "category_id": 184,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1335/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 52
+          },
+          "cue_item": {
+            "category": "cat_1209",
+            "category_id": 82,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1209/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 52
+          },
+          "correct_option": {
+            "category": "cat_1260",
+            "category_id": 133,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1260/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 52
+          },
+          "foil_option": {
+            "category": "cat_1279",
+            "category_id": 149,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1279/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 12
+          }
+        }
+      },
+      {
+        "trial": 53,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image (palm trees) was paired with a nail file in the A-B pair.",
+        "metadata": {
+          "chain_index": 53,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 53
+          },
+          "cue_item": {
+            "category": "cat_1174",
+            "category_id": 47,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1174/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 53
+          },
+          "correct_option": {
+            "category": "cat_1534",
+            "category_id": 215,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1534/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 53
+          },
+          "foil_option": {
+            "category": "cat_1204",
+            "category_id": 77,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1204/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 62
+          }
+        }
+      },
+      {
+        "trial": 54,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The second image (plums) is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 54,
+          "bridge_item": {
+            "category": "cat_1146",
+            "category_id": 19,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1146/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 54
+          },
+          "cue_item": {
+            "category": "cat_1239",
+            "category_id": 112,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1239/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 54
+          },
+          "correct_option": {
+            "category": "cat_1266",
+            "category_id": 138,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1266/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 54
+          },
+          "foil_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 57
+          }
+        }
+      },
+      {
+        "trial": 55,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cue image is associated with image 1 (the rose).",
+        "metadata": {
+          "chain_index": 55,
+          "bridge_item": {
+            "category": "cat_1305",
+            "category_id": 166,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1305/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 55
+          },
+          "cue_item": {
+            "category": "cat_1323",
+            "category_id": 178,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1323/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 55
+          },
+          "correct_option": {
+            "category": "cat_1382",
+            "category_id": 206,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1382/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 55
+          },
+          "foil_option": {
+            "category": "cat_1351",
+            "category_id": 193,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1351/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 23
+          }
+        }
+      },
+      {
+        "trial": 56,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2.",
+        "metadata": {
+          "chain_index": 56,
+          "bridge_item": {
+            "category": "cat_1399",
+            "category_id": 209,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1399/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 56
+          },
+          "cue_item": {
+            "category": "cat_1389",
+            "category_id": 208,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1389/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 56
+          },
+          "correct_option": {
+            "category": "cat_1231",
+            "category_id": 104,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1231/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 56
+          },
+          "foil_option": {
+            "category": "cat_1505",
+            "category_id": 214,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1505/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 29
+          }
+        }
+      },
+      {
+        "trial": 57,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The indirectly associated image is the first one.",
+        "metadata": {
+          "chain_index": 57,
+          "bridge_item": {
+            "category": "cat_1242",
+            "category_id": 115,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1242/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 57
+          },
+          "cue_item": {
+            "category": "cat_1147",
+            "category_id": 20,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1147/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 57
+          },
+          "correct_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 57
+          },
+          "foil_option": {
+            "category": "cat_1387",
+            "category_id": 207,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1387/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 71
+          }
+        }
+      },
+      {
+        "trial": 58,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2.",
+        "metadata": {
+          "chain_index": 58,
+          "bridge_item": {
+            "category": "cat_1281",
+            "category_id": 150,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1281/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 58
+          },
+          "cue_item": {
+            "category": "cat_1330",
+            "category_id": 182,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1330/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 58
+          },
+          "correct_option": {
+            "category": "cat_1308",
+            "category_id": 169,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1308/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 58
+          },
+          "foil_option": {
+            "category": "cat_1325",
+            "category_id": 180,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1325/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 31
+          }
+        }
+      },
+      {
+        "trial": 59,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The indirectly associated image with the cue image is the pig (1).",
+        "metadata": {
+          "chain_index": 59,
+          "bridge_item": {
+            "category": "cat_1288",
+            "category_id": 155,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1288/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 59
+          },
+          "cue_item": {
+            "category": "cat_1176",
+            "category_id": 49,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1176/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 59
+          },
+          "correct_option": {
+            "category": "cat_1235",
+            "category_id": 108,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1235/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 59
+          },
+          "foil_option": {
+            "category": "cat_1226",
+            "category_id": 99,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1226/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 61
+          }
+        }
+      },
+      {
+        "trial": 60,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 1.",
+        "metadata": {
+          "chain_index": 60,
+          "bridge_item": {
+            "category": "cat_1256",
+            "category_id": 129,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1256/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 60
+          },
+          "cue_item": {
+            "category": "cat_1561",
+            "category_id": 218,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1561/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 60
+          },
+          "correct_option": {
+            "category": "cat_1219",
+            "category_id": 92,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1219/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 60
+          },
+          "foil_option": {
+            "category": "cat_1562",
+            "category_id": 219,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1562/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 44
+          }
+        }
+      },
+      {
+        "trial": 61,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1 (rose petals).",
+        "metadata": {
+          "chain_index": 61,
+          "bridge_item": {
+            "category": "cat_1220",
+            "category_id": 93,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1220/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 61
+          },
+          "cue_item": {
+            "category": "cat_1178",
+            "category_id": 51,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1178/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 61
+          },
+          "correct_option": {
+            "category": "cat_1226",
+            "category_id": 99,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1226/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 61
+          },
+          "foil_option": {
+            "category": "cat_1274",
+            "category_id": 145,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1274/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 47
+          }
+        }
+      },
+      {
+        "trial": 62,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 1.",
+        "metadata": {
+          "chain_index": 62,
+          "bridge_item": {
+            "category": "cat_1145",
+            "category_id": 18,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1145/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 62
+          },
+          "cue_item": {
+            "category": "cat_1248",
+            "category_id": 121,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1248/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 62
+          },
+          "correct_option": {
+            "category": "cat_1204",
+            "category_id": 77,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1204/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 62
+          },
+          "foil_option": {
+            "category": "cat_1260",
+            "category_id": 133,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1260/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 52
+          }
+        }
+      },
+      {
+        "trial": 63,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1 (pine cones).",
+        "metadata": {
+          "chain_index": 63,
+          "bridge_item": {
+            "category": "cat_1160",
+            "category_id": 33,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1160/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 63
+          },
+          "cue_item": {
+            "category": "cat_1182",
+            "category_id": 55,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1182/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 63
+          },
+          "correct_option": {
+            "category": "cat_1246",
+            "category_id": 119,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1246/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 63
+          },
+          "foil_option": {
+            "category": "cat_1257",
+            "category_id": 130,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1257/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 73
+          }
+        }
+      },
+      {
+        "trial": 64,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image (praying mantis) is image 1.",
+        "metadata": {
+          "chain_index": 64,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 64
+          },
+          "cue_item": {
+            "category": "cat_1296",
+            "category_id": 161,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1296/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 64
+          },
+          "correct_option": {
+            "category": "cat_1358",
+            "category_id": 196,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1358/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 64
+          },
+          "foil_option": {
+            "category": "cat_1311",
+            "category_id": 171,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1311/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 38
+          }
+        }
+      },
+      {
+        "trial": 65,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cue image is connected to the first image, which is the wooden platform.",
+        "metadata": {
+          "chain_index": 65,
+          "bridge_item": {
+            "category": "cat_1250",
+            "category_id": 123,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1250/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 65
+          },
+          "cue_item": {
+            "category": "cat_1181",
+            "category_id": 54,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1181/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 65
+          },
+          "correct_option": {
+            "category": "cat_1173",
+            "category_id": 46,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1173/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 65
+          },
+          "foil_option": {
+            "category": "cat_1246",
+            "category_id": 119,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1246/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 63
+          }
+        }
+      },
+      {
+        "trial": 66,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image of the piggy bank is image 2 (the plastic",
+        "metadata": {
+          "chain_index": 66,
+          "bridge_item": {
+            "category": "cat_1199",
+            "category_id": 72,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1199/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 66
+          },
+          "cue_item": {
+            "category": "cat_1236",
+            "category_id": 109,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1236/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 66
+          },
+          "correct_option": {
+            "category": "cat_1259",
+            "category_id": 132,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1259/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 66
+          },
+          "foil_option": {
+            "category": "cat_1279",
+            "category_id": 149,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1279/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 12
+          }
+        }
+      },
+      {
+        "trial": 67,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image (potatoes) is image 1 (the rabbit).",
+        "metadata": {
+          "chain_index": 67,
+          "bridge_item": {
+            "category": "cat_1347",
+            "category_id": 190,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1347/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 67
+          },
+          "cue_item": {
+            "category": "cat_1289",
+            "category_id": 156,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1289/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 67
+          },
+          "correct_option": {
+            "category": "cat_1319",
+            "category_id": 176,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1319/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 67
+          },
+          "foil_option": {
+            "category": "cat_1173",
+            "category_id": 46,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1173/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 65
+          }
+        }
+      },
+      {
+        "trial": 68,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image (colorful paperclips) is the lock image (2",
+        "metadata": {
+          "chain_index": 68,
+          "bridge_item": {
+            "category": "cat_1363",
+            "category_id": 199,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1363/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 68
+          },
+          "cue_item": {
+            "category": "cat_1187",
+            "category_id": 60,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1187/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 68
+          },
+          "correct_option": {
+            "category": "cat_1168",
+            "category_id": 41,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1168/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 68
+          },
+          "foil_option": {
+            "category": "cat_1318",
+            "category_id": 175,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1318/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 27
+          }
+        }
+      },
+      {
+        "trial": 69,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2.",
+        "metadata": {
+          "chain_index": 69,
+          "bridge_item": {
+            "category": "cat_1164",
+            "category_id": 37,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1164/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 69
+          },
+          "cue_item": {
+            "category": "cat_1159",
+            "category_id": 32,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1159/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 69
+          },
+          "correct_option": {
+            "category": "cat_1365",
+            "category_id": 200,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1365/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 69
+          },
+          "foil_option": {
+            "category": "cat_1249",
+            "category_id": 122,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1249/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 14
+          }
+        }
+      },
+      {
+        "trial": 70,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1 (the peppers).",
+        "metadata": {
+          "chain_index": 70,
+          "bridge_item": {
+            "category": "cat_1278",
+            "category_id": 148,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1278/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 70
+          },
+          "cue_item": {
+            "category": "cat_1244",
+            "category_id": 117,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1244/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 70
+          },
+          "correct_option": {
+            "category": "cat_1218",
+            "category_id": 91,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1218/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 70
+          },
+          "foil_option": {
+            "category": "cat_1372",
+            "category_id": 203,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1372/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 17
+          }
+        }
+      },
+      {
+        "trial": 71,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 71,
+          "bridge_item": {
+            "category": "cat_1459",
+            "category_id": 212,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1459/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 71
+          },
+          "cue_item": {
+            "category": "cat_1303",
+            "category_id": 165,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1303/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 71
+          },
+          "correct_option": {
+            "category": "cat_1387",
+            "category_id": 207,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1387/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 71
+          },
+          "foil_option": {
+            "category": "cat_1274",
+            "category_id": 145,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1274/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 47
+          }
+        }
+      },
+      {
+        "trial": 72,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is number 2.",
+        "metadata": {
+          "chain_index": 72,
+          "bridge_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 72
+          },
+          "cue_item": {
+            "category": "cat_1294",
+            "category_id": 159,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1294/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 72
+          },
+          "correct_option": {
+            "category": "cat_1161",
+            "category_id": 34,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1161/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 72
+          },
+          "foil_option": {
+            "category": "cat_1223",
+            "category_id": 96,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1223/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          }
+        }
+      },
+      {
+        "trial": 73,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The second image (napkin) is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 73,
+          "bridge_item": {
+            "category": "cat_1240",
+            "category_id": 113,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1240/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 73
+          },
+          "cue_item": {
+            "category": "cat_1195",
+            "category_id": 68,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1195/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 73
+          },
+          "correct_option": {
+            "category": "cat_1257",
+            "category_id": 130,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1257/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 73
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 74
+          }
+        }
+      },
+      {
+        "trial": 74,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 74,
+          "bridge_item": {
+            "category": "cat_1144",
+            "category_id": 17,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1144/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 74
+          },
+          "cue_item": {
+            "category": "cat_1267",
+            "category_id": 139,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1267/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 74
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 74
+          },
+          "foil_option": {
+            "category": "cat_1372",
+            "category_id": 203,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1372/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 17
+          }
+        }
+      }
+    ],
+    "accuracy": 0.8933333333333333,
+    "n_correct": 67,
+    "total": 75
+  }
+}

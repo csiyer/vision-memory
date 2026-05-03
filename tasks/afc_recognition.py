@@ -1,10 +1,22 @@
 import random
+import sys
 from pathlib import Path
-from stimuli import ThingsDataset, BradyDataset
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.stimuli import ThingsDataset, BradyDataset
+
+# Same prompts for THINGS and Brady2008 so results are comparable.
+AFC_STUDY_PROMPT = "Here is a sequence of images to remember."
+AFC_TEST_PROMPT = (
+    "Which of these two images was in the study sequence? "
+    "The first image below is 1, the second is 2. "
+    "Reply with only the digit 1 or 2 and nothing else."
+)
 
 class AFCRecognitionTask:
-    def __init__(self, dataset_name='things', n_images=20, foil_type='all'):
+    def __init__(self, dataset_name='things', n_images=20, n_trials=None, foil_type='all'):
         self.n_images = n_images
+        self.n_trials = n_trials if n_trials is not None else n_images
         self.foil_type = foil_type
         self.dataset_name = dataset_name
 
@@ -12,8 +24,15 @@ class AFCRecognitionTask:
             if foil_type == 'state':
                 raise ValueError("State foils not supported for THINGS dataset.")
             # If we need exemplars, we need 2 per category
+            # For novel foils, we need 2x categories (one for original, one for foil)
             exemplars = 2 if foil_type in ['exemplar', 'all'] else 1
-            self.dataset = ThingsDataset(n_categories=n_images, exemplars_per_category=exemplars)
+            if foil_type == 'novel':
+                n_cats = n_images * 2
+            elif foil_type == 'all':
+                n_cats = (n_images * 3 + 1) // 2  # half novel pairs need 2 cats each, half exemplar need 1
+            else:
+                n_cats = n_images
+            self.dataset = ThingsDataset(n_categories=n_cats, exemplars_per_category=exemplars)
         else:
             self.dataset = BradyDataset(type='Objects')
 
@@ -26,8 +45,21 @@ class AFCRecognitionTask:
                 n_novel = n if foil_type == 'novel' else n // 2
                 n_exemplar = n - n_novel
 
+                # Novel pairs need 2 distinct categories each; exemplar pairs reuse 1 category
+                n_needed = n_novel * 2 + n_exemplar
+                n_available = len(self.dataset)
+                if n_available < n_needed:
+                    raise ValueError(
+                        f"THINGS dataset has only {n_available} categories but "
+                        f"foil_type={foil_type!r} with n={n} requires {n_needed} "
+                        f"({n_novel} novel pairs need {n_novel*2} categories, "
+                        f"{n_exemplar} exemplar pairs need {n_exemplar} more). "
+                        f"Reduce --n-images to at most "
+                        f"{n_available // 2 if foil_type == 'novel' else (n_available * 2) // 3}."
+                    )
+
                 # Novel: random categories
-                indices = list(range(len(self.dataset)))
+                indices = list(range(n_available))
                 random.shuffle(indices)
 
                 # First n_novel pairs use two different categories
@@ -39,16 +71,14 @@ class AFCRecognitionTask:
                     })
 
                 # Remaining n_exemplar pairs use two exemplars of the same category
-                # We start from where we left off in 'indices' if any left, or just use new ones
                 start_idx = n_novel * 2
                 for i in range(start_idx, start_idx + n_exemplar):
-                    if i < len(indices):
-                        idx = indices[i]
-                        pairs.append({
-                            "original": self.dataset.get_image(idx, 0),
-                            "foil": self.dataset.get_image(idx, 1),
-                            "type": "exemplar"
-                        })
+                    idx = indices[i]
+                    pairs.append({
+                        "original": self.dataset.get_image(idx, 0),
+                        "foil": self.dataset.get_image(idx, 1),
+                        "type": "exemplar"
+                    })
             elif foil_type == 'exemplar':
                 # All pairs are exemplars of the same category
                 indices = list(range(len(self.dataset)))
@@ -62,17 +92,31 @@ class AFCRecognitionTask:
                     })
             return pairs
 
-        # Handle Brady
+        # Handle Brady (self.dataset is BradyDataset(type='Objects') for Brady2008)
         if foil_type == 'novel':
-             obj_ds = BradyDataset(type='Objects')
-             indices = list(range(len(obj_ds)))
-             random.shuffle(indices)
-             for i in range(0, n * 2, 2):
-                 pairs.append({
-                     "original": obj_ds.get_image(indices[i]),
-                     "foil": obj_ds.get_image(indices[i+1]),
-                     "type": "novel"
-                 })
+            obj_ds = self.dataset
+            n_available = len(obj_ds)
+            if n_available == 0:
+                raise ValueError(
+                    f"No Brady object images found under '{obj_ds.path}'. "
+                    "Populate that folder with Brady et al. (2008) object images, or use --dataset things."
+                )
+            need = n * 2
+            if n_available < need:
+                max_study = n_available // 2
+                raise ValueError(
+                    f"Brady Objects at '{obj_ds.path}' has {n_available} images; "
+                    f"novel foils need 2 distinct images per study item ({need} for n_images={n}). "
+                    f"Add more images or set --n-images to at most {max_study}."
+                )
+            indices = list(range(n_available))
+            random.shuffle(indices)
+            for i in range(0, n * 2, 2):
+                pairs.append({
+                    "original": obj_ds.get_image(indices[i]),
+                    "foil": obj_ds.get_image(indices[i + 1]),
+                    "type": "novel"
+                })
         elif foil_type == 'exemplar' or foil_type == 'state':
              ds = BradyDataset(type='Exemplar' if foil_type == 'exemplar' else 'State')
              # Pair adjacent images (assuming they are pairs as seen in list_dir)
@@ -98,8 +142,11 @@ class AFCRecognitionTask:
 
         study_sequence = [p['original'] for p in pairs]
 
+        # Limit test trials if n_trials < n_images
+        test_pairs = pairs[:self.n_trials]
+
         test_phase = []
-        for p in pairs:
+        for p in test_pairs:
             # Randomly swap order for 2-AFC
             images = [p['original'], p['foil']]
             random.shuffle(images)
@@ -107,13 +154,16 @@ class AFCRecognitionTask:
 
             test_phase.append({
                 "images": images,
-                "prompt": "Which of these two images was in the sequence before? (1 or 2)",
+                "prompt": AFC_TEST_PROMPT,
                 "target": target,
                 "type": p['type']
             })
 
+        if self.n_trials < len(test_phase):
+            test_phase = random.sample(test_phase, self.n_trials)
+
         return {
-            "study_prompt": "Here is a sequence of images to remember.",
+            "study_prompt": AFC_STUDY_PROMPT,
             "study_sequence": study_sequence,
             "test_phase": test_phase
         }

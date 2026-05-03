@@ -1,0 +1,2426 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260326_183143",
+    "n_images": 200,
+    "max_context_pairs": null,
+    "dataset": "things",
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.71,
+        "n_correct": 142,
+        "total": 200
+      }
+    }
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "CLOCK",
+        "reported": "clock",
+        "correct": 1,
+        "raw_response": "CLOCK",
+        "metadata": {
+          "category": "cat_398",
+          "category_id": 199,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 1,
+        "target": "BEAD",
+        "reported": "bead",
+        "correct": 1,
+        "raw_response": "The word paired with the image is \"BEAD",
+        "metadata": {
+          "category": "cat_272",
+          "category_id": 136,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 2,
+        "target": "LOBSTER",
+        "reported": "lobster",
+        "correct": 1,
+        "raw_response": "LOBSTER",
+        "metadata": {
+          "category": "cat_352",
+          "category_id": 176,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 3,
+        "target": "TART",
+        "reported": "tart",
+        "correct": 1,
+        "raw_response": "TART",
+        "metadata": {
+          "category": "cat_110",
+          "category_id": 55,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 4,
+        "target": "STATUE",
+        "reported": "statue",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"STATUE",
+        "metadata": {
+          "category": "cat_8",
+          "category_id": 4,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 5,
+        "target": "SPINACH",
+        "reported": "spinach",
+        "correct": 1,
+        "raw_response": "The word paired with this image is SPINACH",
+        "metadata": {
+          "category": "cat_100",
+          "category_id": 50,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 6,
+        "target": "SPACE",
+        "reported": "space",
+        "correct": 1,
+        "raw_response": "The word paired with this image is SPACE.",
+        "metadata": {
+          "category": "cat_392",
+          "category_id": 196,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 7,
+        "target": "INN",
+        "reported": "inn",
+        "correct": 1,
+        "raw_response": "The word paired with this image was **INN",
+        "metadata": {
+          "category": "cat_188",
+          "category_id": 94,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 8,
+        "target": "LINEN",
+        "reported": "linen",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"LINEN",
+        "metadata": {
+          "category": "cat_154",
+          "category_id": 77,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 9,
+        "target": "BARN",
+        "reported": "barn",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"BARN",
+        "metadata": {
+          "category": "cat_108",
+          "category_id": 54,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 10,
+        "target": "NIGHTGOWN",
+        "reported": "nightgown",
+        "correct": 1,
+        "raw_response": "NIGHTGOWN",
+        "metadata": {
+          "category": "cat_112",
+          "category_id": 56,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 11,
+        "target": "EMPLOYER",
+        "reported": "employ",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"EMPLOY",
+        "metadata": {
+          "category": "cat_262",
+          "category_id": 131,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 12,
+        "target": "SKIRT",
+        "reported": "skirt",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"SKIRT",
+        "metadata": {
+          "category": "cat_4",
+          "category_id": 2,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 13,
+        "target": "BARTENDER",
+        "reported": "bart",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"BART",
+        "metadata": {
+          "category": "cat_88",
+          "category_id": 44,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 14,
+        "target": "ATLAS",
+        "reported": "atlas",
+        "correct": 1,
+        "raw_response": "ATLAS",
+        "metadata": {
+          "category": "cat_342",
+          "category_id": 171,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 15,
+        "target": "ROOM",
+        "reported": "room",
+        "correct": 1,
+        "raw_response": "The word paired with this image is ROOM.",
+        "metadata": {
+          "category": "cat_218",
+          "category_id": 109,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 16,
+        "target": "COB",
+        "reported": "cob",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"COB",
+        "metadata": {
+          "category": "cat_288",
+          "category_id": 144,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 17,
+        "target": "ELECTRICIAN",
+        "reported": "elect",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"ELECT",
+        "metadata": {
+          "category": "cat_66",
+          "category_id": 33,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 18,
+        "target": "FOSSIL",
+        "reported": "foss",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"FOSS",
+        "metadata": {
+          "category": "cat_274",
+          "category_id": 137,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 19,
+        "target": "BULL",
+        "reported": "bull",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"BULL",
+        "metadata": {
+          "category": "cat_234",
+          "category_id": 117,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 20,
+        "target": "TRAIN",
+        "reported": "train",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"TRAIN\".",
+        "metadata": {
+          "category": "cat_312",
+          "category_id": 156,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 21,
+        "target": "COOK",
+        "reported": "cook",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"COOK",
+        "metadata": {
+          "category": "cat_42",
+          "category_id": 21,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 22,
+        "target": "STEAM",
+        "reported": "steam",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"STEAM",
+        "metadata": {
+          "category": "cat_46",
+          "category_id": 23,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 23,
+        "target": "CAVITY",
+        "reported": "cavity",
+        "correct": 1,
+        "raw_response": "The word paired with this image is CAVITY",
+        "metadata": {
+          "category": "cat_164",
+          "category_id": 82,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 24,
+        "target": "EGG",
+        "reported": "egg",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"EGG",
+        "metadata": {
+          "category": "cat_256",
+          "category_id": 128,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 25,
+        "target": "OWNER",
+        "reported": "owner",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"OWNER.\"",
+        "metadata": {
+          "category": "cat_266",
+          "category_id": 133,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 26,
+        "target": "ORANGE",
+        "reported": "orange",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"ORANGE",
+        "metadata": {
+          "category": "cat_138",
+          "category_id": 69,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 27,
+        "target": "VEAL",
+        "reported": "veal",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"VEAL",
+        "metadata": {
+          "category": "cat_58",
+          "category_id": 29,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 28,
+        "target": "CAP",
+        "reported": "cap",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"CAP.\"",
+        "metadata": {
+          "category": "cat_202",
+          "category_id": 101,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 29,
+        "target": "SOCIETY",
+        "reported": "soci",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"SOCI",
+        "metadata": {
+          "category": "cat_220",
+          "category_id": 110,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 30,
+        "target": "BRACELET",
+        "reported": "brace",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"BRACE",
+        "metadata": {
+          "category": "cat_242",
+          "category_id": 121,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 31,
+        "target": "YOUTH",
+        "reported": "youth",
+        "correct": 1,
+        "raw_response": "YOUTH",
+        "metadata": {
+          "category": "cat_176",
+          "category_id": 88,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 32,
+        "target": "SADDLE",
+        "reported": "sadd",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"SADD",
+        "metadata": {
+          "category": "cat_260",
+          "category_id": 130,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 33,
+        "target": "KITCHEN",
+        "reported": "kitchen",
+        "correct": 1,
+        "raw_response": "The word paired with this image was KITCHEN",
+        "metadata": {
+          "category": "cat_308",
+          "category_id": 154,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 34,
+        "target": "DORM",
+        "reported": "dorm",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"DORM",
+        "metadata": {
+          "category": "cat_128",
+          "category_id": 64,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 35,
+        "target": "RADIATOR",
+        "reported": "radi",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"RADI",
+        "metadata": {
+          "category": "cat_0",
+          "category_id": 0,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 36,
+        "target": "DOLPHIN",
+        "reported": "dol",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"DOL",
+        "metadata": {
+          "category": "cat_326",
+          "category_id": 163,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 37,
+        "target": "SEED",
+        "reported": "seed",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"SEED",
+        "metadata": {
+          "category": "cat_344",
+          "category_id": 172,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 38,
+        "target": "GOWN",
+        "reported": "gown",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"GOWN",
+        "metadata": {
+          "category": "cat_158",
+          "category_id": 79,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 39,
+        "target": "HEAD",
+        "reported": "head",
+        "correct": 1,
+        "raw_response": "HEAD",
+        "metadata": {
+          "category": "cat_28",
+          "category_id": 14,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 40,
+        "target": "WIRE",
+        "reported": "wire",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"WIRE\".",
+        "metadata": {
+          "category": "cat_192",
+          "category_id": 96,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 41,
+        "target": "HUMAN",
+        "reported": "hum",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"HUM",
+        "metadata": {
+          "category": "cat_314",
+          "category_id": 157,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 42,
+        "target": "ROCKET",
+        "reported": "rocket",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"ROCKET",
+        "metadata": {
+          "category": "cat_390",
+          "category_id": 195,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 43,
+        "target": "NUN",
+        "reported": "nun",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"NUN",
+        "metadata": {
+          "category": "cat_106",
+          "category_id": 53,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 44,
+        "target": "PRISONER",
+        "reported": "prisoner",
+        "correct": 1,
+        "raw_response": "The word paired with this image is PRISONER",
+        "metadata": {
+          "category": "cat_144",
+          "category_id": 72,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 45,
+        "target": "FUDGE",
+        "reported": "fudge",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"FUDGE",
+        "metadata": {
+          "category": "cat_14",
+          "category_id": 7,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 46,
+        "target": "ANCESTOR",
+        "reported": "ancest",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"ANCEST",
+        "metadata": {
+          "category": "cat_386",
+          "category_id": 193,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 47,
+        "target": "CRICKET",
+        "reported": "cricket",
+        "correct": 1,
+        "raw_response": "The word paired with this image was CRICKET.",
+        "metadata": {
+          "category": "cat_302",
+          "category_id": 151,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 48,
+        "target": "DOOR",
+        "reported": "door",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"DOOR",
+        "metadata": {
+          "category": "cat_332",
+          "category_id": 166,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 49,
+        "target": "MILITARY",
+        "reported": "milit",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"MILIT",
+        "metadata": {
+          "category": "cat_48",
+          "category_id": 24,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 50,
+        "target": "EDITORIAL",
+        "reported": "editorial",
+        "correct": 1,
+        "raw_response": "EDITORIAL",
+        "metadata": {
+          "category": "cat_56",
+          "category_id": 28,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 51,
+        "target": "SNAIL",
+        "reported": "sna",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"SNA",
+        "metadata": {
+          "category": "cat_280",
+          "category_id": 140,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 52,
+        "target": "ERASER",
+        "reported": "eras",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"ERAS",
+        "metadata": {
+          "category": "cat_292",
+          "category_id": 146,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 53,
+        "target": "PATH",
+        "reported": "path",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"PATH.\"",
+        "metadata": {
+          "category": "cat_120",
+          "category_id": 60,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 54,
+        "target": "SWAN",
+        "reported": "swan",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"SWAN",
+        "metadata": {
+          "category": "cat_140",
+          "category_id": 70,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 55,
+        "target": "VEST",
+        "reported": "vest",
+        "correct": 1,
+        "raw_response": "The word paired with this image is VEST.",
+        "metadata": {
+          "category": "cat_118",
+          "category_id": 59,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 56,
+        "target": "MISTER",
+        "reported": "mister",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"MISTER",
+        "metadata": {
+          "category": "cat_210",
+          "category_id": 105,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 57,
+        "target": "MIRROR",
+        "reported": "mirror",
+        "correct": 1,
+        "raw_response": "MIRROR",
+        "metadata": {
+          "category": "cat_366",
+          "category_id": 183,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 58,
+        "target": "SHORTCAKE",
+        "reported": "shortca",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"SHORTCA",
+        "metadata": {
+          "category": "cat_132",
+          "category_id": 66,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 59,
+        "target": "HAMBURGER",
+        "reported": "hamb",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"HAMB",
+        "metadata": {
+          "category": "cat_394",
+          "category_id": 197,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 60,
+        "target": "CREEK",
+        "reported": "creek",
+        "correct": 1,
+        "raw_response": "The word paired with this image is CREEK",
+        "metadata": {
+          "category": "cat_368",
+          "category_id": 184,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 61,
+        "target": "DOCTOR",
+        "reported": "doctor",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"DOCTOR",
+        "metadata": {
+          "category": "cat_224",
+          "category_id": 112,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 62,
+        "target": "CUPBOARD",
+        "reported": "cupboard",
+        "correct": 1,
+        "raw_response": "The word paired with this image is CUPBOARD.",
+        "metadata": {
+          "category": "cat_126",
+          "category_id": 63,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 63,
+        "target": "ROUGE",
+        "reported": "rouge",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"ROUGE",
+        "metadata": {
+          "category": "cat_384",
+          "category_id": 192,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 64,
+        "target": "SKI",
+        "reported": "ski",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"SKI",
+        "metadata": {
+          "category": "cat_98",
+          "category_id": 49,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 65,
+        "target": "RULER",
+        "reported": "rul",
+        "correct": 0,
+        "raw_response": "The word paired with that image is \"RUL",
+        "metadata": {
+          "category": "cat_212",
+          "category_id": 106,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 66,
+        "target": "EMPEROR",
+        "reported": "emperor",
+        "correct": 1,
+        "raw_response": "The word paired with this image was EMPEROR",
+        "metadata": {
+          "category": "cat_244",
+          "category_id": 122,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 67,
+        "target": "LAKE",
+        "reported": "lake",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"LAKE",
+        "metadata": {
+          "category": "cat_24",
+          "category_id": 12,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 68,
+        "target": "ACTRESS",
+        "reported": "actress",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"ACTRESS",
+        "metadata": {
+          "category": "cat_64",
+          "category_id": 32,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 69,
+        "target": "PATROL",
+        "reported": "patrol",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"PATROL",
+        "metadata": {
+          "category": "cat_290",
+          "category_id": 145,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 70,
+        "target": "PLASTER",
+        "reported": "plaster",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"PLASTER",
+        "metadata": {
+          "category": "cat_348",
+          "category_id": 174,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 71,
+        "target": "KNIFE",
+        "reported": "knife",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"KNIFE",
+        "metadata": {
+          "category": "cat_170",
+          "category_id": 85,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 72,
+        "target": "CABBAGE",
+        "reported": "cabb",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"CABB",
+        "metadata": {
+          "category": "cat_86",
+          "category_id": 43,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 73,
+        "target": "BABY",
+        "reported": "baby",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"BABY",
+        "metadata": {
+          "category": "cat_316",
+          "category_id": 158,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 74,
+        "target": "FRIAR",
+        "reported": "friar",
+        "correct": 1,
+        "raw_response": "The word paired with this image is FRIAR",
+        "metadata": {
+          "category": "cat_190",
+          "category_id": 95,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 75,
+        "target": "RABBIT",
+        "reported": "rab",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"RAB",
+        "metadata": {
+          "category": "cat_186",
+          "category_id": 93,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 76,
+        "target": "NURSERY",
+        "reported": "nursery",
+        "correct": 1,
+        "raw_response": "NURSERY",
+        "metadata": {
+          "category": "cat_318",
+          "category_id": 159,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 77,
+        "target": "PORT",
+        "reported": "port",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"PORT.\"",
+        "metadata": {
+          "category": "cat_34",
+          "category_id": 17,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 78,
+        "target": "HAMMER",
+        "reported": "hammer",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"HAMMER",
+        "metadata": {
+          "category": "cat_328",
+          "category_id": 164,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 79,
+        "target": "SWATTER",
+        "reported": "swat",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"SWAT",
+        "metadata": {
+          "category": "cat_44",
+          "category_id": 22,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 80,
+        "target": "PRUNE",
+        "reported": "prune",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"PRUNE",
+        "metadata": {
+          "category": "cat_90",
+          "category_id": 45,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 81,
+        "target": "FLIPPER",
+        "reported": "flip",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"FLIP",
+        "metadata": {
+          "category": "cat_162",
+          "category_id": 81,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 82,
+        "target": "CRITIC",
+        "reported": "crit",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"CRIT",
+        "metadata": {
+          "category": "cat_232",
+          "category_id": 116,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 83,
+        "target": "BULLY",
+        "reported": "bull",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"BULL",
+        "metadata": {
+          "category": "cat_236",
+          "category_id": 118,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 84,
+        "target": "PREACHER",
+        "reported": "preacher",
+        "correct": 1,
+        "raw_response": "PREACHER",
+        "metadata": {
+          "category": "cat_152",
+          "category_id": 76,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 85,
+        "target": "DUMP",
+        "reported": "dump",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"DUMP",
+        "metadata": {
+          "category": "cat_250",
+          "category_id": 125,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 86,
+        "target": "CUFF",
+        "reported": "cuff",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"CUFF",
+        "metadata": {
+          "category": "cat_116",
+          "category_id": 58,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 87,
+        "target": "VET",
+        "reported": "vet",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"VET",
+        "metadata": {
+          "category": "cat_12",
+          "category_id": 6,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 88,
+        "target": "VICTOR",
+        "reported": "victor",
+        "correct": 1,
+        "raw_response": "VICTOR",
+        "metadata": {
+          "category": "cat_196",
+          "category_id": 98,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 89,
+        "target": "SILK",
+        "reported": "sil",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"SIL",
+        "metadata": {
+          "category": "cat_20",
+          "category_id": 10,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 90,
+        "target": "CHOCOLATE",
+        "reported": "choc",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"CHOC",
+        "metadata": {
+          "category": "cat_334",
+          "category_id": 167,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 91,
+        "target": "HUSBAND",
+        "reported": "husband",
+        "correct": 1,
+        "raw_response": "HUSBAND",
+        "metadata": {
+          "category": "cat_50",
+          "category_id": 25,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 92,
+        "target": "PLANET",
+        "reported": "planet",
+        "correct": 1,
+        "raw_response": "The word paired with that image is \"PLANET",
+        "metadata": {
+          "category": "cat_198",
+          "category_id": 99,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 93,
+        "target": "FRAGRANCE",
+        "reported": "**fragr",
+        "correct": 0,
+        "raw_response": "The word paired with this image was **FRAGR",
+        "metadata": {
+          "category": "cat_338",
+          "category_id": 169,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 94,
+        "target": "FIG",
+        "reported": "fig",
+        "correct": 1,
+        "raw_response": "The word paired with this image is FIG.",
+        "metadata": {
+          "category": "cat_26",
+          "category_id": 13,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 95,
+        "target": "GARAGE",
+        "reported": "garage",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"GARAGE",
+        "metadata": {
+          "category": "cat_6",
+          "category_id": 3,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 96,
+        "target": "ALMANAC",
+        "reported": "alman",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"ALMAN",
+        "metadata": {
+          "category": "cat_216",
+          "category_id": 108,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 97,
+        "target": "LIBRARY",
+        "reported": "library",
+        "correct": 1,
+        "raw_response": "LIBRARY",
+        "metadata": {
+          "category": "cat_264",
+          "category_id": 132,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 98,
+        "target": "WHEEL",
+        "reported": "wheel",
+        "correct": 1,
+        "raw_response": "The word paired with this image is WHEEL.",
+        "metadata": {
+          "category": "cat_102",
+          "category_id": 51,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 99,
+        "target": "SEAT",
+        "reported": "seat",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"SEAT",
+        "metadata": {
+          "category": "cat_322",
+          "category_id": 161,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 100,
+        "target": "SENATE",
+        "reported": "**sen",
+        "correct": 0,
+        "raw_response": "The word paired with this image was **SEN",
+        "metadata": {
+          "category": "cat_258",
+          "category_id": 129,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 101,
+        "target": "FLOWER",
+        "reported": "flower",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"FLOWER",
+        "metadata": {
+          "category": "cat_204",
+          "category_id": 102,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 102,
+        "target": "MARROW",
+        "reported": "marrow",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"MARROW",
+        "metadata": {
+          "category": "cat_114",
+          "category_id": 57,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 103,
+        "target": "GARLIC",
+        "reported": "garlic",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"GARLIC",
+        "metadata": {
+          "category": "cat_148",
+          "category_id": 74,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 104,
+        "target": "DUNE",
+        "reported": "dune",
+        "correct": 1,
+        "raw_response": "The word paired with this image is DUNE.",
+        "metadata": {
+          "category": "cat_134",
+          "category_id": 67,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 105,
+        "target": "CRADLE",
+        "reported": "crad",
+        "correct": 0,
+        "raw_response": "The word paired with the image is \"CRAD",
+        "metadata": {
+          "category": "cat_136",
+          "category_id": 68,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 106,
+        "target": "HEATER",
+        "reported": "heater",
+        "correct": 1,
+        "raw_response": "HEATER",
+        "metadata": {
+          "category": "cat_172",
+          "category_id": 86,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 107,
+        "target": "MONASTERY",
+        "reported": "monastery",
+        "correct": 1,
+        "raw_response": "MONASTERY",
+        "metadata": {
+          "category": "cat_76",
+          "category_id": 38,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 108,
+        "target": "PISTOL",
+        "reported": "pistol",
+        "correct": 1,
+        "raw_response": "The word paired with this image is PISTOL",
+        "metadata": {
+          "category": "cat_124",
+          "category_id": 62,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 109,
+        "target": "CHECKERS",
+        "reported": "checkers",
+        "correct": 1,
+        "raw_response": "The word paired with this image is CHECKERS.",
+        "metadata": {
+          "category": "cat_150",
+          "category_id": 75,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 110,
+        "target": "BISCUIT",
+        "reported": "biscuit",
+        "correct": 1,
+        "raw_response": "The word paired with this image was BISCUIT",
+        "metadata": {
+          "category": "cat_30",
+          "category_id": 15,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 111,
+        "target": "SPONGE",
+        "reported": "spong",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"SPONG",
+        "metadata": {
+          "category": "cat_68",
+          "category_id": 34,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 112,
+        "target": "ELK",
+        "reported": "elk",
+        "correct": 1,
+        "raw_response": "ELK",
+        "metadata": {
+          "category": "cat_142",
+          "category_id": 71,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 113,
+        "target": "ROACH",
+        "reported": "roach",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"ROACH",
+        "metadata": {
+          "category": "cat_254",
+          "category_id": 127,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 114,
+        "target": "STRAWBERRY",
+        "reported": "straw",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"STRAW",
+        "metadata": {
+          "category": "cat_22",
+          "category_id": 11,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 115,
+        "target": "BAY",
+        "reported": "bay",
+        "correct": 1,
+        "raw_response": "BAY",
+        "metadata": {
+          "category": "cat_168",
+          "category_id": 84,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 116,
+        "target": "TRASH",
+        "reported": "trash",
+        "correct": 1,
+        "raw_response": "TRASH",
+        "metadata": {
+          "category": "cat_208",
+          "category_id": 104,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 117,
+        "target": "STEW",
+        "reported": "stew",
+        "correct": 1,
+        "raw_response": "The word paired with this image was STEW.",
+        "metadata": {
+          "category": "cat_82",
+          "category_id": 41,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 118,
+        "target": "BARLEY",
+        "reported": "barley",
+        "correct": 1,
+        "raw_response": "BARLEY",
+        "metadata": {
+          "category": "cat_296",
+          "category_id": 148,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 119,
+        "target": "GUEST",
+        "reported": "guest",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"GUEST",
+        "metadata": {
+          "category": "cat_378",
+          "category_id": 189,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 120,
+        "target": "HANDCUFFS",
+        "reported": "handcu",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"HANDCU",
+        "metadata": {
+          "category": "cat_60",
+          "category_id": 30,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 121,
+        "target": "SHOELACE",
+        "reported": "sho",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"SHO",
+        "metadata": {
+          "category": "cat_84",
+          "category_id": 42,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 122,
+        "target": "CLOUD",
+        "reported": "cloud",
+        "correct": 1,
+        "raw_response": "CLOUD",
+        "metadata": {
+          "category": "cat_330",
+          "category_id": 165,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 123,
+        "target": "SHERIFF",
+        "reported": "sheri",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"SHERI",
+        "metadata": {
+          "category": "cat_268",
+          "category_id": 134,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 124,
+        "target": "DASHBOARD",
+        "reported": "dash",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"DASH",
+        "metadata": {
+          "category": "cat_200",
+          "category_id": 100,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 125,
+        "target": "WITNESS",
+        "reported": "witness",
+        "correct": 1,
+        "raw_response": "The word paired with this image is WITNESS",
+        "metadata": {
+          "category": "cat_32",
+          "category_id": 16,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 126,
+        "target": "CHAIRPERSON",
+        "reported": "chairperson",
+        "correct": 1,
+        "raw_response": "CHAIRPERSON",
+        "metadata": {
+          "category": "cat_248",
+          "category_id": 124,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 127,
+        "target": "BULB",
+        "reported": "bul",
+        "correct": 0,
+        "raw_response": "The word paired with the image is \"BUL",
+        "metadata": {
+          "category": "cat_10",
+          "category_id": 5,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 128,
+        "target": "SWAMP",
+        "reported": "swamp",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"SWAMP",
+        "metadata": {
+          "category": "cat_214",
+          "category_id": 107,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 129,
+        "target": "BOMB",
+        "reported": "bomb",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"BOMB",
+        "metadata": {
+          "category": "cat_240",
+          "category_id": 120,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 130,
+        "target": "TWINE",
+        "reported": "twine",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"TWINE",
+        "metadata": {
+          "category": "cat_180",
+          "category_id": 90,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 131,
+        "target": "HORIZON",
+        "reported": "horizon",
+        "correct": 1,
+        "raw_response": "The word paired with this image is HORIZON",
+        "metadata": {
+          "category": "cat_160",
+          "category_id": 80,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 132,
+        "target": "ROOF",
+        "reported": "roof",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"ROOF",
+        "metadata": {
+          "category": "cat_354",
+          "category_id": 177,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 133,
+        "target": "CHECK",
+        "reported": "check",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"CHECK.\"",
+        "metadata": {
+          "category": "cat_298",
+          "category_id": 149,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 134,
+        "target": "TEACHER",
+        "reported": "teach",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"TEACH",
+        "metadata": {
+          "category": "cat_62",
+          "category_id": 31,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 135,
+        "target": "SHOVEL",
+        "reported": "shovel",
+        "correct": 1,
+        "raw_response": "SHOVEL",
+        "metadata": {
+          "category": "cat_222",
+          "category_id": 111,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 136,
+        "target": "CROW",
+        "reported": "crow",
+        "correct": 1,
+        "raw_response": "The word paired with the image is \"CROW",
+        "metadata": {
+          "category": "cat_294",
+          "category_id": 147,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 137,
+        "target": "DISHWASHER",
+        "reported": "dish",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"DISH",
+        "metadata": {
+          "category": "cat_388",
+          "category_id": 194,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 138,
+        "target": "OPERATOR",
+        "reported": "operator",
+        "correct": 1,
+        "raw_response": "OPERATOR",
+        "metadata": {
+          "category": "cat_78",
+          "category_id": 39,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 139,
+        "target": "CARAVAN",
+        "reported": "carav",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"CARAV",
+        "metadata": {
+          "category": "cat_360",
+          "category_id": 180,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 140,
+        "target": "BINDER",
+        "reported": "binder",
+        "correct": 1,
+        "raw_response": "BINDER",
+        "metadata": {
+          "category": "cat_252",
+          "category_id": 126,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 141,
+        "target": "PALACE",
+        "reported": "palace",
+        "correct": 1,
+        "raw_response": "The word paired with this image is PALACE.",
+        "metadata": {
+          "category": "cat_270",
+          "category_id": 135,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 142,
+        "target": "PORTRAIT",
+        "reported": "portrait",
+        "correct": 1,
+        "raw_response": "PORTRAIT",
+        "metadata": {
+          "category": "cat_146",
+          "category_id": 73,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 143,
+        "target": "MULE",
+        "reported": "mule",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"MULE",
+        "metadata": {
+          "category": "cat_184",
+          "category_id": 92,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 144,
+        "target": "TIE",
+        "reported": "tie",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"TIE",
+        "metadata": {
+          "category": "cat_156",
+          "category_id": 78,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 145,
+        "target": "GRATE",
+        "reported": "grate",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"GRATE",
+        "metadata": {
+          "category": "cat_230",
+          "category_id": 115,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 146,
+        "target": "DUNGEON",
+        "reported": "dunge",
+        "correct": 0,
+        "raw_response": "The word paired with this image is DUNGE",
+        "metadata": {
+          "category": "cat_182",
+          "category_id": 91,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 147,
+        "target": "HELICOPTER",
+        "reported": "helicopter",
+        "correct": 1,
+        "raw_response": "HELICOPTER",
+        "metadata": {
+          "category": "cat_226",
+          "category_id": 113,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 148,
+        "target": "DANDRUFF",
+        "reported": "dand",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"DAND",
+        "metadata": {
+          "category": "cat_174",
+          "category_id": 87,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 149,
+        "target": "SALESMAN",
+        "reported": "salesman",
+        "correct": 1,
+        "raw_response": "SALESMAN",
+        "metadata": {
+          "category": "cat_278",
+          "category_id": 139,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 150,
+        "target": "TIGER",
+        "reported": "tig",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"TIG",
+        "metadata": {
+          "category": "cat_80",
+          "category_id": 40,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 151,
+        "target": "KIWI",
+        "reported": "kiwi",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"KIWI",
+        "metadata": {
+          "category": "cat_38",
+          "category_id": 19,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 152,
+        "target": "GIRL",
+        "reported": "gir",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"GIR",
+        "metadata": {
+          "category": "cat_54",
+          "category_id": 27,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 153,
+        "target": "AIRPORT",
+        "reported": "airport",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"AIRPORT",
+        "metadata": {
+          "category": "cat_40",
+          "category_id": 20,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 154,
+        "target": "TRAY",
+        "reported": "tray",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"TRAY",
+        "metadata": {
+          "category": "cat_374",
+          "category_id": 187,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 155,
+        "target": "CHICKEN",
+        "reported": "chick",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"CHICK",
+        "metadata": {
+          "category": "cat_346",
+          "category_id": 173,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 156,
+        "target": "EYE",
+        "reported": "eye",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"EYE",
+        "metadata": {
+          "category": "cat_104",
+          "category_id": 52,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 157,
+        "target": "MONEY",
+        "reported": "money",
+        "correct": 1,
+        "raw_response": "MONEY",
+        "metadata": {
+          "category": "cat_72",
+          "category_id": 36,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 158,
+        "target": "SCROLL",
+        "reported": "scroll",
+        "correct": 1,
+        "raw_response": "SCROLL",
+        "metadata": {
+          "category": "cat_18",
+          "category_id": 9,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 159,
+        "target": "TOURIST",
+        "reported": "tour",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"TOUR",
+        "metadata": {
+          "category": "cat_358",
+          "category_id": 179,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 160,
+        "target": "WAX",
+        "reported": "wax",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"WAX",
+        "metadata": {
+          "category": "cat_372",
+          "category_id": 186,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 161,
+        "target": "TOY",
+        "reported": "toy",
+        "correct": 1,
+        "raw_response": "The word paired with this image is TOY.",
+        "metadata": {
+          "category": "cat_2",
+          "category_id": 1,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 162,
+        "target": "GANG",
+        "reported": "gang",
+        "correct": 1,
+        "raw_response": "The word paired with that image was \"GANG",
+        "metadata": {
+          "category": "cat_92",
+          "category_id": 46,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 163,
+        "target": "PALM",
+        "reported": "palm",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"PALM",
+        "metadata": {
+          "category": "cat_324",
+          "category_id": 162,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 164,
+        "target": "CABLE",
+        "reported": "cable",
+        "correct": 1,
+        "raw_response": "CABLE",
+        "metadata": {
+          "category": "cat_246",
+          "category_id": 123,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 165,
+        "target": "DAISY",
+        "reported": "dais",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"DAIS",
+        "metadata": {
+          "category": "cat_130",
+          "category_id": 65,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 166,
+        "target": "DAGGER",
+        "reported": "**dag",
+        "correct": 0,
+        "raw_response": "The word paired with this image is **DAG",
+        "metadata": {
+          "category": "cat_310",
+          "category_id": 155,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 167,
+        "target": "MARGARINE",
+        "reported": "marg",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"MARG",
+        "metadata": {
+          "category": "cat_96",
+          "category_id": 48,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 168,
+        "target": "CONE",
+        "reported": "cone",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"CONE",
+        "metadata": {
+          "category": "cat_286",
+          "category_id": 143,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 169,
+        "target": "JELLO",
+        "reported": "jel",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"JEL",
+        "metadata": {
+          "category": "cat_238",
+          "category_id": 119,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 170,
+        "target": "MERMAID",
+        "reported": "merma",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"MERMA",
+        "metadata": {
+          "category": "cat_52",
+          "category_id": 26,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 171,
+        "target": "PAVEMENT",
+        "reported": "pav",
+        "correct": 0,
+        "raw_response": "The word paired with the image is \"PAV",
+        "metadata": {
+          "category": "cat_362",
+          "category_id": 181,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 172,
+        "target": "CALENDAR",
+        "reported": "calendar",
+        "correct": 1,
+        "raw_response": "CALENDAR",
+        "metadata": {
+          "category": "cat_380",
+          "category_id": 190,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 173,
+        "target": "NEPTUNE",
+        "reported": "nept",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"NEPT",
+        "metadata": {
+          "category": "cat_370",
+          "category_id": 185,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 174,
+        "target": "CITRUS",
+        "reported": "cit",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"CIT",
+        "metadata": {
+          "category": "cat_336",
+          "category_id": 168,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 175,
+        "target": "SPAGHETTI",
+        "reported": "spagh",
+        "correct": 0,
+        "raw_response": "The word paired with this image was SPAGH",
+        "metadata": {
+          "category": "cat_350",
+          "category_id": 175,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 176,
+        "target": "ASHTRAY",
+        "reported": "ashtr",
+        "correct": 0,
+        "raw_response": "The word paired with this image is ASHTR",
+        "metadata": {
+          "category": "cat_276",
+          "category_id": 138,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 177,
+        "target": "SHORTS",
+        "reported": "shorts",
+        "correct": 1,
+        "raw_response": "SHORTS",
+        "metadata": {
+          "category": "cat_74",
+          "category_id": 37,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 178,
+        "target": "COW",
+        "reported": "cow",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"COW",
+        "metadata": {
+          "category": "cat_300",
+          "category_id": 150,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 179,
+        "target": "BEAKER",
+        "reported": "beaker",
+        "correct": 1,
+        "raw_response": "BEAKER",
+        "metadata": {
+          "category": "cat_376",
+          "category_id": 188,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 180,
+        "target": "PAWN",
+        "reported": "pawn",
+        "correct": 1,
+        "raw_response": "PAWN",
+        "metadata": {
+          "category": "cat_306",
+          "category_id": 153,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 181,
+        "target": "UMPIRE",
+        "reported": "umpire",
+        "correct": 1,
+        "raw_response": "UMPIRE",
+        "metadata": {
+          "category": "cat_166",
+          "category_id": 83,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 182,
+        "target": "TABLET",
+        "reported": "tablet",
+        "correct": 1,
+        "raw_response": "TABLET",
+        "metadata": {
+          "category": "cat_364",
+          "category_id": 182,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 183,
+        "target": "SKUNK",
+        "reported": "skunk",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"SKUNK",
+        "metadata": {
+          "category": "cat_94",
+          "category_id": 47,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 184,
+        "target": "POPCORN",
+        "reported": "popc",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"POPC",
+        "metadata": {
+          "category": "cat_320",
+          "category_id": 160,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 185,
+        "target": "GIRAFFE",
+        "reported": "gira",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"GIRA",
+        "metadata": {
+          "category": "cat_356",
+          "category_id": 178,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 186,
+        "target": "QUAIL",
+        "reported": "quail",
+        "correct": 1,
+        "raw_response": "The word paired with this image is QUAIL.",
+        "metadata": {
+          "category": "cat_284",
+          "category_id": 142,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 187,
+        "target": "BOX",
+        "reported": "box",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"BOX.\"",
+        "metadata": {
+          "category": "cat_122",
+          "category_id": 61,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 188,
+        "target": "REBEL",
+        "reported": "rebel",
+        "correct": 1,
+        "raw_response": "The word paired with this image is REBEL.",
+        "metadata": {
+          "category": "cat_70",
+          "category_id": 35,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 189,
+        "target": "WALLET",
+        "reported": "wal",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"WAL",
+        "metadata": {
+          "category": "cat_194",
+          "category_id": 97,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 190,
+        "target": "POOL",
+        "reported": "pool",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"POOL.\"",
+        "metadata": {
+          "category": "cat_228",
+          "category_id": 114,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 191,
+        "target": "RAISIN",
+        "reported": "raisin",
+        "correct": 1,
+        "raw_response": "RAISIN",
+        "metadata": {
+          "category": "cat_304",
+          "category_id": 152,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 192,
+        "target": "DONKEY",
+        "reported": "donkey",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"DONKEY",
+        "metadata": {
+          "category": "cat_282",
+          "category_id": 141,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 193,
+        "target": "SACK",
+        "reported": "sack",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"SACK",
+        "metadata": {
+          "category": "cat_36",
+          "category_id": 18,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 194,
+        "target": "CHIP",
+        "reported": "chip",
+        "correct": 1,
+        "raw_response": "The word paired with the image is \"CHIP",
+        "metadata": {
+          "category": "cat_382",
+          "category_id": 191,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 195,
+        "target": "HAT",
+        "reported": "hat",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"HAT",
+        "metadata": {
+          "category": "cat_178",
+          "category_id": 89,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 196,
+        "target": "FORK",
+        "reported": "fork",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"FORK",
+        "metadata": {
+          "category": "cat_206",
+          "category_id": 103,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 197,
+        "target": "FORT",
+        "reported": "fort",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"FORT\".",
+        "metadata": {
+          "category": "cat_340",
+          "category_id": 170,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 198,
+        "target": "CRAB",
+        "reported": "crab",
+        "correct": 1,
+        "raw_response": "CRAB",
+        "metadata": {
+          "category": "cat_16",
+          "category_id": 8,
+          "exemplar_id": 0
+        }
+      },
+      {
+        "trial": 199,
+        "target": "SUITE",
+        "reported": "suite",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"SUITE",
+        "metadata": {
+          "category": "cat_396",
+          "category_id": 198,
+          "exemplar_id": 0
+        }
+      }
+    ],
+    "accuracy": 0.71,
+    "n_correct": 142,
+    "total": 200
+  }
+}
