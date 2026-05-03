@@ -8,7 +8,7 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# Paired Associate Memory: gemini-2.5-flash
+# Paired Associate Memory: gemini-3.1-flash-image-preview
 # 1M token context => all sizes supported
 
 set -e
@@ -22,7 +22,7 @@ sleep 240
 
 MODEL="gemini"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250)
+SIZES=(1 2 5 10 50 100 250)
 DATASETS=("things" "Brady2008")
 
 mkdir -p "$RESULTS_DIR" logs
@@ -30,7 +30,7 @@ mkdir -p "$RESULTS_DIR" logs
 check_existing_result() {
     local dataset="$1"
     local n_images="$2"
-    [ -f "$RESULTS_DIR/results_pam_gemini-2.5-flash_n${n_images}_${dataset}.json" ]
+    [ -f "$RESULTS_DIR/results_pam_gemini-3.1-flash-image-preview_n${n_images}_${dataset}.json" ]
 }
 
 echo "========== Paired Associate Memory: $MODEL =========="

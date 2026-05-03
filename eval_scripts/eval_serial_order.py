@@ -28,19 +28,7 @@ from evaluators.molmo2_evaluator import Molmo2Evaluator
 from src.metrics import calculate_serial_order_metrics, calculate_afc_serial_order_metrics
 
 
-def build_messages_free(evaluator, study_sequence, study_prompt, test_image, test_prompt, max_context_images=None):
-    if "Anthropic" in type(evaluator).__name__:
-        provider_limit = 100 - 1
-    else:
-        provider_limit = len(study_sequence)
-
-    if max_context_images is not None:
-        max_study = min(max_context_images, provider_limit)
-    else:
-        max_study = provider_limit
-
-    study_sequence = study_sequence[:max_study]
-
+def build_messages_free(evaluator, study_sequence, study_prompt, test_image, test_prompt):
     study_content = [{"type": "text", "text": study_prompt}]
     for img in study_sequence:
         study_content.append(evaluator._encode_image(img))
@@ -57,19 +45,7 @@ def build_messages_free(evaluator, study_sequence, study_prompt, test_image, tes
     ]
 
 
-def build_messages_afc(evaluator, study_sequence, study_prompt, test_images, test_prompt, max_context_images=None):
-    if "Anthropic" in type(evaluator).__name__:
-        provider_limit = 100 - len(test_images)
-    else:
-        provider_limit = len(study_sequence)
-
-    if max_context_images is not None:
-        max_study = min(max_context_images, provider_limit)
-    else:
-        max_study = provider_limit
-
-    study_sequence = study_sequence[:max_study]
-
+def build_messages_afc(evaluator, study_sequence, study_prompt, test_images, test_prompt):
     study_content = [{"type": "text", "text": study_prompt}]
     for img in study_sequence:
         study_content.append(evaluator._encode_image(img))
@@ -151,13 +127,20 @@ def parse_afc_response(text):
     return -1
 
 
-def run_free_evaluation(evaluators, n_images=20, dataset="things", max_context_images=None, n_trials=None):
+def run_free_evaluation(evaluators, n_images=20, dataset="things", n_trials=None):
     """Each trial is an independent study+test episode with a fresh sample of n_images."""
     n_trials = n_trials if n_trials is not None else n_images
 
     all_results = {}
     for evaluator in evaluators:
         print(f"\n=== {evaluator.get_name()} ===")
+
+        print(f"  Probing capacity for {n_images} images...", end=" ", flush=True)
+        if not evaluator.check_image_capacity(n_images + 1):
+            print(f"SKIP — model rejected {n_images} images in a single request")
+            continue
+        print("OK")
+
         results = []
 
         for i in range(n_trials):
@@ -172,7 +155,6 @@ def run_free_evaluation(evaluators, n_images=20, dataset="things", max_context_i
                 trial_data["study_prompt"],
                 test_trial["image"],
                 test_trial["prompt"],
-                max_context_images=max_context_images,
             )
             response_text = evaluator._call_api(messages)
             reported = parse_position_response(response_text, n)
@@ -200,7 +182,7 @@ def run_free_evaluation(evaluators, n_images=20, dataset="things", max_context_i
     return all_results
 
 
-def run_afc_evaluation(evaluators, n_images=20, dataset="things", max_context_images=None, n_trials=None):
+def run_afc_evaluation(evaluators, n_images=20, dataset="things", n_trials=None):
     """Each trial is an independent study+test episode with a fresh sample of n_images."""
     if n_images < 2:
         print(f"[SKIP] AFC serial order requires at least 2 images, got n_images={n_images}")
@@ -210,6 +192,13 @@ def run_afc_evaluation(evaluators, n_images=20, dataset="things", max_context_im
     all_results = {}
     for evaluator in evaluators:
         print(f"\n=== {evaluator.get_name()} ===")
+
+        print(f"  Probing capacity for {n_images} images...", end=" ", flush=True)
+        if not evaluator.check_image_capacity(n_images + 2):
+            print(f"SKIP — model rejected {n_images} images in a single request")
+            continue
+        print("OK")
+
         results = []
 
         for i in range(n_trials):
@@ -223,7 +212,6 @@ def run_afc_evaluation(evaluators, n_images=20, dataset="things", max_context_im
                 trial_data["study_prompt"],
                 test_trial["images"],
                 test_trial["prompt"],
-                max_context_images=max_context_images,
             )
             response_text = evaluator._call_api(messages)
             reported = parse_afc_response(response_text)
@@ -258,8 +246,7 @@ def main():
                         help="free=report position 1-N; afc=which image came first (default: afc)")
     parser.add_argument("--n-trials", type=int, default=None,
                         help="Number of test trials (default: n-images; resamples with replacement if larger)")
-    parser.add_argument("--max-context-images", type=int, default=None,
-                        help="Max study images to send in context per trial (default: all)")
+
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
                         help="Dataset to use")
     parser.add_argument("--output", type=str, default=None,
@@ -301,14 +288,14 @@ def main():
     print(f"  N images: {args.n_images}")
     print(f"  N trials: {args.n_trials or args.n_images}")
     print(f"  Variant: {args.variant}")
-    print(f"  Max context images: {args.max_context_images or 'all'}")
+
     print(f"  Dataset: {args.dataset}")
 
     if args.variant == "free":
-        results = run_free_evaluation(evaluators, args.n_images, args.dataset, args.max_context_images, n_trials=args.n_trials)
+        results = run_free_evaluation(evaluators, args.n_images, args.dataset, n_trials=args.n_trials)
         task_name = "Serial Order Memory (Free Report)"
     else:
-        results = run_afc_evaluation(evaluators, args.n_images, args.dataset, args.max_context_images, n_trials=args.n_trials)
+        results = run_afc_evaluation(evaluators, args.n_images, args.dataset, n_trials=args.n_trials)
         task_name = "Serial Order Memory (AFC)"
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -326,7 +313,7 @@ def main():
                 model: {"accuracy": results[model]["accuracy"]}
                 for model in results
             },
-            "max_context_images": args.max_context_images,
+
         },
         **results,
     }

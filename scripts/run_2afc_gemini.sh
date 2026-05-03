@@ -8,7 +8,7 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# 2-AFC Recognition: gemini-2.5-flash
+# 2-AFC Recognition: gemini-3.1-flash-image-preview
 # 1M token context => all sizes supported
 
 set -e
@@ -23,7 +23,7 @@ sleep 0
 MODEL="gemini"
 N_TRIALS=100
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250)
+SIZES=(1 2 5 10 50 100 250)
 DATASETS=("things" "Brady2008")
 FOIL_TYPES=("novel" "exemplar" "state" "all")
 
@@ -33,7 +33,7 @@ check_existing_result() {
     local dataset="$1"
     local n_images="$2"
     local foil_type="$3"
-    [ -f "$RESULTS_DIR/results_2afc_gemini-2.5-flash_n${n_images}_${dataset}_${foil_type}.json" ]
+    [ -f "$RESULTS_DIR/results_2afc_gemini-3.1-flash-image-preview_n${n_images}_${dataset}_${foil_type}.json" ]
 }
 
 echo "========== 2-AFC Recognition: $MODEL =========="

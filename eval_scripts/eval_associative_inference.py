@@ -27,25 +27,12 @@ from evaluators.molmo2_evaluator import Molmo2Evaluator
 from src.metrics import calculate_associative_inference_metrics
 
 
-def build_messages(evaluator, study_sequence, study_prompt, cue_image, test_images, test_prompt, max_context_pairs=None):
+def build_messages(evaluator, study_sequence, study_prompt, cue_image, test_images, test_prompt):
     """Build API messages for associative inference trial.
 
     Study sequence is a list of dicts with keys 'images' (list of 2) and 'pair_type'.
     Each study event shows two images side by side.
     """
-    if "Anthropic" in type(evaluator).__name__:
-        # Reserve 1 cue + 2 test images = 3 slots
-        provider_limit = 100 - 3
-    else:
-        provider_limit = len(study_sequence)
-
-    if max_context_pairs is not None:
-        max_study = min(max_context_pairs, provider_limit)
-    else:
-        max_study = provider_limit
-
-    study_sequence = study_sequence[:max_study]
-
     study_content = [{"type": "text", "text": study_prompt}]
     for event in study_sequence:
         study_content.append({"type": "text", "text": f"({event['pair_type']} pair)"})
@@ -88,13 +75,20 @@ def parse_response(text):
     return -1
 
 
-def run_evaluation(evaluators, n_images=20, dataset="things", max_context_pairs=None, n_trials=None):
+def run_evaluation(evaluators, n_images=20, dataset="things", n_trials=None):
     """Each trial is an independent study+test episode with a fresh sample of n_images chains."""
     n_trials = n_trials if n_trials is not None else n_images // 2
 
     all_results = {}
     for evaluator in evaluators:
         print(f"\n=== {evaluator.get_name()} ===")
+
+        print(f"  Probing capacity for {n_images} images...", end=" ", flush=True)
+        if not evaluator.check_image_capacity(n_images * 2 + 3):
+            print(f"SKIP — model rejected {n_images} images in a single request")
+            continue
+        print("OK")
+
         results = []
 
         for i in range(n_trials):
@@ -109,7 +103,7 @@ def run_evaluation(evaluators, n_images=20, dataset="things", max_context_pairs=
                 test_trial["cue_image"],
                 test_trial["images"],
                 test_trial["prompt"],
-                max_context_pairs=max_context_pairs,
+
             )
             response_text = evaluator._call_api(messages)
             reported = parse_response(response_text)
@@ -142,8 +136,7 @@ def main():
                         help="Number of trials (must be even; sets number of A-B and B-C pairs = n/2 each)")
     parser.add_argument("--n-trials", type=int, default=None,
                         help="Number of test trials (default: n-images/2 chains; resamples with replacement if larger)")
-    parser.add_argument("--max-context-pairs", type=int, default=None,
-                        help="Max study pairs to send in context per trial (default: all)")
+
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
                         help="Dataset to use")
     parser.add_argument("--output", type=str, default=None,
@@ -189,10 +182,10 @@ def main():
     print(f"  Models: {[e.get_name() for e in evaluators]}")
     print(f"  N chains: {args.n_images // 2} ({args.n_images} study pairs)")
     print(f"  N trials: {args.n_trials or args.n_images // 2}")
-    print(f"  Max context pairs: {args.max_context_pairs or 'all'}")
+
     print(f"  Dataset: {args.dataset}")
 
-    results = run_evaluation(evaluators, args.n_images, args.dataset, args.max_context_pairs, n_trials=args.n_trials)
+    results = run_evaluation(evaluators, args.n_images, args.dataset, n_trials=args.n_trials)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     n_trials = len(next(iter(results.values()))["trials"]) if results else 0
@@ -212,7 +205,7 @@ def main():
                 }
                 for model in results
             },
-            "max_context_pairs": args.max_context_pairs,
+
         },
         **results,
     }

@@ -1,14 +1,14 @@
 #!/bin/bash
-#SBATCH --job-name=2afc_gpt4o
+#SBATCH --job-name=2afc_claude
 #SBATCH --partition=short
 #SBATCH --account=zgroup
 #SBATCH --output=logs/%j.out
 #SBATCH --error=logs/%j.err
-#SBATCH --time=08:00:00
+#SBATCH --time=12:00:00
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# 2-AFC Recognition: gpt-5.5
+# 2-AFC Recognition: claude-opus-4-7-20251001
 
 set -e
 
@@ -19,7 +19,7 @@ export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
 # Stagger start to avoid concurrent API hammering
 sleep 0
 
-MODEL="gpt-5.5"
+MODEL="claude"
 N_TRIALS=100
 RESULTS_DIR="$SCRIPT_DIR/results"
 SIZES=(1 2 5 10 50 100 250)
@@ -32,7 +32,7 @@ check_existing_result() {
     local dataset="$1"
     local n_images="$2"
     local foil_type="$3"
-    [ -f "$RESULTS_DIR/results_2afc_gpt-5.5_n${n_images}_${dataset}_${foil_type}.json" ]
+    [ -f "$RESULTS_DIR/results_2afc_claude-opus-4-7-20251001_n${n_images}_${dataset}_${foil_type}.json" ]
 }
 
 echo "========== 2-AFC Recognition: $MODEL =========="

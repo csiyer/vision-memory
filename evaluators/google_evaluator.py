@@ -12,7 +12,7 @@ from .base import BaseEvaluator
 class GoogleEvaluator(BaseEvaluator):
     """Google Gemini vision evaluator."""
 
-    def __init__(self, model_id: str = "gemini-2.5-flash"):
+    def __init__(self, model_id: str = "gemini-3.1-flash-image-preview"):
         super().__init__(model_id)
         self.client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
 
@@ -65,3 +65,18 @@ class GoogleEvaluator(BaseEvaluator):
                     time.sleep(wait)
                 else:
                     raise
+
+    def check_image_capacity(self, n_images: int) -> bool:
+        """Override to skip the rate-limit sleep during the probe."""
+        from PIL import Image as PILImage
+        pixel = PILImage.new("RGB", (1, 1), (255, 255, 255))
+        encoded = [self._encode_image(pixel) for _ in range(n_images)]
+        parts = [types.Part.from_text(text="Reply with the number 1.")] + encoded
+        contents = [types.Content(role="user", parts=parts)]
+        try:
+            self.client.models.generate_content(model=self.model_id, contents=contents)
+            return True
+        except ClientError as e:
+            if e.code in (400, 413):
+                return False
+            raise

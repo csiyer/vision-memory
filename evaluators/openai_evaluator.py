@@ -11,7 +11,7 @@ from .base import BaseEvaluator
 class OpenAIEvaluator(BaseEvaluator):
     """OpenAI GPT vision evaluator."""
 
-    def __init__(self, model_id: str = "gpt-4o"):
+    def __init__(self, model_id: str = "gpt-5.5"):
         super().__init__(model_id)
         self.client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 

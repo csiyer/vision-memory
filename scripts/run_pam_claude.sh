@@ -1,14 +1,14 @@
 #!/bin/bash
-#SBATCH --job-name=continuous_gpt4o
+#SBATCH --job-name=pam_claude
 #SBATCH --partition=short
 #SBATCH --account=zgroup
 #SBATCH --output=logs/%j.out
 #SBATCH --error=logs/%j.err
-#SBATCH --time=08:00:00
+#SBATCH --time=12:00:00
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# Continuous Recognition: gpt-5.5
+# Paired Associate Memory: claude-opus-4-7-20251001
 
 set -e
 
@@ -17,9 +17,9 @@ source "$SCRIPT_DIR/venv/bin/activate"
 export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
 
 # Stagger start to avoid concurrent API hammering
-sleep 120
+sleep 0
 
-MODEL="gpt-5.5"
+MODEL="claude"
 RESULTS_DIR="$SCRIPT_DIR/results"
 SIZES=(1 2 5 10 50 100 250)
 DATASETS=("things" "Brady2008")
@@ -29,10 +29,10 @@ mkdir -p "$RESULTS_DIR" logs
 check_existing_result() {
     local dataset="$1"
     local n_images="$2"
-    [ -f "$RESULTS_DIR/results_continuous_gpt-5.5_n${n_images}_${dataset}.json" ]
+    [ -f "$RESULTS_DIR/results_pam_claude-opus-4-7-20251001_n${n_images}_${dataset}.json" ]
 }
 
-echo "========== Continuous Recognition: $MODEL =========="
+echo "========== Paired Associate Memory: $MODEL =========="
 
 for dataset in "${DATASETS[@]}"; do
     echo "--- Dataset: $dataset ---"
@@ -41,12 +41,8 @@ for dataset in "${DATASETS[@]}"; do
             echo "  [EXISTS] $dataset | n=$size"
             continue
         fi
-        if [ "$dataset" = "things" ] && [ "$size" -ge 250 ]; then
-            echo "  [SKIP] things | n=$size (context too large for GPT-5.5)"
-            continue
-        fi
         echo "  [RUN] $dataset | n=$size"
-        python3 -m eval_scripts.eval_continuous \
+        python3 -m eval_scripts.eval_pam \
             --models "$MODEL" \
             --n-images "$size" \
             --dataset "$dataset" \

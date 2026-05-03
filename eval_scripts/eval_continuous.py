@@ -60,6 +60,13 @@ def run_evaluation(evaluators, n_images=50, dataset='things', n_trials=None):
     all_results = {}
     for evaluator in evaluators:
         print(f"\n=== {evaluator.get_name()} ===")
+
+        print(f"  Probing capacity for {n_images} images...", end=" ", flush=True)
+        if not evaluator.check_image_capacity(n_images):
+            print(f"SKIP — model rejected {n_images} images in a single request")
+            continue
+        print("OK")
+
         history = []
         results = []
 

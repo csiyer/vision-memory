@@ -29,30 +29,8 @@ from src.metrics import calculate_pam_metrics
 from src.plotting import default_plots_dir, plot_pam
 
 
-def build_messages(evaluator, study_sequence, study_prompt, test_image, test_prompt, max_context_pairs=None):
-    """Build API messages for paired associate memory trial with simulated acknowledgment.
-
-    Args:
-        evaluator: The evaluator instance
-        study_sequence: List of (image, word) tuples
-        study_prompt: Prompt for study phase
-        test_image: The test image
-        test_prompt: Prompt for test phase
-        max_context_pairs: Max pairs to send in context. If None, uses provider defaults.
-    """
-    # Determine max study pairs based on provider limits
-    if "Anthropic" in type(evaluator).__name__:
-        provider_limit = 99 - 1  # Reserve space for test image
-    else:
-        provider_limit = len(study_sequence)  # No limit for other providers
-
-    if max_context_pairs is not None:
-        max_study = min(max_context_pairs, provider_limit)
-    else:
-        max_study = provider_limit
-
-    if len(study_sequence) > max_study:
-        study_sequence = study_sequence[:max_study]
+def build_messages(evaluator, study_sequence, study_prompt, test_image, test_prompt):
+    """Build API messages for paired associate memory trial with simulated acknowledgment."""
 
     # Study phase: alternate images and words
     study_content = [{"type": "text", "text": study_prompt}]
@@ -117,19 +95,12 @@ def parse_word_response(text, target_word):
     return text.lower()
 
 
-def run_evaluation(evaluators, n_images=20, dataset='things', max_context_pairs=None, n_trials=None):
+def run_evaluation(evaluators, n_images=20, dataset='things', n_trials=None):
     """Run paired associate memory evaluation on all evaluators.
 
     Each trial is an independent study+test episode: a fresh set of n_images
     image-word pairs is sampled, studied, then tested (one test question per episode).
     n_trials controls how many independent episodes are run.
-
-    Args:
-        evaluators: List of evaluator instances
-        n_images: Number of image-word pairs to study per trial
-        dataset: Dataset to use ('things', 'Brady2008')
-        max_context_pairs: Max pairs to send in context per trial. If None, sends all pairs.
-        n_trials: Number of independent study+test episodes (default: n_images).
     """
     n_trials = n_trials if n_trials is not None else n_images
 
@@ -137,11 +108,11 @@ def run_evaluation(evaluators, n_images=20, dataset='things', max_context_pairs=
     for evaluator in evaluators:
         print(f"\n=== {evaluator.get_name()} ===")
 
-        actual_context = max_context_pairs if max_context_pairs else n_images
-        if "Anthropic" in type(evaluator).__name__:
-            actual_context = min(actual_context, 98)
-        if actual_context < n_images:
-            print(f"  Note: Sending {actual_context} of {n_images} pairs to context")
+        print(f"  Probing capacity for {n_images} images...", end=" ", flush=True)
+        if not evaluator.check_image_capacity(n_images + 1):
+            print(f"SKIP — model rejected {n_images} images in a single request")
+            continue
+        print("OK")
 
         results = []
 
@@ -157,7 +128,6 @@ def run_evaluation(evaluators, n_images=20, dataset='things', max_context_pairs=
                 trial_data['study_prompt'],
                 test_trial['image'],
                 test_trial['prompt'],
-                max_context_pairs=max_context_pairs
             )
             response_text = evaluator._call_api(messages)
             reported_word = parse_word_response(response_text, test_trial['target'])
@@ -194,8 +164,7 @@ def main():
                         help="Number of image-word pairs to study")
     parser.add_argument("--n-trials", type=int, default=None,
                         help="Number of test trials (default: n-images; resamples with replacement if larger)")
-    parser.add_argument("--max-context-pairs", type=int, default=None,
-                        help="Max pairs to send in context per trial (default: all pairs)")
+
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
                         help="Dataset to use")
     parser.add_argument("--output", type=str, default=None,
@@ -226,14 +195,13 @@ def main():
     print(f"  Models: {[e.get_name() for e in evaluators]}")
     print(f"  N pairs: {args.n_images}")
     print(f"  N trials: {args.n_trials or args.n_images}")
-    print(f"  Max context pairs: {args.max_context_pairs or 'all'}")
+
     print(f"  Dataset: {args.dataset}")
 
     results = run_evaluation(
         evaluators,
         args.n_images,
         args.dataset,
-        max_context_pairs=args.max_context_pairs,
         n_trials=args.n_trials,
     )
 
@@ -256,7 +224,7 @@ def main():
                 }
                 for model in results
             },
-            "max_context_pairs": args.max_context_pairs,
+
         },
         **results,
     }

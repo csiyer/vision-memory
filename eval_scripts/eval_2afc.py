@@ -29,30 +29,8 @@ from src.metrics import calculate_2afc_metrics
 from src.plotting import default_plots_dir, plot_2afc_all
 
 
-def build_messages(evaluator, study_images, study_prompt, test_images, test_prompt, max_context_images=None):
-    """Build API messages for 2-AFC trial with simulated acknowledgment.
-
-    Args:
-        evaluator: The evaluator instance
-        study_images: List of study phase images
-        study_prompt: Prompt for study phase
-        test_images: List of test images (usually 2 for 2-AFC)
-        test_prompt: Prompt for test phase
-        max_context_images: Max images to send in context. If None, uses provider defaults.
-    """
-    # Determine max study images based on provider limits and user config
-    if "Anthropic" in type(evaluator).__name__:
-        provider_limit = 100 - len(test_images)  # Reserve space for test images
-    else:
-        provider_limit = len(study_images)  # No limit for other providers
-
-    if max_context_images is not None:
-        max_study = min(max_context_images, provider_limit)
-    else:
-        max_study = provider_limit
-
-    if len(study_images) > max_study:
-        study_images = study_images[:max_study]
+def build_messages(evaluator, study_images, study_prompt, test_images, test_prompt):
+    """Build API messages for 2-AFC trial with simulated acknowledgment."""
 
     # Study phase
     study_content = [{"type": "text", "text": study_prompt}]
@@ -95,20 +73,12 @@ def parse_response(text):
     return -1
 
 
-def run_evaluation(evaluators, n_images=20, n_trials=None, foil_type='novel', dataset='things', max_context_images=None):
+def run_evaluation(evaluators, n_images=20, n_trials=None, foil_type='novel', dataset='things'):
     """Run 2-AFC evaluation on all evaluators.
 
     Each trial is an independent study+test episode: a fresh set of n_images is
     sampled, studied, then tested on one 2-AFC question. n_trials controls how
     many independent episodes are run.
-
-    Args:
-        evaluators: List of evaluator instances
-        n_images: Number of images in study sequence per trial
-        n_trials: Number of independent study+test episodes (default: n_images)
-        foil_type: Type of foils ('novel', 'exemplar', 'state', 'all')
-        dataset: Dataset to use ('things', 'Brady2008')
-        max_context_images: Max images to send in context per trial. If None, sends all study images.
     """
     n_trials = n_trials if n_trials is not None else n_images
 
@@ -116,11 +86,11 @@ def run_evaluation(evaluators, n_images=20, n_trials=None, foil_type='novel', da
     for evaluator in evaluators:
         print(f"\n=== {evaluator.get_name()} ===")
 
-        actual_context = max_context_images if max_context_images else n_images
-        if "Anthropic" in type(evaluator).__name__:
-            actual_context = min(actual_context, 98)
-        if actual_context < n_images:
-            print(f"  Note: Sending {actual_context} of {n_images} study images to context")
+        print(f"  Probing capacity for {n_images} images...", end=" ", flush=True)
+        if not evaluator.check_image_capacity(n_images + 2):
+            print(f"SKIP — model rejected {n_images} images in a single request")
+            continue
+        print("OK")
 
         results = []
 
@@ -135,7 +105,6 @@ def run_evaluation(evaluators, n_images=20, n_trials=None, foil_type='novel', da
                 trial_data['study_prompt'],
                 test_trial['images'],
                 test_trial['prompt'],
-                max_context_images=max_context_images
             )
             response_text = evaluator._call_api(messages)
             response = parse_response(response_text)
@@ -171,8 +140,7 @@ def main():
                         help="Number of images in study sequence")
     parser.add_argument("--n-trials", type=int, default=None,
                         help="Number of test trials (default: same as n-images)")
-    parser.add_argument("--max-context-images", type=int, default=None,
-                        help="Max images to send in context per trial (default: all study images)")
+
     parser.add_argument("--foil-type", choices=["novel", "exemplar", "state", "all"], default="novel",
                         help="Type of foils to use")
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
@@ -221,7 +189,7 @@ def main():
     print(f"  Models: {[e.get_name() for e in evaluators]}")
     print(f"  N images (study): {args.n_images}")
     print(f"  N trials (test): {n_trials}")
-    print(f"  Max context images: {args.max_context_images or 'all'}")
+
     print(f"  Foil type: {args.foil_type}")
     print(f"  Dataset: {args.dataset}")
 
@@ -231,7 +199,6 @@ def main():
         n_trials,
         args.foil_type,
         args.dataset,
-        max_context_images=args.max_context_images
     )
 
     # Build output with metadata at the top
@@ -252,7 +219,7 @@ def main():
                 }
                 for model in results
             },
-            "max_context_images": args.max_context_images,
+
             "foil_type": args.foil_type,
         },
         **results,

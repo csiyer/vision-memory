@@ -8,7 +8,7 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# Continuous Recognition: gemini-2.5-flash
+# Continuous Recognition: gemini-3.1-flash-image-preview
 # 1M token context => all sizes supported; skip n<5 (degenerate trial count)
 
 set -e
@@ -22,7 +22,7 @@ sleep 180
 
 MODEL="gemini"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250)
+SIZES=(1 2 5 10 50 100 250)
 DATASETS=("things" "Brady2008")
 
 mkdir -p "$RESULTS_DIR" logs
@@ -30,7 +30,7 @@ mkdir -p "$RESULTS_DIR" logs
 check_existing_result() {
     local dataset="$1"
     local n_images="$2"
-    [ -f "$RESULTS_DIR/results_continuous_gemini-2.5-flash_n${n_images}_${dataset}.json" ]
+    [ -f "$RESULTS_DIR/results_continuous_gemini-3.1-flash-image-preview_n${n_images}_${dataset}.json" ]
 }
 
 echo "========== Continuous Recognition: $MODEL =========="
