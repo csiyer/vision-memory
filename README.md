@@ -2,7 +2,14 @@
 
 This repository implements classic psychological tasks for evaluating visual episodic memory in models. Many of these paradigms are often run with words in the human literature; here, the emphasis is on image stimuli so models must learn from raw visual input.
 
-Make sure to unzip `memory_datasets.zip` into `memory_datasets/` before running tasks that rely on Brady stimuli, MST stimuli, local THINGS assets, or bundled word pools.
+Make sure to unzip the dataset archives from the repository root before running the tasks:
+
+```bash
+unzip memory_datasets_brady.zip
+unzip memory_datasets_mst.zip
+```
+
+Both archives contain the top-level `memory_datasets/` directory, so unzipping both will merge the Brady, wordpool, color, and MST assets into the expected layout. The full THINGS image set is not bundled.
 
 ## 1. Recognition Memory
 
