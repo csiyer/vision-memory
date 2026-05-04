@@ -1,20 +1,19 @@
 import random
-import sys
 from itertools import combinations
-from pathlib import Path
 
-from stimuli import BradyDataset, ThingsDataset
+from stimuli import BradyDataset, DirectoryDataset, ThingsDataset
 
 
 class SerialOrderMemoryBase:
-    def __init__(self, dataset_name="things", n_images=20):
+    def __init__(self, dataset_name="Brady2008", n_images=20, image_dir=None):
         self.dataset_name = dataset_name
         self.n_images = n_images
+        self.image_dir = image_dir
         self.dataset = self._load_dataset()
 
     def _load_dataset(self):
-        if self.dataset_name == "things":
-            return ThingsDataset(n_categories=self.n_images)
+        if self.image_dir:
+            return DirectoryDataset(self.image_dir)
         if self.dataset_name == "Brady2008":
             return BradyDataset(type="Objects")
         return ThingsDataset(n_categories=self.n_images)
@@ -59,7 +58,7 @@ class SerialOrderMemoryTask(SerialOrderMemoryBase):
             test_phase.append(
                 {
                     "image": item["image"],
-                    "prompt": f"When in the sequence did this image occur (1-{n})?",
+                    "prompt": f"What position in the sequence did this image appear (1-{n})?",
                     "target": item["serial_position"],
                     "metadata": item["metadata"],
                 }
@@ -73,8 +72,8 @@ class SerialOrderMemoryTask(SerialOrderMemoryBase):
 
 
 class AFCSerialOrderMemoryTask(SerialOrderMemoryBase):
-    def __init__(self, dataset_name="things", n_images=20, n_tests=None):
-        super().__init__(dataset_name=dataset_name, n_images=n_images)
+    def __init__(self, dataset_name="Brady2008", n_images=20, n_tests=None, image_dir=None):
+        super().__init__(dataset_name=dataset_name, n_images=n_images, image_dir=image_dir)
         self.n_tests = n_tests
 
     def get_trials(self):
@@ -102,7 +101,7 @@ class AFCSerialOrderMemoryTask(SerialOrderMemoryBase):
             test_phase.append(
                 {
                     "images": [pair[0]["image"], pair[1]["image"]],
-                    "prompt": "Which of these two images appeared first in the study sequence? (1 or 2)",
+                    "prompt": "Which of these two images (1 or 2) appeared first in the study sequence?",
                     "target": target,
                     "metadata": {
                         "first_serial_position": min(first_item["serial_position"], second_item["serial_position"]),

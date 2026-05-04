@@ -1,34 +1,31 @@
 import numpy as np
-from scipy.stats import norm, pearsonr, spearmanr
+from scipy.stats import norm, spearmanr
 from sklearn.metrics import f1_score
 
 def calculate_metrics(responses, targets):
-    """
-    Calculate performance metrics for the continuous recognition task.
-    """
+    """Calculate performance metrics for the continuous recognition task."""
     responses = np.array(responses)
     targets = np.array(targets)
-    
+
     hits = np.sum((responses == 1) & (targets == 1))
     misses = np.sum((responses == 0) & (targets == 1))
     fas = np.sum((responses == 1) & (targets == 0))
     crs = np.sum((responses == 0) & (targets == 0))
-    
+
     n_old = hits + misses
     n_new = fas + crs
-    
+
     accuracy = (hits + crs) / (n_old + n_new) if (n_old + n_new) > 0 else 0
     hit_rate = hits / n_old if n_old > 0 else 0
     fa_rate = fas / n_new if n_new > 0 else 0
-    
+
     # Standard approximations for d-prime to avoid infinity
     adj_hit_rate = (hits + 0.5) / (n_old + 1) if n_old > 0 else 0.5
     adj_fa_rate = (fas + 0.5) / (n_new + 1) if n_new > 0 else 0.5
     d_prime = norm.ppf(adj_hit_rate) - norm.ppf(adj_fa_rate)
-    
-    # Weighted F1
+
     wf1 = f1_score(targets, responses, average='weighted', zero_division=0)
-    
+
     return {
         "accuracy": float(accuracy),
         "hit_rate": float(hit_rate),
@@ -43,33 +40,41 @@ def calculate_hit_rate_by_delay(responses, targets, delays):
     responses = np.array(responses)
     targets = np.array(targets)
     delays = np.array(delays)
-    
+
     old_mask = (targets == 1)
     old_responses = responses[old_mask]
     old_delays = delays[old_mask]
-    
+
     unique_delays = np.unique([d for d in old_delays if d is not None])
     hr_by_delay = {}
-    
+
     for d in unique_delays:
         mask = (old_delays == d)
         hr_by_delay[int(d)] = float(np.mean(old_responses[mask]))
-        
+
     return hr_by_delay
 
 def calculate_serial_order_metrics(reported_positions, actual_positions):
     """Metrics for serial order memory tasks with position reports."""
     reported = np.array(reported_positions)
     actual = np.array(actual_positions)
-    
+
     errors = np.abs(reported - actual)
     avg_error = np.mean(errors)
     correct = np.sum(errors == 0)
-    
+
+    rho = pval = None
+    if len(reported) > 1:
+        rho_val, pval_val = spearmanr(reported, actual)
+        rho = float(rho_val)
+        pval = float(pval_val)
+
     return {
         "average_error": float(avg_error),
         "n_correct": int(correct),
-        "accuracy": float(correct / len(actual)) if len(actual) > 0 else 0
+        "accuracy": float(correct / len(actual)) if len(actual) > 0 else 0,
+        "spearman_rho": rho,
+        "spearman_pval": pval,
     }
 
 def calculate_afc_serial_order_metrics(results):
@@ -102,49 +107,136 @@ def calculate_afc_serial_order_metrics(results):
         },
     }
 
-def calculate_color_metrics(reported_colors, actual_colors, n_colors=36):
-    """
-    Metrics for color memory task.
-    Precision and guess rate are often estimated via mixture models,
-    but here we provide basic error metrics.
+def calculate_color_metrics(reported_colors, actual_colors, n_colors=360):
+    """Metrics for continuous color reports on a circular wheel.
+
+    By default, values are interpreted as degrees in [0, 360). Older callers can
+    still pass a different n_colors value for discrete indexed reports.
     """
     reported = np.array(reported_colors)
     actual = np.array(actual_colors)
-    
-    # Circular error
+
     diff = (reported - actual + n_colors / 2) % n_colors - n_colors / 2
     abs_error = np.abs(diff)
-    
-    # Heuristic guess rate: proportion of errors > threshold
+
     threshold = n_colors / 4
     guess_rate = np.mean(abs_error > threshold)
-    
+
     return {
         "average_abs_error": float(np.mean(abs_error)),
         "guess_rate_heuristic": float(guess_rate),
         "precision_heuristic": float(1.0 / np.std(diff)) if np.std(diff) > 0 else 0
     }
 
+def calculate_named_color_metrics(reported_colors, actual_colors):
+    """Metrics for the named color memory task (accuracy, per-color breakdown)."""
+    if not reported_colors:
+        return {"accuracy": 0, "n_correct": 0, "total": 0, "accuracy_by_color": {}}
+
+    n_correct = 0
+    by_color = {}
+
+    for reported, actual in zip(reported_colors, actual_colors):
+        correct = int(str(reported).strip().lower() == str(actual).strip().lower())
+        n_correct += correct
+        by_color.setdefault(str(actual), []).append(correct)
+
+    total = len(reported_colors)
+    return {
+        "accuracy": n_correct / total if total > 0 else 0,
+        "n_correct": n_correct,
+        "total": total,
+        "accuracy_by_color": {
+            color: float(np.mean(vals)) for color, vals in sorted(by_color.items())
+        },
+    }
+
 def calculate_pam_metrics(results):
-    """Calculates accuracy for Paired Associate Memory."""
+    """Calculates accuracy for Paired Associate Memory (word or image-image variants)."""
     if not results:
         return {"accuracy": 0, "n_correct": 0, "total": 0}
-    
+
     n_correct = 0
     total = len(results)
-    
+
     for res in results:
         target = str(res.get('target', '')).strip().lower()
         reported = str(res.get('reported', '')).strip().lower()
         if target == reported:
             n_correct += 1
-            
+
     accuracy = n_correct / total if total > 0 else 0
     return {
         "accuracy": accuracy,
         "n_correct": n_correct,
         "total": total
     }
+
+def calculate_mst_metrics(results):
+    """
+    Metrics for the Mnemonic Similarity Task.
+
+    Each result dict must have:
+      - type: 'target' | 'lure' | 'foil'
+      - reported: model response ('old' | 'similar' | 'new')
+      - metadata: dict with optional 'bin' (int 1-5) for lure items
+
+    Returns hit_rate, false_alarm_rate, LDI (overall and per bin), and
+    per-trial-type accuracy.
+    """
+    if not results:
+        return {
+            "hit_rate": 0, "false_alarm_rate": 0,
+            "ldi": 0, "ldi_by_bin": {},
+            "target_accuracy": 0, "lure_accuracy": 0, "foil_accuracy": 0,
+            "p_similar_lure": 0, "p_similar_foil": 0,
+        }
+
+    def _norm(s):
+        return str(s).strip().lower() if s is not None else ""
+
+    targets = [r for r in results if r.get("type") == "target"]
+    lures   = [r for r in results if r.get("type") == "lure"]
+    foils   = [r for r in results if r.get("type") == "foil"]
+
+    def _rate(items, response):
+        if not items:
+            return 0.0
+        return float(np.mean([1 if _norm(r.get("reported")) == response else 0 for r in items]))
+
+    hit_rate        = _rate(targets, "old")
+    fa_rate         = _rate(foils, "old")
+    p_sim_lure      = _rate(lures, "similar")
+    p_sim_foil      = _rate(foils, "similar")
+    ldi             = p_sim_lure - p_sim_foil
+
+    # Target acc = p("old"|target), lure acc = p("similar"|lure), foil acc = p("new"|foil)
+    target_accuracy = hit_rate
+    lure_accuracy   = p_sim_lure
+    foil_accuracy   = _rate(foils, "new")
+
+    # LDI per similarity bin
+    ldi_by_bin = {}
+    for bin_num in range(1, 6):
+        bin_lures = [r for r in lures if r.get("metadata", {}).get("bin") == bin_num]
+        if bin_lures:
+            ldi_by_bin[bin_num] = float(_rate(bin_lures, "similar") - p_sim_foil)
+
+    return {
+        "hit_rate": float(hit_rate),
+        "false_alarm_rate": float(fa_rate),
+        "p_similar_lure": float(p_sim_lure),
+        "p_similar_foil": float(p_sim_foil),
+        "ldi": float(ldi),
+        "ldi_by_bin": ldi_by_bin,
+        "target_accuracy": float(target_accuracy),
+        "lure_accuracy": float(lure_accuracy),
+        "foil_accuracy": float(foil_accuracy),
+        "n_targets": len(targets),
+        "n_lures": len(lures),
+        "n_foils": len(foils),
+    }
+
 
 def calculate_associative_inference_metrics(results):
     """Calculates 2-AFC associative inference accuracy."""

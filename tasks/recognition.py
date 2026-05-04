@@ -1,19 +1,17 @@
 import random
 
-from stimuli import BradyDataset, ThingsDataset
+from stimuli import BradyDataset, DirectoryDataset, ThingsDataset
 
 
 class RecognitionTaskBase:
-    def __init__(self, dataset_name="things", n_images=20):
+    def __init__(self, dataset_name="Brady2008", n_images=20, image_dir=None):
         self.dataset_name = dataset_name
         self.n_images = n_images
+        self.image_dir = image_dir
 
     def _load_recognition_dataset(self, exemplars_per_category=1):
-        if self.dataset_name == "things":
-            return ThingsDataset(
-                n_categories=self.n_images,
-                exemplars_per_category=exemplars_per_category,
-            )
+        if self.image_dir:
+            return DirectoryDataset(self.image_dir)
         if self.dataset_name == "Brady2008":
             return BradyDataset(type="Objects")
         return ThingsDataset(
@@ -23,17 +21,15 @@ class RecognitionTaskBase:
 
 
 class ContinuousRecognitionTask(RecognitionTaskBase):
-    def __init__(self, dataset_name="things", n_images=50, min_delay=2, max_delay=15, p_old=0.5):
-        super().__init__(dataset_name=dataset_name, n_images=n_images)
+    def __init__(self, dataset_name="Brady2008", n_images=50, min_delay=2, max_delay=15,
+                 p_old=0.5, image_dir=None):
+        super().__init__(dataset_name=dataset_name, n_images=n_images, image_dir=image_dir)
         self.min_delay = min_delay
         self.max_delay = max_delay
         self.p_old = p_old
         self.dataset = self._load_recognition_dataset()
 
     def generate_sequence(self):
-        """
-        Generates a sequence of images satisfying delay and p_old constraints.
-        """
         n_unique = min(self.n_images, len(self.dataset))
         total_trials = int(n_unique / (1 - self.p_old))
         n_old_needed = total_trials - n_unique
@@ -92,7 +88,7 @@ class ContinuousRecognitionTask(RecognitionTaskBase):
                 )
             else:
                 if waiting_room:
-                    idx_in_waiting, img_idx, t_intro = waiting_room.pop(0)
+                    img_idx, t_intro = waiting_room.pop(0)
                     sequence.append(
                         {
                             "image_idx": img_idx,
@@ -114,7 +110,7 @@ class ContinuousRecognitionTask(RecognitionTaskBase):
             trials.append(
                 {
                     "image": self.dataset.get_image(item["image_idx"]),
-                    "prompt": "Has this image already appeared in the sequence (yes/no)?",
+                    "prompt": "Has this image already appeared in the sequence? (yes/no)",
                     "target": item["target"],
                     "metadata": {
                         **self.dataset.get_metadata(item["image_idx"]),
@@ -126,11 +122,13 @@ class ContinuousRecognitionTask(RecognitionTaskBase):
 
 
 class AFCRecognitionTask(RecognitionTaskBase):
-    def __init__(self, dataset_name="things", n_images=20, foil_type="all"):
-        super().__init__(dataset_name=dataset_name, n_images=n_images)
+    def __init__(self, dataset_name="Brady2008", n_images=20, foil_type="all", image_dir=None):
+        super().__init__(dataset_name=dataset_name, n_images=n_images, image_dir=image_dir)
         self.foil_type = foil_type
 
-        if dataset_name == "things":
+        if image_dir:
+            self.dataset = self._load_recognition_dataset()
+        elif dataset_name == "things":
             if foil_type == "state":
                 raise ValueError("State foils not supported for THINGS dataset.")
             exemplars = 2 if foil_type in ["exemplar", "all"] else 1
@@ -140,6 +138,21 @@ class AFCRecognitionTask(RecognitionTaskBase):
 
     def _get_pairs(self, foil_type, n):
         pairs = []
+
+        if self.image_dir:
+            # Directory dataset only supports novel foils
+            indices = list(range(len(self.dataset)))
+            random.shuffle(indices)
+            for i in range(0, min(n * 2, len(indices) - 1), 2):
+                pairs.append(
+                    {
+                        "original": self.dataset.get_image(indices[i]),
+                        "foil": self.dataset.get_image(indices[i + 1]),
+                        "type": "novel",
+                    }
+                )
+            return pairs
+
         if self.dataset_name == "things":
             if foil_type == "novel" or foil_type == "all":
                 n_novel = n if foil_type == "novel" else n // 2
@@ -221,14 +234,19 @@ class AFCRecognitionTask(RecognitionTaskBase):
 
         test_phase = []
         for pair in pairs:
-            images = [pair["original"], pair["foil"]]
-            random.shuffle(images)
-            target = 1 if images[0] == pair["original"] else 2
+            correct_img = pair["original"]
+            foil_img = pair["foil"]
+            if random.random() < 0.5:
+                images = [correct_img, foil_img]
+                target = 1
+            else:
+                images = [foil_img, correct_img]
+                target = 2
 
             test_phase.append(
                 {
                     "images": images,
-                    "prompt": "Which of these two images was in the sequence before? (1 or 2)",
+                    "prompt": "Which of these two images (1 or 2) was in the study sequence?",
                     "target": target,
                     "type": pair["type"],
                 }
