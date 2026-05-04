@@ -1,0 +1,49 @@
+{
+  "extraction": {
+    "seed": 13,
+    "device": "mps",
+    "ttt_learning_rate": 1.0,
+    "representation": "memory-conditioned final pooled feature vector",
+    "feature_dim": 768,
+    "num_layers": 12,
+    "train_categories_loaded": 600,
+    "heldout_categories_loaded": 200,
+    "excluded_local_categories": 200,
+    "train_probe_rows": 2000,
+    "heldout_probe_rows": 1000,
+    "min_sequence_length": 1,
+    "max_sequence_length": 30
+  },
+  "final_train_summary": [
+    {
+      "split": "train",
+      "foil_type": "overall",
+      "num_training_rows": 2000,
+      "num_rows": 2000,
+      "num_pairs": 1000,
+      "accuracy": 0.8715,
+      "auc": 0.948936,
+      "pairwise_accuracy": 0.944
+    },
+    {
+      "split": "train",
+      "foil_type": "novel",
+      "num_training_rows": 2000,
+      "num_rows": 1000,
+      "num_pairs": 500,
+      "accuracy": 0.812,
+      "auc": 0.9112239999999998,
+      "pairwise_accuracy": 0.908
+    },
+    {
+      "split": "train",
+      "foil_type": "exemplar",
+      "num_training_rows": 2000,
+      "num_rows": 1000,
+      "num_pairs": 500,
+      "accuracy": 0.931,
+      "auc": 0.981076,
+      "pairwise_accuracy": 0.98
+    }
+  ]
+}
