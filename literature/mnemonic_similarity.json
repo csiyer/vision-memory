@@ -1,0 +1,36 @@
+{
+    "VanderlipStark2024_pooled": {
+        "source": "Vanderlip & Stark 2024 (Frontiers Hum Neurosci) — weighted average across E1–E5 (all sequence_length=192 experiments)",
+        "note": "E6 excluded (sequence_length=108). E7a/E7b excluded (test-retest design; E7b shows severely degraded performance, LDI=0.08, likely a practice-effect artifact). Weighted by n.",
+        "experiments_included": [
+            "E1 (n=53)",
+            "E2 (n=46)",
+            "E3 (n=81)",
+            "E4 (n=53)",
+            "E5 (n=177)"
+        ],
+        "n_subjects": 410,
+        "sequence_length": 192,
+        "n_targets": 64,
+        "n_lures": 64,
+        "n_foils": 64,
+        "ldi": 0.306,
+        "target_accuracy": 0.833,
+        "lure_accuracy": 0.486,
+        "foil_accuracy": 0.831
+    },
+    "Kirwan2007_ldi_by_bin": {
+        "source": "Kirwan & Stark 2007 (Hippocampus) — approximate values read from published figures",
+        "note": "Per-bin LDI for young adults. Bin 1 = most similar to target, Bin 5 = least similar. Values are approximate — exact tabular data not published in accessible form. Shape (low at Bin 1, peak at Bin 3, gradual decline) is well-replicated across the MST literature.",
+        "approximate": true,
+        "n_subjects": 13,
+        "sequence_length": 128,
+        "ldi_by_bin": {
+            "1": 0.10,
+            "2": 0.25,
+            "3": 0.40,
+            "4": 0.38,
+            "5": 0.28
+        }
+    }
+}
