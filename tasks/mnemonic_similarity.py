@@ -1,4 +1,5 @@
 import csv
+import json
 import random
 from pathlib import Path
 
@@ -16,12 +17,20 @@ class MSTDataset:
     Set numbers 1-6 are used by default.
     """
 
-    def __init__(self, set_numbers=None, root="memory_datasets/MST"):
+    def __init__(self, set_numbers=None, root="memory_datasets/MST", source="local",
+                 repo_id="chrisiyer/vision-memory-tasks"):
         if set_numbers is None:
             set_numbers = [1, 2, 3, 4, 5, 6]
+        self.source = source
+        self.repo_id = repo_id
+        if source not in {"local", "hf"}:
+            raise ValueError(f"Unsupported MSTDataset source={source!r}. Expected 'local' or 'hf'.")
         self.root = Path(root)
         self.pairs = []  # list of dicts: target_path, lure_path, bin, set_number, item_id
-        self._load(set_numbers)
+        if source == "hf":
+            self._load_hf(set_numbers)
+        else:
+            self._load(set_numbers)
 
     def _load(self, set_numbers):
         for set_num in set_numbers:
@@ -87,6 +96,64 @@ class MSTDataset:
     def __len__(self):
         return len(self.pairs)
 
+    def get_image(self, pair, role):
+        if self.source == "hf":
+            image_id = pair[f"{role}_image_id"]
+            return Image.open(self._hf_image_path(image_id)).convert("RGB")
+        return Image.open(pair[f"{role}_path"]).convert("RGB")
+
+    def _load_hf(self, set_numbers):
+        from huggingface_hub import hf_hub_download
+
+        self.hf_hub_download = hf_hub_download
+        pairs_path = hf_hub_download(
+            repo_id=self.repo_id,
+            repo_type="dataset",
+            filename="data/mst/pairs.jsonl",
+        )
+        with open(pairs_path, "r", encoding="utf-8") as f:
+            for line in f:
+                if not line.strip():
+                    continue
+                pair = json.loads(line)
+                if pair["set_number"] in set_numbers:
+                    self.pairs.append(pair)
+
+    def _hf_image_path(self, image_id):
+        _, set_name, file_name = image_id.split("/", 2)
+        return self.hf_hub_download(
+            repo_id=self.repo_id,
+            repo_type="dataset",
+            filename=f"data/mst/images/{set_name}/{file_name}",
+        )
+
+
+def balanced_sample_by_bin(pairs, n):
+    groups = {}
+    for pair in pairs:
+        groups.setdefault(pair.get("bin"), []).append(pair)
+    for group in groups.values():
+        random.shuffle(group)
+
+    selected = []
+    bins = sorted(groups, key=lambda value: (value is None, value))
+    while len(selected) < n:
+        progressed = False
+        round_bins = bins[:]
+        random.shuffle(round_bins)
+        for bin_id in round_bins:
+            if len(selected) >= n:
+                break
+            if groups[bin_id]:
+                selected.append(groups[bin_id].pop())
+                progressed = True
+        if not progressed:
+            break
+    if len(selected) < n:
+        raise ValueError(f"Could only sample {len(selected)} bin-balanced MST pairs; requested {n}.")
+    random.shuffle(selected)
+    return selected
+
 
 class MnemonicSimilarityTask:
     """
@@ -106,11 +173,12 @@ class MnemonicSimilarityTask:
         "Respond with one word: old, similar, or new."
     )
 
-    def __init__(self, set_numbers=None, n_study=128, root="memory_datasets/MST"):
+    def __init__(self, set_numbers=None, n_study=128, root="memory_datasets/MST",
+                 source="local", repo_id="chrisiyer/vision-memory-tasks"):
         if set_numbers is None:
             set_numbers = [1, 2, 3, 4, 5, 6]
         self.n_study = n_study
-        self.dataset = MSTDataset(set_numbers=set_numbers, root=root)
+        self.dataset = MSTDataset(set_numbers=set_numbers, root=root, source=source, repo_id=repo_id)
 
     def get_trials(self):
         pairs = list(self.dataset.pairs)
@@ -118,22 +186,20 @@ class MnemonicSimilarityTask:
             raise ValueError("No MST stimuli loaded. Check memory_datasets/MST/ directory.")
 
         n = min(self.n_study, len(pairs) // 2)  # need half for foils
-        random.shuffle(pairs)
-        studied = pairs[:n]
-        unstudied = pairs[n:]
-
-        n_foils = min(n, len(unstudied))
-        foils = random.sample(unstudied, n_foils)
+        studied = balanced_sample_by_bin(pairs, n)
+        studied_ids = {self._pair_id(pair) for pair in studied}
+        unstudied = [pair for pair in pairs if self._pair_id(pair) not in studied_ids]
+        foils = balanced_sample_by_bin(unstudied, n)
 
         study_sequence = [
-            Image.open(p["target_path"]).convert("RGB") for p in studied
+            self.dataset.get_image(p, "target") for p in studied
         ]
 
         test_items = []
 
         for pair in studied:
             test_items.append({
-                "image": Image.open(pair["target_path"]).convert("RGB"),
+                "image": self.dataset.get_image(pair, "target"),
                 "prompt": self.PROMPT,
                 "target": "old",
                 "type": "target",
@@ -146,7 +212,7 @@ class MnemonicSimilarityTask:
 
         for pair in studied:
             test_items.append({
-                "image": Image.open(pair["lure_path"]).convert("RGB"),
+                "image": self.dataset.get_image(pair, "lure"),
                 "prompt": self.PROMPT,
                 "target": "similar",
                 "type": "lure",
@@ -159,7 +225,7 @@ class MnemonicSimilarityTask:
 
         for pair in foils:
             test_items.append({
-                "image": Image.open(pair["target_path"]).convert("RGB"),
+                "image": self.dataset.get_image(pair, "target"),
                 "prompt": self.PROMPT,
                 "target": "new",
                 "type": "foil",
@@ -180,6 +246,9 @@ class MnemonicSimilarityTask:
             "study_sequence": study_sequence,
             "test_phase": test_items,
         }
+
+    def _pair_id(self, pair):
+        return pair.get("pair_id") or (pair["set_number"], pair["item_id"])
 
 
 if __name__ == "__main__":

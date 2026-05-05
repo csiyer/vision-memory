@@ -6,7 +6,8 @@ from stimuli import BradyDataset, DirectoryDataset, ThingsDataset
 
 class AssociativeInferenceTask:
     def __init__(self, dataset_name="Brady2008", n_trials=20, pair_type="image",
-                 wordpool_path="memory_datasets/wasnorm_wordpool.txt", image_dir=None):
+                 wordpool_path="memory_datasets/wasnorm_wordpool.txt", image_dir=None,
+                 source="local", repo_id="chrisiyer/vision-memory-tasks"):
         if n_trials % 2 != 0:
             raise ValueError("n_trials must be even so the study phase can split into AB and BC pairs.")
 
@@ -15,16 +16,12 @@ class AssociativeInferenceTask:
         self.n_pairs = n_trials // 2
         self.pair_type = pair_type
         self.image_dir = image_dir
+        self.source = source
+        self.repo_id = repo_id
         self.dataset = self._load_dataset()
 
         if pair_type == "word":
-            wordpool_path = Path(wordpool_path)
-            if wordpool_path.exists():
-                with open(wordpool_path, "r") as f:
-                    self.wordpool = [line.strip() for line in f if line.strip()]
-            else:
-                print(f"Warning: Wordpool not found at {wordpool_path}, using dummy words.")
-                self.wordpool = [f"WORD{i}" for i in range(1000)]
+            self.wordpool = self._load_wordpool(wordpool_path)
 
     def _load_dataset(self):
         # Word variant needs A and B images; image variant needs A, B, and C images.
@@ -32,8 +29,27 @@ class AssociativeInferenceTask:
         if self.image_dir:
             return DirectoryDataset(self.image_dir)
         if self.dataset_name == "Brady2008":
-            return BradyDataset(type="Objects")
+            return BradyDataset(type="Objects", source=self.source, repo_id=self.repo_id)
         return ThingsDataset(n_categories=n_required)
+
+    def _load_wordpool(self, wordpool_path):
+        if self.source == "hf":
+            from huggingface_hub import hf_hub_download
+
+            path = hf_hub_download(
+                repo_id=self.repo_id,
+                repo_type="dataset",
+                filename="data/wordpool/wasnorm_wordpool.txt",
+            )
+            with open(path, "r") as f:
+                return [line.strip() for line in f if line.strip()]
+
+        wordpool_path = Path(wordpool_path)
+        if wordpool_path.exists():
+            with open(wordpool_path, "r") as f:
+                return [line.strip() for line in f if line.strip()]
+        print(f"Warning: Wordpool not found at {wordpool_path}, using dummy words.")
+        return [f"WORD{i}" for i in range(1000)]
 
     def get_trials(self):
         if self.pair_type == "word":
@@ -43,8 +59,8 @@ class AssociativeInferenceTask:
     def _get_image_trials(self):
         n_available = len(self.dataset)
         n_pairs = min(self.n_pairs, n_available // 3)
-        if n_pairs < 2:
-            raise ValueError("Associative inference requires at least 2 latent ABC chains.")
+        if n_pairs < 1:
+            raise ValueError("Associative inference requires at least 1 latent ABC chain.")
 
         indices = list(range(n_available))
         random.shuffle(indices)
@@ -116,7 +132,22 @@ class AssociativeInferenceTask:
                 }
             )
 
-        test_phase = self._build_test_phase(chain_items, key="C", image_key="image")
+        fallback_foil = None
+        if n_pairs == 1:
+            unused_indices = indices[n_pairs * 3:]
+            if not unused_indices:
+                raise ValueError("Associative inference with one image chain requires one extra foil image.")
+            foil_idx = unused_indices[0]
+            fallback_foil = {
+                "image": self.dataset.get_image(foil_idx),
+                "metadata": {
+                    **self.dataset.get_metadata(foil_idx),
+                    "role": "foil_C",
+                    "chain_index": None,
+                },
+            }
+
+        test_phase = self._build_test_phase(chain_items, key="C", image_key="image", fallback_foil=fallback_foil)
 
         return {
             "study_prompt": (
@@ -130,8 +161,8 @@ class AssociativeInferenceTask:
     def _get_word_trials(self):
         n_available = len(self.dataset)
         n_pairs = min(self.n_pairs, n_available // 2)
-        if n_pairs < 2:
-            raise ValueError("Associative inference requires at least 2 latent ABC chains.")
+        if n_pairs < 1:
+            raise ValueError("Associative inference requires at least 1 latent ABC chain.")
 
         indices = list(range(n_available))
         random.shuffle(indices)
@@ -139,7 +170,7 @@ class AssociativeInferenceTask:
 
         a_indices = selected_indices[:n_pairs]
         b_indices = selected_indices[n_pairs:2 * n_pairs]
-        words = random.sample(self.wordpool, n_pairs)
+        words = random.sample(self.wordpool, n_pairs + (1 if n_pairs == 1 else 0))
 
         chain_items = []
         for chain_index in range(n_pairs):
@@ -200,7 +231,14 @@ class AssociativeInferenceTask:
                 }
             )
 
-        test_phase = self._build_word_test_phase(chain_items)
+        fallback_word = None
+        if n_pairs == 1:
+            fallback_word = {
+                "word": words[-1],
+                "metadata": {"role": "foil_C", "chain_index": None},
+            }
+
+        test_phase = self._build_word_test_phase(chain_items, fallback_word=fallback_word)
 
         return {
             "study_prompt": (
@@ -211,16 +249,19 @@ class AssociativeInferenceTask:
             "test_phase": test_phase,
         }
 
-    def _build_test_phase(self, chain_items, key, image_key):
+    def _build_test_phase(self, chain_items, key, image_key, fallback_foil=None):
         n_pairs = len(chain_items)
         test_phase = []
 
         for chain in chain_items:
             foil_options = [idx for idx in range(n_pairs) if idx != chain["chain_index"]]
-            foil_chain = chain_items[random.choice(foil_options)]
+            foil_chain = chain_items[random.choice(foil_options)] if foil_options else None
 
             correct_img = chain[key][image_key]
-            foil_img = foil_chain[key][image_key]
+            foil_item = foil_chain[key] if foil_chain is not None else fallback_foil
+            if foil_item is None:
+                raise ValueError("Associative inference requires a foil option.")
+            foil_img = foil_item[image_key]
 
             if random.random() < 0.5:
                 images = [correct_img, foil_img]
@@ -239,23 +280,26 @@ class AssociativeInferenceTask:
                         "chain_index": chain["chain_index"],
                         "cue_item": chain["A"]["metadata"],
                         "correct_option": chain[key]["metadata"],
-                        "foil_option": foil_chain[key]["metadata"],
+                        "foil_option": foil_item["metadata"],
                     },
                 }
             )
 
         return test_phase
 
-    def _build_word_test_phase(self, chain_items):
+    def _build_word_test_phase(self, chain_items, fallback_word=None):
         n_pairs = len(chain_items)
         test_phase = []
 
         for chain in chain_items:
             foil_options = [idx for idx in range(n_pairs) if idx != chain["chain_index"]]
-            foil_chain = chain_items[random.choice(foil_options)]
+            foil_chain = chain_items[random.choice(foil_options)] if foil_options else None
 
             correct_word = chain["C"]["word"]
-            foil_word = foil_chain["C"]["word"]
+            foil_item = foil_chain["C"] if foil_chain is not None else fallback_word
+            if foil_item is None:
+                raise ValueError("Associative inference requires a foil option.")
+            foil_word = foil_item["word"]
 
             if random.random() < 0.5:
                 options = [correct_word, foil_word]
@@ -274,7 +318,7 @@ class AssociativeInferenceTask:
                         "chain_index": chain["chain_index"],
                         "cue_item": chain["A"]["metadata"],
                         "correct_option": chain["C"]["metadata"],
-                        "foil_option": foil_chain["C"]["metadata"],
+                        "foil_option": foil_item["metadata"],
                     },
                 }
             )

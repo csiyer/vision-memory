@@ -4,16 +4,19 @@ from stimuli import BradyDataset, DirectoryDataset, ThingsDataset
 
 
 class RecognitionTaskBase:
-    def __init__(self, dataset_name="Brady2008", n_images=20, image_dir=None):
+    def __init__(self, dataset_name="Brady2008", n_images=20, image_dir=None,
+                 source="local", repo_id="chrisiyer/vision-memory-tasks"):
         self.dataset_name = dataset_name
         self.n_images = n_images
         self.image_dir = image_dir
+        self.source = source
+        self.repo_id = repo_id
 
     def _load_recognition_dataset(self, exemplars_per_category=1):
         if self.image_dir:
             return DirectoryDataset(self.image_dir)
         if self.dataset_name == "Brady2008":
-            return BradyDataset(type="Objects")
+            return BradyDataset(type="Objects", source=self.source, repo_id=self.repo_id)
         return ThingsDataset(
             n_categories=self.n_images,
             exemplars_per_category=exemplars_per_category,
@@ -22,8 +25,14 @@ class RecognitionTaskBase:
 
 class ContinuousRecognitionTask(RecognitionTaskBase):
     def __init__(self, dataset_name="Brady2008", n_images=50, min_delay=2, max_delay=15,
-                 p_old=0.5, image_dir=None):
-        super().__init__(dataset_name=dataset_name, n_images=n_images, image_dir=image_dir)
+                 p_old=0.5, image_dir=None, source="local", repo_id="chrisiyer/vision-memory-tasks"):
+        super().__init__(
+            dataset_name=dataset_name,
+            n_images=n_images,
+            image_dir=image_dir,
+            source=source,
+            repo_id=repo_id,
+        )
         self.min_delay = min_delay
         self.max_delay = max_delay
         self.p_old = p_old
@@ -122,8 +131,15 @@ class ContinuousRecognitionTask(RecognitionTaskBase):
 
 
 class AFCRecognitionTask(RecognitionTaskBase):
-    def __init__(self, dataset_name="Brady2008", n_images=20, foil_type="all", image_dir=None):
-        super().__init__(dataset_name=dataset_name, n_images=n_images, image_dir=image_dir)
+    def __init__(self, dataset_name="Brady2008", n_images=20, foil_type="all", image_dir=None,
+                 source="local", repo_id="chrisiyer/vision-memory-tasks"):
+        super().__init__(
+            dataset_name=dataset_name,
+            n_images=n_images,
+            image_dir=image_dir,
+            source=source,
+            repo_id=repo_id,
+        )
         self.foil_type = foil_type
 
         if image_dir:
@@ -134,7 +150,7 @@ class AFCRecognitionTask(RecognitionTaskBase):
             exemplars = 2 if foil_type in ["exemplar", "all"] else 1
             self.dataset = self._load_recognition_dataset(exemplars_per_category=exemplars)
         else:
-            self.dataset = BradyDataset(type="Objects")
+            self.dataset = BradyDataset(type="Objects", source=source, repo_id=repo_id)
 
     def _get_pairs(self, foil_type, n):
         pairs = []
@@ -196,7 +212,7 @@ class AFCRecognitionTask(RecognitionTaskBase):
             return pairs
 
         if foil_type == "novel":
-            obj_ds = BradyDataset(type="Objects")
+            obj_ds = BradyDataset(type="Objects", source=self.source, repo_id=self.repo_id)
             indices = list(range(len(obj_ds)))
             random.shuffle(indices)
             for i in range(0, n * 2, 2):
@@ -208,9 +224,15 @@ class AFCRecognitionTask(RecognitionTaskBase):
                     }
                 )
         elif foil_type == "exemplar" or foil_type == "state":
-            ds = BradyDataset(type="Exemplar" if foil_type == "exemplar" else "State")
+            ds = BradyDataset(
+                type="Exemplar" if foil_type == "exemplar" else "State",
+                source=self.source,
+                repo_id=self.repo_id,
+            )
             for i in range(min(n, len(ds.pair_paths))):
                 original, foil = ds.get_pair(i)
+                if random.random() < 0.5:
+                    original, foil = foil, original
                 pairs.append(
                     {
                         "original": original,
