@@ -1,0 +1,55 @@
+{
+  "_metadata": {
+    "task": "2-AFC Recognition",
+    "timestamp": "20260427_121248",
+    "dataset": "Brady2008",
+    "n_images": 2,
+    "n_trials": 2,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.5,
+        "d_prime": 0.0,
+        "mem_score": 0.0
+      }
+    },
+    "max_context_images": null,
+    "foil_type": "state"
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "response": 2,
+        "correct": 1,
+        "foil_type": "state",
+        "raw_response": "2"
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "response": 2,
+        "correct": 0,
+        "foil_type": "state",
+        "raw_response": "2"
+      }
+    ],
+    "accuracy": 0.5,
+    "valid_accuracy": 0.5,
+    "d_prime": 0.0,
+    "mem_score": 0.0,
+    "n_trials": 2,
+    "n_valid_trials": 2,
+    "n_correct": 1,
+    "n_parse_failures": 0,
+    "accuracy_by_type": {
+      "state": 0.5
+    },
+    "d_prime_by_type": {
+      "state": 0.0
+    }
+  }
+}

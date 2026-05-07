@@ -1,0 +1,107 @@
+{
+  "_metadata": {
+    "task": "Continuous Recognition",
+    "timestamp": "20260429_062927",
+    "dataset": "things",
+    "n_images": 2,
+    "n_trials": 4,
+    "models": [
+      "molmo2-8b"
+    ],
+    "summary": {
+      "molmo2-8b": {
+        "accuracy": 0.5,
+        "d_prime": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "weighted_f1": 0.3333333333333333
+      }
+    },
+    "p_old": 0.5,
+    "min_delay": 0,
+    "max_delay": 2
+  },
+  "molmo2-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 0,
+        "response": 0,
+        "correct": 1,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 1,
+        "target": 0,
+        "response": 0,
+        "correct": 1,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "response": 0,
+        "correct": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 0
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "response": 0,
+        "correct": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 2
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "hit_rate": 0.0,
+    "false_alarm_rate": 0.0,
+    "d_prime": 0.0,
+    "weighted_f1": 0.3333333333333333,
+    "counts": {
+      "hits": 0,
+      "misses": 2,
+      "false_alarms": 0,
+      "correct_rejections": 2
+    },
+    "hit_rate_by_delay": {
+      "0": 0.0,
+      "2": 0.0
+    }
+  }
+}

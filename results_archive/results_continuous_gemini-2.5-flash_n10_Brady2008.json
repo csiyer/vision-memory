@@ -1,0 +1,39 @@
+{
+  "_metadata": {
+    "task": "Continuous Recognition",
+    "timestamp": "20260412_164031",
+    "dataset": "Brady2008",
+    "n_images": 10,
+    "n_trials": 0,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 0.0,
+        "d_prime": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "weighted_f1": NaN
+      }
+    },
+    "p_old": 0.5,
+    "min_delay": 2,
+    "max_delay": 15
+  },
+  "gemini-2.5-flash": {
+    "trials": [],
+    "accuracy": 0.0,
+    "hit_rate": 0.0,
+    "false_alarm_rate": 0.0,
+    "d_prime": 0.0,
+    "weighted_f1": NaN,
+    "counts": {
+      "hits": 0,
+      "misses": 0,
+      "false_alarms": 0,
+      "correct_rejections": 0
+    },
+    "hit_rate_by_delay": {}
+  }
+}

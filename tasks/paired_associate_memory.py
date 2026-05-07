@@ -1,7 +1,9 @@
 import random
+import sys
 from pathlib import Path
 
-from stimuli import BradyDataset, DirectoryDataset, ThingsDataset
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.stimuli import BradyDataset, DirectoryDataset, ThingsDataset
 
 
 class PairedAssociateMemoryTask:
@@ -79,7 +81,7 @@ class PairedAssociateMemoryTask:
         for i in test_indices:
             test_phase.append({
                 "image": pairs[i]["image"],
-                "prompt": "What was the word paired with this image?",
+                "prompt": "What was the word paired with this image? Respond with only the single word, nothing else.",
                 "target": pairs[i]["word"],
                 "metadata": pairs[i]["metadata"]
             })

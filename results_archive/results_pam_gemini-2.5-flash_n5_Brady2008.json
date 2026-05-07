@@ -1,0 +1,82 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260423_190953",
+    "dataset": "Brady2008",
+    "n_images": 5,
+    "n_trials": 5,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 1.0,
+        "n_correct": 5,
+        "total": 5
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "NEWSSTAND",
+        "reported": "newsstand",
+        "correct": 1,
+        "raw_response": "NEWSSTAND",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ALINENCA3.jpg",
+          "name": "ALINENCA3.jpg"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "SIDING",
+        "reported": "siding",
+        "correct": 1,
+        "raw_response": "SIDING",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ATINSTRAP.jpg",
+          "name": "ATINSTRAP.jpg"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "ALLEY",
+        "reported": "alley",
+        "correct": 1,
+        "raw_response": "ALLEY",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/AJACKOL23.jpg",
+          "name": "AJACKOL23.jpg"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "ORCHID",
+        "reported": "orchid",
+        "correct": 1,
+        "raw_response": "ORCHID",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Achampagnebo2.jpg",
+          "name": "Achampagnebo2.jpg"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "MAPLE",
+        "reported": "maple",
+        "correct": 1,
+        "raw_response": "MAPLE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26379054.thl.jpg",
+          "name": "26379054.thl.jpg"
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 5,
+    "total": 5
+  }
+}

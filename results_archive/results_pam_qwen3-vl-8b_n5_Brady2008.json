@@ -1,0 +1,82 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260427_133628",
+    "dataset": "Brady2008",
+    "n_images": 5,
+    "n_trials": 5,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 1.0,
+        "n_correct": 5,
+        "total": 5
+      }
+    },
+    "max_context_pairs": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "DELINQUENT",
+        "reported": "delinquent",
+        "correct": 1,
+        "raw_response": "DELINQUENT",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10049507.thl-1.jpg",
+          "name": "10049507.thl-1.jpg"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "CHEF",
+        "reported": "chef",
+        "correct": 1,
+        "raw_response": "CHEF",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26437077.thl.jpg",
+          "name": "26437077.thl.jpg"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "TWIG",
+        "reported": "twig",
+        "correct": 1,
+        "raw_response": "TWIG",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/AEAREXAM2.jpg",
+          "name": "AEAREXAM2.jpg"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "GHOST",
+        "reported": "ghost",
+        "correct": 1,
+        "raw_response": "GHOST",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Arunningshoe4.jpg",
+          "name": "Arunningshoe4.jpg"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "VOLUNTEER",
+        "reported": "volunteer",
+        "correct": 1,
+        "raw_response": "VOLUNTEER",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/labyrinthe.jpg",
+          "name": "labyrinthe.jpg"
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 5,
+    "total": 5
+  }
+}

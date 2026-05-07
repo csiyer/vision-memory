@@ -1,7 +1,9 @@
 import random
+import sys
 from pathlib import Path
 
-from stimuli import BradyDataset, DirectoryDataset, ThingsDataset
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.stimuli import BradyDataset, DirectoryDataset, ThingsDataset
 
 
 class AssociativeInferenceTask:
@@ -24,7 +26,6 @@ class AssociativeInferenceTask:
             self.wordpool = self._load_wordpool(wordpool_path)
 
     def _load_dataset(self):
-        # Word variant needs A and B images; image variant needs A, B, and C images.
         n_required = self.n_pairs * 2 if self.pair_type == "word" else self.n_pairs * 3
         if self.image_dir:
             return DirectoryDataset(self.image_dir)

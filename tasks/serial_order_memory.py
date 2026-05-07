@@ -1,7 +1,10 @@
 import random
+import sys
 from itertools import combinations
+from pathlib import Path
 
-from stimuli import BradyDataset, DirectoryDataset, ThingsDataset
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.stimuli import BradyDataset, DirectoryDataset, ThingsDataset
 
 
 def lag_bin(serial_lag):

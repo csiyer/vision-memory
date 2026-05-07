@@ -1,0 +1,1584 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260425_201653",
+    "dataset": "things",
+    "n_images": 100,
+    "n_trials": 100,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 0.91
+      }
+    },
+    "max_context_images": null
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image of the parasailer with the colorful parachute (Image 2) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 49,
+          "second_serial_position": 56,
+          "serial_lag": 7,
+          "distance": 6,
+          "left_image_serial_position": 56,
+          "right_image_serial_position": 49
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (knitting needles) appeared first.",
+        "metadata": {
+          "first_serial_position": 12,
+          "second_serial_position": 89,
+          "serial_lag": 77,
+          "distance": 76,
+          "left_image_serial_position": 89,
+          "right_image_serial_position": 12
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (notebooks) appeared first.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 57,
+          "serial_lag": 53,
+          "distance": 52,
+          "left_image_serial_position": 57,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The second image (oil bottle) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 65,
+          "second_serial_position": 73,
+          "serial_lag": 8,
+          "distance": 7,
+          "left_image_serial_position": 65,
+          "right_image_serial_position": 73
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The orangutan (image 1) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 67,
+          "second_serial_position": 85,
+          "serial_lag": 18,
+          "distance": 17,
+          "left_image_serial_position": 67,
+          "right_image_serial_position": 85
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (peppermint candies) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 28,
+          "second_serial_position": 70,
+          "serial_lag": 42,
+          "distance": 41,
+          "left_image_serial_position": 28,
+          "right_image_serial_position": 70
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1, the peacock, appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 11,
+          "second_serial_position": 32,
+          "serial_lag": 21,
+          "distance": 20,
+          "left_image_serial_position": 11,
+          "right_image_serial_position": 32
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the **penguins** appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 21,
+          "second_serial_position": 79,
+          "serial_lag": 58,
+          "distance": 57,
+          "left_image_serial_position": 21,
+          "right_image_serial_position": 79
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2, the close-up of the **nose**, appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 24,
+          "second_serial_position": 61,
+          "serial_lag": 37,
+          "distance": 36,
+          "left_image_serial_position": 61,
+          "right_image_serial_position": 24
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image of the **papayas** (2) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 36,
+          "second_serial_position": 80,
+          "serial_lag": 44,
+          "distance": 43,
+          "left_image_serial_position": 80,
+          "right_image_serial_position": 36
+        }
+      },
+      {
+        "trial": 10,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (pedometer) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 23,
+          "second_serial_position": 66,
+          "serial_lag": 43,
+          "distance": 42,
+          "left_image_serial_position": 66,
+          "right_image_serial_position": 23
+        }
+      },
+      {
+        "trial": 11,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1, the needles, appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 12,
+          "second_serial_position": 75,
+          "serial_lag": 63,
+          "distance": 62,
+          "left_image_serial_position": 12,
+          "right_image_serial_position": 75
+        }
+      },
+      {
+        "trial": 12,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The perfume bottle (image 2) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 17,
+          "second_serial_position": 71,
+          "serial_lag": 54,
+          "distance": 53,
+          "left_image_serial_position": 71,
+          "right_image_serial_position": 17
+        }
+      },
+      {
+        "trial": 13,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the **penguins** appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 21,
+          "second_serial_position": 60,
+          "serial_lag": 39,
+          "distance": 38,
+          "left_image_serial_position": 21,
+          "right_image_serial_position": 60
+        }
+      },
+      {
+        "trial": 14,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the paint bowls) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 57,
+          "second_serial_position": 97,
+          "serial_lag": 40,
+          "distance": 39,
+          "left_image_serial_position": 97,
+          "right_image_serial_position": 57
+        }
+      },
+      {
+        "trial": 15,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (wooden dowels/pegs) appeared first.",
+        "metadata": {
+          "first_serial_position": 55,
+          "second_serial_position": 59,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 59,
+          "right_image_serial_position": 55
+        }
+      },
+      {
+        "trial": 16,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The nutcracker (image 1) appeared first.",
+        "metadata": {
+          "first_serial_position": 32,
+          "second_serial_position": 41,
+          "serial_lag": 9,
+          "distance": 8,
+          "left_image_serial_position": 32,
+          "right_image_serial_position": 41
+        }
+      },
+      {
+        "trial": 17,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1, the image of the legs with dark tights, appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 74,
+          "second_serial_position": 84,
+          "serial_lag": 10,
+          "distance": 9,
+          "left_image_serial_position": 74,
+          "right_image_serial_position": 84
+        }
+      },
+      {
+        "trial": 18,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the Eveready flashlight) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 54,
+          "second_serial_position": 94,
+          "serial_lag": 40,
+          "distance": 39,
+          "left_image_serial_position": 94,
+          "right_image_serial_position": 54
+        }
+      },
+      {
+        "trial": 19,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The oven (image 1) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 81,
+          "serial_lag": 72,
+          "distance": 71,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 81
+        }
+      },
+      {
+        "trial": 20,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (nail files) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 48,
+          "second_serial_position": 60,
+          "serial_lag": 12,
+          "distance": 11,
+          "left_image_serial_position": 60,
+          "right_image_serial_position": 48
+        }
+      },
+      {
+        "trial": 21,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2, the electrical outlet, appeared first.",
+        "metadata": {
+          "first_serial_position": 71,
+          "second_serial_position": 79,
+          "serial_lag": 8,
+          "distance": 7,
+          "left_image_serial_position": 79,
+          "right_image_serial_position": 71
+        }
+      },
+      {
+        "trial": 22,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the **kayak paddle** (1) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 37,
+          "second_serial_position": 62,
+          "serial_lag": 25,
+          "distance": 24,
+          "left_image_serial_position": 37,
+          "right_image_serial_position": 62
+        }
+      },
+      {
+        "trial": 23,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The image of the **pencils** appeared first.",
+        "metadata": {
+          "first_serial_position": 53,
+          "second_serial_position": 90,
+          "serial_lag": 37,
+          "distance": 36,
+          "left_image_serial_position": 90,
+          "right_image_serial_position": 53
+        }
+      },
+      {
+        "trial": 24,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The image of the **green olives** (image 2) appeared first in the study sequence. It was at position 44, while the brown tufted ottoman (image 1) was at position 59.",
+        "metadata": {
+          "first_serial_position": 51,
+          "second_serial_position": 77,
+          "serial_lag": 26,
+          "distance": 25,
+          "left_image_serial_position": 77,
+          "right_image_serial_position": 51
+        }
+      },
+      {
+        "trial": 25,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (dog food bowls) appeared first in the sequence. It was image number 8.\nImage 2 (oatmeal) appeared as image number 25.",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 25,
+          "serial_lag": 17,
+          "distance": 16,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 25
+        }
+      },
+      {
+        "trial": 26,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (mixed nuts) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 30,
+          "second_serial_position": 93,
+          "serial_lag": 63,
+          "distance": 62,
+          "left_image_serial_position": 93,
+          "right_image_serial_position": 30
+        }
+      },
+      {
+        "trial": 27,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (nail files) appeared first.",
+        "metadata": {
+          "first_serial_position": 48,
+          "second_serial_position": 51,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 48,
+          "right_image_serial_position": 51
+        }
+      },
+      {
+        "trial": 28,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": null,
+        "metadata": {
+          "first_serial_position": 15,
+          "second_serial_position": 63,
+          "serial_lag": 48,
+          "distance": 47,
+          "left_image_serial_position": 63,
+          "right_image_serial_position": 15
+        }
+      },
+      {
+        "trial": 29,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (paintbrushes) appeared first.",
+        "metadata": {
+          "first_serial_position": 15,
+          "second_serial_position": 74,
+          "serial_lag": 59,
+          "distance": 58,
+          "left_image_serial_position": 74,
+          "right_image_serial_position": 15
+        }
+      },
+      {
+        "trial": 30,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the pelican) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 10,
+          "second_serial_position": 92,
+          "serial_lag": 82,
+          "distance": 81,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 92
+        }
+      },
+      {
+        "trial": 31,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The owl (image 2) appeared first. It was image #53, while the bird's nest (image 1) was image #54.",
+        "metadata": {
+          "first_serial_position": 66,
+          "second_serial_position": 83,
+          "serial_lag": 17,
+          "distance": 16,
+          "left_image_serial_position": 66,
+          "right_image_serial_position": 83
+        }
+      },
+      {
+        "trial": 32,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image of the **parsley** (Image 2) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 41,
+          "second_serial_position": 90,
+          "serial_lag": 49,
+          "distance": 48,
+          "left_image_serial_position": 90,
+          "right_image_serial_position": 41
+        }
+      },
+      {
+        "trial": 33,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (Peacock) appeared first.",
+        "metadata": {
+          "first_serial_position": 11,
+          "second_serial_position": 69,
+          "serial_lag": 58,
+          "distance": 57,
+          "left_image_serial_position": 69,
+          "right_image_serial_position": 11
+        }
+      },
+      {
+        "trial": 34,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (notebook and pencil) appeared first.",
+        "metadata": {
+          "first_serial_position": 13,
+          "second_serial_position": 59,
+          "serial_lag": 46,
+          "distance": 45,
+          "left_image_serial_position": 13,
+          "right_image_serial_position": 59
+        }
+      },
+      {
+        "trial": 35,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the **peacock** (1) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 11,
+          "second_serial_position": 76,
+          "serial_lag": 65,
+          "distance": 64,
+          "left_image_serial_position": 11,
+          "right_image_serial_position": 76
+        }
+      },
+      {
+        "trial": 36,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The first image (otter) appeared earlier in the sequence than the second image (oil can).",
+        "metadata": {
+          "first_serial_position": 47,
+          "second_serial_position": 64,
+          "serial_lag": 17,
+          "distance": 16,
+          "left_image_serial_position": 47,
+          "right_image_serial_position": 64
+        }
+      },
+      {
+        "trial": 37,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The orange peel (image 2) appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 45,
+          "second_serial_position": 48,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 48,
+          "right_image_serial_position": 45
+        }
+      },
+      {
+        "trial": 38,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the **two penguins (1)** appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 21,
+          "second_serial_position": 26,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 21,
+          "right_image_serial_position": 26
+        }
+      },
+      {
+        "trial": 39,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (green peas) appeared first.",
+        "metadata": {
+          "first_serial_position": 42,
+          "second_serial_position": 52,
+          "serial_lag": 10,
+          "distance": 9,
+          "left_image_serial_position": 52,
+          "right_image_serial_position": 42
+        }
+      },
+      {
+        "trial": 40,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (Hello Kitty underwear) appeared first.",
+        "metadata": {
+          "first_serial_position": 50,
+          "second_serial_position": 81,
+          "serial_lag": 31,
+          "distance": 30,
+          "left_image_serial_position": 81,
+          "right_image_serial_position": 50
+        }
+      },
+      {
+        "trial": 41,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the oven) appeared first.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 31,
+          "serial_lag": 22,
+          "distance": 21,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 31
+        }
+      },
+      {
+        "trial": 42,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (pepper mill) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 16,
+          "second_serial_position": 49,
+          "serial_lag": 33,
+          "distance": 32,
+          "left_image_serial_position": 49,
+          "right_image_serial_position": 16
+        }
+      },
+      {
+        "trial": 43,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (bottle of oil) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 73,
+          "second_serial_position": 98,
+          "serial_lag": 25,
+          "distance": 24,
+          "left_image_serial_position": 73,
+          "right_image_serial_position": 98
+        }
+      },
+      {
+        "trial": 44,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the **otter** appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 47,
+          "second_serial_position": 78,
+          "serial_lag": 31,
+          "distance": 30,
+          "left_image_serial_position": 47,
+          "right_image_serial_position": 78
+        }
+      },
+      {
+        "trial": 45,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (paintbrushes) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 15,
+          "second_serial_position": 18,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 15,
+          "right_image_serial_position": 18
+        }
+      },
+      {
+        "trial": 46,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (Pantyhose) appeared first.",
+        "metadata": {
+          "first_serial_position": 74,
+          "second_serial_position": 85,
+          "serial_lag": 11,
+          "distance": 10,
+          "left_image_serial_position": 74,
+          "right_image_serial_position": 85
+        }
+      },
+      {
+        "trial": 47,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the otter) appeared first.",
+        "metadata": {
+          "first_serial_position": 47,
+          "second_serial_position": 86,
+          "serial_lag": 39,
+          "distance": 38,
+          "left_image_serial_position": 86,
+          "right_image_serial_position": 47
+        }
+      },
+      {
+        "trial": 48,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": null,
+        "metadata": {
+          "first_serial_position": 23,
+          "second_serial_position": 63,
+          "serial_lag": 40,
+          "distance": 39,
+          "left_image_serial_position": 63,
+          "right_image_serial_position": 23
+        }
+      },
+      {
+        "trial": 49,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (oatmeal in a bowl) appeared first.",
+        "metadata": {
+          "first_serial_position": 25,
+          "second_serial_position": 96,
+          "serial_lag": 71,
+          "distance": 70,
+          "left_image_serial_position": 96,
+          "right_image_serial_position": 25
+        }
+      },
+      {
+        "trial": 50,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the patty) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 69,
+          "second_serial_position": 92,
+          "serial_lag": 23,
+          "distance": 22,
+          "left_image_serial_position": 92,
+          "right_image_serial_position": 69
+        }
+      },
+      {
+        "trial": 51,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1, the wooden pallets, appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 22,
+          "second_serial_position": 47,
+          "serial_lag": 25,
+          "distance": 24,
+          "left_image_serial_position": 22,
+          "right_image_serial_position": 47
+        }
+      },
+      {
+        "trial": 52,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the **pearl in a shell** (1) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 85,
+          "second_serial_position": 96,
+          "serial_lag": 11,
+          "distance": 10,
+          "left_image_serial_position": 85,
+          "right_image_serial_position": 96
+        }
+      },
+      {
+        "trial": 53,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the pedometer) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 23,
+          "second_serial_position": 100,
+          "serial_lag": 77,
+          "distance": 76,
+          "left_image_serial_position": 23,
+          "right_image_serial_position": 100
+        }
+      },
+      {
+        "trial": 54,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the **paint brushes (1)** appeared first.",
+        "metadata": {
+          "first_serial_position": 15,
+          "second_serial_position": 36,
+          "serial_lag": 21,
+          "distance": 20,
+          "left_image_serial_position": 15,
+          "right_image_serial_position": 36
+        }
+      },
+      {
+        "trial": 55,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the bird's nest (1) appeared first.",
+        "metadata": {
+          "first_serial_position": 66,
+          "second_serial_position": 88,
+          "serial_lag": 22,
+          "distance": 21,
+          "left_image_serial_position": 66,
+          "right_image_serial_position": 88
+        }
+      },
+      {
+        "trial": 56,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (papers) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 62,
+          "second_serial_position": 77,
+          "serial_lag": 15,
+          "distance": 14,
+          "left_image_serial_position": 62,
+          "right_image_serial_position": 77
+        }
+      },
+      {
+        "trial": 57,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the **oysters** appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 40,
+          "second_serial_position": 54,
+          "serial_lag": 14,
+          "distance": 13,
+          "left_image_serial_position": 40,
+          "right_image_serial_position": 54
+        }
+      },
+      {
+        "trial": 58,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The image of the **nose** (2) appeared first in the study sequence. It was the 24th image, while the paper plates (1) appeared as the 31st image.",
+        "metadata": {
+          "first_serial_position": 24,
+          "second_serial_position": 33,
+          "serial_lag": 9,
+          "distance": 8,
+          "left_image_serial_position": 33,
+          "right_image_serial_position": 24
+        }
+      },
+      {
+        "trial": 59,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the light-colored pantsuit (1) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 56,
+          "second_serial_position": 98,
+          "serial_lag": 42,
+          "distance": 41,
+          "left_image_serial_position": 56,
+          "right_image_serial_position": 98
+        }
+      },
+      {
+        "trial": 60,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The frying pan (1) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 58,
+          "second_serial_position": 97,
+          "serial_lag": 39,
+          "distance": 38,
+          "left_image_serial_position": 58,
+          "right_image_serial_position": 97
+        }
+      },
+      {
+        "trial": 61,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the oven) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 49,
+          "serial_lag": 40,
+          "distance": 39,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 49
+        }
+      },
+      {
+        "trial": 62,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (Otter) appeared first.",
+        "metadata": {
+          "first_serial_position": 47,
+          "second_serial_position": 87,
+          "serial_lag": 40,
+          "distance": 39,
+          "left_image_serial_position": 47,
+          "right_image_serial_position": 87
+        }
+      },
+      {
+        "trial": 63,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the paintbrushes) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 15,
+          "second_serial_position": 61,
+          "serial_lag": 46,
+          "distance": 45,
+          "left_image_serial_position": 61,
+          "right_image_serial_position": 15
+        }
+      },
+      {
+        "trial": 64,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1, the knitting needles, appeared first.",
+        "metadata": {
+          "first_serial_position": 12,
+          "second_serial_position": 81,
+          "serial_lag": 69,
+          "distance": 68,
+          "left_image_serial_position": 12,
+          "right_image_serial_position": 81
+        }
+      },
+      {
+        "trial": 65,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1, the pelican, appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 10,
+          "second_serial_position": 64,
+          "serial_lag": 54,
+          "distance": 53,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 64
+        }
+      },
+      {
+        "trial": 66,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the **paintbrushes** (1) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 15,
+          "second_serial_position": 69,
+          "serial_lag": 54,
+          "distance": 53,
+          "left_image_serial_position": 15,
+          "right_image_serial_position": 69
+        }
+      },
+      {
+        "trial": 67,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the **green peas** (1) appeared first in the sequence. It was image #37, while the octopus (2) was image #94.",
+        "metadata": {
+          "first_serial_position": 42,
+          "second_serial_position": 97,
+          "serial_lag": 55,
+          "distance": 54,
+          "left_image_serial_position": 42,
+          "right_image_serial_position": 97
+        }
+      },
+      {
+        "trial": 68,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the potato peelers) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 78,
+          "serial_lag": 76,
+          "distance": 75,
+          "left_image_serial_position": 78,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 69,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": null,
+        "metadata": {
+          "first_serial_position": 63,
+          "second_serial_position": 76,
+          "serial_lag": 13,
+          "distance": 12,
+          "left_image_serial_position": 76,
+          "right_image_serial_position": 63
+        }
+      },
+      {
+        "trial": 70,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the notepad) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 95,
+          "serial_lag": 91,
+          "distance": 90,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 95
+        }
+      },
+      {
+        "trial": 71,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (Paint brushes) appeared first.",
+        "metadata": {
+          "first_serial_position": 15,
+          "second_serial_position": 33,
+          "serial_lag": 18,
+          "distance": 17,
+          "left_image_serial_position": 15,
+          "right_image_serial_position": 33
+        }
+      },
+      {
+        "trial": 72,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The image of the **oven** (2) appeared first in the study sequence. It was the 9th image, while the bird's nest (1) was the 54th image.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 66,
+          "serial_lag": 57,
+          "distance": 56,
+          "left_image_serial_position": 66,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 73,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the **notebooks (1)** appeared first. It was the 4th image in the sequence.\nThe bowl of pepperoni (2) was the 53rd image.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 60,
+          "serial_lag": 56,
+          "distance": 55,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 60
+        }
+      },
+      {
+        "trial": 74,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the **peaches** (1) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 52,
+          "second_serial_position": 91,
+          "serial_lag": 39,
+          "distance": 38,
+          "left_image_serial_position": 52,
+          "right_image_serial_position": 91
+        }
+      },
+      {
+        "trial": 75,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The oven (image 1) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 54,
+          "serial_lag": 45,
+          "distance": 44,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 54
+        }
+      },
+      {
+        "trial": 76,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image of the **party blowers** appeared first (image 2), at position 53. The owl appeared at position 65.",
+        "metadata": {
+          "first_serial_position": 65,
+          "second_serial_position": 83,
+          "serial_lag": 18,
+          "distance": 17,
+          "left_image_serial_position": 83,
+          "right_image_serial_position": 65
+        }
+      },
+      {
+        "trial": 77,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (Notepads) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 47,
+          "serial_lag": 43,
+          "distance": 42,
+          "left_image_serial_position": 47,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 78,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image of the **pants** (Image 2) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 27,
+          "second_serial_position": 35,
+          "serial_lag": 8,
+          "distance": 7,
+          "left_image_serial_position": 35,
+          "right_image_serial_position": 27
+        }
+      },
+      {
+        "trial": 79,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the stack of white paper plates) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 33,
+          "second_serial_position": 70,
+          "serial_lag": 37,
+          "distance": 36,
+          "left_image_serial_position": 70,
+          "right_image_serial_position": 33
+        }
+      },
+      {
+        "trial": 80,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the pendulum) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 53,
+          "serial_lag": 47,
+          "distance": 46,
+          "left_image_serial_position": 53,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 81,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the peelers) appeared first.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 81,
+          "serial_lag": 79,
+          "distance": 78,
+          "left_image_serial_position": 81,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 82,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image of the **nail files** (2) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 48,
+          "second_serial_position": 85,
+          "serial_lag": 37,
+          "distance": 36,
+          "left_image_serial_position": 85,
+          "right_image_serial_position": 48
+        }
+      },
+      {
+        "trial": 83,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (two parrots) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 86,
+          "second_serial_position": 92,
+          "serial_lag": 6,
+          "distance": 5,
+          "left_image_serial_position": 92,
+          "right_image_serial_position": 86
+        }
+      },
+      {
+        "trial": 84,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the **oysters** appeared first in the study sequence. It was image 38, followed by the parsley as image 39.",
+        "metadata": {
+          "first_serial_position": 40,
+          "second_serial_position": 41,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 40,
+          "right_image_serial_position": 41
+        }
+      },
+      {
+        "trial": 85,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the Foucault pendulum) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 44,
+          "serial_lag": 38,
+          "distance": 37,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 44
+        }
+      },
+      {
+        "trial": 86,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (oysters with a lime wedge) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 40,
+          "second_serial_position": 70,
+          "serial_lag": 30,
+          "distance": 29,
+          "left_image_serial_position": 40,
+          "right_image_serial_position": 70
+        }
+      },
+      {
+        "trial": 87,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the **nail clippers** (1) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 87,
+          "second_serial_position": 98,
+          "serial_lag": 11,
+          "distance": 10,
+          "left_image_serial_position": 87,
+          "right_image_serial_position": 98
+        }
+      },
+      {
+        "trial": 88,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image of the **penguins** (2) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 21,
+          "second_serial_position": 47,
+          "serial_lag": 26,
+          "distance": 25,
+          "left_image_serial_position": 47,
+          "right_image_serial_position": 21
+        }
+      },
+      {
+        "trial": 89,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image of the penguins (2) appeared first.",
+        "metadata": {
+          "first_serial_position": 21,
+          "second_serial_position": 22,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 22,
+          "right_image_serial_position": 21
+        }
+      },
+      {
+        "trial": 90,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the paddle) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 37,
+          "second_serial_position": 52,
+          "serial_lag": 15,
+          "distance": 14,
+          "left_image_serial_position": 52,
+          "right_image_serial_position": 37
+        }
+      },
+      {
+        "trial": 91,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1, the mixed nuts, appeared first.",
+        "metadata": {
+          "first_serial_position": 30,
+          "second_serial_position": 79,
+          "serial_lag": 49,
+          "distance": 48,
+          "left_image_serial_position": 30,
+          "right_image_serial_position": 79
+        }
+      },
+      {
+        "trial": 92,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (pasta) appeared first.",
+        "metadata": {
+          "first_serial_position": 35,
+          "second_serial_position": 100,
+          "serial_lag": 65,
+          "distance": 64,
+          "left_image_serial_position": 100,
+          "right_image_serial_position": 35
+        }
+      },
+      {
+        "trial": 93,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the pepper grinder) appeared first.",
+        "metadata": {
+          "first_serial_position": 16,
+          "second_serial_position": 62,
+          "serial_lag": 46,
+          "distance": 45,
+          "left_image_serial_position": 16,
+          "right_image_serial_position": 62
+        }
+      },
+      {
+        "trial": 94,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (wooden pallets) appeared first.",
+        "metadata": {
+          "first_serial_position": 22,
+          "second_serial_position": 54,
+          "serial_lag": 32,
+          "distance": 31,
+          "left_image_serial_position": 22,
+          "right_image_serial_position": 54
+        }
+      },
+      {
+        "trial": 95,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (Otter) appeared first.",
+        "metadata": {
+          "first_serial_position": 47,
+          "second_serial_position": 80,
+          "serial_lag": 33,
+          "distance": 32,
+          "left_image_serial_position": 47,
+          "right_image_serial_position": 80
+        }
+      },
+      {
+        "trial": 96,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The oven (1) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 41,
+          "serial_lag": 32,
+          "distance": 31,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 41
+        }
+      },
+      {
+        "trial": 97,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (dog bowls with food) appeared first in the study sequence. It was image number 8, while image 2 (bowl of pepperoni) was image number 56.",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 60,
+          "serial_lag": 52,
+          "distance": 51,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 60
+        }
+      },
+      {
+        "trial": 98,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the peacock) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 11,
+          "second_serial_position": 89,
+          "serial_lag": 78,
+          "distance": 77,
+          "left_image_serial_position": 11,
+          "right_image_serial_position": 89
+        }
+      },
+      {
+        "trial": 99,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (nail polish) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 29,
+          "second_serial_position": 67,
+          "serial_lag": 38,
+          "distance": 37,
+          "left_image_serial_position": 29,
+          "right_image_serial_position": 67
+        }
+      }
+    ],
+    "accuracy": 0.91,
+    "n_correct": 91,
+    "total": 100,
+    "accuracy_by_distance": {
+      "0": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 1.0,
+      "6": 1.0,
+      "7": 0.6666666666666666,
+      "8": 0.5,
+      "9": 1.0,
+      "10": 1.0,
+      "11": 1.0,
+      "12": 0.0,
+      "13": 1.0,
+      "14": 1.0,
+      "16": 0.6666666666666666,
+      "17": 1.0,
+      "20": 1.0,
+      "21": 1.0,
+      "22": 1.0,
+      "24": 1.0,
+      "25": 0.5,
+      "29": 1.0,
+      "30": 1.0,
+      "31": 1.0,
+      "32": 1.0,
+      "36": 0.75,
+      "37": 1.0,
+      "38": 1.0,
+      "39": 0.8,
+      "41": 1.0,
+      "42": 1.0,
+      "43": 1.0,
+      "44": 1.0,
+      "45": 1.0,
+      "46": 1.0,
+      "47": 0.0,
+      "48": 1.0,
+      "51": 1.0,
+      "52": 1.0,
+      "53": 1.0,
+      "54": 1.0,
+      "55": 1.0,
+      "56": 0.0,
+      "57": 1.0,
+      "58": 1.0,
+      "62": 1.0,
+      "64": 1.0,
+      "68": 1.0,
+      "70": 1.0,
+      "71": 1.0,
+      "75": 1.0,
+      "76": 1.0,
+      "77": 1.0,
+      "78": 1.0,
+      "81": 1.0,
+      "90": 1.0
+    }
+  }
+}

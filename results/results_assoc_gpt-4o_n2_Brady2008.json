@@ -1,0 +1,61 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260428_103553",
+    "dataset": "Brady2008",
+    "n_images": 2,
+    "n_trials": 1,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0,
+        "n_correct": 1,
+        "total": 1
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1 (paperclip).",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26427111.thl.jpg",
+            "name": "26427111.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ADOGTOY.jpg",
+            "name": "ADOGTOY.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Apaperclip6.jpg",
+            "name": "Apaperclip6.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/8248429.thl.jpg",
+            "name": "8248429.thl.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 1,
+    "total": 1
+  }
+}

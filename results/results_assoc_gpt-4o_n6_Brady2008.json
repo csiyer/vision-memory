@@ -1,0 +1,129 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260427_114518",
+    "dataset": "Brady2008",
+    "n_images": 6,
+    "n_trials": 3,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0,
+        "n_correct": 3,
+        "total": 3
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2 (the shoe).",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/23070064.thl.jpg",
+            "name": "23070064.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/elecmap.jpg",
+            "name": "elecmap.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Arubberworksh.jpg",
+            "name": "Arubberworksh.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Abloodorange.jpg",
+            "name": "Abloodorange.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image is associated with image 2 (the statue).",
+        "metadata": {
+          "chain_index": 1,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ALAUNHAMP.jpg",
+            "name": "ALAUNHAMP.jpg",
+            "role": "B",
+            "chain_index": 1
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Awoodplaner2.jpg",
+            "name": "Awoodplaner2.jpg",
+            "role": "A",
+            "chain_index": 1
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aancientstat4.jpg",
+            "name": "Aancientstat4.jpg",
+            "role": "C",
+            "chain_index": 1
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Abloodorange.jpg",
+            "name": "Abloodorange.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 1.",
+        "metadata": {
+          "chain_index": 2,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Akitchentool2.jpg",
+            "name": "Akitchentool2.jpg",
+            "role": "B",
+            "chain_index": 2
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/22827540.thl.jpg",
+            "name": "22827540.thl.jpg",
+            "role": "A",
+            "chain_index": 2
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Abloodorange.jpg",
+            "name": "Abloodorange.jpg",
+            "role": "C",
+            "chain_index": 2
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Aancientstat4.jpg",
+            "name": "Aancientstat4.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 3,
+    "total": 3
+  }
+}

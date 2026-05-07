@@ -1,0 +1,1127 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260428_215821",
+    "dataset": "Brady2008",
+    "n_images": 5,
+    "n_trials": 100,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 1.0,
+        "n_correct": 100,
+        "total": 100
+      }
+    },
+    "max_context_pairs": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "STAPLER",
+        "reported": "stapler",
+        "correct": 1,
+        "raw_response": "STAPLER",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ACLOGOPE3.jpg",
+          "name": "ACLOGOPE3.jpg"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "SAGE",
+        "reported": "sage",
+        "correct": 1,
+        "raw_response": "SAGE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ACUTLERYB.jpg",
+          "name": "ACUTLERYB.jpg"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "BUS",
+        "reported": "bus",
+        "correct": 1,
+        "raw_response": "BUS",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ATALSTAN3.jpg",
+          "name": "ATALSTAN3.jpg"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "GLUE",
+        "reported": "glue",
+        "correct": 1,
+        "raw_response": "GLUE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26426317.thl.jpg",
+          "name": "26426317.thl.jpg"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "STREAM",
+        "reported": "stream",
+        "correct": 1,
+        "raw_response": "STREAM",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Aknife92.jpg",
+          "name": "Aknife92.jpg"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "SALT",
+        "reported": "salt",
+        "correct": 1,
+        "raw_response": "SALT",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Aemergencyki5.jpg",
+          "name": "Aemergencyki5.jpg"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "PLANET",
+        "reported": "planet",
+        "correct": 1,
+        "raw_response": "PLANET",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Aornament89.jpg",
+          "name": "Aornament89.jpg"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "ICE",
+        "reported": "ice",
+        "correct": 1,
+        "raw_response": "ICE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/decorativesquash.jpg",
+          "name": "decorativesquash.jpg"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "PELT",
+        "reported": "pelt",
+        "correct": 1,
+        "raw_response": "PELT",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Lanyard.jpg",
+          "name": "Lanyard.jpg"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "STOOL",
+        "reported": "stool",
+        "correct": 1,
+        "raw_response": "STOOL",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/AFIRSTA15.jpg",
+          "name": "AFIRSTA15.jpg"
+        }
+      },
+      {
+        "trial": 10,
+        "target": "LABEL",
+        "reported": "label",
+        "correct": 1,
+        "raw_response": "LABEL",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/AHEDGEHOG.jpg",
+          "name": "AHEDGEHOG.jpg"
+        }
+      },
+      {
+        "trial": 11,
+        "target": "PAINTER",
+        "reported": "painter",
+        "correct": 1,
+        "raw_response": "PAINTER",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/22896812.thl.jpg",
+          "name": "22896812.thl.jpg"
+        }
+      },
+      {
+        "trial": 12,
+        "target": "COD",
+        "reported": "cod",
+        "correct": 1,
+        "raw_response": "COD",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/batslcshi.jpg",
+          "name": "batslcshi.jpg"
+        }
+      },
+      {
+        "trial": 13,
+        "target": "SHOE",
+        "reported": "shoe",
+        "correct": 1,
+        "raw_response": "SHOE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/22849344.thl.jpg",
+          "name": "22849344.thl.jpg"
+        }
+      },
+      {
+        "trial": 14,
+        "target": "BASSINET",
+        "reported": "bassinet",
+        "correct": 1,
+        "raw_response": "BASSINET",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Aboot9.jpg",
+          "name": "Aboot9.jpg"
+        }
+      },
+      {
+        "trial": 15,
+        "target": "LABEL",
+        "reported": "label",
+        "correct": 1,
+        "raw_response": "LABEL",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Asandal7.jpg",
+          "name": "Asandal7.jpg"
+        }
+      },
+      {
+        "trial": 16,
+        "target": "BIKE",
+        "reported": "bike",
+        "correct": 1,
+        "raw_response": "BIKE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ferrywheeltoy.jpg",
+          "name": "ferrywheeltoy.jpg"
+        }
+      },
+      {
+        "trial": 17,
+        "target": "ROUGE",
+        "reported": "rouge",
+        "correct": 1,
+        "raw_response": "ROUGE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Aspinningwhe2.jpg",
+          "name": "Aspinningwhe2.jpg"
+        }
+      },
+      {
+        "trial": 18,
+        "target": "GRASS",
+        "reported": "grass",
+        "correct": 1,
+        "raw_response": "GRASS",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Aacupuncture2.jpg",
+          "name": "Aacupuncture2.jpg"
+        }
+      },
+      {
+        "trial": 19,
+        "target": "FLESH",
+        "reported": "flesh",
+        "correct": 1,
+        "raw_response": "FLESH",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/broccoli.jpg",
+          "name": "broccoli.jpg"
+        }
+      },
+      {
+        "trial": 20,
+        "target": "ORNAMENT",
+        "reported": "ornament",
+        "correct": 1,
+        "raw_response": "ORNAMENT",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26420830.thl.jpg",
+          "name": "26420830.thl.jpg"
+        }
+      },
+      {
+        "trial": 21,
+        "target": "PERSON",
+        "reported": "person",
+        "correct": 1,
+        "raw_response": "PERSON",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26369999.thl.jpg",
+          "name": "26369999.thl.jpg"
+        }
+      },
+      {
+        "trial": 22,
+        "target": "STUMP",
+        "reported": "stump",
+        "correct": 1,
+        "raw_response": "STUMP",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26432760.thl.jpg",
+          "name": "26432760.thl.jpg"
+        }
+      },
+      {
+        "trial": 23,
+        "target": "LACE",
+        "reported": "lace",
+        "correct": 1,
+        "raw_response": "LACE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26426417.thl.jpg",
+          "name": "26426417.thl.jpg"
+        }
+      },
+      {
+        "trial": 24,
+        "target": "LAWN",
+        "reported": "lawn",
+        "correct": 1,
+        "raw_response": "LAWN",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/origami.jpg",
+          "name": "origami.jpg"
+        }
+      },
+      {
+        "trial": 25,
+        "target": "FRAME",
+        "reported": "frame",
+        "correct": 1,
+        "raw_response": "FRAME",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/AMUSISTA2.jpg",
+          "name": "AMUSISTA2.jpg"
+        }
+      },
+      {
+        "trial": 26,
+        "target": "MARKET",
+        "reported": "market",
+        "correct": 1,
+        "raw_response": "MARKET",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Aemergencyki5.jpg",
+          "name": "Aemergencyki5.jpg"
+        }
+      },
+      {
+        "trial": 27,
+        "target": "VALVE",
+        "reported": "valve",
+        "correct": 1,
+        "raw_response": "VALVE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/A_teabag.jpg",
+          "name": "A_teabag.jpg"
+        }
+      },
+      {
+        "trial": 28,
+        "target": "FREEWAY",
+        "reported": "freeway",
+        "correct": 1,
+        "raw_response": "FREEWAY",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ACHEESEB3.jpg",
+          "name": "ACHEESEB3.jpg"
+        }
+      },
+      {
+        "trial": 29,
+        "target": "COUGAR",
+        "reported": "cougar",
+        "correct": 1,
+        "raw_response": "COUGAR",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Agiftbag20.jpg",
+          "name": "Agiftbag20.jpg"
+        }
+      },
+      {
+        "trial": 30,
+        "target": "JOINT",
+        "reported": "joint",
+        "correct": 1,
+        "raw_response": "JOINT",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/AAIRPUMP2.jpg",
+          "name": "AAIRPUMP2.jpg"
+        }
+      },
+      {
+        "trial": 31,
+        "target": "PORCUPINE",
+        "reported": "porcupine",
+        "correct": 1,
+        "raw_response": "PORCUPINE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/AFIREPLAC.jpg",
+          "name": "AFIREPLAC.jpg"
+        }
+      },
+      {
+        "trial": 32,
+        "target": "POWDER",
+        "reported": "powder",
+        "correct": 1,
+        "raw_response": "POWDER",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/AKNIFE13.jpg",
+          "name": "AKNIFE13.jpg"
+        }
+      },
+      {
+        "trial": 33,
+        "target": "TERMITE",
+        "reported": "termite",
+        "correct": 1,
+        "raw_response": "TERMITE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/8029214.thl.jpg",
+          "name": "8029214.thl.jpg"
+        }
+      },
+      {
+        "trial": 34,
+        "target": "GRAPE",
+        "reported": "grape",
+        "correct": 1,
+        "raw_response": "GRAPE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ABLACSUI3.jpg",
+          "name": "ABLACSUI3.jpg"
+        }
+      },
+      {
+        "trial": 35,
+        "target": "FUDGE",
+        "reported": "fudge",
+        "correct": 1,
+        "raw_response": "FUDGE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26392651.thl.jpg",
+          "name": "26392651.thl.jpg"
+        }
+      },
+      {
+        "trial": 36,
+        "target": "ANKLE",
+        "reported": "ankle",
+        "correct": 1,
+        "raw_response": "ANKLE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/quiche.jpg",
+          "name": "quiche.jpg"
+        }
+      },
+      {
+        "trial": 37,
+        "target": "WINDOW",
+        "reported": "window",
+        "correct": 1,
+        "raw_response": "WINDOW",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Abird8.jpg",
+          "name": "Abird8.jpg"
+        }
+      },
+      {
+        "trial": 38,
+        "target": "SAXOPHONE",
+        "reported": "saxophone",
+        "correct": 1,
+        "raw_response": "SAXOPHONE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Apaintroller3.jpg",
+          "name": "Apaintroller3.jpg"
+        }
+      },
+      {
+        "trial": 39,
+        "target": "HERD",
+        "reported": "herd",
+        "correct": 1,
+        "raw_response": "HERD",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26419689.thl.jpg",
+          "name": "26419689.thl.jpg"
+        }
+      },
+      {
+        "trial": 40,
+        "target": "SHUTTER",
+        "reported": "shutter",
+        "correct": 1,
+        "raw_response": "SHUTTER",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/8048786.thl.jpg",
+          "name": "8048786.thl.jpg"
+        }
+      },
+      {
+        "trial": 41,
+        "target": "PARROT",
+        "reported": "parrot",
+        "correct": 1,
+        "raw_response": "PARROT",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/APLANMOD.jpg",
+          "name": "APLANMOD.jpg"
+        }
+      },
+      {
+        "trial": 42,
+        "target": "CHEESE",
+        "reported": "cheese",
+        "correct": 1,
+        "raw_response": "CHEESE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ATHERMO12.jpg",
+          "name": "ATHERMO12.jpg"
+        }
+      },
+      {
+        "trial": 43,
+        "target": "HURRICANE",
+        "reported": "hurricane",
+        "correct": 1,
+        "raw_response": "HURRICANE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ABAGEL.jpg",
+          "name": "ABAGEL.jpg"
+        }
+      },
+      {
+        "trial": 44,
+        "target": "NURSERY",
+        "reported": "nursery",
+        "correct": 1,
+        "raw_response": "NURSERY",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/reesepeanut.jpg",
+          "name": "reesepeanut.jpg"
+        }
+      },
+      {
+        "trial": 45,
+        "target": "HEART",
+        "reported": "heart",
+        "correct": 1,
+        "raw_response": "HEART",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Apostalscale2.jpg",
+          "name": "Apostalscale2.jpg"
+        }
+      },
+      {
+        "trial": 46,
+        "target": "CRAYON",
+        "reported": "crayon",
+        "correct": 1,
+        "raw_response": "CRAYON",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Aplastictestt.jpg",
+          "name": "Aplastictestt.jpg"
+        }
+      },
+      {
+        "trial": 47,
+        "target": "RAG",
+        "reported": "rag",
+        "correct": 1,
+        "raw_response": "RAG",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Aslate.jpg",
+          "name": "Aslate.jpg"
+        }
+      },
+      {
+        "trial": 48,
+        "target": "BREAD",
+        "reported": "bread",
+        "correct": 1,
+        "raw_response": "BREAD",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/AROOSTERP.jpg",
+          "name": "AROOSTERP.jpg"
+        }
+      },
+      {
+        "trial": 49,
+        "target": "SPACE",
+        "reported": "space",
+        "correct": 1,
+        "raw_response": "SPACE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Areindeer2.jpg",
+          "name": "Areindeer2.jpg"
+        }
+      },
+      {
+        "trial": 50,
+        "target": "BIKE",
+        "reported": "bike",
+        "correct": 1,
+        "raw_response": "BIKE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/whiteboard.jpg",
+          "name": "whiteboard.jpg"
+        }
+      },
+      {
+        "trial": 51,
+        "target": "SYRINGE",
+        "reported": "syringe",
+        "correct": 1,
+        "raw_response": "SYRINGE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/jellybellygum.jpg",
+          "name": "jellybellygum.jpg"
+        }
+      },
+      {
+        "trial": 52,
+        "target": "CRICKET",
+        "reported": "cricket",
+        "correct": 1,
+        "raw_response": "CRICKET",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Avicegriptool.jpg",
+          "name": "Avicegriptool.jpg"
+        }
+      },
+      {
+        "trial": 53,
+        "target": "COSTUME",
+        "reported": "costume",
+        "correct": 1,
+        "raw_response": "COSTUME",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26378986.thl.jpg",
+          "name": "26378986.thl.jpg"
+        }
+      },
+      {
+        "trial": 54,
+        "target": "THICKET",
+        "reported": "thicket",
+        "correct": 1,
+        "raw_response": "THICKET",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ALEMUR3.jpg",
+          "name": "ALEMUR3.jpg"
+        }
+      },
+      {
+        "trial": 55,
+        "target": "DAD",
+        "reported": "dad",
+        "correct": 1,
+        "raw_response": "DAD",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Asaturn.jpg",
+          "name": "Asaturn.jpg"
+        }
+      },
+      {
+        "trial": 56,
+        "target": "GHETTO",
+        "reported": "ghetto",
+        "correct": 1,
+        "raw_response": "GHETTO",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26421368.thl.jpg",
+          "name": "26421368.thl.jpg"
+        }
+      },
+      {
+        "trial": 57,
+        "target": "MARS",
+        "reported": "mars",
+        "correct": 1,
+        "raw_response": "MARS",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/8079958.thl.jpg",
+          "name": "8079958.thl.jpg"
+        }
+      },
+      {
+        "trial": 58,
+        "target": "CAKE",
+        "reported": "cake",
+        "correct": 1,
+        "raw_response": "CAKE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/23071000.thl.jpg",
+          "name": "23071000.thl.jpg"
+        }
+      },
+      {
+        "trial": 59,
+        "target": "NOTE",
+        "reported": "note",
+        "correct": 1,
+        "raw_response": "NOTE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/AJUG3.jpg",
+          "name": "AJUG3.jpg"
+        }
+      },
+      {
+        "trial": 60,
+        "target": "NUCLEUS",
+        "reported": "nucleus",
+        "correct": 1,
+        "raw_response": "NUCLEUS",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Acable14.jpg",
+          "name": "Acable14.jpg"
+        }
+      },
+      {
+        "trial": 61,
+        "target": "SIDING",
+        "reported": "siding",
+        "correct": 1,
+        "raw_response": "SIDING",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ACHALCED2.jpg",
+          "name": "ACHALCED2.jpg"
+        }
+      },
+      {
+        "trial": 62,
+        "target": "SUBURB",
+        "reported": "suburb",
+        "correct": 1,
+        "raw_response": "SUBURB",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/fireking-file-cabinet.jpg",
+          "name": "fireking-file-cabinet.jpg"
+        }
+      },
+      {
+        "trial": 63,
+        "target": "LOOP",
+        "reported": "loop",
+        "correct": 1,
+        "raw_response": "LOOP",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26451168.thl.jpg",
+          "name": "26451168.thl.jpg"
+        }
+      },
+      {
+        "trial": 64,
+        "target": "SISTER",
+        "reported": "sister",
+        "correct": 1,
+        "raw_response": "SISTER",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ABEARIN12.jpg",
+          "name": "ABEARIN12.jpg"
+        }
+      },
+      {
+        "trial": 65,
+        "target": "MOTOR",
+        "reported": "motor",
+        "correct": 1,
+        "raw_response": "MOTOR",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/APILLS5.jpg",
+          "name": "APILLS5.jpg"
+        }
+      },
+      {
+        "trial": 66,
+        "target": "BAG",
+        "reported": "bag",
+        "correct": 1,
+        "raw_response": "BAG",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ARECORDSY.jpg",
+          "name": "ARECORDSY.jpg"
+        }
+      },
+      {
+        "trial": 67,
+        "target": "SUPERVISOR",
+        "reported": "supervisor",
+        "correct": 1,
+        "raw_response": "SUPERVISOR",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/AHEELCUPS.jpg",
+          "name": "AHEELCUPS.jpg"
+        }
+      },
+      {
+        "trial": 68,
+        "target": "NICKEL",
+        "reported": "nickel",
+        "correct": 1,
+        "raw_response": "NICKEL",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/A3bday5.jpg",
+          "name": "A3bday5.jpg"
+        }
+      },
+      {
+        "trial": 69,
+        "target": "BEAR",
+        "reported": "bear",
+        "correct": 1,
+        "raw_response": "BEAR",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/AHANDRAK.jpg",
+          "name": "AHANDRAK.jpg"
+        }
+      },
+      {
+        "trial": 70,
+        "target": "DENTIST",
+        "reported": "dentist",
+        "correct": 1,
+        "raw_response": "DENTIST",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/AMAGGLASS.jpg",
+          "name": "AMAGGLASS.jpg"
+        }
+      },
+      {
+        "trial": 71,
+        "target": "TILE",
+        "reported": "tile",
+        "correct": 1,
+        "raw_response": "TILE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Ahappdec4.jpg",
+          "name": "Ahappdec4.jpg"
+        }
+      },
+      {
+        "trial": 72,
+        "target": "PAINTER",
+        "reported": "painter",
+        "correct": 1,
+        "raw_response": "PAINTER",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/22911500.thl.jpg",
+          "name": "22911500.thl.jpg"
+        }
+      },
+      {
+        "trial": 73,
+        "target": "GERM",
+        "reported": "germ",
+        "correct": 1,
+        "raw_response": "GERM",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ATOOTHBR3.jpg",
+          "name": "ATOOTHBR3.jpg"
+        }
+      },
+      {
+        "trial": 74,
+        "target": "SAXOPHONE",
+        "reported": "saxophone",
+        "correct": 1,
+        "raw_response": "SAXOPHONE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Acactus58.jpg",
+          "name": "Acactus58.jpg"
+        }
+      },
+      {
+        "trial": 75,
+        "target": "SICKLE",
+        "reported": "sickle",
+        "correct": 1,
+        "raw_response": "SICKLE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/AWASHOPEN.jpg",
+          "name": "AWASHOPEN.jpg"
+        }
+      },
+      {
+        "trial": 76,
+        "target": "FLOWER",
+        "reported": "flower",
+        "correct": 1,
+        "raw_response": "FLOWER",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ADRUM12.jpg",
+          "name": "ADRUM12.jpg"
+        }
+      },
+      {
+        "trial": 77,
+        "target": "VIOLA",
+        "reported": "viola",
+        "correct": 1,
+        "raw_response": "VIOLA",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/securitycamera.jpg",
+          "name": "securitycamera.jpg"
+        }
+      },
+      {
+        "trial": 78,
+        "target": "PALM",
+        "reported": "palm",
+        "correct": 1,
+        "raw_response": "PALM",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/311-863-217.jpg",
+          "name": "311-863-217.jpg"
+        }
+      },
+      {
+        "trial": 79,
+        "target": "DRESS",
+        "reported": "dress",
+        "correct": 1,
+        "raw_response": "DRESS",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ADRIARRA2.jpg",
+          "name": "ADRIARRA2.jpg"
+        }
+      },
+      {
+        "trial": 80,
+        "target": "KNOT",
+        "reported": "knot",
+        "correct": 1,
+        "raw_response": "KNOT",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Ajuicer27.jpg",
+          "name": "Ajuicer27.jpg"
+        }
+      },
+      {
+        "trial": 81,
+        "target": "CLOTHES",
+        "reported": "clothes",
+        "correct": 1,
+        "raw_response": "CLOTHES",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/largemacscreen.jpg",
+          "name": "largemacscreen.jpg"
+        }
+      },
+      {
+        "trial": 82,
+        "target": "MINK",
+        "reported": "mink",
+        "correct": 1,
+        "raw_response": "MINK",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Atool198.jpg",
+          "name": "Atool198.jpg"
+        }
+      },
+      {
+        "trial": 83,
+        "target": "CONCERT",
+        "reported": "concert",
+        "correct": 1,
+        "raw_response": "CONCERT",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ATRUNK15.jpg",
+          "name": "ATRUNK15.jpg"
+        }
+      },
+      {
+        "trial": 84,
+        "target": "BODY",
+        "reported": "body",
+        "correct": 1,
+        "raw_response": "BODY",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ACHRISTO3.jpg",
+          "name": "ACHRISTO3.jpg"
+        }
+      },
+      {
+        "trial": 85,
+        "target": "GARBAGE",
+        "reported": "garbage",
+        "correct": 1,
+        "raw_response": "GARBAGE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/driedbananaslides.jpg",
+          "name": "driedbananaslides.jpg"
+        }
+      },
+      {
+        "trial": 86,
+        "target": "DANDELION",
+        "reported": "dandelion",
+        "correct": 1,
+        "raw_response": "DANDELION",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Apilldispens3.jpg",
+          "name": "Apilldispens3.jpg"
+        }
+      },
+      {
+        "trial": 87,
+        "target": "COLUMN",
+        "reported": "column",
+        "correct": 1,
+        "raw_response": "COLUMN",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Apants8.jpg",
+          "name": "Apants8.jpg"
+        }
+      },
+      {
+        "trial": 88,
+        "target": "SUPERMARKET",
+        "reported": "supermarket",
+        "correct": 1,
+        "raw_response": "SUPERMARKET",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Aboxofnotepa4.jpg",
+          "name": "Aboxofnotepa4.jpg"
+        }
+      },
+      {
+        "trial": 89,
+        "target": "NURSERY",
+        "reported": "nursery",
+        "correct": 1,
+        "raw_response": "NURSERY",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Aantiquejuke2.jpg",
+          "name": "Aantiquejuke2.jpg"
+        }
+      },
+      {
+        "trial": 90,
+        "target": "BRIDE",
+        "reported": "bride",
+        "correct": 1,
+        "raw_response": "BRIDE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26423652.thl.jpg",
+          "name": "26423652.thl.jpg"
+        }
+      },
+      {
+        "trial": 91,
+        "target": "TACK",
+        "reported": "tack",
+        "correct": 1,
+        "raw_response": "TACK",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Aplasticbott3.jpg",
+          "name": "Aplasticbott3.jpg"
+        }
+      },
+      {
+        "trial": 92,
+        "target": "FIDDLE",
+        "reported": "fiddle",
+        "correct": 1,
+        "raw_response": "FIDDLE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/cannoli.jpg",
+          "name": "cannoli.jpg"
+        }
+      },
+      {
+        "trial": 93,
+        "target": "SCHOOL",
+        "reported": "school",
+        "correct": 1,
+        "raw_response": "SCHOOL",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26428753.thl.jpg",
+          "name": "26428753.thl.jpg"
+        }
+      },
+      {
+        "trial": 94,
+        "target": "CORN",
+        "reported": "corn",
+        "correct": 1,
+        "raw_response": "CORN",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ABUSTFOR7.jpg",
+          "name": "ABUSTFOR7.jpg"
+        }
+      },
+      {
+        "trial": 95,
+        "target": "TRAITOR",
+        "reported": "traitor",
+        "correct": 1,
+        "raw_response": "TRAITOR",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Ameasuringsp5.jpg",
+          "name": "Ameasuringsp5.jpg"
+        }
+      },
+      {
+        "trial": 96,
+        "target": "BALLOT",
+        "reported": "ballot",
+        "correct": 1,
+        "raw_response": "BALLOT",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/26451269.thl.jpg",
+          "name": "26451269.thl.jpg"
+        }
+      },
+      {
+        "trial": 97,
+        "target": "PERCH",
+        "reported": "perch",
+        "correct": 1,
+        "raw_response": "PERCH",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Agarbagebin.jpg",
+          "name": "Agarbagebin.jpg"
+        }
+      },
+      {
+        "trial": 98,
+        "target": "COBBLER",
+        "reported": "cobbler",
+        "correct": 1,
+        "raw_response": "COBBLER",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ASALTPEPP.jpg",
+          "name": "ASALTPEPP.jpg"
+        }
+      },
+      {
+        "trial": 99,
+        "target": "INVENTOR",
+        "reported": "inventor",
+        "correct": 1,
+        "raw_response": "INVENTOR",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/corkscrew02.jpg",
+          "name": "corkscrew02.jpg"
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 100,
+    "total": 100
+  }
+}

@@ -1,6 +1,9 @@
 import random
+import sys
+from pathlib import Path
 
-from stimuli import BradyDataset, DirectoryDataset, ThingsDataset
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.stimuli import BradyDataset, DirectoryDataset, ThingsDataset
 
 
 class RecognitionTaskBase:
@@ -24,8 +27,9 @@ class RecognitionTaskBase:
 
 
 class ContinuousRecognitionTask(RecognitionTaskBase):
-    def __init__(self, dataset_name="Brady2008", n_images=50, min_delay=2, max_delay=15,
-                 p_old=0.5, image_dir=None, source="local", repo_id="chrisiyer/vision-memory-tasks"):
+    def __init__(self, dataset_name="Brady2008", n_images=50, n_trials=None,
+                 min_delay=2, max_delay=15, p_old=0.5, image_dir=None,
+                 source="local", repo_id="chrisiyer/vision-memory-tasks"):
         super().__init__(
             dataset_name=dataset_name,
             n_images=n_images,
@@ -33,6 +37,12 @@ class ContinuousRecognitionTask(RecognitionTaskBase):
             source=source,
             repo_id=repo_id,
         )
+        self.n_trials = n_trials
+        # For very small n, delay constraints can't be satisfied — drop them so
+        # every image is immediately eligible to repeat after first presentation.
+        if n_images < min_delay + 2:
+            min_delay = 0
+            max_delay = n_images
         self.min_delay = min_delay
         self.max_delay = max_delay
         self.p_old = p_old
@@ -40,8 +50,13 @@ class ContinuousRecognitionTask(RecognitionTaskBase):
 
     def generate_sequence(self):
         n_unique = min(self.n_images, len(self.dataset))
-        total_trials = int(n_unique / (1 - self.p_old))
-        n_old_needed = total_trials - n_unique
+        if self.n_trials is not None:
+            total_trials = self.n_trials
+            n_old_needed = int(total_trials * self.p_old)
+            n_unique = min(n_unique, total_trials - n_old_needed)
+        else:
+            total_trials = int(n_unique / (1 - self.p_old))
+            n_old_needed = total_trials - n_unique
 
         sequence = []
         new_indices = list(range(n_unique))
@@ -95,18 +110,24 @@ class ContinuousRecognitionTask(RecognitionTaskBase):
                         "delay": None,
                     }
                 )
-            else:
-                if waiting_room:
-                    img_idx, t_intro = waiting_room.pop(0)
+            elif waiting_room:
+                # All new images exhausted; wait until oldest waiting image is
+                # eligible (respects min_delay) before repeating.
+                img_idx, t_intro = waiting_room[0]
+                delay = current_time - t_intro - 1
+                if delay >= self.min_delay:
+                    waiting_room.pop(0)
                     sequence.append(
                         {
                             "image_idx": img_idx,
                             "target": 1,
-                            "delay": current_time - t_intro - 1,
+                            "delay": delay,
                         }
                     )
-                else:
-                    break
+                    n_old_needed -= 1
+                # else: not yet eligible — advance current_time and retry
+            else:
+                break
 
             current_time += 1
 
@@ -119,7 +140,7 @@ class ContinuousRecognitionTask(RecognitionTaskBase):
             trials.append(
                 {
                     "image": self.dataset.get_image(item["image_idx"]),
-                    "prompt": "Has this image already appeared in the sequence? (yes/no)",
+                    "prompt": "Has this image already appeared in the sequence (yes/no)?",
                     "target": item["target"],
                     "metadata": {
                         **self.dataset.get_metadata(item["image_idx"]),
@@ -148,7 +169,14 @@ class AFCRecognitionTask(RecognitionTaskBase):
             if foil_type == "state":
                 raise ValueError("State foils not supported for THINGS dataset.")
             exemplars = 2 if foil_type in ["exemplar", "all"] else 1
-            self.dataset = self._load_recognition_dataset(exemplars_per_category=exemplars)
+            # Novel pairs need 2 distinct categories each; 'all' splits half novel / half exemplar.
+            if foil_type == "novel":
+                n_cats = n_images * 2
+            elif foil_type == "all":
+                n_cats = (n_images * 3 + 1) // 2
+            else:
+                n_cats = n_images
+            self.dataset = ThingsDataset(n_categories=n_cats, exemplars_per_category=exemplars)
         else:
             self.dataset = BradyDataset(type="Objects", source=source, repo_id=repo_id)
 
@@ -268,7 +296,11 @@ class AFCRecognitionTask(RecognitionTaskBase):
             test_phase.append(
                 {
                     "images": images,
-                    "prompt": "Which of these two images (1 or 2) was in the study sequence?",
+                    "prompt": (
+                        "Which of these two images was in the study sequence? "
+                        "The first image below is 1, the second is 2. "
+                        "Reply with only the digit 1 or 2 and nothing else."
+                    ),
                     "target": target,
                     "type": pair["type"],
                 }

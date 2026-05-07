@@ -1,9 +1,12 @@
 import random
+import sys
+from pathlib import Path
 
 import numpy as np
 from PIL import Image, ImageDraw
 
-from stimuli import BradyDataset
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.stimuli import BradyDataset
 
 # (name, hue_angle_degrees) — hue angles chosen as perceptual centers on the HSV wheel
 NAMED_COLORS = [

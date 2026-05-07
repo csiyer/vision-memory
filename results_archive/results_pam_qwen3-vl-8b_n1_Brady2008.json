@@ -1,0 +1,38 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260427_201218",
+    "dataset": "Brady2008",
+    "n_images": 1,
+    "n_trials": 1,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 1.0,
+        "n_correct": 1,
+        "total": 1
+      }
+    },
+    "max_context_pairs": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "SPATULA",
+        "reported": "spatula",
+        "correct": 1,
+        "raw_response": "SPATULA",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/AJUMAR.jpg",
+          "name": "AJUMAR.jpg"
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 1,
+    "total": 1
+  }
+}

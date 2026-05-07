@@ -1,0 +1,129 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260425_220236",
+    "dataset": "Brady2008",
+    "n_images": 6,
+    "n_trials": 3,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 0.6666666666666666,
+        "n_correct": 2,
+        "total": 3
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cue image (French toast) is A1.\nA1 (French toast) is paired with B1 (Arc de Triomphe).\nB1 (Arc de Triomphe) is paired with C1 (Pedestal Fan).\n\nTherefore, the image indirectly associated with the cue image is the Pedestal Fan. This matches image 1.\n\nThe answer is **1**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AARCH.jpg",
+            "name": "AARCH.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Afrenchtoast5.jpg",
+            "name": "Afrenchtoast5.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26427983.thl.jpg",
+            "name": "26427983.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ASAFE.jpg",
+            "name": "ASAFE.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is the Contact Lens Case.\n\n1.  **Contact Lens Case (A)** was paired with **Breast Pump (B)**.\n2.  **Breast Pump (B)** was paired with **Vintage Radio (C)**.\n\nTherefore, the image indirectly associated with the cue image is the **Vintage Radio (1)**.",
+        "metadata": {
+          "chain_index": 1,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ABREASPU2.jpg",
+            "name": "ABREASPU2.jpg",
+            "role": "B",
+            "chain_index": 1
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/045.jpg",
+            "name": "045.jpg",
+            "role": "A",
+            "chain_index": 1
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AANTRAD26.jpg",
+            "name": "AANTRAD26.jpg",
+            "role": "C",
+            "chain_index": 1
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26427983.thl.jpg",
+            "name": "26427983.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image (Saturn) is A.\nThe AB pair is (Saturn, Wasp nest with wasps). So, B is the Wasp nest with wasps.\nThe BC pair for the Wasp nest with wasps is (Wasp nest with wasps, Frontier Safe). So, C is the Frontier Safe.\n\nTherefore, the image indirectly associated with the cue image (Saturn) is the **Frontier Safe (image 2)**.",
+        "metadata": {
+          "chain_index": 2,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Abeesonahoney.jpg",
+            "name": "Abeesonahoney.jpg",
+            "role": "B",
+            "chain_index": 2
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Asaturn.jpg",
+            "name": "Asaturn.jpg",
+            "role": "A",
+            "chain_index": 2
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ASAFE.jpg",
+            "name": "ASAFE.jpg",
+            "role": "C",
+            "chain_index": 2
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26427983.thl.jpg",
+            "name": "26427983.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          }
+        }
+      }
+    ],
+    "accuracy": 0.6666666666666666,
+    "n_correct": 2,
+    "total": 3
+  }
+}

@@ -1,0 +1,2455 @@
+{
+  "_metadata": {
+    "task": "Continuous Recognition",
+    "timestamp": "20260331_152135",
+    "dataset": "things",
+    "n_images": 100,
+    "n_trials": 200,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0,
+        "d_prime": 5.158536270889995,
+        "hit_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "weighted_f1": 1.0
+      }
+    },
+    "p_old": 0.5,
+    "min_delay": 2,
+    "max_delay": 15
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 0,
+        "response": 0,
+        "raw_response": "I'm not able to track or compare images from a",
+        "metadata": {
+          "category": "00010_airplane",
+          "category_id": 9,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 1,
+        "target": 0,
+        "response": 0,
+        "raw_response": "I'm not able to track or compare images from a",
+        "metadata": {
+          "category": "00017_aluminum_foil",
+          "category_id": 16,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 2,
+        "target": 0,
+        "response": 0,
+        "raw_response": "I'm not able to track or compare images from a",
+        "metadata": {
+          "category": "00045_baby",
+          "category_id": 44,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00010_airplane",
+          "category_id": 9,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00017_aluminum_foil",
+          "category_id": 16,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 5,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00011_album",
+          "category_id": 10,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00045_baby",
+          "category_id": 44,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 7,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00048_backpack",
+          "category_id": 47,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 8,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00094_beanie",
+          "category_id": 93,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 9,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00005_air_conditioner",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 10,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00025_anteater",
+          "category_id": 24,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 11,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00072_barrel",
+          "category_id": 71,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 12,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00043_awning",
+          "category_id": 42,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 13,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00025_anteater",
+          "category_id": 24,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 14,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00059_bamboo",
+          "category_id": 58,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 15,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00076_basket",
+          "category_id": 75,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 16,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00048_backpack",
+          "category_id": 47,
+          "exemplar_id": 0,
+          "delay": 8
+        }
+      },
+      {
+        "trial": 17,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00099_bedpost",
+          "category_id": 98,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 18,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00086_baton3",
+          "category_id": 85,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 19,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00068_barbell",
+          "category_id": 67,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 20,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00059_bamboo",
+          "category_id": 58,
+          "exemplar_id": 0,
+          "delay": 5
+        }
+      },
+      {
+        "trial": 21,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00011_album",
+          "category_id": 10,
+          "exemplar_id": 0,
+          "delay": 15
+        }
+      },
+      {
+        "trial": 22,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00094_beanie",
+          "category_id": 93,
+          "exemplar_id": 0,
+          "delay": 13
+        }
+      },
+      {
+        "trial": 23,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00049_bacon",
+          "category_id": 48,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 24,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00043_awning",
+          "category_id": 42,
+          "exemplar_id": 0,
+          "delay": 11
+        }
+      },
+      {
+        "trial": 25,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00005_air_conditioner",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "delay": 15
+        }
+      },
+      {
+        "trial": 26,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00083_bathtub",
+          "category_id": 82,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 27,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00072_barrel",
+          "category_id": 71,
+          "exemplar_id": 0,
+          "delay": 15
+        }
+      },
+      {
+        "trial": 28,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00076_basket",
+          "category_id": 75,
+          "exemplar_id": 0,
+          "delay": 12
+        }
+      },
+      {
+        "trial": 29,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00099_bedpost",
+          "category_id": 98,
+          "exemplar_id": 0,
+          "delay": 11
+        }
+      },
+      {
+        "trial": 30,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00075_baseball_glove",
+          "category_id": 74,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 31,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00083_bathtub",
+          "category_id": 82,
+          "exemplar_id": 0,
+          "delay": 4
+        }
+      },
+      {
+        "trial": 32,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00022_ankle",
+          "category_id": 21,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 33,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00075_baseball_glove",
+          "category_id": 74,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 34,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00086_baton3",
+          "category_id": 85,
+          "exemplar_id": 0,
+          "delay": 15
+        }
+      },
+      {
+        "trial": 35,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00068_barbell",
+          "category_id": 67,
+          "exemplar_id": 0,
+          "delay": 15
+        }
+      },
+      {
+        "trial": 36,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00049_bacon",
+          "category_id": 48,
+          "exemplar_id": 0,
+          "delay": 12
+        }
+      },
+      {
+        "trial": 37,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00030_apple_tree",
+          "category_id": 29,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 38,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00044_axe",
+          "category_id": 43,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 39,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00022_ankle",
+          "category_id": 21,
+          "exemplar_id": 0,
+          "delay": 6
+        }
+      },
+      {
+        "trial": 40,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00030_apple_tree",
+          "category_id": 29,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 41,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00098_bedpan",
+          "category_id": 97,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 42,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00044_axe",
+          "category_id": 43,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 43,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00058_ballot_box",
+          "category_id": 57,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 44,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00016_altar",
+          "category_id": 15,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 45,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00098_bedpan",
+          "category_id": 97,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 46,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00058_ballot_box",
+          "category_id": 57,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 47,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00016_altar",
+          "category_id": 15,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 48,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00082_bathrobe",
+          "category_id": 81,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 49,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00002_abacus",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 50,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00096_beard",
+          "category_id": 95,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 51,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00018_amber",
+          "category_id": 17,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 52,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00066_banner",
+          "category_id": 65,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 53,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00008_airbag",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 54,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00082_bathrobe",
+          "category_id": 81,
+          "exemplar_id": 0,
+          "delay": 5
+        }
+      },
+      {
+        "trial": 55,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00039_arugula",
+          "category_id": 38,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 56,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00008_airbag",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 57,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00018_amber",
+          "category_id": 17,
+          "exemplar_id": 0,
+          "delay": 5
+        }
+      },
+      {
+        "trial": 58,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00035_arm",
+          "category_id": 34,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 59,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00002_abacus",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "delay": 9
+        }
+      },
+      {
+        "trial": 60,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00066_banner",
+          "category_id": 65,
+          "exemplar_id": 0,
+          "delay": 7
+        }
+      },
+      {
+        "trial": 61,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00096_beard",
+          "category_id": 95,
+          "exemplar_id": 0,
+          "delay": 10
+        }
+      },
+      {
+        "trial": 62,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00035_arm",
+          "category_id": 34,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 63,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00039_arugula",
+          "category_id": 38,
+          "exemplar_id": 0,
+          "delay": 7
+        }
+      },
+      {
+        "trial": 64,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00040_ashtray",
+          "category_id": 39,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 65,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00026_antenna",
+          "category_id": 25,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 66,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00073_barrette",
+          "category_id": 72,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 67,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00040_ashtray",
+          "category_id": 39,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 68,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00027_anvil",
+          "category_id": 26,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 69,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00073_barrette",
+          "category_id": 72,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 70,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00026_antenna",
+          "category_id": 25,
+          "exemplar_id": 0,
+          "delay": 4
+        }
+      },
+      {
+        "trial": 71,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00029_apple",
+          "category_id": 28,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 72,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00027_anvil",
+          "category_id": 26,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 73,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00071_barnacle",
+          "category_id": 70,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 74,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00032_apron",
+          "category_id": 31,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 75,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00029_apple",
+          "category_id": 28,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 76,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00007_air_pump",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 77,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00038_artichoke",
+          "category_id": 37,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 78,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00095_bear",
+          "category_id": 94,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 79,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00032_apron",
+          "category_id": 31,
+          "exemplar_id": 0,
+          "delay": 4
+        }
+      },
+      {
+        "trial": 80,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00038_artichoke",
+          "category_id": 37,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 81,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00056_ball",
+          "category_id": 55,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 82,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00036_armor",
+          "category_id": 35,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 83,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00006_air_mattress",
+          "category_id": 5,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 84,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00050_badge",
+          "category_id": 49,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 85,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00056_ball",
+          "category_id": 55,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 86,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00024_ant",
+          "category_id": 23,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 87,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00050_badge",
+          "category_id": 49,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 88,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00071_barnacle",
+          "category_id": 70,
+          "exemplar_id": 0,
+          "delay": 14
+        }
+      },
+      {
+        "trial": 89,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00061_banana_split",
+          "category_id": 60,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 90,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00003_accordion",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 91,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00093_beanbag",
+          "category_id": 92,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 92,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00007_air_pump",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "delay": 15
+        }
+      },
+      {
+        "trial": 93,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00006_air_mattress",
+          "category_id": 5,
+          "exemplar_id": 0,
+          "delay": 9
+        }
+      },
+      {
+        "trial": 94,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00095_bear",
+          "category_id": 94,
+          "exemplar_id": 0,
+          "delay": 15
+        }
+      },
+      {
+        "trial": 95,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00089_beachball",
+          "category_id": 88,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 96,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00024_ant",
+          "category_id": 23,
+          "exemplar_id": 0,
+          "delay": 9
+        }
+      },
+      {
+        "trial": 97,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00003_accordion",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "delay": 6
+        }
+      },
+      {
+        "trial": 98,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00036_armor",
+          "category_id": 35,
+          "exemplar_id": 0,
+          "delay": 15
+        }
+      },
+      {
+        "trial": 99,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00061_banana_split",
+          "category_id": 60,
+          "exemplar_id": 0,
+          "delay": 9
+        }
+      },
+      {
+        "trial": 100,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00089_beachball",
+          "category_id": 88,
+          "exemplar_id": 0,
+          "delay": 4
+        }
+      },
+      {
+        "trial": 101,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00047_backgammon",
+          "category_id": 46,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 102,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00001_aardvark",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 103,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00093_beanbag",
+          "category_id": 92,
+          "exemplar_id": 0,
+          "delay": 11
+        }
+      },
+      {
+        "trial": 104,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00077_basketball_hoop",
+          "category_id": 76,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 105,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00047_backgammon",
+          "category_id": 46,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 106,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00019_ambulance",
+          "category_id": 18,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 107,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00001_aardvark",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "delay": 4
+        }
+      },
+      {
+        "trial": 108,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00077_basketball_hoop",
+          "category_id": 76,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 109,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00054_bagpipe",
+          "category_id": 53,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 110,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00060_banana_peel",
+          "category_id": 59,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 111,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00019_ambulance",
+          "category_id": 18,
+          "exemplar_id": 0,
+          "delay": 4
+        }
+      },
+      {
+        "trial": 112,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00054_bagpipe",
+          "category_id": 53,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 113,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00060_banana_peel",
+          "category_id": 59,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 114,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00074_baseball",
+          "category_id": 73,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 115,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00090_bead",
+          "category_id": 89,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 116,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00079_bat1",
+          "category_id": 78,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 117,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00084_baton1",
+          "category_id": 83,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 118,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00009_airboat",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 119,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00037_arrow",
+          "category_id": 36,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 120,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00078_bassinet",
+          "category_id": 77,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 121,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00090_bead",
+          "category_id": 89,
+          "exemplar_id": 0,
+          "delay": 5
+        }
+      },
+      {
+        "trial": 122,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00079_bat1",
+          "category_id": 78,
+          "exemplar_id": 0,
+          "delay": 5
+        }
+      },
+      {
+        "trial": 123,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00009_airboat",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "delay": 4
+        }
+      },
+      {
+        "trial": 124,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00078_bassinet",
+          "category_id": 77,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 125,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00065_bank",
+          "category_id": 64,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 126,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00074_baseball",
+          "category_id": 73,
+          "exemplar_id": 0,
+          "delay": 11
+        }
+      },
+      {
+        "trial": 127,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00085_baton2",
+          "category_id": 84,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 128,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00037_arrow",
+          "category_id": 36,
+          "exemplar_id": 0,
+          "delay": 8
+        }
+      },
+      {
+        "trial": 129,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00015_alpaca",
+          "category_id": 14,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 130,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00021_anchor",
+          "category_id": 20,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 131,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00092_bean",
+          "category_id": 91,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 132,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00023_anklet",
+          "category_id": 22,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 133,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00084_baton1",
+          "category_id": 83,
+          "exemplar_id": 0,
+          "delay": 15
+        }
+      },
+      {
+        "trial": 134,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00015_alpaca",
+          "category_id": 14,
+          "exemplar_id": 0,
+          "delay": 4
+        }
+      },
+      {
+        "trial": 135,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00085_baton2",
+          "category_id": 84,
+          "exemplar_id": 0,
+          "delay": 7
+        }
+      },
+      {
+        "trial": 136,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00065_bank",
+          "category_id": 64,
+          "exemplar_id": 0,
+          "delay": 10
+        }
+      },
+      {
+        "trial": 137,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00004_acorn",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 138,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00070_bark",
+          "category_id": 69,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 139,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00062_bandage",
+          "category_id": 61,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 140,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00012_alligator",
+          "category_id": 11,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 141,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00004_acorn",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 142,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00062_bandage",
+          "category_id": 61,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 143,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00092_bean",
+          "category_id": 91,
+          "exemplar_id": 0,
+          "delay": 11
+        }
+      },
+      {
+        "trial": 144,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00023_anklet",
+          "category_id": 22,
+          "exemplar_id": 0,
+          "delay": 11
+        }
+      },
+      {
+        "trial": 145,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00069_barcode",
+          "category_id": 68,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 146,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00021_anchor",
+          "category_id": 20,
+          "exemplar_id": 0,
+          "delay": 15
+        }
+      },
+      {
+        "trial": 147,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00012_alligator",
+          "category_id": 11,
+          "exemplar_id": 0,
+          "delay": 6
+        }
+      },
+      {
+        "trial": 148,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00053_bagel",
+          "category_id": 52,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 149,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00070_bark",
+          "category_id": 69,
+          "exemplar_id": 0,
+          "delay": 10
+        }
+      },
+      {
+        "trial": 150,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00069_barcode",
+          "category_id": 68,
+          "exemplar_id": 0,
+          "delay": 4
+        }
+      },
+      {
+        "trial": 151,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00063_bandanna",
+          "category_id": 62,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 152,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00053_bagel",
+          "category_id": 52,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 153,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00052_bag",
+          "category_id": 51,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 154,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00064_banjo",
+          "category_id": 63,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 155,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00091_beaker",
+          "category_id": 90,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 156,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00100_bee",
+          "category_id": 99,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 157,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00055_baklava",
+          "category_id": 54,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 158,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00091_beaker",
+          "category_id": 90,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 159,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00087_battery",
+          "category_id": 86,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 160,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00041_asparagus",
+          "category_id": 40,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 161,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00052_bag",
+          "category_id": 51,
+          "exemplar_id": 0,
+          "delay": 7
+        }
+      },
+      {
+        "trial": 162,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00064_banjo",
+          "category_id": 63,
+          "exemplar_id": 0,
+          "delay": 7
+        }
+      },
+      {
+        "trial": 163,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00063_bandanna",
+          "category_id": 62,
+          "exemplar_id": 0,
+          "delay": 11
+        }
+      },
+      {
+        "trial": 164,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00088_bazooka",
+          "category_id": 87,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 165,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00033_aquarium",
+          "category_id": 32,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 166,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00046_backdrop",
+          "category_id": 45,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 167,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00087_battery",
+          "category_id": 86,
+          "exemplar_id": 0,
+          "delay": 7
+        }
+      },
+      {
+        "trial": 168,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00041_asparagus",
+          "category_id": 40,
+          "exemplar_id": 0,
+          "delay": 7
+        }
+      },
+      {
+        "trial": 169,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00014_aloe",
+          "category_id": 13,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 170,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00028_appetizer",
+          "category_id": 27,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 171,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00055_baklava",
+          "category_id": 54,
+          "exemplar_id": 0,
+          "delay": 13
+        }
+      },
+      {
+        "trial": 172,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00100_bee",
+          "category_id": 99,
+          "exemplar_id": 0,
+          "delay": 15
+        }
+      },
+      {
+        "trial": 173,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00014_aloe",
+          "category_id": 13,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 174,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00028_appetizer",
+          "category_id": 27,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 175,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00033_aquarium",
+          "category_id": 32,
+          "exemplar_id": 0,
+          "delay": 9
+        }
+      },
+      {
+        "trial": 176,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00088_bazooka",
+          "category_id": 87,
+          "exemplar_id": 0,
+          "delay": 11
+        }
+      },
+      {
+        "trial": 177,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00046_backdrop",
+          "category_id": 45,
+          "exemplar_id": 0,
+          "delay": 10
+        }
+      },
+      {
+        "trial": 178,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00013_almond",
+          "category_id": 12,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 179,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00034_arch",
+          "category_id": 33,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 180,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00081_bathmat",
+          "category_id": 80,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 181,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00013_almond",
+          "category_id": 12,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 182,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00020_amplifier",
+          "category_id": 19,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 183,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00051_badger",
+          "category_id": 50,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 184,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00034_arch",
+          "category_id": 33,
+          "exemplar_id": 0,
+          "delay": 4
+        }
+      },
+      {
+        "trial": 185,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00020_amplifier",
+          "category_id": 19,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 186,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00031_applesauce",
+          "category_id": 30,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 187,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00051_badger",
+          "category_id": 50,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 188,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00057_balloon",
+          "category_id": 56,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 189,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00031_applesauce",
+          "category_id": 30,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      },
+      {
+        "trial": 190,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00080_bat2",
+          "category_id": 79,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 191,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00042_avocado",
+          "category_id": 41,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 192,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00081_bathmat",
+          "category_id": 80,
+          "exemplar_id": 0,
+          "delay": 11
+        }
+      },
+      {
+        "trial": 193,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00097_bed",
+          "category_id": 96,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 194,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00080_bat2",
+          "category_id": 79,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 195,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00057_balloon",
+          "category_id": 56,
+          "exemplar_id": 0,
+          "delay": 6
+        }
+      },
+      {
+        "trial": 196,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "00067_barbed_wire",
+          "category_id": 66,
+          "exemplar_id": 0,
+          "delay": null
+        }
+      },
+      {
+        "trial": 197,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00097_bed",
+          "category_id": 96,
+          "exemplar_id": 0,
+          "delay": 3
+        }
+      },
+      {
+        "trial": 198,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00042_avocado",
+          "category_id": 41,
+          "exemplar_id": 0,
+          "delay": 6
+        }
+      },
+      {
+        "trial": 199,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "00067_barbed_wire",
+          "category_id": 66,
+          "exemplar_id": 0,
+          "delay": 2
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "hit_rate": 1.0,
+    "false_alarm_rate": 0.0,
+    "d_prime": 5.158536270889995,
+    "weighted_f1": 1.0,
+    "counts": {
+      "hits": 100,
+      "misses": 0,
+      "false_alarms": 0,
+      "correct_rejections": 100
+    },
+    "hit_rate_by_delay": {
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 1.0,
+      "6": 1.0,
+      "7": 1.0,
+      "8": 1.0,
+      "9": 1.0,
+      "10": 1.0,
+      "11": 1.0,
+      "12": 1.0,
+      "13": 1.0,
+      "14": 1.0,
+      "15": 1.0
+    }
+  }
+}

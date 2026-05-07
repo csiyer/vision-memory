@@ -1,0 +1,5027 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260428_233917",
+    "dataset": "things",
+    "n_images": 10,
+    "n_trials": 100,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.17,
+        "n_correct": 17,
+        "total": 100
+      }
+    },
+    "max_context_pairs": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file, a tool for grooming and personal care.\n\nLet's examine the two options:\n- Image 1: A noose. This is a tool associated with execution, not personal care.\n- Image 2: Needles. These are tools used for sewing, medical purposes, or crafting. While they are not directly related to nail filing, they are both tools used for specific tasks.\n\nThe nail file is a tool for personal grooming. The needles are also tools,",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The correct choice is: **2**\n\nHere's the reasoning:\n\n*   The cue image is a bowl of noodles.\n*   The first option (image 1) is a close-up of a person's neck. This is not directly related to noodles.\n*   The second option (image 2) is a necklace made of beads. This is also not directly related to noodles.\n\nHowever, the question asks for an *indirect* association. The key is to look at the *pair",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of a belly button.\n\nHowever, the question asks for an *indirect* association. Let's analyze the pairs:\n\n*   **Cue Image (A):** Belly button.\n*   **Image 1 (C):** Metal pins on a wooden surface.\n*   **Image 2 (C):** A close-up of a wire mesh or netting.\n\nLooking at the provided pairs, the belly button (A) was paired with the",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a close-up of a person's neck.\n\nThe two options are:\n1. A close-up of a person's belly button.\n2. A necklace worn around a person's neck.\n\nThe necklace (option 2) is directly associated with the neck, as it is an accessory worn on it. The belly button (option 1) is a body part, but it is not directly connected to the neck.\n\nTherefore, the image that is indirectly associated with the cue image is",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The nail file is used for grooming and maintaining nails, which are on the fingers and toes.\n\nThe first option, the bird's nest, is made of twigs and is a structure for birds to lay eggs and raise young. It is not directly related to human grooming.\n\nThe second option, the neck, is part of the human body. While the nail file is not used on the neck, the neck is the part of the body where the nails are",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The most indirect association among the two options is with image 2, which shows a person in a striped nightshirt.\n\nHere's the reasoning:\n- The cue image (nail file) is a personal care item.\n- Image 1 (wooden bowls) is kitchenware or decorative items.\n- Image 2 (person in a nightshirt) represents personal attire, specifically sleepwear. While not directly related to nail care, it is the most indirect",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The B image in the pair is a close-up of a person's neck. The C image is a close-up of a person's navel.\n\nThe nail file is used for grooming and personal care. The neck and navel are both parts of the human body. While the neck is more directly associated with the act of filing (as it's a common area for grooming), the navel is also a part of the body that is often considered in the",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 10,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 11,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 12,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct choice is: **2**\n\nThe cue image is a close-up of a human belly button. The most direct association would be with an object that is part of the body, like a nail clipper (which was paired with it in the AB pairs). However, the question asks for an *indirect* association.\n\nThe image of the wooden bowls (option 2) is indirectly associated because both the belly button and the wooden bowls are objects that can be found in a bathroom or personal",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 13,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 14,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two images is directly associated with the bird's nest.\n\nHowever, the question asks for an *indirect* association.\n\n- The bird's nest is a structure made of natural materials.\n- The image of the nail files is a set of tools, not a structure.\n- The image of the nail polish bottles is a set of cosmetic products.\n\nThere is no clear indirect link between a bird's nest and either nail files or nail polish.\n\nTherefore, based on the information provided, neither",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 15,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 16,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The correct choice is: **2**\n\nThe cue image shows a person in a striped nightshirt, which is associated with sleep or rest. The image of the belly button (option 2) is indirectly associated because it is a part of the human body, and the person in the nightshirt is a human. The image of noodles (option 1) is not directly or indirectly associated with the person in the nightshirt.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 17,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two images is directly associated with the cue image of the nail file.\n\nHowever, the question asks for an *indirect* association. Let's analyze the options:\n\n- **Image 1 (Party blowers):** These are party favors. While they are not related to nail care, they are often associated with celebrations and parties. The nail file is a personal care item. There is no strong indirect link.\n\n- **Image 2 (Necklace):** This is a",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 18,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\n- Image 1 shows party blowers, which are party favors and have no direct connection to nail polish.\n- Image 2 shows nail files, which are tools used for manicures and are directly related to nail care, the same category as nail polish.\n\nTherefore, the image indirectly associated with the cue image is **Image 2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 19,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The correct choice is (2).\n\nThe cue image is of a bowl of noodles. The most direct association would be with an image of a person eating or preparing to eat the noodles, which is not present.\n\n- Image (1) is a nail clipper, which is an object used for personal grooming, specifically for cutting fingernails. While not directly related to eating noodles, it is an item that a person might use *after* eating, or as part of a personal care routine.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 20,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The nail file is used for manicures and pedicures.\n\n- Image 1 is a white paper napkin. While it could be used for cleaning up after a manicure, it is not directly associated with the tool itself.\n- Image 2 shows a collection of nail polish bottles. This is directly associated with the use of a nail file, as both are part of a manicure/pedicure kit.\n\nTherefore, the image indirectly associated with the",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 21,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a close-up of a person's neck.\n\nLet's analyze the two options:\n\n1.  **Image 1 (Necklace):** This image shows a necklace worn around a person's neck. The necklace is positioned *on* the neck, which is the same body part shown in the cue image. This is a direct association.\n\n2.  **Image 2 (Nail Polish):** This image shows a collection of nail polish bottles. Nail polish is applied",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 22,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the bird's nest.\n\nHowever, if we must choose the *least* inappropriate or the most thematically distant, the wooden bowls (image 2) are a better fit than the party blowers (image 1).\n\nThe bird's nest is a natural, organic object. The wooden bowls, while man-made, are also natural materials (wood) and have a rustic, earthy feel. The party blowers are brightly colored, artificial, and associated with celebration",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 23,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The most direct association would be with nail care products.\n\n- Image 2 shows a collection of nail polish bottles, which are used for painting nails, a common nail care activity.\n- Image 1 shows a necklace, which is unrelated to nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 24,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 25,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a necklace made of beads. The beads are decorative and are likely made from materials like plastic, glass, or ceramic.\n\nThe two options are:\n1.  A collection of metal pins or needles.\n2.  A metal nail clipper.\n\nNeither of these items is directly related to making or wearing a necklace. However, we can look for an *indirect* association.\n\n- The nail clipper is a tool used for personal grooming, which includes cutting fingernails.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 26,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 27,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of nail polish bottles.\n\nHowever, the question asks for an *indirect* association.\n\n- The cue image (nail polish) is related to personal grooming and beauty.\n- The second image (wooden bowls) is related to dining or serving food.\n- The first image (a noose) is related to execution or death.\n\nThere is no clear indirect connection between nail polish and either wooden bowls or a noose.\n\nTherefore, based on the",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 28,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a close-up of a human navel.\n\nLet's analyze the two options:\n\n*   **Image 1 (White napkin):** This is a disposable paper napkin. While it is an object that might be used in a setting involving a person (like a meal), it has no direct or indirect anatomical or biological connection to the navel.\n*   **Image 2 (Neck/upper chest):** This image shows the human neck and upper chest area",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 29,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of the noose.\n\nHowever, if we must choose the *least* inappropriate or the most indirect association, the image of the **navel (2)** is the better choice.\n\nHere's why:\n*   The noose is a symbol of death and execution.\n*   The image of the navel is a part of the human body, representing life, birth, and the core of the individual.\n*   While the image of the nail file",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 30,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a close-up of a human navel.\n\nLet's analyze the two options:\n\n*   **Image 1 (Nail polishes):** This image shows a collection of nail polish bottles. While nail polish is applied to the fingernails, which are on the hands, there is no direct or indirect connection to the navel.\n*   **Image 2 (Nail files):** This image shows two nail files. These are tools used for shaping and smoothing fing",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 31,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of a belly button.\n\nHowever, the question asks for an *indirect* association. Let's analyze the options:\n\n- **Image 1 (Noodles):** There is no clear indirect link between a belly button and a bowl of noodles. They are unrelated objects from different categories (body part vs. food).\n\n- **Image 2 (Needles):** There is also no clear indirect link between a belly button and sewing needles. They are",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 32,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 33,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of party blowers.\n\nHowever, the question asks for an *indirect* association.\n\n- The cue image shows party blowers, which are used for celebration and parties.\n- Image 1 shows a bowl of noodles, which is a food item often associated with celebrations or parties (e.g., a party snack or meal).\n- Image 2 shows nail files, which are for personal grooming and have no direct or indirect connection to parties or blowers",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 34,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a close-up of a wire mesh or netting.\n\nLet's analyze the two options:\n\n- **Image 1 (White napkin):** This is a paper napkin. While it's a flat, textured surface, it has no inherent connection to the woven, metallic structure of the wire mesh.\n- **Image 2 (Navel):** This is a close-up of a human navel. The navel is a natural, circular indentation in the skin. The",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 35,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 36,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 37,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 38,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of the noose.\n\nHowever, if we must choose the *least* associated or the one that is *indirectly* associated based on the provided pairs, we can look at the context.\n\n- The cue image (A) is a noose.\n- The first B-C pair is: (B) nail clipper \u2192 (C) nail file.\n- The second B-C pair is: (B) striped nightshirt \u2192 (C)",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 39,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Neither image is directly associated with the cue image of the person in the striped nightgown.\n\nHowever, if we must choose the *least* indirectly associated one, the answer is:\n**1**\n\n**Reasoning:**\n*   The cue image shows a person wearing a garment (a nightgown). The first C image (the necklace) is an accessory that can be worn on the body, specifically around the neck, which is a part of the body that the person in the nightg",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 40,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 41,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 42,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of straight, thin, metallic pins or needles.\n\nLet's analyze the two options:\n\n-   **Image 1 (Neck):** This image shows a person's neck. While the neck is a part of the human body, it has no direct or indirect visual or conceptual connection to the pins. Pins are inanimate objects used for fastening, not biological structures.\n\n-   **Image 2 (Mesh):** This image shows a woven mesh or netting",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 43,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct choice is **2**.\n\nHere's the reasoning:\n\n*   The cue image is a noose, which is a rope tied in a specific, dangerous shape.\n*   The second image (the bird's nest) is also made of woven, interlaced materials (twigs and grasses) to form a structure.\n*   The first image (the necklace) is made of beads and fabric, which is a different kind of construction.\n\nThe connection is based on the *structure",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 44,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows wooden bowls, which are typically used for eating or serving food.\n\n- Image 1 is a nail clipper, a tool for personal grooming.\n- Image 2 is a close-up of a belly button.\n\nNeither image is directly related to the wooden bowls. However, the question asks for an *indirect* association.\n\nThe belly button (Image 2) is a part of the human body. The wooden bowls (cue image) are often used to hold food, which",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 45,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 46,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 47,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 48,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 49,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two images is directly associated with the bird's nest.\n\nHowever, the question asks for an *indirect* association.\n\n- The bird's nest is made of natural materials like twigs and grass.\n- The image of the sewing pins is not related to nests.\n- The image of the nail polish bottles is also not related to nests.\n\nSince neither image has a direct or even a plausible indirect connection to a bird's nest, it's possible there is a trick or a specific context",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 50,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of sewing pins.\n\nHowever, if we must choose one based on the provided pairs, the correct answer is:\n**2**\n\nHere's the reasoning:\n- The cue image (A) is of sewing pins.\n- The B-C pairs are: (B1) necklace -> (C1) belly button, (B2) nail clipper -> (C2) wooden bowls, (B3) nightshirt -> (C3) nail polish,",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 51,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles. The most direct association would be with an item used for manicures or nail care.\n\nLooking at the two options:\n- Image 1 is a bird's nest, which has no direct connection to nail polish.\n- Image 2 shows sewing pins, which are also not directly related to nail polish.\n\nHowever, the question asks for an *indirect* association. While neither is a direct match, we can look for a thematic link. Nail",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 52,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the napkin.\n\nHowever, if we must choose the *least* indirectly associated, the answer is:\n**2**\n\n**Reasoning:**\n*   The cue image is a white paper napkin.\n*   The first option (a noose) is a rope, which is a very different material and object from a napkin. While both are made of fibers, the connection is extremely weak and indirect.\n*   The second option (pins) is also made",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 53,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows wooden bowls, which are typically used for eating or serving food.\n\n- Image 1 is a nail clipper, a tool for personal grooming.\n- Image 2 is a collection of nail polish bottles, also for personal grooming.\n\nNeither a nail clipper nor nail polish is directly related to wooden bowls. However, both are items that are often found in a personal care or beauty context, which can be considered an indirect association with the act of self-care or personal presentation, which",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 54,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 55,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 56,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 57,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows wooden bowls, which are typically used for serving food or as decorative items.\n\n- Image 1 shows a person in a striped nightshirt. While this is a piece of clothing, it doesn't have a direct or indirect connection to wooden bowls.\n- Image 2 shows a white paper napkin. Napkins are often used at meals, alongside bowls and plates. The wooden bowls in the cue image would likely be used with a napkin.\n\nTherefore, the image indirectly associated with",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 58,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two images is directly associated with the cue image of the bird's nest.\n\nHowever, the question asks for an *indirect* association. Let's analyze the pairs:\n\n*   The cue image (A) is a bird's nest.\n*   The first B-C pair is: B (a noose) and C (a nail clipper).\n*   The second B-C pair is: B (a pile of pins) and C (a collection of nail polish bottles).",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 59,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 60,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a person wearing a striped nightshirt, which is sleepwear.\n\n- Image 1 is a white paper napkin. While not directly related, napkins are often used at dinner parties or events, which might be held in the evening. The person in the nightshirt could be attending such an event, making the napkin indirectly associated with the context of the person's attire.\n- Image 2 is a close-up of a person's neck and shoulders. This is a direct",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 61,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 62,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of nail polish bottles.\n\nHowever, if we must choose the *least* indirectly associated one, the answer is:\n**2** (the bowl of noodles).\n\nHere's the reasoning:\n*   The cue image (nail polish) is related to beauty, grooming, and personal care.\n*   The first option (a noose) is a symbol of death and punishment, which is thematically and contextually very distant from nail polish.\n*",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 63,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 64,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 65,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The most direct association would be with a tool for nail care, which is the metal nail clipper shown in image 2.\n\nThe rope noose in image 1 is not related to nail care.\n\nTherefore, the image indirectly associated with the cue image is:\n**2**",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 66,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 67,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 68,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of straight, thin, metallic objects, which are sewing needles.\n\nLet's examine the two options:\n- **Image 1 (Napkin):** This is a white paper napkin. It is a disposable item, often used for eating or cleaning. There is no direct or indirect connection between a napkin and sewing needles.\n- **Image 2 (Nail Clipper):** This is a metal tool used for cutting nails. Like the needles, it",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 69,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a noose, which is a type of rope knot.\n\n- Image 1 is a close-up of a chain-link fence, which is made of metal wire.\n- Image 2 is a bird's nest, which is made of twigs and other natural materials.\n\nNeither the fence nor the nest is directly made of rope. However, the bird's nest is constructed from interwoven natural materials, which is conceptually similar to how a noose is made from interw",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 70,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows wooden bowls, which are typically used for eating or serving food.\n\n- Image 1 shows sewing pins, which are tools for sewing, not directly related to eating.\n- Image 2 shows a person's neck and upper chest, which is part of the human body.\n\nNeither image is directly associated with the wooden bowls. However, the question asks for an *indirect* association.\n\nThe wooden bowls are used for food. The human body (Image 2) is the recipient",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 71,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a close-up of a human navel.\n\nLet's analyze the two options:\n\n*   **Image 1 (Party blowers):** This image shows party blowers. While they are often associated with celebrations and parties, there is no direct or indirect anatomical or conceptual link to a navel.\n*   **Image 2 (Neck/upper chest):** This image shows the neck and upper chest area of a person. The navel (belly button)",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 72,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\n- Image 1 is a close-up of a person's neck and upper chest.\n- Image 2 is a pair of nail clippers.\n\nNail clippers are a tool used for cutting nails, which is directly related to the application or maintenance of nail polish. The neck image is not related to nail polish.\n\nTherefore, the image indirectly associated with the cue image is **Image 2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 73,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The correct choice is (2).\n\nHere's the reasoning:\n\n*   The cue image (A) shows a person in a striped nightshirt, which is associated with sleep or rest.\n*   The B-C pair for the cue image is the bird's nest (B) and the belly button (C).\n*   The bird's nest (B) is a natural structure, often associated with a home or a place of rest.\n*   The belly button (C) is a part of the",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 74,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 75,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the bowl of noodles.\n\nHowever, if we must choose the *least* indirectly associated, the answer is:\n**2**\n\nHere's the reasoning:\n*   The cue image is a bowl of noodles.\n*   Image 1 is a necklace made of beads and fabric. There is no direct or indirect connection to food or eating.\n*   Image 2 is a collection of nail polish bottles. While not directly related, it is the *only* image that is",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 76,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 77,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Neither image is directly associated with the cue image of party blowers.\n\nHowever, if we must choose the one that is *indirectly* associated, the best choice is:\n**Image 1 (the necklace)**\n\nHere's the reasoning:\n*   The cue image shows party blowers, which are items used for celebration and parties.\n*   The first B-C pair shows the neck (image B) and a necklace (image C). A necklace is an accessory worn for personal adornment",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 78,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the bird's nest.\n\nHowever, if we must choose the *least* indirectly associated, the answer is:\n**2**\n\n**Reasoning:**\n*   The bird's nest is a natural, organic object.\n*   The image of the nail polish bottles (2) is a manufactured, artificial product.\n*   The image of the party blowers (1) is also artificial, but it is a toy, often associated with celebration and human activity.\n*",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 79,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a close-up of a person's neck.\n\nLet's examine the two options:\n\n1.  **Image 1 (Bird's Nest):** This image shows a bird's nest. While a bird builds its nest, the nest is not directly associated with the human neck. There is no clear thematic or conceptual link between a bird's nest and a human neck.\n\n2.  **Image 2 (Nail Clipper):** This image shows a nail clipper. The",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 80,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 81,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 82,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of the necklace.\n\nHowever, if we must choose the *least* indirectly associated one, the answer is:\n**2**\n\nHere's the reasoning:\n*   The cue image is a necklace made of beads and a ribbon.\n*   Image 1 (the noose) is associated with the B image (pins), which is a tool for sewing or piercing. A necklace is made by stringing beads, which is a form of \"stringing\"",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 83,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of the person in the striped nightgown.\n\nHowever, if we must choose the *least* indirectly associated one, the answer is:\n**2**\n\nHere's the reasoning:\n*   The cue image shows a person in a nightgown, which is an article of clothing.\n*   Image 1 (the belly button) is a body part, not clothing.\n*   Image 2 (the wire mesh) is an inanimate object,",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 84,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a white paper napkin.\n\nLet's examine the two options:\n\n- **Image 1 (Necklace):** This is a beaded necklace. There is no direct or indirect connection between a necklace and a paper napkin.\n- **Image 2 (Wooden Bowls):** These are wooden bowls. The key detail is the white cloth in the background. This cloth is visually similar to the white paper napkin in the cue image. Both are white, soft",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 85,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 86,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The correct choice is: **2**\n\nHere's the reasoning:\n\n*   The cue image shows a person wearing a nightshirt, which is sleepwear.\n*   The first option (image 1) is a close-up of a person's neck and shoulders. While it shows a person, it doesn't have a direct or indirect connection to the *type* of clothing (nightshirt) in the cue image.\n*   The second option (image 2) shows a collection of nail polish",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 87,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 88,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows colorful party blowers.\n\n- Image 1 shows a person in a striped nightshirt.\n- Image 2 shows a close-up of a person's neck and shoulders.\n\nNeither image is directly related to party blowers. However, the question asks for an *indirect* association.\n\nThe party blowers are used for celebration and parties. A nightshirt is typically worn for sleep, which is the opposite of a party. A neck is a part of the body, and while",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 89,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 90,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 91,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 92,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file, an item used for grooming and personal care.\n\nLet's examine the two options:\n\n-   **Image 1 (Neck):** This image shows a person's neck. While the neck is part of the body, it is not directly related to the function of a nail file. However, the neck is a part of the human body, and nail files are used on the body (specifically the nails).\n\n-   **Image 2 (Mesh):",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 93,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nLet's analyze the two options:\n\n*   **Image 1 (Navel):** This is a close-up of a person's navel. While it's a part of the human body, it has no direct or indirect connection to nail polish or the act of applying it.\n*   **Image 2 (Nail File):** This is a nail file. Nail files are tools used for manicures and are directly related to the",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 94,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image of the person in the striped nightshirt (image 2) is indirectly associated with the cue image of the noose.\n\nThe connection is through the concept of \"hanging\" or \"suspension.\" A noose is a device for hanging. A nightshirt, especially one with a striped pattern, is often associated with sleepwear worn at night, which can be linked to the idea of being \"hanged\" or \"suspended\" in a state of rest or unconsciousness",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 95,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The cue image is a noose, which is a symbol of hanging, a method of execution. The neck is the part of the body that would be affected by such an execution.\n\nTherefore, the image of the neck (Image 1) is indirectly associated with the cue image.\n\n**Answer: 1**",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 96,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The task is to find which of the two C images is indirectly associated with it.\n\n- Image 1 is a nail clipper. Both a nail file and a nail clipper are tools used for nail care, making them directly related.\n- Image 2 is a collection of nail polish bottles. While nail polish is used on nails, it is not a tool for shaping or filing them. The association is indirect, as it's part of a broader nail",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 97,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two images is directly associated with the cue image of the noose.\n\nHowever, if we must choose the *least* inappropriate or the *most* thematically distant one, the white napkin (image 2) is a better choice than the wooden bowls (image 1).\n\nThe noose is a symbol of death and execution. The wooden bowls are objects of daily use, possibly for eating or drinking, and are not inherently linked to death. The white napkin, while",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 98,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\n- Image 1 is a close-up of a chain-link fence.\n- Image 2 is a pair of nail clippers.\n\nThe nail clippers (Image 2) are a direct tool used for nail care, which is the subject of the nail polish bottles (cue image). The chain-link fence (Image 1) has no direct or indirect connection to nail polish or nail care.\n\nTherefore, the image indirectly associated with the cue image",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 99,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1140",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      }
+    ],
+    "accuracy": 0.17,
+    "n_correct": 17,
+    "total": 100
+  }
+}

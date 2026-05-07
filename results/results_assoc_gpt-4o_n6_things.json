@@ -1,0 +1,177 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260427_111034",
+    "dataset": "things",
+    "n_images": 6,
+    "n_trials": 3,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.6666666666666666,
+        "n_correct": 2,
+        "total": 3
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image (napkin) is image 2 (the necklace).",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1131",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image of nail polish is associated with a nail clipper. The BC pair connects the nail",
+        "metadata": {
+          "chain_index": 1,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 1
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 1
+          },
+          "correct_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          },
+          "foil_option": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cue image is indirectly associated with image 1.",
+        "metadata": {
+          "chain_index": 2,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 2
+          },
+          "cue_item": {
+            "category": "cat_1133",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 2
+          },
+          "correct_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 2
+          },
+          "foil_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      }
+    ],
+    "accuracy": 0.6666666666666666,
+    "n_correct": 2,
+    "total": 3
+  }
+}

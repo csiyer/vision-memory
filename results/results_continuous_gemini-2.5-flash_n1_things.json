@@ -1,0 +1,72 @@
+{
+  "_metadata": {
+    "task": "Continuous Recognition",
+    "timestamp": "20260428_090301",
+    "dataset": "things",
+    "n_images": 1,
+    "n_trials": 2,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 0.5,
+        "d_prime": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "weighted_f1": 0.3333333333333333
+      }
+    },
+    "p_old": 0.5,
+    "min_delay": 0,
+    "max_delay": 1
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No, I do not have a memory of past images or a sequence. Each request is processed independently.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "response": 0,
+        "raw_response": "No.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 0
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "hit_rate": 0.0,
+    "false_alarm_rate": 0.0,
+    "d_prime": 0.0,
+    "weighted_f1": 0.3333333333333333,
+    "counts": {
+      "hits": 0,
+      "misses": 1,
+      "false_alarms": 0,
+      "correct_rejections": 1
+    },
+    "hit_rate_by_delay": {
+      "0": 0.0
+    }
+  }
+}

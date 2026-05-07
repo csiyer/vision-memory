@@ -1,0 +1,5027 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260428_232043",
+    "dataset": "things",
+    "n_images": 2,
+    "n_trials": 100,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.19,
+        "n_correct": 19,
+        "total": 100
+      }
+    },
+    "max_context_pairs": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The two options are:\n- Image 1: A white paper napkin.\n- Image 2: A metal nail clipper.\n\nBoth the nail file (cue) and the nail clipper (Image 2) are tools used for nail care. The napkin (Image 1) is not related to nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a nail clipper.\n\nThe two options are:\n1. A collection of nail polish bottles.\n2. A nail file.\n\nBoth nail polish and a nail file are tools used in nail care, which is the same category as a nail clipper. Therefore, both are indirectly associated with the cue image.\n\nHowever, the question asks for *which of these two images* is indirectly associated, implying a single choice. Since the nail file is a direct tool for nail care (used",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nThe two options are:\n1.  A nail file.\n2.  A nail clipper.\n\nBoth a nail file and a nail clipper are tools used for nail care, which is directly related to the activity of using nail polish. However, the question asks for the image that is *indirectly* associated.\n\n- The nail file (image 1) is a tool used for shaping and smoothing the nail *before* applying polish",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a white paper napkin.\n\nThe two options are:\n1. A metal nail clipper.\n2. A collection of nail polish bottles.\n\nBoth the nail clipper and the nail polish are items used for nail care. The napkin, while not directly used for nail care, is often used in conjunction with it\u2014perhaps to wipe away polish or clean up after clipping nails. The nail polish, however, is more directly related to the act of beautifying or maintaining nails,",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nThe two options are:\n1. A white paper napkin.\n2. A nail file.\n\nThe nail file (image 2) is directly related to nail care, which is the context of the nail polish bottles. The napkin (image 1) has no direct or indirect connection to nail polish or nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file.\n\nThe two options are:\n1. A metal nail clipper.\n2. A white paper napkin.\n\nBoth the nail file and the nail clipper are tools used for nail care. Therefore, the nail clipper is directly associated with the cue image.\n\nThe napkin has no direct or indirect association with a nail file.\n\nThe correct answer is: 1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a white paper napkin.\n\nThe two options are:\n1. A collection of nail polish bottles.\n2. A nail file.\n\nA paper napkin is used for wiping hands or surfaces, often after handling things like nail polish or nail tools. While the nail file is a tool for nail care, the nail polish bottles are the product that is most directly associated with the act of manicuring, which is the context in which a napkin would be used to clean up spills or",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a nail clipper.\n\nThe two options are:\n1. A collection of nail polish bottles.\n2. A nail file.\n\nBoth nail polish and a nail file are tools used in nail care, which is the same category as a nail clipper. Therefore, both are indirectly associated with the cue image.\n\nHowever, the question asks for *which of these two images* is indirectly associated, implying a single choice. Since the nail file is a direct tool for nail care (used",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 10,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file.\n\nThe two options are:\n1. A nail clipper.\n2. A collection of nail polish bottles.\n\nBoth the nail file and the nail clipper are tools used for nail care. They are functionally related and belong to the same category of personal grooming items.\n\nThe nail polish, while also used for nails, serves a different purpose (cosmetic enhancement) and is not a tool for maintenance like the file or clipper.\n\nTherefore, the image that is",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 11,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a nail clipper.\n\nThe two options are:\n1. A collection of nail polish bottles.\n2. A nail file.\n\nBoth nail polish and a nail file are tools used in nail care, which is the same category as a nail clipper. Therefore, both are indirectly associated with the cue image.\n\nHowever, the question asks for *which of these two images* is indirectly associated, implying a single choice. Since the nail file is a direct tool for nail care (used",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 12,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 13,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 14,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 15,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a white paper napkin.\n\nThe two options are:\n1. A collection of nail polish bottles.\n2. A metal nail clipper.\n\nThe nail clipper (image 2) is directly associated with the cue image through the B-C pair. The B-C pair showed the nail clipper (C) with the nail files (B). The napkin (A) was paired with the nail files (B) in the A-B pair. Therefore, the nail clipper",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 16,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 17,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a white paper napkin.\n\nThe two options are:\n1. A metal nail clipper.\n2. A collection of nail polish bottles.\n\nBoth the nail clipper and the nail polish are items used for nail care. The napkin, while not directly used for nail care, is often used in conjunction with it\u2014perhaps to wipe away polish or clean up after clipping nails. The nail polish, however, is more directly related to the act of beautifying or maintaining nails,",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 18,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 19,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 20,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The two options are:\n- Image 1: A collection of nail polish bottles.\n- Image 2: A metal nail clipper.\n\nBoth nail files and nail clippers are tools used for nail care. Nail polish is a cosmetic product used to decorate nails, but it is not a tool for shaping or trimming them. Therefore, the nail clipper is the tool that is functionally and directly associated with the nail file, as they are both part of",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 21,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a white paper napkin.\n\nThe two options are:\n1. A collection of nail polish bottles.\n2. A metal nail clipper.\n\nThe nail clipper (image 2) is directly associated with the cue image through the B-C pair. The B-C pair showed the nail clipper (C) with the nail files (B). The napkin (A) was paired with the nail files (B) in the A-B pair. Therefore, the nail clipper",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 22,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 23,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 24,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nThe two options are:\n1. A white paper napkin.\n2. A nail file.\n\nThe nail file (image 2) is directly related to nail care, which is the context of the nail polish bottles. The napkin (image 1) has no direct or indirect connection to nail polish or nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 25,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The two options are:\n- Image 1: A white paper napkin.\n- Image 2: A metal nail clipper.\n\nBoth the nail file (cue) and the nail clipper (Image 2) are tools used for nail care. The napkin (Image 1) is not related to nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 26,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The two options are:\n- Image 1: A collection of nail polish bottles.\n- Image 2: A metal nail clipper.\n\nBoth nail files and nail clippers are tools used for nail care. Nail polish is a cosmetic product used to decorate nails, but it is not a tool for shaping or trimming them. Therefore, the nail clipper is the tool that is functionally and directly associated with the nail file, as they are both part of",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 27,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The two options are:\n- Image 1: A collection of nail polish bottles.\n- Image 2: A metal nail clipper.\n\nBoth nail files and nail polish are used for nail care, making them directly related. However, the nail clipper is a tool used in the same category as a nail file for nail maintenance. The nail polish, while related, is a cosmetic product rather than a tool for shaping or trimming nails.\n\nTherefore, the image",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 28,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The two options are:\n- Image 1: A white paper napkin.\n- Image 2: A metal nail clipper.\n\nBoth the nail file (cue) and the nail clipper (Image 2) are tools used for nail care. The napkin (Image 1) is not related to nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 29,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a nail clipper.\n\nThe two options are:\n1. A white paper napkin.\n2. A nail file.\n\nA nail file is a tool used for manicures, which is directly related to nail care, just like a nail clipper. The napkin has no direct or indirect association with nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 30,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a nail clipper.\n\nThe two options are:\n1. A collection of nail polish bottles.\n2. A nail file.\n\nBoth nail polish and a nail file are tools used in nail care, which is the same category as a nail clipper. Therefore, both are indirectly associated with the cue image.\n\nHowever, the question asks for *which of these two images* is indirectly associated, implying a single choice. Since the nail file is a direct tool for nail care (used",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 31,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a nail clipper.\n\nThe two options are:\n1. A white paper napkin.\n2. A nail file.\n\nA nail file is a tool used for manicures, which is directly related to nail care, just like a nail clipper. The napkin has no direct or indirect association with nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 32,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 33,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nThe two options are:\n1. A white paper napkin.\n2. A metal nail clipper.\n\nWhile a napkin is a common item found at a manicure or nail salon, it is not directly related to the products shown (nail polish). A nail clipper, however, is a direct tool used in nail care, which is the context of the nail polish bottles.\n\nTherefore, the image indirectly associated with the cue image is",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 34,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The two options are:\n- Image 1: A white paper napkin.\n- Image 2: A metal nail clipper.\n\nBoth the nail file (cue) and the nail clipper (Image 2) are tools used for nail care. The napkin (Image 1) is not related to nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 35,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The two options are:\n- Image 1: A white paper napkin.\n- Image 2: A metal nail clipper.\n\nBoth the nail file (cue) and the nail clipper (Image 2) are tools used for nail care. The napkin (Image 1) is not related to nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 36,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a nail clipper.\n\nThe two options are:\n1. A collection of nail polish bottles.\n2. A nail file.\n\nBoth nail polish and a nail file are items used in nail care, which is the same category as a nail clipper. Therefore, both are indirectly associated with the cue image.\n\nHowever, the question asks for *which of these two images* is indirectly associated, implying a single choice. Since the nail file is a direct tool for nail care (used",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 37,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a nail clipper.\n\nThe two options are:\n1. A collection of nail polish bottles.\n2. A nail file.\n\nBoth nail polish and a nail file are tools used in nail care, which is the same category as a nail clipper. Therefore, both are indirectly associated with the cue image.\n\nHowever, the question asks for *which of these two images* is indirectly associated, implying a single choice. Since the nail file is a direct tool for nail care (used",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 38,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a white paper napkin.\n\nLet's analyze the two options:\n\n- **Image 1:** This is a nail file. While it's a personal care item, it doesn't have a direct or indirect connection to a napkin. Napkins are for wiping or absorbing, while nail files are for shaping nails.\n\n- **Image 2:** This is a collection of nail polish bottles. Nail polish is often applied to nails, and after application, people might use a napkin",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 39,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image shows a nail file. The second image shows a collection of nail polish bottles. Nail files and nail polish are both common tools and products used in nail care and grooming.\n\nThe first image, showing a white paper napkin, is not related to nail care.\n\nTherefore, the image indirectly associated with the cue image is image 2.\n\n**Answer: 2**",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 40,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nThe two options are:\n1. A nail clipper.\n2. A nail file.\n\nBoth a nail clipper and a nail file are tools used for nail care, which is directly related to the use of nail polish. However, the question asks for the image that is *indirectly* associated.\n\n- The nail clipper is a direct tool for preparing nails before applying polish.\n- The nail file is also a direct tool for preparing",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 41,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a white paper napkin.\n\nThe two options are:\n1. A metal nail clipper.\n2. A collection of nail polish bottles.\n\nBoth the nail clipper and the nail polish are items used for nail care. The napkin, while not directly used for nail care, is often used in conjunction with it\u2014perhaps to wipe away polish or clean up after clipping nails. The nail polish, however, is more directly related to the act of beautifying or maintaining nails,",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 42,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 43,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 44,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The two options are:\n- Image 1: A white paper napkin.\n- Image 2: A metal nail clipper.\n\nBoth the nail file (cue) and the nail clipper (Image 2) are tools used for nail care. The napkin (Image 1) is not related to nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 45,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a white paper napkin.\n\nLet's analyze the two options:\n\n- **Image 1:** This is a nail file. While it's a personal care item, it doesn't have a direct or indirect connection to a napkin. Napkins are for wiping or absorbing, while nail files are for shaping nails.\n\n- **Image 2:** This is a collection of nail polish bottles. Nail polish is often applied to nails, and after application, people might use a napkin",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 46,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nThe two options are:\n1. A nail file.\n2. A nail clipper.\n\nBoth a nail file and a nail clipper are tools used for nail care, which is directly related to the use of nail polish. However, the question asks for the image that is *indirectly* associated.\n\n- The nail clipper (image 2) is a direct tool for nail care, often used before or after applying polish.\n-",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 47,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a nail clipper, a tool used for cutting nails.\n\nLet's examine the two options:\n\n- **Image 1 (White napkin):** This is a disposable paper napkin. It has no direct or indirect functional connection to nail care or the use of a nail clipper.\n\n- **Image 2 (Nail polish bottles):** These are bottles of nail polish. Nail polish is applied to nails, and while it's not used with a clipper, it",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 48,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a nail clipper.\n\nThe two options are:\n1. A white paper napkin.\n2. A nail file.\n\nA nail file is a tool used for manicures, which is directly related to nail care, just like a nail clipper. The napkin has no direct or indirect association with nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 49,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 50,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 51,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 52,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 53,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 54,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 55,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a nail clipper.\n\nThe two options are:\n1. A collection of nail polish bottles.\n2. A nail file.\n\nBoth nail polish and a nail file are tools used in nail care, which is the same category as a nail clipper. Therefore, both are indirectly associated with the cue image.\n\nHowever, the question asks for *which of these two images* is indirectly associated, implying a single choice. Since the nail file is a direct tool for nail care (used",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 56,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a nail clipper.\n\nThe two options are:\n1. A white paper napkin.\n2. A nail file.\n\nA nail clipper and a nail file are both tools used for nail care. They are directly related to each other as part of the same category of personal grooming items.\n\nThe napkin, while a common item, has no direct or indirect functional relationship with a nail clipper.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 57,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 58,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 59,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file.\n\nThe two options are:\n1. A nail clipper.\n2. A collection of nail polish bottles.\n\nBoth the nail file and the nail clipper are tools used for nail care. They are functionally related and belong to the same category of personal grooming items.\n\nThe nail polish, while also used for nails, serves a different purpose (cosmetic enhancement) and is not a tool for maintenance like the file or clipper.\n\nTherefore, the image that is",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 60,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The two options are:\n- Image 1: A collection of nail polish bottles.\n- Image 2: A metal nail clipper.\n\nBoth nail files and nail clippers are tools used for nail care. Nail polish is a cosmetic product used to decorate nails, but it is not a tool for shaping or trimming them. Therefore, the nail clipper is the tool that is functionally and directly associated with the nail file, as they are both part of",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 61,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nThe two options are:\n1.  A nail file.\n2.  A nail clipper.\n\nBoth a nail file and a nail clipper are tools used for nail care, which is directly related to the activity of using nail polish. However, the question asks for the image that is *indirectly* associated.\n\n- The nail file (image 1) is a tool used for shaping and smoothing the nail *before* applying polish",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 62,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 63,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file.\n\nThe two options are:\n1. A metal nail clipper.\n2. A white paper napkin.\n\nBoth the nail file and the nail clipper are tools used for nail care. Therefore, the nail clipper is directly associated with the cue image.\n\nThe napkin has no direct or indirect association with a nail file.\n\nThe correct answer is: 1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 64,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a nail clipper, a tool used for cutting nails.\n\nLet's examine the two options:\n\n- **Image 1 (White napkin):** This is a disposable paper napkin. It has no direct or indirect functional connection to nail care or the use of a nail clipper.\n\n- **Image 2 (Nail polish bottles):** These are bottles of nail polish. Nail polish is applied to nails, and while it's not used with a clipper, it",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 65,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nThe two options are:\n1.  A nail file.\n2.  A nail clipper.\n\nBoth a nail file and a nail clipper are tools used for nail care, which is directly related to the activity of using nail polish. However, the question asks for the image that is *indirectly* associated.\n\n- The nail file (image 1) is a tool used for shaping and smoothing the nail *before* applying polish",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 66,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 67,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a nail clipper.\n\nThe two options are:\n1. A white paper napkin.\n2. A nail file.\n\nA nail file is a tool used for manicures, which is directly related to nail care, just like a nail clipper. The napkin has no direct or indirect association with nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 68,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 69,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nThe two options are:\n1. A white paper napkin.\n2. A metal nail clipper.\n\nWhile a napkin is a common item found at a manicure or nail salon, it is not directly related to the products shown (nail polish). A nail clipper, however, is a direct tool used in nail care, which is the context of the nail polish bottles.\n\nTherefore, the image indirectly associated with the cue image is",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 70,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 71,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 72,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 73,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nThe two options are:\n1. A metal nail clipper.\n2. A Solingen brand nail file.\n\nBoth a nail clipper and a nail file are tools used for nail care, which is directly related to the use of nail polish. However, the question asks for the image that is *indirectly* associated.\n\n- The nail file (image 2) is a tool used in the process of preparing nails *before* applying",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 74,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 75,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a white paper napkin.\n\nThe two options are:\n1. A metal nail clipper.\n2. A collection of nail polish bottles.\n\nBoth the nail clipper and the nail polish are items used for nail care. The napkin, while not directly used for nail care, is often used in conjunction with it\u2014perhaps to wipe away polish or clean up after clipping nails. The nail polish, however, is more directly related to the act of beautifying or maintaining nails,",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 76,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nThe two options are:\n1. A nail file.\n2. A nail clipper.\n\nBoth a nail file and a nail clipper are tools used for nail care, which is directly related to the use of nail polish. However, the question asks for the image that is *indirectly* associated.\n\n- The nail clipper (image 2) is a direct tool for nail care, often used before or after applying polish.\n-",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 77,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a nail clipper.\n\nThe two options are:\n1. A collection of nail polish bottles.\n2. A nail file.\n\nBoth nail polish and a nail file are tools used in nail care, which is the same category as a nail clipper. Therefore, both are indirectly associated with the cue image.\n\nHowever, the question asks for *which of these two images* is indirectly associated, implying a single choice. Since the nail file is a direct tool for nail care (used",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 78,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 79,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a nail clipper.\n\nThe two options are:\n1. A white paper napkin.\n2. A nail file.\n\nA nail clipper and a nail file are both tools used for nail care. They are directly related to each other as part of the same category of personal grooming items.\n\nThe napkin, while a common item, has no direct or indirect functional relationship with a nail clipper.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 80,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nThe two options are:\n1. A white paper napkin.\n2. A metal nail clipper.\n\nWhile a napkin is a common item found at a manicure or nail salon, it is not directly related to the products shown (nail polish). A nail clipper, however, is a direct tool used in nail care, which is the context of the nail polish bottles.\n\nTherefore, the image indirectly associated with the cue image is",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 81,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a white paper napkin.\n\nThe two options are:\n1. A collection of nail polish bottles.\n2. A metal nail clipper.\n\nThe nail clipper (image 2) is directly associated with the cue image through the B-C pair. The B-C pair showed the nail clipper (C) with the nail files (B). The napkin (A) was paired with the nail files (B) in the A-B pair. Therefore, the nail clipper",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 82,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The two options are:\n- Image 1: A white paper napkin.\n- Image 2: A metal nail clipper.\n\nBoth the nail file (cue) and the nail clipper (Image 2) are tools used for nail care. The napkin (Image 1) is not related to nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 83,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a nail clipper, a tool used for cutting nails.\n\nThe two options are:\n1. A white paper napkin.\n2. A collection of nail polish bottles.\n\nNail polish is used for decorating and enhancing nails, which is directly related to nail care, the same category as using a nail clipper. The napkin is unrelated to nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 84,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 85,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a nail clipper.\n\nThe two options are:\n1. A nail file.\n2. A collection of nail polish bottles.\n\nBoth a nail clipper and a nail file are tools used for nail care. They are directly related to each other as part of a manicure set. The nail polish, while also used for nail care, is a cosmetic product rather than a tool for shaping or clipping the nail.\n\nTherefore, the image that is indirectly associated with the cue image is:",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 86,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a nail file. The two options are:\n- Image 1: A collection of nail polish bottles.\n- Image 2: A metal nail clipper.\n\nBoth nail files and nail clippers are tools used for nail care. Nail polish is a cosmetic product used to decorate nails, but it is not a tool for shaping or trimming them. Therefore, the nail clipper is the tool that is functionally and directly associated with the nail file, as they are both part of",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 87,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 88,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 89,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a white paper napkin.\n\nThe two options are:\n1. A collection of nail polish bottles.\n2. A nail file.\n\nWhile both items are related to personal care, the nail file (image 2) is more directly associated with the napkin in a functional context. A napkin is used to wipe up spills or clean up after using nail polish, and a nail file is used for nail care. The nail polish (image 1) is the product being applied",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 90,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 91,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 92,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 93,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nThe two options are:\n1. A white paper napkin.\n2. A nail file.\n\nThe nail file (image 2) is directly related to nail care, which is the context of the nail polish bottles. The napkin (image 1) has no direct or indirect connection to nail polish or nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 94,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 95,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a white paper napkin.\n\nThe two options are:\n1.  A nail file.\n2.  A nail clipper.\n\nBoth a nail file and a nail clipper are tools used for nail care. While the napkin is not directly used for nail care, it is a common item found in a bathroom or personal care setting alongside these tools. The nail file and clipper are more directly associated with the act of grooming and personal care, which is the broader context implied",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 96,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nThe two options are:\n1. A white paper napkin.\n2. A nail file.\n\nThe nail file (image 2) is directly related to nail care, which is the context of the nail polish bottles. The napkin (image 1) has no direct or indirect connection to nail polish or nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 97,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 98,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      },
+      {
+        "trial": 99,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a collection of nail polish bottles.\n\nThe two options are:\n1. A white paper napkin.\n2. A nail file.\n\nThe nail file (image 2) is directly related to nail care, which is the context of the nail polish bottles. The napkin (image 1) has no direct or indirect connection to nail polish or nail care.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1128",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "foil",
+            "chain_index": -1
+          }
+        }
+      }
+    ],
+    "accuracy": 0.19,
+    "n_correct": 19,
+    "total": 100
+  }
+}

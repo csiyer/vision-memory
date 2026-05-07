@@ -1,0 +1,49 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260427_120649",
+    "dataset": "Brady2008",
+    "n_images": 2,
+    "n_trials": 2,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0,
+        "n_correct": 2,
+        "total": 2
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "NEWSSTAND",
+        "reported": "newsstand",
+        "correct": 1,
+        "raw_response": "NEWSSTAND",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ATABLES5.jpg",
+          "name": "ATABLES5.jpg"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "TENT",
+        "reported": "tent",
+        "correct": 1,
+        "raw_response": "TENT",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/23007415.thl.jpg",
+          "name": "23007415.thl.jpg"
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 2,
+    "total": 2
+  }
+}

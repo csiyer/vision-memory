@@ -1,0 +1,107 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260428_115114",
+    "dataset": "things",
+    "n_images": 5,
+    "n_trials": 5,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.4
+      }
+    },
+    "max_context_images": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The first image appeared before the second in the study sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The second image (nail clipper) appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The first image appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The second image (nail file) appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 3
+        }
+      }
+    ],
+    "accuracy": 0.4,
+    "n_correct": 2,
+    "total": 5,
+    "accuracy_by_distance": {
+      "0": 0.0,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 0.0
+    }
+  }
+}
