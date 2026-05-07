@@ -1,0 +1,118 @@
+{
+  "seed": 13,
+  "ttt_learning_rate": 1.0,
+  "device": "mps",
+  "trials_per_point": 100,
+  "sequence_lengths": [
+    1,
+    10,
+    100
+  ],
+  "foil_types": [
+    "novel",
+    "exemplar"
+  ],
+  "probe_types": [
+    "loss_probe",
+    "grad_probe"
+  ],
+  "things_local_categories_loaded": 200,
+  "summaries": [
+    {
+      "probe_type": "loss_probe",
+      "foil_type": "novel",
+      "sequence_length": 1,
+      "episode_count": 100,
+      "evaluated_trials": 100,
+      "linear_probe_accuracy_pct": 50.0
+    },
+    {
+      "probe_type": "loss_probe",
+      "foil_type": "novel",
+      "sequence_length": 10,
+      "episode_count": 10,
+      "evaluated_trials": 100,
+      "linear_probe_accuracy_pct": 64.0
+    },
+    {
+      "probe_type": "loss_probe",
+      "foil_type": "novel",
+      "sequence_length": 100,
+      "episode_count": 1,
+      "evaluated_trials": 100,
+      "linear_probe_accuracy_pct": 51.0
+    },
+    {
+      "probe_type": "loss_probe",
+      "foil_type": "exemplar",
+      "sequence_length": 1,
+      "episode_count": 100,
+      "evaluated_trials": 100,
+      "linear_probe_accuracy_pct": 66.0
+    },
+    {
+      "probe_type": "loss_probe",
+      "foil_type": "exemplar",
+      "sequence_length": 10,
+      "episode_count": 10,
+      "evaluated_trials": 100,
+      "linear_probe_accuracy_pct": 77.0
+    },
+    {
+      "probe_type": "loss_probe",
+      "foil_type": "exemplar",
+      "sequence_length": 100,
+      "episode_count": 1,
+      "evaluated_trials": 100,
+      "linear_probe_accuracy_pct": 60.0
+    },
+    {
+      "probe_type": "grad_probe",
+      "foil_type": "novel",
+      "sequence_length": 1,
+      "episode_count": 100,
+      "evaluated_trials": 100,
+      "linear_probe_accuracy_pct": 89.0
+    },
+    {
+      "probe_type": "grad_probe",
+      "foil_type": "novel",
+      "sequence_length": 10,
+      "episode_count": 10,
+      "evaluated_trials": 100,
+      "linear_probe_accuracy_pct": 73.0
+    },
+    {
+      "probe_type": "grad_probe",
+      "foil_type": "novel",
+      "sequence_length": 100,
+      "episode_count": 1,
+      "evaluated_trials": 100,
+      "linear_probe_accuracy_pct": 49.0
+    },
+    {
+      "probe_type": "grad_probe",
+      "foil_type": "exemplar",
+      "sequence_length": 1,
+      "episode_count": 100,
+      "evaluated_trials": 100,
+      "linear_probe_accuracy_pct": 79.0
+    },
+    {
+      "probe_type": "grad_probe",
+      "foil_type": "exemplar",
+      "sequence_length": 10,
+      "episode_count": 10,
+      "evaluated_trials": 100,
+      "linear_probe_accuracy_pct": 78.0
+    },
+    {
+      "probe_type": "grad_probe",
+      "foil_type": "exemplar",
+      "sequence_length": 100,
+      "episode_count": 1,
+      "evaluated_trials": 100,
+      "linear_probe_accuracy_pct": 59.0
+    }
+  ]
+}

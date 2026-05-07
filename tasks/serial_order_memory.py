@@ -4,20 +4,61 @@ from itertools import combinations
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from src.stimuli import BradyDataset, ThingsDataset
+from src.stimuli import BradyDataset, DirectoryDataset, ThingsDataset
+
+
+def lag_bin(serial_lag):
+    if serial_lag <= 1:
+        return "lag_1"
+    if serial_lag <= 3:
+        return "lag_2_3"
+    if serial_lag <= 10:
+        return "lag_4_10"
+    if serial_lag <= 100:
+        return "lag_11_100"
+    return "lag_gt_100"
+
+
+def balanced_sample_by_lag(pair_indices, n_tests):
+    groups = {}
+    for left_idx, right_idx in pair_indices:
+        groups.setdefault(lag_bin(abs(left_idx - right_idx)), []).append((left_idx, right_idx))
+    for group in groups.values():
+        random.shuffle(group)
+
+    selected = []
+    bins = sorted(groups)
+    while len(selected) < n_tests:
+        progressed = False
+        round_bins = bins[:]
+        random.shuffle(round_bins)
+        for bin_id in round_bins:
+            if len(selected) >= n_tests:
+                break
+            if groups[bin_id]:
+                selected.append(groups[bin_id].pop())
+                progressed = True
+        if not progressed:
+            break
+    random.shuffle(selected)
+    return selected
 
 
 class SerialOrderMemoryBase:
-    def __init__(self, dataset_name="things", n_images=20):
+    def __init__(self, dataset_name="Brady2008", n_images=20, image_dir=None,
+                 source="local", repo_id="chrisiyer/vision-memory-tasks"):
         self.dataset_name = dataset_name
         self.n_images = n_images
+        self.image_dir = image_dir
+        self.source = source
+        self.repo_id = repo_id
         self.dataset = self._load_dataset()
 
     def _load_dataset(self):
-        if self.dataset_name == "things":
-            return ThingsDataset(n_categories=self.n_images)
+        if self.image_dir:
+            return DirectoryDataset(self.image_dir)
         if self.dataset_name == "Brady2008":
-            return BradyDataset(type="Objects")
+            return BradyDataset(type="Objects", source=self.source, repo_id=self.repo_id)
         return ThingsDataset(n_categories=self.n_images)
 
     def _sample_study_items(self):
@@ -60,7 +101,7 @@ class SerialOrderMemoryTask(SerialOrderMemoryBase):
             test_phase.append(
                 {
                     "image": item["image"],
-                    "prompt": f"When in the sequence did this image occur (1-{n})?",
+                    "prompt": f"What position in the sequence did this image appear (1-{n})?",
                     "target": item["serial_position"],
                     "metadata": item["metadata"],
                 }
@@ -74,8 +115,15 @@ class SerialOrderMemoryTask(SerialOrderMemoryBase):
 
 
 class AFCSerialOrderMemoryTask(SerialOrderMemoryBase):
-    def __init__(self, dataset_name="things", n_images=20, n_tests=None):
-        super().__init__(dataset_name=dataset_name, n_images=n_images)
+    def __init__(self, dataset_name="Brady2008", n_images=20, n_tests=None, image_dir=None,
+                 source="local", repo_id="chrisiyer/vision-memory-tasks"):
+        super().__init__(
+            dataset_name=dataset_name,
+            n_images=n_images,
+            image_dir=image_dir,
+            source=source,
+            repo_id=repo_id,
+        )
         self.n_tests = n_tests
 
     def get_trials(self):
@@ -83,13 +131,13 @@ class AFCSerialOrderMemoryTask(SerialOrderMemoryBase):
         n = len(study_items)
 
         pair_indices = list(combinations(range(n), 2))
-        random.shuffle(pair_indices)
-
-        n_tests = min(self.n_tests, len(pair_indices)) if self.n_tests is not None else min(n, len(pair_indices))
-        selected_pairs = pair_indices[:n_tests]
+        max_pairs = len(pair_indices)
+        n_tests = n if self.n_tests is None else self.n_tests
+        n_tests = min(n_tests, max_pairs)
+        pair_indices = balanced_sample_by_lag(pair_indices, n_tests)
 
         test_phase = []
-        for left_idx, right_idx in selected_pairs:
+        for left_idx, right_idx in pair_indices:
             first_item = study_items[left_idx]
             second_item = study_items[right_idx]
             pair = [first_item, second_item]
@@ -102,12 +150,13 @@ class AFCSerialOrderMemoryTask(SerialOrderMemoryBase):
             test_phase.append(
                 {
                     "images": [pair[0]["image"], pair[1]["image"]],
-                    "prompt": "Which of these two images appeared first in the study sequence? (1 or 2)",
+                    "prompt": "Which of these two images (1 or 2) appeared first in the study sequence?",
                     "target": target,
                     "metadata": {
                         "first_serial_position": min(first_item["serial_position"], second_item["serial_position"]),
                         "second_serial_position": max(first_item["serial_position"], second_item["serial_position"]),
                         "serial_lag": serial_lag,
+                        "lag_bin": lag_bin(serial_lag),
                         "distance": distance,
                         "left_image_serial_position": pair[0]["serial_position"],
                         "right_image_serial_position": pair[1]["serial_position"],

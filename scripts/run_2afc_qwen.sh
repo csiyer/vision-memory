@@ -47,10 +47,6 @@ for dataset in "${DATASETS[@]}"; do
             continue
         fi
         for size in "${SIZES[@]}"; do
-            if [ "$dataset" = "things" ] && [ "$size" -ge 250 ] && { [ "$foil" = "novel" ] || [ "$foil" = "all" ]; }; then
-                echo "  [SKIP] things | $foil | n=$size (needs 2x categories, THINGS only has 225)"
-                continue
-            fi
             if check_existing_result "$dataset" "$size" "$foil"; then
                 echo "  [EXISTS] $dataset | $foil | n=$size"
                 continue

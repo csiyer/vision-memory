@@ -30,7 +30,35 @@ echo "[2/3] Downloading images_THINGS.zip (5.0 GB) to $ZIP_PATH ..."
 curl -L --fail --retry 5 --retry-delay 10 -C - -o "$ZIP_PATH" "$ZIP_URL"
 
 echo "[3/3] Extracting into $EXTRACT_DIR ..."
-unzip -n -P "$PASSWORD" "$ZIP_PATH" -d "$EXTRACT_DIR"
+# System unzip 6.00 (2009) flags this archive's overlapping component layout as a
+# zip bomb and aborts mid-extract, so use Python's zipfile, which has no such
+# heuristic. Skip-if-exists makes re-runs safe.
+ZIP_PATH="$ZIP_PATH" EXTRACT_DIR="$EXTRACT_DIR" PASSWORD="$PASSWORD" python3 - <<'PY'
+import os, zipfile
+zip_path = os.environ["ZIP_PATH"]
+dest     = os.environ["EXTRACT_DIR"]
+password = os.environ["PASSWORD"].encode()
+
+extracted = skipped = 0
+with zipfile.ZipFile(zip_path) as zf:
+    zf.setpassword(password)
+    for name in zf.namelist():
+        target = os.path.join(dest, name)
+        if name.endswith("/"):
+            os.makedirs(target, exist_ok=True)
+            continue
+        if os.path.exists(target) and os.path.getsize(target) > 0:
+            skipped += 1
+            continue
+        os.makedirs(os.path.dirname(target), exist_ok=True)
+        with zf.open(name) as src, open(target, "wb") as dst:
+            while chunk := src.read(1 << 20):
+                dst.write(chunk)
+        extracted += 1
+        if extracted % 1000 == 0:
+            print(f"  extracted={extracted} skipped={skipped}", flush=True)
+print(f"  extracted={extracted} skipped={skipped}")
+PY
 
 echo "Done. Top-level entries in $EXTRACT_DIR:"
 ls "$EXTRACT_DIR" | head -10

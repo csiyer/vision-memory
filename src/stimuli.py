@@ -1,4 +1,5 @@
 import os
+import json
 import random
 import re
 from numbers import Number
@@ -237,7 +238,24 @@ class ThingsDataset:
 
 class BradyDataset:
     """Handles Brady2008 and Brady2013 datasets."""
-    def __init__(self, type='Objects', root_dir='datasets'):
+    HF_COLLECTIONS = {
+        "Objects": "brady_objects",
+        "Exemplar": "brady_exemplar",
+        "State": "brady_state",
+        "Brady2013ColorObjects": "brady_color_objects",
+    }
+
+    def __init__(self, type='Objects', root_dir='memory_datasets', source="local",
+                 repo_id="chrisiyer/vision-memory-tasks"):
+        self.source = source
+        self.repo_id = repo_id
+        if source not in {"local", "hf"}:
+            raise ValueError(f"Unsupported BradyDataset source={source!r}. Expected 'local' or 'hf'.")
+        if source == "hf":
+            self._load_from_hf(type)
+            return
+
+
         self.root = Path(root_dir)
         if 'Brady' in type:
              self.path = self.root / type
@@ -249,12 +267,23 @@ class BradyDataset:
         self.pair_paths = self._build_pair_paths()
 
     def __len__(self):
-        return len(self.image_paths)
+        return len(self.records) if self.source == "hf" else len(self.image_paths)
 
     def get_image(self, index):
+        if self.source == "hf":
+            return Image.open(self._hf_image_path(self.records[index]["file_name"])).convert("RGB")
         return Image.open(self.image_paths[index]).convert("RGB")
 
     def get_metadata(self, index):
+        if self.source == "hf":
+            record = self.records[index]
+            return {
+                "source": "hf",
+                "dataset_repo": self.repo_id,
+                "image_id": record["image_id"],
+                "name": record["original_file_name"],
+                "path": self._hf_image_path(record["file_name"]),
+            }
         return {"path": str(self.image_paths[index]), "name": self.image_paths[index].name}
 
     def _build_pair_paths(self):
@@ -275,10 +304,57 @@ class BradyDataset:
         return pair_paths
 
     def get_pair(self, index):
+        if self.source == "hf":
+            if not self.pair_records:
+                raise ValueError("Pair access is only supported for Brady2008Exemplar and Brady2008State.")
+            image_ids = self.pair_records[index]["image_ids"]
+            return self.get_image(self.image_id_to_index[image_ids[0]]), self.get_image(self.image_id_to_index[image_ids[1]])
+
         if not self.pair_paths:
             raise ValueError("Pair access is only supported for Brady2008Exemplar and Brady2008State.")
         original_path, foil_path = self.pair_paths[index]
         return Image.open(original_path).convert("RGB"), Image.open(foil_path).convert("RGB")
+
+    def _hf_collection_id(self, type):
+        if type in self.HF_COLLECTIONS:
+            return self.HF_COLLECTIONS[type]
+        if type.startswith("Brady2008"):
+            suffix = type.replace("Brady2008", "")
+            if suffix in self.HF_COLLECTIONS:
+                return self.HF_COLLECTIONS[suffix]
+        raise ValueError(f"Unsupported Brady HF dataset type={type!r}.")
+
+    def _load_from_hf(self, type):
+        from huggingface_hub import hf_hub_download
+
+        self.hf_hub_download = hf_hub_download
+        self.collection_id = self._hf_collection_id(type)
+        metadata_path = hf_hub_download(
+            repo_id=self.repo_id,
+            repo_type="dataset",
+            filename=f"data/{self.collection_id}/metadata.jsonl",
+        )
+        with open(metadata_path, "r", encoding="utf-8") as f:
+            self.records = [json.loads(line) for line in f if line.strip()]
+        self.image_id_to_index = {record["image_id"]: index for index, record in enumerate(self.records)}
+
+        self.pair_records = []
+        if self.collection_id in {"brady_exemplar", "brady_state"}:
+            pairs_path = hf_hub_download(
+                repo_id=self.repo_id,
+                repo_type="dataset",
+                filename=f"data/{self.collection_id}/pairs.jsonl",
+            )
+            with open(pairs_path, "r", encoding="utf-8") as f:
+                self.pair_records = [json.loads(line) for line in f if line.strip()]
+        self.pair_paths = self.pair_records
+
+    def _hf_image_path(self, file_name):
+        return self.hf_hub_download(
+            repo_id=self.repo_id,
+            repo_type="dataset",
+            filename=f"data/{self.collection_id}/{file_name}",
+        )
 
 
 class LaMemDataset():

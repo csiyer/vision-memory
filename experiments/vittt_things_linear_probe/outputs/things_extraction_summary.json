@@ -1,0 +1,15 @@
+{
+  "seed": 13,
+  "device": "mps",
+  "ttt_learning_rate": 1.0,
+  "representation": "memory-conditioned final pooled feature vector",
+  "feature_dim": 768,
+  "num_layers": 12,
+  "train_categories_loaded": 600,
+  "heldout_categories_loaded": 200,
+  "excluded_local_categories": 200,
+  "train_probe_rows": 2000,
+  "heldout_probe_rows": 1000,
+  "min_sequence_length": 1,
+  "max_sequence_length": 30
+}

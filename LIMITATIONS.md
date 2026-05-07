@@ -7,7 +7,7 @@
 | Brady2008 \| exemplar \| N>100 | SKIP | Only ~200 images in dataset |
 | Brady2008 \| state \| N>100 | SKIP | Only ~200 images in dataset |
 | Continuous recognition \| N<4 | Runs with min_delay=0 | Too few images to satisfy min_delay=2 gap between study and test; delay constraint is dropped so every image is immediately eligible to repeat. N=1 → 2 total trials, N=2 → 4, N=3 → 6. |
-| All tasks \| THINGS \| N>225 | Runs with 225 unique images | THINGS only has 225 categories locally. All tasks cap via `min(n_images, len(dataset))` so runs complete but use fewer images than the filename label suggests. Existing n=250 THINGS results are valid but reflect 225 unique images. Exception: 2AFC novel foil raises an explicit error since it requires exactly 2×N distinct categories. |
+| All tasks \| THINGS \| N>1854 | Runs with 1854 unique images | Full THINGS (1854 categories, ~14 exemplars each, ~5.2 GB) now lives at `/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/data/THINGS/object_images_full/object_images/` and is symlinked from `memory_datasets/THINGS/object_images`. Provisioning script: `scripts/download_things_osf.sh` (pulls from OSF project `jum2f`, password-protected zip). Older runs (pre-2026-05-07) used a 225-category subset — see git history of this file and any `n>=100` THINGS results from before that date for context. |
 | Associative inference \| N<4 | Runs with novel foil | With only 1 ABC chain, no second chain is available for a foil. An unstudied novel image is used instead. Dataset loads one extra image beyond the 3 chain images to serve as foil. |
 
 ## Model/API Limits
@@ -41,7 +41,7 @@
 
 ### Foil Types (2-AFC)
 - **THINGS dataset:** supports `novel`, `exemplar`, `all` (mixed novel+exemplar). `state` is **not supported** — THINGS images have no within-object state variation (e.g., no open vs. closed, empty vs. full). State foil trials are skipped entirely for this dataset.
-- **THINGS N cap for novel and all foils:** `novel` foils require 2 distinct categories per trial (one for original, one for foil), so N images need 2N categories → max N = 112 with 225 available. `all` foils are split half novel / half exemplar, requiring `N + N/2 = 1.5N` categories → max N = 150. Both conditions fail at N=250 and are skipped in the run scripts. The highest valid N for these foil types on THINGS is **N=100**.
+- **THINGS N cap for novel and all foils:** `novel` foils require 2 distinct categories per trial (one for original, one for foil), so N images need 2N categories → max N = 927 with 1854 available. `all` foils are split half novel / half exemplar, requiring `N + N/2 = 1.5N` categories → max N = 1235. `exemplar` only needs 1 category per trial → max N = 1854. The pre-2026-05-07 SKIP guards in `scripts/run_2afc_*.sh` (which capped novel/all at N<250) were removed once the full set was provisioned, since current `SIZES=(1 2 5 10 50 100 250)` is well under every cap. If `SIZES` is later expanded past these limits, the underlying `AFCRecognitionTask` already raises a descriptive `ValueError` from `tasks/afc_recognition.py:_get_pairs`.
 - **Brady2008 dataset:** supports `novel`, `exemplar`, `state`, and `all` (mixed novel+exemplar+state).
 - Older runs used `foil_type: "all"` or `foil_type: "accuracy"` to indicate a mixed/undifferentiated foil condition. These have been renamed to `"all"` for consistency and are plotted as a separate series.
 
