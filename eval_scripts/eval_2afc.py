@@ -19,7 +19,7 @@ import argparse
 import json
 import re
 from datetime import datetime
-from tasks.afc_recognition import AFCRecognitionTask
+from tasks.recognition import AFCRecognitionTask
 from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
@@ -95,7 +95,7 @@ def run_evaluation(evaluators, n_images=20, n_trials=None, foil_type='novel', da
         results = []
 
         for i in range(n_trials):
-            task = AFCRecognitionTask(dataset_name=dataset, n_images=n_images, n_trials=1, foil_type=foil_type)
+            task = AFCRecognitionTask(dataset_name=dataset, n_images=n_images, foil_type=foil_type)
             trial_data = task.get_trials()
             test_trial = trial_data['test_phase'][0]
 

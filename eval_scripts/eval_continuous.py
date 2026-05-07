@@ -18,7 +18,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 import argparse
 import json
 from datetime import datetime
-from tasks.continuous_recognition import ContinuousRecognitionTask
+from tasks.recognition import ContinuousRecognitionTask
 from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
 from evaluators.google_evaluator import GoogleEvaluator
