@@ -8,12 +8,12 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# Serial Order Memory: claude-opus-4-7-20251001 (both free-report and AFC variants)
+# Serial Order Memory: claude-opus-4-7 (both free-report and AFC variants)
 
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
-source "$SCRIPT_DIR/venv/bin/activate"
+source "/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/venv_vm/bin/activate"
 export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
 
 # Stagger start to avoid concurrent API hammering
@@ -31,7 +31,7 @@ check_existing_result() {
     local dataset="$1"
     local n_images="$2"
     local variant="$3"
-    [ -f "$RESULTS_DIR/results_serial_${variant}_claude-opus-4-7-20251001_n${n_images}_${dataset}.json" ]
+    [ -f "$RESULTS_DIR/results_serial_${variant}_claude-opus-4-7_n${n_images}_${dataset}.json" ]
 }
 
 echo "========== Serial Order Memory: $MODEL =========="

@@ -1,29 +1,28 @@
 #!/bin/bash
-#SBATCH --job-name=2afc_molmo2
-#SBATCH --partition=zgroup1
+#SBATCH --job-name=2afc_gpt
+#SBATCH --partition=short
 #SBATCH --account=zgroup
 #SBATCH --output=logs/%j.out
 #SBATCH --error=logs/%j.err
-#SBATCH --time=7-00:00:00
-#SBATCH --mem=24G
+#SBATCH --time=08:00:00
+#SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
-#SBATCH --gres=gpu:1
 
-# 2-AFC Recognition: molmo2-8b (local inference, requires GPU)
+# 2-AFC Recognition: gpt-5
 
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
-source "$SCRIPT_DIR/venv/bin/activate"
+source "/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/venv_vm/bin/activate"
+export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
 
-export HF_HOME="/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/hf_cache"
-export TRANSFORMERS_OFFLINE=1
-export HF_DATASETS_OFFLINE=1
+# Stagger start to avoid concurrent API hammering
+sleep 0
 
-MODEL="molmo2"
-N_TRIALS=50
+MODEL="gpt-5"
+N_TRIALS=100
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250)
+SIZES=(1 2 5 10 50 100 250)
 DATASETS=("things" "Brady2008")
 FOIL_TYPES=("novel" "exemplar" "state" "all")
 
@@ -33,7 +32,7 @@ check_existing_result() {
     local dataset="$1"
     local n_images="$2"
     local foil_type="$3"
-    [ -f "$RESULTS_DIR/results_2afc_molmo2-8b_n${n_images}_${dataset}_${foil_type}.json" ]
+    [ -f "$RESULTS_DIR/results_2afc_gpt-5_n${n_images}_${dataset}_${foil_type}.json" ]
 }
 
 echo "========== 2-AFC Recognition: $MODEL =========="

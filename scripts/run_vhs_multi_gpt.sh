@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=vhs_multi_gpt4o
+#SBATCH --job-name=vhs_multi_gpt
 #SBATCH --partition=short
 #SBATCH --account=zgroup
 #SBATCH --output=logs/%j.out
@@ -13,7 +13,7 @@
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
-source "$SCRIPT_DIR/venv/bin/activate"
+source "/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/venv_vm/bin/activate"
 export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
 
 # Stagger start to avoid concurrent API hammering

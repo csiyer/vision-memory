@@ -15,7 +15,7 @@
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
-source "$SCRIPT_DIR/venv/bin/activate"
+source "/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/venv_vm/bin/activate"
 
 export HF_HOME="/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/hf_cache"
 export TRANSFORMERS_OFFLINE=1

@@ -1,29 +1,27 @@
 #!/bin/bash
-#SBATCH --job-name=continuous_molmo2
+#SBATCH --job-name=pam_gpt
 #SBATCH --partition=short
 #SBATCH --account=zgroup
 #SBATCH --output=logs/%j.out
 #SBATCH --error=logs/%j.err
-#SBATCH --time=12:00:00
-#SBATCH --mem=24G
+#SBATCH --time=08:00:00
+#SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
-#SBATCH --gres=gpu:1
 
-
-# Continuous Recognition: molmo2-8b (local inference, requires GPU)
+# Paired Associate Memory: gpt-5
 
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
-source "$SCRIPT_DIR/venv/bin/activate"
+source "/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/venv_vm/bin/activate"
+export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
 
-export HF_HOME="/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/hf_cache"
-export TRANSFORMERS_OFFLINE=1
-export HF_DATASETS_OFFLINE=1
+# Stagger start to avoid concurrent API hammering
+sleep 180
 
-MODEL="molmo2"
+MODEL="gpt-5"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250)
+SIZES=(1 2 5 10 50 100 250)
 DATASETS=("things" "Brady2008")
 
 mkdir -p "$RESULTS_DIR" logs
@@ -31,10 +29,10 @@ mkdir -p "$RESULTS_DIR" logs
 check_existing_result() {
     local dataset="$1"
     local n_images="$2"
-    [ -f "$RESULTS_DIR/results_continuous_molmo2-8b_n${n_images}_${dataset}.json" ]
+    [ -f "$RESULTS_DIR/results_pam_gpt-5_n${n_images}_${dataset}.json" ]
 }
 
-echo "========== Continuous Recognition: $MODEL =========="
+echo "========== Paired Associate Memory: $MODEL =========="
 
 for dataset in "${DATASETS[@]}"; do
     echo "--- Dataset: $dataset ---"
@@ -44,7 +42,7 @@ for dataset in "${DATASETS[@]}"; do
             continue
         fi
         echo "  [RUN] $dataset | n=$size"
-        python3 -m eval_scripts.eval_continuous \
+        python3 -m eval_scripts.eval_pam \
             --models "$MODEL" \
             --n-images "$size" \
             --dataset "$dataset" \

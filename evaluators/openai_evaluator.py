@@ -11,7 +11,7 @@ from .base import BaseEvaluator
 class OpenAIEvaluator(BaseEvaluator):
     """OpenAI GPT vision evaluator."""
 
-    def __init__(self, model_id: str = "gpt-5.5"):
+    def __init__(self, model_id: str = "gpt-5"):
         super().__init__(model_id)
         self.client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
@@ -41,18 +41,25 @@ class OpenAIEvaluator(BaseEvaluator):
 
     def _call_api(self, messages: List[Dict]) -> str:
         """Make API call and return response text."""
-        for attempt in range(16):
+        max_attempts = 4
+        for attempt in range(max_attempts):
             try:
                 resp = self.client.chat.completions.create(
                     model=self.model_id,
                     messages=messages,
-                    max_tokens=20
+                    max_tokens=20,
+                    timeout=60,
                 )
                 return resp.choices[0].message.content
-            except RateLimitError:
-                if attempt < 15:
-                    wait = min(30 * (2 ** attempt), 600)  # cap at 10 min
-                    print(f"\n  GPT 429 rate limit, waiting {wait}s (attempt {attempt+1}/16)...")
+            except RateLimitError as e:
+                body = getattr(e, "message", None) or str(e)
+                if attempt < max_attempts - 1:
+                    wait = min(30 * (2 ** attempt), 240)
+                    print(f"\n  GPT 429 (attempt {attempt+1}/{max_attempts}, waiting {wait}s): {body}", flush=True)
                     time.sleep(wait)
                 else:
+                    print(f"\n  GPT 429 final: {body}", flush=True)
                     raise
+            except Exception as e:
+                print(f"\n  GPT call failed (attempt {attempt+1}/{max_attempts}): {type(e).__name__}: {e}", flush=True)
+                raise

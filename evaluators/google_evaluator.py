@@ -12,7 +12,7 @@ from .base import BaseEvaluator
 class GoogleEvaluator(BaseEvaluator):
     """Google Gemini vision evaluator."""
 
-    def __init__(self, model_id: str = "gemini-3.1-flash-image-preview"):
+    def __init__(self, model_id: str = "gemini-3-flash-preview"):
         super().__init__(model_id)
         self.client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
 
@@ -43,7 +43,6 @@ class GoogleEvaluator(BaseEvaluator):
                 parts = [self._to_part(item) for item in msg["content"]]
             contents.append(types.Content(role=role, parts=parts))
 
-        time.sleep(35)  # free tier: 10 RPM shared across ~5 concurrent jobs
         for attempt in range(16):
             try:
                 resp = self.client.models.generate_content(

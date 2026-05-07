@@ -15,7 +15,7 @@
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
-source "$SCRIPT_DIR/venv/bin/activate"
+source "/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/venv_vm/bin/activate"
 
 export HF_HOME="/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/hf_cache"
 export TRANSFORMERS_OFFLINE=1
@@ -23,7 +23,7 @@ export HF_DATASETS_OFFLINE=1
 
 MODEL="molmo2"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250)
+SIZES=(1 2 5 10 50 100 250)
 DATASETS=("things" "Brady2008")
 FOIL_TYPES=("novel" "exemplar" "state" "all")
 

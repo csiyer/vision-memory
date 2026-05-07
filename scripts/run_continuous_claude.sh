@@ -8,12 +8,12 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# Continuous Recognition: claude-opus-4-7-20251001
+# Continuous Recognition: claude-opus-4-7
 
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
-source "$SCRIPT_DIR/venv/bin/activate"
+source "/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/venv_vm/bin/activate"
 export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
 
 # Stagger start to avoid concurrent API hammering
@@ -29,7 +29,7 @@ mkdir -p "$RESULTS_DIR" logs
 check_existing_result() {
     local dataset="$1"
     local n_images="$2"
-    [ -f "$RESULTS_DIR/results_continuous_claude-opus-4-7-20251001_n${n_images}_${dataset}.json" ]
+    [ -f "$RESULTS_DIR/results_continuous_claude-opus-4-7_n${n_images}_${dataset}.json" ]
 }
 
 echo "========== Continuous Recognition: $MODEL =========="

@@ -201,6 +201,10 @@ def main():
         args.dataset,
     )
 
+    if not results:
+        print("No results produced — not writing output file.")
+        return
+
     # Build output with metadata at the top
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     output_data = {

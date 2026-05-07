@@ -34,9 +34,9 @@ class BaseEvaluator(ABC):
     def check_image_capacity(self, n_images: int) -> bool:
         """Probe whether the model can handle n_images in a single request.
 
-        Sends n_images 1x1 white pixel images with a minimal prompt and catches
-        any 400/413/context-too-large errors from the provider.
-        Returns True if the probe succeeds, False if the model rejects it.
+        Returns True on success, False only when the provider explicitly rejects
+        the request as too large (400/413 with capacity-related wording).
+        Other errors (rate limits, 5xx, network) propagate so callers can react.
         """
         pixel = Image.new("RGB", (1, 1), (255, 255, 255))
         encoded = [self._encode_image(pixel) for _ in range(n_images)]
@@ -46,7 +46,11 @@ class BaseEvaluator(ABC):
             self._call_api(messages)
             return True
         except Exception as e:
+            status = getattr(e, "status_code", None)
             msg = str(e).lower()
-            if any(tok in msg for tok in ("400", "413", "too large", "too many", "image", "limit", "exceed", "invalid")):
+            capacity_phrases = ("too many images", "too large", "payload too large",
+                                "context length", "context window", "maximum context",
+                                "exceeds the maximum", "request too large")
+            if status in (400, 413) and any(p in msg for p in capacity_phrases):
                 return False
             raise

@@ -8,13 +8,13 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# VHS multi-needle: gemini-2.5-flash
+# VHS multi-needle: gemini-3-flash-preview
 # 1M token context => all VHS sizes supported
 
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
-source "$SCRIPT_DIR/venv/bin/activate"
+source "/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/venv_vm/bin/activate"
 
 MODEL="gemini"
 RESULTS_DIR="$SCRIPT_DIR/results"
@@ -24,7 +24,7 @@ mkdir -p "$RESULTS_DIR" logs
 
 check_existing_result() {
     local image_count="$1"
-    [ -f "$RESULTS_DIR/results_vhs_gemini-2.5-flash_n${image_count}_VHs_large_multi_needle.json" ]
+    [ -f "$RESULTS_DIR/results_vhs_gemini-3-flash-preview_n${image_count}_VHs_large_multi_needle.json" ]
 }
 
 echo "========== VHS multi_needle: $MODEL =========="

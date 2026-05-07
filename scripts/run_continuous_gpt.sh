@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=continuous_gpt4o
+#SBATCH --job-name=continuous_gpt
 #SBATCH --partition=short
 #SBATCH --account=zgroup
 #SBATCH --output=logs/%j.out
@@ -8,18 +8,18 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# Continuous Recognition: gpt-5.5
+# Continuous Recognition: gpt-5
 
 set -e
 
 SCRIPT_DIR="/insomnia001/home/pm3361/vision-memory"
-source "$SCRIPT_DIR/venv/bin/activate"
+source "/insomnia001/depts/zgroup/zgroup_burg/zgroup/users/pm3361/venv_vm/bin/activate"
 export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
 
 # Stagger start to avoid concurrent API hammering
 sleep 120
 
-MODEL="gpt-5.5"
+MODEL="gpt-5"
 RESULTS_DIR="$SCRIPT_DIR/results"
 SIZES=(1 2 5 10 50 100 250)
 DATASETS=("things" "Brady2008")
@@ -29,7 +29,7 @@ mkdir -p "$RESULTS_DIR" logs
 check_existing_result() {
     local dataset="$1"
     local n_images="$2"
-    [ -f "$RESULTS_DIR/results_continuous_gpt-5.5_n${n_images}_${dataset}.json" ]
+    [ -f "$RESULTS_DIR/results_continuous_gpt-5_n${n_images}_${dataset}.json" ]
 }
 
 echo "========== Continuous Recognition: $MODEL =========="
