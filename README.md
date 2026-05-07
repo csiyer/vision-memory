@@ -1,146 +1,232 @@
 # Vision Memory Tasks
 
-This repository implements several classic psychological tasks that measure episodic memory. They progress in difficulty, and vary in the degree they rely strictly on hippocampal mechanisms. Note that many of these tasks are frequently implemented with word stimuli in the literature, but here we use images to evaluate memory when learning representations from raw sensory data (i.e., pixels).
+This repository implements classic psychological tasks for evaluating visual episodic memory in models. Many of these paradigms are often run with words in the human literature; here, the emphasis is on image stimuli so models must learn from raw visual input.
 
-**Data layout:** Large assets live under `dataset/`: COCO + Visual Haystacks QA (`dataset/coco`, `dataset/VHs_qa`), and Brady / local stimulus files (`dataset/memory_datasets`). `dataset/coco` and `dataset/VHs_qa` can stay empty on disk: re-fetch VHs JSON with `hf download … tsunghanwu/visual_haystacks`, then either `python -m eval_scripts.prefetch_vhs_coco` or `--fetch-missing-coco` on eval. For backwards compatibility, the repo root has a symlink `memory_datasets` → `dataset/memory_datasets`, so existing paths and imports keep working. Brady images are not on the COCO CDN—keep `dataset/memory_datasets` or your `memory_datasets.zip` if you need those tasks; THINGS can stream from Hugging Face without them.
+Make sure to unzip the dataset archives from the repository root before running the tasks:
 
-### 1. Recognition Memory
-
-#### 1a. Continuous Recognition
-Show a sequence of images, for each image respond if the image has already appeared in the sequence or not.
-
-By default, images are streamed from the [THINGS Dataset](https://things-initiative.org) via [HuggingFace](https://huggingface.co/datasets/Haitao999/things-eeg).
-
-Each image is accompanied by an estimate of image memorability, from [Kramer et al. (2023)](https://www.science.org/doi/full/10.1126/sciadv.add2981). Memorability is computed as the proportion of correct identifications of the image minus the proportion of false alarms on that image, across their pool of 13,946 subjects performing a continuous recognition task (each subject saw 187 images).
-
-Note that the continuous recognition task was also used in the [LaMem dataset](http://memorability.csail.mit.edu) and the [Natural Scenes Dataset](https://naturalscenesdataset.org)
-
-Usage:
-```python
-from tasks.recognition import ContinuousRecognitionTask
-task = ContinuousRecognitionTask(dataset_name='things', n_images=50, min_delay=2, max_delay=15, p_old=0.5)
-# trials: list of {image, prompt, target, metadata}
+```bash
+unzip memory_datasets_brady.zip
+unzip memory_datasets_mst.zip
 ```
 
-#### 1b. 2-AFC Recognition ([Brady et al. 2008](https://www.pnas.org/doi/10.1073/pnas.0803390105))
-Show a sequence of images, then show 1 old image and 1 new images and ask which is old
+Both archives contain the top-level `memory_datasets/` directory, so unzipping both will merge the Brady, wordpool, color, and MST assets into the expected layout. The full THINGS image set is not bundled.
 
-3 conditions of "new" images (foils): novel (unrelated image), exemplar (different instance of same category), and state (same instance, different state). The "novel" and "exemplar" conditions can be implemented with the THINGS images as well, although the "state" condition cannot.
+## Data Loading
 
-Usage:
+By default, tasks load stimuli from the local `memory_datasets/` directory:
+
+```bash
+unzip memory_datasets_brady.zip
+unzip memory_datasets_mst.zip
+```
+
+You can also load the Brady, MST, color-memory, and wordpool assets from the Hugging Face dataset repo:
+
+```python
+HF_REPO = "chrisiyer/vision-memory-tasks"
+```
+
+For example:
+
 ```python
 from tasks.recognition import AFCRecognitionTask
-task = AFCRecognitionTask(dataset_name='Brady2008', n_images=20, foil_type='all')
+
+task = AFCRecognitionTask(
+    dataset_name="Brady2008",
+    n_images=12,
+    foil_type="all",
+    source="hf",
+    repo_id=HF_REPO,
+)
+```
+
+The local loader remains the default, so existing code continues to work without changing arguments. THINGS is intentionally kept separate from `chrisiyer/vision-memory-tasks`; `ThingsDataset` still loads from `memory_datasets/THINGS/object_images` when present and otherwise falls back to its existing streaming behavior.
+
+The Hugging Face dataset assets and preset episode manifests are generated from this repository:
+
+```bash
+python hf_scripts/export_hf_assets.py
+python hf_scripts/generate_hf_episodes.py
+```
+
+## 1. Recognition Memory
+
+### 1a. Continuous Recognition
+
+Show images one at a time. For each image, answer whether it has already appeared in the sequence.
+
+```python
+from tasks.recognition import ContinuousRecognitionTask
+
+task = ContinuousRecognitionTask(dataset_name="Brady2008", n_images=50, min_delay=2, max_delay=15, p_old=0.5)
+trials = task.get_trials()
+# trials: [{image, prompt, target, metadata}]
+# target: 1 = old / yes, 0 = new / no
+```
+
+### 1b. 2-AFC Recognition
+
+Study a sequence of images, then choose which of two images was in the study sequence. Brady-style foil types are:
+
+- `novel`: unrelated new image
+- `exemplar`: different instance of the same category
+- `state`: same object in a different state
+- `all`: mix of the three foil types
+
+```python
+from tasks.recognition import AFCRecognitionTask
+
+task = AFCRecognitionTask(dataset_name="Brady2008", n_images=20, foil_type="all")
 results = task.get_trials()
 # results: {study_sequence, test_phase[{images, prompt, target, type}]}
+# target: 1 or 2
 ```
 
+For Brady exemplar and state foils, either member of the pair can be the studied item; the target/foil direction is randomized per generated trial.
 
-### 2. Serial Order Memory
-Study a sequence, then test memory for the order in which items appeared. Similarly to above, there are two versions of the task:
+## 2. Mnemonic Similarity Task
 
-- Serial Order: report the position (1 to N) of a studied image.
-- AFC Serial Order: show two studied images and report which appeared first.
+Study target images, then classify test images as `old`, `similar`, or `new`. Lures are visually similar but non-identical images, making this a recognition task with an explicit "similar" response option.
 
-Usage:
+Requires MST stimuli in `memory_datasets/MST/` with `Set 1` through `Set 6` folders and matching `Set1 bins.txt` through `Set6 bins.txt` files, or `source="hf"` to load from the Hugging Face dataset repo. Study items and foils are sampled to balance MST lure bins as evenly as possible.
+
 ```python
-from tasks.serial_order_memory import SerialOrderMemoryTask, AFCSerialOrderMemoryTask
+from tasks.mnemonic_similarity import MnemonicSimilarityTask
 
-task = SerialOrderMemoryTask(dataset_name='things', n_images=20)
+task = MnemonicSimilarityTask(n_study=128, root="memory_datasets/MST")
 results = task.get_trials()
-# results: {study_sequence, test_phase[{image, prompt, target}]}
-
-afc_task = AFCSerialOrderMemoryTask(dataset_name='things', n_images=20)
-afc_results = afc_task.get_trials()
-# results: {study_sequence, test_phase[{images, prompt, target, metadata.distance}]}
+# results: {study_sequence, test_phase[{image, prompt, target, type, metadata}]}
+# target: "old", "similar", or "new"
 ```
 
+## 3. Serial Order Memory
 
-### 3. Color Memory ([Brady et al. 2013](https://konklab.fas.harvard.edu/Papers/Brady_2013_PsychSci.pdf))
-Show a sequence of colored objects, then show one object in grayscale and ask for a continuous color report.
+Study a sequence, then report the order in which items appeared.
 
-Usage:
+### 3a. Free Report
+
+Report the serial position of a studied image.
+
+```python
+from tasks.serial_order_memory import SerialOrderMemoryTask
+
+task = SerialOrderMemoryTask(dataset_name="Brady2008", n_images=20)
+results = task.get_trials()
+# results: {study_sequence, test_phase[{image, prompt, target, metadata}]}
+# target: serial position from 1 to N
+```
+
+### 3b. 2-AFC Serial Order
+
+Choose which of two studied images appeared first.
+
+```python
+from tasks.serial_order_memory import AFCSerialOrderMemoryTask
+
+task = AFCSerialOrderMemoryTask(dataset_name="Brady2008", n_images=20, n_tests=None)
+results = task.get_trials()
+# results: {study_sequence, test_phase[{images, prompt, target, metadata}]}
+# target: 1 or 2
+```
+
+2-AFC serial-order comparisons are sampled across lag bins so the probes cover nearby and far-apart serial positions.
+
+## 4. Color Memory
+
+Study colored objects, then see a grayscale probe and report the remembered color.
+
+### 4a. Continuous Color Report
+
+Report a continuous hue rotation angle on a CIELAB color wheel. Study images are generated by rotating the source object hue in CIELAB space, matching the Brady color-memory helper. The wheel convention is `0/360` = right, `90` = top, `180` = left, `270` = bottom.
+
 ```python
 from tasks.color_memory import ColorMemoryTask
-task = ColorMemoryTask(n_images=10, n_colors=36)
+
+task = ColorMemoryTask(n_images=10, mode="continuous_color_report")
 results = task.get_trials()
-# results: {study_sequence, test_phase[{image, palette, prompt, target}]}
+# results: {study_sequence, color_wheel, test_phase[{image, color_wheel, prompt, target, metadata}]}
+# target: continuous hue angle in degrees
 ```
 
-### 4. Paired Associate Memory
-Show a sequence of images, each paired to a word. Then, show an image and ask for the word it was paired with.
-By default, images are drawn from the [THINGS dataset](https://things-initiative.org) and words from the normed wordpool of the [PEERS dataset](https://memory.psych.upenn.edu/PEERS)
+### 4b. Named Colors
 
-Usage:
+Report one of six named colors: `red`, `orange`, `yellow`, `green`, `blue`, or `purple`.
+
+```python
+from tasks.color_memory import ColorMemoryTask
+
+task = ColorMemoryTask(n_images=10, mode="named")
+results = task.get_trials()
+# results: {study_sequence, test_phase[{image, prompt, target, metadata}]}
+# target: color name
+```
+
+## 5. Paired Associate Memory
+
+Study paired associates, then retrieve the item associated with a cue.
+
+### 5a. Image-Word
+
+Study image-word pairs, then report the word paired with a cue image.
+
 ```python
 from tasks.paired_associate_memory import PairedAssociateMemoryTask
-task = PairedAssociateMemoryTask(dataset_name='things', n_images=20)
+
+task = PairedAssociateMemoryTask(dataset_name="Brady2008", n_images=20, pair_type="word")
 results = task.get_trials()
-# results: {study_sequence, test_phase[{image, prompt, target}]}
+# results: {study_sequence, test_phase[{image, prompt, target, metadata}]}
+# target: word
 ```
 
-### 5. Associative Inference
-Study latent `A-B-C` chains across two blocks of image pairs. First, all `A-B` pairs are shown. Second, all `B-C` pairs are shown. At test, the model sees an `A` image and must choose which of two `C` images is indirectly associated with it.
+### 5b. Image-Image 2-AFC
 
-Usage:
+Study image-image pairs, then choose which of two images was paired with a cue image.
+
+```python
+from tasks.paired_associate_memory import PairedAssociateMemoryTask
+
+task = PairedAssociateMemoryTask(dataset_name="Brady2008", n_images=20, pair_type="image")
+results = task.get_trials()
+# results: {study_sequence, test_phase[{cue_image, images, prompt, target, metadata}]}
+# target: 1 or 2
+```
+
+## 6. Associative Inference
+
+Study latent `A-B-C` chains across `A-B` and `B-C` pairs. At test, infer which `C` item is indirectly associated with an `A` cue.
+
+### 6a. Word 2-AFC
+
+Study `A-B` image-image pairs and `B-C` image-word pairs, then choose which of two words is indirectly associated with the cue image.
+
 ```python
 from tasks.associative_inference import AssociativeInferenceTask
 
-task = AssociativeInferenceTask(dataset_name='things', n_trials=20)
+task = AssociativeInferenceTask(dataset_name="Brady2008", n_trials=20, pair_type="word")
 results = task.get_trials()
-# results: {study_sequence[{images, pair_type}], test_phase[{cue_image, images, prompt, target}]}
+# results: {study_sequence, test_phase[{cue_image, options, prompt, target, metadata}]}
+# target: 1 or 2
 ```
 
+### 6b. Image 2-AFC
+
+Study `A-B` and `B-C` image-image pairs, then choose which of two images is indirectly associated with the cue image.
+
+```python
+from tasks.associative_inference import AssociativeInferenceTask
+
+task = AssociativeInferenceTask(dataset_name="Brady2008", n_trials=20, pair_type="image")
+results = task.get_trials()
+# results: {study_sequence, test_phase[{cue_image, images, prompt, target, metadata}]}
+# target: 1 or 2
+```
 
 ## Metrics and Plotting
-Standardized metrics including d-prime (z(hit_rate) - z(false_alarm_rate)), weighted F1, serial order error, AFC serial order accuracy by distance, associative inference accuracy, and hit rate by delay are calculated in `metrics.py`. Plotting tools in `plotting.py` include overlays of human performance data from Brady et al. (2008, 2013) stored in `memory_datasets/target_data.json`.
 
+Standardized metrics are implemented in `metrics.py`, including recognition accuracy/d-prime, hit rate by delay, serial order error, 2-AFC accuracy by distance, continuous color circular error, named-color accuracy, paired associate accuracy, MST LDI, and associative inference accuracy.
 
-### 6. Visual Haystacks ([Wu et al. 2025](https://visual-haystacks.github.io/))
-Vision-centric needle-in-a-haystack benchmark on COCO image sets with binary yes/no questions.
+Plotting helpers in `plotting.py` create task-specific summaries and overlay available human benchmarks from files in `literature/`.
 
-Preparation:
-1. Download VHs QA files:
-```bash
-hf download --repo-type dataset tsunghanwu/visual_haystacks --local-dir dataset/VHs_qa
-```
-2. Download **COCO 2017** images and annotations. VHs references **train**, **val**, and **test** images, so you need all three splits (train is large, ~18 GB zipped):
-```text
-dataset/coco/{train2017,val2017,test2017,annotations}
-```
-Example (from repo root, into `dataset/coco`):
-```bash
-curl -L -o dataset/coco/train2017.zip   http://images.cocodataset.org/zips/train2017.zip
-curl -L -o dataset/coco/val2017.zip     http://images.cocodataset.org/zips/val2017.zip
-curl -L -o dataset/coco/test2017.zip    http://images.cocodataset.org/zips/test2017.zip
-curl -L -o dataset/coco/annotations_trainval2017.zip http://images.cocodataset.org/annotations/annotations_trainval2017.zip
-# then unzip each archive in dataset/coco/
-```
+## Related Benchmarks
 
-**Low storage:** You can skip downloading full COCO zips.
-
-- **During eval:** pass `--fetch-missing-coco` so each referenced image is downloaded once from `https://images.cocodataset.org/...` into `dataset/coco/` (only images touched by that run). Combine with `--max-samples` for small pilots. Requires network while eval runs.
-
-- **Prefetch everything VHs needs:** walk all `visual_haystack_*.json` files and download every unique COCO path (still no zip; disk use can grow large because many trials reference many images):
-
-```bash
-python -m eval_scripts.prefetch_vhs_coco --qa-root dataset/VHs_qa --image-root dataset/coco
-# see scale without downloading:
-python -m eval_scripts.prefetch_vhs_coco --dry-run
-```
-
-Usage:
-```bash
-# Single-needle (VHs_large, 10 images)
-python -m eval_scripts.eval_vhs --models gpt-4o gemini --mode single_needle --split VHs_large --image-count 10
-
-# Same, but fetch COCO images on demand (no full train2017 zip)
-python -m eval_scripts.eval_vhs --fetch-missing-coco --models gemini --mode single_needle --split VHs_large --image-count 5 --max-samples 3
-
-# Multi-needle (10 images), run only first 100 samples
-python -m eval_scripts.eval_vhs --models gpt-4o --mode multi_needle --image-count 10 --max-samples 100
-```
-
-The script expects VHs files named like `visual_haystack_{count}.json` and computes accuracy, valid accuracy (excluding parse failures), and yes/no compliance.
-
-NOTE: Tasks not yet implemented: paired associate inference, graph learning, navigation & spatial memory
+These tasks are designed to be evaluated alongside benchmarks such as [Visual Haystacks](https://visual-haystacks.github.io), where models search for target visual information across long image sequences.
