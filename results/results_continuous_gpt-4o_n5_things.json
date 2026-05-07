@@ -1,0 +1,193 @@
+{
+  "_metadata": {
+    "task": "Continuous Recognition",
+    "timestamp": "20260428_103606",
+    "dataset": "things",
+    "n_images": 5,
+    "n_trials": 10,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0,
+        "d_prime": 2.533343507476646,
+        "hit_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "weighted_f1": 0.875
+      }
+    },
+    "p_old": 0.5,
+    "min_delay": 2,
+    "max_delay": 15
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 0,
+        "response": -1,
+        "raw_response": "I'm unable to browse the web in real time or access any sequences of images you might be referring to",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 1,
+        "target": 0,
+        "response": -1,
+        "raw_response": "I'm unable to determine if this image has appeared before in the sequence you've provided.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 2,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No, this image has not appeared in the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 3,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No, this image has not appeared in the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes, this image has already appeared in the sequence.",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 3
+        }
+      },
+      {
+        "trial": 5,
+        "target": 0,
+        "response": 0,
+        "raw_response": "No, this image has not appeared in the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes, this image has already appeared in the sequence.",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 3
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes, this image has already appeared in the sequence.",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 3
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes, this image has already appeared in the sequence.",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 6
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "response": 1,
+        "raw_response": "Yes, this image has already appeared in the sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 3
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "hit_rate": 1.0,
+    "false_alarm_rate": 0.0,
+    "d_prime": 2.533343507476646,
+    "weighted_f1": 0.875,
+    "counts": {
+      "hits": 5,
+      "misses": 0,
+      "false_alarms": 0,
+      "correct_rejections": 3
+    },
+    "hit_rate_by_delay": {
+      "3": 1.0,
+      "6": 1.0
+    }
+  }
+}

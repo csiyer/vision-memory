@@ -1,0 +1,1610 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260428_235007",
+    "dataset": "Brady2008",
+    "n_images": 250,
+    "n_trials": 100,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.47
+      }
+    },
+    "max_context_images": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 173,
+          "second_serial_position": 238,
+          "serial_lag": 65,
+          "distance": 64,
+          "left_image_serial_position": 238,
+          "right_image_serial_position": 173
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 174,
+          "serial_lag": 172,
+          "distance": 171,
+          "left_image_serial_position": 174,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 54,
+          "serial_lag": 50,
+          "distance": 49,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 54
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 66,
+          "second_serial_position": 100,
+          "serial_lag": 34,
+          "distance": 33,
+          "left_image_serial_position": 100,
+          "right_image_serial_position": 66
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 123,
+          "second_serial_position": 233,
+          "serial_lag": 110,
+          "distance": 109,
+          "left_image_serial_position": 123,
+          "right_image_serial_position": 233
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 89,
+          "serial_lag": 83,
+          "distance": 82,
+          "left_image_serial_position": 89,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 49,
+          "second_serial_position": 234,
+          "serial_lag": 185,
+          "distance": 184,
+          "left_image_serial_position": 234,
+          "right_image_serial_position": 49
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 149,
+          "second_serial_position": 243,
+          "serial_lag": 94,
+          "distance": 93,
+          "left_image_serial_position": 149,
+          "right_image_serial_position": 243
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 106,
+          "second_serial_position": 201,
+          "serial_lag": 95,
+          "distance": 94,
+          "left_image_serial_position": 106,
+          "right_image_serial_position": 201
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 38,
+          "second_serial_position": 246,
+          "serial_lag": 208,
+          "distance": 207,
+          "left_image_serial_position": 38,
+          "right_image_serial_position": 246
+        }
+      },
+      {
+        "trial": 10,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nImage 1 is a blue silicone ice cube tray.\nImage 2 is a pair of ski poles.\n\nIn the original sequence you provided, the blue silicone ice cube tray (Image 1) is the 51st image, while the ski poles (Image 2) are the 100th image. Therefore, Image 1 appeared first.",
+        "metadata": {
+          "first_serial_position": 161,
+          "second_serial_position": 205,
+          "serial_lag": 44,
+          "distance": 43,
+          "left_image_serial_position": 161,
+          "right_image_serial_position": 205
+        }
+      },
+      {
+        "trial": 11,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 215,
+          "second_serial_position": 248,
+          "serial_lag": 33,
+          "distance": 32,
+          "left_image_serial_position": 215,
+          "right_image_serial_position": 248
+        }
+      },
+      {
+        "trial": 12,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 24,
+          "second_serial_position": 190,
+          "serial_lag": 166,
+          "distance": 165,
+          "left_image_serial_position": 24,
+          "right_image_serial_position": 190
+        }
+      },
+      {
+        "trial": 13,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 113,
+          "second_serial_position": 146,
+          "serial_lag": 33,
+          "distance": 32,
+          "left_image_serial_position": 146,
+          "right_image_serial_position": 113
+        }
+      },
+      {
+        "trial": 14,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 135,
+          "second_serial_position": 223,
+          "serial_lag": 88,
+          "distance": 87,
+          "left_image_serial_position": 135,
+          "right_image_serial_position": 223
+        }
+      },
+      {
+        "trial": 15,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 72,
+          "second_serial_position": 208,
+          "serial_lag": 136,
+          "distance": 135,
+          "left_image_serial_position": 72,
+          "right_image_serial_position": 208
+        }
+      },
+      {
+        "trial": 16,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 97,
+          "second_serial_position": 170,
+          "serial_lag": 73,
+          "distance": 72,
+          "left_image_serial_position": 170,
+          "right_image_serial_position": 97
+        }
+      },
+      {
+        "trial": 17,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 61,
+          "second_serial_position": 175,
+          "serial_lag": 114,
+          "distance": 113,
+          "left_image_serial_position": 61,
+          "right_image_serial_position": 175
+        }
+      },
+      {
+        "trial": 18,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 131,
+          "second_serial_position": 205,
+          "serial_lag": 74,
+          "distance": 73,
+          "left_image_serial_position": 205,
+          "right_image_serial_position": 131
+        }
+      },
+      {
+        "trial": 19,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 126,
+          "second_serial_position": 218,
+          "serial_lag": 92,
+          "distance": 91,
+          "left_image_serial_position": 126,
+          "right_image_serial_position": 218
+        }
+      },
+      {
+        "trial": 20,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 245,
+          "serial_lag": 241,
+          "distance": 240,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 245
+        }
+      },
+      {
+        "trial": 21,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence. It is the image of the red telephone booth, which is the 41st image in the original list. Image 2, the red ribbon, is the 101st image.",
+        "metadata": {
+          "first_serial_position": 132,
+          "second_serial_position": 165,
+          "serial_lag": 33,
+          "distance": 32,
+          "left_image_serial_position": 132,
+          "right_image_serial_position": 165
+        }
+      },
+      {
+        "trial": 22,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 51,
+          "second_serial_position": 144,
+          "serial_lag": 93,
+          "distance": 92,
+          "left_image_serial_position": 144,
+          "right_image_serial_position": 51
+        }
+      },
+      {
+        "trial": 23,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 53,
+          "second_serial_position": 160,
+          "serial_lag": 107,
+          "distance": 106,
+          "left_image_serial_position": 160,
+          "right_image_serial_position": 53
+        }
+      },
+      {
+        "trial": 24,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 85,
+          "second_serial_position": 168,
+          "serial_lag": 83,
+          "distance": 82,
+          "left_image_serial_position": 168,
+          "right_image_serial_position": 85
+        }
+      },
+      {
+        "trial": 25,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 34,
+          "second_serial_position": 42,
+          "serial_lag": 8,
+          "distance": 7,
+          "left_image_serial_position": 34,
+          "right_image_serial_position": 42
+        }
+      },
+      {
+        "trial": 26,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 38,
+          "second_serial_position": 204,
+          "serial_lag": 166,
+          "distance": 165,
+          "left_image_serial_position": 204,
+          "right_image_serial_position": 38
+        }
+      },
+      {
+        "trial": 27,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 115,
+          "second_serial_position": 161,
+          "serial_lag": 46,
+          "distance": 45,
+          "left_image_serial_position": 115,
+          "right_image_serial_position": 161
+        }
+      },
+      {
+        "trial": 28,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 137,
+          "second_serial_position": 176,
+          "serial_lag": 39,
+          "distance": 38,
+          "left_image_serial_position": 137,
+          "right_image_serial_position": 176
+        }
+      },
+      {
+        "trial": 29,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 70,
+          "second_serial_position": 183,
+          "serial_lag": 113,
+          "distance": 112,
+          "left_image_serial_position": 183,
+          "right_image_serial_position": 70
+        }
+      },
+      {
+        "trial": 30,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 60,
+          "second_serial_position": 120,
+          "serial_lag": 60,
+          "distance": 59,
+          "left_image_serial_position": 120,
+          "right_image_serial_position": 60
+        }
+      },
+      {
+        "trial": 31,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 135,
+          "second_serial_position": 177,
+          "serial_lag": 42,
+          "distance": 41,
+          "left_image_serial_position": 135,
+          "right_image_serial_position": 177
+        }
+      },
+      {
+        "trial": 32,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 221,
+          "serial_lag": 220,
+          "distance": 219,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 221
+        }
+      },
+      {
+        "trial": 33,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 131,
+          "second_serial_position": 242,
+          "serial_lag": 111,
+          "distance": 110,
+          "left_image_serial_position": 242,
+          "right_image_serial_position": 131
+        }
+      },
+      {
+        "trial": 34,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 51,
+          "second_serial_position": 92,
+          "serial_lag": 41,
+          "distance": 40,
+          "left_image_serial_position": 51,
+          "right_image_serial_position": 92
+        }
+      },
+      {
+        "trial": 35,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 173,
+          "second_serial_position": 198,
+          "serial_lag": 25,
+          "distance": 24,
+          "left_image_serial_position": 198,
+          "right_image_serial_position": 173
+        }
+      },
+      {
+        "trial": 36,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 117,
+          "second_serial_position": 138,
+          "serial_lag": 21,
+          "distance": 20,
+          "left_image_serial_position": 138,
+          "right_image_serial_position": 117
+        }
+      },
+      {
+        "trial": 37,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 64,
+          "second_serial_position": 182,
+          "serial_lag": 118,
+          "distance": 117,
+          "left_image_serial_position": 182,
+          "right_image_serial_position": 64
+        }
+      },
+      {
+        "trial": 38,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 70,
+          "second_serial_position": 79,
+          "serial_lag": 9,
+          "distance": 8,
+          "left_image_serial_position": 79,
+          "right_image_serial_position": 70
+        }
+      },
+      {
+        "trial": 39,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 172,
+          "second_serial_position": 206,
+          "serial_lag": 34,
+          "distance": 33,
+          "left_image_serial_position": 206,
+          "right_image_serial_position": 172
+        }
+      },
+      {
+        "trial": 40,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 143,
+          "second_serial_position": 214,
+          "serial_lag": 71,
+          "distance": 70,
+          "left_image_serial_position": 143,
+          "right_image_serial_position": 214
+        }
+      },
+      {
+        "trial": 41,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 129,
+          "second_serial_position": 157,
+          "serial_lag": 28,
+          "distance": 27,
+          "left_image_serial_position": 157,
+          "right_image_serial_position": 129
+        }
+      },
+      {
+        "trial": 42,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 15,
+          "second_serial_position": 52,
+          "serial_lag": 37,
+          "distance": 36,
+          "left_image_serial_position": 52,
+          "right_image_serial_position": 15
+        }
+      },
+      {
+        "trial": 43,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 63,
+          "second_serial_position": 177,
+          "serial_lag": 114,
+          "distance": 113,
+          "left_image_serial_position": 63,
+          "right_image_serial_position": 177
+        }
+      },
+      {
+        "trial": 44,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 109,
+          "serial_lag": 106,
+          "distance": 105,
+          "left_image_serial_position": 109,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 45,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 59,
+          "second_serial_position": 63,
+          "serial_lag": 4,
+          "distance": 3,
+          "left_image_serial_position": 63,
+          "right_image_serial_position": 59
+        }
+      },
+      {
+        "trial": 46,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 110,
+          "second_serial_position": 132,
+          "serial_lag": 22,
+          "distance": 21,
+          "left_image_serial_position": 132,
+          "right_image_serial_position": 110
+        }
+      },
+      {
+        "trial": 47,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 121,
+          "second_serial_position": 170,
+          "serial_lag": 49,
+          "distance": 48,
+          "left_image_serial_position": 170,
+          "right_image_serial_position": 121
+        }
+      },
+      {
+        "trial": 48,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 82,
+          "second_serial_position": 227,
+          "serial_lag": 145,
+          "distance": 144,
+          "left_image_serial_position": 82,
+          "right_image_serial_position": 227
+        }
+      },
+      {
+        "trial": 49,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 43,
+          "second_serial_position": 52,
+          "serial_lag": 9,
+          "distance": 8,
+          "left_image_serial_position": 43,
+          "right_image_serial_position": 52
+        }
+      },
+      {
+        "trial": 50,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 78,
+          "second_serial_position": 130,
+          "serial_lag": 52,
+          "distance": 51,
+          "left_image_serial_position": 78,
+          "right_image_serial_position": 130
+        }
+      },
+      {
+        "trial": 51,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 44,
+          "second_serial_position": 160,
+          "serial_lag": 116,
+          "distance": 115,
+          "left_image_serial_position": 44,
+          "right_image_serial_position": 160
+        }
+      },
+      {
+        "trial": 52,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 74,
+          "second_serial_position": 154,
+          "serial_lag": 80,
+          "distance": 79,
+          "left_image_serial_position": 74,
+          "right_image_serial_position": 154
+        }
+      },
+      {
+        "trial": 53,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the pineapple) appeared first in the sequence. It is the 35th image in the list, while Image 2 (the game controller) is the 5th image.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 41,
+          "serial_lag": 36,
+          "distance": 35,
+          "left_image_serial_position": 41,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 54,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 55,
+          "second_serial_position": 142,
+          "serial_lag": 87,
+          "distance": 86,
+          "left_image_serial_position": 142,
+          "right_image_serial_position": 55
+        }
+      },
+      {
+        "trial": 55,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 72,
+          "second_serial_position": 92,
+          "serial_lag": 20,
+          "distance": 19,
+          "left_image_serial_position": 72,
+          "right_image_serial_position": 92
+        }
+      },
+      {
+        "trial": 56,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the sequence.\n\nImage 2 is the wooden basket with a handle, which is the 10th image in the original sequence.\nImage 1 is the vacuum tube, which is the 100th image in the original sequence.\n\nTherefore, Image 2 (the basket) came before Image 1 (the vacuum tube).",
+        "metadata": {
+          "first_serial_position": 10,
+          "second_serial_position": 212,
+          "serial_lag": 202,
+          "distance": 201,
+          "left_image_serial_position": 212,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 57,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 185,
+          "second_serial_position": 208,
+          "serial_lag": 23,
+          "distance": 22,
+          "left_image_serial_position": 208,
+          "right_image_serial_position": 185
+        }
+      },
+      {
+        "trial": 58,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 178,
+          "second_serial_position": 213,
+          "serial_lag": 35,
+          "distance": 34,
+          "left_image_serial_position": 213,
+          "right_image_serial_position": 178
+        }
+      },
+      {
+        "trial": 59,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 166,
+          "second_serial_position": 223,
+          "serial_lag": 57,
+          "distance": 56,
+          "left_image_serial_position": 223,
+          "right_image_serial_position": 166
+        }
+      },
+      {
+        "trial": 60,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 98,
+          "second_serial_position": 154,
+          "serial_lag": 56,
+          "distance": 55,
+          "left_image_serial_position": 154,
+          "right_image_serial_position": 98
+        }
+      },
+      {
+        "trial": 61,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence. It is the image of the dart, which is the 42nd image in the original list. Image 2, the mechanical clamp, is the 51st image.",
+        "metadata": {
+          "first_serial_position": 96,
+          "second_serial_position": 111,
+          "serial_lag": 15,
+          "distance": 14,
+          "left_image_serial_position": 111,
+          "right_image_serial_position": 96
+        }
+      },
+      {
+        "trial": 62,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 60,
+          "second_serial_position": 180,
+          "serial_lag": 120,
+          "distance": 119,
+          "left_image_serial_position": 60,
+          "right_image_serial_position": 180
+        }
+      },
+      {
+        "trial": 63,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 95,
+          "second_serial_position": 225,
+          "serial_lag": 130,
+          "distance": 129,
+          "left_image_serial_position": 95,
+          "right_image_serial_position": 225
+        }
+      },
+      {
+        "trial": 64,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 29,
+          "second_serial_position": 176,
+          "serial_lag": 147,
+          "distance": 146,
+          "left_image_serial_position": 176,
+          "right_image_serial_position": 29
+        }
+      },
+      {
+        "trial": 65,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 98,
+          "second_serial_position": 207,
+          "serial_lag": 109,
+          "distance": 108,
+          "left_image_serial_position": 98,
+          "right_image_serial_position": 207
+        }
+      },
+      {
+        "trial": 66,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 93,
+          "second_serial_position": 149,
+          "serial_lag": 56,
+          "distance": 55,
+          "left_image_serial_position": 93,
+          "right_image_serial_position": 149
+        }
+      },
+      {
+        "trial": 67,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 22,
+          "second_serial_position": 175,
+          "serial_lag": 153,
+          "distance": 152,
+          "left_image_serial_position": 22,
+          "right_image_serial_position": 175
+        }
+      },
+      {
+        "trial": 68,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 39,
+          "second_serial_position": 217,
+          "serial_lag": 178,
+          "distance": 177,
+          "left_image_serial_position": 39,
+          "right_image_serial_position": 217
+        }
+      },
+      {
+        "trial": 69,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 149,
+          "second_serial_position": 200,
+          "serial_lag": 51,
+          "distance": 50,
+          "left_image_serial_position": 200,
+          "right_image_serial_position": 149
+        }
+      },
+      {
+        "trial": 70,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 41,
+          "second_serial_position": 174,
+          "serial_lag": 133,
+          "distance": 132,
+          "left_image_serial_position": 41,
+          "right_image_serial_position": 174
+        }
+      },
+      {
+        "trial": 71,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 74,
+          "second_serial_position": 159,
+          "serial_lag": 85,
+          "distance": 84,
+          "left_image_serial_position": 74,
+          "right_image_serial_position": 159
+        }
+      },
+      {
+        "trial": 72,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 23,
+          "second_serial_position": 129,
+          "serial_lag": 106,
+          "distance": 105,
+          "left_image_serial_position": 129,
+          "right_image_serial_position": 23
+        }
+      },
+      {
+        "trial": 73,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 85,
+          "second_serial_position": 227,
+          "serial_lag": 142,
+          "distance": 141,
+          "left_image_serial_position": 227,
+          "right_image_serial_position": 85
+        }
+      },
+      {
+        "trial": 74,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the chalkboard with \"abc\" written on it is the 39th image in the sequence.\nThe \"Happy Birthday\" decoration is the 40th image in the sequence.\n\nTherefore, the chalkboard image (1) came before the birthday decoration (2).",
+        "metadata": {
+          "first_serial_position": 78,
+          "second_serial_position": 172,
+          "serial_lag": 94,
+          "distance": 93,
+          "left_image_serial_position": 78,
+          "right_image_serial_position": 172
+        }
+      },
+      {
+        "trial": 75,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 44,
+          "second_serial_position": 55,
+          "serial_lag": 11,
+          "distance": 10,
+          "left_image_serial_position": 44,
+          "right_image_serial_position": 55
+        }
+      },
+      {
+        "trial": 76,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 135,
+          "second_serial_position": 220,
+          "serial_lag": 85,
+          "distance": 84,
+          "left_image_serial_position": 220,
+          "right_image_serial_position": 135
+        }
+      },
+      {
+        "trial": 77,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 49,
+          "second_serial_position": 213,
+          "serial_lag": 164,
+          "distance": 163,
+          "left_image_serial_position": 213,
+          "right_image_serial_position": 49
+        }
+      },
+      {
+        "trial": 78,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 88,
+          "second_serial_position": 230,
+          "serial_lag": 142,
+          "distance": 141,
+          "left_image_serial_position": 88,
+          "right_image_serial_position": 230
+        }
+      },
+      {
+        "trial": 79,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 10,
+          "second_serial_position": 173,
+          "serial_lag": 163,
+          "distance": 162,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 173
+        }
+      },
+      {
+        "trial": 80,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 67,
+          "second_serial_position": 130,
+          "serial_lag": 63,
+          "distance": 62,
+          "left_image_serial_position": 130,
+          "right_image_serial_position": 67
+        }
+      },
+      {
+        "trial": 81,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 13,
+          "second_serial_position": 198,
+          "serial_lag": 185,
+          "distance": 184,
+          "left_image_serial_position": 13,
+          "right_image_serial_position": 198
+        }
+      },
+      {
+        "trial": 82,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 61,
+          "second_serial_position": 248,
+          "serial_lag": 187,
+          "distance": 186,
+          "left_image_serial_position": 248,
+          "right_image_serial_position": 61
+        }
+      },
+      {
+        "trial": 83,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 65,
+          "second_serial_position": 162,
+          "serial_lag": 97,
+          "distance": 96,
+          "left_image_serial_position": 162,
+          "right_image_serial_position": 65
+        }
+      },
+      {
+        "trial": 84,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 134,
+          "second_serial_position": 153,
+          "serial_lag": 19,
+          "distance": 18,
+          "left_image_serial_position": 134,
+          "right_image_serial_position": 153
+        }
+      },
+      {
+        "trial": 85,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 105,
+          "second_serial_position": 163,
+          "serial_lag": 58,
+          "distance": 57,
+          "left_image_serial_position": 105,
+          "right_image_serial_position": 163
+        }
+      },
+      {
+        "trial": 86,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 72,
+          "second_serial_position": 87,
+          "serial_lag": 15,
+          "distance": 14,
+          "left_image_serial_position": 72,
+          "right_image_serial_position": 87
+        }
+      },
+      {
+        "trial": 87,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 125,
+          "second_serial_position": 128,
+          "serial_lag": 3,
+          "distance": 2,
+          "left_image_serial_position": 128,
+          "right_image_serial_position": 125
+        }
+      },
+      {
+        "trial": 88,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 60,
+          "second_serial_position": 219,
+          "serial_lag": 159,
+          "distance": 158,
+          "left_image_serial_position": 219,
+          "right_image_serial_position": 60
+        }
+      },
+      {
+        "trial": 89,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 96,
+          "second_serial_position": 191,
+          "serial_lag": 95,
+          "distance": 94,
+          "left_image_serial_position": 191,
+          "right_image_serial_position": 96
+        }
+      },
+      {
+        "trial": 90,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 53,
+          "second_serial_position": 96,
+          "serial_lag": 43,
+          "distance": 42,
+          "left_image_serial_position": 53,
+          "right_image_serial_position": 96
+        }
+      },
+      {
+        "trial": 91,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 32,
+          "second_serial_position": 199,
+          "serial_lag": 167,
+          "distance": 166,
+          "left_image_serial_position": 199,
+          "right_image_serial_position": 32
+        }
+      },
+      {
+        "trial": 92,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence. It is the image of the coiled copper pipe, which is the 42nd image in the original list. Image 2, the penguin, is the 100th image in the list.",
+        "metadata": {
+          "first_serial_position": 50,
+          "second_serial_position": 114,
+          "serial_lag": 64,
+          "distance": 63,
+          "left_image_serial_position": 50,
+          "right_image_serial_position": 114
+        }
+      },
+      {
+        "trial": 93,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 41,
+          "second_serial_position": 136,
+          "serial_lag": 95,
+          "distance": 94,
+          "left_image_serial_position": 136,
+          "right_image_serial_position": 41
+        }
+      },
+      {
+        "trial": 94,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 47,
+          "second_serial_position": 117,
+          "serial_lag": 70,
+          "distance": 69,
+          "left_image_serial_position": 47,
+          "right_image_serial_position": 117
+        }
+      },
+      {
+        "trial": 95,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 223,
+          "second_serial_position": 228,
+          "serial_lag": 5,
+          "distance": 4,
+          "left_image_serial_position": 228,
+          "right_image_serial_position": 223
+        }
+      },
+      {
+        "trial": 96,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 29,
+          "second_serial_position": 42,
+          "serial_lag": 13,
+          "distance": 12,
+          "left_image_serial_position": 42,
+          "right_image_serial_position": 29
+        }
+      },
+      {
+        "trial": 97,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 88,
+          "second_serial_position": 132,
+          "serial_lag": 44,
+          "distance": 43,
+          "left_image_serial_position": 132,
+          "right_image_serial_position": 88
+        }
+      },
+      {
+        "trial": 98,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 106,
+          "second_serial_position": 179,
+          "serial_lag": 73,
+          "distance": 72,
+          "left_image_serial_position": 179,
+          "right_image_serial_position": 106
+        }
+      },
+      {
+        "trial": 99,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.",
+        "metadata": {
+          "first_serial_position": 46,
+          "second_serial_position": 70,
+          "serial_lag": 24,
+          "distance": 23,
+          "left_image_serial_position": 70,
+          "right_image_serial_position": 46
+        }
+      }
+    ],
+    "accuracy": 0.47,
+    "n_correct": 47,
+    "total": 100,
+    "accuracy_by_distance": {
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "7": 1.0,
+      "8": 0.5,
+      "10": 1.0,
+      "12": 0.0,
+      "14": 0.5,
+      "18": 1.0,
+      "19": 1.0,
+      "20": 0.0,
+      "21": 0.0,
+      "22": 0.0,
+      "23": 0.0,
+      "24": 0.0,
+      "27": 0.0,
+      "32": 0.6666666666666666,
+      "33": 0.0,
+      "34": 0.0,
+      "35": 0.0,
+      "36": 0.0,
+      "38": 1.0,
+      "40": 1.0,
+      "41": 1.0,
+      "42": 1.0,
+      "43": 0.5,
+      "45": 1.0,
+      "48": 0.0,
+      "49": 1.0,
+      "50": 0.0,
+      "51": 1.0,
+      "55": 0.5,
+      "56": 0.0,
+      "57": 1.0,
+      "59": 0.0,
+      "62": 0.0,
+      "63": 1.0,
+      "64": 0.0,
+      "69": 1.0,
+      "70": 1.0,
+      "72": 0.0,
+      "73": 0.0,
+      "79": 1.0,
+      "82": 0.0,
+      "84": 0.5,
+      "86": 0.0,
+      "87": 1.0,
+      "91": 1.0,
+      "92": 0.0,
+      "93": 1.0,
+      "94": 0.3333333333333333,
+      "96": 0.0,
+      "105": 0.0,
+      "106": 0.0,
+      "108": 1.0,
+      "109": 1.0,
+      "110": 0.0,
+      "112": 0.0,
+      "113": 1.0,
+      "115": 1.0,
+      "117": 0.0,
+      "119": 1.0,
+      "129": 1.0,
+      "132": 1.0,
+      "135": 1.0,
+      "141": 0.5,
+      "144": 1.0,
+      "146": 0.0,
+      "152": 1.0,
+      "158": 0.0,
+      "162": 1.0,
+      "163": 0.0,
+      "165": 0.5,
+      "166": 0.0,
+      "171": 0.0,
+      "177": 1.0,
+      "184": 0.5,
+      "186": 0.0,
+      "201": 0.0,
+      "207": 1.0,
+      "219": 1.0,
+      "240": 1.0
+    }
+  }
+}

@@ -1,0 +1,1527 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260428_214146",
+    "dataset": "things",
+    "n_images": 10,
+    "n_trials": 100,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.93,
+        "n_correct": 93,
+        "total": 100
+      }
+    },
+    "max_context_pairs": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "FIREPLACE",
+        "reported": "fireplace",
+        "correct": 1,
+        "raw_response": "FIREPLACE",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "SUIT",
+        "reported": "suite",
+        "correct": 0,
+        "raw_response": "SUITE",
+        "metadata": {
+          "category": "cat_1136",
+          "category_id": 9,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "FLY",
+        "reported": "fly",
+        "correct": 1,
+        "raw_response": "FLY",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "HIGHWAY",
+        "reported": "highway",
+        "correct": 1,
+        "raw_response": "HIGHWAY",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "LOAF",
+        "reported": "shoulder",
+        "correct": 0,
+        "raw_response": "SHOULDER",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "BABY",
+        "reported": "baby",
+        "correct": 1,
+        "raw_response": "BABY",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "BACON",
+        "reported": "bacon",
+        "correct": 1,
+        "raw_response": "BACON",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "HOOK",
+        "reported": "hook",
+        "correct": 1,
+        "raw_response": "HOOK",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "TANGERINE",
+        "reported": "tangerine",
+        "correct": 1,
+        "raw_response": "TANGERINE",
+        "metadata": {
+          "category": "cat_1136",
+          "category_id": 9,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "FUDGE",
+        "reported": "fudge",
+        "correct": 1,
+        "raw_response": "FUDGE",
+        "metadata": {
+          "category": "cat_1132",
+          "category_id": 5,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 10,
+        "target": "STABLE",
+        "reported": "stable",
+        "correct": 1,
+        "raw_response": "STABLE",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 11,
+        "target": "STAGE",
+        "reported": "stage",
+        "correct": 1,
+        "raw_response": "STAGE",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 12,
+        "target": "WINGS",
+        "reported": "wings",
+        "correct": 1,
+        "raw_response": "WINGS",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 13,
+        "target": "GOO",
+        "reported": "bowl",
+        "correct": 0,
+        "raw_response": "BOWL",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 14,
+        "target": "BISCUIT",
+        "reported": "biscuit",
+        "correct": 1,
+        "raw_response": "BISCUIT",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 15,
+        "target": "SLOPE",
+        "reported": "slope",
+        "correct": 1,
+        "raw_response": "SLOPE",
+        "metadata": {
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 16,
+        "target": "STALLION",
+        "reported": "stallion",
+        "correct": 1,
+        "raw_response": "STALLION",
+        "metadata": {
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 17,
+        "target": "HAMMER",
+        "reported": "hammer",
+        "correct": 1,
+        "raw_response": "HAMMER",
+        "metadata": {
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 18,
+        "target": "HAMMOCK",
+        "reported": "hammock",
+        "correct": 1,
+        "raw_response": "HAMMOCK",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 19,
+        "target": "TELESCOPE",
+        "reported": "telescope",
+        "correct": 1,
+        "raw_response": "TELESCOPE",
+        "metadata": {
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 20,
+        "target": "BIOLOGIST",
+        "reported": "biologist",
+        "correct": 1,
+        "raw_response": "BIOLOGIST",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 21,
+        "target": "OAR",
+        "reported": "oar",
+        "correct": 1,
+        "raw_response": "OAR",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 22,
+        "target": "COLUMN",
+        "reported": "column",
+        "correct": 1,
+        "raw_response": "COLUMN",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 23,
+        "target": "PIGEON",
+        "reported": "pigeon",
+        "correct": 1,
+        "raw_response": "PIGEON",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 24,
+        "target": "STAR",
+        "reported": "star",
+        "correct": 1,
+        "raw_response": "STAR",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 25,
+        "target": "BLACKBERRY",
+        "reported": "blackberry",
+        "correct": 1,
+        "raw_response": "BLACKBERRY",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 26,
+        "target": "APRON",
+        "reported": "apron",
+        "correct": 1,
+        "raw_response": "APRON",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 27,
+        "target": "TWIG",
+        "reported": "twig",
+        "correct": 1,
+        "raw_response": "TWIG",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 28,
+        "target": "PENDULUM",
+        "reported": "pendulum",
+        "correct": 1,
+        "raw_response": "PENDULUM",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 29,
+        "target": "YARN",
+        "reported": "yarn",
+        "correct": 1,
+        "raw_response": "YARN",
+        "metadata": {
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 30,
+        "target": "OTTER",
+        "reported": "otter",
+        "correct": 1,
+        "raw_response": "OTTER",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 31,
+        "target": "POLITICIAN",
+        "reported": "politician",
+        "correct": 1,
+        "raw_response": "POLITICIAN",
+        "metadata": {
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 32,
+        "target": "OFFICE",
+        "reported": "office",
+        "correct": 1,
+        "raw_response": "OFFICE",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 33,
+        "target": "GENTLEMAN",
+        "reported": "gentleman",
+        "correct": 1,
+        "raw_response": "GENTLEMAN",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 34,
+        "target": "GHETTO",
+        "reported": "ghetto",
+        "correct": 1,
+        "raw_response": "GHETTO",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 35,
+        "target": "HATCHET",
+        "reported": "hatchet",
+        "correct": 1,
+        "raw_response": "HATCHET",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 36,
+        "target": "BRIEFCASE",
+        "reported": "briefcase",
+        "correct": 1,
+        "raw_response": "BRIEFCASE",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 37,
+        "target": "DICTATOR",
+        "reported": "dictator",
+        "correct": 1,
+        "raw_response": "DICTATOR",
+        "metadata": {
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 38,
+        "target": "FOREHEAD",
+        "reported": "forehead",
+        "correct": 1,
+        "raw_response": "FOREHEAD",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 39,
+        "target": "COMMITTEE",
+        "reported": "committee",
+        "correct": 1,
+        "raw_response": "COMMITTEE",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 40,
+        "target": "GRAVE",
+        "reported": "grave",
+        "correct": 1,
+        "raw_response": "GRAVE",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 41,
+        "target": "BARTENDER",
+        "reported": "bartender",
+        "correct": 1,
+        "raw_response": "BARTENDER",
+        "metadata": {
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 42,
+        "target": "PATIO",
+        "reported": "patio",
+        "correct": 1,
+        "raw_response": "PATIO",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 43,
+        "target": "CRIMINAL",
+        "reported": "criminal",
+        "correct": 1,
+        "raw_response": "CRIMINAL",
+        "metadata": {
+          "category": "cat_1132",
+          "category_id": 5,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 44,
+        "target": "SEAL",
+        "reported": "seal",
+        "correct": 1,
+        "raw_response": "SEAL",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 45,
+        "target": "WELL",
+        "reported": "nail",
+        "correct": 0,
+        "raw_response": "NAIL",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 46,
+        "target": "SAND",
+        "reported": "sand",
+        "correct": 1,
+        "raw_response": "SAND",
+        "metadata": {
+          "category": "cat_1136",
+          "category_id": 9,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 47,
+        "target": "PEDESTRIAN",
+        "reported": "pedestrian",
+        "correct": 1,
+        "raw_response": "PEDESTRIAN",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 48,
+        "target": "LASH",
+        "reported": "lash",
+        "correct": 1,
+        "raw_response": "LASH",
+        "metadata": {
+          "category": "cat_1132",
+          "category_id": 5,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 49,
+        "target": "PEANUT",
+        "reported": "peanut",
+        "correct": 1,
+        "raw_response": "PEANUT",
+        "metadata": {
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 50,
+        "target": "DINNER",
+        "reported": "film",
+        "correct": 0,
+        "raw_response": "FILM",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 51,
+        "target": "SKELETON",
+        "reported": "skeleton",
+        "correct": 1,
+        "raw_response": "SKELETON",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 52,
+        "target": "FOREHEAD",
+        "reported": "neck",
+        "correct": 0,
+        "raw_response": "NECK",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 53,
+        "target": "TILE",
+        "reported": "tile",
+        "correct": 1,
+        "raw_response": "TILE",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 54,
+        "target": "POISON",
+        "reported": "poison",
+        "correct": 1,
+        "raw_response": "POISON",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 55,
+        "target": "SIREN",
+        "reported": "siren",
+        "correct": 1,
+        "raw_response": "SIREN",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 56,
+        "target": "HERD",
+        "reported": "herd",
+        "correct": 1,
+        "raw_response": "HERD",
+        "metadata": {
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 57,
+        "target": "COLOGNE",
+        "reported": "cologne",
+        "correct": 1,
+        "raw_response": "COLOGNE",
+        "metadata": {
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 58,
+        "target": "NIGHTGOWN",
+        "reported": "nightgown",
+        "correct": 1,
+        "raw_response": "NIGHTGOWN",
+        "metadata": {
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 59,
+        "target": "NEPTUNE",
+        "reported": "neptune",
+        "correct": 1,
+        "raw_response": "NEPTUNE",
+        "metadata": {
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 60,
+        "target": "DESSERT",
+        "reported": "dessert",
+        "correct": 1,
+        "raw_response": "DESSERT",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 61,
+        "target": "LOFT",
+        "reported": "loft",
+        "correct": 1,
+        "raw_response": "LOFT",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 62,
+        "target": "SOAP",
+        "reported": "soap",
+        "correct": 1,
+        "raw_response": "SOAP",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 63,
+        "target": "WALRUS",
+        "reported": "walrus",
+        "correct": 1,
+        "raw_response": "WALRUS",
+        "metadata": {
+          "category": "cat_1132",
+          "category_id": 5,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 64,
+        "target": "ENGINEER",
+        "reported": "engineer",
+        "correct": 1,
+        "raw_response": "ENGINEER",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 65,
+        "target": "CARNIVAL",
+        "reported": "carnival",
+        "correct": 1,
+        "raw_response": "CARNIVAL",
+        "metadata": {
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 66,
+        "target": "FRAME",
+        "reported": "frame",
+        "correct": 1,
+        "raw_response": "FRAME",
+        "metadata": {
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 67,
+        "target": "SIREN",
+        "reported": "siren",
+        "correct": 1,
+        "raw_response": "SIREN",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 68,
+        "target": "AIRPLANE",
+        "reported": "airplane",
+        "correct": 1,
+        "raw_response": "AIRPLANE",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 69,
+        "target": "COB",
+        "reported": "cob",
+        "correct": 1,
+        "raw_response": "COB",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 70,
+        "target": "BLOSSOM",
+        "reported": "blossom",
+        "correct": 1,
+        "raw_response": "BLOSSOM",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 71,
+        "target": "PATIO",
+        "reported": "patio",
+        "correct": 1,
+        "raw_response": "PATIO",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 72,
+        "target": "WORLD",
+        "reported": "world",
+        "correct": 1,
+        "raw_response": "WORLD",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 73,
+        "target": "ESCALATOR",
+        "reported": "escalator",
+        "correct": 1,
+        "raw_response": "ESCALATOR",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 74,
+        "target": "CROOK",
+        "reported": "crook",
+        "correct": 1,
+        "raw_response": "CROOK",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 75,
+        "target": "SNACK",
+        "reported": "snack",
+        "correct": 1,
+        "raw_response": "SNACK",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 76,
+        "target": "SIGNATURE",
+        "reported": "signature",
+        "correct": 1,
+        "raw_response": "SIGNATURE",
+        "metadata": {
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 77,
+        "target": "TURTLE",
+        "reported": "turtle",
+        "correct": 1,
+        "raw_response": "TURTLE",
+        "metadata": {
+          "category": "cat_1132",
+          "category_id": 5,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 78,
+        "target": "NEPHEW",
+        "reported": "nephew",
+        "correct": 1,
+        "raw_response": "NEPHEW",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 79,
+        "target": "DIAMOND",
+        "reported": "diamond",
+        "correct": 1,
+        "raw_response": "DIAMOND",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 80,
+        "target": "PLAYGROUND",
+        "reported": "playground",
+        "correct": 1,
+        "raw_response": "PLAYGROUND",
+        "metadata": {
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 81,
+        "target": "HERB",
+        "reported": "herb",
+        "correct": 1,
+        "raw_response": "HERB",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 82,
+        "target": "SPOOL",
+        "reported": "spool",
+        "correct": 1,
+        "raw_response": "SPOOL",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 83,
+        "target": "COSTUME",
+        "reported": "costume",
+        "correct": 1,
+        "raw_response": "COSTUME",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 84,
+        "target": "SERGEANT",
+        "reported": "sergeant",
+        "correct": 1,
+        "raw_response": "SERGEANT",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 85,
+        "target": "BRIEFCASE",
+        "reported": "briefcase",
+        "correct": 1,
+        "raw_response": "BRIEFCASE",
+        "metadata": {
+          "category": "cat_1136",
+          "category_id": 9,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 86,
+        "target": "FARM",
+        "reported": "farm",
+        "correct": 1,
+        "raw_response": "FARM",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 87,
+        "target": "SINK",
+        "reported": "sink",
+        "correct": 1,
+        "raw_response": "SINK",
+        "metadata": {
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 88,
+        "target": "ZEBRA",
+        "reported": "zebra",
+        "correct": 1,
+        "raw_response": "ZEBRA",
+        "metadata": {
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 89,
+        "target": "SWATTER",
+        "reported": "swatter",
+        "correct": 1,
+        "raw_response": "SWATTER",
+        "metadata": {
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 90,
+        "target": "MOTORCYCLE",
+        "reported": "motorcycle",
+        "correct": 1,
+        "raw_response": "MOTORCYCLE",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 91,
+        "target": "ROOT",
+        "reported": "root",
+        "correct": 1,
+        "raw_response": "ROOT",
+        "metadata": {
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 92,
+        "target": "GANG",
+        "reported": "gang",
+        "correct": 1,
+        "raw_response": "GANG",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 93,
+        "target": "SENATOR",
+        "reported": "senator",
+        "correct": 1,
+        "raw_response": "SENATOR",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 94,
+        "target": "TOAST",
+        "reported": "toast",
+        "correct": 1,
+        "raw_response": "TOAST",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 95,
+        "target": "CROWN",
+        "reported": "nerve",
+        "correct": 0,
+        "raw_response": "NERVE",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 96,
+        "target": "BLUEPRINT",
+        "reported": "blueprint",
+        "correct": 1,
+        "raw_response": "BLUEPRINT",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 97,
+        "target": "WARDROBE",
+        "reported": "wardrobe",
+        "correct": 1,
+        "raw_response": "WARDROBE",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 98,
+        "target": "CAKE",
+        "reported": "cake",
+        "correct": 1,
+        "raw_response": "CAKE",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 99,
+        "target": "RING",
+        "reported": "ring",
+        "correct": 1,
+        "raw_response": "RING",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      }
+    ],
+    "accuracy": 0.93,
+    "n_correct": 93,
+    "total": 100
+  }
+}

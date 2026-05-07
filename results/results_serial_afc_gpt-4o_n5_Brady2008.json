@@ -1,0 +1,105 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260428_141904",
+    "dataset": "Brady2008",
+    "n_images": 5,
+    "n_trials": 5,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.6
+      }
+    },
+    "max_context_images": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The second image (clock) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The first image (conch shell) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the seashell) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The second image (the licorice) appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 5,
+          "serial_lag": 2,
+          "distance": 1,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The first image (black licorice) appeared earlier in the sequence.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 4
+        }
+      }
+    ],
+    "accuracy": 0.6,
+    "n_correct": 3,
+    "total": 5,
+    "accuracy_by_distance": {
+      "0": 0.6666666666666666,
+      "1": 0.5
+    }
+  }
+}

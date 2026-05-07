@@ -1,0 +1,57 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260427_131731",
+    "dataset": "things",
+    "n_images": 2,
+    "n_trials": 2,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 1.0,
+        "n_correct": 2,
+        "total": 2
+      }
+    },
+    "max_context_pairs": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "BOAT",
+        "reported": "boat",
+        "correct": 1,
+        "raw_response": "BOAT",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "SWING",
+        "reported": "swing",
+        "correct": 1,
+        "raw_response": "SWING",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 2,
+    "total": 2
+  }
+}

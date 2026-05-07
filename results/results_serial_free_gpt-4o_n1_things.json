@@ -1,0 +1,43 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (Free Report)",
+    "variant": "free",
+    "timestamp": "20260427_111029",
+    "dataset": "things",
+    "n_images": 1,
+    "n_trials": 1,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0
+      }
+    },
+    "max_context_images": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "This image is the first and only one in the sequence (1-1).",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "serial_position": 1
+        }
+      }
+    ],
+    "average_error": 0.0,
+    "n_correct": 1,
+    "accuracy": 1.0,
+    "n_parse_failures": 0
+  }
+}

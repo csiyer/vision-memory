@@ -1,0 +1,1553 @@
+{
+  "_metadata": {
+    "task": "Continuous Recognition",
+    "timestamp": "20260428_214240",
+    "dataset": "things",
+    "n_images": 100,
+    "n_trials": 100,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 1.0,
+        "d_prime": 4.667537149614278,
+        "hit_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "weighted_f1": 1.0
+      }
+    },
+    "p_old": 0.5,
+    "min_delay": 2,
+    "max_delay": 15
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 1,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1137",
+          "category_id": 10,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 2,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1158",
+          "category_id": 31,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1158/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 4,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1137",
+          "category_id": 10,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 3
+        }
+      },
+      {
+        "trial": 6,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1174",
+          "category_id": 47,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1174/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 7,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1136",
+          "category_id": 9,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 8,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1162",
+          "category_id": 35,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1162/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 4
+        }
+      },
+      {
+        "trial": 10,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1148",
+          "category_id": 21,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1148/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 11,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1164",
+          "category_id": 37,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1164/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 12,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1167",
+          "category_id": 40,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1167/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 13,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1148",
+          "category_id": 21,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1148/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 14,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1170",
+          "category_id": 43,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1170/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 15,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1167",
+          "category_id": 40,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1167/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 16,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1161",
+          "category_id": 34,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1161/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 17,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1173",
+          "category_id": 46,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1173/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 18,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1158",
+          "category_id": 31,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1158/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 19,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1141",
+          "category_id": 14,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 20,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1164",
+          "category_id": 37,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1164/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 8
+        }
+      },
+      {
+        "trial": 21,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1166",
+          "category_id": 39,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1166/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 22,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1174",
+          "category_id": 47,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1174/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 23,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1136",
+          "category_id": 9,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 24,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1162",
+          "category_id": 35,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1162/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 25,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1146",
+          "category_id": 19,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1146/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 26,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1169",
+          "category_id": 42,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1169/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 27,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1141",
+          "category_id": 14,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 7
+        }
+      },
+      {
+        "trial": 28,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1163",
+          "category_id": 36,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1163/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 29,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1144",
+          "category_id": 17,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1144/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 30,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1170",
+          "category_id": 43,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1170/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 31,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1163",
+          "category_id": 36,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1163/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 32,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1161",
+          "category_id": 34,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1161/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 33,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1173",
+          "category_id": 46,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1173/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 34,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1143",
+          "category_id": 16,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1143/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 35,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1169",
+          "category_id": 42,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1169/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 8
+        }
+      },
+      {
+        "trial": 36,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1166",
+          "category_id": 39,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1166/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 14
+        }
+      },
+      {
+        "trial": 37,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1143",
+          "category_id": 16,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1143/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 38,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1176",
+          "category_id": 49,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1176/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 39,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1172",
+          "category_id": 45,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1172/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 40,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1152",
+          "category_id": 25,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1152/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 41,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1146",
+          "category_id": 19,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1146/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 42,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1154",
+          "category_id": 27,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1154/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 43,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1172",
+          "category_id": 45,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1172/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 3
+        }
+      },
+      {
+        "trial": 44,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1144",
+          "category_id": 17,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1144/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 14
+        }
+      },
+      {
+        "trial": 45,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1156",
+          "category_id": 29,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1156/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 46,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1176",
+          "category_id": 49,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1176/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 7
+        }
+      },
+      {
+        "trial": 47,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 48,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1156",
+          "category_id": 29,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1156/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 49,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1154",
+          "category_id": 27,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1154/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 6
+        }
+      },
+      {
+        "trial": 50,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 51,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 52,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 53,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1152",
+          "category_id": 25,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1152/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 12
+        }
+      },
+      {
+        "trial": 54,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 55,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 56,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1138",
+          "category_id": 11,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 57,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1150",
+          "category_id": 23,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1150/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 58,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1175",
+          "category_id": 48,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1175/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 59,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1168",
+          "category_id": 41,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1168/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 60,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1139",
+          "category_id": 12,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 61,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1175",
+          "category_id": 48,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1175/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 62,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1151",
+          "category_id": 24,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1151/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 63,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 64,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1142",
+          "category_id": 15,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1142/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 65,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1149",
+          "category_id": 22,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1149/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 66,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1157",
+          "category_id": 30,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1157/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 67,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1165",
+          "category_id": 38,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1165/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 68,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1138",
+          "category_id": 11,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 11
+        }
+      },
+      {
+        "trial": 69,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1155",
+          "category_id": 28,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1155/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 70,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 6
+        }
+      },
+      {
+        "trial": 71,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1150",
+          "category_id": 23,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1150/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 13
+        }
+      },
+      {
+        "trial": 72,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 73,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1140",
+          "category_id": 13,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 74,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 75,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1168",
+          "category_id": 41,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1168/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 76,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1139",
+          "category_id": 12,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 77,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1160",
+          "category_id": 33,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1160/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 78,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1151",
+          "category_id": 24,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1151/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 79,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1140",
+          "category_id": 13,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1140/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 5
+        }
+      },
+      {
+        "trial": 80,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1142",
+          "category_id": 15,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1142/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 81,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1149",
+          "category_id": 22,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1149/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 82,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1157",
+          "category_id": 30,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1157/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 83,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1165",
+          "category_id": 38,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1165/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 84,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1155",
+          "category_id": 28,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1155/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 14
+        }
+      },
+      {
+        "trial": 85,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1160",
+          "category_id": 33,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1160/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 7
+        }
+      },
+      {
+        "trial": 86,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1171",
+          "category_id": 44,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1171/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 87,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 12
+        }
+      },
+      {
+        "trial": 88,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 15
+        }
+      },
+      {
+        "trial": 89,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1171",
+          "category_id": 44,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1171/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 90,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1159",
+          "category_id": 32,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1159/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 91,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1147",
+          "category_id": 20,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1147/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 92,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1153",
+          "category_id": 26,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1153/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 93,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1145",
+          "category_id": 18,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1145/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 94,
+        "target": 0,
+        "response": 0,
+        "raw_response": "no",
+        "metadata": {
+          "category": "cat_1132",
+          "category_id": 5,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 95,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1153",
+          "category_id": 26,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1153/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 96,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1147",
+          "category_id": 20,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1147/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 4
+        }
+      },
+      {
+        "trial": 97,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1159",
+          "category_id": 32,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1159/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 6
+        }
+      },
+      {
+        "trial": 98,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1132",
+          "category_id": 5,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 3
+        }
+      },
+      {
+        "trial": 99,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "cat_1145",
+          "category_id": 18,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1145/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 5
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "hit_rate": 1.0,
+    "false_alarm_rate": 0.0,
+    "d_prime": 4.667537149614278,
+    "weighted_f1": 1.0,
+    "counts": {
+      "hits": 50,
+      "misses": 0,
+      "false_alarms": 0,
+      "correct_rejections": 50
+    },
+    "hit_rate_by_delay": {
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 1.0,
+      "6": 1.0,
+      "7": 1.0,
+      "8": 1.0,
+      "11": 1.0,
+      "12": 1.0,
+      "13": 1.0,
+      "14": 1.0,
+      "15": 1.0
+    }
+  }
+}

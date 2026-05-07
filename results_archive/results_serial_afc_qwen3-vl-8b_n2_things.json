@@ -1,0 +1,1529 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260428_222130",
+    "dataset": "things",
+    "n_images": 2,
+    "n_trials": 100,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.43
+      }
+    },
+    "max_context_images": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 10,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 11,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 12,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 13,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 14,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 15,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 16,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 17,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 18,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 19,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 20,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 21,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 22,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 23,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 24,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 25,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 26,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 27,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 28,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 29,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 30,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 31,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 32,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 33,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 34,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 35,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 36,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 37,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 38,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 39,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 40,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 41,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 42,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 43,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 44,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 45,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 46,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 47,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 48,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 49,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 50,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 51,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 52,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 53,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 54,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 55,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 56,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 57,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 58,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 59,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 60,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 61,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 62,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 63,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 64,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 65,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 66,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 67,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 68,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 69,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 70,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 71,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 72,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 73,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 74,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 75,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 76,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 77,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 78,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 79,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 80,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 81,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 82,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 83,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 84,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 85,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 86,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 87,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 88,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 89,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 90,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 91,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 92,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 93,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 94,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 95,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 96,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 97,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail clipper.\n2. The image of the nail file.\n\nTherefore, the first image in the sequence was the nail clipper (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 98,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 99,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The image of the nail file.\n2. The image of the nail clipper.\n\nTherefore, the first image in the sequence is the nail file, which corresponds to Image 1 in your query.\n\n**Answer: 1**",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      }
+    ],
+    "accuracy": 0.43,
+    "n_correct": 43,
+    "total": 100,
+    "accuracy_by_distance": {
+      "0": 0.43
+    }
+  }
+}

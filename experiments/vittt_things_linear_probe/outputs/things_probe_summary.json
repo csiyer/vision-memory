@@ -1,0 +1,86 @@
+{
+  "extraction": {
+    "seed": 13,
+    "device": "mps",
+    "ttt_learning_rate": 1.0,
+    "representation": "memory-conditioned final pooled feature vector",
+    "feature_dim": 768,
+    "num_layers": 12,
+    "train_categories_loaded": 600,
+    "heldout_categories_loaded": 200,
+    "excluded_local_categories": 200,
+    "train_probe_rows": 2000,
+    "heldout_probe_rows": 1000,
+    "min_sequence_length": 1,
+    "max_sequence_length": 30
+  },
+  "sample_sizes": [
+    500,
+    1000,
+    2000
+  ],
+  "final_train_summary": [
+    {
+      "split": "train",
+      "foil_type": "overall",
+      "num_training_rows": 2000,
+      "num_rows": 2000,
+      "num_pairs": 1000,
+      "accuracy": 0.8715,
+      "auc": 0.948936,
+      "pairwise_accuracy": 0.944
+    },
+    {
+      "split": "train",
+      "foil_type": "novel",
+      "num_training_rows": 2000,
+      "num_rows": 1000,
+      "num_pairs": 500,
+      "accuracy": 0.812,
+      "auc": 0.9112239999999998,
+      "pairwise_accuracy": 0.908
+    },
+    {
+      "split": "train",
+      "foil_type": "exemplar",
+      "num_training_rows": 2000,
+      "num_rows": 1000,
+      "num_pairs": 500,
+      "accuracy": 0.931,
+      "auc": 0.981076,
+      "pairwise_accuracy": 0.98
+    }
+  ],
+  "final_heldout_summary": [
+    {
+      "split": "heldout",
+      "foil_type": "overall",
+      "num_training_rows": 2000,
+      "num_rows": 1000,
+      "num_pairs": 500,
+      "accuracy": 0.516,
+      "auc": 0.49982800000000005,
+      "pairwise_accuracy": 0.49
+    },
+    {
+      "split": "heldout",
+      "foil_type": "novel",
+      "num_training_rows": 2000,
+      "num_rows": 500,
+      "num_pairs": 250,
+      "accuracy": 0.518,
+      "auc": 0.507088,
+      "pairwise_accuracy": 0.52
+    },
+    {
+      "split": "heldout",
+      "foil_type": "exemplar",
+      "num_training_rows": 2000,
+      "num_rows": 500,
+      "num_pairs": 250,
+      "accuracy": 0.514,
+      "auc": 0.49075199999999997,
+      "pairwise_accuracy": 0.46
+    }
+  ]
+}

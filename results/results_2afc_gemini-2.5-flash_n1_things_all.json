@@ -1,0 +1,43 @@
+{
+  "_metadata": {
+    "task": "2-AFC Recognition",
+    "timestamp": "20260428_091756",
+    "dataset": "things",
+    "n_images": 1,
+    "n_trials": 1,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 0.0,
+        "d_prime": 0.0,
+        "mem_score": 0.0
+      }
+    },
+    "max_context_images": null,
+    "foil_type": "all"
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "response": -1,
+        "correct": 0,
+        "foil_type": "exemplar",
+        "raw_response": null
+      }
+    ],
+    "accuracy": 0.0,
+    "valid_accuracy": 0.0,
+    "d_prime": 0.0,
+    "mem_score": 0.0,
+    "n_trials": 1,
+    "n_valid_trials": 0,
+    "n_correct": 0,
+    "n_parse_failures": 1,
+    "accuracy_by_type": {},
+    "d_prime_by_type": {}
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260428_103532",
+    "dataset": "things",
+    "n_images": 1,
+    "n_trials": 1,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0,
+        "n_correct": 1,
+        "total": 1
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "BURGLAR",
+        "reported": "burglar",
+        "correct": 1,
+        "raw_response": "BURGLAR",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 1,
+    "total": 1
+  }
+}

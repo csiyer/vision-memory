@@ -1,0 +1,177 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260428_090524",
+    "dataset": "things",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 0.9,
+        "n_correct": 9,
+        "total": 10
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "SAW",
+        "reported": "saw",
+        "correct": 1,
+        "raw_response": "SAW",
+        "metadata": {
+          "category": "cat_1135",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "FLOUR",
+        "reported": "flour",
+        "correct": 1,
+        "raw_response": "FLOUR",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "PAGE",
+        "reported": "",
+        "correct": 0,
+        "raw_response": null,
+        "metadata": {
+          "category": "cat_1132",
+          "category_id": 5,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "OCEAN",
+        "reported": "ocean",
+        "correct": 1,
+        "raw_response": "OCEAN",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "RAISIN",
+        "reported": "raisin",
+        "correct": 1,
+        "raw_response": "RAISIN",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "MAP",
+        "reported": "map",
+        "correct": 1,
+        "raw_response": "MAP",
+        "metadata": {
+          "category": "cat_1136",
+          "category_id": 9,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "TEMPLE",
+        "reported": "temple",
+        "correct": 1,
+        "raw_response": "TEMPLE",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "LONDON",
+        "reported": "london",
+        "correct": 1,
+        "raw_response": "LONDON",
+        "metadata": {
+          "category": "cat_1134",
+          "category_id": 7,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "BABY",
+        "reported": "baby",
+        "correct": 1,
+        "raw_response": "BABY",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "KIWI",
+        "reported": "kiwi",
+        "correct": 1,
+        "raw_response": "KIWI",
+        "metadata": {
+          "category": "cat_1133",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1133/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      }
+    ],
+    "accuracy": 0.9,
+    "n_correct": 9,
+    "total": 10
+  }
+}

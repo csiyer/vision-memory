@@ -1,0 +1,72 @@
+{
+  "_metadata": {
+    "task": "Continuous Recognition",
+    "timestamp": "20260428_103533",
+    "dataset": "things",
+    "n_images": 1,
+    "n_trials": 2,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.0,
+        "d_prime": 0.0,
+        "hit_rate": 0.0,
+        "false_alarm_rate": 0.0,
+        "weighted_f1": 0.0
+      }
+    },
+    "p_old": 0.5,
+    "min_delay": 0,
+    "max_delay": 1
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 0,
+        "response": -1,
+        "raw_response": "I can't directly compare images or track their sequence, but if this image is of nail clippers,",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "response": -1,
+        "raw_response": "I'm unable to track or compare images in a sequence.",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg",
+          "delay": 0
+        }
+      }
+    ],
+    "accuracy": 0.0,
+    "hit_rate": 0.0,
+    "false_alarm_rate": 0.0,
+    "d_prime": 0.0,
+    "weighted_f1": 0.0,
+    "counts": {
+      "hits": 0,
+      "misses": 0,
+      "false_alarms": 0,
+      "correct_rejections": 0
+    },
+    "hit_rate_by_delay": {
+      "0": -1.0
+    }
+  }
+}

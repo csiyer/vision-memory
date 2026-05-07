@@ -1,0 +1,21 @@
+Jenenson et al 2010
+	Hipp-limited lesions
+	12 images in sequence, sequence repeated 2x
+	Exemplar foil (FC-C), Y/N + confidence judgments (unreported)
+	d' for FC-C data: z(H) - z(FA)
+		if hit == 1 -> 1- 1/(2*n_targets)
+		if fa == 0 -> 1/(2*n_foils)
+	d_a for y/n judgements with slope parameter s from ROC
+		sqrt(2/(1=s^2)) * (z(hit) - sz(FA))
+	s is ratio of std dev of foil distribution to std dev of target distribution (slope)
+	4 tests for images of objects; 4 tests for silhouettes
+
+Bayley et al. 2008
+	used d' instead of d_a then z-scored; silhouettes
+
+Smith et al. 2014
+	H patients are ok at faces, especially on immediate 2AFC test
+	Declines with delay but not much worse than controls
+	Much worse at buildings/words
+	50 black and white male faces, presented once with 2AFC probe
+	exp 2: 80 images, then 20 old/20 new sequential y/n test

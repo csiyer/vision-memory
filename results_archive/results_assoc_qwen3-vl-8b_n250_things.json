@@ -1,0 +1,5027 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260429_000503",
+    "dataset": "things",
+    "n_images": 250,
+    "n_trials": 100,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.33,
+        "n_correct": 33,
+        "total": 100
+      }
+    },
+    "max_context_pairs": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The owl is a bird, and birds build nests. The image of the bird's nest is directly associated with the owl as its potential habitat or place of reproduction. The pocket watch, on the other hand, has no direct or indirect connection to the owl.\n\nTherefore, the image that is indirectly associated with the cue image is:\n**2**",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1534",
+            "category_id": 215,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1534/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1164",
+            "category_id": 37,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1164/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1268",
+            "category_id": 140,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1268/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 51
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1325",
+            "category_id": 180,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1325/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1281",
+            "category_id": 150,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1281/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1288",
+            "category_id": 155,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1288/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1211",
+            "category_id": 84,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1211/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 9
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a pincushion, which is used for holding pins. Pins are often used in sewing and crafting.\n\nThe first image shows penguins, which are unrelated to sewing.\n\nThe second image shows a rose, which is a flower. While a rose can be used as a decorative element in crafting or sewing projects, the direct association is not as strong as with the pincushion itself.\n\nHowever, the pincushion is a tool for pinning fabric, and",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1323",
+            "category_id": 178,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1323/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1242",
+            "category_id": 115,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1242/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1214",
+            "category_id": 87,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1214/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1382",
+            "category_id": 206,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1382/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 20
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of the peacock. However, the task is to choose one of the two provided images as being *indirectly* associated.\n\nThe cue image is of a peacock, which is a bird. The second image is of a bowl of oatmeal with vegetables, which is food. The first image is of a white pen, which is an object.\n\nThere is no direct or indirect connection between a peacock and a pen or a bowl of oat",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1177",
+            "category_id": 50,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1177/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1200",
+            "category_id": 73,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1200/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1148",
+            "category_id": 21,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1148/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1216",
+            "category_id": 89,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1216/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 52
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1341",
+            "category_id": 187,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1341/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1399",
+            "category_id": 209,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1399/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1233",
+            "category_id": 106,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1233/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1250",
+            "category_id": 123,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1250/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 52
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of chocolate pudding.\n\n- Image 1 is an otter, an animal.\n- Image 2 is a plate of ravioli with tomato sauce.\n\nNeither image is directly related to chocolate pudding. However, the question asks for an *indirect* association.\n\nThe most indirect association is with Image 2 (the ravioli). Both chocolate pudding and ravioli are food items. While they are different types of food, they both fall under the broad category of consum",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1183",
+            "category_id": 56,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1183/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1303",
+            "category_id": 165,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1303/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1158",
+            "category_id": 31,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1158/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1341",
+            "category_id": 187,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1341/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 21
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1277",
+            "category_id": 147,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1277/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1213",
+            "category_id": 86,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1213/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1389",
+            "category_id": 208,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1389/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 44
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1153",
+            "category_id": 26,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1153/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1218",
+            "category_id": 91,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1218/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1257",
+            "category_id": 130,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1257/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1157",
+            "category_id": 30,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1157/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 73
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1179",
+            "category_id": 52,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1179/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1294",
+            "category_id": 159,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1294/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1347",
+            "category_id": 190,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1347/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1180",
+            "category_id": 53,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1180/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 69
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1277",
+            "category_id": 147,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1277/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1283",
+            "category_id": 152,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1283/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1217",
+            "category_id": 90,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1217/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 41
+          }
+        }
+      },
+      {
+        "trial": 10,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a music stand. The two options are:\n1. A collection of rolling pins.\n2. A set of postage stamps.\n\nNeither of these items is directly related to a music stand. However, the question asks for an *indirect* association.\n\nRolling pins are kitchen tools used for baking, which is a common activity that might be done at home, where a music stand might also be found. The stamps, on the other hand, have no clear connection to music or",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1184",
+            "category_id": 57,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1184/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1274",
+            "category_id": 145,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1274/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1564",
+            "category_id": 221,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1564/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1377",
+            "category_id": 205,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1377/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 43
+          }
+        }
+      },
+      {
+        "trial": 11,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1160",
+            "category_id": 33,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1160/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1239",
+            "category_id": 112,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1239/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1188",
+            "category_id": 61,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1188/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1363",
+            "category_id": 199,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1363/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 46
+          }
+        }
+      },
+      {
+        "trial": 12,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1213",
+            "category_id": 86,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1213/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1217",
+            "category_id": 90,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1217/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1215",
+            "category_id": 88,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1215/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1565",
+            "category_id": 222,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1565/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 68
+          }
+        }
+      },
+      {
+        "trial": 13,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1566",
+            "category_id": 223,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1566/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1347",
+            "category_id": 190,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1347/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1186",
+            "category_id": 59,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1186/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1241",
+            "category_id": 114,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1241/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 6
+          }
+        }
+      },
+      {
+        "trial": 14,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is directly or indirectly associated with the cue image of the odometer reading \"126599\".\n\nThe cue image represents a numerical value, specifically a mileage reading. The two options are:\n1.  A close-up of a chain-link fence.\n2.  A bowl of green pesto being mixed.\n\nNeither of these images contains any numerical information or is thematically related to mileage, speed, or distance. Therefore, there is no correct choice from the",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1189",
+            "category_id": 62,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1189/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1150",
+            "category_id": 23,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1150/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1224",
+            "category_id": 97,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1224/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1137",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1137/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 71
+          }
+        }
+      },
+      {
+        "trial": 15,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of the ping pong table.\n\nHowever, if we must choose the *least* indirectly associated, the nose (image 1) is a more plausible choice than the postage stamps (image 2). The nose is a part of the human body, and while ping pong is a sport, it doesn't have a direct biological connection to the nose. The postage stamps, on the other hand, are completely unrelated to the sport or the equipment shown.\n\nTherefore",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1203",
+            "category_id": 76,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1203/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1247",
+            "category_id": 120,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1247/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1142",
+            "category_id": 15,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1142/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1564",
+            "category_id": 221,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1564/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 22
+          }
+        }
+      },
+      {
+        "trial": 16,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of the panda. However, the question asks for an *indirect* association.\n\nThe panda is a symbol of China. The image of the boat (1) is not directly related to China, but the image of the oven (2) is not either. Neither has a clear indirect link.\n\nBut let's consider the context. The panda is often associated with the People's Republic of China. The boat, being a vessel, could be associated with",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1337",
+            "category_id": 186,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1337/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1177",
+            "category_id": 50,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1177/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1387",
+            "category_id": 207,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1387/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1162",
+            "category_id": 35,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1162/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 73
+          }
+        }
+      },
+      {
+        "trial": 17,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1399",
+            "category_id": 209,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1399/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1358",
+            "category_id": 196,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1358/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1197",
+            "category_id": 70,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1197/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1311",
+            "category_id": 171,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1311/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 20
+          }
+        }
+      },
+      {
+        "trial": 18,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1210",
+            "category_id": 83,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1210/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1164",
+            "category_id": 37,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1164/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1181",
+            "category_id": 54,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1181/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1399",
+            "category_id": 209,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1399/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 60
+          }
+        }
+      },
+      {
+        "trial": 19,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1266",
+            "category_id": 138,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1266/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1256",
+            "category_id": 129,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1256/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1155",
+            "category_id": 28,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1155/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1252",
+            "category_id": 125,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1252/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 11
+          }
+        }
+      },
+      {
+        "trial": 20,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1281",
+            "category_id": 150,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1281/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1148",
+            "category_id": 21,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1148/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1246",
+            "category_id": 119,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1246/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1209",
+            "category_id": 82,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1209/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 21,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1561",
+            "category_id": 218,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1561/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1201",
+            "category_id": 74,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1201/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1278",
+            "category_id": 148,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1278/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1212",
+            "category_id": 85,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1212/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 6
+          }
+        }
+      },
+      {
+        "trial": 22,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of the polar bear. However, the question asks for an *indirect* association.\n\nThe polar bear is a large, powerful animal. The image of the pen is a small, man-made object. The image of the pesto is a food item, which is not directly related to the animal.\n\nThe most plausible indirect association is with the **pesto**. The reason is that both the polar bear and the pesto are associated with the color",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1187",
+            "category_id": 60,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1187/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1272",
+            "category_id": 144,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1272/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1216",
+            "category_id": 89,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1216/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1224",
+            "category_id": 97,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1224/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 70
+          }
+        }
+      },
+      {
+        "trial": 23,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1244",
+            "category_id": 117,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1244/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1284",
+            "category_id": 153,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1284/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1208",
+            "category_id": 81,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1208/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1205",
+            "category_id": 78,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1205/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 45
+          }
+        }
+      },
+      {
+        "trial": 24,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1219",
+            "category_id": 92,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1219/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1307",
+            "category_id": 168,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1307/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1162",
+            "category_id": 35,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1162/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1534",
+            "category_id": 215,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1534/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 59
+          }
+        }
+      },
+      {
+        "trial": 25,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of the red telephone box.\n\nHowever, if we must choose the *least* indirectly associated, the image of the pearl in the shell (1) is a better fit than the pot on the stove (2).\n\nThe red telephone box is a man-made object, a symbol of communication and urban infrastructure. The pearl, while also a natural object, is often associated with luxury, beauty, and sometimes communication (as in \"pearl of wisdom\" or",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1226",
+            "category_id": 99,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1226/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1229",
+            "category_id": 102,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1229/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1288",
+            "category_id": 155,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1288/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1203",
+            "category_id": 76,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1203/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 36
+          }
+        }
+      },
+      {
+        "trial": 26,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of the pipe organ. However, the task is to choose one of the two provided images as being *indirectly* associated.\n\nThe cue image is of a pipe organ, a musical instrument. The first option is pecans, a type of nut. The second option is a necklace made of beads.\n\nThere is no direct or indirect connection between pecans and a pipe organ. There is also no direct or indirect connection between a necklace and a pipe",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1149",
+            "category_id": 22,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1149/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1156",
+            "category_id": 29,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1156/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1204",
+            "category_id": 77,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1204/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1134",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1134/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 57
+          }
+        }
+      },
+      {
+        "trial": 27,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1505",
+            "category_id": 214,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1505/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1186",
+            "category_id": 59,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1186/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1365",
+            "category_id": 200,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1365/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1211",
+            "category_id": 84,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1211/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 53
+          }
+        }
+      },
+      {
+        "trial": 28,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows wooden stairs.\n\nThe two options are:\n1. A pile of green olives.\n2. A pile of peanuts in their shells.\n\nNeither olives nor peanuts have a direct visual or conceptual connection to stairs. However, the question asks for an *indirect* association.\n\nOne possible indirect association is that both stairs and peanuts (or olives) can be found in a pantry or kitchen setting. Stairs lead to different levels, and a pantry is often located on a different",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1370",
+            "category_id": 202,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1370/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1561",
+            "category_id": 218,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1561/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1201",
+            "category_id": 74,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1201/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1153",
+            "category_id": 26,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1153/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 10
+          }
+        }
+      },
+      {
+        "trial": 29,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1237",
+            "category_id": 110,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1237/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1322",
+            "category_id": 177,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1322/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1346",
+            "category_id": 189,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1346/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1240",
+            "category_id": 113,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1240/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 61
+          }
+        }
+      },
+      {
+        "trial": 30,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is directly associated with the cue image of pinecones.\n\nHowever, if we must choose the *least* indirectly associated one, the image of the pipe (1) is a better fit than the bowl of prunes (2). Here's why:\n\n*   **Pinecones and Pipes:** Both are associated with nature and can be found in outdoor or rustic settings. A pipe is a natural object (wood) and is often used in a relaxed, outdoor",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1230",
+            "category_id": 103,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1230/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1246",
+            "category_id": 119,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1246/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1249",
+            "category_id": 122,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1249/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1301",
+            "category_id": 164,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1301/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 15
+          }
+        }
+      },
+      {
+        "trial": 31,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a hand puppet.\n\nThe two options are:\n1. A metal nutcracker.\n2. A radar screen displaying a weather map.\n\nNeither of these items is directly related to a hand puppet. However, the question asks for an *indirect* association.\n\n- A nutcracker is a tool for cracking nuts. Nuts are a type of food, and food is something a puppet might be used to play with or represent in a performance.\n- A radar screen is",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1217",
+            "category_id": 90,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1217/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1312",
+            "category_id": 172,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1312/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1325",
+            "category_id": 180,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1325/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1146",
+            "category_id": 19,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1146/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 33
+          }
+        }
+      },
+      {
+        "trial": 32,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of a paddle. However, the question asks for an *indirect* association.\n\nThe cue image is a paddle, which is used for propelling a boat or kayak. This implies a connection to water, movement, and outdoor recreation.\n\n- Image 1 (the nose) has no direct or indirect connection to paddles or water sports.\n- Image 2 (the plant) is also not directly related.\n\nHowever, if we consider the *ind",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1158",
+            "category_id": 31,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1158/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1167",
+            "category_id": 40,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1167/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1142",
+            "category_id": 15,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1142/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1257",
+            "category_id": 130,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1257/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 14
+          }
+        }
+      },
+      {
+        "trial": 33,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is directly or indirectly associated with the cue image of the cave formations.\n\nThe cue image depicts natural rock formations, likely stalagmites or stalactites, in a cave.\n\n- Image 1 shows party blowers, which are man-made party favors.\n- Image 2 shows a floral tablecloth, which is a piece of home decor.\n\nThere is no thematic, conceptual, or visual link between the cave formations and either the party blowers or the tablecloth.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1567",
+            "category_id": 224,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1567/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1563",
+            "category_id": 220,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1563/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1256",
+            "category_id": 129,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1256/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 27
+          }
+        }
+      },
+      {
+        "trial": 34,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1312",
+            "category_id": 172,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1312/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1201",
+            "category_id": 74,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1201/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1200",
+            "category_id": 73,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1200/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1189",
+            "category_id": 62,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1189/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 53
+          }
+        }
+      },
+      {
+        "trial": 35,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows pistachios, which are a type of nut.\n\n- Image 1 shows a bowl of pet food. While pet food can contain nuts, the direct association is with animal feed, not the specific nut shown in the cue.\n- Image 2 shows a green paste being mixed, which is very likely pesto. Pesto is traditionally made from basil, garlic, pine nuts, and Parmesan cheese. Pine nuts are a different type of nut from pistachios, but",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1459",
+            "category_id": 212,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1459/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1251",
+            "category_id": 124,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1251/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1224",
+            "category_id": 97,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1224/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1225",
+            "category_id": 98,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1225/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 68
+          }
+        }
+      },
+      {
+        "trial": 36,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1254",
+            "category_id": 127,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1254/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1197",
+            "category_id": 70,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1197/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1199",
+            "category_id": 72,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1199/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1258",
+            "category_id": 131,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1258/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 57
+          }
+        }
+      },
+      {
+        "trial": 37,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1129",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1330",
+            "category_id": 182,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1330/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1174",
+            "category_id": 47,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1174/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1213",
+            "category_id": 86,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1213/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 27
+          }
+        }
+      },
+      {
+        "trial": 38,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is directly or indirectly associated with the cue image of wooden pallets.\n\nThe cue image shows wooden pallets, which are typically used for storage, transport, or as building materials. The first option is a pill organizer, and the second is a tennis racket. Neither of these items has a logical connection to wooden pallets.\n\nTherefore, the correct answer is that neither image is associated with the cue image.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1194",
+            "category_id": 67,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1194/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1173",
+            "category_id": 46,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1173/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1238",
+            "category_id": 111,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1238/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1324",
+            "category_id": 179,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1324/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 16
+          }
+        }
+      },
+      {
+        "trial": 39,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1289",
+            "category_id": 156,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1289/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1318",
+            "category_id": 175,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1318/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1268",
+            "category_id": 140,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1268/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1271",
+            "category_id": 143,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1271/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 74
+          }
+        }
+      },
+      {
+        "trial": 40,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1195",
+            "category_id": 68,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1195/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1243",
+            "category_id": 116,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1243/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1175",
+            "category_id": 48,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1175/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 62
+          }
+        }
+      },
+      {
+        "trial": 41,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows wooden pallets being worked on with a power tool, which is a common DIY or construction activity.\n\nThe second image (2) shows a staple gun being used on carpet, which is also a construction or home improvement task.\n\nThe first image (1) shows a red carpet at an awards ceremony, which is unrelated to the DIY or construction theme of the cue image.\n\nTherefore, the image indirectly associated with the cue image is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1161",
+            "category_id": 34,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1161/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1173",
+            "category_id": 46,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1173/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1567",
+            "category_id": 224,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1567/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1349",
+            "category_id": 192,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1349/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 47
+          }
+        }
+      },
+      {
+        "trial": 42,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a wall-mounted telephone.\n\nThe two options are:\n1. A panda walking on grass.\n2. A European-style electrical plug.\n\nThe telephone is an electronic device that requires electricity to operate. The plug is the device that provides that electricity. Therefore, the plug is indirectly associated with the telephone, as it is necessary for its function.\n\nThe correct answer is: **2**",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1194",
+            "category_id": 67,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1194/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1228",
+            "category_id": 101,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1228/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1265",
+            "category_id": 137,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1265/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1177",
+            "category_id": 50,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1177/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 13
+          }
+        }
+      },
+      {
+        "trial": 43,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is directly or indirectly associated with the cue image of a human nose.\n\nThe cue image is a close-up of a nose, which is a part of the human body. The two options are:\n1.  A set of postage stamps featuring various subjects like a mask, a bicycle, and grapes.\n2.  A pizza.\n\nThere is no logical, thematic, or conceptual connection between a nose and either postage stamps or a pizza.\n\nTherefore, the correct answer is that",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1237",
+            "category_id": 110,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1237/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1142",
+            "category_id": 15,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1142/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1564",
+            "category_id": 221,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1564/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1255",
+            "category_id": 128,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1255/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 59
+          }
+        }
+      },
+      {
+        "trial": 44,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of the puppy. However, the question asks for an *indirect* association.\n\nThe puppy is a living creature, and the image of the pill organizer (1) is associated with health, medicine, and care for living beings. While not a direct match, it is the only option that relates to the concept of care or well-being for a living thing, which is a plausible indirect association.\n\nThe pinecones (2) are a natural object",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1236",
+            "category_id": 109,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1236/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1313",
+            "category_id": 173,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1313/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1246",
+            "category_id": 119,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1246/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1238",
+            "category_id": 111,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1238/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 7
+          }
+        }
+      },
+      {
+        "trial": 45,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1223",
+            "category_id": 96,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1223/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1278",
+            "category_id": 148,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1278/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1203",
+            "category_id": 76,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1203/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1150",
+            "category_id": 23,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1150/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 42
+          }
+        }
+      },
+      {
+        "trial": 46,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1200",
+            "category_id": 73,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1200/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1230",
+            "category_id": 103,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1230/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1308",
+            "category_id": 169,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1308/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 68
+          }
+        }
+      },
+      {
+        "trial": 47,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two images is directly associated with the cue image of potatoes.\n\nHowever, if we must choose the one that is *indirectly* associated, the best choice is **Image 2** (the rainbow on the wooden floor).\n\nHere's the reasoning:\n*   **Image 1 (Parrots):** There is no logical or thematic connection between parrots and potatoes.\n*   **Image 2 (Rainbow):** A rainbow is an optical phenomenon caused by the refraction",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1136",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1136/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1289",
+            "category_id": 156,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1289/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1191",
+            "category_id": 64,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1191/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1298",
+            "category_id": 162,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1298/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 66
+          }
+        }
+      },
+      {
+        "trial": 48,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1211",
+            "category_id": 84,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1211/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1389",
+            "category_id": 208,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1389/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1372",
+            "category_id": 203,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1372/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1217",
+            "category_id": 90,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1217/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 28
+          }
+        }
+      },
+      {
+        "trial": 49,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1218",
+            "category_id": 91,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1218/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1209",
+            "category_id": 82,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1209/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1282",
+            "category_id": 151,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1282/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1298",
+            "category_id": 162,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1298/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 70
+          }
+        }
+      },
+      {
+        "trial": 50,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a gray button-up shirt.\n\nThe two options are:\n1.  A foot in a cast.\n2.  A pickle on a plate.\n\nNeither of these images is directly related to the shirt. However, the question asks for an *indirect* association.\n\n- A cast is worn to immobilize an injured limb, often after a fall or accident. A shirt is worn to cover the body. While not a direct connection, both are items of clothing or personal items used",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1169",
+            "category_id": 42,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1169/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1459",
+            "category_id": 212,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1459/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1258",
+            "category_id": 131,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1258/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1233",
+            "category_id": 106,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1233/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 26
+          }
+        }
+      },
+      {
+        "trial": 51,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1330",
+            "category_id": 182,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1330/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1153",
+            "category_id": 26,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1153/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1365",
+            "category_id": 200,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1365/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1276",
+            "category_id": 146,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1276/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 69
+          }
+        }
+      },
+      {
+        "trial": 52,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1224",
+            "category_id": 97,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1224/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1564",
+            "category_id": 221,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1564/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1261",
+            "category_id": 134,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1261/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 53
+          }
+        }
+      },
+      {
+        "trial": 53,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is directly or indirectly associated with the cue image of a tennis racket.\n\nThe cue image depicts a sports equipment item. The first option is a collection of pills, and the second is a red telephone booth. Neither of these has a logical or thematic connection to a tennis racket.\n\nTherefore, there is no correct choice from the given options.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1566",
+            "category_id": 223,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1566/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1324",
+            "category_id": 179,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1324/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1237",
+            "category_id": 110,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1237/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1229",
+            "category_id": 102,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1229/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 20
+          }
+        }
+      },
+      {
+        "trial": 54,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is directly associated with the cue image of the white napkin.\n\nHowever, if we must choose the one that is *indirectly* associated, the best choice is:\n**Image 2 (the black pen)**\n\nHere's the reasoning:\n*   The cue image is a white paper napkin.\n*   Image 1 is a metal ramp, which is an object for accessibility, not related to paper or napkins.\n*   Image 2 is a",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1177",
+            "category_id": 50,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1177/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1130",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1210",
+            "category_id": 83,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1210/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1336",
+            "category_id": 185,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1336/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 67
+          }
+        }
+      },
+      {
+        "trial": 55,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Neither of the two provided images is directly associated with the cue image of pins on fabric.\n\nHowever, if we must choose the one that is *indirectly* associated, the most plausible choice is **Image 2 (the spaghetti)**.\n\nHere's the reasoning:\n*   The cue image shows pins, which are used for sewing or crafting.\n*   The second image shows a plate of spaghetti, a food item.\n*   While there is no direct connection, both images can be associated with",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1143",
+            "category_id": 16,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1143/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1240",
+            "category_id": 113,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1240/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1534",
+            "category_id": 215,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1534/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1227",
+            "category_id": 100,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1227/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 50
+          }
+        }
+      },
+      {
+        "trial": 56,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a stack of paper plates, which are used for serving food.\n\nThe first option (image 1) shows a pepper mill, a tool for grinding peppercorns. While not directly related to plates, it is an item used in food preparation or serving, fitting within the broader context of dining or food-related items.\n\nThe second option (image 2) shows sewing pins, which are unrelated to food or serving.\n\nTherefore, the image indirectly associated with the cue image is:",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1337",
+            "category_id": 186,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1337/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1185",
+            "category_id": 58,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1185/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1219",
+            "category_id": 92,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1219/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 27
+          }
+        }
+      },
+      {
+        "trial": 57,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an oven, which is used for cooking.\n\n- Image 1 shows a pair of pants. While clothing is often worn while cooking, there is no direct or indirect functional association between pants and an oven.\n- Image 2 shows a pile of green powder. This could be a culinary ingredient (like matcha or a spice) that is used in cooking or baking, which is the primary function of an oven.\n\nTherefore, the image indirectly associated with the cue image is Image",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1211",
+            "category_id": 84,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1211/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1162",
+            "category_id": 35,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1162/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1294",
+            "category_id": 159,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1294/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1179",
+            "category_id": 52,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1179/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 36
+          }
+        }
+      },
+      {
+        "trial": 58,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a bowl of mulled wine, a warm, spiced beverage often enjoyed during the holidays.\n\nLet's examine the two options:\n\n*   **Image 1 (Playing Cards):** This image shows a King and Queen of Hearts. While playing cards are often associated with games and social gatherings, there is no direct or indirect thematic link to mulled wine. The connection is very weak, if any.\n*   **Image 2 (Perfume Bottle):** This image",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1144",
+            "category_id": 17,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1144/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1310",
+            "category_id": 170,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1310/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1262",
+            "category_id": 135,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1262/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1222",
+            "category_id": 95,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1222/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 19
+          }
+        }
+      },
+      {
+        "trial": 59,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1565",
+            "category_id": 222,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1565/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1259",
+            "category_id": 132,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1259/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1197",
+            "category_id": 70,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1197/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1235",
+            "category_id": 108,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1235/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 39
+          }
+        }
+      },
+      {
+        "trial": 60,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is directly or indirectly associated with the cue image of the quill pen.\n\nThe cue image depicts a historical writing instrument. The first option is underwear, and the second is a bowl of prunes. Neither of these items has any thematic, functional, or contextual connection to writing, ink, or historical correspondence.\n\nTherefore, there is no correct choice from the given options.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1147",
+            "category_id": 20,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1147/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1317",
+            "category_id": 174,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1317/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1178",
+            "category_id": 51,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1178/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1301",
+            "category_id": 164,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1301/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 25
+          }
+        }
+      },
+      {
+        "trial": 61,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is directly or indirectly associated with the cue image of paper plates.\n\nThe cue image shows a stack of disposable paper plates, which are typically used for serving food.\n\n- Image 1 shows a person wearing sheer black tights and high heels. There is no connection to paper plates.\n- Image 2 shows a giant panda walking on grass. There is no connection to paper plates.\n\nTherefore, neither image is associated with the cue image.\n\nThe correct answer is: Neither.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1233",
+            "category_id": 106,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1233/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1185",
+            "category_id": 58,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1185/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1177",
+            "category_id": 50,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1177/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1181",
+            "category_id": 54,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1181/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 27
+          }
+        }
+      },
+      {
+        "trial": 62,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is directly associated with the cue image of a person playing with a water gun.\n\nHowever, if we must choose the one that is *indirectly* associated, we can look for a thematic or conceptual link.\n\n- The cue image involves water and play.\n- Image 1 is a nutcracker, a tool for cracking nuts, which is a food item.\n- Image 2 is a bowl of pesto, a food item.\n\nBoth are food-related,",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1223",
+            "category_id": 96,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1223/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1559",
+            "category_id": 216,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1559/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1224",
+            "category_id": 97,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1224/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1146",
+            "category_id": 19,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1146/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 26
+          }
+        }
+      },
+      {
+        "trial": 63,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1307",
+            "category_id": 168,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1307/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1169",
+            "category_id": 42,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1169/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1562",
+            "category_id": 219,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1562/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1162",
+            "category_id": 35,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1162/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 21
+          }
+        }
+      },
+      {
+        "trial": 64,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1488",
+            "category_id": 213,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1488/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1163",
+            "category_id": 36,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1163/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1252",
+            "category_id": 125,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1252/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1164",
+            "category_id": 37,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1164/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 43
+          }
+        }
+      },
+      {
+        "trial": 65,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is directly or indirectly associated with the cue image of the pinball machine.\n\nThe cue image depicts a pinball machine, which is a piece of arcade gaming equipment. The two options are:\n1.  A bowl of mulled wine or spiced cider.\n2.  A weekly pill organizer.\n\nNeither of these items has any thematic, functional, or contextual connection to a pinball machine. Therefore, neither image is indirectly associated with the cue image.\n\nThe correct answer",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1176",
+            "category_id": 49,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1176/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1241",
+            "category_id": 114,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1241/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1310",
+            "category_id": 170,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1310/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1238",
+            "category_id": 111,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1238/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 41
+          }
+        }
+      },
+      {
+        "trial": 66,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1300",
+            "category_id": 163,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1300/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1237",
+            "category_id": 110,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1237/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1276",
+            "category_id": 146,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1276/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1259",
+            "category_id": 132,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1259/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 57
+          }
+        }
+      },
+      {
+        "trial": 67,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of cooked rice.\n\nHowever, if we must choose the *least* indirectly associated, the image of the red carpet (image 2) is the better choice. The reason is that the cue image (rice) is a food item, and the red carpet image (image 2) is a setting or event. The rusty metal image (image 1) is an inanimate object with no clear connection to food or events.\n\nTherefore, the answer",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1245",
+            "category_id": 118,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1245/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1359",
+            "category_id": 197,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1359/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1389",
+            "category_id": 208,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1389/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1349",
+            "category_id": 192,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1349/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 73
+          }
+        }
+      },
+      {
+        "trial": 68,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1268",
+            "category_id": 140,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1268/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1334",
+            "category_id": 183,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1334/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1205",
+            "category_id": 78,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1205/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1366",
+            "category_id": 201,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1366/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 45
+          }
+        }
+      },
+      {
+        "trial": 69,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two images is directly associated with the electrical outlet. However, the question asks for an *indirect* association.\n\nThe electrical outlet is a man-made object used for powering devices. The image of the penguins is a natural, biological subject. The image of the person in overalls is also a human-made object, but it's clothing.\n\nThe most indirect association is with the penguins. While penguins themselves don't use electricity, they are often associated with cold, remote environments",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1151",
+            "category_id": 24,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1151/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1161",
+            "category_id": 34,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1161/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1163",
+            "category_id": 36,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1163/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1214",
+            "category_id": 87,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1214/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 52
+          }
+        }
+      },
+      {
+        "trial": 70,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a pool table, which is associated with the game of pool.\n\n- Image 1 shows party blowers, which are party favors and have no direct or indirect connection to pool.\n- Image 2 shows a white pen, which is an office supply and also has no direct or indirect connection to pool.\n\nNeither image is directly associated with the cue image. However, the question asks for an *indirect* association.\n\nThe most plausible indirect association is with Image 2,",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1319",
+            "category_id": 176,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1319/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1283",
+            "category_id": 152,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1283/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1216",
+            "category_id": 89,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1216/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1139",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1139/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 49
+          }
+        }
+      },
+      {
+        "trial": 71,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is directly or indirectly associated with the cue image of pancakes.\n\n*   The first option (shaving brush and razor) is related to personal grooming.\n*   The second option (staples) is an office supply.\n\nPancakes are a food item, and neither of the other two images depicts food, cooking, or a related activity.\n\nTherefore, the correct answer is that neither image is associated with the cue image.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1210",
+            "category_id": 83,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1210/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1176",
+            "category_id": 49,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1176/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1566",
+            "category_id": 223,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1566/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1342",
+            "category_id": 188,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1342/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 72
+          }
+        }
+      },
+      {
+        "trial": 72,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1559",
+            "category_id": 216,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1559/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1147",
+            "category_id": 20,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1147/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1225",
+            "category_id": 98,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1225/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1251",
+            "category_id": 124,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1251/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 30
+          }
+        }
+      },
+      {
+        "trial": 73,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1389",
+            "category_id": 208,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1389/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1231",
+            "category_id": 104,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1231/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1447",
+            "category_id": 211,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1447/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1212",
+            "category_id": 85,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1212/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 18
+          }
+        }
+      },
+      {
+        "trial": 74,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a green, textured paste being mixed, which is most likely pesto. Pesto is an Italian sauce made from basil, garlic, pine nuts, Parmesan cheese, and olive oil.\n\nLet's examine the two options:\n\n1.  **Image 1 (Water Gun):** This image shows a person using a water gun. There is no direct or indirect connection between a water gun and the ingredients or preparation of pesto.\n\n2.  **Image 2 (Artist",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1200",
+            "category_id": 73,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1200/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1224",
+            "category_id": 97,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1224/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1559",
+            "category_id": 216,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1559/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1172",
+            "category_id": 45,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1172/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 60
+          }
+        }
+      },
+      {
+        "trial": 75,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a baby pacifier. The two options are:\n1. A pair of blue jeans.\n2. A pile of green and red bell peppers.\n\nNeither of these items is directly related to a pacifier. However, the question asks for an *indirect* association.\n\n- The pacifier is for a baby.\n- The pair of jeans is clothing, which a baby would eventually wear.\n- The bell peppers are food, which a baby would eventually eat.\n\nThe connection to the",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1270",
+            "category_id": 142,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1270/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1166",
+            "category_id": 39,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1166/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1218",
+            "category_id": 91,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1218/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1179",
+            "category_id": 52,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1179/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 76,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1143",
+            "category_id": 16,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1143/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1157",
+            "category_id": 30,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1157/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1358",
+            "category_id": 196,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1358/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1349",
+            "category_id": 192,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1349/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 6
+          }
+        }
+      },
+      {
+        "trial": 77,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cue image shows peanuts. Peanuts are a common snack food, often consumed during work or study breaks. The first C image shows a cluttered desk with papers, which is a typical scene associated with work or studying. The second C image shows an otter, which has no direct or indirect connection to peanuts.\n\nTherefore, the image indirectly associated with the cue image is:\n1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1211",
+            "category_id": 84,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1211/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1201",
+            "category_id": 74,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1201/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1183",
+            "category_id": 56,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1183/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1158",
+            "category_id": 31,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1158/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 69
+          }
+        }
+      },
+      {
+        "trial": 78,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1300",
+            "category_id": 163,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1300/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1237",
+            "category_id": 110,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1237/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1296",
+            "category_id": 161,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1296/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1258",
+            "category_id": 131,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1258/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 79,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Neither image is directly associated with the cue image of the pig. However, the question asks for an *indirect* association.\n\nThe pig is an animal, and the second image shows a pitchfork, a tool often used in farming or animal husbandry. While the ramp is not related to pigs, the pitchfork has a more plausible indirect connection to the animal's environment or care.\n\nTherefore, the image indirectly associated with the cue image is:\n**2**",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1325",
+            "category_id": 180,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1325/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1235",
+            "category_id": 108,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1235/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1254",
+            "category_id": 127,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1254/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1336",
+            "category_id": 185,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1336/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 52
+          }
+        }
+      },
+      {
+        "trial": 80,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1158",
+            "category_id": 31,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1158/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1488",
+            "category_id": 213,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1488/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1199",
+            "category_id": 72,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1199/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1198",
+            "category_id": 71,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1198/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 19
+          }
+        }
+      },
+      {
+        "trial": 81,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a dog food bowl. The most direct association would be with an animal, specifically a dog.\n\nLooking at the two options:\n- Image 1 shows a decorative pillow with an orange border and a spiral pattern. This is not related to dogs or pet care.\n- Image 2 shows a person's leg in a cast. This is related to injury and medical care. While a dog might get injured and need a cast, the cast itself is not a direct or indirect product of",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1286",
+            "category_id": 154,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1286/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1225",
+            "category_id": 98,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1225/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1258",
+            "category_id": 131,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1258/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1239",
+            "category_id": 112,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1239/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 40
+          }
+        }
+      },
+      {
+        "trial": 82,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1254",
+            "category_id": 127,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1254/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1257",
+            "category_id": 130,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1257/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1308",
+            "category_id": 169,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1308/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1363",
+            "category_id": 199,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1363/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 65
+          }
+        }
+      },
+      {
+        "trial": 83,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1265",
+            "category_id": 137,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1265/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1217",
+            "category_id": 90,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1217/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1298",
+            "category_id": 162,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1298/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1191",
+            "category_id": 64,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1191/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 7
+          }
+        }
+      },
+      {
+        "trial": 84,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1335",
+            "category_id": 184,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1335/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1187",
+            "category_id": 60,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1187/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1274",
+            "category_id": 145,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1274/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 23
+          }
+        }
+      },
+      {
+        "trial": 85,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1459",
+            "category_id": 212,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1459/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1200",
+            "category_id": 73,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1200/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1561",
+            "category_id": 218,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1561/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1347",
+            "category_id": 190,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1347/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 59
+          }
+        }
+      },
+      {
+        "trial": 86,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1150",
+            "category_id": 23,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1150/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1176",
+            "category_id": 49,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1176/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1265",
+            "category_id": 137,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1265/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1347",
+            "category_id": 190,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1347/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 29
+          }
+        }
+      },
+      {
+        "trial": 87,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1377",
+            "category_id": 205,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1377/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1288",
+            "category_id": 155,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1288/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1180",
+            "category_id": 53,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1180/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1241",
+            "category_id": 114,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1241/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 14
+          }
+        }
+      },
+      {
+        "trial": 88,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1162",
+            "category_id": 35,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1162/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1223",
+            "category_id": 96,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1223/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1177",
+            "category_id": 50,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1177/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1248",
+            "category_id": 121,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1248/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 59
+          }
+        }
+      },
+      {
+        "trial": 89,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a rustic, red metal watering can.\n\nLet's analyze the two options:\n\n*   **Image 1 (Pins on fabric):** This image shows sewing pins on a patterned fabric. While both involve \"pins,\" the connection is indirect. The watering can is for watering plants, and the pins are for sewing. There is no direct functional or thematic link.\n*   **Image 2 (Frying pan):** This image shows a frying pan. A frying",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1228",
+            "category_id": 101,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1228/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1152",
+            "category_id": 25,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1152/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1175",
+            "category_id": 48,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1175/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1240",
+            "category_id": 113,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1240/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 69
+          }
+        }
+      },
+      {
+        "trial": 90,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is directly or indirectly associated with the cue image of a person in denim overalls.\n\nThe cue image depicts a person wearing casual, denim clothing. The first option is a pair of parking meters, and the second is a pile of green peas. Neither of these items has a logical connection to denim overalls.\n\nTherefore, the correct answer is that neither image is associated with the cue image.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1221",
+            "category_id": 94,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1221/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1163",
+            "category_id": 36,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1163/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1198",
+            "category_id": 71,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1198/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1190",
+            "category_id": 63,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1190/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 65
+          }
+        }
+      },
+      {
+        "trial": 91,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a pendulum, which is a device used to measure or indicate direction, often used in navigation or as a symbol of balance.\n\nThe first option is a radar screen displaying a weather map. Radar is a technology used for detecting the direction and distance of objects, such as weather systems or aircraft. While it doesn't use a physical pendulum, it serves a similar function of directional detection and measurement.\n\nThe second option is a vintage watering can, which is a tool for watering plants",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1363",
+            "category_id": 199,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1363/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1213",
+            "category_id": 86,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1213/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1152",
+            "category_id": 25,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1152/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1325",
+            "category_id": 180,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1325/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 46
+          }
+        }
+      },
+      {
+        "trial": 92,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1141",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1141/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1351",
+            "category_id": 193,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1351/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1132",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1132/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1257",
+            "category_id": 130,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1257/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 20
+          }
+        }
+      },
+      {
+        "trial": 93,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1135",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1135/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1248",
+            "category_id": 121,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1248/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1205",
+            "category_id": 78,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1205/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1193",
+            "category_id": 66,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1193/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 66
+          }
+        }
+      },
+      {
+        "trial": 94,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1213",
+            "category_id": 86,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1213/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1259",
+            "category_id": 132,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1259/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1143",
+            "category_id": 16,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1143/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1175",
+            "category_id": 48,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1175/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 70
+          }
+        }
+      },
+      {
+        "trial": 95,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1221",
+            "category_id": 94,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1221/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1372",
+            "category_id": 203,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1372/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1261",
+            "category_id": 134,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1261/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1312",
+            "category_id": 172,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1312/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 6
+          }
+        }
+      },
+      {
+        "trial": 96,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of the shirt.\n\nHowever, if we must choose the one that is *indirectly* associated, the most plausible connection is with the owl (image 1). This is because the owl is a common motif found on clothing, particularly shirts and t-shirts, as a design or graphic. The rollerblades (image 2) have no common or indirect association with a shirt.\n\nTherefore, the answer is: 1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1301",
+            "category_id": 164,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1301/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1459",
+            "category_id": 212,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1459/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1375",
+            "category_id": 204,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1375/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1164",
+            "category_id": 37,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1164/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 29
+          }
+        }
+      },
+      {
+        "trial": 97,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1138",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1138/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1204",
+            "category_id": 77,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1204/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1281",
+            "category_id": 150,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1281/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1293",
+            "category_id": 158,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1293/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 51
+          }
+        }
+      },
+      {
+        "trial": 98,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1202",
+            "category_id": 75,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1202/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1192",
+            "category_id": 65,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1192/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1308",
+            "category_id": 169,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1308/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1254",
+            "category_id": 127,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1254/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 7
+          }
+        }
+      },
+      {
+        "trial": 99,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a pedometer, which measures steps.\n\n- Image 1 is a nail clipper, a tool for personal grooming.\n- Image 2 is a person on pogo sticks, a device for bouncing.\n\nWhile neither is a direct match, the pogo stick is the more indirect association. Pogo sticks are used for bouncing, which is a form of movement, and a pedometer measures walking or stepping. Both involve movement and are related to the concept of \"steps",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "category": "cat_1274",
+            "category_id": 145,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1274/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "category": "cat_1206",
+            "category_id": 79,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1206/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "cat_1269",
+            "category_id": 141,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1269/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "cat_1127",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+            "local_filename": "0.jpg",
+            "role": "C",
+            "chain_index": 52
+          }
+        }
+      }
+    ],
+    "accuracy": 0.33,
+    "n_correct": 33,
+    "total": 100
+  }
+}

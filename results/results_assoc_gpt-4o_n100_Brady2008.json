@@ -1,0 +1,1727 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260427_115536",
+    "dataset": "Brady2008",
+    "n_images": 100,
+    "n_trials": 50,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.92,
+        "n_correct": 46,
+        "total": 50
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2 (Excedrin).",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AHIGCHAIR.jpg",
+            "name": "AHIGCHAIR.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Asandwichiro2.jpg",
+            "name": "Asandwichiro2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/excedrin.jpg",
+            "name": "excedrin.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Aspoon14.jpg",
+            "name": "Aspoon14.jpg",
+            "role": "C",
+            "chain_index": 19
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 1.",
+        "metadata": {
+          "chain_index": 1,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Acampingstov9.jpg",
+            "name": "Acampingstov9.jpg",
+            "role": "B",
+            "chain_index": 1
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Aornament89.jpg",
+            "name": "Aornament89.jpg",
+            "role": "A",
+            "chain_index": 1
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AAIRGAUGE.jpg",
+            "name": "AAIRGAUGE.jpg",
+            "role": "C",
+            "chain_index": 1
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ATRACTWH6.jpg",
+            "name": "ATRACTWH6.jpg",
+            "role": "C",
+            "chain_index": 26
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The indirectly associated image with the cue image is 2.",
+        "metadata": {
+          "chain_index": 2,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26374605.thl.jpg",
+            "name": "26374605.thl.jpg",
+            "role": "B",
+            "chain_index": 2
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AWOODSPAT.jpg",
+            "name": "AWOODSPAT.jpg",
+            "role": "A",
+            "chain_index": 2
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26420979.thl.jpg",
+            "name": "26420979.thl.jpg",
+            "role": "C",
+            "chain_index": 2
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/dftslturapr.jpg",
+            "name": "dftslturapr.jpg",
+            "role": "C",
+            "chain_index": 34
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 1.",
+        "metadata": {
+          "chain_index": 3,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/36411021.thl.jpg",
+            "name": "36411021.thl.jpg",
+            "role": "B",
+            "chain_index": 3
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/APALLETT2.jpg",
+            "name": "APALLETT2.jpg",
+            "role": "A",
+            "chain_index": 3
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Agolfplaque.jpg",
+            "name": "Agolfplaque.jpg",
+            "role": "C",
+            "chain_index": 3
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26420979.thl.jpg",
+            "name": "26420979.thl.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2.",
+        "metadata": {
+          "chain_index": 4,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ADOG15.jpg",
+            "name": "ADOG15.jpg",
+            "role": "B",
+            "chain_index": 4
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ADESKLA12.jpg",
+            "name": "ADESKLA12.jpg",
+            "role": "A",
+            "chain_index": 4
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Apeddleboat3.jpg",
+            "name": "Apeddleboat3.jpg",
+            "role": "C",
+            "chain_index": 4
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Ablouse2.jpg",
+            "name": "Ablouse2.jpg",
+            "role": "C",
+            "chain_index": 9
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The second image (a jewelry box) is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 5,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/pic9.jpg",
+            "name": "pic9.jpg",
+            "role": "B",
+            "chain_index": 5
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/22910936.thl.jpg",
+            "name": "22910936.thl.jpg",
+            "role": "A",
+            "chain_index": 5
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26432175.thl.jpg",
+            "name": "26432175.thl.jpg",
+            "role": "C",
+            "chain_index": 5
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ringbox03.jpg",
+            "name": "ringbox03.jpg",
+            "role": "C",
+            "chain_index": 22
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2.",
+        "metadata": {
+          "chain_index": 6,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Ateacherscert.jpg",
+            "name": "Ateacherscert.jpg",
+            "role": "B",
+            "chain_index": 6
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Akiwifruit6.jpg",
+            "name": "Akiwifruit6.jpg",
+            "role": "A",
+            "chain_index": 6
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26374166.thl.jpg",
+            "name": "26374166.thl.jpg",
+            "role": "C",
+            "chain_index": 6
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ABABYSPOO.jpg",
+            "name": "ABABYSPOO.jpg",
+            "role": "C",
+            "chain_index": 18
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2.",
+        "metadata": {
+          "chain_index": 7,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AAFRICI10.jpg",
+            "name": "AAFRICI10.jpg",
+            "role": "B",
+            "chain_index": 7
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AARTIHAN5.jpg",
+            "name": "AARTIHAN5.jpg",
+            "role": "A",
+            "chain_index": 7
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26421382.thl.jpg",
+            "name": "26421382.thl.jpg",
+            "role": "C",
+            "chain_index": 7
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/batslbir.jpg",
+            "name": "batslbir.jpg",
+            "role": "C",
+            "chain_index": 45
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2.",
+        "metadata": {
+          "chain_index": 8,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/matchbook.jpg",
+            "name": "matchbook.jpg",
+            "role": "B",
+            "chain_index": 8
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/barbwirecoil.jpg",
+            "name": "barbwirecoil.jpg",
+            "role": "A",
+            "chain_index": 8
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ABALLYAR4.jpg",
+            "name": "ABALLYAR4.jpg",
+            "role": "C",
+            "chain_index": 8
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Astaplegun3.jpg",
+            "name": "Astaplegun3.jpg",
+            "role": "C",
+            "chain_index": 28
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image was associated with a crocodile, which then was associated with the second image. Image",
+        "metadata": {
+          "chain_index": 9,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26379647.thl.jpg",
+            "name": "26379647.thl.jpg",
+            "role": "B",
+            "chain_index": 9
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26451318.thl.jpg",
+            "name": "26451318.thl.jpg",
+            "role": "A",
+            "chain_index": 9
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Ablouse2.jpg",
+            "name": "Ablouse2.jpg",
+            "role": "C",
+            "chain_index": 9
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ABALLYAR4.jpg",
+            "name": "ABALLYAR4.jpg",
+            "role": "C",
+            "chain_index": 8
+          }
+        }
+      },
+      {
+        "trial": 10,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The second image (brush) is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 10,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Acablelatch.jpg",
+            "name": "Acablelatch.jpg",
+            "role": "B",
+            "chain_index": 10
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Atool129.jpg",
+            "name": "Atool129.jpg",
+            "role": "A",
+            "chain_index": 10
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Adustpanbrus4.jpg",
+            "name": "Adustpanbrus4.jpg",
+            "role": "C",
+            "chain_index": 10
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/scrunchie.jpg",
+            "name": "scrunchie.jpg",
+            "role": "C",
+            "chain_index": 11
+          }
+        }
+      },
+      {
+        "trial": 11,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is the scrunchie (Image 2).",
+        "metadata": {
+          "chain_index": 11,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AFOOTST11.jpg",
+            "name": "AFOOTST11.jpg",
+            "role": "B",
+            "chain_index": 11
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Atoyhomeoffi4.jpg",
+            "name": "Atoyhomeoffi4.jpg",
+            "role": "A",
+            "chain_index": 11
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/scrunchie.jpg",
+            "name": "scrunchie.jpg",
+            "role": "C",
+            "chain_index": 11
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/23065398.thl.jpg",
+            "name": "23065398.thl.jpg",
+            "role": "C",
+            "chain_index": 29
+          }
+        }
+      },
+      {
+        "trial": 12,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The image indirectly associated with the cue image (dumbbell) is image 1 (pepper",
+        "metadata": {
+          "chain_index": 12,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AMIRRORT2.jpg",
+            "name": "AMIRRORT2.jpg",
+            "role": "B",
+            "chain_index": 12
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AWEIGHTS3.jpg",
+            "name": "AWEIGHTS3.jpg",
+            "role": "A",
+            "chain_index": 12
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Adog120.jpg",
+            "name": "Adog120.jpg",
+            "role": "C",
+            "chain_index": 12
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/APEPPSHA4.jpg",
+            "name": "APEPPSHA4.jpg",
+            "role": "C",
+            "chain_index": 13
+          }
+        }
+      },
+      {
+        "trial": 13,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 2 is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 13,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Abicycleshoe.jpg",
+            "name": "Abicycleshoe.jpg",
+            "role": "B",
+            "chain_index": 13
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Atelescope2.jpg",
+            "name": "Atelescope2.jpg",
+            "role": "A",
+            "chain_index": 13
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/APEPPSHA4.jpg",
+            "name": "APEPPSHA4.jpg",
+            "role": "C",
+            "chain_index": 13
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AAIRGAUGE.jpg",
+            "name": "AAIRGAUGE.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 14,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The indirectly associated image with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 14,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Ashelf27.jpg",
+            "name": "Ashelf27.jpg",
+            "role": "B",
+            "chain_index": 14
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AAFRIMAS5.jpg",
+            "name": "AAFRIMAS5.jpg",
+            "role": "A",
+            "chain_index": 14
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aegyptianst20.jpg",
+            "name": "Aegyptianst20.jpg",
+            "role": "C",
+            "chain_index": 14
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Agluegun.jpg",
+            "name": "Agluegun.jpg",
+            "role": "C",
+            "chain_index": 40
+          }
+        }
+      },
+      {
+        "trial": 15,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The second image (the funnel) is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 15,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26391173.thl.jpg",
+            "name": "26391173.thl.jpg",
+            "role": "B",
+            "chain_index": 15
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AMIXER.jpg",
+            "name": "AMIXER.jpg",
+            "role": "A",
+            "chain_index": 15
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/8023286.thl.jpg",
+            "name": "8023286.thl.jpg",
+            "role": "C",
+            "chain_index": 15
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ABLAKPOT3.jpg",
+            "name": "ABLAKPOT3.jpg",
+            "role": "C",
+            "chain_index": 38
+          }
+        }
+      },
+      {
+        "trial": 16,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2.",
+        "metadata": {
+          "chain_index": 16,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26425788.thl.jpg",
+            "name": "26425788.thl.jpg",
+            "role": "B",
+            "chain_index": 16
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26374055.thl.jpg",
+            "name": "26374055.thl.jpg",
+            "role": "A",
+            "chain_index": 16
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Asafetybelt.jpg",
+            "name": "Asafetybelt.jpg",
+            "role": "C",
+            "chain_index": 16
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ABOOTCRA5.jpg",
+            "name": "ABOOTCRA5.jpg",
+            "role": "C",
+            "chain_index": 33
+          }
+        }
+      },
+      {
+        "trial": 17,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 1.",
+        "metadata": {
+          "chain_index": 17,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26421572.thl.jpg",
+            "name": "26421572.thl.jpg",
+            "role": "B",
+            "chain_index": 17
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/jellybellygum.jpg",
+            "name": "jellybellygum.jpg",
+            "role": "A",
+            "chain_index": 17
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ALAMP.jpg",
+            "name": "ALAMP.jpg",
+            "role": "C",
+            "chain_index": 17
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AHOUSBOA3.jpg",
+            "name": "AHOUSBOA3.jpg",
+            "role": "C",
+            "chain_index": 47
+          }
+        }
+      },
+      {
+        "trial": 18,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 18,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Aknife92.jpg",
+            "name": "Aknife92.jpg",
+            "role": "B",
+            "chain_index": 18
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26431734.thl.jpg",
+            "name": "26431734.thl.jpg",
+            "role": "A",
+            "chain_index": 18
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ABABYSPOO.jpg",
+            "name": "ABABYSPOO.jpg",
+            "role": "C",
+            "chain_index": 18
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/dftslturapr.jpg",
+            "name": "dftslturapr.jpg",
+            "role": "C",
+            "chain_index": 34
+          }
+        }
+      },
+      {
+        "trial": 19,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The second image (the spoon) is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 19,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AWEIGHT11.jpg",
+            "name": "AWEIGHT11.jpg",
+            "role": "B",
+            "chain_index": 19
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Atoy51.jpg",
+            "name": "Atoy51.jpg",
+            "role": "A",
+            "chain_index": 19
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aspoon14.jpg",
+            "name": "Aspoon14.jpg",
+            "role": "C",
+            "chain_index": 19
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AELECSAW.jpg",
+            "name": "AELECSAW.jpg",
+            "role": "C",
+            "chain_index": 30
+          }
+        }
+      },
+      {
+        "trial": 20,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2.",
+        "metadata": {
+          "chain_index": 20,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/retainertheeth.jpg",
+            "name": "retainertheeth.jpg",
+            "role": "B",
+            "chain_index": 20
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AADDBOOK.jpg",
+            "name": "AADDBOOK.jpg",
+            "role": "A",
+            "chain_index": 20
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Ascientificm2.jpg",
+            "name": "Ascientificm2.jpg",
+            "role": "C",
+            "chain_index": 20
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/scrunchie.jpg",
+            "name": "scrunchie.jpg",
+            "role": "C",
+            "chain_index": 11
+          }
+        }
+      },
+      {
+        "trial": 21,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 21,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/8077486.thl.jpg",
+            "name": "8077486.thl.jpg",
+            "role": "B",
+            "chain_index": 21
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/leek.jpg",
+            "name": "leek.jpg",
+            "role": "A",
+            "chain_index": 21
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ADENSYRIN.jpg",
+            "name": "ADENSYRIN.jpg",
+            "role": "C",
+            "chain_index": 21
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Ablouse2.jpg",
+            "name": "Ablouse2.jpg",
+            "role": "C",
+            "chain_index": 9
+          }
+        }
+      },
+      {
+        "trial": 22,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2.",
+        "metadata": {
+          "chain_index": 22,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Abuilding5.jpg",
+            "name": "Abuilding5.jpg",
+            "role": "B",
+            "chain_index": 22
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ABELL7.jpg",
+            "name": "ABELL7.jpg",
+            "role": "A",
+            "chain_index": 22
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ringbox03.jpg",
+            "name": "ringbox03.jpg",
+            "role": "C",
+            "chain_index": 22
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Aclamp42.jpg",
+            "name": "Aclamp42.jpg",
+            "role": "C",
+            "chain_index": 44
+          }
+        }
+      },
+      {
+        "trial": 23,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 1.",
+        "metadata": {
+          "chain_index": 23,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Adriedleaf.jpg",
+            "name": "Adriedleaf.jpg",
+            "role": "B",
+            "chain_index": 23
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/tofu.jpg",
+            "name": "tofu.jpg",
+            "role": "A",
+            "chain_index": 23
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ADANGEAR5.jpg",
+            "name": "ADANGEAR5.jpg",
+            "role": "C",
+            "chain_index": 23
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ADECOSPO4.jpg",
+            "name": "ADECOSPO4.jpg",
+            "role": "C",
+            "chain_index": 49
+          }
+        }
+      },
+      {
+        "trial": 24,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The second image (2) is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 24,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ADAQUIRI.jpg",
+            "name": "ADAQUIRI.jpg",
+            "role": "B",
+            "chain_index": 24
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ABAPITCHS.jpg",
+            "name": "ABAPITCHS.jpg",
+            "role": "A",
+            "chain_index": 24
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ACOOKOIL.jpg",
+            "name": "ACOOKOIL.jpg",
+            "role": "C",
+            "chain_index": 24
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Adustpanbrus4.jpg",
+            "name": "Adustpanbrus4.jpg",
+            "role": "C",
+            "chain_index": 10
+          }
+        }
+      },
+      {
+        "trial": 25,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 25,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ATAPEDIS7.jpg",
+            "name": "ATAPEDIS7.jpg",
+            "role": "B",
+            "chain_index": 25
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AKEYHOL10.jpg",
+            "name": "AKEYHOL10.jpg",
+            "role": "A",
+            "chain_index": 25
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Achampagnebo2.jpg",
+            "name": "Achampagnebo2.jpg",
+            "role": "C",
+            "chain_index": 25
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ABOOTCRA5.jpg",
+            "name": "ABOOTCRA5.jpg",
+            "role": "C",
+            "chain_index": 33
+          }
+        }
+      },
+      {
+        "trial": 26,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 1.",
+        "metadata": {
+          "chain_index": 26,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Afoodprocess4.jpg",
+            "name": "Afoodprocess4.jpg",
+            "role": "B",
+            "chain_index": 26
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AMOUSWHEE.jpg",
+            "name": "AMOUSWHEE.jpg",
+            "role": "A",
+            "chain_index": 26
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ATRACTWH6.jpg",
+            "name": "ATRACTWH6.jpg",
+            "role": "C",
+            "chain_index": 26
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26421382.thl.jpg",
+            "name": "26421382.thl.jpg",
+            "role": "C",
+            "chain_index": 7
+          }
+        }
+      },
+      {
+        "trial": 27,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The indirectly associated image with the cue image is the first one.",
+        "metadata": {
+          "chain_index": 27,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/chunkysoup.jpg",
+            "name": "chunkysoup.jpg",
+            "role": "B",
+            "chain_index": 27
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Amousepad.jpg",
+            "name": "Amousepad.jpg",
+            "role": "A",
+            "chain_index": 27
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AAMMO4.jpg",
+            "name": "AAMMO4.jpg",
+            "role": "C",
+            "chain_index": 27
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Adiamondring3.jpg",
+            "name": "Adiamondring3.jpg",
+            "role": "C",
+            "chain_index": 35
+          }
+        }
+      },
+      {
+        "trial": 28,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2.",
+        "metadata": {
+          "chain_index": 28,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Aonewaysign2.jpg",
+            "name": "Aonewaysign2.jpg",
+            "role": "B",
+            "chain_index": 28
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/8253370.thl.jpg",
+            "name": "8253370.thl.jpg",
+            "role": "A",
+            "chain_index": 28
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Astaplegun3.jpg",
+            "name": "Astaplegun3.jpg",
+            "role": "C",
+            "chain_index": 28
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AAMMO4.jpg",
+            "name": "AAMMO4.jpg",
+            "role": "C",
+            "chain_index": 27
+          }
+        }
+      },
+      {
+        "trial": 29,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1 (the paint can).",
+        "metadata": {
+          "chain_index": 29,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Amilk4.jpg",
+            "name": "Amilk4.jpg",
+            "role": "B",
+            "chain_index": 29
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AWASHMAC5.jpg",
+            "name": "AWASHMAC5.jpg",
+            "role": "A",
+            "chain_index": 29
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/23065398.thl.jpg",
+            "name": "23065398.thl.jpg",
+            "role": "C",
+            "chain_index": 29
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Apeddleboat3.jpg",
+            "name": "Apeddleboat3.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 30,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The second image is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 30,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26434233.thl.jpg",
+            "name": "26434233.thl.jpg",
+            "role": "B",
+            "chain_index": 30
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/8024092.thl.jpg",
+            "name": "8024092.thl.jpg",
+            "role": "A",
+            "chain_index": 30
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AELECSAW.jpg",
+            "name": "AELECSAW.jpg",
+            "role": "C",
+            "chain_index": 30
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ABLAKPOT3.jpg",
+            "name": "ABLAKPOT3.jpg",
+            "role": "C",
+            "chain_index": 38
+          }
+        }
+      },
+      {
+        "trial": 31,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 31,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Atoypersonwi2.jpg",
+            "name": "Atoypersonwi2.jpg",
+            "role": "B",
+            "chain_index": 31
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AMAPLESYR.jpg",
+            "name": "AMAPLESYR.jpg",
+            "role": "A",
+            "chain_index": 31
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/shield.jpg",
+            "name": "shield.jpg",
+            "role": "C",
+            "chain_index": 31
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/03015528000.jpg",
+            "name": "03015528000.jpg",
+            "role": "C",
+            "chain_index": 32
+          }
+        }
+      },
+      {
+        "trial": 32,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2.",
+        "metadata": {
+          "chain_index": 32,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/fireking-file-cabinet.jpg",
+            "name": "fireking-file-cabinet.jpg",
+            "role": "B",
+            "chain_index": 32
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Aheartmonito4.jpg",
+            "name": "Aheartmonito4.jpg",
+            "role": "A",
+            "chain_index": 32
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/03015528000.jpg",
+            "name": "03015528000.jpg",
+            "role": "C",
+            "chain_index": 32
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ABOOTCRA5.jpg",
+            "name": "ABOOTCRA5.jpg",
+            "role": "C",
+            "chain_index": 33
+          }
+        }
+      },
+      {
+        "trial": 33,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is the first one.",
+        "metadata": {
+          "chain_index": 33,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AJUG3.jpg",
+            "name": "AJUG3.jpg",
+            "role": "B",
+            "chain_index": 33
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Abicycleglove.jpg",
+            "name": "Abicycleglove.jpg",
+            "role": "A",
+            "chain_index": 33
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ABOOTCRA5.jpg",
+            "name": "ABOOTCRA5.jpg",
+            "role": "C",
+            "chain_index": 33
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26432175.thl.jpg",
+            "name": "26432175.thl.jpg",
+            "role": "C",
+            "chain_index": 5
+          }
+        }
+      },
+      {
+        "trial": 34,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is the first one: the dried apricots.",
+        "metadata": {
+          "chain_index": 34,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ronald.jpg",
+            "name": "ronald.jpg",
+            "role": "B",
+            "chain_index": 34
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/A_chocolate.jpg",
+            "name": "A_chocolate.jpg",
+            "role": "A",
+            "chain_index": 34
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/dftslturapr.jpg",
+            "name": "dftslturapr.jpg",
+            "role": "C",
+            "chain_index": 34
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ABOOTCRA5.jpg",
+            "name": "ABOOTCRA5.jpg",
+            "role": "C",
+            "chain_index": 33
+          }
+        }
+      },
+      {
+        "trial": 35,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 1.",
+        "metadata": {
+          "chain_index": 35,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Acactusplant.jpg",
+            "name": "Acactusplant.jpg",
+            "role": "B",
+            "chain_index": 35
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26374731.thl.jpg",
+            "name": "26374731.thl.jpg",
+            "role": "A",
+            "chain_index": 35
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Adiamondring3.jpg",
+            "name": "Adiamondring3.jpg",
+            "role": "C",
+            "chain_index": 35
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/shield.jpg",
+            "name": "shield.jpg",
+            "role": "C",
+            "chain_index": 31
+          }
+        }
+      },
+      {
+        "trial": 36,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 36,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/hockeypuck.jpg",
+            "name": "hockeypuck.jpg",
+            "role": "B",
+            "chain_index": 36
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AMEASDEVI.jpg",
+            "name": "AMEASDEVI.jpg",
+            "role": "A",
+            "chain_index": 36
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Ametalstool2.jpg",
+            "name": "Ametalstool2.jpg",
+            "role": "C",
+            "chain_index": 36
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AHOUSBOA3.jpg",
+            "name": "AHOUSBOA3.jpg",
+            "role": "C",
+            "chain_index": 47
+          }
+        }
+      },
+      {
+        "trial": 37,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is the first one (1).",
+        "metadata": {
+          "chain_index": 37,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/8026164.thl.jpg",
+            "name": "8026164.thl.jpg",
+            "role": "B",
+            "chain_index": 37
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/8245207.thl.jpg",
+            "name": "8245207.thl.jpg",
+            "role": "A",
+            "chain_index": 37
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/8252065.thl.jpg",
+            "name": "8252065.thl.jpg",
+            "role": "C",
+            "chain_index": 37
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Aspoon14.jpg",
+            "name": "Aspoon14.jpg",
+            "role": "C",
+            "chain_index": 19
+          }
+        }
+      },
+      {
+        "trial": 38,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image (chokecherry jelly) is image 1.",
+        "metadata": {
+          "chain_index": 38,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ABALLBEAR.jpg",
+            "name": "ABALLBEAR.jpg",
+            "role": "B",
+            "chain_index": 38
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/checkejellyjar.jpg",
+            "name": "checkejellyjar.jpg",
+            "role": "A",
+            "chain_index": 38
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ABLAKPOT3.jpg",
+            "name": "ABLAKPOT3.jpg",
+            "role": "C",
+            "chain_index": 38
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ADANGEAR5.jpg",
+            "name": "ADANGEAR5.jpg",
+            "role": "C",
+            "chain_index": 23
+          }
+        }
+      },
+      {
+        "trial": 39,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The second image (toy car) is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 39,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26460317.thl.jpg",
+            "name": "26460317.thl.jpg",
+            "role": "B",
+            "chain_index": 39
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/22849260.thl.jpg",
+            "name": "22849260.thl.jpg",
+            "role": "A",
+            "chain_index": 39
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Atoy17.jpg",
+            "name": "Atoy17.jpg",
+            "role": "C",
+            "chain_index": 39
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Adiamondring3.jpg",
+            "name": "Adiamondring3.jpg",
+            "role": "C",
+            "chain_index": 35
+          }
+        }
+      },
+      {
+        "trial": 40,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 1.",
+        "metadata": {
+          "chain_index": 40,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Aclimbersicep.jpg",
+            "name": "Aclimbersicep.jpg",
+            "role": "B",
+            "chain_index": 40
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AWINDSU21.jpg",
+            "name": "AWINDSU21.jpg",
+            "role": "A",
+            "chain_index": 40
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Agluegun.jpg",
+            "name": "Agluegun.jpg",
+            "role": "C",
+            "chain_index": 40
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26432175.thl.jpg",
+            "name": "26432175.thl.jpg",
+            "role": "C",
+            "chain_index": 5
+          }
+        }
+      },
+      {
+        "trial": 41,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2.",
+        "metadata": {
+          "chain_index": 41,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Aglass58.jpg",
+            "name": "Aglass58.jpg",
+            "role": "B",
+            "chain_index": 41
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ALARGECA2.jpg",
+            "name": "ALARGECA2.jpg",
+            "role": "A",
+            "chain_index": 41
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Astamp23.jpg",
+            "name": "Astamp23.jpg",
+            "role": "C",
+            "chain_index": 41
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ALAMP.jpg",
+            "name": "ALAMP.jpg",
+            "role": "C",
+            "chain_index": 17
+          }
+        }
+      },
+      {
+        "trial": 42,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 42,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Ajar33.jpg",
+            "name": "Ajar33.jpg",
+            "role": "B",
+            "chain_index": 42
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26388148.thl.jpg",
+            "name": "26388148.thl.jpg",
+            "role": "A",
+            "chain_index": 42
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/darkwador.jpg",
+            "name": "darkwador.jpg",
+            "role": "C",
+            "chain_index": 42
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Ametalstool2.jpg",
+            "name": "Ametalstool2.jpg",
+            "role": "C",
+            "chain_index": 36
+          }
+        }
+      },
+      {
+        "trial": 43,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2.",
+        "metadata": {
+          "chain_index": 43,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AWALLEYE2.jpg",
+            "name": "AWALLEYE2.jpg",
+            "role": "B",
+            "chain_index": 43
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ARASPBER2.jpg",
+            "name": "ARASPBER2.jpg",
+            "role": "A",
+            "chain_index": 43
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Abrassbu2.jpg",
+            "name": "Abrassbu2.jpg",
+            "role": "C",
+            "chain_index": 43
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/scrunchie.jpg",
+            "name": "scrunchie.jpg",
+            "role": "C",
+            "chain_index": 11
+          }
+        }
+      },
+      {
+        "trial": 44,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The C image indirectly associated with the cue image is image 1.",
+        "metadata": {
+          "chain_index": 44,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Aflashlight3.jpg",
+            "name": "Aflashlight3.jpg",
+            "role": "B",
+            "chain_index": 44
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Abellcookiec3.jpg",
+            "name": "Abellcookiec3.jpg",
+            "role": "A",
+            "chain_index": 44
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aclamp42.jpg",
+            "name": "Aclamp42.jpg",
+            "role": "C",
+            "chain_index": 44
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ACOOKOIL.jpg",
+            "name": "ACOOKOIL.jpg",
+            "role": "C",
+            "chain_index": 24
+          }
+        }
+      },
+      {
+        "trial": 45,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The indirectly associated image with the cue image is image 1 (the stack of containers).",
+        "metadata": {
+          "chain_index": 45,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Ahandba18.jpg",
+            "name": "Ahandba18.jpg",
+            "role": "B",
+            "chain_index": 45
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AALIEN.jpg",
+            "name": "AALIEN.jpg",
+            "role": "A",
+            "chain_index": 45
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/batslbir.jpg",
+            "name": "batslbir.jpg",
+            "role": "C",
+            "chain_index": 45
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AAMMO4.jpg",
+            "name": "AAMMO4.jpg",
+            "role": "C",
+            "chain_index": 27
+          }
+        }
+      },
+      {
+        "trial": 46,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is the second one (the beaker).",
+        "metadata": {
+          "chain_index": 46,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Abicycleodome.jpg",
+            "name": "Abicycleodome.jpg",
+            "role": "B",
+            "chain_index": 46
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26370681.thl.jpg",
+            "name": "26370681.thl.jpg",
+            "role": "A",
+            "chain_index": 46
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/23024623.thl.jpg",
+            "name": "23024623.thl.jpg",
+            "role": "C",
+            "chain_index": 46
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ADANGEAR5.jpg",
+            "name": "ADANGEAR5.jpg",
+            "role": "C",
+            "chain_index": 23
+          }
+        }
+      },
+      {
+        "trial": 47,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 2.",
+        "metadata": {
+          "chain_index": 47,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ATOOHOLDE.jpg",
+            "name": "ATOOHOLDE.jpg",
+            "role": "B",
+            "chain_index": 47
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Awoodenhamme8.jpg",
+            "name": "Awoodenhamme8.jpg",
+            "role": "A",
+            "chain_index": 47
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AHOUSBOA3.jpg",
+            "name": "AHOUSBOA3.jpg",
+            "role": "C",
+            "chain_index": 47
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Atoy17.jpg",
+            "name": "Atoy17.jpg",
+            "role": "C",
+            "chain_index": 39
+          }
+        }
+      },
+      {
+        "trial": 48,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is 1.",
+        "metadata": {
+          "chain_index": 48,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ACAFLATT3.jpg",
+            "name": "ACAFLATT3.jpg",
+            "role": "B",
+            "chain_index": 48
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/gymbars.jpg",
+            "name": "gymbars.jpg",
+            "role": "A",
+            "chain_index": 48
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Acanoe19.jpg",
+            "name": "Acanoe19.jpg",
+            "role": "C",
+            "chain_index": 48
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/excedrin.jpg",
+            "name": "excedrin.jpg",
+            "role": "C",
+            "chain_index": 0
+          }
+        }
+      },
+      {
+        "trial": 49,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is the second one (the spoon).",
+        "metadata": {
+          "chain_index": 49,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/8057434.thl.jpg",
+            "name": "8057434.thl.jpg",
+            "role": "B",
+            "chain_index": 49
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/22869912.thl.jpg",
+            "name": "22869912.thl.jpg",
+            "role": "A",
+            "chain_index": 49
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ADECOSPO4.jpg",
+            "name": "ADECOSPO4.jpg",
+            "role": "C",
+            "chain_index": 49
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/darkwador.jpg",
+            "name": "darkwador.jpg",
+            "role": "C",
+            "chain_index": 42
+          }
+        }
+      }
+    ],
+    "accuracy": 0.92,
+    "n_correct": 46,
+    "total": 50
+  }
+}

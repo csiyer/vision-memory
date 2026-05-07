@@ -1,0 +1,44 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260428_141851",
+    "dataset": "Brady2008",
+    "n_images": 2,
+    "n_trials": 1,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.0
+      }
+    },
+    "max_context_images": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The first image in the study sequence was Image 1: the metal grinder.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      }
+    ],
+    "accuracy": 0.0,
+    "n_correct": 0,
+    "total": 1,
+    "accuracy_by_distance": {
+      "0": 0.0
+    }
+  }
+}

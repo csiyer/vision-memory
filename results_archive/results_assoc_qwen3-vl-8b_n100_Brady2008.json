@@ -1,0 +1,3427 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260429_003508",
+    "dataset": "Brady2008",
+    "n_images": 100,
+    "n_trials": 100,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.3,
+        "n_correct": 30,
+        "total": 100
+      }
+    },
+    "max_context_pairs": null
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Astonehome.jpg",
+            "name": "Astonehome.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Aasianbuildin.jpg",
+            "name": "Aasianbuildin.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/8244991.thl.jpg",
+            "name": "8244991.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AACORN2.jpg",
+            "name": "AACORN2.jpg",
+            "role": "C",
+            "chain_index": 37
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ACOPPAN10.jpg",
+            "name": "ACOPPAN10.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Aboxofnotepa4.jpg",
+            "name": "Aboxofnotepa4.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AHOSPBED.jpg",
+            "name": "AHOSPBED.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Agnu.jpg",
+            "name": "Agnu.jpg",
+            "role": "C",
+            "chain_index": 40
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AAFRICI10.jpg",
+            "name": "AAFRICI10.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AWEDCOU19.jpg",
+            "name": "AWEDCOU19.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aruler12.jpg",
+            "name": "Aruler12.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ASEWINGT4.jpg",
+            "name": "ASEWINGT4.jpg",
+            "role": "C",
+            "chain_index": 39
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The cue image is a doorknob. The two options are a pair of boots and a plastic organizer.\n\nThere is no direct or indirect association between a doorknob and either the boots or the organizer.\n\nHowever, the task requires choosing one. The organizer (image 2) is a container, and a doorknob is a type of handle or latch used to open a door. Both are objects that can be found in a home, and both serve a functional purpose. The boots (",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ACOLFILT5.jpg",
+            "name": "ACOLFILT5.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ADOORHAN8.jpg",
+            "name": "ADOORHAN8.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Apairofrubbe3.jpg",
+            "name": "Apairofrubbe3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/8058011.thl.jpg",
+            "name": "8058011.thl.jpg",
+            "role": "C",
+            "chain_index": 36
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two images is directly associated with the toaster oven. However, the question asks for an *indirect* association.\n\nThe toaster oven is an appliance used for cooking or heating food. The image of the fawn (a young deer) is not related to cooking. The pearl necklace is also not related.\n\nTherefore, neither image has a meaningful indirect association with the toaster oven.\n\nThe correct answer is: Neither.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AHOSPWAS2.jpg",
+            "name": "AHOSPWAS2.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ATOASTOV2.jpg",
+            "name": "ATOASTOV2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Adeer16.jpg",
+            "name": "Adeer16.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ACUPEANE2.jpg",
+            "name": "ACUPEANE2.jpg",
+            "role": "C",
+            "chain_index": 10
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two images is directly associated with the pressure gauge. However, the question asks for an *indirect* association.\n\nThe pressure gauge measures pressure, which is a physical force. The first option, the statue of an Egyptian pharaoh, is a work of art and has no direct or indirect connection to pressure measurement.\n\nThe second option, the plastic organizer, is a storage container. While it doesn't relate to pressure, it is a man-made object, like the gauge. The gauge",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ACOFFTA18.jpg",
+            "name": "ACOFFTA18.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/8024092.thl.jpg",
+            "name": "8024092.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/8058011.thl.jpg",
+            "name": "8058011.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Aegyptianst20.jpg",
+            "name": "Aegyptianst20.jpg",
+            "role": "C",
+            "chain_index": 9
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/22826748.thl.jpg",
+            "name": "22826748.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/36407726.thl.jpg",
+            "name": "36407726.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ACAMPFIRE.jpg",
+            "name": "ACAMPFIRE.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Abells7.jpg",
+            "name": "Abells7.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Atable132.jpg",
+            "name": "Atable132.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Agarbagebag.jpg",
+            "name": "Agarbagebag.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aplasticbot10.jpg",
+            "name": "Aplasticbot10.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AGLASSTAB.jpg",
+            "name": "AGLASSTAB.jpg",
+            "role": "C",
+            "chain_index": 6
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ABOWLCARV.jpg",
+            "name": "ABOWLCARV.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AARROWS2.jpg",
+            "name": "AARROWS2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ASCREEN3.jpg",
+            "name": "ASCREEN3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/APOKCHIP4.jpg",
+            "name": "APOKCHIP4.jpg",
+            "role": "C",
+            "chain_index": 43
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a kangaroo with a joey in its pouch.\n\nThe two options are:\n1. A circuit board.\n2. A jar filled with money.\n\nNeither of these images has a direct or obvious connection to a kangaroo. However, the question asks for an *indirect* association.\n\nThe most plausible indirect association is with the jar of money. Kangaroos are native to Australia, and Australia is known for its currency, the Australian dollar. The jar of money,",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/pencil-a.jpg",
+            "name": "pencil-a.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Akangarooandb.jpg",
+            "name": "Akangarooandb.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Achipboard.jpg",
+            "name": "Achipboard.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26434250.thl.jpg",
+            "name": "26434250.thl.jpg",
+            "role": "C",
+            "chain_index": 20
+          }
+        }
+      },
+      {
+        "trial": 10,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Aflower136.jpg",
+            "name": "Aflower136.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/34936916.thl.jpg",
+            "name": "34936916.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Abells3.jpg",
+            "name": "Abells3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/22949719.thl.jpg",
+            "name": "22949719.thl.jpg",
+            "role": "C",
+            "chain_index": 45
+          }
+        }
+      },
+      {
+        "trial": 11,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two images is directly associated with the tiara. However, the question asks for an *indirect* association.\n\nThe tiara is a piece of royal or formal headwear. The second image, the crowbar, is a tool often associated with breaking open or prying things, which is not related to royalty.\n\nThe first image, the traffic sign post, is a piece of infrastructure. While not directly related to a tiara, it is a common object found in public spaces",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Apostalscale2.jpg",
+            "name": "Apostalscale2.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/headcomb1.jpg",
+            "name": "headcomb1.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26424443.thl.jpg",
+            "name": "26424443.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26429097.thl.jpg",
+            "name": "26429097.thl.jpg",
+            "role": "C",
+            "chain_index": 20
+          }
+        }
+      },
+      {
+        "trial": 12,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Atray22.jpg",
+            "name": "Atray22.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Aasianbuildin.jpg",
+            "name": "Aasianbuildin.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/22851864.thl.jpg",
+            "name": "22851864.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/03015528000.jpg",
+            "name": "03015528000.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 13,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a vintage radio.\n\nThe two options are:\n1. A Darth Vader helmet.\n2. An old-fashioned cash register.\n\nThe cash register (image 2) is the correct choice.\n\n**Reasoning:**\nThe vintage radio (cue image) and the old cash register (image 2) are both examples of vintage technology or appliances from a past era. The Darth Vader helmet (image 1) is a piece of science fiction costume and does not share this historical or technological",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26369923.thl.jpg",
+            "name": "26369923.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26428753.thl.jpg",
+            "name": "26428753.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26423905.thl.jpg",
+            "name": "26423905.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/darkwador.jpg",
+            "name": "darkwador.jpg",
+            "role": "C",
+            "chain_index": 30
+          }
+        }
+      },
+      {
+        "trial": 14,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26419324.thl.jpg",
+            "name": "26419324.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Amonitor10.jpg",
+            "name": "Amonitor10.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/buffalowings.jpg",
+            "name": "buffalowings.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AFISHHOO9.jpg",
+            "name": "AFISHHOO9.jpg",
+            "role": "C",
+            "chain_index": 20
+          }
+        }
+      },
+      {
+        "trial": 15,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26432217.thl.jpg",
+            "name": "26432217.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Apowerbar7.jpg",
+            "name": "Apowerbar7.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Agreencup2.jpg",
+            "name": "Agreencup2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26687325.thl.jpg",
+            "name": "26687325.thl.jpg",
+            "role": "C",
+            "chain_index": 25
+          }
+        }
+      },
+      {
+        "trial": 16,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a hand truck, which is a type of dolly used for moving heavy objects.\n\nThe two options are:\n1. A dining table with chairs.\n2. A percussion instrument (a type of maraca or shaker) with a stick.\n\nNeither of these items is directly related to a hand truck. However, the question asks for an *indirect* association.\n\nThe percussion instrument (option 2) is the more plausible choice for an indirect association. While a hand",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ACHINDECP.jpg",
+            "name": "ACHINDECP.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26420069.thl.jpg",
+            "name": "26420069.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aconferencer3.jpg",
+            "name": "Aconferencer3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AGUIRO.jpg",
+            "name": "AGUIRO.jpg",
+            "role": "C",
+            "chain_index": 37
+          }
+        }
+      },
+      {
+        "trial": 17,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26420830.thl.jpg",
+            "name": "26420830.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ABLUBLOTT.jpg",
+            "name": "ABLUBLOTT.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aheadlightan2.jpg",
+            "name": "Aheadlightan2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AOPGLASS.jpg",
+            "name": "AOPGLASS.jpg",
+            "role": "C",
+            "chain_index": 36
+          }
+        }
+      },
+      {
+        "trial": 18,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a wooden mallet, likely used for a specific task like a mallet for a game or a tool.\n\nLet's examine the two options:\n\n1.  **Image 1 (Air Filter):** This is a circular air filter, typically used in engines or HVAC systems. It has a mesh-like structure. There is no direct or indirect connection between a wooden mallet and an air filter.\n\n2.  **Image 2 (Hamster Wheel):** This is a",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26427111.thl.jpg",
+            "name": "26427111.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Arubberstampa.jpg",
+            "name": "Arubberstampa.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AMOUSWHEE.jpg",
+            "name": "AMOUSWHEE.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26437074.thl.jpg",
+            "name": "26437074.thl.jpg",
+            "role": "C",
+            "chain_index": 27
+          }
+        }
+      },
+      {
+        "trial": 19,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a simple blue circle.\n\nLooking at the two options:\n- Image 1 is an igloo, which is a dome-shaped structure. The shape of an igloo is circular or semi-circular, which is a direct geometric shape related to a circle.\n- Image 2 is a decorative metal bowl, which has a more complex, non-circular shape.\n\nTherefore, the igloo (Image 1) is indirectly associated with the cue image because its fundamental shape is circular.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AAFRICI10.jpg",
+            "name": "AAFRICI10.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Ahulahoop2.jpg",
+            "name": "Ahulahoop2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/silver-bowl-small.jpg",
+            "name": "silver-bowl-small.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/igloo.jpg",
+            "name": "igloo.jpg",
+            "role": "C",
+            "chain_index": 10
+          }
+        }
+      },
+      {
+        "trial": 20,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Ashark7.jpg",
+            "name": "Ashark7.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AMANJUI2.jpg",
+            "name": "AMANJUI2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aeagle.jpg",
+            "name": "Aeagle.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Apig5.jpg",
+            "name": "Apig5.jpg",
+            "role": "C",
+            "chain_index": 5
+          }
+        }
+      },
+      {
+        "trial": 21,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/zip-a.jpg",
+            "name": "zip-a.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26424973.thl.jpg",
+            "name": "26424973.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Atoyslide.jpg",
+            "name": "Atoyslide.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AORIGIRL3.jpg",
+            "name": "AORIGIRL3.jpg",
+            "role": "C",
+            "chain_index": 42
+          }
+        }
+      },
+      {
+        "trial": 22,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two images is directly associated with the saxophone.\n\nHowever, the question asks for an *indirect* association. The saxophone is a musical instrument. The iguana is a reptile, and the jug is a container. Neither has a direct or even remotely indirect connection to music or the saxophone.\n\nTherefore, neither image (1 or 2) is indirectly associated with the cue image.\n\nThe correct answer is: Neither.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Abeverage11.jpg",
+            "name": "Abeverage11.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Asaxophone.jpg",
+            "name": "Asaxophone.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aplasticbott3.jpg",
+            "name": "Aplasticbott3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/iguana.jpg",
+            "name": "iguana.jpg",
+            "role": "C",
+            "chain_index": 32
+          }
+        }
+      },
+      {
+        "trial": 23,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/makeuppowder.jpg",
+            "name": "makeuppowder.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Ablackma3.jpg",
+            "name": "Ablackma3.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AAIRPUMP2.jpg",
+            "name": "AAIRPUMP2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26374605.thl.jpg",
+            "name": "26374605.thl.jpg",
+            "role": "C",
+            "chain_index": 34
+          }
+        }
+      },
+      {
+        "trial": 24,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a birthday cake with a candle shaped like the number 2, which directly represents the number two.\n\nNow, let's examine the two options:\n\n- **Image 1:** This is a green wheeled trash can. There is no direct or indirect association with the number two.\n- **Image 2:** This is a fruit bowl. The number two is not directly represented here.\n\nHowever, the question asks for an *indirect* association. The number two is often associated",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/APOTPBAG2.jpg",
+            "name": "APOTPBAG2.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/A3bday5.jpg",
+            "name": "A3bday5.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Afruitbasket2.jpg",
+            "name": "Afruitbasket2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AGARBIN.jpg",
+            "name": "AGARBIN.jpg",
+            "role": "C",
+            "chain_index": 19
+          }
+        }
+      },
+      {
+        "trial": 25,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26374713.thl.jpg",
+            "name": "26374713.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Afitting3.jpg",
+            "name": "Afitting3.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/8079958.thl.jpg",
+            "name": "8079958.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/8258244.thl.jpg",
+            "name": "8258244.thl.jpg",
+            "role": "C",
+            "chain_index": 10
+          }
+        }
+      },
+      {
+        "trial": 26,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26386846.thl.jpg",
+            "name": "26386846.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Adiamondring3.jpg",
+            "name": "Adiamondring3.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/handcomputerN.JPG",
+            "name": "handcomputerN.JPG",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Acementfinish.jpg",
+            "name": "Acementfinish.jpg",
+            "role": "C",
+            "chain_index": 48
+          }
+        }
+      },
+      {
+        "trial": 27,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/10049193.thl.jpg",
+            "name": "10049193.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/rollerblades.jpg",
+            "name": "rollerblades.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/dustpan02.jpg",
+            "name": "dustpan02.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Aornamentalt5.jpg",
+            "name": "Aornamentalt5.jpg",
+            "role": "C",
+            "chain_index": 20
+          }
+        }
+      },
+      {
+        "trial": 28,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Abulbprotect2.jpg",
+            "name": "Abulbprotect2.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/airhocckytable.jpg",
+            "name": "airhocckytable.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aplasticbot10.jpg",
+            "name": "Aplasticbot10.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26443034.thl.jpg",
+            "name": "26443034.thl.jpg",
+            "role": "C",
+            "chain_index": 24
+          }
+        }
+      },
+      {
+        "trial": 29,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Aelectronicor.jpg",
+            "name": "Aelectronicor.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/mouse-a.jpg",
+            "name": "mouse-a.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aflower136.jpg",
+            "name": "Aflower136.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/D_podium.jpg",
+            "name": "D_podium.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 30,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ABEDROOM8.jpg",
+            "name": "ABEDROOM8.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Afirealarm2.jpg",
+            "name": "Afirealarm2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Adaisies3.jpg",
+            "name": "Adaisies3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/23007415.thl.jpg",
+            "name": "23007415.thl.jpg",
+            "role": "C",
+            "chain_index": 20
+          }
+        }
+      },
+      {
+        "trial": 31,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a set of children's plastic kitchen toys, including a spatula, tongs, and a spoon.\n\nThe first option is a large industrial machine, likely a climate-controlled chamber or a similar piece of equipment. This is not related to the theme of children's play.\n\nThe second option is a yellow kitchen timer. This is directly related to the theme of cooking and kitchen activities, which is the context of the toy set in the cue image.\n\nTherefore, the image indirectly associated with",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ASHOULDE4.jpg",
+            "name": "ASHOULDE4.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Akitchentool2.jpg",
+            "name": "Akitchentool2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aindustrialve.jpg",
+            "name": "Aindustrialve.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Akitchentimer.jpg",
+            "name": "Akitchentimer.jpg",
+            "role": "C",
+            "chain_index": 26
+          }
+        }
+      },
+      {
+        "trial": 32,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Apackage3.jpg",
+            "name": "Apackage3.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/catslglol.jpg",
+            "name": "catslglol.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/donaldduck.jpg",
+            "name": "donaldduck.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/8078142.thl.jpg",
+            "name": "8078142.thl.jpg",
+            "role": "C",
+            "chain_index": 28
+          }
+        }
+      },
+      {
+        "trial": 33,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a long, thin stick with a rounded end, which is a cue stick used for playing pool or billiards.\n\nThe two options are:\n1. A Dracula mask.\n2. A hockey puck.\n\nNeither of these items is directly related to a cue stick. However, the question asks for an *indirect* association.\n\n- A hockey puck is used in hockey, a sport played on ice.\n- A cue stick is used in pool, a game played on a table",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ASCREW7.jpg",
+            "name": "ASCREW7.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/22910936.thl.jpg",
+            "name": "22910936.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Adracmask.jpg",
+            "name": "Adracmask.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/hockeypuck.jpg",
+            "name": "hockeypuck.jpg",
+            "role": "C",
+            "chain_index": 11
+          }
+        }
+      },
+      {
+        "trial": 34,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AIVORSUIT.jpg",
+            "name": "AIVORSUIT.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26373407.thl.jpg",
+            "name": "26373407.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aplum11.jpg",
+            "name": "Aplum11.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Abroom23.jpg",
+            "name": "Abroom23.jpg",
+            "role": "C",
+            "chain_index": 17
+          }
+        }
+      },
+      {
+        "trial": 35,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a decorative bowl with a grapevine motif.\n\nThe two options are:\n1. A decorative plate with a Christmas theme featuring a horn and holly.\n2. A wooden gavel.\n\nThe gavel is the object most directly associated with the bowl's decorative motif. The bowl's base is intricately designed with a grapevine and grapes. A gavel is a tool used in auctions, and auctioneers often use a gavel to signal the end of an auction. The",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ABLACKB14.jpg",
+            "name": "ABLACKB14.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AGLASSBO7.jpg",
+            "name": "AGLASSBO7.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Awoodenhamme8.jpg",
+            "name": "Awoodenhamme8.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/8029214.thl.jpg",
+            "name": "8029214.thl.jpg",
+            "role": "C",
+            "chain_index": 33
+          }
+        }
+      },
+      {
+        "trial": 36,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/22920212.thl.jpg",
+            "name": "22920212.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ringbox03.jpg",
+            "name": "ringbox03.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ACANDEXT.jpg",
+            "name": "ACANDEXT.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AFOODTAB2.jpg",
+            "name": "AFOODTAB2.jpg",
+            "role": "C",
+            "chain_index": 31
+          }
+        }
+      },
+      {
+        "trial": 37,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/hurdle.jpg",
+            "name": "hurdle.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Acase2.jpg",
+            "name": "Acase2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Abells3.jpg",
+            "name": "Abells3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/8059226.thl.jpg",
+            "name": "8059226.thl.jpg",
+            "role": "C",
+            "chain_index": 29
+          }
+        }
+      },
+      {
+        "trial": 38,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a black dustpan.\n\nLooking at the two options:\n- Image 1 shows a yellow bowl filled with colorful crayons.\n- Image 2 shows a SpongeBob SquarePants plush toy.\n\nThe connection is indirect. The dustpan is a tool for cleaning up debris. The crayons, being art supplies, are not typically associated with cleaning. However, the SpongeBob plush toy is yellow, which is the same color as the bowl of crayons. This is a very",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Agardeningpai.jpg",
+            "name": "Agardeningpai.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/dustpan02.jpg",
+            "name": "dustpan02.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/spongtoy.jpg",
+            "name": "spongtoy.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Acrayonsinabo.jpg",
+            "name": "Acrayonsinabo.jpg",
+            "role": "C",
+            "chain_index": 7
+          }
+        }
+      },
+      {
+        "trial": 39,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Aplastichousi.jpg",
+            "name": "Aplastichousi.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Acane116.jpg",
+            "name": "Acane116.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/8054039.thl.jpg",
+            "name": "8054039.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/APICNICBL.jpg",
+            "name": "APICNICBL.jpg",
+            "role": "C",
+            "chain_index": 41
+          }
+        }
+      },
+      {
+        "trial": 40,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ACONBENCH.jpg",
+            "name": "ACONBENCH.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26422598.thl.jpg",
+            "name": "26422598.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/23051010.thl.jpg",
+            "name": "23051010.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/A95CHEROK.jpg",
+            "name": "A95CHEROK.jpg",
+            "role": "C",
+            "chain_index": 22
+          }
+        }
+      },
+      {
+        "trial": 41,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Amousepad.jpg",
+            "name": "Amousepad.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ACROWNPEN.jpg",
+            "name": "ACROWNPEN.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AKETTLE35.jpg",
+            "name": "AKETTLE35.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Ajetski15.jpg",
+            "name": "Ajetski15.jpg",
+            "role": "C",
+            "chain_index": 43
+          }
+        }
+      },
+      {
+        "trial": 42,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Aelasticbands.jpg",
+            "name": "Aelasticbands.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Aframe196.jpg",
+            "name": "Aframe196.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ACOCONUT2.jpg",
+            "name": "ACOCONUT2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/8029703.thl.jpg",
+            "name": "8029703.thl.jpg",
+            "role": "C",
+            "chain_index": 27
+          }
+        }
+      },
+      {
+        "trial": 43,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Atoyswing.jpg",
+            "name": "Atoyswing.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Apineapple3.jpg",
+            "name": "Apineapple3.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aplastichousi.jpg",
+            "name": "Aplastichousi.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ABUSINEST.jpg",
+            "name": "ABUSINEST.jpg",
+            "role": "C",
+            "chain_index": 7
+          }
+        }
+      },
+      {
+        "trial": 44,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Aantiquesofa4.jpg",
+            "name": "Aantiquesofa4.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26455183.thl.jpg",
+            "name": "26455183.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Abucket51.jpg",
+            "name": "Abucket51.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ACANE2.jpg",
+            "name": "ACANE2.jpg",
+            "role": "C",
+            "chain_index": 40
+          }
+        }
+      },
+      {
+        "trial": 45,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ABABYSPOO.jpg",
+            "name": "ABABYSPOO.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/8256618.thl.jpg",
+            "name": "8256618.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/gondola.jpg",
+            "name": "gondola.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Abridge9.jpg",
+            "name": "Abridge9.jpg",
+            "role": "C",
+            "chain_index": 30
+          }
+        }
+      },
+      {
+        "trial": 46,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AAFRICI10.jpg",
+            "name": "AAFRICI10.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26374767.thl.jpg",
+            "name": "26374767.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26377133.thl.jpg",
+            "name": "26377133.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Akitchentimer.jpg",
+            "name": "Akitchentimer.jpg",
+            "role": "C",
+            "chain_index": 29
+          }
+        }
+      },
+      {
+        "trial": 47,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a fishing weight. The task is to find which of the two provided images is indirectly associated with it.\n\n- Image 1 is a faucet handle. While both are metal objects, there is no direct or indirect functional or conceptual link between a fishing weight and a faucet handle.\n- Image 2 is a pan flute. This is a musical instrument. A fishing weight is used for fishing, which is a recreational activity. A pan flute is used for music, which is also",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Apeanut3.jpg",
+            "name": "Apeanut3.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AWEIGHT7.jpg",
+            "name": "AWEIGHT7.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AHANDLE5.jpg",
+            "name": "AHANDLE5.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26425788.thl.jpg",
+            "name": "26425788.thl.jpg",
+            "role": "C",
+            "chain_index": 13
+          }
+        }
+      },
+      {
+        "trial": 48,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is indirectly associated with the cue image of the red and black clutch bag.\n\nThe first image is a citrus juicer, and the second is an ammonite fossil. Neither shares any thematic, functional, or visual connection with a clutch bag.\n\nTherefore, the correct answer is that neither image is associated, so there is no valid choice between 1 or 2.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/9821274.thl.jpg",
+            "name": "9821274.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Aleatherpenc9.jpg",
+            "name": "Aleatherpenc9.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Afoodprocess4.jpg",
+            "name": "Afoodprocess4.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Aammonitefo14.jpg",
+            "name": "Aammonitefo14.jpg",
+            "role": "C",
+            "chain_index": 42
+          }
+        }
+      },
+      {
+        "trial": 49,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AFLUTE6.jpg",
+            "name": "AFLUTE6.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AWISHWELL.jpg",
+            "name": "AWISHWELL.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Abuilding5.jpg",
+            "name": "Abuilding5.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/superman.jpg",
+            "name": "superman.jpg",
+            "role": "C",
+            "chain_index": 33
+          }
+        }
+      },
+      {
+        "trial": 50,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a sickle, a tool used for harvesting crops.\n\nLet's examine the two options:\n- Image 1: A prairie dog. This is an animal, not a tool or instrument.\n- Image 2: A snow shovel. This is a tool, but for clearing snow, not harvesting.\n\nNeither of these images is directly associated with the sickle. However, the question asks for an *indirect* association.\n\nThe sickle is a tool used in agriculture.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AAFRICIN2.jpg",
+            "name": "AAFRICIN2.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ASCYTHE7.jpg",
+            "name": "ASCYTHE7.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AICEAXE2.jpg",
+            "name": "AICEAXE2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Agroundhog.jpg",
+            "name": "Agroundhog.jpg",
+            "role": "C",
+            "chain_index": 8
+          }
+        }
+      },
+      {
+        "trial": 51,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Aelectronicor.jpg",
+            "name": "Aelectronicor.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26427609.thl.jpg",
+            "name": "26427609.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ABALLER29.jpg",
+            "name": "ABALLER29.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AROUNDFR3.jpg",
+            "name": "AROUNDFR3.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 52,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two images is directly associated with the clarinet (cue image). However, the task is to find the *indirect* association.\n\nThe clarinet is a musical instrument. The first option, a metal clip, has no direct or indirect connection to music. The second option, a plush tiger, is also unrelated.\n\nSince neither is associated, the question might be flawed. However, if I must choose one, I would say the tiger plush is more likely to be associated with a",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/22908308.thl.jpg",
+            "name": "22908308.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ACLARINE5.jpg",
+            "name": "ACLARINE5.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26685596.thl.jpg",
+            "name": "26685596.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/22827276.thl.jpg",
+            "name": "22827276.thl.jpg",
+            "role": "C",
+            "chain_index": 27
+          }
+        }
+      },
+      {
+        "trial": 53,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/8253370.thl.jpg",
+            "name": "8253370.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26387568.thl.jpg",
+            "name": "26387568.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/pdos043072.jpg",
+            "name": "pdos043072.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Apump4.jpg",
+            "name": "Apump4.jpg",
+            "role": "C",
+            "chain_index": 12
+          }
+        }
+      },
+      {
+        "trial": 54,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ACAMLENSE.jpg",
+            "name": "ACAMLENSE.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ABAMBCHAI.jpg",
+            "name": "ABAMBCHAI.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ATOOL9.jpg",
+            "name": "ATOOL9.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/grips.jpg",
+            "name": "grips.jpg",
+            "role": "C",
+            "chain_index": 22
+          }
+        }
+      },
+      {
+        "trial": 55,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Aashtray14.jpg",
+            "name": "Aashtray14.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/airbottle1.jpg",
+            "name": "airbottle1.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/APUMPCOOK.jpg",
+            "name": "APUMPCOOK.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/euthsda.jpg",
+            "name": "euthsda.jpg",
+            "role": "C",
+            "chain_index": 24
+          }
+        }
+      },
+      {
+        "trial": 56,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ABARREL3.jpg",
+            "name": "ABARREL3.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/22875816.thl.jpg",
+            "name": "22875816.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ATHERMO4.jpg",
+            "name": "ATHERMO4.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AGOLDCUP6.jpg",
+            "name": "AGOLDCUP6.jpg",
+            "role": "C",
+            "chain_index": 32
+          }
+        }
+      },
+      {
+        "trial": 57,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/brownie.jpg",
+            "name": "brownie.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ALEOPARD4.jpg",
+            "name": "ALEOPARD4.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ACOFFTRA2.jpg",
+            "name": "ACOFFTRA2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ASTEAMER4.jpg",
+            "name": "ASTEAMER4.jpg",
+            "role": "C",
+            "chain_index": 37
+          }
+        }
+      },
+      {
+        "trial": 58,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/vampire.jpg",
+            "name": "vampire.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Awastepaperb3.jpg",
+            "name": "Awastepaperb3.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/eutslfl.jpg",
+            "name": "eutslfl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ShoeHorn.jpg",
+            "name": "ShoeHorn.jpg",
+            "role": "C",
+            "chain_index": 23
+          }
+        }
+      },
+      {
+        "trial": 59,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26386846.thl.jpg",
+            "name": "26386846.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ACUTPIN.jpg",
+            "name": "ACUTPIN.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AFULVOUST.jpg",
+            "name": "AFULVOUST.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26427910.thl.jpg",
+            "name": "26427910.thl.jpg",
+            "role": "C",
+            "chain_index": 47
+          }
+        }
+      },
+      {
+        "trial": 60,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ACPU2.jpg",
+            "name": "ACPU2.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ball8.JPG",
+            "name": "ball8.JPG",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26423296.thl.jpg",
+            "name": "26423296.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Aantiquepock3.jpg",
+            "name": "Aantiquepock3.jpg",
+            "role": "C",
+            "chain_index": 44
+          }
+        }
+      },
+      {
+        "trial": 61,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Acartofgroce3.jpg",
+            "name": "Acartofgroce3.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Aspoolofthre6.jpg",
+            "name": "Aspoolofthre6.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AWATEHOSE.jpg",
+            "name": "AWATEHOSE.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Aantiquemailb.jpg",
+            "name": "Aantiquemailb.jpg",
+            "role": "C",
+            "chain_index": 10
+          }
+        }
+      },
+      {
+        "trial": 62,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows cleaning supplies, including a bottle of cleaner, gloves, a brush, and cloths.\n\nThe first option is a yellow and purple backpack, which is for carrying items, not for cleaning.\n\nThe second option is a bundle of yellow pasta (likely spaghetti or fettuccine).\n\nNeither the backpack nor the pasta is directly related to cleaning supplies.\n\nHowever, the question asks for an *indirect* association. The backpack is a container for personal items, which could include cleaning supplies",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ALITTERSC.jpg",
+            "name": "ALITTERSC.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Acleaningpro6.jpg",
+            "name": "Acleaningpro6.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AFETTUCI2.jpg",
+            "name": "AFETTUCI2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Abackpack11.jpg",
+            "name": "Abackpack11.jpg",
+            "role": "C",
+            "chain_index": 30
+          }
+        }
+      },
+      {
+        "trial": 63,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ATOOLS.jpg",
+            "name": "ATOOLS.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/22923440.thl.jpg",
+            "name": "22923440.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Abowlofpasta.jpg",
+            "name": "Abowlofpasta.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AAPPCOVE2.jpg",
+            "name": "AAPPCOVE2.jpg",
+            "role": "C",
+            "chain_index": 20
+          }
+        }
+      },
+      {
+        "trial": 64,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AMAGGLASS.jpg",
+            "name": "AMAGGLASS.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/DSCN1248-sm.jpg",
+            "name": "DSCN1248-sm.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/22869624.thl.jpg",
+            "name": "22869624.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AALTIRE2.jpg",
+            "name": "AALTIRE2.jpg",
+            "role": "C",
+            "chain_index": 48
+          }
+        }
+      },
+      {
+        "trial": 65,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/dftslpi.jpg",
+            "name": "dftslpi.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ADRUM12.jpg",
+            "name": "ADRUM12.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26374605.thl.jpg",
+            "name": "26374605.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Aspoon14.jpg",
+            "name": "Aspoon14.jpg",
+            "role": "C",
+            "chain_index": 8
+          }
+        }
+      },
+      {
+        "trial": 66,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a brown drawstring bag.\n\nThe two options are:\n1. A historical sword (specifically, a type of saber or scimitar).\n2. A decorative Native American-style teepee.\n\nNeither of these items is directly related to the drawstring bag. However, the question asks for an *indirect* association.\n\nThe drawstring bag is a type of pouch or sack. The sword is a weapon, and the teepee is a dwelling. The most indirect association is",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ADANGEAR5.jpg",
+            "name": "ADANGEAR5.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Abrownbagwith.jpg",
+            "name": "Abrownbagwith.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Asword138.jpg",
+            "name": "Asword138.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/teepee.jpg",
+            "name": "teepee.jpg",
+            "role": "C",
+            "chain_index": 18
+          }
+        }
+      },
+      {
+        "trial": 67,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26437080.thl.jpg",
+            "name": "26437080.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/potatomr.jpg",
+            "name": "potatomr.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Akiddcup2.jpg",
+            "name": "Akiddcup2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26387587.thl.jpg",
+            "name": "26387587.thl.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 68,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/APUTTER.jpg",
+            "name": "APUTTER.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ATOLLNEGS.jpg",
+            "name": "ATOLLNEGS.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ADEEPFRYS.jpg",
+            "name": "ADEEPFRYS.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Agarbagebag.jpg",
+            "name": "Agarbagebag.jpg",
+            "role": "C",
+            "chain_index": 22
+          }
+        }
+      },
+      {
+        "trial": 69,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Ababtoy13.jpg",
+            "name": "Ababtoy13.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AHEADLI18.jpg",
+            "name": "AHEADLI18.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aconnector2.jpg",
+            "name": "Aconnector2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/8026084.thl.jpg",
+            "name": "8026084.thl.jpg",
+            "role": "C",
+            "chain_index": 25
+          }
+        }
+      },
+      {
+        "trial": 70,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ACLARINE5.jpg",
+            "name": "ACLARINE5.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ShoeHorn.jpg",
+            "name": "ShoeHorn.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AAFRIMAS5.jpg",
+            "name": "AAFRIMAS5.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/bait04.jpg",
+            "name": "bait04.jpg",
+            "role": "C",
+            "chain_index": 17
+          }
+        }
+      },
+      {
+        "trial": 71,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/8256530.thl.jpg",
+            "name": "8256530.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26428545.thl.jpg",
+            "name": "26428545.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ABOTTLE19.jpg",
+            "name": "ABOTTLE19.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Adecorativet3.jpg",
+            "name": "Adecorativet3.jpg",
+            "role": "C",
+            "chain_index": 8
+          }
+        }
+      },
+      {
+        "trial": 72,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Ascroll7.jpg",
+            "name": "Ascroll7.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Arake3.jpg",
+            "name": "Arake3.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26431205.thl.jpg",
+            "name": "26431205.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ASEASH8.jpg",
+            "name": "ASEASH8.jpg",
+            "role": "C",
+            "chain_index": 21
+          }
+        }
+      },
+      {
+        "trial": 73,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Achair611.jpg",
+            "name": "Achair611.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26687931.thl.jpg",
+            "name": "26687931.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26424784.thl.jpg",
+            "name": "26424784.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ALIQBOOK.jpg",
+            "name": "ALIQBOOK.jpg",
+            "role": "C",
+            "chain_index": 19
+          }
+        }
+      },
+      {
+        "trial": 74,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AHOUSBOA3.jpg",
+            "name": "AHOUSBOA3.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26463767.thl.jpg",
+            "name": "26463767.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ACOOKCUTT.jpg",
+            "name": "ACOOKCUTT.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ALACES4.jpg",
+            "name": "ALACES4.jpg",
+            "role": "C",
+            "chain_index": 27
+          }
+        }
+      },
+      {
+        "trial": 75,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AFRAME15.jpg",
+            "name": "AFRAME15.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Aancientbuild.jpg",
+            "name": "Aancientbuild.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/mixer.jpg",
+            "name": "mixer.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/APROSTLE2.jpg",
+            "name": "APROSTLE2.jpg",
+            "role": "C",
+            "chain_index": 33
+          }
+        }
+      },
+      {
+        "trial": 76,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The correct choice is: 2\n\nThe cue image is a decorative fish sculpture. The second image, a statue of Buddha, is the one that is indirectly associated with it. Both are decorative objects, and the Buddha statue is often found in settings like homes or gardens where such decorative sculptures might be displayed. The ottoman, while also a decorative item, is not thematically linked to the fish sculpture.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ACHEMSET3.jpg",
+            "name": "ACHEMSET3.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AARCCHAR2.jpg",
+            "name": "AARCCHAR2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AFOOTST11.jpg",
+            "name": "AFOOTST11.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ABUDDHA18.jpg",
+            "name": "ABUDDHA18.jpg",
+            "role": "C",
+            "chain_index": 18
+          }
+        }
+      },
+      {
+        "trial": 77,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Acardboardpan.jpg",
+            "name": "Acardboardpan.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Atool221.jpg",
+            "name": "Atool221.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ASALTPEPP.jpg",
+            "name": "ASALTPEPP.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/23063814.thl.jpg",
+            "name": "23063814.thl.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 78,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ATOWELRA3.jpg",
+            "name": "ATOWELRA3.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Acleaningpro6.jpg",
+            "name": "Acleaningpro6.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/APOTPBAG2.jpg",
+            "name": "APOTPBAG2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ALIQBOOK.jpg",
+            "name": "ALIQBOOK.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 79,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a set of Mahjong tiles. Mahjong is a game that involves strategy, luck, and often social interaction, but it is not directly related to physical exercise or sports equipment.\n\nThe first option is a knee brace, which is used for support or injury recovery. The second option is an exercise bike, which is used for physical fitness.\n\nNeither a knee brace nor an exercise bike is directly associated with Mahjong. However, the question asks for an *indirect* association.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ASHAMPO2.jpg",
+            "name": "ASHAMPO2.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Apuzzle8.jpg",
+            "name": "Apuzzle8.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AKNEEBRA2.jpg",
+            "name": "AKNEEBRA2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AEXERCBIK.jpg",
+            "name": "AEXERCBIK.jpg",
+            "role": "C",
+            "chain_index": 41
+          }
+        }
+      },
+      {
+        "trial": 80,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ADRUM.jpg",
+            "name": "ADRUM.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26426803.thl.jpg",
+            "name": "26426803.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26425370.thl.jpg",
+            "name": "26425370.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Alaundrybask5.jpg",
+            "name": "Alaundrybask5.jpg",
+            "role": "C",
+            "chain_index": 9
+          }
+        }
+      },
+      {
+        "trial": 81,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Acastle22.jpg",
+            "name": "Acastle22.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AFILMCUTT.jpg",
+            "name": "AFILMCUTT.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aceramicjug16.jpg",
+            "name": "Aceramicjug16.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26442809.thl.jpg",
+            "name": "26442809.thl.jpg",
+            "role": "C",
+            "chain_index": 47
+          }
+        }
+      },
+      {
+        "trial": 82,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a wooden bed frame.\n\nLooking at the two options:\n- Image 1 is a blue and white military-style cap with a star emblem.\n- Image 2 is a brown paper bag with a sun and star pattern.\n\nNeither of these items is directly related to a bed frame. However, the question asks for an *indirect* association.\n\nThe most plausible indirect connection is with Image 2, the bag. A bed frame is an item of furniture, and a bag is",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/stickcheese.jpg",
+            "name": "stickcheese.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Aplastictestt.jpg",
+            "name": "Aplastictestt.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Agiftbag20.jpg",
+            "name": "Agiftbag20.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Abandleaders2.jpg",
+            "name": "Abandleaders2.jpg",
+            "role": "C",
+            "chain_index": 30
+          }
+        }
+      },
+      {
+        "trial": 83,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/22869912.thl.jpg",
+            "name": "22869912.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/8024597.thl.jpg",
+            "name": "8024597.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/dftslpi.jpg",
+            "name": "dftslpi.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Aalmond4.jpg",
+            "name": "Aalmond4.jpg",
+            "role": "C",
+            "chain_index": 13
+          }
+        }
+      },
+      {
+        "trial": 84,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Aplastichousi.jpg",
+            "name": "Aplastichousi.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26431395.thl.jpg",
+            "name": "26431395.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Astroboscope5.jpg",
+            "name": "Astroboscope5.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Ablackboardw3.jpg",
+            "name": "Ablackboardw3.jpg",
+            "role": "C",
+            "chain_index": 15
+          }
+        }
+      },
+      {
+        "trial": 85,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/10050937.thl.jpg",
+            "name": "10050937.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Acampingcoffe.jpg",
+            "name": "Acampingcoffe.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Adrinkinggl21.jpg",
+            "name": "Adrinkinggl21.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/B_brush.jpg",
+            "name": "B_brush.jpg",
+            "role": "C",
+            "chain_index": 9
+          }
+        }
+      },
+      {
+        "trial": 86,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AHOTPAD4.jpg",
+            "name": "AHOTPAD4.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ABOWARRO8.jpg",
+            "name": "ABOWARRO8.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Ataco.jpg",
+            "name": "Ataco.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Aclog6.jpg",
+            "name": "Aclog6.jpg",
+            "role": "C",
+            "chain_index": 31
+          }
+        }
+      },
+      {
+        "trial": 87,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Aantiquesofa4.jpg",
+            "name": "Aantiquesofa4.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AFOOTST26.jpg",
+            "name": "AFOOTST26.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Adropper2.jpg",
+            "name": "Adropper2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ABALALAI3.jpg",
+            "name": "ABALALAI3.jpg",
+            "role": "C",
+            "chain_index": 37
+          }
+        }
+      },
+      {
+        "trial": 88,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Ashoeshines15.jpg",
+            "name": "Ashoeshines15.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/surfboard.JPG",
+            "name": "surfboard.JPG",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Abrickhomeand.jpg",
+            "name": "Abrickhomeand.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/22824840.thl.jpg",
+            "name": "22824840.thl.jpg",
+            "role": "C",
+            "chain_index": 6
+          }
+        }
+      },
+      {
+        "trial": 89,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26451269.thl.jpg",
+            "name": "26451269.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AMICRO67.jpg",
+            "name": "AMICRO67.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AMIMETITE.jpg",
+            "name": "AMIMETITE.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ATOYDOLL.jpg",
+            "name": "ATOYDOLL.jpg",
+            "role": "C",
+            "chain_index": 21
+          }
+        }
+      },
+      {
+        "trial": 90,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Aglassbottl56.jpg",
+            "name": "Aglassbottl56.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AHANDLE5.jpg",
+            "name": "AHANDLE5.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Acomputer11.jpg",
+            "name": "Acomputer11.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AGARLICCO.jpg",
+            "name": "AGARLICCO.jpg",
+            "role": "C",
+            "chain_index": 22
+          }
+        }
+      },
+      {
+        "trial": 91,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ALIONMAS2.jpg",
+            "name": "ALIONMAS2.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/AGOAT10.jpg",
+            "name": "AGOAT10.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/E_tank.jpg",
+            "name": "E_tank.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Abagofpaperfl.jpg",
+            "name": "Abagofpaperfl.jpg",
+            "role": "C",
+            "chain_index": 11
+          }
+        }
+      },
+      {
+        "trial": 92,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Atoyparrot2.jpg",
+            "name": "Atoyparrot2.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/26374731.thl.jpg",
+            "name": "26374731.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26384554.thl.jpg",
+            "name": "26384554.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ABARROWRE.jpg",
+            "name": "ABARROWRE.jpg",
+            "role": "C",
+            "chain_index": 33
+          }
+        }
+      },
+      {
+        "trial": 93,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two images is directly associated with the cue image of the cocktail umbrella.\n\nHowever, the question asks for an *indirect* association. Let's analyze the options:\n\n*   **Image 1 (Crossbow):** A crossbow is a weapon. While it might be used in a game or for hunting, it has no logical or thematic connection to a cocktail umbrella.\n*   **Image 2 (Jumper Cables):** Jumper cables are used to start a car",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AELECOVER.jpg",
+            "name": "AELECOVER.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Acocktailumb4.jpg",
+            "name": "Acocktailumb4.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ABOWARRO8.jpg",
+            "name": "ABOWARRO8.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/8023968.thl.jpg",
+            "name": "8023968.thl.jpg",
+            "role": "C",
+            "chain_index": 8
+          }
+        }
+      },
+      {
+        "trial": 94,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/ADIRECSI3.jpg",
+            "name": "ADIRECSI3.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ACASTANET.jpg",
+            "name": "ACASTANET.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ARUSH.jpg",
+            "name": "ARUSH.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/8254014.thl.jpg",
+            "name": "8254014.thl.jpg",
+            "role": "C",
+            "chain_index": 36
+          }
+        }
+      },
+      {
+        "trial": 95,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/10049464.thl.jpg",
+            "name": "10049464.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/8252065.thl.jpg",
+            "name": "8252065.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AJUICER.jpg",
+            "name": "AJUICER.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Aplantinpot2.jpg",
+            "name": "Aplantinpot2.jpg",
+            "role": "C",
+            "chain_index": 11
+          }
+        }
+      },
+      {
+        "trial": 96,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/AAEROBENC.jpg",
+            "name": "AAEROBENC.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Adog120.jpg",
+            "name": "Adog120.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/Aclock213.jpg",
+            "name": "Aclock213.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Alambtoy6.jpg",
+            "name": "Alambtoy6.jpg",
+            "role": "C",
+            "chain_index": 31
+          }
+        }
+      },
+      {
+        "trial": 97,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/8257273.thl.jpg",
+            "name": "8257273.thl.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/Adriedleaf.jpg",
+            "name": "Adriedleaf.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ABREADMAC.jpg",
+            "name": "ABREADMAC.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/26386846.thl.jpg",
+            "name": "26386846.thl.jpg",
+            "role": "C",
+            "chain_index": 27
+          }
+        }
+      },
+      {
+        "trial": 98,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is indirectly associated with the cue image of the dress.\n\nThe cue image is a dress, and the two options are a blue electrical cable and a metal watering can. There is no logical or thematic connection between a dress and either of these items.\n\nTherefore, the correct answer is that neither image (1 or 2) is associated with the cue image.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/bands-a.jpg",
+            "name": "bands-a.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ADRESS2.jpg",
+            "name": "ADRESS2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/26437080.thl.jpg",
+            "name": "26437080.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/Afueltank11.jpg",
+            "name": "Afueltank11.jpg",
+            "role": "C",
+            "chain_index": 46
+          }
+        }
+      },
+      {
+        "trial": 99,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a bundle of wires, which is a component used in electronics and electrical systems.\n\nLet's examine the two options:\n\n1.  **The milkshake:** This is a food item. While it might be served in a glass, there is no direct or indirect connection to wires or electronics.\n2.  **The potato masher:** This is a kitchen utensil. It is a tool for food preparation. There is no connection to wires or electronics.\n\nNeither image is directly associated",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/Abloodorange.jpg",
+            "name": "Abloodorange.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/A25PINCON.jpg",
+            "name": "A25PINCON.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/23063814.thl.jpg",
+            "name": "23063814.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AHANDRAK.jpg",
+            "name": "AHANDRAK.jpg",
+            "role": "C",
+            "chain_index": 19
+          }
+        }
+      }
+    ],
+    "accuracy": 0.3,
+    "n_correct": 30,
+    "total": 100
+  }
+}

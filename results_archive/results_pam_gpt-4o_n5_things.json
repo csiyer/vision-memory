@@ -1,0 +1,102 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260423_152553",
+    "dataset": "things",
+    "n_images": 5,
+    "n_trials": 5,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.4,
+        "n_correct": 2,
+        "total": 5
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "STEREO",
+        "reported": "stere",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"STERE",
+        "metadata": {
+          "category": "cat_1129",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "SLEEVE",
+        "reported": "slee",
+        "correct": 0,
+        "raw_response": "The word paired with that image is \"SLEE",
+        "metadata": {
+          "category": "cat_1130",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "WELL",
+        "reported": "well",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"WELL",
+        "metadata": {
+          "category": "cat_1127",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "PURSE",
+        "reported": "purse",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"PURSE",
+        "metadata": {
+          "category": "cat_1131",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "CIGARETTE",
+        "reported": "cig",
+        "correct": 0,
+        "raw_response": "The word paired with this image is \"CIG",
+        "metadata": {
+          "category": "cat_1128",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
+          "local_filename": "0.jpg"
+        }
+      }
+    ],
+    "accuracy": 0.4,
+    "n_correct": 2,
+    "total": 5
+  }
+}

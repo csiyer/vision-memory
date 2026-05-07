@@ -1,0 +1,95 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260428_103600",
+    "dataset": "Brady2008",
+    "n_images": 4,
+    "n_trials": 2,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0,
+        "n_correct": 2,
+        "total": 2
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image is image 2.",
+        "metadata": {
+          "chain_index": 0,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/iguana.jpg",
+            "name": "iguana.jpg",
+            "role": "B",
+            "chain_index": 0
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/ACASTLE16.jpg",
+            "name": "ACASTLE16.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/ABOY.jpg",
+            "name": "ABOY.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/AANSHIEL4.jpg",
+            "name": "AANSHIEL4.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image indirectly associated with the cue image of the salt and pepper shakers is image 2 (",
+        "metadata": {
+          "chain_index": 1,
+          "bridge_item": {
+            "path": "datasets/Brady2008Objects/26423786.thl.jpg",
+            "name": "26423786.thl.jpg",
+            "role": "B",
+            "chain_index": 1
+          },
+          "cue_item": {
+            "path": "datasets/Brady2008Objects/saltpeppershakerjpg.jpg",
+            "name": "saltpeppershakerjpg.jpg",
+            "role": "A",
+            "chain_index": 1
+          },
+          "correct_option": {
+            "path": "datasets/Brady2008Objects/AANSHIEL4.jpg",
+            "name": "AANSHIEL4.jpg",
+            "role": "C",
+            "chain_index": 1
+          },
+          "foil_option": {
+            "path": "datasets/Brady2008Objects/ABOY.jpg",
+            "name": "ABOY.jpg",
+            "role": "C",
+            "chain_index": 0
+          }
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 2,
+    "total": 2
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "_metadata": {
+    "task": "Continuous Recognition",
+    "timestamp": "20260428_214716",
+    "dataset": "Brady2008",
+    "n_images": 10,
+    "n_trials": 20,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.5,
+        "d_prime": 0.0,
+        "hit_rate": 1.0,
+        "false_alarm_rate": 1.0,
+        "weighted_f1": 0.3333333333333333
+      }
+    },
+    "p_old": 0.5,
+    "min_delay": 2,
+    "max_delay": 15
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 0,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10049816.thl.jpg",
+          "name": "10049816.thl.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 1,
+        "target": 0,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/045.jpg",
+          "name": "045.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 2,
+        "target": 0,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10050937.thl.jpg",
+          "name": "10050937.thl.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10049816.thl.jpg",
+          "name": "10049816.thl.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 4,
+        "target": 0,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10049193.thl.jpg",
+          "name": "10049193.thl.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10050937.thl.jpg",
+          "name": "10050937.thl.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/045.jpg",
+          "name": "045.jpg",
+          "delay": 4
+        }
+      },
+      {
+        "trial": 7,
+        "target": 0,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/03015528000.jpg",
+          "name": "03015528000.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 8,
+        "target": 0,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/096CM301000.jpg",
+          "name": "096CM301000.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10049193.thl.jpg",
+          "name": "10049193.thl.jpg",
+          "delay": 4
+        }
+      },
+      {
+        "trial": 10,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/03015528000.jpg",
+          "name": "03015528000.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 11,
+        "target": 0,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10049566.thl.jpg",
+          "name": "10049566.thl.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 12,
+        "target": 0,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10049464.thl.jpg",
+          "name": "10049464.thl.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 13,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/096CM301000.jpg",
+          "name": "096CM301000.jpg",
+          "delay": 4
+        }
+      },
+      {
+        "trial": 14,
+        "target": 0,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10049507.thl-1.jpg",
+          "name": "10049507.thl-1.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 15,
+        "target": 0,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10049257.thl.jpg",
+          "name": "10049257.thl.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 16,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10049464.thl.jpg",
+          "name": "10049464.thl.jpg",
+          "delay": 3
+        }
+      },
+      {
+        "trial": 17,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10049507.thl-1.jpg",
+          "name": "10049507.thl-1.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 18,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10049566.thl.jpg",
+          "name": "10049566.thl.jpg",
+          "delay": 6
+        }
+      },
+      {
+        "trial": 19,
+        "target": 1,
+        "response": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10049257.thl.jpg",
+          "name": "10049257.thl.jpg",
+          "delay": 3
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "hit_rate": 1.0,
+    "false_alarm_rate": 1.0,
+    "d_prime": 0.0,
+    "weighted_f1": 0.3333333333333333,
+    "counts": {
+      "hits": 10,
+      "misses": 0,
+      "false_alarms": 10,
+      "correct_rejections": 0
+    },
+    "hit_rate_by_delay": {
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "6": 1.0
+    }
+  }
+}

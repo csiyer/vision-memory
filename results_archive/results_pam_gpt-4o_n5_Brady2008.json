@@ -1,0 +1,82 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260423_152605",
+    "dataset": "Brady2008",
+    "n_images": 5,
+    "n_trials": 5,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.8,
+        "n_correct": 4,
+        "total": 5
+      }
+    },
+    "max_context_pairs": null
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "MAILBOX",
+        "reported": "mailbox",
+        "correct": 1,
+        "raw_response": "The word paired with that image is \"MAILBOX",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Afruitcake.jpg",
+          "name": "Afruitcake.jpg"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "HELMET",
+        "reported": "helm",
+        "correct": 0,
+        "raw_response": "The word paired with this image was \"HELM",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/ASUNBOX5.jpg",
+          "name": "ASUNBOX5.jpg"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "FOLDER",
+        "reported": "folder",
+        "correct": 1,
+        "raw_response": "The word paired with this image is \"FOLDER",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/Abreadrolls.jpg",
+          "name": "Abreadrolls.jpg"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "TUBA",
+        "reported": "tuba",
+        "correct": 1,
+        "raw_response": "The word paired with this image was \"TUBA",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/10049193.thl.jpg",
+          "name": "10049193.thl.jpg"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "COURSE",
+        "reported": "course",
+        "correct": 1,
+        "raw_response": "The word paired with the image was \"COURSE",
+        "metadata": {
+          "path": "datasets/Brady2008Objects/snowflake.jpg",
+          "name": "snowflake.jpg"
+        }
+      }
+    ],
+    "accuracy": 0.8,
+    "n_correct": 4,
+    "total": 5
+  }
+}
