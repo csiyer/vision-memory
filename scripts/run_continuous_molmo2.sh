@@ -48,7 +48,7 @@ for dataset in "${DATASETS[@]}"; do
             --models "$MODEL" \
             --n-images "$size" \
             --dataset "$dataset" \
-            --n-trials 100 || echo "  [ERROR] $dataset | n=$size"
+            --n-trials 10 || echo "  [ERROR] $dataset | n=$size"
     done
 done
 

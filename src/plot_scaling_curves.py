@@ -70,14 +70,17 @@ def _apply_axis_style(ax, sizes):
 
 
 TASK_GLOB_MAP = {
-    "2afc":          "results_2afc_*.json",
-    "continuous":    "results_continuous_*.json",
-    "pam":           "results_pam_*.json",
-    "vhs_single":    "results_vhs_*single_needle*.json",
-    "vhs_multi":     "results_vhs_*multi_needle*.json",
-    "serial_free":   "results_serial_free_*.json",
-    "serial_afc":    "results_serial_afc_*.json",
-    "assoc":         "results_assoc_*.json",
+    "2afc":             "results_2afc_*.json",
+    "continuous":       "results_continuous_*.json",
+    "mst":              "results_mst_*.json",
+    "serial_free":      "results_serial_free_*.json",
+    "serial_afc":       "results_serial_afc_*.json",
+    "color_continuous": "results_color_continuous_*.json",
+    "color_named":      "results_color_named_*.json",
+    "pam_word":         "results_pam_word_*.json",
+    "pam_image":        "results_pam_image_*.json",
+    "assoc_word":       "results_assoc_word_*.json",
+    "assoc_image":      "results_assoc_image_*.json",
 }
 
 
@@ -439,7 +442,7 @@ def main():
                 plot_single_dataset_comparison(data, task, dataset, output_dir)
 
         if args.overlap:
-            overlap_tasks = {"2afc", "serial_free", "pam", "vhs_single", "vhs_multi"}
+            overlap_tasks = {"2afc", "serial_free", "pam_word", "pam_image"}
             if task in overlap_tasks:
                 print(f"Generating overlap plots for task '{task}'...")
                 datasets = set()

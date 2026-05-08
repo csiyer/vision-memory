@@ -8,7 +8,7 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# 2-AFC Recognition: claude-opus-4-7
+# 2-AFC Recognition: claude-sonnet-4-0
 
 set -e
 
@@ -20,7 +20,7 @@ export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
 sleep 0
 
 MODEL="claude"
-N_TRIALS=100
+N_TRIALS=10
 RESULTS_DIR="$SCRIPT_DIR/results"
 SIZES=(1 2 5 10 50 100 250)
 DATASETS=("things" "Brady2008")
@@ -32,7 +32,7 @@ check_existing_result() {
     local dataset="$1"
     local n_images="$2"
     local foil_type="$3"
-    [ -f "$RESULTS_DIR/results_2afc_claude-opus-4-7_n${n_images}_${dataset}_${foil_type}.json" ]
+    [ -f "$RESULTS_DIR/results_2afc_claude-sonnet-4-0_n${n_images}_${dataset}_${foil_type}.json" ]
 }
 
 echo "========== 2-AFC Recognition: $MODEL =========="

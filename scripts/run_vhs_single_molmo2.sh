@@ -55,7 +55,7 @@ for size in "${SIZES[@]}"; do
         --mode single_needle \
         --split VHs_large \
         --image-count "$size" \
-        --max-samples 100 \
+        --max-samples 10 \
         --fetch-missing-coco || echo "  [ERROR] image_count=$size"
 done
 

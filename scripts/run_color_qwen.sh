@@ -48,7 +48,7 @@ for variant in "${VARIANTS[@]}"; do
             --models "$MODEL" \
             --n-images "$size" \
             --variant "$variant" \
-            --n-trials 100 || echo "  [ERROR] $variant | n=$size"
+            --n-trials 10 || echo "  [ERROR] $variant | n=$size"
     done
 done
 

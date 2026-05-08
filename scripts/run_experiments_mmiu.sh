@@ -17,7 +17,7 @@
 #   sbatch run_experiments_mmiu.sh            # full run
 #   bash   run_experiments_mmiu.sh            # local run
 #
-# For a quick pilot, add --max-samples 200 to the python call below.
+# For a quick pilot, add --max-samples 100 to the python call below.
 
 set -e
 cd /insomnia001/home/pm3361/vision-memory

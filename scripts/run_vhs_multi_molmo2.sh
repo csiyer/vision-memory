@@ -44,7 +44,7 @@ for size in "${SIZES[@]}"; do
         --models "$MODEL" \
         --mode multi_needle \
         --image-count "$size" \
-        --max-samples 100 \
+        --max-samples 10 \
         --fetch-missing-coco || echo "  [ERROR] image_count=$size"
 done
 

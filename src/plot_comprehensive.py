@@ -40,12 +40,10 @@ MODEL_ORDER = ["qwen3-vl-8b", "molmo2-8b", "gpt-4o", "gemini-2.5-flash"]
 DATASET_LINESTYLES = {
     "Brady2008":        "-",
     "things":           "--",
-    "Visual Haystacks": "-",
 }
 DATASET_LABELS = {
     "Brady2008":        "Brady2008",
     "things":           "Things",
-    "Visual Haystacks": "Visual Haystacks",
 }
 
 HUMAN_COLOR = "#222222"
@@ -54,16 +52,19 @@ HUMAN_MARKERSIZE = 14
 
 # Per-task config: (task, foil, datasets, title)
 TASK_CONFIGS = [
-    ("2afc",        "novel",  ["Brady2008", "things"],         "2AFC — Novel\nAccuracy vs Sequence Length"),
-    ("2afc",        "exemplar",["Brady2008", "things"],        "2AFC — Exemplar\nAccuracy vs Sequence Length"),
-    ("2afc",        "state",  ["Brady2008"],                   "2AFC — State\nAccuracy vs Sequence Length"),
-    ("pam",         "all",    ["Brady2008", "things"],         "Paired Associate Memory\nAccuracy vs Sequence Length"),
-    ("serial_free", "all",    ["Brady2008", "things"],         "Serial (Free Recall)\nAccuracy vs Sequence Length"),
-    ("serial_afc",  "all",    ["Brady2008", "things"],         "Serial AFC\nAccuracy vs Sequence Length"),
-    ("assoc",       "all",    ["Brady2008", "things"],         "Associative Memory\nAccuracy vs Sequence Length"),
-    ("continuous",  "all",    ["Brady2008", "things"],         "Continuous Recognition\nAccuracy vs Sequence Length"),
-    ("vhs_single",  "all",    ["Visual Haystacks"],            "Visual Haystacks — Single Needle\nAccuracy vs Sequence Length"),
-    ("vhs_multi",   "all",    ["Visual Haystacks"],            "Visual Haystacks — Multi Needle\nAccuracy vs Sequence Length"),
+    ("2afc",            "novel",  ["Brady2008", "things"],         "2AFC — Novel\nAccuracy vs Sequence Length"),
+    ("2afc",            "exemplar",["Brady2008", "things"],        "2AFC — Exemplar\nAccuracy vs Sequence Length"),
+    ("2afc",            "state",  ["Brady2008"],                   "2AFC — State\nAccuracy vs Sequence Length"),
+    ("continuous",      "all",    ["Brady2008", "things"],         "Continuous Recognition\nAccuracy vs Sequence Length"),
+    ("mst",             "all",    ["MST"],                         "Mnemonic Similarity Task\nAccuracy vs Sequence Length"),
+    ("serial_free",     "all",    ["Brady2008", "things"],         "Serial (Free Recall)\nAccuracy vs Sequence Length"),
+    ("serial_afc",      "all",    ["Brady2008", "things"],         "Serial AFC\nAccuracy vs Sequence Length"),
+    ("color_continuous","all",    ["color"],                       "Color Memory (continuous report)\nAccuracy vs Sequence Length"),
+    ("color_named",     "all",    ["color"],                       "Color Memory (ROYGBIV named)\nAccuracy vs Sequence Length"),
+    ("pam_word",        "all",    ["Brady2008", "things"],         "PAM (image-word)\nAccuracy vs Sequence Length"),
+    ("pam_image",       "all",    ["Brady2008", "things"],         "PAM (image-image 2-AFC)\nAccuracy vs Sequence Length"),
+    ("assoc_word",      "all",    ["Brady2008", "things"],         "Associative Inference (image-word)\nAccuracy vs Sequence Length"),
+    ("assoc_image",     "all",    ["Brady2008", "things"],         "Associative Inference (image-image)\nAccuracy vs Sequence Length"),
 ]
 
 # Human reference points: (task, foil, dataset) -> [(x, accuracy_pct, citation)]
@@ -171,10 +172,6 @@ def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     print("Loading results...")
     data = load_results("results")
-
-    # Hardcoded Qwen VHS results (from job 9050597)
-    data["vhs_single"]["qwen3-vl-8b"]["Visual Haystacks"]["all"][50] = 50.0
-    data["vhs_single"]["qwen3-vl-8b"]["Visual Haystacks"]["all"][100] = 50.0
 
     for task, foil, datasets, title in TASK_CONFIGS:
         make_comprehensive_plot(data, task, foil, datasets, title)

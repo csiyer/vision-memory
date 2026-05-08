@@ -55,7 +55,7 @@ for dataset in "${DATASETS[@]}"; do
             python3 -m eval_scripts.eval_2afc \
                 --models "$MODEL" \
                 --n-images "$size" \
-                --n-trials 100 \
+                --n-trials 10 \
                 --foil-type "$foil" \
                 --dataset "$dataset" || echo "  [ERROR] $dataset | $foil | n=$size"
         done

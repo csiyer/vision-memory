@@ -53,7 +53,7 @@ for dataset in "${DATASETS[@]}"; do
                 --n-images "$size" \
                 --variant "$variant" \
                 --dataset "$dataset" \
-                --n-trials 100 || echo "  [ERROR] $dataset | $variant | n=$size"
+                --n-trials 10 || echo "  [ERROR] $dataset | $variant | n=$size"
         done
     done
 done

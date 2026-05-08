@@ -27,11 +27,10 @@ from evaluators.molmo2_evaluator import Molmo2Evaluator
 from src.metrics import calculate_associative_inference_metrics
 
 
-def build_messages(evaluator, study_sequence, study_prompt, cue_image, test_images, test_prompt):
-    """Build API messages for associative inference trial.
+def build_messages_image(evaluator, study_sequence, study_prompt, cue_image, test_images, test_prompt):
+    """Build API messages for image-image associative inference trial.
 
-    Study sequence is a list of dicts with keys 'images' (list of 2) and 'pair_type'.
-    Each study event shows two images side by side.
+    Study sequence has dicts with keys 'images' (list of 2) and 'pair_type'.
     """
     study_content = [{"type": "text", "text": study_prompt}]
     for event in study_sequence:
@@ -50,6 +49,37 @@ def build_messages(evaluator, study_sequence, study_prompt, cue_image, test_imag
     return [
         {"role": "user", "content": study_content},
         {"role": "assistant", "content": "I have studied the image pairs."},
+        {"role": "user", "content": test_content},
+    ]
+
+
+def build_messages_word(evaluator, study_sequence, study_prompt, cue_image, test_options, test_prompt):
+    """Build API messages for image-word associative inference trial.
+
+    AB events have 'images' (list of 2). BC events have 'image' (B) and 'word' (C).
+    Test options is a list of two candidate words.
+    """
+    study_content = [{"type": "text", "text": study_prompt}]
+    for event in study_sequence:
+        study_content.append({"type": "text", "text": f"({event['pair_type']} pair)"})
+        if event["pair_type"] == "AB":
+            for img in event["images"]:
+                study_content.append(evaluator._encode_image(img))
+        else:
+            study_content.append(evaluator._encode_image(event["image"]))
+            study_content.append({"type": "text", "text": f"Word: {event['word']}"})
+
+    test_content = [
+        {"type": "text", "text": "Cue image:"},
+        evaluator._encode_image(cue_image),
+        {"type": "text", "text": test_prompt},
+        {"type": "text", "text": f"1: {test_options[0]}"},
+        {"type": "text", "text": f"2: {test_options[1]}"},
+    ]
+
+    return [
+        {"role": "user", "content": study_content},
+        {"role": "assistant", "content": "I have studied the pairs."},
         {"role": "user", "content": test_content},
     ]
 
@@ -75,36 +105,49 @@ def parse_response(text):
     return -1
 
 
-def run_evaluation(evaluators, n_images=20, dataset="things", n_trials=None):
+def run_evaluation(evaluators, n_images=20, dataset="things", n_trials=None, pair_type="image"):
     """Each trial is an independent study+test episode with a fresh sample of n_images chains."""
     n_trials = n_trials if n_trials is not None else n_images // 2
+
+    # Image budget: image variant has 2*(n_images) study + 1 cue + 2 candidates = 2n+3
+    # word variant has n_images study (n/2 AB pairs + n/2 BC pairs, each with 2 or 1 imgs) + 1 cue
+    capacity_n = n_images * 2 + 3 if pair_type == "image" else (n_images // 2) * 3 + 1
 
     all_results = {}
     for evaluator in evaluators:
         print(f"\n=== {evaluator.get_name()} ===")
 
-        print(f"  Probing capacity for {n_images} images...", end=" ", flush=True)
-        if not evaluator.check_image_capacity(n_images * 2 + 3):
-            print(f"SKIP — model rejected {n_images} images in a single request")
+        print(f"  Probing capacity for {capacity_n} images...", end=" ", flush=True)
+        if not evaluator.check_image_capacity(capacity_n):
+            print(f"SKIP — model rejected {capacity_n} images in a single request")
             continue
         print("OK")
 
         results = []
 
         for i in range(n_trials):
-            task = AssociativeInferenceTask(dataset_name=dataset, n_trials=n_images)
+            task = AssociativeInferenceTask(dataset_name=dataset, n_trials=n_images, pair_type=pair_type)
             trial_data = task.get_trials()
             test_trial = trial_data["test_phase"][0]
 
-            messages = build_messages(
-                evaluator,
-                trial_data["study_sequence"],
-                trial_data["study_prompt"],
-                test_trial["cue_image"],
-                test_trial["images"],
-                test_trial["prompt"],
-
-            )
+            if pair_type == "image":
+                messages = build_messages_image(
+                    evaluator,
+                    trial_data["study_sequence"],
+                    trial_data["study_prompt"],
+                    test_trial["cue_image"],
+                    test_trial["images"],
+                    test_trial["prompt"],
+                )
+            else:
+                messages = build_messages_word(
+                    evaluator,
+                    trial_data["study_sequence"],
+                    trial_data["study_prompt"],
+                    test_trial["cue_image"],
+                    test_trial["options"],
+                    test_trial["prompt"],
+                )
             response_text = evaluator._call_api(messages)
             reported = parse_response(response_text)
             correct = 1 if reported == test_trial["target"] else 0
@@ -139,6 +182,9 @@ def main():
 
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
                         help="Dataset to use")
+    parser.add_argument("--pair-type", choices=["word", "image"], default="image",
+                        help="image: A-B and B-C image pairs, 2-AFC over candidate C images. "
+                             "word: A-B image pairs and B-C image-word pairs, 2-AFC over candidate C words.")
     parser.add_argument("--output", type=str, default=None,
                         help="Output file path (default: results_assoc_<timestamp>.json)")
     args = parser.parse_args()
@@ -184,8 +230,9 @@ def main():
     print(f"  N trials: {args.n_trials or args.n_images // 2}")
 
     print(f"  Dataset: {args.dataset}")
+    print(f"  Pair type: {args.pair_type}")
 
-    results = run_evaluation(evaluators, args.n_images, args.dataset, n_trials=args.n_trials)
+    results = run_evaluation(evaluators, args.n_images, args.dataset, n_trials=args.n_trials, pair_type=args.pair_type)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     n_trials = len(next(iter(results.values()))["trials"]) if results else 0
@@ -194,6 +241,7 @@ def main():
             "task": "Associative Inference",
             "timestamp": timestamp,
             "dataset": args.dataset,
+            "pair_type": args.pair_type,
             "n_images": args.n_images,
             "n_trials": n_trials,
             "models": [e.get_name() for e in evaluators],
@@ -214,7 +262,7 @@ def main():
     results_dir.mkdir(exist_ok=True)
 
     model_str = "+".join(e.get_name() for e in evaluators)
-    output_path = results_dir / (args.output if args.output else f"results_assoc_{model_str}_n{args.n_images}_{args.dataset}.json")
+    output_path = results_dir / (args.output if args.output else f"results_assoc_{args.pair_type}_{model_str}_n{args.n_images}_{args.dataset}.json")
     with open(output_path, "w") as f:
         json.dump(output_data, f, indent=2)
     print(f"\nSaved to {output_path}")

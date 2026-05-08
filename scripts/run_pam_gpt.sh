@@ -8,7 +8,7 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# Paired Associate Memory: gpt-5
+# Paired Associate Memory: gpt-4o
 
 set -e
 
@@ -19,34 +19,40 @@ export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
 # Stagger start to avoid concurrent API hammering
 sleep 180
 
-MODEL="gpt-5"
+MODEL="gpt-4o"
 RESULTS_DIR="$SCRIPT_DIR/results"
 SIZES=(1 2 5 10 50 100 250)
 DATASETS=("things" "Brady2008")
+VARIANTS=("word" "image")
 
 mkdir -p "$RESULTS_DIR" logs
 
 check_existing_result() {
     local dataset="$1"
     local n_images="$2"
-    [ -f "$RESULTS_DIR/results_pam_gpt-5_n${n_images}_${dataset}.json" ]
+    local variant="$3"
+    [ -f "$RESULTS_DIR/results_pam_${variant}_gpt-4o_n${n_images}_${dataset}.json" ]
 }
 
 echo "========== Paired Associate Memory: $MODEL =========="
 
 for dataset in "${DATASETS[@]}"; do
     echo "--- Dataset: $dataset ---"
-    for size in "${SIZES[@]}"; do
-        if check_existing_result "$dataset" "$size"; then
-            echo "  [EXISTS] $dataset | n=$size"
-            continue
-        fi
-        echo "  [RUN] $dataset | n=$size"
-        python3 -m eval_scripts.eval_pam \
-            --models "$MODEL" \
-            --n-images "$size" \
-            --dataset "$dataset" \
-            --n-trials 100 || echo "  [ERROR] $dataset | n=$size"
+    for variant in "${VARIANTS[@]}"; do
+        echo "  -- Pair type: $variant --"
+        for size in "${SIZES[@]}"; do
+            if check_existing_result "$dataset" "$size" "$variant"; then
+                echo "  [EXISTS] $dataset | $variant | n=$size"
+                continue
+            fi
+            echo "  [RUN] $dataset | $variant | n=$size"
+            python3 -m eval_scripts.eval_pam \
+                --models "$MODEL" \
+                --n-images "$size" \
+                --dataset "$dataset" \
+                --pair-type "$variant" \
+                --n-trials 10 || echo "  [ERROR] $dataset | $variant | n=$size"
+        done
     done
 done
 

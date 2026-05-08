@@ -8,7 +8,7 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# Mnemonic Similarity Task: claude-opus-4-7
+# Mnemonic Similarity Task: claude-sonnet-4-0
 
 set -e
 
@@ -27,7 +27,7 @@ mkdir -p "$RESULTS_DIR" logs
 
 check_existing_result() {
     local n_study="$1"
-    [ -f "$RESULTS_DIR/results_mst_claude-opus-4-7_n${n_study}.json" ]
+    [ -f "$RESULTS_DIR/results_mst_claude-sonnet-4-0_n${n_study}.json" ]
 }
 
 echo "========== Mnemonic Similarity Task: $MODEL =========="
@@ -41,7 +41,7 @@ for size in "${SIZES[@]}"; do
     python3 -m eval_scripts.eval_mst \
         --models "$MODEL" \
         --n-study "$size" \
-        --n-trials 100 || echo "  [ERROR] n=$size"
+        --n-trials 10 || echo "  [ERROR] n=$size"
 done
 
 echo "Done."

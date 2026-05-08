@@ -43,7 +43,7 @@ for size in "${SIZES[@]}"; do
     python3 -m eval_scripts.eval_mst \
         --models "$MODEL" \
         --n-study "$size" \
-        --n-trials 100 || echo "  [ERROR] n=$size"
+        --n-trials 10 || echo "  [ERROR] n=$size"
 done
 
 echo "Done."

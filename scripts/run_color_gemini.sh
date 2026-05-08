@@ -8,7 +8,7 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# Color Memory: gemini-3-flash-preview (both continuous and named variants)
+# Color Memory: gemini-2.5-flash (both continuous and named variants)
 
 set -e
 
@@ -29,7 +29,7 @@ mkdir -p "$RESULTS_DIR" logs
 check_existing_result() {
     local n_images="$1"
     local variant="$2"
-    [ -f "$RESULTS_DIR/results_color_${variant}_gemini-3-flash-preview_n${n_images}.json" ]
+    [ -f "$RESULTS_DIR/results_color_${variant}_gemini-2.5-flash_n${n_images}.json" ]
 }
 
 echo "========== Color Memory: $MODEL =========="
@@ -46,7 +46,7 @@ for variant in "${VARIANTS[@]}"; do
             --models "$MODEL" \
             --n-images "$size" \
             --variant "$variant" \
-            --n-trials 100 || echo "  [ERROR] $variant | n=$size"
+            --n-trials 10 || echo "  [ERROR] $variant | n=$size"
     done
 done
 

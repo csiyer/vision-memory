@@ -8,7 +8,7 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# Color Memory: gpt-5 (both continuous and named variants)
+# Color Memory: gpt-4o (both continuous and named variants)
 
 set -e
 
@@ -19,7 +19,7 @@ export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
 # Stagger start to avoid concurrent API hammering
 sleep 120
 
-MODEL="gpt-5"
+MODEL="gpt-4o"
 RESULTS_DIR="$SCRIPT_DIR/results"
 SIZES=(1 2 5 10 50 100 250)
 VARIANTS=("continuous" "named")
@@ -29,7 +29,7 @@ mkdir -p "$RESULTS_DIR" logs
 check_existing_result() {
     local n_images="$1"
     local variant="$2"
-    [ -f "$RESULTS_DIR/results_color_${variant}_gpt-5_n${n_images}.json" ]
+    [ -f "$RESULTS_DIR/results_color_${variant}_gpt-4o_n${n_images}.json" ]
 }
 
 echo "========== Color Memory: $MODEL =========="
@@ -46,7 +46,7 @@ for variant in "${VARIANTS[@]}"; do
             --models "$MODEL" \
             --n-images "$size" \
             --variant "$variant" \
-            --n-trials 100 || echo "  [ERROR] $variant | n=$size"
+            --n-trials 10 || echo "  [ERROR] $variant | n=$size"
     done
 done
 

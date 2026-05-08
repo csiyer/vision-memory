@@ -8,7 +8,7 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# Associative Inference: claude-opus-4-7
+# Associative Inference: claude-sonnet-4-0
 
 set -e
 
@@ -23,30 +23,36 @@ MODEL="claude"
 RESULTS_DIR="$SCRIPT_DIR/results"
 SIZES=(2 4 6 10 50 100 250)
 DATASETS=("things" "Brady2008")
+VARIANTS=("word" "image")
 
 mkdir -p "$RESULTS_DIR" logs
 
 check_existing_result() {
     local dataset="$1"
     local n_images="$2"
-    [ -f "$RESULTS_DIR/results_assoc_claude-opus-4-7_n${n_images}_${dataset}.json" ]
+    local variant="$3"
+    [ -f "$RESULTS_DIR/results_assoc_${variant}_claude-sonnet-4-0_n${n_images}_${dataset}.json" ]
 }
 
 echo "========== Associative Inference: $MODEL =========="
 
 for dataset in "${DATASETS[@]}"; do
     echo "--- Dataset: $dataset ---"
-    for n in "${SIZES[@]}"; do
-        if check_existing_result "$dataset" "$n"; then
-            echo "  [EXISTS] $dataset | n=$n"
-            continue
-        fi
-        echo "  [RUN] $dataset | n=$n"
-        python3 -m eval_scripts.eval_associative_inference \
-            --models "$MODEL" \
-            --n-images "$n" \
-            --dataset "$dataset" \
-            --n-trials 100 || echo "  [ERROR] $dataset | n=$n"
+    for variant in "${VARIANTS[@]}"; do
+        echo "  -- Pair type: $variant --"
+        for n in "${SIZES[@]}"; do
+            if check_existing_result "$dataset" "$n" "$variant"; then
+                echo "  [EXISTS] $dataset | $variant | n=$n"
+                continue
+            fi
+            echo "  [RUN] $dataset | $variant | n=$n"
+            python3 -m eval_scripts.eval_associative_inference \
+                --models "$MODEL" \
+                --n-images "$n" \
+                --dataset "$dataset" \
+                --pair-type "$variant" \
+                --n-trials 10 || echo "  [ERROR] $dataset | $variant | n=$n"
+        done
     done
 done
 

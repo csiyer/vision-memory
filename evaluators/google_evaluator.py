@@ -12,7 +12,7 @@ from .base import BaseEvaluator
 class GoogleEvaluator(BaseEvaluator):
     """Google Gemini vision evaluator."""
 
-    def __init__(self, model_id: str = "gemini-3-flash-preview"):
+    def __init__(self, model_id: str = "gemini-2.5-flash"):
         super().__init__(model_id)
         self.client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
 
