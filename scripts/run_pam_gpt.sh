@@ -41,6 +41,12 @@ for dataset in "${DATASETS[@]}"; do
     for variant in "${VARIANTS[@]}"; do
         echo "  -- Pair type: $variant --"
         for size in "${SIZES[@]}"; do
+            # See LIMITATIONS.md: image variant at n=1 on THINGS has no spare
+            # category for the 2-AFC foil (raises ValueError in paired_associate_memory.py).
+            if [ "$variant" = "image" ] && [ "$dataset" = "things" ] && [ "$size" = "1" ]; then
+                echo "  [SKIP] $dataset | $variant | n=$size (no foil available, see LIMITATIONS.md)"
+                continue
+            fi
             if check_existing_result "$dataset" "$size" "$variant"; then
                 echo "  [EXISTS] $dataset | $variant | n=$size"
                 continue

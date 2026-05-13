@@ -41,6 +41,12 @@ for dataset in "${DATASETS[@]}"; do
     for variant in "${VARIANTS[@]}"; do
         echo "  -- Pair type: $variant --"
         for n in "${SIZES[@]}"; do
+            # See LIMITATIONS.md: image variant at smallest n on THINGS has no spare
+            # category for the test-phase foil (raises ValueError in associative_inference.py).
+            if [ "$variant" = "image" ] && [ "$dataset" = "things" ] && [ "$n" = "2" ]; then
+                echo "  [SKIP] $dataset | $variant | n=$n (no foil available, see LIMITATIONS.md)"
+                continue
+            fi
             if check_existing_result "$dataset" "$n" "$variant"; then
                 echo "  [EXISTS] $dataset | $variant | n=$n"
                 continue

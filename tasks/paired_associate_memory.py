@@ -144,7 +144,7 @@ class PairedAssociateMemoryTask:
             test_phase.append({
                 "cue_image": pairs[i]["cue_image"],
                 "images": images,
-                "prompt": "Which of these two images (1 or 2) was paired with the cue image?",
+                "prompt": "Which of these two images was paired with the cue image? Reply with only the digit 1 or 2 and nothing else.",
                 "target": target,
                 "metadata": {
                     "cue": pairs[i]["cue_metadata"],

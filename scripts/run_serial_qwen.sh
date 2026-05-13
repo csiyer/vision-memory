@@ -8,7 +8,6 @@
 #SBATCH --mem=48G
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1
-#SBATCH --constraint=A6000
 
 # Serial Order Memory: qwen3-vl-8b (local inference, requires GPU)
 
@@ -23,7 +22,7 @@ export HF_DATASETS_OFFLINE=1
 
 MODEL="qwen"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250)
+SIZES=(1 2 5 10 50 100 250)
 DATASETS=("things" "Brady2008")
 VARIANTS=("free" "afc")
 

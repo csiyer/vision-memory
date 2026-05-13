@@ -140,7 +140,7 @@ class ContinuousRecognitionTask(RecognitionTaskBase):
             trials.append(
                 {
                     "image": self.dataset.get_image(item["image_idx"]),
-                    "prompt": "Has this image already appeared in the sequence (yes/no)?",
+                    "prompt": "Has this image already appeared in the sequence? Reply with only 'yes' or 'no' and nothing else.",
                     "target": item["target"],
                     "metadata": {
                         **self.dataset.get_metadata(item["image_idx"]),
@@ -243,7 +243,8 @@ class AFCRecognitionTask(RecognitionTaskBase):
             obj_ds = BradyDataset(type="Objects", source=self.source, repo_id=self.repo_id)
             indices = list(range(len(obj_ds)))
             random.shuffle(indices)
-            for i in range(0, n * 2, 2):
+            max_pairs = min(n, len(indices) // 2)
+            for i in range(0, max_pairs * 2, 2):
                 pairs.append(
                     {
                         "original": obj_ds.get_image(indices[i]),

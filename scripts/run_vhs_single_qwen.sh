@@ -8,7 +8,6 @@
 #SBATCH --mem=48G
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1
-#SBATCH --constraint=A6000
 
 # VHS single-needle: qwen3-vl-8b
 

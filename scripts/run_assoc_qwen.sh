@@ -8,7 +8,6 @@
 #SBATCH --mem=48G
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1
-#SBATCH --constraint=A6000
 
 # Associative Inference: qwen3-vl-8b (local inference, requires GPU)
 
@@ -23,7 +22,7 @@ export HF_DATASETS_OFFLINE=1
 
 MODEL="qwen"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(2 4 6 10 100 250)
+SIZES=(2 4 6 10 50 100 250)
 DATASETS=("things" "Brady2008")
 VARIANTS=("word" "image")
 
@@ -43,6 +42,12 @@ for dataset in "${DATASETS[@]}"; do
     for variant in "${VARIANTS[@]}"; do
         echo "  -- Pair type: $variant --"
         for n in "${SIZES[@]}"; do
+            # See LIMITATIONS.md: image variant at smallest n on THINGS has no spare
+            # category for the test-phase foil (raises ValueError in associative_inference.py).
+            if [ "$variant" = "image" ] && [ "$dataset" = "things" ] && [ "$n" = "2" ]; then
+                echo "  [SKIP] $dataset | $variant | n=$n (no foil available, see LIMITATIONS.md)"
+                continue
+            fi
             if check_existing_result "$dataset" "$n" "$variant"; then
                 echo "  [EXISTS] $dataset | $variant | n=$n"
                 continue

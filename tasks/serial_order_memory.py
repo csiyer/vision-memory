@@ -101,7 +101,7 @@ class SerialOrderMemoryTask(SerialOrderMemoryBase):
             test_phase.append(
                 {
                     "image": item["image"],
-                    "prompt": f"What position in the sequence did this image appear (1-{n})?",
+                    "prompt": f"What position in the sequence did this image appear (1-{n})? Reply with only the position number and nothing else.",
                     "target": item["serial_position"],
                     "metadata": item["metadata"],
                 }
@@ -150,7 +150,7 @@ class AFCSerialOrderMemoryTask(SerialOrderMemoryBase):
             test_phase.append(
                 {
                     "images": [pair[0]["image"], pair[1]["image"]],
-                    "prompt": "Which of these two images (1 or 2) appeared first in the study sequence?",
+                    "prompt": "Which of these two images appeared first in the study sequence? Reply with only the digit 1 or 2 and nothing else.",
                     "target": target,
                     "metadata": {
                         "first_serial_position": min(first_item["serial_position"], second_item["serial_position"]),

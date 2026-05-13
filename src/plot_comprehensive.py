@@ -11,30 +11,38 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 import numpy as np
 import matplotlib.pyplot as plt
-from plot_scaling_curves import load_results
+from matplotlib.lines import Line2D
+from plot_scaling_curves import load_results, model_capability_boundary
+
+CAPABILITY_X_KWARGS = dict(marker="x", color="black", markersize=14,
+                           markeredgewidth=2.5, linestyle="None", zorder=6)
+CAPABILITY_LEGEND_LABEL = "Capability limit (largest N handled)"
 
 OUTPUT_DIR = Path("plots/comprehensive")
 
 # Model colors and styles
 MODEL_COLORS = {
-    "qwen3-vl-8b":      "#E8853D",  # orange
-    "molmo2-8b":        "#2980B9",  # blue
-    "gpt-4o":           "#27AE60",  # green
-    "gemini-2.5-flash": "#8E44AD",  # purple
+    "qwen3-vl-8b":       "#E8853D",  # orange
+    "molmo2-8b":         "#2980B9",  # blue
+    "claude-sonnet-4-0": "#C0392B",  # red
+    "gpt-4o":            "#27AE60",  # green
+    "gemini-2.5-flash":  "#8E44AD",  # purple
 }
 MODEL_LABELS = {
-    "qwen3-vl-8b":      "Qwen3-VL-8B",
-    "molmo2-8b":        "Molmo2-8B",
-    "gpt-4o":           "GPT-4o",
-    "gemini-2.5-flash": "Gemini-2.5-Flash",
+    "qwen3-vl-8b":       "Qwen3-VL-8B",
+    "molmo2-8b":         "Molmo2-8B",
+    "claude-sonnet-4-0": "Claude Sonnet 4",
+    "gpt-4o":            "GPT-4o",
+    "gemini-2.5-flash":  "Gemini-2.5-Flash",
 }
 MODEL_MARKERS = {
-    "qwen3-vl-8b":      "o",
-    "molmo2-8b":        "s",
-    "gpt-4o":           "^",
-    "gemini-2.5-flash": "D",
+    "qwen3-vl-8b":       "o",
+    "molmo2-8b":         "s",
+    "claude-sonnet-4-0": "v",
+    "gpt-4o":            "^",
+    "gemini-2.5-flash":  "D",
 }
-MODEL_ORDER = ["qwen3-vl-8b", "molmo2-8b", "gpt-4o", "gemini-2.5-flash"]
+MODEL_ORDER = ["qwen3-vl-8b", "molmo2-8b", "claude-sonnet-4-0", "gpt-4o", "gemini-2.5-flash"]
 
 # Linestyle encodes dataset
 DATASET_LINESTYLES = {
@@ -59,8 +67,8 @@ TASK_CONFIGS = [
     ("mst",             "all",    ["MST"],                         "Mnemonic Similarity Task\nAccuracy vs Sequence Length"),
     ("serial_free",     "all",    ["Brady2008", "things"],         "Serial (Free Recall)\nAccuracy vs Sequence Length"),
     ("serial_afc",      "all",    ["Brady2008", "things"],         "Serial AFC\nAccuracy vs Sequence Length"),
-    ("color_continuous","all",    ["color"],                       "Color Memory (continuous report)\nAccuracy vs Sequence Length"),
-    ("color_named",     "all",    ["color"],                       "Color Memory (ROYGBIV named)\nAccuracy vs Sequence Length"),
+    ("color_continuous","all",    ["Brady2013ColorObjects"],       "Color Memory (continuous report)\nAccuracy vs Sequence Length"),
+    ("color_named",     "all",    ["Brady2013ColorObjects"],       "Color Memory (ROYGBIV named)\nAccuracy vs Sequence Length"),
     ("pam_word",        "all",    ["Brady2008", "things"],         "PAM (image-word)\nAccuracy vs Sequence Length"),
     ("pam_image",       "all",    ["Brady2008", "things"],         "PAM (image-image 2-AFC)\nAccuracy vs Sequence Length"),
     ("assoc_word",      "all",    ["Brady2008", "things"],         "Associative Inference (image-word)\nAccuracy vs Sequence Length"),
@@ -135,6 +143,10 @@ def make_comprehensive_plot(data, task, foil, datasets, title):
                     markersize=8, linewidth=2.5,
                     color=color, label=label)
 
+            boundary = model_capability_boundary(data, task, foil, dataset, model)
+            if boundary is not None and accs:
+                ax.plot([sizes[-1]], [accs[-1]], **CAPABILITY_X_KWARGS)
+
         # Human reference points
         human_points = HUMAN_DATA.get((task, foil, dataset), [])
         for x, acc, citation in human_points:
@@ -155,7 +167,11 @@ def make_comprehensive_plot(data, task, foil, datasets, title):
 
     _apply_axes(ax, max_human_x)
     ax.set_title(title)
-    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.18),
+    handles, labels = ax.get_legend_handles_labels()
+    handles.append(Line2D([], [], **CAPABILITY_X_KWARGS))
+    labels.append(CAPABILITY_LEGEND_LABEL)
+    ax.legend(handles, labels,
+              loc="upper center", bbox_to_anchor=(0.5, -0.18),
               ncol=2, framealpha=0.9, borderaxespad=0)
 
     plt.tight_layout()

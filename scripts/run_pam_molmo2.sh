@@ -8,7 +8,6 @@
 #SBATCH --mem=48G
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1
-#SBATCH --constraint=A6000
 
 # Paired Associate Memory: molmo2-8b
 
@@ -23,7 +22,7 @@ export HF_DATASETS_OFFLINE=1
 
 MODEL="molmo2"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250)
+SIZES=(1 2 5 10 50 100 250)
 DATASETS=("things" "Brady2008")
 VARIANTS=("word" "image")
 
@@ -43,6 +42,12 @@ for dataset in "${DATASETS[@]}"; do
     for variant in "${VARIANTS[@]}"; do
         echo "  -- Pair type: $variant --"
         for size in "${SIZES[@]}"; do
+            # See LIMITATIONS.md: image variant at n=1 on THINGS has no spare
+            # category for the 2-AFC foil (raises ValueError in paired_associate_memory.py).
+            if [ "$variant" = "image" ] && [ "$dataset" = "things" ] && [ "$size" = "1" ]; then
+                echo "  [SKIP] $dataset | $variant | n=$size (no foil available, see LIMITATIONS.md)"
+                continue
+            fi
             if check_existing_result "$dataset" "$size" "$variant"; then
                 echo "  [EXISTS] $dataset | $variant | n=$size"
                 continue

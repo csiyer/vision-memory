@@ -2,6 +2,51 @@ import numpy as np
 from scipy.stats import norm, spearmanr
 from sklearn.metrics import f1_score
 
+
+def wilson_ci(k, n, alpha=0.05):
+    """Wilson score interval for a binomial proportion.
+
+    Returns (point, lo, hi). Handles n=0 and edge counts (0/n, n/n) gracefully —
+    unlike the bootstrap, which collapses to a point at the boundaries.
+    """
+    if n <= 0:
+        return 0.0, 0.0, 0.0
+    z = norm.ppf(1 - alpha / 2)
+    phat = k / n
+    denom = 1 + z * z / n
+    center = (phat + z * z / (2 * n)) / denom
+    margin = z * np.sqrt(phat * (1 - phat) / n + z * z / (4 * n * n)) / denom
+    return float(phat), float(max(0.0, center - margin)), float(min(1.0, center + margin))
+
+
+def bootstrap_ci(data, statistic_fn, n_boot=2000, ci=0.95, seed=0):
+    """Percentile bootstrap CI for an arbitrary statistic over a list of items.
+
+    `data` is any indexable collection (list of per-trial dicts, array of floats).
+    `statistic_fn` takes a resampled list and returns a scalar.
+
+    Returns (point_estimate, lo, hi).
+    """
+    if not data:
+        return 0.0, 0.0, 0.0
+    data = list(data)
+    n = len(data)
+    rng = np.random.default_rng(seed)
+    point = float(statistic_fn(data))
+    stats = np.empty(n_boot)
+    for b in range(n_boot):
+        idx = rng.integers(0, n, n)
+        stats[b] = statistic_fn([data[i] for i in idx])
+    # Drop NaN resamples (degenerate cases where the statistic is undefined,
+    # e.g. an MST resample with zero lures or zero foils).
+    stats = stats[~np.isnan(stats)]
+    if stats.size == 0:
+        return point, float("nan"), float("nan")
+    lo_pct = 100 * (1 - ci) / 2
+    hi_pct = 100 * (1 - (1 - ci) / 2)
+    lo, hi = np.percentile(stats, [lo_pct, hi_pct])
+    return point, float(lo), float(hi)
+
 def calculate_metrics(responses, targets):
     """Calculate performance metrics for the continuous recognition task."""
     responses = np.array(responses)
@@ -125,8 +170,10 @@ def calculate_color_metrics(reported_colors, actual_colors, n_colors=360):
     threshold = n_colors / 4
     guess_rate = np.mean(abs_error > threshold)
 
+    avg_err = float(np.mean(abs_error))
     return {
-        "average_abs_error": float(np.mean(abs_error)),
+        "accuracy": max(0.0, 1.0 - avg_err / (n_colors / 2)),
+        "average_abs_error": avg_err,
         "guess_rate_heuristic": float(guess_rate),
         "precision_heuristic": float(1.0 / np.std(diff)) if np.std(diff) > 0 else 0
     }
@@ -251,6 +298,7 @@ def calculate_mst_metrics(results):
     """
     if not results:
         return {
+            "accuracy": 0, "n_correct": 0, "total": 0,
             "hit_rate": 0, "false_alarm_rate": 0,
             "ldi": 0, "ldi_by_bin": {},
             "target_accuracy": 0, "lure_accuracy": 0, "foil_accuracy": 0,
@@ -287,7 +335,13 @@ def calculate_mst_metrics(results):
         if bin_lures:
             ldi_by_bin[bin_num] = float(_rate(bin_lures, "similar") - p_sim_foil)
 
+    n_correct = sum(1 for r in results if r.get("correct"))
+    accuracy = n_correct / len(results) if results else 0.0
+
     return {
+        "accuracy": float(accuracy),
+        "n_correct": int(n_correct),
+        "total": len(results),
         "hit_rate": float(hit_rate),
         "false_alarm_rate": float(fa_rate),
         "p_similar_lure": float(p_sim_lure),
