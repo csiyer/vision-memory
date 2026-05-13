@@ -1,0 +1,307 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_145509",
+    "dataset": "things",
+    "pair_type": "word",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.2,
+        "n_correct": 2,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a window air conditioner.\n\n- **WORD853** is associated with the image of the aardvark (from the AB pair).\n- **WORD849** is associated with the image of the abacus (from the AB pair).\n\nThe aardvark is a mammal, and the abacus is a tool for calculation.\n\nThe window air conditioner is a device for cooling. There is no direct or indirect connection between an air conditioner and either an",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a high-pressure air tank with a pump, which is used to inflate things like tires or air mattresses.\n\nLooking at the options:\n- **WORD766** is associated with the image of the aardvark.\n- **WORD875** is associated with the image of the abacus.\n\nThe connection is indirect. The air tank is used to inflate objects. The abacus is an ancient calculating tool, and its beads are often made from materials like wood or",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1: WORD76",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aircraft_carrier",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aircraft_carrier/aircraft_carrier_01b.jpg",
+            "local_filename": "aircraft_carrier_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a high-pressure air tank with a pump, which is used to inflate things like tires or air mattresses.\n\nLooking at the options:\n- **WORD424** is associated with the accordion (image B). An accordion is a musical instrument, not directly related to inflation.\n- **WORD828** is associated with the airboat (image J). An airboat is a type of boat that uses an air pump to propel itself through water, which is a direct application",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a window air conditioner.\n\n- **WORD571** is associated with the accordion (image B). The accordion is a musical instrument, and music is often played in air-conditioned rooms for comfort.\n- **WORD861** is associated with the inflatable mattress (image H). An inflatable mattress is used for sleeping, which is a common activity in a room cooled by an air conditioner.\n\nWhile both are plausible, the connection to **WORD861** (",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an airboat.\n\n- **WORD29** is associated with the image of the window air conditioner (Image B). Air conditioners cool air, and airboats are designed to move through water, which is a different medium. There is no direct or indirect connection between an airboat and an air conditioner.\n\n- **WORD496** is associated with the image of the accordion (Image J). The accordion is a musical instrument that produces sound by compressing and expanding",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an aardvark.\n\n- **WORD472** is associated with the acorn (image B), which is a food source for many animals, including some that might be found in the same habitats as aardvarks. However, this is a very indirect connection.\n- **WORD317** is associated with the deployed airbags (image F). Airbags are a safety feature in cars, which are man-made objects. There is no direct or",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image is of a window air conditioner.\n\n- **WORD79** is associated with the abacus (image 4). An abacus is a tool for calculation, and air conditioners are often used to calculate or manage cooling needs, but this is a very weak connection.\n- **WORD495** is associated with the air compressor (image 2). Air conditioners work by compressing and expanding refrigerant gas to move heat. The air compressor is a core component of",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image is of an aardvark.\n\nThe word \"WORD810\" is associated with the abacus (image 10), which is an ancient calculating tool.\n\nThe word \"WORD477\" is associated with the airbag (image 2), which is a safety device in cars.\n\nAn aardvark is a mammal known for its long snout and digging abilities. It is not directly related to either an abacus or an airbag.\n\nHowever",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an **air mattress**.\n\nLet's examine the two options:\n\n- **WORD861** is associated with the image of an **acorn**.\n- **WORD64** is associated with the image of a **window air conditioner**.\n\nThe air mattress is an inflatable item, and its function is to provide a bed. The air conditioner, on the other hand, is a device that cools the air. While both involve air, the connection is indirect",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_mattress",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_mattress/air_mattress_01b.jpg",
+            "local_filename": "air_mattress_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      }
+    ],
+    "accuracy": 0.2,
+    "n_correct": 2,
+    "total": 10
+  }
+}

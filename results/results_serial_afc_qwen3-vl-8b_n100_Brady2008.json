@@ -1,0 +1,194 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260508_163407",
+    "dataset": "Brady2008",
+    "n_images": 100,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.6
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the Chinese porcelain figurine holding a clock is the 35th image in the sequence.\nThe image of the vintage telephone is the 36th image in the sequence.\n\nTherefore, the porcelain figurine (Image 1) came before the telephone (Image 2).",
+        "metadata": {
+          "first_serial_position": 32,
+          "second_serial_position": 33,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 33,
+          "right_image_serial_position": 32
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nImage 1 is the black kinetic sculpture with three blue discs, which is the 42nd image in the sequence.\nImage 2 is the textured, spherical glass object, which is the 23rd image in the sequence.\n\nTherefore, Image 2 appeared first.",
+        "metadata": {
+          "first_serial_position": 24,
+          "second_serial_position": 78,
+          "serial_lag": 54,
+          "lag_bin": "lag_11_100",
+          "distance": 53,
+          "left_image_serial_position": 78,
+          "right_image_serial_position": 24
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the wooden dolly (Image 1) is the 18th image in the sequence.\nThe image of the gold pin with a pearl (Image 2) is the 17th image in the sequence.\n\nTherefore, the gold pin with the pearl (Image 2) appeared first, followed by the wooden dolly (Image 1).\n\nI apologize for the error in my previous response. I have now correctly identified",
+        "metadata": {
+          "first_serial_position": 18,
+          "second_serial_position": 19,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 19,
+          "right_image_serial_position": 18
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nImage 2 is the pile of yellow lentils, which is the 13th image in the sequence.\nImage 1 is the Donald Duck figurine, which is the 45th image in the sequence.\n\nTherefore, Image 2 (the lentils) came before Image 1 (Donald Duck) in the sequence.",
+        "metadata": {
+          "first_serial_position": 13,
+          "second_serial_position": 84,
+          "serial_lag": 71,
+          "lag_bin": "lag_11_100",
+          "distance": 70,
+          "left_image_serial_position": 84,
+          "right_image_serial_position": 13
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nThe image of the wooden podium with a black iron fence (Image 1) is the 26th image in the sequence.\nThe image of the seal (Image 2) is the 32nd image in the sequence.\n\nTherefore, the podium image came before the seal image.",
+        "metadata": {
+          "first_serial_position": 27,
+          "second_serial_position": 31,
+          "serial_lag": 4,
+          "lag_bin": "lag_4_10",
+          "distance": 3,
+          "left_image_serial_position": 27,
+          "right_image_serial_position": 31
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nImage 1 is the fortune cookie, which is the 10th image in the sequence.\nImage 2 is the computer monitor, which is the 12th image in the sequence.\n\nTherefore, the fortune cookie (Image 1) appeared before the computer monitor (Image 2).",
+        "metadata": {
+          "first_serial_position": 10,
+          "second_serial_position": 12,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 12
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nImage 1 is the white washing machine, which is the 49th image in the sequence.\nImage 2 is the sesame seed bagel, which is the 50th image in the sequence.\n\nTherefore, the washing machine (Image 1) came before the bagel (Image 2).",
+        "metadata": {
+          "first_serial_position": 62,
+          "second_serial_position": 63,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 62,
+          "right_image_serial_position": 63
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the metal food slicer (Image 1) is the 43rd image in the sequence.\nThe image of the pizza cutter (Image 2) is the 44th image in the sequence.\n\nTherefore, the food slicer appeared first.",
+        "metadata": {
+          "first_serial_position": 58,
+          "second_serial_position": 61,
+          "serial_lag": 3,
+          "lag_bin": "lag_2_3",
+          "distance": 2,
+          "left_image_serial_position": 58,
+          "right_image_serial_position": 61
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the caulking gun is the 35th image in the sequence, while the image of the flexible duct is the 36th image. Therefore, the caulking gun image came first.",
+        "metadata": {
+          "first_serial_position": 36,
+          "second_serial_position": 39,
+          "serial_lag": 3,
+          "lag_bin": "lag_2_3",
+          "distance": 2,
+          "left_image_serial_position": 39,
+          "right_image_serial_position": 36
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nImage 1 is the potato, which is the 8th image in the sequence.\nImage 2 is the paint sprayer, which is the 42nd image in the sequence.\n\nTherefore, the potato (Image 1) came before the paint sprayer (Image 2).",
+        "metadata": {
+          "first_serial_position": 8,
+          "second_serial_position": 100,
+          "serial_lag": 92,
+          "lag_bin": "lag_11_100",
+          "distance": 91,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 100
+        }
+      }
+    ],
+    "accuracy": 0.6,
+    "n_correct": 6,
+    "total": 10,
+    "accuracy_by_distance": {
+      "0": 0.3333333333333333,
+      "1": 1.0,
+      "2": 0.5,
+      "3": 1.0,
+      "53": 0.0,
+      "70": 1.0,
+      "91": 1.0
+    }
+  }
+}

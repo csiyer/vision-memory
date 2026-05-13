@@ -1,0 +1,174 @@
+{
+  "_metadata": {
+    "task": "Color Memory (Named)",
+    "variant": "named",
+    "timestamp": "20260508_161133",
+    "dataset": "Brady2013ColorObjects",
+    "n_images": 50,
+    "n_trials": 10,
+    "models": [
+      "claude-sonnet-4-0"
+    ],
+    "summary": {
+      "claude-sonnet-4-0": {
+        "accuracy": 0.4,
+        "n_correct": 4,
+        "total": 10
+      }
+    }
+  },
+  "claude-sonnet-4-0": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "yellow",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this tray, I can see it matches the serving tray that appeared in the study",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj325.jpg",
+          "name": "obj325.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "purple",
+        "reported": "purple",
+        "correct": 1,
+        "raw_response": "Purple.\n\nIn the study sequence, this high-heeled shoe was shown in purple color.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj354.jpg",
+          "name": "obj354.jpg",
+          "target_color_name": "purple",
+          "rotation_angle_degrees": 300,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "green",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this utility knife, I can see it appears in grayscale in this image, but",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj141.jpg",
+          "name": "obj141.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "blue",
+        "reported": "blue",
+        "correct": 1,
+        "raw_response": "Based on the study sequence I just reviewed, this hippo figure was **blue** in color.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj169.jpg",
+          "name": "obj169.jpg",
+          "target_color_name": "blue",
+          "rotation_angle_degrees": 240,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "blue",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this spherical object, I can see it matches the shape and texture of an item that",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj483.jpg",
+          "name": "obj483.jpg",
+          "target_color_name": "blue",
+          "rotation_angle_degrees": 240,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "purple",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this hair dryer image, I can see it appears in grayscale here. From",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj302.jpg",
+          "name": "obj302.jpg",
+          "target_color_name": "purple",
+          "rotation_angle_degrees": 300,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "orange",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this item, I can see it's a window or cabinet door with a metal frame.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj501.jpg",
+          "name": "obj501.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "orange",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this cookie cutter shape, I can see it matches the last item in the study sequence",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj283.jpg",
+          "name": "obj283.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "green",
+        "reported": "green",
+        "correct": 1,
+        "raw_response": "Green.\n\nThis glass pitcher/decanter with a handle and stopper was green in the study",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj268.jpg",
+          "name": "obj268.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "green",
+        "reported": "green",
+        "correct": 1,
+        "raw_response": "Looking at this sponge-like rectangular item, in the study sequence it was **green**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj331.jpg",
+          "name": "obj331.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      }
+    ],
+    "accuracy": 0.4,
+    "n_correct": 4,
+    "total": 10,
+    "accuracy_by_color": {
+      "blue": 0.5,
+      "green": 0.6666666666666666,
+      "orange": 0.0,
+      "purple": 0.5,
+      "yellow": 0.0
+    }
+  }
+}

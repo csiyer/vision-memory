@@ -1,0 +1,192 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260508_164109",
+    "dataset": "Brady2008",
+    "n_images": 250,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.7
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence. It shows two white cotton swabs, and it is the 34th image in the list. Image 2, showing a wooden barrel, is the 33rd image, which comes before Image 1.\n\nTherefore, Image 1 (the cotton swabs) appeared first.",
+        "metadata": {
+          "first_serial_position": 32,
+          "second_serial_position": 34,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 34,
+          "right_image_serial_position": 32
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nImage 1 shows a collection of smooth, dark, polished stones, which are commonly known as obsidian or similar black stones. Image 2 shows a bottle of Shiseido makeup foundation.\n\nIn the original sequence you provided, the image of the black stones (Image 1) is located at position 100, while the image of the foundation (Image 2) is located at position 101. Therefore, Image",
+        "metadata": {
+          "first_serial_position": 180,
+          "second_serial_position": 181,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 181,
+          "right_image_serial_position": 180
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 185,
+          "second_serial_position": 217,
+          "serial_lag": 32,
+          "lag_bin": "lag_11_100",
+          "distance": 31,
+          "left_image_serial_position": 217,
+          "right_image_serial_position": 185
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nImage 1 is the orange textured grip, which is the 9th image in the sequence.\nImage 2 is the metal strainer, which is the 15th image in the sequence.\n\nTherefore, Image 1 (the grip) came before Image 2 (the strainer) in the study sequence.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 15,
+          "serial_lag": 6,
+          "lag_bin": "lag_4_10",
+          "distance": 5,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 15
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nThe image of the old, dark leather-bound book with a cross on the cover is the 34th image in the sequence.\nThe image of the vintage portable television is the 35th image in the sequence.\n\nTherefore, the book (Image 1) came before the television (Image 2).",
+        "metadata": {
+          "first_serial_position": 39,
+          "second_serial_position": 45,
+          "serial_lag": 6,
+          "lag_bin": "lag_4_10",
+          "distance": 5,
+          "left_image_serial_position": 39,
+          "right_image_serial_position": 45
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the wicker basket on a stand (Image 1) is the 41st image in the sequence.\nThe image of the metal lantern (Image 2) is the 42nd image in the sequence.\n\nTherefore, Image 1 came before Image 2.",
+        "metadata": {
+          "first_serial_position": 138,
+          "second_serial_position": 144,
+          "serial_lag": 6,
+          "lag_bin": "lag_4_10",
+          "distance": 5,
+          "left_image_serial_position": 138,
+          "right_image_serial_position": 144
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the boat) appeared first in the sequence. It is the 25th image in the list, while Image 2 (the toilet paper holder) is the 26th image.",
+        "metadata": {
+          "first_serial_position": 26,
+          "second_serial_position": 27,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 26,
+          "right_image_serial_position": 27
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the wooden tetrahedron model (Image 1) is the 11th image in the sequence.\nThe image of the aquarium on a stand (Image 2) is the 13th image in the sequence.\n\nTherefore, the wooden tetrahedron model appeared first.",
+        "metadata": {
+          "first_serial_position": 11,
+          "second_serial_position": 13,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 11,
+          "right_image_serial_position": 13
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nImage 1 is the metal bed frame, which is the 42nd image in the sequence.\nImage 2 is the blue mobility scooter, which is the 43rd image in the sequence.\n\nTherefore, Image 1 came before Image 2.",
+        "metadata": {
+          "first_serial_position": 93,
+          "second_serial_position": 95,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 93,
+          "right_image_serial_position": 95
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nImage 1 is the contact lens case, which is the 44th image in the sequence.\nImage 2 is the \"30\" speed limit sign, which is the 45th image in the sequence.\n\nTherefore, the contact lens case (Image 1) came before the speed limit sign (Image 2).",
+        "metadata": {
+          "first_serial_position": 93,
+          "second_serial_position": 195,
+          "serial_lag": 102,
+          "lag_bin": "lag_gt_100",
+          "distance": 101,
+          "left_image_serial_position": 93,
+          "right_image_serial_position": 195
+        }
+      }
+    ],
+    "accuracy": 0.7,
+    "n_correct": 7,
+    "total": 10,
+    "accuracy_by_distance": {
+      "0": 0.5,
+      "1": 0.6666666666666666,
+      "5": 1.0,
+      "31": 0.0,
+      "101": 1.0
+    }
+  }
+}

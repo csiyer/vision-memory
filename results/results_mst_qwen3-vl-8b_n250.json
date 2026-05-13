@@ -1,0 +1,177 @@
+{
+  "_metadata": {
+    "task": "Mnemonic Similarity Task",
+    "timestamp": "20260510_130904",
+    "dataset": "MST",
+    "n_study": 250,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "ldi": 0.6666666666666666,
+        "hit_rate": 0.3333333333333333,
+        "false_alarm_rate": 0.0,
+        "target_accuracy": 0.3333333333333333,
+        "lure_accuracy": 0.6666666666666666,
+        "foil_accuracy": 1.0,
+        "accuracy": 0.7
+      }
+    },
+    "n_images": 250
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "type": "target",
+        "target": "old",
+        "reported": "new",
+        "correct": 0,
+        "raw_response": "new",
+        "metadata": {
+          "set_number": 6,
+          "item_id": 76,
+          "bin": null
+        }
+      },
+      {
+        "trial": 1,
+        "type": "foil",
+        "target": "new",
+        "reported": "new",
+        "correct": 1,
+        "raw_response": "new",
+        "metadata": {
+          "set_number": 1,
+          "item_id": 83,
+          "bin": null
+        }
+      },
+      {
+        "trial": 2,
+        "type": "lure",
+        "target": "similar",
+        "reported": "similar",
+        "correct": 1,
+        "raw_response": "similar",
+        "metadata": {
+          "set_number": 4,
+          "item_id": 30,
+          "bin": 4
+        }
+      },
+      {
+        "trial": 3,
+        "type": "foil",
+        "target": "new",
+        "reported": "new",
+        "correct": 1,
+        "raw_response": "new",
+        "metadata": {
+          "set_number": 2,
+          "item_id": 96,
+          "bin": null
+        }
+      },
+      {
+        "trial": 4,
+        "type": "lure",
+        "target": "similar",
+        "reported": "similar",
+        "correct": 1,
+        "raw_response": "similar",
+        "metadata": {
+          "set_number": 1,
+          "item_id": 72,
+          "bin": 3
+        }
+      },
+      {
+        "trial": 5,
+        "type": "target",
+        "target": "old",
+        "reported": "old",
+        "correct": 1,
+        "raw_response": "old",
+        "metadata": {
+          "set_number": 5,
+          "item_id": 95,
+          "bin": null
+        }
+      },
+      {
+        "trial": 6,
+        "type": "foil",
+        "target": "new",
+        "reported": "new",
+        "correct": 1,
+        "raw_response": "new",
+        "metadata": {
+          "set_number": 5,
+          "item_id": 85,
+          "bin": null
+        }
+      },
+      {
+        "trial": 7,
+        "type": "target",
+        "target": "old",
+        "reported": "similar",
+        "correct": 0,
+        "raw_response": "similar",
+        "metadata": {
+          "set_number": 5,
+          "item_id": 10,
+          "bin": null
+        }
+      },
+      {
+        "trial": 8,
+        "type": "foil",
+        "target": "new",
+        "reported": "new",
+        "correct": 1,
+        "raw_response": "new",
+        "metadata": {
+          "set_number": 4,
+          "item_id": 45,
+          "bin": null
+        }
+      },
+      {
+        "trial": 9,
+        "type": "lure",
+        "target": "similar",
+        "reported": "new",
+        "correct": 0,
+        "raw_response": "new",
+        "metadata": {
+          "set_number": 4,
+          "item_id": 110,
+          "bin": 5
+        }
+      }
+    ],
+    "hit_rate": 0.3333333333333333,
+    "false_alarm_rate": 0.0,
+    "p_similar_lure": 0.6666666666666666,
+    "p_similar_foil": 0.0,
+    "ldi": 0.6666666666666666,
+    "ldi_by_bin": {
+      "3": 1.0,
+      "4": 1.0,
+      "5": 0.0
+    },
+    "target_accuracy": 0.3333333333333333,
+    "lure_accuracy": 0.6666666666666666,
+    "foil_accuracy": 1.0,
+    "n_targets": 3,
+    "n_lures": 3,
+    "n_foils": 4,
+    "accuracy": 0.7,
+    "n_correct": 7,
+    "total": 10
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260513_135948",
+    "dataset": "Brady2008",
+    "pair_type": "word",
+    "n_images": 50,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.2,
+        "n_correct": 2,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "VEST",
+        "reported": "dwarf",
+        "correct": 0,
+        "raw_response": "DWARF",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/Alambtoy6.jpg",
+          "name": "Alambtoy6.jpg"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "DAM",
+        "reported": "foot",
+        "correct": 0,
+        "raw_response": "FOOT",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/26424478.thl.jpg",
+          "name": "26424478.thl.jpg"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "DISH",
+        "reported": "rust",
+        "correct": 0,
+        "raw_response": "RUST",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/Aprintingpre5.jpg",
+          "name": "Aprintingpre5.jpg"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "TEA",
+        "reported": "tea",
+        "correct": 1,
+        "raw_response": "TEA",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/clips-a.jpg",
+          "name": "clips-a.jpg"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "CHEST",
+        "reported": "elf",
+        "correct": 0,
+        "raw_response": "ELF",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/26467443.thl.jpg",
+          "name": "26467443.thl.jpg"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "FRIEND",
+        "reported": "supervisor",
+        "correct": 0,
+        "raw_response": "SUPERVISOR",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/ATELEPH12.jpg",
+          "name": "ATELEPH12.jpg"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "SLEIGH",
+        "reported": "captain",
+        "correct": 0,
+        "raw_response": "CAPTAIN",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/8077486.thl.jpg",
+          "name": "8077486.thl.jpg"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "NOSE",
+        "reported": "nose",
+        "correct": 1,
+        "raw_response": "NOSE",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/Aceramicjug10.jpg",
+          "name": "Aceramicjug10.jpg"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "FLORIDA",
+        "reported": "comet",
+        "correct": 0,
+        "raw_response": "COMET",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/ASKELETO4.jpg",
+          "name": "ASKELETO4.jpg"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "EYELASH",
+        "reported": "fungus",
+        "correct": 0,
+        "raw_response": "FUNGUS",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/Aglass58.jpg",
+          "name": "Aglass58.jpg"
+        }
+      }
+    ],
+    "accuracy": 0.2,
+    "n_correct": 2,
+    "total": 10
+  }
+}

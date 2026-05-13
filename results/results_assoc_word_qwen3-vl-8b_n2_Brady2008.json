@@ -1,0 +1,267 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_173823",
+    "dataset": "Brady2008",
+    "pair_type": "word",
+    "n_images": 2,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.3,
+        "n_correct": 3,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The correct answer is **2: MEAL**.\n\nHere's the reasoning:\n\n*   The cue image is a **portable cassette recorder**.\n*   The **BC pair** is a **green plastic chair**.\n*   The word associated with the BC pair is **CLAY**.\n\nThe hidden connection is that **\"clay\"** is the raw material used to make **ceramic**. Ceramic is used to make **porcelain**, which is a material used to make **",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Ataperecorde4.jpg",
+            "name": "Ataperecorde4.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The correct answer is **1: RAT**.\n\nHere's the reasoning:\n\n*   The cue image is a boot on a stand.\n*   The boot is a piece of footwear, typically worn on the foot.\n*   The word \"RAT\" is a homophone for \"rat\" (the animal) and can be a play on the word \"rat\" meaning to \"run\" or \"scamper\" (as in \"rat race\").\n*   However, the more direct and",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Ashoeshines15.jpg",
+            "name": "Ashoeshines15.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a cookie.\n\nThe word \"GOO\" is indirectly associated with the cookie.\n\nThis connection is established through the earlier (BC) pair: the image of the medical device (a stethoscope and a box of supplies) was paired with the word \"GOO\".\n\nThe hidden connection is that \"GOO\" is a common term for the substance that comes out of a cookie when it's bitten into \u2014 the gooey, molten center of a cookie like a chocolate chip",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/A_cookie.jpg",
+            "name": "A_cookie.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The correct answer is **2: EMPLOYER**.\n\nHere's the reasoning based on the hidden connection:\n\n1.  **The Cue Image:** The image is of a Dalmatian dog.\n2.  **The Hidden Connection:** The key is to look at the *word* associated with the *second* image in the pair, which is \"TEMPLE\".\n3.  **The Link:** The word \"TEMPLE\" is associated with the second image (popcorn) because",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Adalmatiandog.jpg",
+            "name": "Adalmatiandog.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a decorated egg, which is strongly associated with Easter.\n\n*   **MISTER** is a title of respect, often used for men, and is not directly or indirectly related to Easter eggs.\n*   **REFEREE** is a person who officiates a game or match. While not a direct connection, the word \"REFEREE\" can be an indirect association because in some contexts, especially in sports, a \"referee\" might be called upon to \"egg\" someone",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Aeasteregg14.jpg",
+            "name": "Aeasteregg14.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The correct answer is **1: TIE**.\n\nHere's the reasoning based on the hidden connection:\n\n*   The cue image is a **pickle**.\n*   The word **\"TIE\"** is indirectly associated because a pickle is often used as a **\"pickle\"** in the phrase **\"pickle in a tie\"** or more commonly, **\"to be in a pickle\"**. This idiom means to be in a difficult or awkward situation.\n*   The word",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/APICKLE.jpg",
+            "name": "APICKLE.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct answer is **2: CLOCK**.\n\nHere's the reasoning:\n\nThe cue image is a toy cash register. The key hidden connection is that the display screen on the cash register is designed to look like a **clock**. It has a grid of squares that resemble the face of a digital clock or a time display.\n\nWhile \"CUBE\" is a word that could describe the shape of the cash register's base or the display unit, the more direct and specific hidden connection is to \"",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Atoyhomeoffi4.jpg",
+            "name": "Atoyhomeoffi4.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a TIFEX Mold & Mildew spray bottle.\n\nThe word \"MISSILE\" is indirectly associated with this image.\n\nHere's the connection:\n- The word \"TIFEX\" is a brand name.\n- \"TIFEX\" is a play on the word \"TIF\" (a common abbreviation for \"TIF\" or \"TIF\" in some contexts, but more importantly, it's a pun on \"TIF\" which sounds like \"Tiff",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/xqx00017.jpg",
+            "name": "xqx00017.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The correct answer is **2: PAW**.\n\nHere's the reasoning:\n\n*   The cue image is a green plastic chair.\n*   The \"BC pair\" was a red cube made of smaller cubes, which was paired with the word **THORN**.\n*   The connection between the red cube and \"THORN\" is likely **visual** or **structural**. The cube is made of smaller, individual cubes, and a \"thorn\" is a small, sharp point.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Agreenplastic.jpg",
+            "name": "Agreenplastic.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The correct answer is **1: TUB**.\n\nHere's the reasoning:\n\n*   The cue image is a **quiche** (a savory pie).\n*   The **BC pair** showed a **deer** with the word **TUB**.\n*   The hidden connection is that the word **\"TUB\"** is an anagram of **\"BUT\"**.\n*   The word **\"BUT\"** is a common word that can be associated with a **",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/quiche.jpg",
+            "name": "quiche.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      }
+    ],
+    "accuracy": 0.3,
+    "n_correct": 3,
+    "total": 10
+  }
+}

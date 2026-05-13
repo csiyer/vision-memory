@@ -50,7 +50,9 @@ This determines which `(task, N, model)` combos are reachable — see per-model 
 - Model weights are split across two cache locations — shards 1–2 in `~/.cache/huggingface/models--Qwen--Qwen3-VL-8B-Instruct/`, shards 3–4 in `~/.cache/huggingface/hub/...`. Symlinks resolve this.
 
 ### Molmo2
-- Local inference on GPU. No specific per-request image cap documented; same `(1 2 5 10 100 250)` size convention as Qwen.
+- Local inference on A6000 (48 GB VRAM).
+- **Empirical ceiling: N < 50.** Capacity probe (1×1-px images) reports OK at n=50, but real 2-AFC eval OOMs at n=50, 100, and 250 across all foil types (`logs/9369816.out` shows `Probing capacity for 50 images... OK` followed by `[ERROR] things | novel | n=50`; `logs/9369816.err` shows `CUDA out of memory ... 47.20 GiB memory in use` of 47.40 GiB total). Probe optimistic vs. trial-time KV-cache + activations, same pattern as Qwen but at a lower threshold.
+- Standard scripts use `SIZES=(1 2 5 10 100 250)`; cells N≥50 currently fail. Effective max N ≈ 10 on A6000 until `max_size` is reduced, `PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True` is set, or a larger GPU is used.
 
 ## Dataset Limits
 

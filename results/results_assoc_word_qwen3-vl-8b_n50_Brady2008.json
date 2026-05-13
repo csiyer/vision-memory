@@ -1,0 +1,267 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260513_135927",
+    "dataset": "Brady2008",
+    "pair_type": "word",
+    "n_images": 50,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.7,
+        "n_correct": 7,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/pinecone02.jpg",
+            "name": "pinecone02.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 23
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/23070064.thl.jpg",
+            "name": "23070064.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 17
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ABROOCH41.jpg",
+            "name": "ABROOCH41.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 17
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/DSCN1248-sm.jpg",
+            "name": "DSCN1248-sm.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 24
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/26687176.thl.jpg",
+            "name": "26687176.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Aringclamp2.jpg",
+            "name": "Aringclamp2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 5
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AHOSPCAR3.jpg",
+            "name": "AHOSPCAR3.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 15
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Alei23.jpg",
+            "name": "Alei23.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 22
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ABAKBRUS2.jpg",
+            "name": "ABAKBRUS2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AWHISBARR.jpg",
+            "name": "AWHISBARR.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 22
+          }
+        }
+      }
+    ],
+    "accuracy": 0.7,
+    "n_correct": 7,
+    "total": 10
+  }
+}

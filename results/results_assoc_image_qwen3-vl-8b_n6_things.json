@@ -1,0 +1,427 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_163742",
+    "dataset": "things",
+    "pair_type": "image",
+    "n_images": 6,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.6,
+        "n_correct": 6,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 1 is indirectly associated with the cue image.\n\nThe cue image shows an inflatable air mattress. The key connection is that both the air mattress and the air compressor in Image 1 rely on air pressure to function. The air compressor is a device used to inflate objects, making it a direct tool for inflating the air mattress.\n\nImage 2, the airboat, is not directly or indirectly associated with the air mattress. While both are vehicles, they operate on completely different principles (air pressure",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_mattress",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_mattress/air_mattress_01b.jpg",
+            "local_filename": "air_mattress_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe connection is based on the animal in the image. The animal shown is an **aardvark**. The name \"aardvark\" is derived from Afrikaans, where \"aard\" means \"earth\" and \"vark\" means \"pig\". The airboat in the cue image is used for navigating through wetlands and marshes, which are often found on the \"earth\" or \"land\". While the",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe cue image shows a window air conditioner, which operates by compressing and expanding refrigerant gas to move heat. The second image shows a high-pressure gas cylinder with a pump, which is used to fill or recharge other gas systems. While not a direct component, the principle of using pressurized gas is fundamental to the operation of many mechanical systems, including the refrigerant cycle in an air conditioner. The accordion (Image 1) is",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 1 is indirectly associated with the cue image.\n\nThe cue image shows an inflatable air mattress. The key connection is that both the air mattress and the air conditioner (Image 1) rely on a gas or air to function. The air mattress is inflated with air, and the air conditioner uses air to cool the room. While they serve different purposes, they both involve the manipulation of air, making them indirectly related.\n\nImage 2, the airboat, is not related in this way.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_mattress",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_mattress/air_mattress_01b.jpg",
+            "local_filename": "air_mattress_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the acorn) is indirectly associated with the cue image (the window air conditioner).\n\nThe connection is indirect and thematic, not direct. The air conditioner is a device for cooling, and the acorn is a seed that, when it falls, can germinate and grow into a tree. Trees provide shade, which naturally cools the air and the environment. Therefore, the acorn represents a natural, long-term method of achieving a cooling effect, contrasting with the mechanical, immediate",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 1 is indirectly associated with the cue image.\n\nThe cue image shows an inflatable air mattress. The key connection is that both the air mattress and the window air conditioner (Image 1) are common household items that are often used to provide comfort and cooling in a room, especially in situations like camping or temporary lodging. The air conditioner is a device that cools the air, which is a function that complements the comfort provided by the mattress.\n\nImage 2, the airboat, is",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_mattress",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_mattress/air_mattress_01b.jpg",
+            "local_filename": "air_mattress_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe cue image shows a high-pressure air tank with a pump, which is used to inflate things like tires or air mattresses. The air mattress in the sequence (Image 5) is a direct product of such inflation. The airboat (Image 2) is powered by an engine that uses an air pump to create thrust, which is a different application of air pressure. While the airboat doesn't use the same type of tank or pump",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 2 (the aardvark) is indirectly associated with the cue image (the abacus).\n\nThe connection is indirect and thematic, not literal. The abacus is a tool for calculation. The aardvark, while not a tool, is an animal whose name is a play on words. \"Aardvark\" sounds like \"aardvark\" (aardvark) and \"aardvark\" (aardvark), but more importantly,",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "airbag",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airbag/airbag_01b.jpg",
+            "local_filename": "airbag_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the acorn) is indirectly associated with the cue image (the air mattress).\n\nThe connection is indirect and thematic: both the air mattress and the acorn are associated with the concept of \"air\" or \"inflation.\" An air mattress is filled with air to provide support. An acorn, while not inflatable, contains air within its structure and is often used as a symbol for potential, growth, and the natural world. The air mattress is a man-made object that relies",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_mattress",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_mattress/air_mattress_01b.jpg",
+            "local_filename": "air_mattress_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Neither image is directly associated with the cue image of the aardvark.\n\nHowever, if we must choose the *least* indirect association, the answer is **Image 2 (the accordion)**.\n\nHere's the reasoning:\n\n*   **Image 1 (Abacus):** An abacus is a tool for calculation. While an aardvark is a creature, there is no inherent or logical connection between an animal and a mathematical tool. The connection is purely coincidental or forced.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      }
+    ],
+    "accuracy": 0.6,
+    "n_correct": 6,
+    "total": 10
+  }
+}

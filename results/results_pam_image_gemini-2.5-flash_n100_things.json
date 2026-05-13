@@ -1,0 +1,357 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260510_151629",
+    "dataset": "things",
+    "pair_type": "image",
+    "n_images": 100,
+    "n_trials": 10,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 1.0,
+        "n_correct": 10,
+        "total": 10
+      }
+    }
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "cue": {
+            "category": "bean",
+            "category_id": 102,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bean/bean_01b.jpg",
+            "local_filename": "bean_01b.jpg"
+          },
+          "correct_target": {
+            "category": "arm",
+            "category_id": 36,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/arm/arm_01b.jpg",
+            "local_filename": "arm_01b.jpg"
+          },
+          "foil": {
+            "category": "bobsled",
+            "category_id": 155,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bobsled/bobsled_01s.jpg",
+            "local_filename": "bobsled_01s.jpg"
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "cue": {
+            "category": "bagpipe",
+            "category_id": 56,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bagpipe/bagpipe_01b.jpg",
+            "local_filename": "bagpipe_01b.jpg"
+          },
+          "correct_target": {
+            "category": "blimp",
+            "category_id": 139,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blimp/blimp_01b.jpg",
+            "local_filename": "blimp_01b.jpg"
+          },
+          "foil": {
+            "category": "bank",
+            "category_id": 69,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bank/bank_01b.jpg",
+            "local_filename": "bank_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "cue": {
+            "category": "book",
+            "category_id": 165,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/book/book_01b.jpg",
+            "local_filename": "book_01b.jpg"
+          },
+          "correct_target": {
+            "category": "boxing_gloves",
+            "category_id": 183,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/boxing_gloves/boxing_gloves_01b.jpg",
+            "local_filename": "boxing_gloves_01b.jpg"
+          },
+          "foil": {
+            "category": "beaver",
+            "category_id": 107,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/beaver/beaver_01b.jpg",
+            "local_filename": "beaver_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "cue": {
+            "category": "air_mattress",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_mattress/air_mattress_01b.jpg",
+            "local_filename": "air_mattress_01b.jpg"
+          },
+          "correct_target": {
+            "category": "beetle",
+            "category_id": 115,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/beetle/beetle_01b.jpg",
+            "local_filename": "beetle_01b.jpg"
+          },
+          "foil": {
+            "category": "blimp",
+            "category_id": 139,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blimp/blimp_01b.jpg",
+            "local_filename": "blimp_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "cue": {
+            "category": "breadbox",
+            "category_id": 195,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/breadbox/breadbox_01b.jpg",
+            "local_filename": "breadbox_01b.jpg"
+          },
+          "correct_target": {
+            "category": "baseball",
+            "category_id": 78,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/baseball/baseball_01b.jpg",
+            "local_filename": "baseball_01b.jpg"
+          },
+          "foil": {
+            "category": "bandanna",
+            "category_id": 67,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bandanna/bandanna_01b.jpg",
+            "local_filename": "bandanna_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "cue": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg"
+          },
+          "correct_target": {
+            "category": "birdhouse",
+            "category_id": 131,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/birdhouse/birdhouse_01b.jpg",
+            "local_filename": "birdhouse_01b.jpg"
+          },
+          "foil": {
+            "category": "airbag",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airbag/airbag_01b.jpg",
+            "local_filename": "airbag_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "cue": {
+            "category": "bowling_ball",
+            "category_id": 179,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bowling_ball/bowling_ball_01b.jpg",
+            "local_filename": "bowling_ball_01b.jpg"
+          },
+          "correct_target": {
+            "category": "bathmat",
+            "category_id": 89,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bathmat/bathmat_01b.jpg",
+            "local_filename": "bathmat_01b.jpg"
+          },
+          "foil": {
+            "category": "badge",
+            "category_id": 52,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/badge/badge_01b.jpg",
+            "local_filename": "badge_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "cue": {
+            "category": "blindfold",
+            "category_id": 142,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blindfold/blindfold_01b.jpg",
+            "local_filename": "blindfold_01b.jpg"
+          },
+          "correct_target": {
+            "category": "basil",
+            "category_id": 81,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/basil/basil_01b.jpg",
+            "local_filename": "basil_01b.jpg"
+          },
+          "foil": {
+            "category": "blowgun",
+            "category_id": 147,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blowgun/blowgun_01s.jpg",
+            "local_filename": "blowgun_01s.jpg"
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "cue": {
+            "category": "bed",
+            "category_id": 108,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bed/bed_01b.jpg",
+            "local_filename": "bed_01b.jpg"
+          },
+          "correct_target": {
+            "category": "blimp",
+            "category_id": 139,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blimp/blimp_01b.jpg",
+            "local_filename": "blimp_01b.jpg"
+          },
+          "foil": {
+            "category": "biscuit",
+            "category_id": 133,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/biscuit/biscuit_01b.jpg",
+            "local_filename": "biscuit_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "cue": {
+            "category": "bookmark",
+            "category_id": 166,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bookmark/bookmark_01s.jpg",
+            "local_filename": "bookmark_01s.jpg"
+          },
+          "correct_target": {
+            "category": "aloe",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aloe/aloe_01b.jpg",
+            "local_filename": "aloe_01b.jpg"
+          },
+          "foil": {
+            "category": "bracket",
+            "category_id": 189,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bracket/bracket_01b.jpg",
+            "local_filename": "bracket_01b.jpg"
+          }
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 10,
+    "total": 10
+  }
+}

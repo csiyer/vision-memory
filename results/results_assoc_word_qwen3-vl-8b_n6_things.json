@@ -1,0 +1,307 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_145142",
+    "dataset": "things",
+    "pair_type": "word",
+    "n_images": 6,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.2,
+        "n_correct": 2,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image is of a window air conditioner.\n\nThe two words are:\n1. WORD459\n2. WORD90\n\nThe word \"WORD90\" is associated with the image of the accordion (Image B). The accordion is a musical instrument, and music is often associated with air conditioning in the context of cooling down a room while listening to music.\n\nThe word \"WORD459\" is associated with the image of the acorn (Image D). The acorn is",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a window air conditioner.\n\nLet's examine the two words in context of the pairs provided:\n\n-   **WORD198** is paired with the image of the abacus. An abacus is a tool for calculation and arithmetic.\n-   **WORD961** is paired with the image of the accordion. An accordion is a musical instrument.\n\nThe air conditioner is a device for climate control, specifically cooling. While it doesn't directly relate to calculation (abacus",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an acorn.\n\n- **WORD570** is associated with the image of the aardvark (the third image in the sequence). The aardvark is a nocturnal animal that primarily eats ants and termites. Acorns are a type of nut, and while not a direct food source for aardvarks, they are both associated with the natural world and can be found in similar habitats (like forests or woodlands). The connection is indirect",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an aardvark.\n\n- **WORD109** is associated with the image of the air conditioner. The aardvark is known for its unique behavior of digging into the ground to find insects, and it is often found in areas with sandy or loose soil. The air conditioner, while not directly related, is an appliance that can be used to cool down a room, which might be a place where someone might want to rest or sleep after a hot day",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an abacus, an ancient calculating tool.\n\n- **WORD76** is associated with the image of the inflatable mattress (from the BC pair). The mattress is a modern, portable sleeping surface. The connection is indirect: both the abacus and the mattress are items that can be found in a room, but they serve completely different purposes (calculation vs. rest). The abacus is a tool for calculation, and the mattress is for sleeping. The connection is very",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of a window air conditioner.\n\n- **WORD484** is associated with the image of the abacus. An abacus is a tool for calculation, and air conditioners are often used to calculate or estimate cooling costs or energy usage.\n- **WORD771** is associated with the image of the aardvark. There is no direct or indirect connection between an aardvark and an air conditioner.\n\nTherefore, the word indirectly associated with the cue image",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an acorn.\n\n- **WORD583** is associated with the image of the window air conditioner.\n- **WORD436** is associated with the image of the accordion.\n\nThe acorn is a seed from an oak tree. The word \"oak\" is a type of tree, and \"oak\" is a homophone for \"oak\" (as in the tree) and also sounds like \"oak\" (as in the wood).",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an abacus, an ancient calculating tool.\n\n- **WORD677** is associated with the image of the window air conditioner.\n- **WORD927** is associated with the image of the accordion.\n\nNeither the air conditioner nor the accordion has a direct connection to the abacus.\n\nHowever, the abacus is a tool for calculation, and the accordion is a musical instrument. The word \"WORD927\" is associated with the accordion, which is a",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an aardvark.\n\n- **WORD916** is associated with the image of the inflatable bed (Image D). An aardvark is a nocturnal animal, and it is often associated with the idea of sleeping or resting, which connects to the bed.\n- **WORD675** is associated with the image of the acorn (Image B). While acorns are part of the aardvark's diet, this connection is less direct",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      }
+    ],
+    "accuracy": 0.2,
+    "n_correct": 2,
+    "total": 10
+  }
+}

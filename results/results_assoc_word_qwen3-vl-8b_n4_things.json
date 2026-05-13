@@ -1,0 +1,307 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_144800",
+    "dataset": "things",
+    "pair_type": "word",
+    "n_images": 4,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.2,
+        "n_correct": 2,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The cue image is of an accordion.\n\nThe two words are:\n1. WORD4\n2. WORD401\n\nThe image of the accordion is paired with the image of the acorn (B) in the first set of pairs. The acorn is paired with the abacus (C) in the second set of pairs.\n\nThe abacus (C) is paired with the word \"WORD401\".\n\nTherefore, the word indirectly associated with the cue image (accordion) is **",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The correct answer is **1: WORD484**.\n\nHere's the reasoning:\n\n*   The cue image is of an **aardvark**.\n*   The word **WORD484** is associated with the image of the **accordion** (from the AB pair).\n*   The word **WORD563** is associated with the image of the **abacus** (from the BC pair).\n\nThe hidden connection is that the **aardvark** is a",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an abacus, an ancient calculating tool.\n\n- **WORD573** is associated with the image of the **aardvark** (image B). The aardvark is a mammal known for its long snout and large ears. The number 573 is not directly related to the aardvark, but the aardvark is the animal in image B, which was paired with the acorn (image D) and the",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an acorn.\n\nThe acorn is the seed of an oak tree. The word \"oak\" is often associated with the number 400, as in \"oak\" being the 400th letter in the alphabet if you were to list all letters in a specific order (though this is a stretch).\n\nThe word \"WORD823\" is associated with the image of the accordion, which is a musical instrument.\n\nThere is no direct or",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The correct answer is **1: WORD527**.\n\nHere's the reasoning:\n\n*   The cue image is of an **aardvark**.\n*   The word **WORD527** is associated with the image of the **abacus** (from the BC pair).\n*   The word **WORD227** is associated with the image of the **acorn** (from the AB pair).\n\nThe hidden connection is that the **aardvark** is",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an abacus, an ancient calculating tool.\n\n- **WORD40** is associated with the image of the aardvark (image D). The aardvark is a mammal, and mammals are animals. The abacus is a tool used for calculation, which is a human activity. There is no direct or indirect connection between an abacus and an aardvark.\n\n- **WORD427** is associated with the image of the accordion (",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an acorn.\n\n- **WORD750** is associated with the image of the abacus (image B). The abacus is a tool for calculation, and the number 750 is a numerical value. The acorn, as a symbol of growth and potential, can be indirectly linked to the concept of calculation or growth over time, but this is a very weak connection.\n\n- **WORD863** is associated with the image of the aard",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The correct answer is **1: WORD705**.\n\nHere's the reasoning:\n\n*   The cue image is of an **accordion**.\n*   The word **WORD705** is associated with the image of the **abacus** (from the BC pair).\n*   The word **WORD714** is associated with the image of the **acorn** (from the BC pair).\n\nThe connection is indirect and thematic:\n\n*   An **accordion** is a musical",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The correct answer is **1: WORD920**.\n\nHere's the reasoning:\n\n*   The cue image is of an **accordion**.\n*   The word **WORD920** is associated with the image of the **aardvark** (Image B).\n*   The word **WORD531** is associated with the image of the **abacus** (Image D).\n\nThe hidden connection is that the **accordion** is a musical instrument, and the **a",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an abacus, an ancient calculating tool.\n\n- **WORD819** is associated with the image of the accordion (B). The accordion is a musical instrument, and the brand name \"HOHNER\" is visible. Hohner is a famous manufacturer of accordions and harmonicas. The number 819 is the model number for the \"Verdi III\" accordion shown. So, WORD819 is directly linked to the accordion image (B",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      }
+    ],
+    "accuracy": 0.2,
+    "n_correct": 2,
+    "total": 10
+  }
+}

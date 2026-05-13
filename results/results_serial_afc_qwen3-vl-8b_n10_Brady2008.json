@@ -1,0 +1,194 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260508_163011",
+    "dataset": "Brady2008",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.8
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the sunflower) appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A castle with green roofs.\n2.  A grey and white speaker.\n3.  A commercial deep fryer.\n4.  A chameleon figurine.\n5.  A sunflower (Image 1).\n6.  A metal oil can.\n7.  A guitar tuner.\n8.  A wrist brace.\n9.  An abacus (Image 2",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 9,
+          "serial_lag": 4,
+          "lag_bin": "lag_4_10",
+          "distance": 3,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the first image in the original list, showing a paper cutter. Image 2, the humidifier, is the third image in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the sextant) appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A seal figurine\n2.  A dragonfly\n3.  A roll of fire safety labels\n4.  A jack-o'-lantern\n5.  A pair of red golf gloves\n6.  A metal conveyor belt\n7.  A brass sextant\n8.  A combination lock\n9.  A brass theodolite\n1",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 9,
+          "serial_lag": 4,
+          "lag_bin": "lag_4_10",
+          "distance": 3,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the ice scraper) appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  Ice scraper\n2.  Dressing table\n3.  Lunar lander\n4.  Ice axe\n5.  Lanyard\n6.  Pitchfork\n7.  Tool belt\n8.  Portable seat\n9.  Game controller\n10. Chimpanzee statue\n\nThe ice axe (Image 4) is the fourth image, and",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 7,
+          "serial_lag": 3,
+          "lag_bin": "lag_2_3",
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided is:\n1. A wooden box with a stethoscope and instruction cards.\n2. A vintage stamp collection.\n3. A Snoopy Pez dispenser.\n4. A green tray with a rooster design.\n5. A brown felt hat.\n6. A pecan.\n7. A vacuum tube.\n8. A set of beaters for a hand mixer.\n9. A clawfoot bathtub.\n10. A rice cooker",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 9,
+          "serial_lag": 8,
+          "lag_bin": "lag_4_10",
+          "distance": 7,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe image of the red and silver potato masher (Image 2) is the 4th image in the sequence.\nThe image of the silver chain (Image 1) is the 9th image in the sequence.\n\nTherefore, Image 2 came before Image 1.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 9,
+          "serial_lag": 5,
+          "lag_bin": "lag_4_10",
+          "distance": 4,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A Chow Chow dog\n2.  A California driver's license\n3.  Canadian $100 bills\n4.  A multi-tiered wedding cake\n5.  A wooden staircase\n6.  A fruit cocktail in a martini glass\n7.  A vintage syringe\n8.  A wicker baby bassinet\n9.  A slot car track\n10",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 10,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the red life vest, which is the first image in the original 10-image sequence you provided. Image 2, the pink scrub brush, is the seventh image in that sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 7,
+          "serial_lag": 6,
+          "lag_bin": "lag_4_10",
+          "distance": 5,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the asparagus) appeared first in the study sequence.\n\nIt is the 9th image in the original 10-image sequence, while Image 2 (the ice cube) is the 10th image.",
+        "metadata": {
+          "first_serial_position": 9,
+          "second_serial_position": 10,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 9,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the red paint can) appeared first in the study sequence.\n\nIt is the 6th image in the original 10-image sequence, while Image 2 (the football shoulder pads) is the 8th image.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 8,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 8
+        }
+      }
+    ],
+    "accuracy": 0.8,
+    "n_correct": 8,
+    "total": 10,
+    "accuracy_by_distance": {
+      "0": 0.5,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 0.5,
+      "4": 1.0,
+      "5": 1.0,
+      "7": 1.0
+    }
+  }
+}

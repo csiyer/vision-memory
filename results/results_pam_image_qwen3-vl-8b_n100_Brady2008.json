@@ -1,0 +1,237 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260508_172633",
+    "dataset": "Brady2008",
+    "pair_type": "image",
+    "n_images": 100,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.5,
+        "n_correct": 5,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cue image is a slice of pineapple.\n\nLooking at the two options:\n- Image 1 is a model of the Eiffel Tower.\n- Image 2 is a plate of shredded cheese.\n\nNeither of these images is directly related to the pineapple. However, the task is to identify which of the two was *paired* with the cue image in the original set.\n\nReviewing the original pairing list, I can see that the pineapple slice (image 1) was paired with the Eiff",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/dftslpi.jpg",
+            "name": "dftslpi.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/AEIFFELTO.jpg",
+            "name": "AEIFFELTO.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Agratedchees2.jpg",
+            "name": "Agratedchees2.jpg"
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image is **Image 2** (the goat).\n\nThe two images are paired because the Ten Commandments, shown on the stone tablets in the cue image, are a central part of Jewish and Christian religious tradition. The goat is a significant symbol in Judaism, particularly in the context of the Yom Kippur ritual, where a goat is sent into the wilderness as a scapegoat to carry away the sins of the people. This connection to Jewish religious practice makes",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/AHEBREWTE.jpg",
+            "name": "AHEBREWTE.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/football.JPG",
+            "name": "football.JPG"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/AGOAT10.jpg",
+            "name": "AGOAT10.jpg"
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the sunflower) is **Image 2** (the origami crane).\n\nThe sunflower and the origami crane are both yellow and share a theme of natural beauty and craftsmanship. The crane, being a folded paper bird, is a common symbol of peace and is often associated with the sunflower's cheerful and vibrant nature. The other image, the angle square, is a tool for measurement and has no direct thematic connection to the sunflower.\n\nTherefore,",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/Asunflower3.jpg",
+            "name": "Asunflower3.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/origami.jpg",
+            "name": "origami.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/AANGLEME2.jpg",
+            "name": "AANGLEME2.jpg"
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the yellow road grader) is image 2, the red and black vintage truck model.\n\nThe pairing is:\n- Cue image: Yellow road grader\n- Paired image: Red and black vintage truck model\n\nThe other image (of dried fruit on a radish) is not paired with the cue image.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/AGRATER.jpg",
+            "name": "AGRATER.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/AANTTRUCK.jpg",
+            "name": "AANTTRUCK.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/frtslpamix.jpg",
+            "name": "frtslpamix.jpg"
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the cattail) is Image 1: the cat litter scoop.\n\nThe cattail is a plant, and the cat litter scoop is an object used for cleaning a cat's litter box. While not a direct pairing, they are both associated with domestic animal care (specifically, cats). The radio is unrelated to the cattail.\n\nTherefore, the correct answer is **1**.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/ARUSH.jpg",
+            "name": "ARUSH.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/26426803.thl.jpg",
+            "name": "26426803.thl.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/ALITTERSC.jpg",
+            "name": "ALITTERSC.jpg"
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image is **Image 2** (the starfruit).\n\nThe cue image shows a metal spider strainer, a kitchen utensil used for draining food. The paired image shows a starfruit, which is a type of fruit. The other image, of the leather satchel, is not related to the kitchen utensil.\n\nTherefore, the correct answer is **2**.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/AFIREPUTE.jpg",
+            "name": "AFIREPUTE.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/ACAROSLI2.jpg",
+            "name": "ACAROSLI2.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Ahandbag55.jpg",
+            "name": "Ahandbag55.jpg"
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image of the green baby swing (the cue image) was paired with image 1, which shows the beige computer keyboard.\n\nThe pairing is:\n- Cue image: Green baby swing\n- Paired image: Beige computer keyboard\n\nThe pretzel-shaped image (image 2) was not paired with the swing.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/fullbucket.jpg",
+            "name": "fullbucket.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/Acomputerkey2.jpg",
+            "name": "Acomputerkey2.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/pretzel.jpg",
+            "name": "pretzel.jpg"
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the centipede) is **Image 2** (the rainbow-colored hoop earring).\n\nThe pairing is based on a visual similarity in their shapes. Both the centipede and the hoop earring have a distinct, elongated, and segmented or curved form. The centipede's body is segmented, while the earring's hoop is a continuous, curved ring. This shared characteristic of being long and curved makes them a more logical pair than the",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/Acentipede4.jpg",
+            "name": "Acentipede4.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/22883664.thl.jpg",
+            "name": "22883664.thl.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/ACUTLERYB.jpg",
+            "name": "ACUTLERYB.jpg"
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the vintage portable television) is Image 1: the Sanford Expo eraser.\n\nThe pairing is based on a common theme of \"erasers\" or \"deleting/covering\" in a metaphorical sense. The eraser is used to remove marks, while the television, as a device for viewing and consuming media, can be thought of as something that \"erases\" or replaces previous content. The button is not related to this theme.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/26426317.thl.jpg",
+            "name": "26426317.thl.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/eraserbrush.jpg",
+            "name": "eraserbrush.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Ajewisho2.jpg",
+            "name": "Ajewisho2.jpg"
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image is **Image 2** (the metal baking tray).\n\nThe cue image shows a high jump apparatus, which is used for athletic training and competition. The paired image shows a metal baking tray, which is used for cooking or baking. Both items are rectangular and have a functional, utilitarian design, making them a reasonable pair based on their shape and purpose.\n\nThe other image, a roll of Bounty paper towels, is not a logical pair for a high jump apparatus",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/jumpmattress.jpg",
+            "name": "jumpmattress.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/bountytowel.jpg",
+            "name": "bountytowel.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/ABAKINGPA.jpg",
+            "name": "ABAKINGPA.jpg"
+          }
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "n_correct": 5,
+    "total": 10
+  }
+}

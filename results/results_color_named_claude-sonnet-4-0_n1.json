@@ -1,0 +1,170 @@
+{
+  "_metadata": {
+    "task": "Color Memory (Named)",
+    "variant": "named",
+    "timestamp": "20260508_160928",
+    "dataset": "Brady2013ColorObjects",
+    "n_images": 1,
+    "n_trials": 10,
+    "models": [
+      "claude-sonnet-4-0"
+    ],
+    "summary": {
+      "claude-sonnet-4-0": {
+        "accuracy": 0.8,
+        "n_correct": 8,
+        "total": 10
+      }
+    }
+  },
+  "claude-sonnet-4-0": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Red.\n\nThe lighter/cigarette case in the study sequence had a red textured body,",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj118.jpg",
+          "name": "obj118.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Looking at this measuring cup set, in the study sequence it was **red**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj350.jpg",
+          "name": "obj350.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Red.\n\nThe item in the study sequence was a red pot/cooking vessel, while the current",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj330.jpg",
+          "name": "obj330.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "red",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at the item you showed me in the study sequence, this fan-shaped measuring tool was **",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj495.jpg",
+          "name": "obj495.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Looking at this brick shape, in the study sequence it was **red**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj298.jpg",
+          "name": "obj298.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Red.\n\nThe airplane seats in the study sequence were red/burgundy colored, while this image",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj316.jpg",
+          "name": "obj316.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Looking at the theater seats you showed me in the study sequence, they were red.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj266.jpg",
+          "name": "obj266.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Looking at this toilet plunger, in the study sequence it was **red**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj482.jpg",
+          "name": "obj482.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Looking at this birdhouse item from the study sequence, it was **red**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj448.jpg",
+          "name": "obj448.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "red",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this pan/dish item that appears in grayscale in the current image, I can",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj89.jpg",
+          "name": "obj89.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      }
+    ],
+    "accuracy": 0.8,
+    "n_correct": 8,
+    "total": 10,
+    "accuracy_by_color": {
+      "red": 0.8
+    }
+  }
+}

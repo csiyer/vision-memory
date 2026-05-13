@@ -1,0 +1,196 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260508_150107",
+    "dataset": "things",
+    "n_images": 100,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.8
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 appeared first in the sequence.\n\nImage 2 shows a person playing a Hohner accordion.\nImage 1 shows a foot wearing a decorative anklet with painted lotus flowers.\n\nIn the provided sequence, the accordion (Image 2) is the 15th image, while the anklet (Image 1) is the 41st image. Therefore, the accordion image came first.",
+        "metadata": {
+          "first_serial_position": 15,
+          "second_serial_position": 83,
+          "serial_lag": 68,
+          "lag_bin": "lag_11_100",
+          "distance": 67,
+          "left_image_serial_position": 83,
+          "right_image_serial_position": 15
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the asparagus (Image 1) is the 36th image in the sequence.\nThe image of the accordion (Image 2) is the 51st image in the sequence.\n\nTherefore, the asparagus image came before the accordion image.",
+        "metadata": {
+          "first_serial_position": 74,
+          "second_serial_position": 75,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 75,
+          "right_image_serial_position": 74
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nImage 1 is the bowl of applesauce, which is the 11th image in the sequence.\nImage 2 is the banana on a blue and pink background, which is the 15th image.\n\nTherefore, Image 1 came before Image 2.",
+        "metadata": {
+          "first_serial_position": 11,
+          "second_serial_position": 15,
+          "serial_lag": 4,
+          "lag_bin": "lag_4_10",
+          "distance": 3,
+          "left_image_serial_position": 11,
+          "right_image_serial_position": 15
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nImage 1 shows a person from behind wearing a large backpack and carrying a rolled-up sleeping mat, suggesting they are hiking or camping. This image is the 12th in the sequence.\n\nImage 2 shows a hand holding a piece of amber, which is the 53rd image in the sequence.\n\nTherefore, Image 1 came before Image 2 in the study sequence.",
+        "metadata": {
+          "first_serial_position": 12,
+          "second_serial_position": 68,
+          "serial_lag": 56,
+          "lag_bin": "lag_11_100",
+          "distance": 55,
+          "left_image_serial_position": 12,
+          "right_image_serial_position": 68
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nImage 1, showing the banana peel, is the 50th image in the sequence.\nImage 2, showing the piggy banks, is the 51st image in the sequence.\n\nTherefore, Image 1 came before Image 2.",
+        "metadata": {
+          "first_serial_position": 87,
+          "second_serial_position": 90,
+          "serial_lag": 3,
+          "lag_bin": "lag_2_3",
+          "distance": 2,
+          "left_image_serial_position": 87,
+          "right_image_serial_position": 90
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nImage 1 shows an acorn on a wooden surface.\nImage 2 shows a cluster of bamboo stalks.\n\nIn the provided sequence, the acorn (Image 1) is the 29th image, while the bamboo (Image 2) is the 30th image. Therefore, the acorn appeared first.",
+        "metadata": {
+          "first_serial_position": 30,
+          "second_serial_position": 31,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 30,
+          "right_image_serial_position": 31
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence begins with the image of the Rayovac battery (Image 1), followed by the barcode (Image 2), and then continues with the bowl of applesauce (Image 3). The image of the arrows (Image 1) is the fourth image in the sequence, while the fish tank (Image 2) is the tenth image. Therefore, the arrows appeared earlier in the sequence than the fish tank.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 10,
+          "serial_lag": 6,
+          "lag_bin": "lag_4_10",
+          "distance": 5,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 10
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the sequence.\n\nImage 1 shows four decorative walking sticks or canes laid out on a carpet, with a carrying case behind them.\nImage 2 shows a glass bowl of batter being mixed with a whisk.\n\nIn the original sequence you provided, Image 1 is the 40th image, and Image 2 is the 41st image. Therefore, Image 1 came first.",
+        "metadata": {
+          "first_serial_position": 59,
+          "second_serial_position": 69,
+          "serial_lag": 10,
+          "lag_bin": "lag_4_10",
+          "distance": 9,
+          "left_image_serial_position": 69,
+          "right_image_serial_position": 59
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nImage 1 shows a bassoon on a stand in an empty concert hall.\nImage 2 shows a banana split.\n\nIn the provided sequence, the bassoon (Image 1) is the second image, while the banana split (Image 2) is the 50th image. Therefore, Image 1 appeared first.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 80,
+          "serial_lag": 78,
+          "lag_bin": "lag_11_100",
+          "distance": 77,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 80
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 69,
+          "second_serial_position": 80,
+          "serial_lag": 11,
+          "lag_bin": "lag_11_100",
+          "distance": 10,
+          "left_image_serial_position": 69,
+          "right_image_serial_position": 80
+        }
+      }
+    ],
+    "accuracy": 0.8,
+    "n_correct": 8,
+    "total": 10,
+    "accuracy_by_distance": {
+      "0": 0.5,
+      "2": 1.0,
+      "3": 1.0,
+      "5": 1.0,
+      "9": 0.0,
+      "10": 1.0,
+      "55": 1.0,
+      "67": 1.0,
+      "77": 1.0
+    }
+  }
+}

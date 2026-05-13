@@ -1,0 +1,267 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_180214",
+    "dataset": "Brady2008",
+    "pair_type": "word",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.5,
+        "n_correct": 5,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image shows a bagel slicer, which is used to cut bagels. Bagels are a type of bread, and the word \"COOKIE\" is often used in a culinary context to refer to a baked good, which is a broad category that includes many types of bread-like items.\n\nWhile \"COWARD\" is not directly related, \"COOKIE\" is the more indirect but plausible association, as both are food items.\n\nTherefore, the answer is **2: COOKIE**.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/bagelslicer.jpg",
+            "name": "bagelslicer.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cue image is a **bun** (specifically, a type of bread roll or roll-shaped pastry).\n\nLet's examine the two options:\n\n1.  **RELATIVE**: This word is associated with the image of the beaded hat (B). The beaded hat is a type of headwear, and \"relative\" can be a synonym for \"relative\" in the context of a \"relative\" (as in \"relative of the wearer\"). However, this connection is weak and indirect",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Aalmond4.jpg",
+            "name": "Aalmond4.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a dried flower arrangement in a pot.\n\nLet's examine the connection to each word:\n\n- **KNEE**: This is a body part. There is no direct or obvious connection between a flower arrangement and a knee.\n- **JOKER**: This word is associated with the card game \"Poker\" (where a \"Joker\" is a wild card) and also with the \"Joker\" character from Batman. However, the most relevant connection here is that \"",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ADRIARRA2.jpg",
+            "name": "ADRIARRA2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The correct answer is **2: SWAN**.\n\nHere's the reasoning:\n\nThe cue image is a **dodecahedron**, a three-dimensional geometric shape with 12 flat faces.\n\nThe key is to look for a hidden connection, not a direct one.\n\n- **TWIN**: This word is associated with the **second image** (the vintage camera). The camera is a \"twin\" to the **third image** (the pumpkin), because both are \"twin\"",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/26375896.thl.jpg",
+            "name": "26375896.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image is a dining table with chairs.\n\nLet's examine the two options:\n\n1.  **HOOD**: A hood is typically associated with a car, a hat, or a protective covering. There is no direct or indirect connection between a hood and a dining table.\n\n2.  **GYM**: A gym is a place for exercise and physical activity. While a dining table is for eating, it is not inherently associated with a gym. However, one could make a very indirect,",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Aconferencer3.jpg",
+            "name": "Aconferencer3.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct answer is **2: WATERFALL**.\n\nHere's the reasoning:\n\nThe cue image is a street lamp with a sign that reads \"Le Boyer\". \"Le Boyer\" is a French name, and \"Boyer\" can be a surname or a place name.\n\nThe key connection is that \"Boyer\" is a common surname, and the word \"Waterfall\" is not directly related to the lamp or the name \"Le Boyer\".\n\nHowever, the question asks for",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Astreetlampwi.jpg",
+            "name": "Astreetlampwi.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a leg press machine, a piece of gym equipment.\n\nLet's examine the options:\n- **SWEATER**: This is clothing, typically worn for warmth or style. There is no direct or indirect connection between a sweater and a leg press machine.\n- **CAR**: This is a vehicle. While a car is not a piece of gym equipment, the leg press machine is often found in a gym, which is a place where people might also go to work on their cars (",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Aexercisemac4.jpg",
+            "name": "Aexercisemac4.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1: BARLEY",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/948_01.jpg",
+            "name": "948_01.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct answer is **2: SCALE**.\n\nHere's the reasoning:\n\nThe cue image is the Mr. Potato Head toy. The key to this connection is the word **\"SCALE\"**.\n\n*   **Mr. Potato Head** is a toy that is famously associated with the **\"Potato Head\"** brand, which is a **scale model** of a human face and body, designed to be assembled on a potato.\n*   The word **\"SCALE\"** is a direct",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/potatomr.jpg",
+            "name": "potatomr.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither word is directly associated with the stereo equalizer.\n\nHowever, the question asks for an *indirect* association.\n\n- **VINE**: This word is associated with the basket (image B). The basket has decorative elements, including leaves and berries, which are often found on vines. The basket itself is a container, and vines are a type of plant that can be used to decorate or create containers. This is a weak, indirect connection.\n\n- **ANTLER**: This word is associated with",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Asoundmixer2.jpg",
+            "name": "Asoundmixer2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "n_correct": 5,
+    "total": 10
+  }
+}

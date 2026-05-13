@@ -1,0 +1,307 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260510_142141",
+    "dataset": "things",
+    "pair_type": "word",
+    "n_images": 50,
+    "n_trials": 10,
+    "models": [
+      "claude-sonnet-4-0"
+    ],
+    "summary": {
+      "claude-sonnet-4-0": {
+        "accuracy": 0.7,
+        "n_correct": 7,
+        "total": 10
+      }
+    }
+  },
+  "claude-sonnet-4-0": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "anteater",
+            "category_id": 25,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/anteater/anteater_01b.jpg",
+            "local_filename": "anteater_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 6
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aluminum_foil",
+            "category_id": 17,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aluminum_foil/aluminum_foil_01b.jpg",
+            "local_filename": "aluminum_foil_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 20
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "ambulance",
+            "category_id": 19,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/ambulance/ambulance_01b.jpg",
+            "local_filename": "ambulance_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 21
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "armor",
+            "category_id": 37,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/armor/armor_01b.jpg",
+            "local_filename": "armor_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "altar",
+            "category_id": 16,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/altar/altar_01b.jpg",
+            "local_filename": "altar_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 17
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "applesauce",
+            "category_id": 32,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/applesauce/applesauce_01b.jpg",
+            "local_filename": "applesauce_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 5
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "artichoke",
+            "category_id": 39,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/artichoke/artichoke_01b.jpg",
+            "local_filename": "artichoke_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 15
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "asparagus",
+            "category_id": 42,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/asparagus/asparagus_01b.jpg",
+            "local_filename": "asparagus_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 15
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "ambulance",
+            "category_id": 19,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/ambulance/ambulance_01b.jpg",
+            "local_filename": "ambulance_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 22
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 14
+          }
+        }
+      }
+    ],
+    "accuracy": 0.7,
+    "n_correct": 7,
+    "total": 10
+  }
+}

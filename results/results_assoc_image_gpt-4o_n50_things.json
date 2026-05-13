@@ -1,0 +1,427 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260512_103230",
+    "dataset": "things",
+    "pair_type": "image",
+    "n_images": 50,
+    "n_trials": 10,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0,
+        "n_correct": 10,
+        "total": 10
+      }
+    }
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "anteater",
+            "category_id": 25,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/anteater/anteater_01b.jpg",
+            "local_filename": "anteater_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "aquarium",
+            "category_id": 34,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aquarium/aquarium_01b.jpg",
+            "local_filename": "aquarium_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "avocado",
+            "category_id": 43,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/avocado/avocado_01b.jpg",
+            "local_filename": "avocado_01b.jpg",
+            "role": "C",
+            "chain_index": 15
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "backscratcher",
+            "category_id": 50,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/backscratcher/backscratcher_01b.jpg",
+            "local_filename": "backscratcher_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "bagel",
+            "category_id": 55,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bagel/bagel_01s.jpg",
+            "local_filename": "bagel_01s.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "almond",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/almond/almond_01b.jpg",
+            "local_filename": "almond_01b.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "barbed_wire",
+            "category_id": 71,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/barbed_wire/barbed_wire_01b.jpg",
+            "local_filename": "barbed_wire_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "anchor",
+            "category_id": 21,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/anchor/anchor_01b.jpg",
+            "local_filename": "anchor_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "badger",
+            "category_id": 53,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/badger/badger_01b.jpg",
+            "local_filename": "badger_01b.jpg",
+            "role": "C",
+            "chain_index": 9
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "ashtray",
+            "category_id": 41,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/ashtray/ashtray_01s.jpg",
+            "local_filename": "ashtray_01s.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "banner",
+            "category_id": 70,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/banner/banner_01b.jpg",
+            "local_filename": "banner_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "bandage",
+            "category_id": 66,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bandage/bandage_01b.jpg",
+            "local_filename": "bandage_01b.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "apple_tree",
+            "category_id": 31,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/apple_tree/apple_tree_01b.jpg",
+            "local_filename": "apple_tree_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "asparagus",
+            "category_id": 42,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/asparagus/asparagus_01b.jpg",
+            "local_filename": "asparagus_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "baby",
+            "category_id": 46,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/baby/baby_01b.jpg",
+            "local_filename": "baby_01b.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "balance_beam",
+            "category_id": 58,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/balance_beam/balance_beam_01b.jpg",
+            "local_filename": "balance_beam_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "ankle",
+            "category_id": 22,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/ankle/ankle_01b.jpg",
+            "local_filename": "ankle_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "banana",
+            "category_id": 63,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/banana/banana_01b.jpg",
+            "local_filename": "banana_01b.jpg",
+            "role": "C",
+            "chain_index": 15
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "alpaca",
+            "category_id": 15,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/alpaca/alpaca_01b.jpg",
+            "local_filename": "alpaca_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "avocado",
+            "category_id": 43,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/avocado/avocado_01b.jpg",
+            "local_filename": "avocado_01b.jpg",
+            "role": "C",
+            "chain_index": 21
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "antenna",
+            "category_id": 27,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/antenna/antenna_01b.jpg",
+            "local_filename": "antenna_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "appetizer",
+            "category_id": 29,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/appetizer/appetizer_01b.jpg",
+            "local_filename": "appetizer_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "arch",
+            "category_id": 35,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/arch/arch_01b.jpg",
+            "local_filename": "arch_01b.jpg",
+            "role": "C",
+            "chain_index": 13
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "anchor",
+            "category_id": 21,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/anchor/anchor_01b.jpg",
+            "local_filename": "anchor_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "arm",
+            "category_id": 36,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/arm/arm_01b.jpg",
+            "local_filename": "arm_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "banana_peel",
+            "category_id": 64,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/banana_peel/banana_peel_01b.jpg",
+            "local_filename": "banana_peel_01b.jpg",
+            "role": "C",
+            "chain_index": 8
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "banjo",
+            "category_id": 68,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/banjo/banjo_01s.jpg",
+            "local_filename": "banjo_01s.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "aloe",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aloe/aloe_01b.jpg",
+            "local_filename": "aloe_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "bag",
+            "category_id": 54,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bag/bag_01b.jpg",
+            "local_filename": "bag_01b.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 10,
+    "total": 10
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "_metadata": {
+    "task": "Color Memory (Named)",
+    "variant": "named",
+    "timestamp": "20260508_173901",
+    "dataset": "Brady2013ColorObjects",
+    "n_images": 100,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.8,
+        "n_correct": 8,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "yellow",
+        "reported": "green",
+        "correct": 0,
+        "raw_response": "The item in the image is a t-shirt. Based on the provided options, its color is best described as **olive green** or **brownish-green**.\n\nHowever, since \"olive green\" is not one of the options, and \"brown\" is also not listed, the closest match from the given choices is **green**.\n\nTherefore, the color of this item is **green**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj147.jpg",
+          "name": "obj147.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "orange",
+        "reported": "orange",
+        "correct": 1,
+        "raw_response": "The item in the image is a pair of safety goggles. Based on the study sequence, the color of this item is **orange**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj532.jpg",
+          "name": "obj532.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "red",
+        "reported": "purple",
+        "correct": 0,
+        "raw_response": "The item in the study sequence is a pair of baby onesies. The main body of the onesies is a dark gray or charcoal color, while the sleeves and feet are black. The color of the onesies is not red, orange, yellow, green, blue, or purple.\n\nTherefore, none of the provided color options accurately describe the color of this item.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj91.jpg",
+          "name": "obj91.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "red",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj478.jpg",
+          "name": "obj478.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "yellow",
+        "reported": "yellow",
+        "correct": 1,
+        "raw_response": "The item in the study sequence is a ruler. Its color is **gold**.\n\nHowever, since the options provided are red, orange, yellow, green, blue, and purple, and gold is not among them, none of the given choices accurately describe the color of the ruler.\n\nThe ruler is a metallic, golden-yellow color, which is closest to **yellow** among the options, but it is not a true yellow.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj51.jpg",
+          "name": "obj51.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "green",
+        "reported": "green",
+        "correct": 1,
+        "raw_response": "green",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj286.jpg",
+          "name": "obj286.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "blue",
+        "reported": "blue",
+        "correct": 1,
+        "raw_response": "The item in the image is a snare drum. Based on the provided options, its color is **blue**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj394.jpg",
+          "name": "obj394.jpg",
+          "target_color_name": "blue",
+          "rotation_angle_degrees": 240,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "The item in the study sequence is a plush elephant wearing a polka-dot outfit. The main color of the outfit is **red**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj255.jpg",
+          "name": "obj255.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "blue",
+        "reported": "blue",
+        "correct": 1,
+        "raw_response": "blue",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj451.jpg",
+          "name": "obj451.jpg",
+          "target_color_name": "blue",
+          "rotation_angle_degrees": 240,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "blue",
+        "reported": "blue",
+        "correct": 1,
+        "raw_response": "blue",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj311.jpg",
+          "name": "obj311.jpg",
+          "target_color_name": "blue",
+          "rotation_angle_degrees": 240,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      }
+    ],
+    "accuracy": 0.8,
+    "n_correct": 8,
+    "total": 10,
+    "accuracy_by_color": {
+      "blue": 1.0,
+      "green": 1.0,
+      "orange": 1.0,
+      "red": 0.6666666666666666,
+      "yellow": 0.5
+    }
+  }
+}

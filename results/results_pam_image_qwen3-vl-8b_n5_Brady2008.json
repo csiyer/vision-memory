@@ -1,0 +1,237 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260508_170828",
+    "dataset": "Brady2008",
+    "pair_type": "image",
+    "n_images": 5,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.5,
+        "n_correct": 5,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image of the lion figurine (image 2) was paired with the cue image.\n\nThe pairing is:\n- **Cue image:** The mechanical counter (image 7)\n- **Paired image:** The lion figurine (image 8)\n\nThis is because the lion figurine is the second image in the pair that was presented after the cue image. The other image, the ice skates, was paired with the duck in the high chair.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/22886412.thl.jpg",
+            "name": "22886412.thl.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/26441591.thl.jpg",
+            "name": "26441591.thl.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/AICESKAT8.jpg",
+            "name": "AICESKAT8.jpg"
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the stone building) is **Image 2: the orange extension cord**.\n\nThis is because the original set of images was paired as follows:\n- Image 1 (stone building) was paired with Image 2 (orange extension cord).\n- Image 3 (blue laundry basket) was paired with Image 4 (bar cart).\n\nTherefore, the correct answer is **Image 2**.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/ASTONHOU2.jpg",
+            "name": "ASTONHOU2.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/Aextensionco8.jpg",
+            "name": "Aextensionco8.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Alaundrybask2.jpg",
+            "name": "Alaundrybask2.jpg"
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image is a pair of blue floral flip-flops.\n\nLooking at the two options:\n- Image 1 is a metal electrical box with a handle.\n- Image 2 is an orange textured grip, likely for a handlebar or tool.\n\nNeither of these items is logically or thematically related to flip-flops. However, since you are asking me to choose between the two, and based on the context of the original pairing task, the correct answer is:\n\n**Image 2**\n\nThis",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/Afloweredsan3.jpg",
+            "name": "Afloweredsan3.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/Abicyclehand5.jpg",
+            "name": "Abicyclehand5.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Acookiecutte3.jpg",
+            "name": "Acookiecutte3.jpg"
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the green and red perfume bottle) is **Image 2** (the \"NO STANDING\" sign).\n\nThis is because, in the original pairing list, the perfume bottle was paired with the \"NO STANDING\" sign. The dog bowl was paired with the horseshoe.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/ACOLOGNE.jpg",
+            "name": "ACOLOGNE.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/22849260.thl.jpg",
+            "name": "22849260.thl.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/ADOGFOOD.jpg",
+            "name": "ADOGFOOD.jpg"
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The cue image is of a piece of athletic equipment, specifically a shoulder pad or chest protector, likely for a sport like football or lacrosse.\n\nThe two options are:\n- Image 1: A black lacrosse goalie helmet with a protective cage.\n- Image 2: A green jalape\u00f1o pepper.\n\nThe helmet (Image 1) is directly related to the shoulder pad as it is also protective gear used in the same sport (lacrosse). The pepper (Image 2) is completely",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/ASHOULDE4.jpg",
+            "name": "ASHOULDE4.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/8254014.thl.jpg",
+            "name": "8254014.thl.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/hotgreenpepper.jpg",
+            "name": "hotgreenpepper.jpg"
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The cue image is of a **copper oil can** (or a similar type of pouring vessel).\n\nLooking at the two options:\n- Image 1 is a **model train**.\n- Image 2 is an **artist's easel**.\n\nNeither of these items is logically or thematically related to an oil can. However, since you are asking me to choose between the two, I must select one.\n\nThe easel (Image 2) is a tool for artists, and the",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/22859796.thl.jpg",
+            "name": "22859796.thl.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/locomotive.jpg",
+            "name": "locomotive.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/AEASEL22.jpg",
+            "name": "AEASEL22.jpg"
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image paired with the yellow rose is image 1, which shows the red ink bottle and quill pen.\n\nThe pairing is based on the color theme: the rose is yellow, and the ink bottle and quill are red. While not a perfect match, they are both associated with the color red/orange/yellow in the context of writing and art, making them a more logical pair than the cable car.\n\nTherefore, the correct answer is **1**.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/Arose10.jpg",
+            "name": "Arose10.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/Acalligraphy2.jpg",
+            "name": "Acalligraphy2.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/gondola.jpg",
+            "name": "gondola.jpg"
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the brown drawstring bag) is **Image 2: the cello**.\n\nThis is because, in the initial pairing list, the brown drawstring bag (first image) was paired with the cello (second image). The board game (Image 1) was paired with the coat rack.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/Abrownbagwith.jpg",
+            "name": "Abrownbagwith.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/26394018.thl.jpg",
+            "name": "26394018.thl.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Aboardgame6.jpg",
+            "name": "Aboardgame6.jpg"
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the yellow wicker pram) is **Image 2** (the road sign).\n\nThe pairing is:\n- **Cue image**: Yellow wicker pram\n- **Paired image**: Road sign (image 2)\n\nThis is because the pram and the road sign were the two images in the same pair in the original list. The peanut (image 1) was paired with the yellow bag of salt, not the pram.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/AANBABYCA.jpg",
+            "name": "AANBABYCA.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/Apeanut3.jpg",
+            "name": "Apeanut3.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/22856172.thl.jpg",
+            "name": "22856172.thl.jpg"
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image is the Arc de Triomphe.\n\nLooking at the two options:\n- Image 1 is an owl brooch.\n- Image 2 is a guitar tuner.\n\nThe Arc de Triomphe is a monumental arch, a symbol of victory and history. The guitar tuner is a tool for musicians. There is no direct thematic or conceptual link between the arch and the tuner.\n\nHowever, the owl brooch is a piece of jewelry, and the Arc de Triomphe is a monument",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/ATRIUMPH3.jpg",
+            "name": "ATRIUMPH3.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/AGAUGE.jpg",
+            "name": "AGAUGE.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Abrooch104.jpg",
+            "name": "Abrooch104.jpg"
+          }
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "n_correct": 5,
+    "total": 10
+  }
+}

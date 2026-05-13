@@ -1,0 +1,357 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260508_145354",
+    "dataset": "things",
+    "pair_type": "image",
+    "n_images": 5,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.7,
+        "n_correct": 7,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image is **Image 2**.\n\nThe cue image shows a car with deployed airbags, which are safety devices that inflate rapidly during a crash. Image 2 shows a high-pressure gas cylinder with a pump, which is the type of equipment used to inflate airbags for testing or repair. The connection is the shared function of rapid inflation.\n\nImage 3 (the airboat) and Image 8 (the aircraft carrier) are not related to the airbag system",
+        "metadata": {
+          "cue": {
+            "category": "airbag",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airbag/airbag_01b.jpg",
+            "local_filename": "airbag_01b.jpg"
+          },
+          "correct_target": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg"
+          },
+          "foil": {
+            "category": "aircraft_carrier",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aircraft_carrier/aircraft_carrier_01b.jpg",
+            "local_filename": "aircraft_carrier_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image is of an acorn.\n\nLooking at the two options:\n- Image 1 shows a car with deployed airbags.\n- Image 2 shows an aardvark.\n\nNeither of these images is thematically or visually related to an acorn. However, the aardvark (image 2) has a very distinctive, large, pointed ear that resembles the cap of an acorn. This is a strong visual similarity, even if it's a stretch.\n\nTherefore, the",
+        "metadata": {
+          "cue": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          },
+          "correct_target": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg"
+          },
+          "foil": {
+            "category": "airbag",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airbag/airbag_01b.jpg",
+            "local_filename": "airbag_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the airboat) is Image 1 (the air compressor).\n\nThe reasoning is that both the airboat and the air compressor are powered by air. The airboat uses compressed air from its fan engine to propel itself, while the air compressor is a device that compresses air. This shared function of air power creates a logical pairing.\n\nThe acorn (Image 2) is a natural object and does not share this functional connection.",
+        "metadata": {
+          "cue": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg"
+          },
+          "correct_target": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          },
+          "foil": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg"
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the Hohner accordion) is **Image 2** (the air compressor with a tank).\n\nThe reasoning is based on the common function of both items: they are both devices that use compressed air. The accordion uses compressed air to power its bellows, which create the sound. The air compressor is a device that generates and stores compressed air for various uses, including inflating items like the air mattress shown in another pair.\n\nTherefore, the correct answer is",
+        "metadata": {
+          "cue": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg"
+          },
+          "correct_target": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg"
+          },
+          "foil": {
+            "category": "airbag",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airbag/airbag_01b.jpg",
+            "local_filename": "airbag_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the Hohner accordion) is **Image 2** (the air compressor with a tank).\n\nThe reasoning is based on the shared theme of \"air\" or \"inflation\":\n- The cue image shows an accordion, which is an instrument that uses air to produce sound. The player's hands are on the keys and buttons, which control the flow of air through the reeds.\n- Image 2 shows an air compressor, a device specifically designed to",
+        "metadata": {
+          "cue": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg"
+          },
+          "correct_target": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg"
+          },
+          "foil": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg"
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The cue image is of a window air conditioner.\n\nLooking at the two options:\n- Image 1 shows an airboat, a type of watercraft.\n- Image 2 shows an aircraft carrier, a large naval vessel.\n\nNeither of these images is thematically or functionally related to an air conditioner. However, the question asks which of the two was *paired* with the cue image, implying a specific pairing was established earlier.\n\nBased on the initial list, the air conditioner (cue image)",
+        "metadata": {
+          "cue": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg"
+          },
+          "correct_target": {
+            "category": "aircraft_carrier",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aircraft_carrier/aircraft_carrier_01b.jpg",
+            "local_filename": "aircraft_carrier_01b.jpg"
+          },
+          "foil": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg"
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the acorn) is Image 2 (the aardvark).\n\nThe pairing is based on the shared theme of \"natural objects\" or \"things found in nature.\" The acorn is a natural object, and the aardvark is an animal found in the wild. The air compressor, while a man-made tool, does not fit this natural theme.\n\nTherefore, the correct answer is Image 2.",
+        "metadata": {
+          "cue": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          },
+          "correct_target": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg"
+          },
+          "foil": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the aardvark) is **Image 2** (the acorn).\n\nThe pairing is based on a thematic connection: both the aardvark and the acorn are associated with the natural world and are often found in outdoor, earthy environments. The aardvark is an animal native to Africa, and the acorn is a seed from an oak tree, both representing elements of nature.\n\nThe accordion (Image 3) is a",
+        "metadata": {
+          "cue": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg"
+          },
+          "correct_target": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          },
+          "foil": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the window air conditioner) is Image 2 (the inflatable mattress).\n\nThe pairing is based on the shared theme of \"sleeping\" or \"resting\":\n- The air conditioner provides comfort and a cool environment for sleeping.\n- The inflatable mattress is a bed for sleeping.\n\nThe image of the aardvark (Image 1) is unrelated to the theme of sleeping or comfort.",
+        "metadata": {
+          "cue": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg"
+          },
+          "correct_target": {
+            "category": "air_mattress",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_mattress/air_mattress_01b.jpg",
+            "local_filename": "air_mattress_01b.jpg"
+          },
+          "foil": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the air compressor and tank) is Image 2, which shows the aardvark.\n\nThe reasoning is that both the air compressor and the aardvark are associated with the word \"air\" in a thematic way:\n- The air compressor is a device that moves and compresses air.\n- The aardvark is a creature whose name is derived from the Afrikaans word \"aard\" (earth) and \"vark\" (",
+        "metadata": {
+          "cue": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg"
+          },
+          "correct_target": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg"
+          },
+          "foil": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg"
+          }
+        }
+      }
+    ],
+    "accuracy": 0.7,
+    "n_correct": 7,
+    "total": 10
+  }
+}

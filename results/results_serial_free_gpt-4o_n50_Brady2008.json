@@ -1,0 +1,148 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (Free Report)",
+    "variant": "free",
+    "timestamp": "20260512_102640",
+    "dataset": "Brady2008",
+    "n_images": 50,
+    "n_trials": 10,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.4
+      }
+    }
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 46,
+        "reported": 45,
+        "correct": 0,
+        "raw_response": "45",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/Aelectricgri3.jpg",
+          "name": "Aelectricgri3.jpg",
+          "serial_position": 46
+        }
+      },
+      {
+        "trial": 1,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "5",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/AKNIFECOL.jpg",
+          "name": "AKNIFECOL.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 2,
+        "target": 12,
+        "reported": 12,
+        "correct": 1,
+        "raw_response": "12",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/AGARDHOSE.jpg",
+          "name": "AGARDHOSE.jpg",
+          "serial_position": 12
+        }
+      },
+      {
+        "trial": 3,
+        "target": 30,
+        "reported": 27,
+        "correct": 0,
+        "raw_response": "27",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/AINDIAMA3.jpg",
+          "name": "AINDIAMA3.jpg",
+          "serial_position": 30
+        }
+      },
+      {
+        "trial": 4,
+        "target": 26,
+        "reported": 25,
+        "correct": 0,
+        "raw_response": "25",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/jumpmattress.jpg",
+          "name": "jumpmattress.jpg",
+          "serial_position": 26
+        }
+      },
+      {
+        "trial": 5,
+        "target": 24,
+        "reported": 23,
+        "correct": 0,
+        "raw_response": "23",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/AAMMO4.jpg",
+          "name": "AAMMO4.jpg",
+          "serial_position": 24
+        }
+      },
+      {
+        "trial": 6,
+        "target": 22,
+        "reported": 21,
+        "correct": 0,
+        "raw_response": "21",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/26372404.thl.jpg",
+          "name": "26372404.thl.jpg",
+          "serial_position": 22
+        }
+      },
+      {
+        "trial": 7,
+        "target": 40,
+        "reported": 38,
+        "correct": 0,
+        "raw_response": "38",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/AFIREPLAC.jpg",
+          "name": "AFIREPLAC.jpg",
+          "serial_position": 40
+        }
+      },
+      {
+        "trial": 8,
+        "target": 25,
+        "reported": 25,
+        "correct": 1,
+        "raw_response": "25",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/26419025.thl.jpg",
+          "name": "26419025.thl.jpg",
+          "serial_position": 25
+        }
+      },
+      {
+        "trial": 9,
+        "target": 8,
+        "reported": 8,
+        "correct": 1,
+        "raw_response": "8",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/Agoattoy7.jpg",
+          "name": "Agoattoy7.jpg",
+          "serial_position": 8
+        }
+      }
+    ],
+    "average_error": 0.9,
+    "n_correct": 4,
+    "accuracy": 0.4,
+    "spearman_rho": 0.9969650916353059,
+    "spearman_pval": 3.698093220209985e-10,
+    "n_parse_failures": 0
+  }
+}

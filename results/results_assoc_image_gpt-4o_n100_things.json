@@ -1,0 +1,427 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260512_103654",
+    "dataset": "things",
+    "pair_type": "image",
+    "n_images": 100,
+    "n_trials": 10,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.6,
+        "n_correct": 6,
+        "total": 10
+      }
+    }
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "bedpan",
+            "category_id": 109,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bedpan/bedpan_01b.jpg",
+            "local_filename": "bedpan_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "arugula",
+            "category_id": 40,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/arugula/arugula_01b.jpg",
+            "local_filename": "arugula_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "apron",
+            "category_id": 33,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/apron/apron_01b.jpg",
+            "local_filename": "apron_01b.jpg",
+            "role": "C",
+            "chain_index": 41
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "anteater",
+            "category_id": 25,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/anteater/anteater_01b.jpg",
+            "local_filename": "anteater_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "basil",
+            "category_id": 81,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/basil/basil_01b.jpg",
+            "local_filename": "basil_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "ballot_box",
+            "category_id": 61,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/ballot_box/ballot_box_01b.jpg",
+            "local_filename": "ballot_box_01b.jpg",
+            "role": "C",
+            "chain_index": 44
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "birdbath",
+            "category_id": 129,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/birdbath/birdbath_01b.jpg",
+            "local_filename": "birdbath_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "bacon",
+            "category_id": 51,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bacon/bacon_01b.jpg",
+            "local_filename": "bacon_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "baseball_glove",
+            "category_id": 80,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/baseball_glove/baseball_glove_01b.jpg",
+            "local_filename": "baseball_glove_01b.jpg",
+            "role": "C",
+            "chain_index": 29
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "blanket",
+            "category_id": 136,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blanket/blanket_01b.jpg",
+            "local_filename": "blanket_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "backpack",
+            "category_id": 49,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/backpack/backpack_01b.jpg",
+            "local_filename": "backpack_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "bat1",
+            "category_id": 87,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bat1/bat1_01b.jpg",
+            "local_filename": "bat1_01b.jpg",
+            "role": "C",
+            "chain_index": 8
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "bandage",
+            "category_id": 66,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bandage/bandage_01b.jpg",
+            "local_filename": "bandage_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "album",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/album/album_01s.jpg",
+            "local_filename": "album_01s.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "bean",
+            "category_id": 102,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bean/bean_01b.jpg",
+            "local_filename": "bean_01b.jpg",
+            "role": "C",
+            "chain_index": 35
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "blindfold",
+            "category_id": 142,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blindfold/blindfold_01b.jpg",
+            "local_filename": "blindfold_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "basketball_hoop",
+            "category_id": 84,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/basketball_hoop/basketball_hoop_01b.jpg",
+            "local_filename": "basketball_hoop_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "artichoke",
+            "category_id": 39,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/artichoke/artichoke_01b.jpg",
+            "local_filename": "artichoke_01b.jpg",
+            "role": "C",
+            "chain_index": 7
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "blowgun",
+            "category_id": 147,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blowgun/blowgun_01s.jpg",
+            "local_filename": "blowgun_01s.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "beetle",
+            "category_id": 115,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/beetle/beetle_01b.jpg",
+            "local_filename": "beetle_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "birdcage",
+            "category_id": 130,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/birdcage/birdcage_01b.jpg",
+            "local_filename": "birdcage_01b.jpg",
+            "role": "C",
+            "chain_index": 49
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aquarium",
+            "category_id": 34,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aquarium/aquarium_01b.jpg",
+            "local_filename": "aquarium_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "beet",
+            "category_id": 114,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/beet/beet_01b.jpg",
+            "local_filename": "beet_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "blackberry",
+            "category_id": 135,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blackberry/blackberry_01b.jpg",
+            "local_filename": "blackberry_01b.jpg",
+            "role": "C",
+            "chain_index": 5
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "artichoke",
+            "category_id": 39,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/artichoke/artichoke_01b.jpg",
+            "local_filename": "artichoke_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "baseball",
+            "category_id": 78,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/baseball/baseball_01b.jpg",
+            "local_filename": "baseball_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "airplane",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airplane/airplane_01b.jpg",
+            "local_filename": "airplane_01b.jpg",
+            "role": "C",
+            "chain_index": 11
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "batter",
+            "category_id": 96,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/batter/batter_01b.jpg",
+            "local_filename": "batter_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "bench",
+            "category_id": 120,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bench/bench_01b.jpg",
+            "local_filename": "bench_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "amber",
+            "category_id": 18,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/amber/amber_01b.jpg",
+            "local_filename": "amber_01b.jpg",
+            "role": "C",
+            "chain_index": 26
+          }
+        }
+      }
+    ],
+    "accuracy": 0.6,
+    "n_correct": 6,
+    "total": 10
+  }
+}

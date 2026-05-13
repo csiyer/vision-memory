@@ -1,0 +1,172 @@
+{
+  "_metadata": {
+    "task": "Color Memory (Named)",
+    "variant": "named",
+    "timestamp": "20260508_161018",
+    "dataset": "Brady2013ColorObjects",
+    "n_images": 5,
+    "n_trials": 10,
+    "models": [
+      "claude-sonnet-4-0"
+    ],
+    "summary": {
+      "claude-sonnet-4-0": {
+        "accuracy": 0.5,
+        "n_correct": 5,
+        "total": 10
+      }
+    }
+  },
+  "claude-sonnet-4-0": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Red.\n\nThe boot in the study sequence was red, while this one shown now is gray/",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj361.jpg",
+          "name": "obj361.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "yellow",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this dragonfly image, I can see it's currently shown in grayscale/",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj342.jpg",
+          "name": "obj342.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "yellow",
+        "reported": "yellow",
+        "correct": 1,
+        "raw_response": "Yellow.\n\nThe ruler in the study sequence was yellow/golden in color.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj51.jpg",
+          "name": "obj51.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "red",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this item in the current image, I can see it's now gray/black. However",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj511.jpg",
+          "name": "obj511.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "yellow",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this bottle shape, I can see it matches the last item from the study sequence, which",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj83.jpg",
+          "name": "obj83.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "red",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this glove, I can see it's the same item that appeared in the study sequence",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj485.jpg",
+          "name": "obj485.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "green",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this chair, I can see it's the same style as the first item in the study",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj16.jpg",
+          "name": "obj16.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Looking at this hairbrush, in the study sequence it was **red**.\n\nThe brush had",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj113.jpg",
+          "name": "obj113.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "green",
+        "reported": "green",
+        "correct": 1,
+        "raw_response": "Green.\n\nThis ottoman/footstool was green in the study sequence - it had a bright",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj537.jpg",
+          "name": "obj537.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "yellow",
+        "reported": "yellow",
+        "correct": 1,
+        "raw_response": "Looking at this vacuum cleaner, in the original study sequence it was **yellow**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj87.jpg",
+          "name": "obj87.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "n_correct": 5,
+    "total": 10,
+    "accuracy_by_color": {
+      "green": 0.5,
+      "red": 0.5,
+      "yellow": 0.5
+    }
+  }
+}

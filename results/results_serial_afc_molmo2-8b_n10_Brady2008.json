@@ -1,0 +1,193 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260508_180438",
+    "dataset": "Brady2008",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "molmo2-8b"
+    ],
+    "summary": {
+      "molmo2-8b": {
+        "accuracy": 0.5
+      }
+    }
+  },
+  "molmo2-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 10,
+          "serial_lag": 4,
+          "lag_bin": "lag_4_10",
+          "distance": 3,
+          "left_image_serial_position": 10,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 8,
+          "serial_lag": 5,
+          "lag_bin": "lag_4_10",
+          "distance": 4,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 8,
+          "serial_lag": 4,
+          "lag_bin": "lag_4_10",
+          "distance": 3,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 7,
+          "second_serial_position": 8,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 8
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 5,
+          "second_serial_position": 7,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 9,
+          "serial_lag": 3,
+          "lag_bin": "lag_2_3",
+          "distance": 2,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence. It shows a majestic buck with impressive antlers, standing against a white background. This image was presented before the croquet set in image 2.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 7,
+          "serial_lag": 6,
+          "lag_bin": "lag_4_10",
+          "distance": 5,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 8,
+          "serial_lag": 6,
+          "lag_bin": "lag_4_10",
+          "distance": 5,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 4
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "n_correct": 5,
+    "total": 10,
+    "accuracy_by_distance": {
+      "0": 1.0,
+      "1": 0.3333333333333333,
+      "2": 1.0,
+      "3": 0.5,
+      "4": 1.0,
+      "5": 0.0
+    }
+  }
+}

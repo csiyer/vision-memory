@@ -1,0 +1,307 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260512_104852",
+    "dataset": "Brady2008",
+    "pair_type": "image",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.9,
+        "n_correct": 9,
+        "total": 10
+      }
+    }
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/A56THUND4.jpg",
+            "name": "A56THUND4.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/8080484.thl.jpg",
+            "name": "8080484.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AANTSTOV6.jpg",
+            "name": "AANTSTOV6.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AMILPANS2.jpg",
+            "name": "AMILPANS2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/for28524.jpg",
+            "name": "for28524.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Adog71.jpg",
+            "name": "Adog71.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AFILMCUTT.jpg",
+            "name": "AFILMCUTT.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/AARTMELON.jpg",
+            "name": "AARTMELON.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ATREEHOUS.jpg",
+            "name": "ATREEHOUS.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AGOUDA.jpg",
+            "name": "AGOUDA.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ASHIRTSK2.jpg",
+            "name": "ASHIRTSK2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Atotemp10.jpg",
+            "name": "Atotemp10.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/26434233.thl.jpg",
+            "name": "26434233.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/26370445.thl.jpg",
+            "name": "26370445.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/pretzelsticks.jpg",
+            "name": "pretzelsticks.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/butterflycross-stitch.jpg",
+            "name": "butterflycross-stitch.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ACUSHIO12.jpg",
+            "name": "ACUSHIO12.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ATINSTRAP.jpg",
+            "name": "ATINSTRAP.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AHEARTSPO.jpg",
+            "name": "AHEARTSPO.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/panteneshampoing.jpg",
+            "name": "panteneshampoing.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AWASHSIGN.jpg",
+            "name": "AWASHSIGN.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Aantelope2.jpg",
+            "name": "Aantelope2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Akeg6.jpg",
+            "name": "Akeg6.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/22903568.thl.jpg",
+            "name": "22903568.thl.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ABAKINGPA.jpg",
+            "name": "ABAKINGPA.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Aim4ribbo.jpg",
+            "name": "Aim4ribbo.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AGRATER.jpg",
+            "name": "AGRATER.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ABIRDCAG2.jpg",
+            "name": "ABIRDCAG2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/AHEBREWTE.jpg",
+            "name": "AHEBREWTE.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AHIGCHAIR.jpg",
+            "name": "AHIGCHAIR.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      }
+    ],
+    "accuracy": 0.9,
+    "n_correct": 9,
+    "total": 10
+  }
+}

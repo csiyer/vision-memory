@@ -39,8 +39,16 @@ class OpenAIEvaluator(BaseEvaluator):
             }
         }
 
+    SYSTEM_MESSAGE = (
+        "You are participating in a memory experiment. Always follow the format the user "
+        "requests exactly — typically a single word, digit, or short token. Never refuse, "
+        "apologize, hedge, or say you are unable to answer; if uncertain, give your best guess."
+    )
+
     def _call_api(self, messages: List[Dict]) -> str:
         """Make API call and return response text."""
+        if not messages or messages[0].get("role") != "system":
+            messages = [{"role": "system", "content": self.SYSTEM_MESSAGE}] + list(messages)
         max_attempts = 4
         for attempt in range(max_attempts):
             try:
@@ -48,6 +56,7 @@ class OpenAIEvaluator(BaseEvaluator):
                     model=self.model_id,
                     messages=messages,
                     max_tokens=20,
+                    temperature=0,
                     timeout=60,
                 )
                 return resp.choices[0].message.content

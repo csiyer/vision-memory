@@ -1,0 +1,188 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (Free Report)",
+    "variant": "free",
+    "timestamp": "20260513_135711",
+    "dataset": "things",
+    "n_images": 50,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.3
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 41,
+        "reported": 36,
+        "correct": 0,
+        "raw_response": "36",
+        "metadata": {
+          "category": "apple_tree",
+          "category_id": 31,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/apple_tree/apple_tree_01b.jpg",
+          "local_filename": "apple_tree_01b.jpg",
+          "serial_position": 41
+        }
+      },
+      {
+        "trial": 1,
+        "target": 34,
+        "reported": 32,
+        "correct": 0,
+        "raw_response": "32",
+        "metadata": {
+          "category": "backdrop",
+          "category_id": 47,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/backdrop/backdrop_01b.jpg",
+          "local_filename": "backdrop_01b.jpg",
+          "serial_position": 34
+        }
+      },
+      {
+        "trial": 2,
+        "target": 35,
+        "reported": 32,
+        "correct": 0,
+        "raw_response": "32",
+        "metadata": {
+          "category": "air_conditioner",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+          "local_filename": "air_conditioner_01b.jpg",
+          "serial_position": 35
+        }
+      },
+      {
+        "trial": 3,
+        "target": 17,
+        "reported": 17,
+        "correct": 1,
+        "raw_response": "17",
+        "metadata": {
+          "category": "ankle",
+          "category_id": 22,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/ankle/ankle_01b.jpg",
+          "local_filename": "ankle_01b.jpg",
+          "serial_position": 17
+        }
+      },
+      {
+        "trial": 4,
+        "target": 42,
+        "reported": 39,
+        "correct": 0,
+        "raw_response": "39",
+        "metadata": {
+          "category": "applesauce",
+          "category_id": 32,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/applesauce/applesauce_01b.jpg",
+          "local_filename": "applesauce_01b.jpg",
+          "serial_position": 42
+        }
+      },
+      {
+        "trial": 5,
+        "target": 29,
+        "reported": 26,
+        "correct": 0,
+        "raw_response": "26",
+        "metadata": {
+          "category": "backdrop",
+          "category_id": 47,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/backdrop/backdrop_01b.jpg",
+          "local_filename": "backdrop_01b.jpg",
+          "serial_position": 29
+        }
+      },
+      {
+        "trial": 6,
+        "target": 8,
+        "reported": 8,
+        "correct": 1,
+        "raw_response": "8",
+        "metadata": {
+          "category": "applesauce",
+          "category_id": 32,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/applesauce/applesauce_01b.jpg",
+          "local_filename": "applesauce_01b.jpg",
+          "serial_position": 8
+        }
+      },
+      {
+        "trial": 7,
+        "target": 49,
+        "reported": 49,
+        "correct": 1,
+        "raw_response": "49",
+        "metadata": {
+          "category": "alpaca",
+          "category_id": 15,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/alpaca/alpaca_01b.jpg",
+          "local_filename": "alpaca_01b.jpg",
+          "serial_position": 49
+        }
+      },
+      {
+        "trial": 8,
+        "target": 38,
+        "reported": 36,
+        "correct": 0,
+        "raw_response": "36",
+        "metadata": {
+          "category": "air_pump",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+          "local_filename": "air_pump_01s.jpg",
+          "serial_position": 38
+        }
+      },
+      {
+        "trial": 9,
+        "target": 43,
+        "reported": 39,
+        "correct": 0,
+        "raw_response": "39",
+        "metadata": {
+          "category": "avocado",
+          "category_id": 43,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/avocado/avocado_01b.jpg",
+          "local_filename": "avocado_01b.jpg",
+          "serial_position": 43
+        }
+      }
+    ],
+    "average_error": 2.2,
+    "n_correct": 3,
+    "accuracy": 0.3,
+    "spearman_rho": 0.9908673886137245,
+    "spearman_pval": 3.010166323417494e-08,
+    "n_parse_failures": 0
+  }
+}

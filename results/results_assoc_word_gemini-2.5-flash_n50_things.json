@@ -1,0 +1,307 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260510_150946",
+    "dataset": "things",
+    "pair_type": "word",
+    "n_images": 50,
+    "n_trials": 10,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 0.9,
+        "n_correct": 9,
+        "total": 10
+      }
+    }
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 20
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "arch",
+            "category_id": 35,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/arch/arch_01b.jpg",
+            "local_filename": "arch_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 9
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "airbag",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airbag/airbag_01b.jpg",
+            "local_filename": "airbag_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 24
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "axe",
+            "category_id": 45,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/axe/axe_01b.jpg",
+            "local_filename": "axe_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 6
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_mattress",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_mattress/air_mattress_01b.jpg",
+            "local_filename": "air_mattress_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 16
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "apple",
+            "category_id": 30,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/apple/apple_01b.jpg",
+            "local_filename": "apple_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "artichoke",
+            "category_id": 39,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/artichoke/artichoke_01b.jpg",
+            "local_filename": "artichoke_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 8
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "To determine which word is indirectly associated with the cue image (Applesauce), I need to find a chain of connections based on the provided AB and BC pairs. The cue image, Applesauce, will be the starting point (A).\n\nLet's analyze the paths for both options:\n\n**Option 1: MUSEUM**\n\n1.  **A (Cue Image) -> B (Image from AB pair):** The first AB pair given is (Applesauce image, Almonds image). So, the Applesauce image (A) is directly linked to the Almonds image (B).\n    *   Connection: Applesauce (starts with A) -> Almonds (starts with A).\n2.  **B (Image from AB pair) -> C (Word from BC pair):** The first BC pair given is (Almonds image, MUSEUM word). So, the Almonds image (B) is directly linked to the word MUSEUM (C).\n    *   Connection: Almonds (starts with A) -> MUSEUM (starts with M).\n\nThis creates a direct chain: **Applesauce -> Almonds -> MUSEUM**. This path uses the specific AB pair that features the cue image as its first item, making it a straightforward, direct association *through the provided chain structure*.\n\n**Option 2: TURNIP**\n\nTo find a connection to TURNIP, I need to find an intermediate image (X) such that:\n*   A (Cue Image) -> X (Image)\n*   X (Image) -> TURNIP (Word)\n\n1.  **B (Image from AB pair) -> C (Word from BC pair):** I look through the BC pairs to find one ending with \"TURNIP\". I find the pair: (Awning image, TURNIP word).\n    *   So, the intermediate image X must be \"Awning\".\n    *   Connection: Awning (starts with A) -> TURNIP (starts with T).\n2.  **A (Cue Image) -> X (Image):** Now I need to connect the cue image (Applesauce) to the \"Awning\" image.\n    *   The problem is that the specific AB pair starting with \"Applesauce\" is (Applesauce, Almonds), not (Applesauce, Awning).\n    *   However, the instruction asks for \"hidden connections\" and \"indirect association\". Many AB pairs show a connection where the items in both images start with the same letter (e.g., Apple, Aircraft Carrier; Avocados, Awning). The cue image \"Applesauce\" starts with 'A'. The \"Awning\" image also starts with 'A'. There is also an AB pair (Avocados image, Awning image), where Avocados also starts with 'A'.\n    *   An indirect connection could be that the cue image (Applesauce, an 'A' item) can conceptually link to another 'A' item (like Avocados), which then leads to Awning. This would be a chain like: Applesauce (A) -> (conceptually similar 'A' item, e.g., Avocados) -> Awning (B in the Avocados-Awning pair) -> TURNIP (C in the Awning-Turnip pair).\n\nThis path for TURNIP requires an extra step of interpreting a conceptual link (Applesauce to another 'A' item like Avocados), which is not explicitly given as an AB pair. This makes the association more \"indirect\" than the direct chain found for MUSEUM, which uses the specific AB pair starting with the cue image.\n\nSince the question asks for the *indirectly* associated word, and the path to MUSEUM is a direct chain using the given pairs, the path to TURNIP, requiring a conceptual leap or a \"jump\" to another 'A'-starting chain, fits the description of \"indirectly associated\" better.\n\nThe final answer is $\\boxed{2}$",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "applesauce",
+            "category_id": 32,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/applesauce/applesauce_01b.jpg",
+            "local_filename": "applesauce_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 23
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "altar",
+            "category_id": 16,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/altar/altar_01b.jpg",
+            "local_filename": "altar_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "apple_tree",
+            "category_id": 31,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/apple_tree/apple_tree_01b.jpg",
+            "local_filename": "apple_tree_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 5
+          }
+        }
+      }
+    ],
+    "accuracy": 0.9,
+    "n_correct": 9,
+    "total": 10
+  }
+}

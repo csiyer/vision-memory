@@ -1,0 +1,357 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260508_150055",
+    "dataset": "things",
+    "pair_type": "image",
+    "n_images": 100,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.6,
+        "n_correct": 6,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image is Image 2.\n\nThe cue image shows an axe resting on a pile of chopped wood. The paired image shows two hands passing a blue baton, which is a key object in relay races. Both images depict tools or objects used for a specific, physical task: the axe for chopping wood and the baton for passing in a race. The pairing is based on the theme of tools or implements used for a specific activity.",
+        "metadata": {
+          "cue": {
+            "category": "axe",
+            "category_id": 45,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/axe/axe_01b.jpg",
+            "local_filename": "axe_01b.jpg"
+          },
+          "correct_target": {
+            "category": "baton4",
+            "category_id": 95,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/baton4/baton4_01b.jpg",
+            "local_filename": "baton4_01b.jpg"
+          },
+          "foil": {
+            "category": "blueberry",
+            "category_id": 149,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blueberry/blueberry_01b.jpg",
+            "local_filename": "blueberry_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image is Image 1 (the boy).\n\nThe cue image shows a white freestanding bathtub with a towel on it, suggesting a clean, relaxing, or domestic scene. Image 1, featuring a young boy, is a portrait of a person, which is a common pairing for a \"cue\" image in a memory or association game, as it contrasts the inanimate object with a human subject. Image 2, showing barbed wire, is thematically unrelated",
+        "metadata": {
+          "cue": {
+            "category": "bathtub",
+            "category_id": 91,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bathtub/bathtub_01b.jpg",
+            "local_filename": "bathtub_01b.jpg"
+          },
+          "correct_target": {
+            "category": "boy",
+            "category_id": 184,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/boy/boy_01b.jpg",
+            "local_filename": "boy_01b.jpg"
+          },
+          "foil": {
+            "category": "barbed_wire",
+            "category_id": 71,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/barbed_wire/barbed_wire_01b.jpg",
+            "local_filename": "barbed_wire_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 1 was paired with the cue image.\n\nThe cue image shows a car interior with deployed airbags, indicating a collision. Image 1 shows wild boars, which are a type of pig. The pairing is thematic, as both images relate to \"pigs\" \u2014 one in a literal, domesticated safety context (airbags protecting human occupants) and the other in a literal, wild animal context (boars in their natural habitat). Image 2, showing an air conditioner, has",
+        "metadata": {
+          "cue": {
+            "category": "airbag",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airbag/airbag_01b.jpg",
+            "local_filename": "airbag_01b.jpg"
+          },
+          "correct_target": {
+            "category": "boar",
+            "category_id": 151,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/boar/boar_01b.jpg",
+            "local_filename": "boar_01b.jpg"
+          },
+          "foil": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the artichoke) is Image 1 (the bandage).\n\nThe pairing is based on a thematic connection: both the artichoke and the bandage are associated with the concept of \"covering\" or \"protecting.\" The artichoke's outer leaves form a protective layer around its heart, while a bandage is used to cover and protect a wound. This is a common type of visual association puzzle.\n\nThe second image (the bowling balls)",
+        "metadata": {
+          "cue": {
+            "category": "artichoke",
+            "category_id": 39,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/artichoke/artichoke_01b.jpg",
+            "local_filename": "artichoke_01b.jpg"
+          },
+          "correct_target": {
+            "category": "bandage",
+            "category_id": 66,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bandage/bandage_01b.jpg",
+            "local_filename": "bandage_01b.jpg"
+          },
+          "foil": {
+            "category": "bowling_ball",
+            "category_id": 179,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bowling_ball/bowling_ball_01b.jpg",
+            "local_filename": "bowling_ball_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image that was paired with the cue image is Image 2.\n\nThe cue image shows a person from behind, wearing a large backpack and carrying a rolled-up sleeping mat, suggesting they are on a hiking or camping trip. The paired image shows a hand holding a piece of amber, which is a fossilized tree resin. The connection is that both items are associated with nature and outdoor activities: the backpack and sleeping mat for hiking, and the amber for geology and nature appreciation. The bracelet,",
+        "metadata": {
+          "cue": {
+            "category": "backpack",
+            "category_id": 49,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/backpack/backpack_01b.jpg",
+            "local_filename": "backpack_01b.jpg"
+          },
+          "correct_target": {
+            "category": "bracelet2",
+            "category_id": 188,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bracelet2/bracelet2_01b.jpg",
+            "local_filename": "bracelet2_01b.jpg"
+          },
+          "foil": {
+            "category": "amber",
+            "category_id": 18,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/amber/amber_01b.jpg",
+            "local_filename": "amber_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image is Image 2, which shows the alligator.\n\nThe cue image is a close-up of a human foot, focusing on the heel and ankle. The paired image is of an alligator resting by the water. While both images show a creature with a distinct, textured surface (skin), the alligator's skin is reptilian and scaly, which is a more direct and thematic contrast to the human foot's skin. The image of the woman in the white",
+        "metadata": {
+          "cue": {
+            "category": "ankle",
+            "category_id": 22,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/ankle/ankle_01b.jpg",
+            "local_filename": "ankle_01b.jpg"
+          },
+          "correct_target": {
+            "category": "alligator",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/alligator/alligator_01b.jpg",
+            "local_filename": "alligator_01b.jpg"
+          },
+          "foil": {
+            "category": "blouse",
+            "category_id": 144,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blouse/blouse_01b.jpg",
+            "local_filename": "blouse_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image is Image 2.\n\nThe cue image shows a colorful, patterned bowl. The paired image shows a baby wearing a bib. The connection is that both items are associated with babies or infant care. The bib in the paired image is a direct item for a baby, and the bowl could be used for feeding a baby. The other image, showing a baby lying on a quilt, is also related to a baby, but the bib is a more direct and specific",
+        "metadata": {
+          "cue": {
+            "category": "bowl",
+            "category_id": 177,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bowl/bowl_01b.jpg",
+            "local_filename": "bowl_01b.jpg"
+          },
+          "correct_target": {
+            "category": "baby",
+            "category_id": 46,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/baby/baby_01b.jpg",
+            "local_filename": "baby_01b.jpg"
+          },
+          "foil": {
+            "category": "bib",
+            "category_id": 122,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bib/bib_01n.jpg",
+            "local_filename": "bib_01n.jpg"
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the aloe vera plant) is Image 2 (the basketball).\n\nThe cue image shows a potted aloe vera plant. The paired image shows a basketball. These two images are not thematically or visually related. The other option, the belt buckle, is also unrelated.\n\nTherefore, the correct answer is Image 2.",
+        "metadata": {
+          "cue": {
+            "category": "aloe",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aloe/aloe_01b.jpg",
+            "local_filename": "aloe_01b.jpg"
+          },
+          "correct_target": {
+            "category": "belt_buckle",
+            "category_id": 119,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/belt_buckle/belt_buckle_01b.jpg",
+            "local_filename": "belt_buckle_01b.jpg"
+          },
+          "foil": {
+            "category": "basketball",
+            "category_id": 83,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/basketball/basketball_01b.jpg",
+            "local_filename": "basketball_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image is **Image 1**.\n\nThe cue image shows a wooden bread box. The paired image shows a bicycle pump. Both items are related to food or cooking: the bread box is for storing food, and the bicycle pump is often used to inflate bicycle tires, which is a common activity for cyclists who may be transporting food or supplies. The second image, showing a gymnastics balance beam, is not related to the cue image.",
+        "metadata": {
+          "cue": {
+            "category": "breadbox",
+            "category_id": 195,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/breadbox/breadbox_01b.jpg",
+            "local_filename": "breadbox_01b.jpg"
+          },
+          "correct_target": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg"
+          },
+          "foil": {
+            "category": "balance_beam",
+            "category_id": 58,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/balance_beam/balance_beam_01b.jpg",
+            "local_filename": "balance_beam_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image is **Image 2**.\n\nThe cue image shows a decorative, sparkly hair clip. The paired image shows a black bra on a mannequin. Both items are accessories, and the cue image is from the pair that includes the bra.\n\nThe other image (a hand holding a knuckle duster) is not paired with the cue image.",
+        "metadata": {
+          "cue": {
+            "category": "barrette",
+            "category_id": 77,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/barrette/barrette_01b.jpg",
+            "local_filename": "barrette_01b.jpg"
+          },
+          "correct_target": {
+            "category": "bra",
+            "category_id": 185,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bra/bra_01s.jpg",
+            "local_filename": "bra_01s.jpg"
+          },
+          "foil": {
+            "category": "brass_knuckles",
+            "category_id": 193,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/brass_knuckles/brass_knuckles_01b.jpg",
+            "local_filename": "brass_knuckles_01b.jpg"
+          }
+        }
+      }
+    ],
+    "accuracy": 0.6,
+    "n_correct": 6,
+    "total": 10
+  }
+}

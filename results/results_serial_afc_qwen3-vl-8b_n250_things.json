@@ -1,0 +1,196 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260508_150738",
+    "dataset": "things",
+    "n_images": 250,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.7
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nImage 1, featuring the large black anchor, is the 6th image in the sequence.\nImage 2, featuring the close-up of the beard, is the 100th image in the sequence.\n\nTherefore, Image 1 came before Image 2.",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 203,
+          "serial_lag": 197,
+          "lag_bin": "lag_gt_100",
+          "distance": 196,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 203
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 39,
+          "second_serial_position": 100,
+          "serial_lag": 61,
+          "lag_bin": "lag_11_100",
+          "distance": 60,
+          "left_image_serial_position": 39,
+          "right_image_serial_position": 100
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the wooden bread box (Image 1) is the 38th image in the sequence.\nThe image of the torch (Image 2) is the 39th image in the sequence.\n\nTherefore, Image 1 came before Image 2.",
+        "metadata": {
+          "first_serial_position": 81,
+          "second_serial_position": 84,
+          "serial_lag": 3,
+          "lag_bin": "lag_2_3",
+          "distance": 2,
+          "left_image_serial_position": 84,
+          "right_image_serial_position": 81
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 216,
+          "second_serial_position": 217,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 216,
+          "right_image_serial_position": 217
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the abacus is the 100th image in the sequence, while the image of the bowling balls is the 101st image. Therefore, the abacus image came first.",
+        "metadata": {
+          "first_serial_position": 149,
+          "second_serial_position": 165,
+          "serial_lag": 16,
+          "lag_bin": "lag_11_100",
+          "distance": 15,
+          "left_image_serial_position": 149,
+          "right_image_serial_position": 165
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 194,
+          "second_serial_position": 241,
+          "serial_lag": 47,
+          "lag_bin": "lag_11_100",
+          "distance": 46,
+          "left_image_serial_position": 194,
+          "right_image_serial_position": 241
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 78,
+          "second_serial_position": 79,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 79,
+          "right_image_serial_position": 78
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe image of the black leather briefcase is the 4th image in the sequence.\nThe image of the anklet is the 101st image in the sequence.\n\nTherefore, the briefcase image (Image 1) came before the anklet image (Image 2).",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 221,
+          "serial_lag": 217,
+          "lag_bin": "lag_gt_100",
+          "distance": 216,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 221
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 112,
+          "second_serial_position": 118,
+          "serial_lag": 6,
+          "lag_bin": "lag_4_10",
+          "distance": 5,
+          "left_image_serial_position": 118,
+          "right_image_serial_position": 112
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.",
+        "metadata": {
+          "first_serial_position": 240,
+          "second_serial_position": 249,
+          "serial_lag": 9,
+          "lag_bin": "lag_4_10",
+          "distance": 8,
+          "left_image_serial_position": 240,
+          "right_image_serial_position": 249
+        }
+      }
+    ],
+    "accuracy": 0.7,
+    "n_correct": 7,
+    "total": 10,
+    "accuracy_by_distance": {
+      "0": 0.5,
+      "2": 0.0,
+      "5": 0.0,
+      "8": 1.0,
+      "15": 1.0,
+      "46": 1.0,
+      "60": 1.0,
+      "196": 1.0,
+      "216": 1.0
+    }
+  }
+}

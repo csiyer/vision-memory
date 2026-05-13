@@ -1,0 +1,177 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260513_135710",
+    "dataset": "things",
+    "pair_type": "word",
+    "n_images": 50,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.1,
+        "n_correct": 1,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "ROPE",
+        "reported": "mob",
+        "correct": 0,
+        "raw_response": "MOB",
+        "metadata": {
+          "category": "air_conditioner",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+          "local_filename": "air_conditioner_01b.jpg"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "LOAF",
+        "reported": "raccoon",
+        "correct": 0,
+        "raw_response": "RACCOON",
+        "metadata": {
+          "category": "anteater",
+          "category_id": 25,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/anteater/anteater_01b.jpg",
+          "local_filename": "anteater_01b.jpg"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "UTENSIL",
+        "reported": "knob",
+        "correct": 0,
+        "raw_response": "KNOB",
+        "metadata": {
+          "category": "aloe",
+          "category_id": 14,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/aloe/aloe_01b.jpg",
+          "local_filename": "aloe_01b.jpg"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "PARTY",
+        "reported": "proton",
+        "correct": 0,
+        "raw_response": "PROTON",
+        "metadata": {
+          "category": "apple_tree",
+          "category_id": 31,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/apple_tree/apple_tree_01b.jpg",
+          "local_filename": "apple_tree_01b.jpg"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "RIVER",
+        "reported": "actor",
+        "correct": 0,
+        "raw_response": "ACTOR",
+        "metadata": {
+          "category": "aquarium",
+          "category_id": 34,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/aquarium/aquarium_01b.jpg",
+          "local_filename": "aquarium_01b.jpg"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "OATS",
+        "reported": "snob",
+        "correct": 0,
+        "raw_response": "SNOB",
+        "metadata": {
+          "category": "armor",
+          "category_id": 37,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/armor/armor_01b.jpg",
+          "local_filename": "armor_01b.jpg"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "SATURN",
+        "reported": "serpent",
+        "correct": 0,
+        "raw_response": "SERPENT",
+        "metadata": {
+          "category": "airboat",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+          "local_filename": "airboat_01s.jpg"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "KNOB",
+        "reported": "pigeon",
+        "correct": 0,
+        "raw_response": "PIGEON",
+        "metadata": {
+          "category": "air_pump",
+          "category_id": 6,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+          "local_filename": "air_pump_01s.jpg"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "TUTU",
+        "reported": "tutu",
+        "correct": 1,
+        "raw_response": "TUTU",
+        "metadata": {
+          "category": "armor",
+          "category_id": 37,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/armor/armor_01b.jpg",
+          "local_filename": "armor_01b.jpg"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "ACORN",
+        "reported": "infant",
+        "correct": 0,
+        "raw_response": "INFANT",
+        "metadata": {
+          "category": "baby",
+          "category_id": 46,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/baby/baby_01b.jpg",
+          "local_filename": "baby_01b.jpg"
+        }
+      }
+    ],
+    "accuracy": 0.1,
+    "n_correct": 1,
+    "total": 10
+  }
+}

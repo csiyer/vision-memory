@@ -1,0 +1,171 @@
+{
+  "_metadata": {
+    "task": "Color Memory (Named)",
+    "variant": "named",
+    "timestamp": "20260508_161047",
+    "dataset": "Brady2013ColorObjects",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "claude-sonnet-4-0"
+    ],
+    "summary": {
+      "claude-sonnet-4-0": {
+        "accuracy": 0.5,
+        "n_correct": 5,
+        "total": 10
+      }
+    }
+  },
+  "claude-sonnet-4-0": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "green",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this radio, I can see it's currently shown in grayscale/black and white",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj8.jpg",
+          "name": "obj8.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "yellow",
+        "reported": "yellow",
+        "correct": 1,
+        "raw_response": "Looking at this boot item, in the study sequence it was **yellow**.\n\nThe boot in the",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj339.jpg",
+          "name": "obj339.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "green",
+        "reported": "green",
+        "correct": 1,
+        "raw_response": "Green.\n\nIn the study sequence, this pincushion was green, but now it's",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj289.jpg",
+          "name": "obj289.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "green",
+        "reported": "green",
+        "correct": 1,
+        "raw_response": "Looking at this bottle, in the study sequence it was **green**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj436.jpg",
+          "name": "obj436.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "green",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this backpack, I can see it's currently shown in grayscale/black and",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj11.jpg",
+          "name": "obj11.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "yellow",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this life preserver, I can see it's currently shown in grayscale/black",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj45.jpg",
+          "name": "obj45.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "yellow",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this clock, I can see it's currently displayed in grayscale/black and white",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj175.jpg",
+          "name": "obj175.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "yellow",
+        "reported": "yellow",
+        "correct": 1,
+        "raw_response": "Looking at this glove, in the study sequence it was **yellow**.\n\nThe glove shown",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj466.jpg",
+          "name": "obj466.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "green",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this dress, I can see it's the same style as one from the study sequence.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj437.jpg",
+          "name": "obj437.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "green",
+        "reported": "green",
+        "correct": 1,
+        "raw_response": "Green.\n\nThe drawstring pouch/bag in the study sequence was green, but this image",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj362.jpg",
+          "name": "obj362.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "n_correct": 5,
+    "total": 10,
+    "accuracy_by_color": {
+      "green": 0.5,
+      "yellow": 0.5
+    }
+  }
+}

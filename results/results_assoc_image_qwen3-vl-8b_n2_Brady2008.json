@@ -1,0 +1,307 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_182821",
+    "dataset": "Brady2008",
+    "pair_type": "image",
+    "n_images": 2,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.4,
+        "n_correct": 4,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe reasoning is as follows:\n- The cue image is a vintage-style meat grinder.\n- The first image in the pair (Image 1) is a box of Excedrin Migraine medication.\n- The second image (Image 2) is a cannon.\n\nThe connection is indirect and thematic. The meat grinder is a tool for processing food. The Excedrin is a medication for headaches. The cannon is a weapon. While there",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ACOFGRIN2.jpg",
+            "name": "ACOFGRIN2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/AANTICAN2.jpg",
+            "name": "AANTICAN2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/excedrin.jpg",
+            "name": "excedrin.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nHere's the reasoning:\n- The cue image is a gyroscope, a device that maintains orientation and is often used to demonstrate principles of physics, particularly rotational inertia and angular momentum.\n- Image 2 is a ceramic butter dish, which is a common kitchen item with no direct connection to physics.\n- Image 1 is a wooden object that resembles a stylus or a tool handle, which also has no direct connection to the gyroscope.\n\nHowever",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/26375899.thl.jpg",
+            "name": "26375899.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ADISHLID2.jpg",
+            "name": "ADISHLID2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AARTIFLE2.jpg",
+            "name": "AARTIFLE2.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nHere's the reasoning:\n- The cue image (A) is a **spinning chair** or **spinning stool**, often used for spinning yarn or thread.\n- The BC pair shows a **paint palette** and a **stove burner**.\n- The question asks for an indirect association with the cue image (A).\n- Image 1 (the stove burner) is directly associated with the BC pair (the palette is B, the",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/26423175.thl.jpg",
+            "name": "26423175.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/AELEMENT3.jpg",
+            "name": "AELEMENT3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AANTHAT2.jpg",
+            "name": "AANTHAT2.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the banana slices) is indirectly associated with the cue image.\n\nHere's the reasoning:\n- The cue image (A) shows a set of manicure tools.\n- The first pair (AB) connects the manicure tools to a wire rack (B).\n- The second pair (BC) connects the wire rack to banana slices (C).\n- The connection is indirect: the wire rack (B) is a common kitchen tool, and banana slices (C) are a food item",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Acampingtoolk.jpg",
+            "name": "Acampingtoolk.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/driedbananaslides.jpg",
+            "name": "driedbananaslides.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Atool221.jpg",
+            "name": "Atool221.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nHere's the reasoning:\n- The cue image (A) shows a **tambourine**, a musical instrument.\n- The first pair (AB) connects the tambourine to a **warehouse cart**.\n- The second pair (BC) connects the warehouse cart to a **grocery cart**.\n- The cue image (A) is indirectly linked to the grocery cart (C) through the warehouse cart (B), which acts as",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AGUIRO.jpg",
+            "name": "AGUIRO.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Acartofgroce3.jpg",
+            "name": "Acartofgroce3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Akeyboard3.jpg",
+            "name": "Akeyboard3.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nHere's the reasoning:\n- The cue image is a knife.\n- The first paired image (B) is a pretzel.\n- The second paired image (C) is a pet carrier.\n- The question asks for an indirect association between the cue image (knife) and one of the two options (carrier or gauge).\n\nThe connection is not direct. The knife is not used to make or open the pet carrier. However, the pretzel",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/knife01.jpg",
+            "name": "knife01.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ACATCAGE.jpg",
+            "name": "ACATCAGE.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/8024092.thl.jpg",
+            "name": "8024092.thl.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nHere's the reasoning:\n- The cue image (A) shows a silver ice bucket with champagne bottles.\n- The first pair (AB) connects this ice bucket to a wicker chair (B).\n- The second pair (BC) connects the wicker chair to an electric grill (C).\n- The question asks which of the two *new* images (1 or 2) is indirectly associated with the cue image.\n\nThe indirect connection is",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/champagnbottles.jpg",
+            "name": "champagnbottles.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Aelectricgri3.jpg",
+            "name": "Aelectricgri3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ANAPKHOL7.jpg",
+            "name": "ANAPKHOL7.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe reasoning is as follows:\n- The cue image is a trowel, a tool used for digging, planting, and moving soil.\n- The first image in the pair (B) is a guitar amplifier.\n- The second image in the pair (C) is a Tibetan singing bowl on a stand.\n- The connection is indirect: a trowel is used in gardening, and a singing bowl is often used in meditation or spiritual practices",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ATROWEL2.jpg",
+            "name": "ATROWEL2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ABELLTRE2.jpg",
+            "name": "ABELLTRE2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AWINTERH2.jpg",
+            "name": "AWINTERH2.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe connection is as follows:\n- The cue image is ginger root.\n- Ginger is a common spice used in cooking and is often associated with health and wellness.\n- The second image shows a \"fortune cookie,\" which is a food item (typically served in Chinese restaurants) that is often associated with luck and fortune.\n- While not a direct connection, both ginger and fortune cookies are items that are commonly consumed or encountered in the context of food,",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/gingerroot.jpg",
+            "name": "gingerroot.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ACOFFPOT7.jpg",
+            "name": "ACOFFPOT7.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/26432755.thl.jpg",
+            "name": "26432755.thl.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nHere's the reasoning based on the hidden connections:\n\n1.  **The Cue Image (A):** This is a set of ornate, golden fireplace tools. The key feature is the **golden color** and the **ornate, decorative style**.\n\n2.  **The Options:**\n    *   **Image 1:** This is a tall, decorative vase with intricate gold inlay on a dark wood base. It shares the",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AFIREPLAC.jpg",
+            "name": "AFIREPLAC.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Agnu.jpg",
+            "name": "Agnu.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Astatue113.jpg",
+            "name": "Astatue113.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      }
+    ],
+    "accuracy": 0.4,
+    "n_correct": 4,
+    "total": 10
+  }
+}

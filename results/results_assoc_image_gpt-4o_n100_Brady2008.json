@@ -1,0 +1,307 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260512_105307",
+    "dataset": "Brady2008",
+    "pair_type": "image",
+    "n_images": 100,
+    "n_trials": 10,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.9,
+        "n_correct": 9,
+        "total": 10
+      }
+    }
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/22824636.thl.jpg",
+            "name": "22824636.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/oilbottleolive.jpg",
+            "name": "oilbottleolive.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Abib2.jpg",
+            "name": "Abib2.jpg",
+            "role": "C",
+            "chain_index": 10
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Aboxofnotepa4.jpg",
+            "name": "Aboxofnotepa4.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ASTEAMER4.jpg",
+            "name": "ASTEAMER4.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AREDROSE8.jpg",
+            "name": "AREDROSE8.jpg",
+            "role": "C",
+            "chain_index": 11
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/26373195.thl.jpg",
+            "name": "26373195.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Aconcreteblo3.jpg",
+            "name": "Aconcreteblo3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AADDBOOK.jpg",
+            "name": "AADDBOOK.jpg",
+            "role": "C",
+            "chain_index": 39
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ADRUM12.jpg",
+            "name": "ADRUM12.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ANAPRINGS.jpg",
+            "name": "ANAPRINGS.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ABEARIN12.jpg",
+            "name": "ABEARIN12.jpg",
+            "role": "C",
+            "chain_index": 41
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/8257273.thl.jpg",
+            "name": "8257273.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/23028486.thl.jpg",
+            "name": "23028486.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AMECHHAN3.jpg",
+            "name": "AMECHHAN3.jpg",
+            "role": "C",
+            "chain_index": 46
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ACHINLAMP.jpg",
+            "name": "ACHINLAMP.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/26387587.thl.jpg",
+            "name": "26387587.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ABABYPIN2.jpg",
+            "name": "ABABYPIN2.jpg",
+            "role": "C",
+            "chain_index": 5
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AROCKET11.jpg",
+            "name": "AROCKET11.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Atropicalpine.jpg",
+            "name": "Atropicalpine.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Achampagnebo2.jpg",
+            "name": "Achampagnebo2.jpg",
+            "role": "C",
+            "chain_index": 40
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AROCKET11.jpg",
+            "name": "AROCKET11.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ALADLE5.jpg",
+            "name": "ALADLE5.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Abrasscr2.jpg",
+            "name": "Abrasscr2.jpg",
+            "role": "C",
+            "chain_index": 8
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Acrayonsinabo.jpg",
+            "name": "Acrayonsinabo.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/gytsl9.jpg",
+            "name": "gytsl9.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Aflower103.jpg",
+            "name": "Aflower103.jpg",
+            "role": "C",
+            "chain_index": 28
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/gascontainer.jpg",
+            "name": "gascontainer.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Aicecrusher2.jpg",
+            "name": "Aicecrusher2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/pacifierthermometer.jpg",
+            "name": "pacifierthermometer.jpg",
+            "role": "C",
+            "chain_index": 37
+          }
+        }
+      }
+    ],
+    "accuracy": 0.9,
+    "n_correct": 9,
+    "total": 10
+  }
+}

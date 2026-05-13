@@ -1,0 +1,188 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260508_162807",
+    "dataset": "Brady2008",
+    "n_images": 2,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.7
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1.  The luggage tag.\n2.  The check.\n\nTherefore, the first image in the sequence was the luggage tag (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1.  A can of black olives.\n2.  A security camera.\n\nTherefore, the security camera (Image 2) is the second image, and the can of olives (Image 1) is the first.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1.  A potted plant in a decorative terracotta pot.\n2.  A cross-section of a blue agate geode.\n\nTherefore, the first image in the sequence is the potted plant, which corresponds to Image 1 in your query.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt shows a bottle of Dial liquid hand soap, which is the first image presented. Image 2, featuring a table with a tablecloth and flowers, appeared second.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the image of the vintage-style alarm clock, which was presented before the image of the houseboat.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The vending machine (Image 1)\n2. The pitchfork (Image 2)\n\nTherefore, the pitchfork (Image 2) is the second image in the sequence, meaning it appeared *after* the vending machine. The question asks which image appeared *first*, and that is Image 1 (the vending machine).\n\nHowever, based on your specific question, you are asking which of the two images you",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the inflatable kiddie pool, which was presented before the magnifying glass (Image 2).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence you provided was:\n1.  A red and orange autumn leaf.\n2.  A chrysanthemum flower.\n\nThe images you are now asking about are:\n- Image 1: The chrysanthemum flower.\n- Image 2: The autumn leaf.\n\nSince the autumn leaf was the first image in the original sequence, Image 2 is the correct answer.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt depicts a silver ice bucket containing three bottles of champagne on ice.\n\nImage 2, which shows a pair of metal hole punch pliers, appeared second.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1.  The electric griddle (Image 1)\n2.  The ice axe (Image 2)\n\nTherefore, the ice axe (Image 2) is the second image, and the electric griddle (Image 1) is the first. The question asks which image appeared *first*, which is Image 1.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 1
+        }
+      }
+    ],
+    "accuracy": 0.7,
+    "n_correct": 7,
+    "total": 10,
+    "accuracy_by_distance": {
+      "0": 0.7
+    }
+  }
+}

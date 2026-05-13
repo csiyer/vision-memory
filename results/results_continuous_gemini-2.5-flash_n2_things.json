@@ -1,0 +1,106 @@
+{
+  "_metadata": {
+    "task": "Continuous Recognition",
+    "timestamp": "20260510_150419",
+    "dataset": "things",
+    "n_images": 2,
+    "n_trials": 4,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 1.0,
+        "d_prime": 1.934843132203402,
+        "hit_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "weighted_f1": 1.0
+      }
+    },
+    "p_old": 0.5,
+    "min_delay": 0,
+    "max_delay": 2
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 0,
+        "response": 0,
+        "correct": 1,
+        "raw_response": "no",
+        "metadata": {
+          "category": "abacus",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+          "local_filename": "abacus_01b.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "response": 1,
+        "correct": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "abacus",
+          "category_id": 1,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+          "local_filename": "abacus_01b.jpg",
+          "delay": 0
+        }
+      },
+      {
+        "trial": 2,
+        "target": 0,
+        "response": 0,
+        "correct": 1,
+        "raw_response": "no",
+        "metadata": {
+          "category": "aardvark",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+          "local_filename": "aardvark_01b.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "response": 1,
+        "correct": 1,
+        "raw_response": "yes",
+        "metadata": {
+          "category": "aardvark",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+          "local_filename": "aardvark_01b.jpg",
+          "delay": 0
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "hit_rate": 1.0,
+    "false_alarm_rate": 0.0,
+    "d_prime": 1.934843132203402,
+    "weighted_f1": 1.0,
+    "counts": {
+      "hits": 2,
+      "misses": 0,
+      "false_alarms": 0,
+      "correct_rejections": 2
+    },
+    "hit_rate_by_delay": {
+      "0": 1.0
+    }
+  }
+}

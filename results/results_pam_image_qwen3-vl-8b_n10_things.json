@@ -1,0 +1,357 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260508_145511",
+    "dataset": "things",
+    "pair_type": "image",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.5,
+        "n_correct": 5,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 1 was paired with the cue image.\n\nThe cue image shows a window air conditioner. The paired image (Image 1) shows an inflatable mattress. Both items are common household or personal comfort items, making them a logical pair in this context. Image 2, showing an ambulance, is unrelated to the function of an air conditioner.",
+        "metadata": {
+          "cue": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg"
+          },
+          "correct_target": {
+            "category": "ambulance",
+            "category_id": 19,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/ambulance/ambulance_01b.jpg",
+            "local_filename": "ambulance_01b.jpg"
+          },
+          "foil": {
+            "category": "air_mattress",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_mattress/air_mattress_01b.jpg",
+            "local_filename": "air_mattress_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image is Image 1 (the church altar).\n\nThe cue image shows an open photo album with handwritten German text and old photographs, evoking a personal, nostalgic, or historical theme. Image 1, the church altar, also has a strong historical and traditional context, associated with religious ceremony and memory. In contrast, Image 2, the emergency vehicle, is a modern, functional, and utilitarian object, which does not share the thematic connection with the photo album",
+        "metadata": {
+          "cue": {
+            "category": "album",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/album/album_01s.jpg",
+            "local_filename": "album_01s.jpg"
+          },
+          "correct_target": {
+            "category": "altar",
+            "category_id": 16,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/altar/altar_01b.jpg",
+            "local_filename": "altar_01b.jpg"
+          },
+          "foil": {
+            "category": "ambulance",
+            "category_id": 19,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/ambulance/ambulance_01b.jpg",
+            "local_filename": "ambulance_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the window air conditioner) is image 2, which shows the purple inflatable mattress.\n\nThe reasoning is that both the air conditioner and the inflatable mattress are items associated with comfort and rest. The air conditioner provides cooling comfort, while the mattress provides a place to sleep. They are both common household items used to enhance comfort in a living space. The amber sample, while beautiful, is not functionally or thematically linked to the air conditioner.",
+        "metadata": {
+          "cue": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg"
+          },
+          "correct_target": {
+            "category": "air_mattress",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_mattress/air_mattress_01b.jpg",
+            "local_filename": "air_mattress_01b.jpg"
+          },
+          "foil": {
+            "category": "amber",
+            "category_id": 18,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/amber/amber_01b.jpg",
+            "local_filename": "amber_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the alligator) is Image 2 (the photo album).\n\nThe pairing is as follows:\n- **Cue Image (1):** Alligator\n- **Paired Image (2):** Photo album\n\nThis is the correct pairing based on the initial instruction to remember which images were paired together.",
+        "metadata": {
+          "cue": {
+            "category": "alligator",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/alligator/alligator_01b.jpg",
+            "local_filename": "alligator_01b.jpg"
+          },
+          "correct_target": {
+            "category": "album",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/album/album_01s.jpg",
+            "local_filename": "album_01s.jpg"
+          },
+          "foil": {
+            "category": "aluminum_foil",
+            "category_id": 17,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aluminum_foil/aluminum_foil_01b.jpg",
+            "local_filename": "aluminum_foil_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cue image is the amber. Based on the pairing structure you provided, the amber image was paired with the image of the seaplane.\n\nTherefore, the correct choice is:\n**Image 1**",
+        "metadata": {
+          "cue": {
+            "category": "amber",
+            "category_id": 18,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/amber/amber_01b.jpg",
+            "local_filename": "amber_01b.jpg"
+          },
+          "correct_target": {
+            "category": "airplane",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airplane/airplane_01b.jpg",
+            "local_filename": "airplane_01b.jpg"
+          },
+          "foil": {
+            "category": "altar",
+            "category_id": 16,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/altar/altar_01b.jpg",
+            "local_filename": "altar_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the airboat) is Image 2, which shows the alpacas.\n\nThe pairing is based on the theme of \"Florida\" or \"nature/animals in a specific environment.\" The airboat is a vehicle used for tours in Florida's wetlands, and the alpacas are often found in Florida farms or ranches. The acorn, while a natural object, is not thematically linked to the airboat or Florida tourism in the same way",
+        "metadata": {
+          "cue": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg"
+          },
+          "correct_target": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          },
+          "foil": {
+            "category": "alpaca",
+            "category_id": 15,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/alpaca/alpaca_01b.jpg",
+            "local_filename": "alpaca_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the alligator) is Image 2, which shows the green airboat.\n\nThe reasoning is that both the alligator and the airboat are associated with the Florida Everglades. The alligator is a native and iconic animal of the region, while the airboat is the primary mode of transportation used for tours and wildlife viewing in the wetlands. The photo album, in contrast, does not have a direct thematic connection to the alligator.",
+        "metadata": {
+          "cue": {
+            "category": "alligator",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/alligator/alligator_01b.jpg",
+            "local_filename": "alligator_01b.jpg"
+          },
+          "correct_target": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg"
+          },
+          "foil": {
+            "category": "album",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/album/album_01s.jpg",
+            "local_filename": "album_01s.jpg"
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the church altar) is **Image 2** (the abacus).\n\nThe pairing is based on the theme of \"tools\" or \"implements\":\n- The **church altar** is a sacred implement used in religious ceremonies.\n- The **abacus** is a historical calculating tool, an implement for computation.\n\nBoth represent specialized tools used for a specific purpose within their respective domains (spiritual ritual and mathematical calculation).\n\nThe airplane, while a tool for transportation,",
+        "metadata": {
+          "cue": {
+            "category": "altar",
+            "category_id": 16,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/altar/altar_01b.jpg",
+            "local_filename": "altar_01b.jpg"
+          },
+          "correct_target": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg"
+          },
+          "foil": {
+            "category": "airplane",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airplane/airplane_01b.jpg",
+            "local_filename": "airplane_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the roll of aluminum foil) is image 2 (the window air conditioner).\n\nThe pairing is based on the common use of aluminum foil in conjunction with air conditioning units. People often use foil to cover or insulate the vents of an air conditioner to help direct airflow or to reduce heat gain in the room. This creates a functional and thematic link between the two items.",
+        "metadata": {
+          "cue": {
+            "category": "aluminum_foil",
+            "category_id": 17,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aluminum_foil/aluminum_foil_01b.jpg",
+            "local_filename": "aluminum_foil_01b.jpg"
+          },
+          "correct_target": {
+            "category": "air_conditioner",
+            "category_id": 4,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+            "local_filename": "air_conditioner_01b.jpg"
+          },
+          "foil": {
+            "category": "album",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/album/album_01s.jpg",
+            "local_filename": "album_01s.jpg"
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The cue image is the abacus.\n\nThe image paired with it is **Image 2** (the accordion).\n\nThe pairing is based on the original set provided:\n- The abacus (cue image) was paired with the air compressor (Image 1).\n- The accordion (Image 2) was paired with the aluminum foil (Image 5).\n\nTherefore, the correct answer is **Image 2**.",
+        "metadata": {
+          "cue": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg"
+          },
+          "correct_target": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg"
+          },
+          "foil": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg"
+          }
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "n_correct": 5,
+    "total": 10
+  }
+}

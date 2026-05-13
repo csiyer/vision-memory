@@ -1,0 +1,237 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260508_165237",
+    "dataset": "Brady2008",
+    "pair_type": "image",
+    "n_images": 1,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.6,
+        "n_correct": 6,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (Campbell's Chunky Soup) is Image 1, which shows the metal screw eye.\n\nThe pairing is:\n- Cue image: Campbell's Chunky Savory Pot Roast Soup\n- Paired image: Metal screw eye\n\nThe third image (the park bench) was not paired with the cue image.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/chunkysoup.jpg",
+            "name": "chunkysoup.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/ASCREW7.jpg",
+            "name": "ASCREW7.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Achair608.jpg",
+            "name": "Achair608.jpg"
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image that was paired with the cue image (the black comb) is Image 2: the pile of rubber bands.\n\nThe pairing is:\n- Cue image: Black comb\n- Paired image: Pile of rubber bands\n\nThe image of the topiary plant in a decorative planter (Image 1) was not paired with the comb.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/ACOMB5.jpg",
+            "name": "ACOMB5.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/Aornamentalt5.jpg",
+            "name": "Aornamentalt5.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Aelasticbands.jpg",
+            "name": "Aelasticbands.jpg"
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the bread roll) is Image 2 (the stethoscope).\n\nThe pairing is:\n- Cue image: Bread roll\n- Paired image: Stethoscope\n\nThe flute case (Image 3) was not paired with the bread roll.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/Aalmond4.jpg",
+            "name": "Aalmond4.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/AELECTHE4.jpg",
+            "name": "AELECTHE4.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/AFLUTE6.jpg",
+            "name": "AFLUTE6.jpg"
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image that was paired with the cue image (the yellow gymnastic rings) is Image 2 (the zucchini).\n\nThe pairing was:\n- Cue image: Yellow gymnastic rings\n- Paired image: Zucchini\n\nThe ceramic butter dish (Image 3) was not paired with the cue image.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/trapezebars.jpg",
+            "name": "trapezebars.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/Azucchini9.jpg",
+            "name": "Azucchini9.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/ADISHLID2.jpg",
+            "name": "ADISHLID2.jpg"
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image that was paired with the cue image is Image 2.\n\nThe cue image shows a medical device, specifically a **pulse oximeter**. The paired image shows a **Shiseido foundation** bottle. These two items are not related in function or category.\n\nThe other image (Image 3, the metal chafing dish) is also unrelated to the pulse oximeter.\n\nTherefore, the correct answer is **Image 2**.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/ATHERMO4.jpg",
+            "name": "ATHERMO4.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/makeupfoundation.jpg",
+            "name": "makeupfoundation.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/ACREPMAK3.jpg",
+            "name": "ACREPMAK3.jpg"
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the green bean) is Image 2, the pale yellow rectangular block.\n\nThe pairing is:\n- Cue image: Green bean\n- Paired image: Pale yellow rectangular block\n\nThis is because the original instruction was to remember the pair: the green bean (Image 1) was paired with the pale yellow rectangular block (Image 2). The image of the toy mushroom carousel (Image 3) was not part of the original pair.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/greenbeans.jpg",
+            "name": "greenbeans.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/butter03.jpg",
+            "name": "butter03.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Atoymerrygoro.jpg",
+            "name": "Atoymerrygoro.jpg"
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image that was paired with the cue image (the traffic light sign) is Image 1, the brass fitting.\n\nThe pairing was:\n- Cue image: Traffic light sign\n- Paired image: Brass fitting\n\nThe breast pump (Image 2) was not paired with the traffic light sign.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/22849344.thl.jpg",
+            "name": "22849344.thl.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/Ascrewmount.jpg",
+            "name": "Ascrewmount.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Abreastpump2.jpg",
+            "name": "Abreastpump2.jpg"
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image is Image 2: the burlap sack labeled \"HERBES DE PROVENCE\".\n\nThe cue image shows a weathered orange buoy. The first image you provided (the burlap sack) was the one paired with it. The second image you provided (the water jug) was not paired with the cue image.\n\nTherefore, the correct answer is **2**.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/26423465.thl.jpg",
+            "name": "26423465.thl.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/Abagofherbs.jpg",
+            "name": "Abagofherbs.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/AWATERJU3.jpg",
+            "name": "AWATERJU3.jpg"
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the silo) is Image 2: the dog bowl with \"FEED me!\" printed on it.\n\nThe pairing is:\n- **Cue Image:** Silo\n- **Paired Image:** Dog bowl\n\nThe pacifier image is not paired with the silo.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/AGRAINSI5.jpg",
+            "name": "AGRAINSI5.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/ADOGFOOD.jpg",
+            "name": "ADOGFOOD.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/pacifierthermometer.jpg",
+            "name": "pacifierthermometer.jpg"
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 was paired with the cue image.\n\nThe cue image shows a stack of paper, likely checks or forms, held in a holder. Image 2 shows a wooden clothespin. These two items are not thematically or functionally related. The only other image, Image 1 (the toaster oven), is also unrelated to the cue image.\n\nTherefore, the correct answer is Image 2.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/8244991.thl.jpg",
+            "name": "8244991.thl.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/Aclothespin2.jpg",
+            "name": "Aclothespin2.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/ATOASTOV2.jpg",
+            "name": "ATOASTOV2.jpg"
+          }
+        }
+      }
+    ],
+    "accuracy": 0.6,
+    "n_correct": 6,
+    "total": 10
+  }
+}

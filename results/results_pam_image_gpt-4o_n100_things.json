@@ -1,0 +1,357 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260512_102320",
+    "dataset": "things",
+    "pair_type": "image",
+    "n_images": 100,
+    "n_trials": 10,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0,
+        "n_correct": 10,
+        "total": 10
+      }
+    }
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "cue": {
+            "category": "artichoke",
+            "category_id": 39,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/artichoke/artichoke_01b.jpg",
+            "local_filename": "artichoke_01b.jpg"
+          },
+          "correct_target": {
+            "category": "barbed_wire",
+            "category_id": 71,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/barbed_wire/barbed_wire_01b.jpg",
+            "local_filename": "barbed_wire_01b.jpg"
+          },
+          "foil": {
+            "category": "blimp",
+            "category_id": 139,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blimp/blimp_01b.jpg",
+            "local_filename": "blimp_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "cue": {
+            "category": "bow2",
+            "category_id": 175,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bow2/bow2_01s.jpg",
+            "local_filename": "bow2_01s.jpg"
+          },
+          "correct_target": {
+            "category": "bassoon",
+            "category_id": 86,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bassoon/bassoon_01b.jpg",
+            "local_filename": "bassoon_01b.jpg"
+          },
+          "foil": {
+            "category": "bottle_opener",
+            "category_id": 171,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bottle_opener/bottle_opener_01b.jpg",
+            "local_filename": "bottle_opener_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "cue": {
+            "category": "ashtray",
+            "category_id": 41,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/ashtray/ashtray_01s.jpg",
+            "local_filename": "ashtray_01s.jpg"
+          },
+          "correct_target": {
+            "category": "balloon",
+            "category_id": 60,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/balloon/balloon_01b.jpg",
+            "local_filename": "balloon_01b.jpg"
+          },
+          "foil": {
+            "category": "berry",
+            "category_id": 121,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/berry/berry_01b.jpg",
+            "local_filename": "berry_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "cue": {
+            "category": "ball",
+            "category_id": 59,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/ball/ball_01b.jpg",
+            "local_filename": "ball_01b.jpg"
+          },
+          "correct_target": {
+            "category": "birdhouse",
+            "category_id": 131,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/birdhouse/birdhouse_01b.jpg",
+            "local_filename": "birdhouse_01b.jpg"
+          },
+          "foil": {
+            "category": "boxer_shorts",
+            "category_id": 182,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/boxer_shorts/boxer_shorts_01b.jpg",
+            "local_filename": "boxer_shorts_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "cue": {
+            "category": "blanket",
+            "category_id": 136,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blanket/blanket_01b.jpg",
+            "local_filename": "blanket_01b.jpg"
+          },
+          "correct_target": {
+            "category": "anteater",
+            "category_id": 25,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/anteater/anteater_01b.jpg",
+            "local_filename": "anteater_01b.jpg"
+          },
+          "foil": {
+            "category": "bologna",
+            "category_id": 158,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bologna/bologna_01b.jpg",
+            "local_filename": "bologna_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "cue": {
+            "category": "aluminum_foil",
+            "category_id": 17,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aluminum_foil/aluminum_foil_01b.jpg",
+            "local_filename": "aluminum_foil_01b.jpg"
+          },
+          "correct_target": {
+            "category": "beaker",
+            "category_id": 101,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/beaker/beaker_01b.jpg",
+            "local_filename": "beaker_01b.jpg"
+          },
+          "foil": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "cue": {
+            "category": "bird",
+            "category_id": 128,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bird/bird_01b.jpg",
+            "local_filename": "bird_01b.jpg"
+          },
+          "correct_target": {
+            "category": "bologna",
+            "category_id": 158,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bologna/bologna_01b.jpg",
+            "local_filename": "bologna_01b.jpg"
+          },
+          "foil": {
+            "category": "bolt",
+            "category_id": 159,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bolt/bolt_01b.jpg",
+            "local_filename": "bolt_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "cue": {
+            "category": "beet",
+            "category_id": 114,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/beet/beet_01b.jpg",
+            "local_filename": "beet_01b.jpg"
+          },
+          "correct_target": {
+            "category": "ambulance",
+            "category_id": 19,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/ambulance/ambulance_01b.jpg",
+            "local_filename": "ambulance_01b.jpg"
+          },
+          "foil": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "cue": {
+            "category": "blind",
+            "category_id": 140,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blind/blind_01b.jpg",
+            "local_filename": "blind_01b.jpg"
+          },
+          "correct_target": {
+            "category": "bathmat",
+            "category_id": 89,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bathmat/bathmat_01b.jpg",
+            "local_filename": "bathmat_01b.jpg"
+          },
+          "foil": {
+            "category": "bear",
+            "category_id": 105,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bear/bear_01b.jpg",
+            "local_filename": "bear_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "cue": {
+            "category": "beer",
+            "category_id": 113,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/beer/beer_01s.jpg",
+            "local_filename": "beer_01s.jpg"
+          },
+          "correct_target": {
+            "category": "balloon",
+            "category_id": 60,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/balloon/balloon_01b.jpg",
+            "local_filename": "balloon_01b.jpg"
+          },
+          "foil": {
+            "category": "boxing_gloves",
+            "category_id": 183,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/boxing_gloves/boxing_gloves_01b.jpg",
+            "local_filename": "boxing_gloves_01b.jpg"
+          }
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 10,
+    "total": 10
+  }
+}

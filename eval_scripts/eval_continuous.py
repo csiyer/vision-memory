@@ -17,7 +17,15 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import argparse
 import json
+import re
 from datetime import datetime
+
+REFUSAL_RE = re.compile(
+    r"\b(can'?t|cannot|unable to|won'?t)\s+(determine|tell|say|answer|know|decide)\b|"
+    r"^\s*i\s*['’]?\s*m\s+sorry|"
+    r"\bi (don'?t|do not) know\b",
+    re.IGNORECASE,
+)
 from tasks.recognition import ContinuousRecognitionTask
 from evaluators.openai_evaluator import OpenAIEvaluator
 from evaluators.anthropic_evaluator import AnthropicEvaluator
@@ -80,6 +88,9 @@ def run_evaluation(evaluators, n_images=50, dataset='things', n_trials=None):
 
             # Call API with full history
             response_text = evaluator._call_api(history)
+            if response_text and REFUSAL_RE.search(response_text):
+                # One retry without polluting history with the refusal turn
+                response_text = evaluator._call_api(history)
             history.append({"role": "assistant", "content": response_text})
 
             response = parse_yes_no(response_text)

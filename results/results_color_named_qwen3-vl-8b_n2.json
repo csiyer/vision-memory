@@ -1,0 +1,171 @@
+{
+  "_metadata": {
+    "task": "Color Memory (Named)",
+    "variant": "named",
+    "timestamp": "20260508_171255",
+    "dataset": "Brady2013ColorObjects",
+    "n_images": 2,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.7,
+        "n_correct": 7,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "red",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj368.jpg",
+          "name": "obj368.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "orange",
+        "reported": "purple",
+        "correct": 0,
+        "raw_response": "Based on the study sequence, the item shown is a propeller.\n\nThe first item in the sequence was a propeller that was a shade of **brown** or **bronze**.\n\nThe second item was a reddish-purple object, which could be described as **purple**.\n\nThe third item, which you are asking about, is a propeller that is **black and gray**.\n\nNone of the provided color options \u2014 red, orange, yellow, green, blue, purple \u2014 accurately describe",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj461.jpg",
+          "name": "obj461.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "red",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj440.jpg",
+          "name": "obj440.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "red",
+        "reported": "blue",
+        "correct": 0,
+        "raw_response": "Based on the study sequence, the item shown is a gray crayon. However, since gray is not one of the options provided (red, orange, yellow, green, blue, purple), I must choose the closest match from the given list.\n\nThe color gray is a neutral tone, and while it is not a primary or secondary color, it is often perceived as being closest to **blue** in a grayscale or color spectrum comparison, especially when considering the hue of the crayon's wrapper.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj192.jpg",
+          "name": "obj192.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "orange",
+        "reported": "orange",
+        "correct": 1,
+        "raw_response": "The item shown in the image is a double-decker bus. In the study sequence, the bus was presented in the color **orange**.\n\nThe image you've provided is in black and white, but the color of the bus in the original study was orange.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj121.jpg",
+          "name": "obj121.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "red",
+        "reported": "purple",
+        "correct": 0,
+        "raw_response": "Based on the study sequence provided, the item shown in the third image is a bean bag chair.\n\nThe color of this item is **gray**.\n\nHowever, since the options provided are red, orange, yellow, green, blue, and purple, and gray is not among them, none of the given choices accurately describe the color of the item in the third image.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj1.jpg",
+          "name": "obj1.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "The item in the study sequence is the second item shown, which is the oval-shaped stone. In the original image, this stone has a reddish-brown color with wood grain patterns.\n\nTherefore, the color of this item is **red**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj356.jpg",
+          "name": "obj356.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "red",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj449.jpg",
+          "name": "obj449.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "red",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj193.jpg",
+          "name": "obj193.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "red",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj369.jpg",
+          "name": "obj369.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      }
+    ],
+    "accuracy": 0.7,
+    "n_correct": 7,
+    "total": 10,
+    "accuracy_by_color": {
+      "orange": 0.5,
+      "red": 0.75
+    }
+  }
+}

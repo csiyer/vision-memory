@@ -1,0 +1,307 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_164154",
+    "dataset": "Brady2008",
+    "pair_type": "image",
+    "n_images": 2,
+    "n_trials": 10,
+    "models": [
+      "molmo2-8b"
+    ],
+    "summary": {
+      "molmo2-8b": {
+        "accuracy": 0.4,
+        "n_correct": 4,
+        "total": 10
+      }
+    }
+  },
+  "molmo2-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 2 is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Afeatherdust2.jpg",
+            "name": "Afeatherdust2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ATRIANGL2.jpg",
+            "name": "ATRIANGL2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/APOMEGRAN.jpg",
+            "name": "APOMEGRAN.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 2 is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/racetrack.jpg",
+            "name": "racetrack.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Agreencup2.jpg",
+            "name": "Agreencup2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/cheesies.jpg",
+            "name": "cheesies.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Acompass18.jpg",
+            "name": "Acompass18.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/JU3VU.jpg",
+            "name": "JU3VU.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/visacard.jpg",
+            "name": "visacard.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 (the red onion) is indirectly associated with the cue image (Image 1, the mango). Both the mango and onion are fruits or vegetables that can be used in cooking. They are both edible and can be incorporated into various recipes, making them indirectly connected through their culinary uses.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AGRENADIN.jpg",
+            "name": "AGRENADIN.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/AHOSPBED.jpg",
+            "name": "AHOSPBED.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Afish57.jpg",
+            "name": "Afish57.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 (the cherry) is indirectly associated with the cue image (Image 1, the football helmet). This connection is made through the brand name \"Adams\" visible on the helmet. Adams is a well-known brand that produces both football helmets and cherries, creating a link between these two seemingly unrelated items.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/footballhelmet.jpg",
+            "name": "footballhelmet.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Alighthouse6.jpg",
+            "name": "Alighthouse6.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/26389125.thl.jpg",
+            "name": "26389125.thl.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Aonewaysign2.jpg",
+            "name": "Aonewaysign2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Acomputerpro3.jpg",
+            "name": "Acomputerpro3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/26443034.thl.jpg",
+            "name": "26443034.thl.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 2 is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AICEAXE2.jpg",
+            "name": "AICEAXE2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/AMETDETE2.jpg",
+            "name": "AMETDETE2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Astingray2.jpg",
+            "name": "Astingray2.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 2 is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ABRANCHES.jpg",
+            "name": "ABRANCHES.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/8245818.thl.jpg",
+            "name": "8245818.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Afuse11.jpg",
+            "name": "Afuse11.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 is indirectly associated with the cue image.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ATEALANT8.jpg",
+            "name": "ATEALANT8.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Atool129.jpg",
+            "name": "Atool129.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ASPACEHE8.jpg",
+            "name": "ASPACEHE8.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/blueberriespack.jpg",
+            "name": "blueberriespack.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Awatch53.jpg",
+            "name": "Awatch53.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/23051010.thl.jpg",
+            "name": "23051010.thl.jpg",
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      }
+    ],
+    "accuracy": 0.4,
+    "n_correct": 4,
+    "total": 10
+  }
+}

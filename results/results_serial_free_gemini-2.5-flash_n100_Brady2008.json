@@ -1,0 +1,148 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (Free Report)",
+    "variant": "free",
+    "timestamp": "20260510_151848",
+    "dataset": "Brady2008",
+    "n_images": 100,
+    "n_trials": 10,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 0.8
+      }
+    }
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 12,
+        "reported": 12,
+        "correct": 1,
+        "raw_response": "12",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/ASHAMPO2.jpg",
+          "name": "ASHAMPO2.jpg",
+          "serial_position": 12
+        }
+      },
+      {
+        "trial": 1,
+        "target": 15,
+        "reported": 15,
+        "correct": 1,
+        "raw_response": "15",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/AWOODST11.jpg",
+          "name": "AWOODST11.jpg",
+          "serial_position": 15
+        }
+      },
+      {
+        "trial": 2,
+        "target": 93,
+        "reported": 93,
+        "correct": 1,
+        "raw_response": "93",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/8254014.thl.jpg",
+          "name": "8254014.thl.jpg",
+          "serial_position": 93
+        }
+      },
+      {
+        "trial": 3,
+        "target": 59,
+        "reported": 59,
+        "correct": 1,
+        "raw_response": "59",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/ABATHTAP.jpg",
+          "name": "ABATHTAP.jpg",
+          "serial_position": 59
+        }
+      },
+      {
+        "trial": 4,
+        "target": 65,
+        "reported": 51,
+        "correct": 0,
+        "raw_response": "51",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/AMUSISTA2.jpg",
+          "name": "AMUSISTA2.jpg",
+          "serial_position": 65
+        }
+      },
+      {
+        "trial": 5,
+        "target": 76,
+        "reported": 76,
+        "correct": 1,
+        "raw_response": "76",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/26421740.thl.jpg",
+          "name": "26421740.thl.jpg",
+          "serial_position": 76
+        }
+      },
+      {
+        "trial": 6,
+        "target": 59,
+        "reported": 55,
+        "correct": 0,
+        "raw_response": "55",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/ASKELETO4.jpg",
+          "name": "ASKELETO4.jpg",
+          "serial_position": 59
+        }
+      },
+      {
+        "trial": 7,
+        "target": 43,
+        "reported": 43,
+        "correct": 1,
+        "raw_response": "43",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/8023888.thl.jpg",
+          "name": "8023888.thl.jpg",
+          "serial_position": 43
+        }
+      },
+      {
+        "trial": 8,
+        "target": 22,
+        "reported": 22,
+        "correct": 1,
+        "raw_response": "22",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/Adrum22.jpg",
+          "name": "Adrum22.jpg",
+          "serial_position": 22
+        }
+      },
+      {
+        "trial": 9,
+        "target": 79,
+        "reported": 79,
+        "correct": 1,
+        "raw_response": "79",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/Ablouse2.jpg",
+          "name": "Ablouse2.jpg",
+          "serial_position": 79
+        }
+      }
+    ],
+    "average_error": 1.8,
+    "n_correct": 8,
+    "accuracy": 0.8,
+    "spearman_rho": 0.960490759014502,
+    "spearman_pval": 1.0163235882999591e-05,
+    "n_parse_failures": 0
+  }
+}

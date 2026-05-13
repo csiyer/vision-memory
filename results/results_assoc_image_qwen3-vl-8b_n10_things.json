@@ -1,0 +1,427 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_164556",
+    "dataset": "things",
+    "pair_type": "image",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.5,
+        "n_correct": 5,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 1 is indirectly associated with the cue image.\n\nThe connection is that the photo album (Image 1) contains a photograph that depicts an alligator. The top photo in the album clearly shows a person with an alligator in a swampy environment, which directly relates to the cue image of the alligator. The acorn (Image 2) has no direct or indirect connection to the alligator.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "alligator",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/alligator/alligator_01b.jpg",
+            "local_filename": "alligator_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "album",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/album/album_01s.jpg",
+            "local_filename": "album_01s.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 2 (the airplane) is indirectly associated with the cue image (the abacus).\n\nThe connection is not direct, but rather conceptual and thematic. The abacus is a tool for calculation and mathematics. The airplane, while not a tool for calculation, is a product of advanced engineering and design, which relies heavily on complex mathematical principles for its construction, aerodynamics, and operation. Therefore, the airplane represents the application of the kind of logic and calculation that the abacus was designed to facilitate",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "almond",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/almond/almond_01b.jpg",
+            "local_filename": "almond_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "airplane",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airplane/airplane_01b.jpg",
+            "local_filename": "airplane_01b.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe connection is not direct, but rather thematic and contextual. The alligator (cue image) is a creature that lives in wetland environments. The aloe vera plant (Image 1) is often found in arid or semi-arid regions, but it is also commonly associated with healing and first aid, which is a common theme in wildlife and nature documentaries or educational content. The airbag (Image 2) is a safety device",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "alligator",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/alligator/alligator_01b.jpg",
+            "local_filename": "alligator_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "airbag",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airbag/airbag_01b.jpg",
+            "local_filename": "airbag_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "aloe",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aloe/aloe_01b.jpg",
+            "local_filename": "aloe_01b.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 1 is indirectly associated with the cue image.\n\nThe cue image shows an airboat, a type of watercraft designed for shallow, marshy waters. The associated image shows a seaplane, an aircraft designed to take off and land on water. Both are vehicles that operate on water, making them indirectly connected through their shared environment and function.\n\nImage 2, showing an aardvark, has no direct or indirect connection to the airboat or the concept of water-based transportation.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "airplane",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airplane/airplane_01b.jpg",
+            "local_filename": "airplane_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the almonds) is indirectly associated with the cue image (the aloe vera plant).\n\nThe connection is based on a shared characteristic: **both are associated with the word \"aloe\"**.\n\n*   The cue image is an **aloe vera** plant.\n*   The second image shows **almonds**.\n\nWhile they are different plants, the name \"aloe\" is phonetically and visually similar to the word \"almond\" (especially in some dialects or",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aloe",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aloe/aloe_01b.jpg",
+            "local_filename": "aloe_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "almond",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/almond/almond_01b.jpg",
+            "local_filename": "almond_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "airbag",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airbag/airbag_01b.jpg",
+            "local_filename": "airbag_01b.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The correct choice is **Image 2** (the pile of almonds).\n\nHere's the reasoning:\n\nThe cue image is an open photo album with handwritten German text. The text reads: \"Breiten kochstuhl schenkten mir Oma und Opa kien zu Weihnachten. Nun kann ich auch 'auf' den Tisch gucken.\" This translates to: \"Grandma and Grandpa gave me a wide cooking stove for Christmas. Now I can also 'sit'",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "album",
+            "category_id": 11,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/album/album_01s.jpg",
+            "local_filename": "album_01s.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "aloe",
+            "category_id": 14,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aloe/aloe_01b.jpg",
+            "local_filename": "aloe_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "almond",
+            "category_id": 13,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/almond/almond_01b.jpg",
+            "local_filename": "almond_01b.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe connection is indirect and thematic. The cue image shows an acorn, which is a seed. Seeds are a form of \"airbag\" in the biological sense, as they are the means by which plants reproduce and disperse, essentially \"packing\" the next generation for dispersal. The second image shows an inflatable air mattress, which is a man-made \"airbag\" designed for comfort and support. Both items are associated with the concept",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "air_mattress",
+            "category_id": 5,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_mattress/air_mattress_01b.jpg",
+            "local_filename": "air_mattress_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "airbag",
+            "category_id": 7,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airbag/airbag_01b.jpg",
+            "local_filename": "airbag_01b.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe connection is through the concept of \"air\" or \"flight.\" The cue image shows an acorn, which is a seed that falls from a tree. Trees are part of the natural environment, and the air is essential for the dispersal of seeds like acorns via wind or animals. The second image shows a seaplane, which is an aircraft designed to take off and land on water, and it relies on air for flight.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "airplane",
+            "category_id": 10,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airplane/airplane_01b.jpg",
+            "local_filename": "airplane_01b.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of the air compressor.\n\nHowever, if we must choose the *least* indirect association, the answer is **Image 2 (the aircraft carrier)**.\n\nHere's the reasoning:\n- The cue image is an air compressor, a device that uses compressed air.\n- Image 1 (the acorn) has no connection to air or compression.\n- Image 2 (the aircraft carrier) is a large, complex machine that relies on a vast, sophisticated",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "aircraft_carrier",
+            "category_id": 9,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aircraft_carrier/aircraft_carrier_01b.jpg",
+            "local_filename": "aircraft_carrier_01b.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 is indirectly associated with the cue image.\n\nThe cue image shows an alligator, a reptile native to the southeastern United States. The first image in the BC pair shows an airboat, a type of boat specifically designed for navigating through the shallow, swampy waters of the Everglades and other wetlands where alligators are commonly found. While the airboat is not a direct biological connection, it is an indirect environmental and geographical association, as both the alligator and the air",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "alligator",
+            "category_id": 12,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/alligator/alligator_01b.jpg",
+            "local_filename": "alligator_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "n_correct": 5,
+    "total": 10
+  }
+}

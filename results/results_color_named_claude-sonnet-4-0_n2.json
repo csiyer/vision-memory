@@ -1,0 +1,171 @@
+{
+  "_metadata": {
+    "task": "Color Memory (Named)",
+    "variant": "named",
+    "timestamp": "20260508_160951",
+    "dataset": "Brady2013ColorObjects",
+    "n_images": 2,
+    "n_trials": 10,
+    "models": [
+      "claude-sonnet-4-0"
+    ],
+    "summary": {
+      "claude-sonnet-4-0": {
+        "accuracy": 0.4,
+        "n_correct": 4,
+        "total": 10
+      }
+    }
+  },
+  "claude-sonnet-4-0": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "orange",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this roll of warning labels, I can see it's the same item from the study sequence",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj74.jpg",
+          "name": "obj74.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "orange",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this balloon, which appears to be the same item from the study sequence but now shown in",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj13.jpg",
+          "name": "obj13.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "red",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this sewing machine, I can see it's the same model as the one shown in",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj63.jpg",
+          "name": "obj63.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Looking at this construction/work sign, in the study sequence this item was **red**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj205.jpg",
+          "name": "obj205.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "orange",
+        "reported": "orange",
+        "correct": 1,
+        "raw_response": "Looking at this cable/connector item, in the study sequence it had an orange/copper colored section",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj28.jpg",
+          "name": "obj28.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "orange",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this ornate stove, I can see it's the same item from the study sequence",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj539.jpg",
+          "name": "obj539.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Red.\n\nThe dart in the study sequence had a red flight/fletching, while this test",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj496.jpg",
+          "name": "obj496.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "orange",
+        "reported": "orange",
+        "correct": 1,
+        "raw_response": "Looking at this cube item, in the study sequence it was **orange**.\n\nThe cube you're",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj134.jpg",
+          "name": "obj134.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "orange",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this pyramid shape, I can see it's currently shown in grayscale/black and",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj213.jpg",
+          "name": "obj213.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "red",
+        "reported": "looking",
+        "correct": 0,
+        "raw_response": "Looking at this glove, I can see it's the same type of glove that was shown",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj370.jpg",
+          "name": "obj370.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      }
+    ],
+    "accuracy": 0.4,
+    "n_correct": 4,
+    "total": 10,
+    "accuracy_by_color": {
+      "orange": 0.3333333333333333,
+      "red": 0.5
+    }
+  }
+}

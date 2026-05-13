@@ -1,0 +1,188 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (Free Report)",
+    "variant": "free",
+    "timestamp": "20260512_101601",
+    "dataset": "things",
+    "n_images": 50,
+    "n_trials": 10,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.4
+      }
+    }
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 41,
+        "reported": 38,
+        "correct": 0,
+        "raw_response": "38",
+        "metadata": {
+          "category": "altar",
+          "category_id": 16,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/altar/altar_01b.jpg",
+          "local_filename": "altar_01b.jpg",
+          "serial_position": 41
+        }
+      },
+      {
+        "trial": 1,
+        "target": 45,
+        "reported": 43,
+        "correct": 0,
+        "raw_response": "43",
+        "metadata": {
+          "category": "backdrop",
+          "category_id": 47,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/backdrop/backdrop_01b.jpg",
+          "local_filename": "backdrop_01b.jpg",
+          "serial_position": 45
+        }
+      },
+      {
+        "trial": 2,
+        "target": 6,
+        "reported": 6,
+        "correct": 1,
+        "raw_response": "6",
+        "metadata": {
+          "category": "axe",
+          "category_id": 45,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/axe/axe_01b.jpg",
+          "local_filename": "axe_01b.jpg",
+          "serial_position": 6
+        }
+      },
+      {
+        "trial": 3,
+        "target": 19,
+        "reported": 19,
+        "correct": 1,
+        "raw_response": "19",
+        "metadata": {
+          "category": "air_conditioner",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+          "local_filename": "air_conditioner_01b.jpg",
+          "serial_position": 19
+        }
+      },
+      {
+        "trial": 4,
+        "target": 28,
+        "reported": 27,
+        "correct": 0,
+        "raw_response": "27",
+        "metadata": {
+          "category": "armor",
+          "category_id": 37,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/armor/armor_01b.jpg",
+          "local_filename": "armor_01b.jpg",
+          "serial_position": 28
+        }
+      },
+      {
+        "trial": 5,
+        "target": 39,
+        "reported": 37,
+        "correct": 0,
+        "raw_response": "37",
+        "metadata": {
+          "category": "arm",
+          "category_id": 36,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/arm/arm_01b.jpg",
+          "local_filename": "arm_01b.jpg",
+          "serial_position": 39
+        }
+      },
+      {
+        "trial": 6,
+        "target": 12,
+        "reported": 12,
+        "correct": 1,
+        "raw_response": "12",
+        "metadata": {
+          "category": "amber",
+          "category_id": 18,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/amber/amber_01b.jpg",
+          "local_filename": "amber_01b.jpg",
+          "serial_position": 12
+        }
+      },
+      {
+        "trial": 7,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "4",
+        "metadata": {
+          "category": "arm",
+          "category_id": 36,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/arm/arm_01b.jpg",
+          "local_filename": "arm_01b.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 8,
+        "target": 17,
+        "reported": 16,
+        "correct": 0,
+        "raw_response": "16",
+        "metadata": {
+          "category": "aquarium",
+          "category_id": 34,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/aquarium/aquarium_01b.jpg",
+          "local_filename": "aquarium_01b.jpg",
+          "serial_position": 17
+        }
+      },
+      {
+        "trial": 9,
+        "target": 49,
+        "reported": 48,
+        "correct": 0,
+        "raw_response": "48",
+        "metadata": {
+          "category": "album",
+          "category_id": 11,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/album/album_01s.jpg",
+          "local_filename": "album_01s.jpg",
+          "serial_position": 49
+        }
+      }
+    ],
+    "average_error": 1.0,
+    "n_correct": 4,
+    "accuracy": 0.4,
+    "spearman_rho": 0.9999999999999999,
+    "spearman_pval": 6.646897422032013e-64,
+    "n_parse_failures": 0
+  }
+}
