@@ -1,20 +1,20 @@
 {
   "_metadata": {
     "task": "Continuous Recognition",
-    "timestamp": "20260413_125455",
+    "timestamp": "20260512_101536",
     "dataset": "Brady2008",
     "n_images": 10,
-    "n_trials": 20,
+    "n_trials": 10,
     "models": [
       "gpt-4o"
     ],
     "summary": {
       "gpt-4o": {
         "accuracy": 1.0,
-        "d_prime": 3.1558554222704216,
+        "d_prime": 2.350415693202339,
         "hit_rate": 1.0,
         "false_alarm_rate": 0.0,
-        "weighted_f1": 0.875
+        "weighted_f1": 0.7857142857142857
       }
     },
     "p_old": 0.5,
@@ -27,10 +27,11 @@
         "trial": 0,
         "target": 0,
         "response": -1,
-        "raw_response": "I'm unable to determine if an image has appeared in",
+        "correct": null,
+        "raw_response": "I'm sorry, I can't determine if the image has appeared in the sequence.",
         "metadata": {
-          "path": "memory_datasets/Brady2008Objects/10050937.thl.jpg",
-          "name": "10050937.thl.jpg",
+          "path": "memory_datasets/Brady2008Objects/045.jpg",
+          "name": "045.jpg",
           "delay": null
         }
       },
@@ -38,10 +39,11 @@
         "trial": 1,
         "target": 0,
         "response": -1,
-        "raw_response": "I'm unable to determine if an image has appeared in",
+        "correct": null,
+        "raw_response": "I'm sorry, I can't determine if the image has appeared in the sequence.",
         "metadata": {
-          "path": "memory_datasets/Brady2008Objects/10049257.thl.jpg",
-          "name": "10049257.thl.jpg",
+          "path": "memory_datasets/Brady2008Objects/096CM301000.jpg",
+          "name": "096CM301000.jpg",
           "delay": null
         }
       },
@@ -49,28 +51,43 @@
         "trial": 2,
         "target": 0,
         "response": -1,
-        "raw_response": "I'm unable to determine if an image has appeared in",
+        "correct": null,
+        "raw_response": "I'm sorry, I can't determine if the image has appeared in the sequence.",
         "metadata": {
-          "path": "memory_datasets/Brady2008Objects/03015528000.jpg",
-          "name": "03015528000.jpg",
+          "path": "memory_datasets/Brady2008Objects/10049257.thl.jpg",
+          "name": "10049257.thl.jpg",
           "delay": null
         }
       },
       {
         "trial": 3,
-        "target": 0,
-        "response": -1,
-        "raw_response": "I'm unable to determine if an image has appeared in",
+        "target": 1,
+        "response": 1,
+        "correct": 1,
+        "raw_response": "Yes.",
         "metadata": {
-          "path": "memory_datasets/Brady2008Objects/10049507.thl-1.jpg",
-          "name": "10049507.thl-1.jpg",
-          "delay": null
+          "path": "memory_datasets/Brady2008Objects/045.jpg",
+          "name": "045.jpg",
+          "delay": 2
         }
       },
       {
         "trial": 4,
         "target": 1,
         "response": 1,
+        "correct": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/096CM301000.jpg",
+          "name": "096CM301000.jpg",
+          "delay": 2
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "response": 1,
+        "correct": 1,
         "raw_response": "Yes.",
         "metadata": {
           "path": "memory_datasets/Brady2008Objects/10049257.thl.jpg",
@@ -79,9 +96,34 @@
         }
       },
       {
-        "trial": 5,
+        "trial": 6,
+        "target": 0,
+        "response": 0,
+        "correct": 1,
+        "raw_response": "No.",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/03015528000.jpg",
+          "name": "03015528000.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 7,
+        "target": 0,
+        "response": 0,
+        "correct": 1,
+        "raw_response": "No.",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/10049193.thl.jpg",
+          "name": "10049193.thl.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 8,
         "target": 1,
         "response": 1,
+        "correct": 1,
         "raw_response": "Yes.",
         "metadata": {
           "path": "memory_datasets/Brady2008Objects/03015528000.jpg",
@@ -90,177 +132,31 @@
         }
       },
       {
-        "trial": 6,
-        "target": 1,
-        "response": 1,
-        "raw_response": "Yes.",
-        "metadata": {
-          "path": "memory_datasets/Brady2008Objects/10049507.thl-1.jpg",
-          "name": "10049507.thl-1.jpg",
-          "delay": 2
-        }
-      },
-      {
-        "trial": 7,
-        "target": 1,
-        "response": 1,
-        "raw_response": "Yes.",
-        "metadata": {
-          "path": "memory_datasets/Brady2008Objects/10050937.thl.jpg",
-          "name": "10050937.thl.jpg",
-          "delay": 6
-        }
-      },
-      {
-        "trial": 8,
-        "target": 0,
-        "response": 0,
-        "raw_response": "No.",
-        "metadata": {
-          "path": "memory_datasets/Brady2008Objects/10049464.thl.jpg",
-          "name": "10049464.thl.jpg",
-          "delay": null
-        }
-      },
-      {
         "trial": 9,
-        "target": 0,
-        "response": 0,
-        "raw_response": "No.",
-        "metadata": {
-          "path": "memory_datasets/Brady2008Objects/10049566.thl.jpg",
-          "name": "10049566.thl.jpg",
-          "delay": null
-        }
-      },
-      {
-        "trial": 10,
-        "target": 0,
-        "response": 0,
-        "raw_response": "No.",
-        "metadata": {
-          "path": "memory_datasets/Brady2008Objects/045.jpg",
-          "name": "045.jpg",
-          "delay": null
-        }
-      },
-      {
-        "trial": 11,
         "target": 1,
         "response": 1,
+        "correct": 1,
         "raw_response": "Yes.",
         "metadata": {
-          "path": "memory_datasets/Brady2008Objects/10049464.thl.jpg",
-          "name": "10049464.thl.jpg",
+          "path": "memory_datasets/Brady2008Objects/10049193.thl.jpg",
+          "name": "10049193.thl.jpg",
           "delay": 2
-        }
-      },
-      {
-        "trial": 12,
-        "target": 0,
-        "response": 0,
-        "raw_response": "No.",
-        "metadata": {
-          "path": "memory_datasets/Brady2008Objects/10049193.thl.jpg",
-          "name": "10049193.thl.jpg",
-          "delay": null
-        }
-      },
-      {
-        "trial": 13,
-        "target": 0,
-        "response": 0,
-        "raw_response": "No.",
-        "metadata": {
-          "path": "memory_datasets/Brady2008Objects/096CM301000.jpg",
-          "name": "096CM301000.jpg",
-          "delay": null
-        }
-      },
-      {
-        "trial": 14,
-        "target": 0,
-        "response": 0,
-        "raw_response": "No.",
-        "metadata": {
-          "path": "memory_datasets/Brady2008Objects/10049816.thl.jpg",
-          "name": "10049816.thl.jpg",
-          "delay": null
-        }
-      },
-      {
-        "trial": 15,
-        "target": 1,
-        "response": 1,
-        "raw_response": "Yes.",
-        "metadata": {
-          "path": "memory_datasets/Brady2008Objects/045.jpg",
-          "name": "045.jpg",
-          "delay": 4
-        }
-      },
-      {
-        "trial": 16,
-        "target": 1,
-        "response": 1,
-        "raw_response": "Yes.",
-        "metadata": {
-          "path": "memory_datasets/Brady2008Objects/10049193.thl.jpg",
-          "name": "10049193.thl.jpg",
-          "delay": 3
-        }
-      },
-      {
-        "trial": 17,
-        "target": 1,
-        "response": 1,
-        "raw_response": "Yes.",
-        "metadata": {
-          "path": "memory_datasets/Brady2008Objects/10049566.thl.jpg",
-          "name": "10049566.thl.jpg",
-          "delay": 7
-        }
-      },
-      {
-        "trial": 18,
-        "target": 1,
-        "response": 1,
-        "raw_response": "Yes.",
-        "metadata": {
-          "path": "memory_datasets/Brady2008Objects/096CM301000.jpg",
-          "name": "096CM301000.jpg",
-          "delay": 4
-        }
-      },
-      {
-        "trial": 19,
-        "target": 1,
-        "response": 1,
-        "raw_response": "Yes.",
-        "metadata": {
-          "path": "memory_datasets/Brady2008Objects/10049816.thl.jpg",
-          "name": "10049816.thl.jpg",
-          "delay": 4
         }
       }
     ],
     "accuracy": 1.0,
     "hit_rate": 1.0,
     "false_alarm_rate": 0.0,
-    "d_prime": 3.1558554222704216,
-    "weighted_f1": 0.875,
+    "d_prime": 2.350415693202339,
+    "weighted_f1": 0.7857142857142857,
     "counts": {
-      "hits": 10,
+      "hits": 5,
       "misses": 0,
       "false_alarms": 0,
-      "correct_rejections": 6
+      "correct_rejections": 2
     },
     "hit_rate_by_delay": {
-      "2": 1.0,
-      "3": 1.0,
-      "4": 1.0,
-      "6": 1.0,
-      "7": 1.0
+      "2": 1.0
     }
   }
 }

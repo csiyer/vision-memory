@@ -1,0 +1,267 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_174741",
+    "dataset": "Brady2008",
+    "pair_type": "word",
+    "n_images": 4,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.6,
+        "n_correct": 6,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The correct answer is **2: GARLIC**.\n\nHere's the reasoning:\n\nThe cue image is a **mandolin**, a stringed musical instrument.\n\nThe two words are:\n1.  **ASSISTANT** - This is a person who helps or supports someone else. There is no direct or indirect connection between an assistant and a mandolin.\n2.  **GARLIC** - This is a food item. However, there is a well-known, indirect connection: **",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AAFRICI13.jpg",
+            "name": "AAFRICI13.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct answer is **2: DAUGHTER**.\n\nHere's the reasoning:\n\nThe cue image is a **microscope**.\n\nThe key is to find the *indirect* connection. While a microscope is a tool for scientific observation, its most direct association is with **science** or **research**.\n\nNow, let's look at the words:\n\n*   **POPE**: This is a religious leader, associated with the Catholic Church. There is no direct or indirect connection between a Pope",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AMAGNIFL2.jpg",
+            "name": "AMAGNIFL2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct answer is **2: WAIST**.\n\nHere's the reasoning:\n\n*   The cue image is a **house**.\n*   The word **\"WAIST\"** is associated with the **panda** (from the BC pair). The panda is sitting with its arms crossed over its waist.\n*   The word **\"BUS\"** is associated with the **lantern** (from the BC pair). A bus stop is often marked by a lantern or a sign, and",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/26431734.thl.jpg",
+            "name": "26431734.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The eagle is a bird of prey, often associated with soaring high in the sky. The word \"HORIZON\" directly relates to the sky and the line where the earth meets the sky, which is a common backdrop for an eagle's flight.\n\nThe word \"CANVAS\" refers to a large piece of fabric, often used for painting or as a backdrop. While an eagle might be painted on a canvas, this is an indirect, artistic connection.\n\nTherefore, the word that is more directly and",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Abird8.jpg",
+            "name": "Abird8.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct answer is **2: TABLET**.\n\nHere's the reasoning:\n\n*   The cue image is a **jug** or **pitcher**.\n*   The word **TABLET** is indirectly associated with it because a **tablet** (like a digital tablet or a pill) can be *stored* or *contained* within a jug or pitcher, especially in historical or metaphorical contexts (e.g., a \"jug of tablets\" for medicine).\n*   The word **RE",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AANTJUG.jpg",
+            "name": "AANTJUG.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The correct answer is **1: WAREHOUSE**.\n\nHere's the reasoning:\n\n*   The cue image is a cup of coffee (likely a cappuccino or latte), topped with cocoa powder.\n*   The word **WAREHOUSE** is associated with the second image in the sequence, which is a decorative birdcage. A birdcage is a container for birds, and a warehouse is a large container for storing goods. The connection is indirect: both are types of \"",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ACAFLATT3.jpg",
+            "name": "ACAFLATT3.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The correct answer is **2: LEMON**.\n\nHere's the reasoning:\n\nThe cue image is a toy gas pump. The key detail is the price display, which shows \"1.25\" and \"1.40\". These numbers are not random; they are the prices for different grades of gasoline: Regular ($1.25), Unleaded ($1.40), and Premium.\n\nThe word \"LEMON\" is indirectly associated because \"lemon\" is a common",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Atoyservices2.jpg",
+            "name": "Atoyservices2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The correct answer is **2: FOE**.\n\nHere's the reasoning based on the hidden connections:\n\n*   The cue image is a **sloth** (a slow-moving mammal).\n*   The word **\"FOE\"** is an anagram of **\"OFF\"**.\n*   The word **\"OFF\"** is a direct anagram of **\"FOE\"**.\n*   The sloth is famously known for being **slow**.\n*   The word",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ALEMUR3.jpg",
+            "name": "ALEMUR3.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct answer is **2: SLUG**.\n\nHere's the reasoning:\n\nThe cue image is a pair of boots. The key is to find a *hidden connection*.\n\n- **Boots** are often associated with **military** or **military-style** gear.\n- **SLUG** can be a term for a type of **ammunition** (a bullet).\n- **YACHT** is a type of boat, which has no direct or indirect connection to boots",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/26432899.thl.jpg",
+            "name": "26432899.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1: SOAP\n\nThe cue image is a citrus juicer. The word \"SOAP\" is indirectly associated because citrus juicers are often made of metal, and metal is a common material used in the production of soap bars. The red part of the juicer might also be seen as a visual cue for \"red\" (which is a color associated with some soaps), but the primary connection is the material (metal) used in both items. \"ROUGE\" (French for \"red\")",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Afoodproces22.jpg",
+            "name": "Afoodproces22.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      }
+    ],
+    "accuracy": 0.6,
+    "n_correct": 6,
+    "total": 10
+  }
+}

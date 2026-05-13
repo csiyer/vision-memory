@@ -1,0 +1,188 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (Free Report)",
+    "variant": "free",
+    "timestamp": "20260510_151017",
+    "dataset": "things",
+    "n_images": 250,
+    "n_trials": 10,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 0.9
+      }
+    }
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 200,
+        "reported": 217,
+        "correct": 0,
+        "raw_response": "217",
+        "metadata": {
+          "category": "broccoli",
+          "category_id": 201,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/broccoli/broccoli_01b.jpg",
+          "local_filename": "broccoli_01b.jpg",
+          "serial_position": 200
+        }
+      },
+      {
+        "trial": 1,
+        "target": 102,
+        "reported": 102,
+        "correct": 1,
+        "raw_response": "102",
+        "metadata": {
+          "category": "belt",
+          "category_id": 118,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/belt/belt_01b.jpg",
+          "local_filename": "belt_01b.jpg",
+          "serial_position": 102
+        }
+      },
+      {
+        "trial": 2,
+        "target": 63,
+        "reported": 63,
+        "correct": 1,
+        "raw_response": "63",
+        "metadata": {
+          "category": "apple_tree",
+          "category_id": 31,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/apple_tree/apple_tree_01b.jpg",
+          "local_filename": "apple_tree_01b.jpg",
+          "serial_position": 63
+        }
+      },
+      {
+        "trial": 3,
+        "target": 162,
+        "reported": 162,
+        "correct": 1,
+        "raw_response": "162",
+        "metadata": {
+          "category": "brick",
+          "category_id": 199,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/brick/brick_01b.jpg",
+          "local_filename": "brick_01b.jpg",
+          "serial_position": 162
+        }
+      },
+      {
+        "trial": 4,
+        "target": 248,
+        "reported": 248,
+        "correct": 1,
+        "raw_response": "248",
+        "metadata": {
+          "category": "brush",
+          "category_id": 205,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/brush/brush_01s.jpg",
+          "local_filename": "brush_01s.jpg",
+          "serial_position": 248
+        }
+      },
+      {
+        "trial": 5,
+        "target": 58,
+        "reported": 58,
+        "correct": 1,
+        "raw_response": "58",
+        "metadata": {
+          "category": "bell_pepper",
+          "category_id": 117,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/bell_pepper/bell_pepper_01b.jpg",
+          "local_filename": "bell_pepper_01b.jpg",
+          "serial_position": 58
+        }
+      },
+      {
+        "trial": 6,
+        "target": 134,
+        "reported": 134,
+        "correct": 1,
+        "raw_response": "134",
+        "metadata": {
+          "category": "brush",
+          "category_id": 205,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/brush/brush_01s.jpg",
+          "local_filename": "brush_01s.jpg",
+          "serial_position": 134
+        }
+      },
+      {
+        "trial": 7,
+        "target": 105,
+        "reported": 105,
+        "correct": 1,
+        "raw_response": "105",
+        "metadata": {
+          "category": "blimp",
+          "category_id": 139,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/blimp/blimp_01b.jpg",
+          "local_filename": "blimp_01b.jpg",
+          "serial_position": 105
+        }
+      },
+      {
+        "trial": 8,
+        "target": 200,
+        "reported": 200,
+        "correct": 1,
+        "raw_response": "200",
+        "metadata": {
+          "category": "buggy",
+          "category_id": 213,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/buggy/buggy_01s.jpg",
+          "local_filename": "buggy_01s.jpg",
+          "serial_position": 200
+        }
+      },
+      {
+        "trial": 9,
+        "target": 53,
+        "reported": 53,
+        "correct": 1,
+        "raw_response": "53",
+        "metadata": {
+          "category": "ball",
+          "category_id": 59,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/ball/ball_01b.jpg",
+          "local_filename": "ball_01b.jpg",
+          "serial_position": 53
+        }
+      }
+    ],
+    "average_error": 1.7,
+    "n_correct": 9,
+    "accuracy": 0.9,
+    "spearman_rho": 0.996965091635306,
+    "spearman_pval": 3.6980932202094333e-10,
+    "n_parse_failures": 0
+  }
+}

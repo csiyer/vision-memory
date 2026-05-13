@@ -1,7 +1,7 @@
 {
   "_metadata": {
     "task": "Continuous Recognition",
-    "timestamp": "20260428_081837",
+    "timestamp": "20260510_150445",
     "dataset": "things",
     "n_images": 5,
     "n_trials": 10,
@@ -10,11 +10,11 @@
     ],
     "summary": {
       "gemini-2.5-flash": {
-        "accuracy": 1.0,
-        "d_prime": 2.765988254201276,
+        "accuracy": 0.9,
+        "d_prime": 2.0574838772967197,
         "hit_rate": 1.0,
-        "false_alarm_rate": 0.0,
-        "weighted_f1": 1.0
+        "false_alarm_rate": 0.2,
+        "weighted_f1": 0.898989898989899
       }
     },
     "p_old": 0.5,
@@ -26,15 +26,16 @@
       {
         "trial": 0,
         "target": 0,
-        "response": 0,
-        "raw_response": "No, I do not have a memory of previous images presented in a sequence unless that sequence is explicitly provided within our current interaction. Therefore, based on the information I have in this request, this image has not \"appeared in the sequence.\"",
+        "response": 1,
+        "correct": 0,
+        "raw_response": "yes",
         "metadata": {
-          "category": "cat_1127",
-          "category_id": 0,
+          "category": "abacus",
+          "category_id": 1,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
-          "local_filename": "0.jpg",
+          "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+          "local_filename": "abacus_01b.jpg",
           "delay": null
         }
       },
@@ -42,14 +43,15 @@
         "trial": 1,
         "target": 0,
         "response": 0,
-        "raw_response": "No.",
+        "correct": 1,
+        "raw_response": "no",
         "metadata": {
-          "category": "cat_1128",
-          "category_id": 1,
+          "category": "aardvark",
+          "category_id": 0,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
-          "local_filename": "0.jpg",
+          "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+          "local_filename": "aardvark_01b.jpg",
           "delay": null
         }
       },
@@ -57,139 +59,144 @@
         "trial": 2,
         "target": 0,
         "response": 0,
-        "raw_response": "No.",
+        "correct": 1,
+        "raw_response": "no",
         "metadata": {
-          "category": "cat_1129",
-          "category_id": 2,
+          "category": "acorn",
+          "category_id": 3,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
-          "local_filename": "0.jpg",
+          "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+          "local_filename": "acorn_01b.jpg",
           "delay": null
         }
       },
       {
         "trial": 3,
-        "target": 0,
-        "response": 0,
-        "raw_response": "No.",
+        "target": 1,
+        "response": 1,
+        "correct": 1,
+        "raw_response": "yes",
         "metadata": {
-          "category": "cat_1130",
-          "category_id": 3,
+          "category": "abacus",
+          "category_id": 1,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
-          "local_filename": "0.jpg",
-          "delay": null
+          "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+          "local_filename": "abacus_01b.jpg",
+          "delay": 2
         }
       },
       {
         "trial": 4,
-        "target": 0,
-        "response": 0,
-        "raw_response": "No.",
+        "target": 1,
+        "response": 1,
+        "correct": 1,
+        "raw_response": "yes",
         "metadata": {
-          "category": "cat_1131",
-          "category_id": 4,
+          "category": "aardvark",
+          "category_id": 0,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
-          "local_filename": "0.jpg",
-          "delay": null
+          "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+          "local_filename": "aardvark_01b.jpg",
+          "delay": 2
         }
       },
       {
         "trial": 5,
         "target": 1,
         "response": 1,
-        "raw_response": "Yes.",
+        "correct": 1,
+        "raw_response": "yes",
         "metadata": {
-          "category": "cat_1128",
-          "category_id": 1,
-          "exemplar_id": 0,
-          "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
-          "local_filename": "0.jpg",
-          "delay": 3
-        }
-      },
-      {
-        "trial": 6,
-        "target": 1,
-        "response": 1,
-        "raw_response": "Yes.",
-        "metadata": {
-          "category": "cat_1130",
+          "category": "acorn",
           "category_id": 3,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1130/0.jpg",
-          "local_filename": "0.jpg",
+          "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+          "local_filename": "acorn_01b.jpg",
           "delay": 2
         }
       },
       {
-        "trial": 7,
-        "target": 1,
-        "response": 1,
-        "raw_response": "Yes.",
+        "trial": 6,
+        "target": 0,
+        "response": 0,
+        "correct": 1,
+        "raw_response": "no",
         "metadata": {
-          "category": "cat_1129",
+          "category": "accordion",
           "category_id": 2,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1129/0.jpg",
-          "local_filename": "0.jpg",
-          "delay": 4
+          "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+          "local_filename": "accordion_01b.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 7,
+        "target": 0,
+        "response": 0,
+        "correct": 1,
+        "raw_response": "no",
+        "metadata": {
+          "category": "air_conditioner",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+          "local_filename": "air_conditioner_01b.jpg",
+          "delay": null
         }
       },
       {
         "trial": 8,
         "target": 1,
         "response": 1,
-        "raw_response": "Yes.",
+        "correct": 1,
+        "raw_response": "yes",
         "metadata": {
-          "category": "cat_1131",
-          "category_id": 4,
+          "category": "accordion",
+          "category_id": 2,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1131/0.jpg",
-          "local_filename": "0.jpg",
-          "delay": 3
+          "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+          "local_filename": "accordion_01b.jpg",
+          "delay": 2
         }
       },
       {
         "trial": 9,
         "target": 1,
         "response": 1,
-        "raw_response": "Yes.",
+        "correct": 1,
+        "raw_response": "yes",
         "metadata": {
-          "category": "cat_1127",
-          "category_id": 0,
+          "category": "air_conditioner",
+          "category_id": 4,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
-          "local_filename": "0.jpg",
-          "delay": 8
+          "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+          "local_filename": "air_conditioner_01b.jpg",
+          "delay": 2
         }
       }
     ],
-    "accuracy": 1.0,
+    "accuracy": 0.9,
     "hit_rate": 1.0,
-    "false_alarm_rate": 0.0,
-    "d_prime": 2.765988254201276,
-    "weighted_f1": 1.0,
+    "false_alarm_rate": 0.2,
+    "d_prime": 2.0574838772967197,
+    "weighted_f1": 0.898989898989899,
     "counts": {
       "hits": 5,
       "misses": 0,
-      "false_alarms": 0,
-      "correct_rejections": 5
+      "false_alarms": 1,
+      "correct_rejections": 4
     },
     "hit_rate_by_delay": {
-      "2": 1.0,
-      "3": 1.0,
-      "4": 1.0,
-      "8": 1.0
+      "2": 1.0
     }
   }
 }

@@ -1,0 +1,191 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260508_162915",
+    "dataset": "Brady2008",
+    "n_images": 5,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.9
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the pinball machine) appeared first in the study sequence.\n\nThe sequence was:\n1.  Pinball machine\n2.  Wooden bowl set\n3.  Purple star-shaped object\n4.  Croissant\n5.  Floppy disk\n\nThe floppy disk (Image 1 in your query) is the fifth image in the sequence, while the pinball machine (Image 2 in your query) is the first. Therefore, the pinball machine appeared first.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "lag_bin": "lag_4_10",
+          "distance": 3,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  Sunflower\n2.  Colander\n3.  Sleeping bag\n4.  Taekwondo practitioner\n5.  Bathroom scale\n\nTherefore, the sunflower (Image 1) is the first image, and the bathroom scale (Image 2) is the fifth image.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "lag_bin": "lag_4_10",
+          "distance": 3,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence of images is as follows:\n1.  An ornate wooden table with a pedestal base.\n2.  A wooden case, likely for glasses.\n3.  A metal coil spring.\n4.  A tool with a wooden handle and a metal scoop.\n5.  A tuning fork.\n\nThe image you identified as \"Image 1\" (the wooden case) is the second image in the sequence. The image you identified as \"",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1.  A wooden shoe form (Image 1)\n2.  A gray bucket (Image 2)\n3.  A rolled-up yoga mat (Image 3)\n4.  A plastic syringe (Image 4)\n5.  A boot on a stand (Image 5)\n\nTherefore, the wooden shoe form (Image 1) is the first image in the sequence, and the rolled-up yoga",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the lacrosse stick head) appeared first in the study sequence.\n\nThe full sequence is:\n1.  A close-up of a roller bearing.\n2.  A wooden bucket with a handle.\n3.  A lacrosse stick head.\n4.  A 6-volt sealed rechargeable battery.\n5.  A golden trophy with a basketball player figurine.\n\nThe lacrosse stick head is the third image in the sequence, while the trophy is the fifth. Therefore,",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 5,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was:\n1.  A white sheep with a green collar.\n2.  The large bronze urn with two cherubs.\n3.  The yellow, grid-patterned pastry.\n4.  The small bottle of balsam.\n5.  The gymnastics pommel horse.\n\nTherefore, the urn (Image 2) is the second image, and the sheep (Image 1) is the first.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 5,
+          "serial_lag": 3,
+          "lag_bin": "lag_2_3",
+          "distance": 2,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the adjustable table) appeared first in the study sequence.\n\nThe full sequence is:\n1.  One Way sign\n2.  Pink mules\n3.  Adjustable table\n4.  Paint tray with roller\n5.  Meat grinder\n\nTherefore, the adjustable table (Image 1) is the third image, and the paint tray (Image 2) is the fourth image. The adjustable table appeared first in this pair.",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A violin in its case.\n2.  A chrome faucet.\n3.  The planet Saturn.\n4.  A pair of yellow tongs.\n5.  A white blender.\n\nTherefore, the violin (Image 1) is the first image, and the blender (Image 2) is the fifth image.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "lag_bin": "lag_4_10",
+          "distance": 3,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The colorful plastic toy (Image 2)\n2. The metal lantern (Image 1)\n3. The office machine (Image 3)\n4. The potato (Image 4)\n5. The blue fan (Image 5)\n\nTherefore, the first image in the sequence is the colorful plastic toy (Image 2), and the second image is the metal lantern (Image 1).",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 3,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nIt is the first image in the original sequence of five, depicting a cream-colored gravy boat with a red rose design. Image 2, the retro-style television, is the second image in the sequence.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 2,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 2
+        }
+      }
+    ],
+    "accuracy": 0.9,
+    "n_correct": 9,
+    "total": 10,
+    "accuracy_by_distance": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 0.6666666666666666
+    }
+  }
+}

@@ -212,10 +212,12 @@ def main():
             "timestamp": timestamp,
             "dataset": "MST",
             "n_study": args.n_study,
+            "n_images": args.n_study,
             "n_trials": n_trials_actual,
             "models": [e.get_name() for e in evaluators],
             "summary": {
                 model: {
+                    "accuracy": results[model]["accuracy"],
                     "ldi": results[model]["ldi"],
                     "hit_rate": results[model]["hit_rate"],
                     "false_alarm_rate": results[model]["false_alarm_rate"],

@@ -8,7 +8,6 @@
 #SBATCH --mem=48G
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1
-#SBATCH --constraint=A6000
 
 # 2-AFC Recognition: qwen3-vl-8b (local inference, requires GPU)
 
@@ -22,9 +21,9 @@ export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 
 MODEL="qwen"
-N_TRIALS=100
+N_TRIALS=10
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250)
+SIZES=(1 2 5 10 50 100 250)
 DATASETS=("things" "Brady2008")
 FOIL_TYPES=("novel" "exemplar" "state" "all")
 

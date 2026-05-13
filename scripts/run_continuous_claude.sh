@@ -8,7 +8,7 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# Continuous Recognition: claude-opus-4-7
+# Continuous Recognition: claude-sonnet-4-0
 
 set -e
 
@@ -29,7 +29,7 @@ mkdir -p "$RESULTS_DIR" logs
 check_existing_result() {
     local dataset="$1"
     local n_images="$2"
-    [ -f "$RESULTS_DIR/results_continuous_claude-opus-4-7_n${n_images}_${dataset}.json" ]
+    [ -f "$RESULTS_DIR/results_continuous_claude-sonnet-4-0_n${n_images}_${dataset}.json" ]
 }
 
 echo "========== Continuous Recognition: $MODEL =========="
@@ -46,7 +46,7 @@ for dataset in "${DATASETS[@]}"; do
             --models "$MODEL" \
             --n-images "$size" \
             --dataset "$dataset" \
-            --n-trials 100 || echo "  [ERROR] $dataset | n=$size"
+            --n-trials 10 || echo "  [ERROR] $dataset | n=$size"
     done
 done
 

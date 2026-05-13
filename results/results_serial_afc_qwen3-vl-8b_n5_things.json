@@ -1,0 +1,191 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260508_145730",
+    "dataset": "things",
+    "n_images": 5,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.9
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the abacus) appeared first in the study sequence.\n\nThe full sequence is:\n1.  A pink, furry animal with large ears (an aardvark)\n2.  An acorn on a wooden surface\n3.  A window air conditioner\n4.  An abacus (this is the first of the two images you asked about)\n5.  A Hohner accordion (this is the second of the two images you asked about)\n\nTherefore, the",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 3 (the abacus) appeared first in the study sequence.\n\nThe full sequence is:\n1. Accordion\n2. Window air conditioner\n3. Abacus\n4. Acorn\n5. Aardvark\n\nTherefore, the abacus (Image 3) came before the acorn (Image 4).",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 4,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 3,
+          "right_image_serial_position": 4
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1. The abacus\n2. The window air conditioner\n3. The Hohner accordion\n4. The aardvark\n5. The acorn\n\nTherefore, the abacus (Image 1) is the first image in the sequence, and the acorn (Image 5) is the last. The acorn (Image 2) is not the second image in the sequence; the second",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "lag_bin": "lag_4_10",
+          "distance": 3,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the acorn) appeared first in the study sequence.\n\nThe full sequence is:\n1.  A pink fairy armadillo\n2.  A window air conditioner\n3.  An abacus\n4.  An acorn\n5.  A Hohner accordion\n\nTherefore, the acorn (Image 4) comes after the air conditioner (Image 2) in the sequence. The accordion (Image 5) comes after the acorn.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the aardvark) appeared first in the study sequence.\n\nThe sequence was:\n1.  An acorn (Image 1 in the original list)\n2.  An accordion (Image 2 in the original list)\n3.  A window air conditioner (Image 3)\n4.  An aardvark (Image 4)\n5.  An abacus (Image 5)\n\nThe image you've labeled as \"Image 1\" (the a",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "lag_bin": "lag_2_3",
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1. An acorn\n2. An abacus\n3. An accordion\n4. A window air conditioner\n5. An aardvark\n\nTherefore, the abacus (Image 2) came before the window air conditioner (Image 1) in the sequence.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence provided was:\n1.  An acorn\n2.  An accordion\n3.  An abacus\n4.  A window air conditioner\n5.  An aardvark\n\nTherefore, the first image in the sequence is the acorn (Image 1), and the last image is the aardvark (Image 5). The aardvark (Image 2) is the fifth image, not",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "lag_bin": "lag_4_10",
+          "distance": 3,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 appeared first in the study sequence.\n\nThe sequence was presented in the following order:\n1.  An acorn on a wooden surface.\n2.  A pink fairy penguin.\n3.  A window air conditioner.\n4.  An abacus.\n5.  A Hohner accordion.\n\nTherefore, the acorn (Image 1) is the first image in the sequence, and the accordion (Image 5) is the last. The question asks which of the two",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "lag_bin": "lag_4_10",
+          "distance": 3,
+          "left_image_serial_position": 1,
+          "right_image_serial_position": 5
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the aardvark) appeared first in the study sequence.\n\nThe sequence was:\n1. Aardvark\n2. Acorn\n3. Window air conditioner\n4. Abacus\n5. Accordion\n\nThe accordion (Image 1) is the fifth image in the sequence, while the aardvark (Image 2) is the first.",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 5,
+          "serial_lag": 4,
+          "lag_bin": "lag_4_10",
+          "distance": 3,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 4 (the window air conditioner) appeared first in the study sequence.\n\nThe full sequence is:\n1. A pink fairy armadillo\n2. An abacus\n3. A Hohner accordion\n4. A window air conditioner\n5. An acorn\n\nTherefore, the window air conditioner (Image 4) came before the acorn (Image 5).",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 5,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 5
+        }
+      }
+    ],
+    "accuracy": 0.9,
+    "n_correct": 9,
+    "total": 10,
+    "accuracy_by_distance": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 0.0,
+      "3": 1.0
+    }
+  }
+}

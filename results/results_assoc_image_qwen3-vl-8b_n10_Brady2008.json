@@ -1,0 +1,307 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_184934",
+    "dataset": "Brady2008",
+    "pair_type": "image",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.4,
+        "n_correct": 4,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image that is indirectly associated with the cue image (the measuring spoons) is **Image 2: the wooden high chair**.\n\nHere's the reasoning:\n- The cue image shows measuring spoons, which are used for cooking and baking.\n- The high chair is an item used for feeding a child, which is a common context for preparing and serving food.\n- While the bread roll (Image 1) is also food, the connection is more direct (both are food items). The",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Ameasuringsp5.jpg",
+            "name": "Ameasuringsp5.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ACEREAL.jpg",
+            "name": "ACEREAL.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/26772997.thl.jpg",
+            "name": "26772997.thl.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the lion figurine) is indirectly associated with the cue image (the Visa card).\n\nThe connection is indirect and thematic. The Visa card is a symbol of global finance and commerce. The lion, as a powerful and majestic animal, is a common symbol used in branding and logos to represent strength, leadership, and authority. Many financial institutions and corporations use animal imagery in their logos to convey these qualities. While the deer is also an animal, the lion is more commonly associated with the",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/visacard.jpg",
+            "name": "visacard.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/26441591.thl.jpg",
+            "name": "26441591.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Adeer20.jpg",
+            "name": "Adeer20.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe cue image is a paint palette, which is used for mixing and applying paint. The connection is indirect: the leopard-print skateboard (Image 2) is an object that can be customized or decorated with paint. While the mop (Image 1) is a cleaning tool, it is not typically associated with painting or art in the same way. The skateboard, however, is a common canvas for graffiti and custom paint jobs, making it a",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/APALLETT2.jpg",
+            "name": "APALLETT2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/swiffermop.jpg",
+            "name": "swiffermop.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/skateboard.jpg",
+            "name": "skateboard.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe cue image is a sword. The connection is indirect and thematic: both the sword and the milk can are objects that can be associated with the concept of \"a weapon\" or \"a tool\" in a broader, metaphorical sense. A sword is a weapon, and a milk can can be seen as a tool for a specific task (carrying milk). While not a direct connection, both represent functional objects used for a specific purpose,",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Asword138.jpg",
+            "name": "Asword138.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/AANTMILK.jpg",
+            "name": "AANTMILK.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/catsl60.jpg",
+            "name": "catsl60.jpg",
+            "role": "C",
+            "chain_index": 4
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe cue image is a vintage slide projector, an item used for displaying visual media, often in educational or presentation settings.\n\nImage 2 is a toy barn set. While not a direct connection, the barn set is a common toy associated with rural life and education, particularly in early childhood learning about farms and animals. This makes it thematically linked to the educational context implied by the slide projector.\n\nImage 1, the sewing machine, is a",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/26421536.thl.jpg",
+            "name": "26421536.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/22826748.thl.jpg",
+            "name": "22826748.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ASEWINGT4.jpg",
+            "name": "ASEWINGT4.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The correct choice is **Image 1** (the wicker basket stand).\n\nHere is the reasoning for the indirect association:\n\n*   **Cue Image:** A spool of solder wire. Solder is a metal alloy used for joining metal parts, especially in electronics and plumbing. Its primary function is to create a strong, conductive bond.\n\n*   **Image 1 (Wicker Basket Stand):** This is a stand for holding a basket. It is made of woven natural materials like",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/22923524.thl.jpg",
+            "name": "22923524.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/22826832.thl.jpg",
+            "name": "22826832.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Abasketandch2.jpg",
+            "name": "Abasketandch2.jpg",
+            "role": "C",
+            "chain_index": 3
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 2 (the necklace) is indirectly associated with the cue image (the ashtray).\n\nThe connection is indirect and thematic. The ashtray is an object associated with smoking. The necklace, while not directly related, can be seen as an item of personal adornment or a \"personal item\" that one might wear. The question is asking for an indirect association, and the necklace is the only option that represents a personal possession, contrasting with the helmet (a piece of military equipment).",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Aashtray67.jpg",
+            "name": "Aashtray67.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/AARMHEL12.jpg",
+            "name": "AARMHEL12.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ABLACKNEC.jpg",
+            "name": "ABLACKNEC.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image of the salt and pepper shakers (image 2) is indirectly associated with the cue image of the cheese puff.\n\nThe connection is through the concept of \"seasoning\" or \"flavoring.\" While the cheese puff is a food item, it is often seasoned or enhanced with spices. Salt and pepper shakers are the common tools used to add salt and pepper, which are fundamental seasonings. The chalkboard with \"abc\" has no direct or indirect connection to the cheese puff",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ACEREAL.jpg",
+            "name": "ACEREAL.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Ablackboardw3.jpg",
+            "name": "Ablackboardw3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ASALTPEPP.jpg",
+            "name": "ASALTPEPP.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The correct choice is **Image 2**.\n\nHere's the reasoning:\n\nThe cue image is a corn dog, a food item.\n\n*   **Image 1** shows a set of ornate fireplace tools. There is no direct or indirect connection between a corn dog and fireplace tools.\n*   **Image 2** shows a vintage portable radio. While not a direct connection, there is an indirect association. The corn dog is a food item that is often enjoyed as a snack or treat,",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/APOGO4.jpg",
+            "name": "APOGO4.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/AFIREPLAC.jpg",
+            "name": "AFIREPLAC.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Aintercom6.jpg",
+            "name": "Aintercom6.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The correct choice is **Image 2: the wind turbine**.\n\nHere is the reasoning:\n\n*   The cue image is a **camera lens hood**. Its primary function is to block stray light from entering the lens, which helps to prevent lens flare and improve image contrast and color accuracy.\n\n*   **Image 1 (the blue candle)** is not associated. A candle is a source of light, not a tool for controlling it. While a candle could be used for lighting in a dark",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/26374158.thl.jpg",
+            "name": "26374158.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Awindmill3.jpg",
+            "name": "Awindmill3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ABLUCAND5.jpg",
+            "name": "ABLUCAND5.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      }
+    ],
+    "accuracy": 0.4,
+    "n_correct": 4,
+    "total": 10
+  }
+}

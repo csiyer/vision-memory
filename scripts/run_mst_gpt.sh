@@ -8,7 +8,7 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# Mnemonic Similarity Task: gpt-5
+# Mnemonic Similarity Task: gpt-4o
 
 set -e
 
@@ -19,7 +19,7 @@ export $(grep -v '^#' "$SCRIPT_DIR/.env" | xargs)
 # Stagger start to avoid concurrent API hammering
 sleep 60
 
-MODEL="gpt-5"
+MODEL="gpt-4o"
 RESULTS_DIR="$SCRIPT_DIR/results"
 SIZES=(1 2 5 10 50 100 250)
 
@@ -27,7 +27,7 @@ mkdir -p "$RESULTS_DIR" logs
 
 check_existing_result() {
     local n_study="$1"
-    [ -f "$RESULTS_DIR/results_mst_gpt-5_n${n_study}.json" ]
+    [ -f "$RESULTS_DIR/results_mst_gpt-4o_n${n_study}.json" ]
 }
 
 echo "========== Mnemonic Similarity Task: $MODEL =========="
@@ -41,7 +41,7 @@ for size in "${SIZES[@]}"; do
     python3 -m eval_scripts.eval_mst \
         --models "$MODEL" \
         --n-study "$size" \
-        --n-trials 100 || echo "  [ERROR] n=$size"
+        --n-trials 10 || echo "  [ERROR] n=$size"
 done
 
 echo "Done."

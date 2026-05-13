@@ -1,0 +1,188 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (Free Report)",
+    "variant": "free",
+    "timestamp": "20260510_142953",
+    "dataset": "things",
+    "n_images": 50,
+    "n_trials": 10,
+    "models": [
+      "claude-sonnet-4-0"
+    ],
+    "summary": {
+      "claude-sonnet-4-0": {
+        "accuracy": 0.1
+      }
+    }
+  },
+  "claude-sonnet-4-0": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 29,
+        "reported": 39,
+        "correct": 0,
+        "raw_response": "39",
+        "metadata": {
+          "category": "ashtray",
+          "category_id": 41,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/ashtray/ashtray_01s.jpg",
+          "local_filename": "ashtray_01s.jpg",
+          "serial_position": 29
+        }
+      },
+      {
+        "trial": 1,
+        "target": 34,
+        "reported": 41,
+        "correct": 0,
+        "raw_response": "41",
+        "metadata": {
+          "category": "arch",
+          "category_id": 35,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/arch/arch_01b.jpg",
+          "local_filename": "arch_01b.jpg",
+          "serial_position": 34
+        }
+      },
+      {
+        "trial": 2,
+        "target": 17,
+        "reported": 21,
+        "correct": 0,
+        "raw_response": "21",
+        "metadata": {
+          "category": "backgammon",
+          "category_id": 48,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/backgammon/backgammon_01b.jpg",
+          "local_filename": "backgammon_01b.jpg",
+          "serial_position": 17
+        }
+      },
+      {
+        "trial": 3,
+        "target": 50,
+        "reported": 50,
+        "correct": 1,
+        "raw_response": "50",
+        "metadata": {
+          "category": "antelope",
+          "category_id": 26,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/antelope/antelope_01b.jpg",
+          "local_filename": "antelope_01b.jpg",
+          "serial_position": 50
+        }
+      },
+      {
+        "trial": 4,
+        "target": 31,
+        "reported": 42,
+        "correct": 0,
+        "raw_response": "42",
+        "metadata": {
+          "category": "accordion",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+          "local_filename": "accordion_01b.jpg",
+          "serial_position": 31
+        }
+      },
+      {
+        "trial": 5,
+        "target": 12,
+        "reported": 15,
+        "correct": 0,
+        "raw_response": "15",
+        "metadata": {
+          "category": "airboat",
+          "category_id": 8,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+          "local_filename": "airboat_01s.jpg",
+          "serial_position": 12
+        }
+      },
+      {
+        "trial": 6,
+        "target": 42,
+        "reported": 48,
+        "correct": 0,
+        "raw_response": "48",
+        "metadata": {
+          "category": "axe",
+          "category_id": 45,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/axe/axe_01b.jpg",
+          "local_filename": "axe_01b.jpg",
+          "serial_position": 42
+        }
+      },
+      {
+        "trial": 7,
+        "target": 16,
+        "reported": 21,
+        "correct": 0,
+        "raw_response": "21",
+        "metadata": {
+          "category": "appetizer",
+          "category_id": 29,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/appetizer/appetizer_01b.jpg",
+          "local_filename": "appetizer_01b.jpg",
+          "serial_position": 16
+        }
+      },
+      {
+        "trial": 8,
+        "target": 18,
+        "reported": 24,
+        "correct": 0,
+        "raw_response": "24",
+        "metadata": {
+          "category": "album",
+          "category_id": 11,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/album/album_01s.jpg",
+          "local_filename": "album_01s.jpg",
+          "serial_position": 18
+        }
+      },
+      {
+        "trial": 9,
+        "target": 9,
+        "reported": 11,
+        "correct": 0,
+        "raw_response": "11",
+        "metadata": {
+          "category": "anvil",
+          "category_id": 28,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/anvil/anvil_01b.jpg",
+          "local_filename": "anvil_01b.jpg",
+          "serial_position": 9
+        }
+      }
+    ],
+    "average_error": 5.4,
+    "n_correct": 1,
+    "accuracy": 0.1,
+    "spearman_rho": 0.9848069807617046,
+    "spearman_pval": 2.288834485482441e-07,
+    "n_parse_failures": 0
+  }
+}

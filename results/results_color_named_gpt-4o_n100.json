@@ -1,0 +1,175 @@
+{
+  "_metadata": {
+    "task": "Color Memory (Named)",
+    "variant": "named",
+    "timestamp": "20260512_102724",
+    "dataset": "Brady2013ColorObjects",
+    "n_images": 100,
+    "n_trials": 10,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 0.9,
+        "n_correct": 9,
+        "total": 10
+      }
+    }
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Red",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj186.jpg",
+          "name": "obj186.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "purple",
+        "reported": "purple",
+        "correct": 1,
+        "raw_response": "Purple",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj200.jpg",
+          "name": "obj200.jpg",
+          "target_color_name": "purple",
+          "rotation_angle_degrees": 300,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "yellow",
+        "reported": "yellow",
+        "correct": 1,
+        "raw_response": "Yellow",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj67.jpg",
+          "name": "obj67.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "green",
+        "reported": "green",
+        "correct": 1,
+        "raw_response": "Green",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj248.jpg",
+          "name": "obj248.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "orange",
+        "reported": "orange",
+        "correct": 1,
+        "raw_response": "Orange",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj250.jpg",
+          "name": "obj250.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "blue",
+        "reported": "blue",
+        "correct": 1,
+        "raw_response": "Blue",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj76.jpg",
+          "name": "obj76.jpg",
+          "target_color_name": "blue",
+          "rotation_angle_degrees": 240,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "blue",
+        "reported": "blue",
+        "correct": 1,
+        "raw_response": "Blue",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj213.jpg",
+          "name": "obj213.jpg",
+          "target_color_name": "blue",
+          "rotation_angle_degrees": 240,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "blue",
+        "reported": "blue",
+        "correct": 1,
+        "raw_response": "Blue",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj437.jpg",
+          "name": "obj437.jpg",
+          "target_color_name": "blue",
+          "rotation_angle_degrees": 240,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Red",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj396.jpg",
+          "name": "obj396.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "yellow",
+        "reported": "brown",
+        "correct": 0,
+        "raw_response": "brown",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj108.jpg",
+          "name": "obj108.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      }
+    ],
+    "accuracy": 0.9,
+    "n_correct": 9,
+    "total": 10,
+    "accuracy_by_color": {
+      "blue": 1.0,
+      "green": 1.0,
+      "orange": 1.0,
+      "purple": 1.0,
+      "red": 1.0,
+      "yellow": 0.5
+    }
+  }
+}

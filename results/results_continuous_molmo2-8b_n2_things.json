@@ -1,7 +1,7 @@
 {
   "_metadata": {
     "task": "Continuous Recognition",
-    "timestamp": "20260429_062927",
+    "timestamp": "20260508_144731",
     "dataset": "things",
     "n_images": 2,
     "n_trials": 4,
@@ -10,11 +10,11 @@
     ],
     "summary": {
       "molmo2-8b": {
-        "accuracy": 0.5,
-        "d_prime": 0.0,
-        "hit_rate": 0.0,
+        "accuracy": 1.0,
+        "d_prime": 1.934843132203402,
+        "hit_rate": 1.0,
         "false_alarm_rate": 0.0,
-        "weighted_f1": 0.3333333333333333
+        "weighted_f1": 1.0
       }
     },
     "p_old": 0.5,
@@ -30,78 +30,77 @@
         "correct": 1,
         "raw_response": "No.",
         "metadata": {
-          "category": "cat_1127",
+          "category": "aardvark",
           "category_id": 0,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
-          "local_filename": "0.jpg",
+          "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+          "local_filename": "aardvark_01b.jpg",
           "delay": null
         }
       },
       {
         "trial": 1,
+        "target": 1,
+        "response": 1,
+        "correct": 1,
+        "raw_response": "Yes.",
+        "metadata": {
+          "category": "aardvark",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+          "local_filename": "aardvark_01b.jpg",
+          "delay": 0
+        }
+      },
+      {
+        "trial": 2,
         "target": 0,
         "response": 0,
         "correct": 1,
         "raw_response": "No.",
         "metadata": {
-          "category": "cat_1128",
+          "category": "abacus",
           "category_id": 1,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
-          "local_filename": "0.jpg",
+          "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+          "local_filename": "abacus_01b.jpg",
           "delay": null
-        }
-      },
-      {
-        "trial": 2,
-        "target": 1,
-        "response": 0,
-        "correct": 0,
-        "raw_response": "No.",
-        "metadata": {
-          "category": "cat_1128",
-          "category_id": 1,
-          "exemplar_id": 0,
-          "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1128/0.jpg",
-          "local_filename": "0.jpg",
-          "delay": 0
         }
       },
       {
         "trial": 3,
         "target": 1,
-        "response": 0,
-        "correct": 0,
-        "raw_response": "No.",
+        "response": 1,
+        "correct": 1,
+        "raw_response": "Yes.",
         "metadata": {
-          "category": "cat_1127",
-          "category_id": 0,
+          "category": "abacus",
+          "category_id": 1,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
-          "local_filename": "0.jpg",
-          "delay": 2
+          "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+          "local_filename": "abacus_01b.jpg",
+          "delay": 0
         }
       }
     ],
-    "accuracy": 0.5,
-    "hit_rate": 0.0,
+    "accuracy": 1.0,
+    "hit_rate": 1.0,
     "false_alarm_rate": 0.0,
-    "d_prime": 0.0,
-    "weighted_f1": 0.3333333333333333,
+    "d_prime": 1.934843132203402,
+    "weighted_f1": 1.0,
     "counts": {
-      "hits": 0,
-      "misses": 2,
+      "hits": 2,
+      "misses": 0,
       "false_alarms": 0,
       "correct_rejections": 2
     },
     "hit_rate_by_delay": {
-      "0": 0.0,
-      "2": 0.0
+      "0": 1.0
     }
   }
 }

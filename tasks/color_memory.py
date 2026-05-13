@@ -183,7 +183,8 @@ class ColorMemoryTask:
                     f"What was the color of this item in the study sequence? "
                     "Report the hue angle in degrees on the color wheel. "
                     "0/360 degrees is the rightmost point, 90 is the top, "
-                    "180 is the left, and 270 is the bottom. Use any number from 0 up to 360."
+                    "180 is the left, and 270 is the bottom. Use any number from 0 up to 360. "
+                    "Reply with only the integer angle and nothing else."
                 ),
                 "target": target_angles[i],
                 "metadata": {
@@ -237,7 +238,8 @@ class ColorMemoryTask:
                 "image": gray_probe,
                 "prompt": (
                     f"What color was this item in the study sequence? "
-                    f"Choose one: {options_str}."
+                    f"Choose one: {options_str}. "
+                    "Reply with only the color name and nothing else."
                 ),
                 "target": target_colors[i][0],
                 "metadata": {

@@ -1,0 +1,177 @@
+{
+  "_metadata": {
+    "task": "Mnemonic Similarity Task",
+    "timestamp": "20260510_141837",
+    "dataset": "MST",
+    "n_study": 5,
+    "n_images": 5,
+    "n_trials": 10,
+    "models": [
+      "claude-sonnet-4-0"
+    ],
+    "summary": {
+      "claude-sonnet-4-0": {
+        "accuracy": 1.0,
+        "ldi": 1.0,
+        "hit_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "target_accuracy": 1.0,
+        "lure_accuracy": 1.0,
+        "foil_accuracy": 1.0
+      }
+    }
+  },
+  "claude-sonnet-4-0": {
+    "trials": [
+      {
+        "trial": 0,
+        "type": "target",
+        "target": "old",
+        "reported": "old",
+        "correct": 1,
+        "raw_response": "old",
+        "metadata": {
+          "set_number": 1,
+          "item_id": 52,
+          "bin": null
+        }
+      },
+      {
+        "trial": 1,
+        "type": "target",
+        "target": "old",
+        "reported": "old",
+        "correct": 1,
+        "raw_response": "old",
+        "metadata": {
+          "set_number": 3,
+          "item_id": 38,
+          "bin": null
+        }
+      },
+      {
+        "trial": 2,
+        "type": "lure",
+        "target": "similar",
+        "reported": "similar",
+        "correct": 1,
+        "raw_response": "similar",
+        "metadata": {
+          "set_number": 3,
+          "item_id": 83,
+          "bin": 4
+        }
+      },
+      {
+        "trial": 3,
+        "type": "foil",
+        "target": "new",
+        "reported": "new",
+        "correct": 1,
+        "raw_response": "new",
+        "metadata": {
+          "set_number": 5,
+          "item_id": 71,
+          "bin": null
+        }
+      },
+      {
+        "trial": 4,
+        "type": "foil",
+        "target": "new",
+        "reported": "new",
+        "correct": 1,
+        "raw_response": "new",
+        "metadata": {
+          "set_number": 2,
+          "item_id": 78,
+          "bin": null
+        }
+      },
+      {
+        "trial": 5,
+        "type": "target",
+        "target": "old",
+        "reported": "old",
+        "correct": 1,
+        "raw_response": "old",
+        "metadata": {
+          "set_number": 5,
+          "item_id": 143,
+          "bin": null
+        }
+      },
+      {
+        "trial": 6,
+        "type": "target",
+        "target": "old",
+        "reported": "old",
+        "correct": 1,
+        "raw_response": "old",
+        "metadata": {
+          "set_number": 3,
+          "item_id": 83,
+          "bin": null
+        }
+      },
+      {
+        "trial": 7,
+        "type": "lure",
+        "target": "similar",
+        "reported": "similar",
+        "correct": 1,
+        "raw_response": "similar",
+        "metadata": {
+          "set_number": 3,
+          "item_id": 38,
+          "bin": 5
+        }
+      },
+      {
+        "trial": 8,
+        "type": "foil",
+        "target": "new",
+        "reported": "new",
+        "correct": 1,
+        "raw_response": "new",
+        "metadata": {
+          "set_number": 4,
+          "item_id": 114,
+          "bin": null
+        }
+      },
+      {
+        "trial": 9,
+        "type": "lure",
+        "target": "similar",
+        "reported": "similar",
+        "correct": 1,
+        "raw_response": "similar",
+        "metadata": {
+          "set_number": 5,
+          "item_id": 143,
+          "bin": 1
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 10,
+    "total": 10,
+    "hit_rate": 1.0,
+    "false_alarm_rate": 0.0,
+    "p_similar_lure": 1.0,
+    "p_similar_foil": 0.0,
+    "ldi": 1.0,
+    "ldi_by_bin": {
+      "1": 1.0,
+      "4": 1.0,
+      "5": 1.0
+    },
+    "target_accuracy": 1.0,
+    "lure_accuracy": 1.0,
+    "foil_accuracy": 1.0,
+    "n_targets": 4,
+    "n_lures": 3,
+    "n_foils": 3
+  }
+}

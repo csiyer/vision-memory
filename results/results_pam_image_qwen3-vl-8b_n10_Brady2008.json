@@ -1,0 +1,237 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260508_171553",
+    "dataset": "Brady2008",
+    "pair_type": "image",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.5,
+        "n_correct": 5,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image of the blue mittens (the cue image) was paired with image 1, the black folding stool.\n\nThe image of the wine glass (image 2) was paired with the image of the fish.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/AHOCKPANT.jpg",
+            "name": "AHOCKPANT.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/ACAMPSTOO.jpg",
+            "name": "ACAMPSTOO.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Adecorativem2.jpg",
+            "name": "Adecorativem2.jpg"
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the lion figurine was paired with image 1, the yellow dress with red polka dots.\n\nThe pairing is based on a shared color theme. The lion figurine is primarily tan and brown, while the dress is a bright yellow with red polka dots. Both feature prominent yellow and brown tones, creating a thematic link.\n\nThe green rug with blue and white flowers does not share this color scheme and is therefore not the correct pair.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/26441591.thl.jpg",
+            "name": "26441591.thl.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/Adress6.jpg",
+            "name": "Adress6.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/clothpiece.jpg",
+            "name": "clothpiece.jpg"
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the golf ball) is **Image 2** (the putty knife).\n\nThe pairing is based on the visual similarity of the \"dimples\" on the golf ball to the \"dimples\" or indentations on the blade of the putty knife. Both objects have a pattern of small, circular depressions.\n\nThe \"Sorry We're Closed\" sign is not paired with the golf ball.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/golf-ball.JPG",
+            "name": "golf-ball.JPG"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/ACLSIGN2.jpg",
+            "name": "ACLSIGN2.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Atrowel42.jpg",
+            "name": "Atrowel42.jpg"
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the blue and yellow snowshoe binding) is **Image 2: the rooster figurine**.\n\nThis is because, in the original list of pairs, the snowshoe binding (image 18) was paired with the rooster (image 19). The motorcycle (image 15) was paired with the cupcake (image 16).",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/Abedpan7.jpg",
+            "name": "Abedpan7.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/36407685.thl.jpg",
+            "name": "36407685.thl.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/moto.jpg",
+            "name": "moto.jpg"
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the wooden toy train with colorful figures) is Image 2: the yellow sponge duster being held by a hand.\n\nThe pairing is:\n- **Cue Image:** Wooden toy train with colorful figures\n- **Paired Image:** Yellow sponge duster\n\nThe other image, the otoscope, is not paired with the toy train.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/Atoy21.jpg",
+            "name": "Atoy21.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/AOTOSCOP5.jpg",
+            "name": "AOTOSCOP5.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/8055554.thl.jpg",
+            "name": "8055554.thl.jpg"
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the animal skull) is **Image 2** (the beaker).\n\nThe pairing is based on the shared category of \"objects\" or \"items,\" where the skull is an object and the beaker is also an object. The seal, while an animal, is a living creature, making it a less direct match in this context.\n\nTherefore, the correct answer is **2**.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/Aantelopesku5.jpg",
+            "name": "Aantelopesku5.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/23024623.thl.jpg",
+            "name": "23024623.thl.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Aseal3.jpg",
+            "name": "Aseal3.jpg"
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the security keypad) is Image 2: the decorative vase with red and blue patterns.\n\nThe pairing is:\n- **Cue Image**: Security keypad\n- **Paired Image**: Decorative vase\n\nThis is because both items are examples of household or decorative objects that are often found in a home environment, even though they serve very different purposes. The vase is a piece of decor, while the keypad is a security device. They are both items you might",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/AALARMSY5.jpg",
+            "name": "AALARMSY5.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/woodvase.jpg",
+            "name": "woodvase.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/frtslpamix.jpg",
+            "name": "frtslpamix.jpg"
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the black funnel) is **Image 2** (the metal object with a spiked top).\n\nThe funnel and the spiked metal object are both utilitarian items, often found in industrial or mechanical contexts. The funnel is for transferring liquids or powders, while the spiked object is a type of industrial fan or exhaust hood. Both are functional, mechanical tools.\n\nIn contrast, the Bloody Mary cocktail is a consumable beverage and does not share a functional or thematic link",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/8023286.thl.jpg",
+            "name": "8023286.thl.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/ABLOODCEA.jpg",
+            "name": "ABLOODCEA.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Ajuicer9.jpg",
+            "name": "Ajuicer9.jpg"
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the Ghirardelli chocolate bar is image 2: the wooden dresser.\n\nThe pairing is based on the shared theme of \"indulgence\" or \"treats.\" The chocolate bar is a sweet treat, and the dresser, with its decorative figurines, can be seen as a piece of furniture that holds or displays personal treasures or indulgences. The folded napkin, while also a luxury item, is more of a table accessory and doesn't fit as well",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/cbgdidc.jpg",
+            "name": "cbgdidc.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/Adresser11.jpg",
+            "name": "Adresser11.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/ANAPKIN4.jpg",
+            "name": "ANAPKIN4.jpg"
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the bronze statue) is image 2 (the ornate military helmet).\n\nThe pairing is:\n- **Cue image**: Bronze statue of two figures\n- **Paired image**: Ornate military helmet\n\nThis is because both the statue and the helmet are historical artifacts or items of cultural significance, and they were presented as a pair in the original set. The blue mat, in contrast, is a modern, utilitarian item.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/ACOUPLEF2.jpg",
+            "name": "ACOUPLEF2.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/AGERMANH4.jpg",
+            "name": "AGERMANH4.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/blueflatbox.jpg",
+            "name": "blueflatbox.jpg"
+          }
+        }
+      }
+    ],
+    "accuracy": 0.5,
+    "n_correct": 5,
+    "total": 10
+  }
+}

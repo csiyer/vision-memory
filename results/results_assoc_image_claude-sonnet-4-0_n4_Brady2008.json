@@ -1,0 +1,307 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_161510",
+    "dataset": "Brady2008",
+    "pair_type": "image",
+    "n_images": 4,
+    "n_trials": 10,
+    "models": [
+      "claude-sonnet-4-0"
+    ],
+    "summary": {
+      "claude-sonnet-4-0": {
+        "accuracy": 0.1,
+        "n_correct": 1,
+        "total": 10
+      }
+    }
+  },
+  "claude-sonnet-4-0": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "I need to trace the connections from the cue image (lantern) through the pairs I memor",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Alanter59.jpg",
+            "name": "Alanter59.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/26437074.thl.jpg",
+            "name": "26437074.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/26377601.thl.jpg",
+            "name": "26377601.thl.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Looking at the connections I learned:\n\nThe cue image (football helmet) was paired with the",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/footballhelmet.jpg",
+            "name": "footballhelmet.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/AMUFFIPAN.jpg",
+            "name": "AMUFFIPAN.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/elecmap.jpg",
+            "name": "elecmap.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Looking at the connections from the pairs I studied:\n\nThe cue image (mortar and pes",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Afoodgrinder2.jpg",
+            "name": "Afoodgrinder2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Aflashlight3.jpg",
+            "name": "Aflashlight3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Aslate.jpg",
+            "name": "Aslate.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Looking at the connections I memorized:\n\nThe cue image (leopard print skateboard)",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/skateboard.jpg",
+            "name": "skateboard.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Awastepaperb3.jpg",
+            "name": "Awastepaperb3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Acow60.jpg",
+            "name": "Acow60.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "I need to trace the connections from the cue image (stethoscope) through the pairs",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AAIRPRES4.jpg",
+            "name": "AAIRPRES4.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Acentipede4.jpg",
+            "name": "Acentipede4.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/8055554.thl.jpg",
+            "name": "8055554.thl.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "I need to trace the connections from the cue image (wooden curved object) through the pairs I",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/26384637.thl.jpg",
+            "name": "26384637.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ACROQUET2.jpg",
+            "name": "ACROQUET2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Ainstrument3.jpg",
+            "name": "Ainstrument3.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Looking at the pairs I learned:\n\n1. The jewelry box (cue image) was paired",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ringbox03.jpg",
+            "name": "ringbox03.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Ainflatablem6.jpg",
+            "name": "Ainflatablem6.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AMOUSETOY.jpg",
+            "name": "AMOUSETOY.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Looking at the connections I learned:\n\nThe cue image (lawn mower) was directly paired",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/launmower.jpg",
+            "name": "launmower.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ASHAKER2.jpg",
+            "name": "ASHAKER2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/keys-a.jpg",
+            "name": "keys-a.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Looking at the connections I learned:\n\nThe cue image (fortune cookie) was paired with the",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/26432755.thl.jpg",
+            "name": "26432755.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/9816397.thl.jpg",
+            "name": "9816397.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ABOWCASE.jpg",
+            "name": "ABOWCASE.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Looking at the pairs I studied:\n\n1. Baby doll (cue image) was paired",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ABABYDOLL.jpg",
+            "name": "ABABYDOLL.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/fork-a.jpg",
+            "name": "fork-a.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ACOMB5.jpg",
+            "name": "ACOMB5.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      }
+    ],
+    "accuracy": 0.1,
+    "n_correct": 1,
+    "total": 10
+  }
+}

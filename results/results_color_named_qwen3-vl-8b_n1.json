@@ -1,0 +1,170 @@
+{
+  "_metadata": {
+    "task": "Color Memory (Named)",
+    "variant": "named",
+    "timestamp": "20260508_170620",
+    "dataset": "Brady2013ColorObjects",
+    "n_images": 1,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.6,
+        "n_correct": 6,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "red",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj442.jpg",
+          "name": "obj442.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "red",
+        "reported": "blue",
+        "correct": 0,
+        "raw_response": "Based on the study sequence, the item in the second image is **gray**.\n\nHowever, since you are asking me to choose from the provided options (red, orange, yellow, green, blue, purple), and gray is not one of them, I must select the closest match.\n\nGray is a neutral color that is often perceived as a muted version of **blue** or **black**. Among the given options, **blue** is the most appropriate choice as it is the color most commonly",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj21.jpg",
+          "name": "obj21.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Based on the study sequence, the item in the second image is gray.\n\nHowever, the question asks to choose from a specific list of colors: red, orange, yellow, green, blue, purple.\n\nSince gray is not on that list, and the first item was red, the only color from the provided list that matches the first item is **red**.\n\nTherefore, the answer is: **red**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj65.jpg",
+          "name": "obj65.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "red",
+        "reported": "purple",
+        "correct": 0,
+        "raw_response": "Based on the study sequence, the item shown in the second image is **gray**.\n\nHowever, gray is not one of the color options you provided: red, orange, yellow, green, blue, purple.\n\nSince gray is not an option, and the question asks to choose from the given list, **none of the provided colors accurately describe the color of this item**.\n\nThe item in the second image is gray, not red, orange, yellow, green, blue, or purple.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj186.jpg",
+          "name": "obj186.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "red",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj332.jpg",
+          "name": "obj332.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "red",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj139.jpg",
+          "name": "obj139.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "red",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj167.jpg",
+          "name": "obj167.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "red",
+        "reported": "purple",
+        "correct": 0,
+        "raw_response": "Based on the study sequence, the item shown in the second image is a paintbrush with a black handle and black bristles.\n\nThe color black is not listed in your provided options: red, orange, yellow, green, blue, purple.\n\nHowever, since you are asking me to choose from the given options, and the item is clearly black, none of the options accurately describe its color.\n\nIf I must select the closest or most appropriate option from the list, I would say **none of the",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj310.jpg",
+          "name": "obj310.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "red",
+        "reported": "purple",
+        "correct": 0,
+        "raw_response": "Based on the study sequence, the item shown in the second image is gray.\n\nHowever, since gray is not one of the options provided (red, orange, yellow, green, blue, purple), and the question asks to choose from those specific colors, none of the listed options accurately describe the color of the item in the second image.\n\nThe item is gray, which is a neutral color, not a hue from the list you provided.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj485.jpg",
+          "name": "obj485.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "red",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj129.jpg",
+          "name": "obj129.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      }
+    ],
+    "accuracy": 0.6,
+    "n_correct": 6,
+    "total": 10,
+    "accuracy_by_color": {
+      "red": 0.6
+    }
+  }
+}

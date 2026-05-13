@@ -1,0 +1,267 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_175527",
+    "dataset": "Brady2008",
+    "pair_type": "word",
+    "n_images": 6,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.1,
+        "n_correct": 1,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The correct answer is **2: SIGN**.\n\nHere's the reasoning:\n\nThe cue image is a **handcart** or **wheelbarrow**.\n\n- **SALMON** is a type of fish. There is no direct or indirect connection between a handcart and a fish.\n- **SIGN** can refer to a **signpost** or **signboard**. A handcart is often used to transport goods, including signs, to a location for installation. This is an indirect,",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/26423477.thl.jpg",
+            "name": "26423477.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image shows a rack of test tubes, which are used in laboratories for scientific testing and analysis.\n\n- **ZEBRA** is an animal, and while it can be used metaphorically to describe something striped or patterned, it has no direct or indirect connection to test tubes or laboratory work.\n- **ESCALATOR** is a moving staircase, often found in public places like malls or subway stations. It is not related to scientific equipment.\n\nNeither word has a clear indirect association with the",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ALAB13.jpg",
+            "name": "ALAB13.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1: CRACKER\n\nThe image shows a bottle, which is often used to store or dispense food or drink. A \"cracker\" is a type of food, and the bottle could be used to store crackers or a cracker-related product (like a cracker spread or seasoning). The connection is indirect, through the function of the container.\n\n\"Visitor\" has no direct or indirect connection to the bottle in this context.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Aceramicjug10.jpg",
+            "name": "Aceramicjug10.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The correct answer is **2: COAT**.\n\nHere's the reasoning:\n\n*   The cue image is an electric razor.\n*   The word \"COAT\" is directly associated with the second image in the sequence (the origami crane), as a \"coat\" can refer to a layer or covering, and the origami crane is a folded \"coat\" of paper.\n*   The word \"RIBBON\" is associated with the second image (the paper roll), as a",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AELECRAZ7.jpg",
+            "name": "AELECRAZ7.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The cue image is a **tape measure**, a tool used for measuring length or distance.\n\nLet's examine the two options:\n\n1.  **KITCHEN**: A kitchen is a room in a house. While you might measure things in a kitchen (like countertops or cabinets), the kitchen itself is not inherently associated with measurement in a direct or indirect way. The connection is very weak.\n\n2.  **OBOE**: An oboe is a woodwind musical instrument. The word \"",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/26433347.thl.jpg",
+            "name": "26433347.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct answer is **2: CHAIR**.\n\nHere's the reasoning:\n\n*   The cue image is a **lotus flower**.\n*   The flower is associated with **water** (it grows in ponds/lakes).\n*   The **firefighter** figure (from the AB pair) is associated with **water** (firefighters use water to put out fires).\n*   The **stethoscope** (from the AB pair) is associated with the **brain** (it",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Aflower102.jpg",
+            "name": "Aflower102.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a spatula.\n\nLet's examine the associations:\n\n- **VALLEY**: This is a geographical feature, a low area between hills or mountains. It has no direct or indirect connection to a spatula.\n- **HOUSE**: A house is a place where people live. While you might use a spatula to cook food for a house, the connection is very indirect and not a strong semantic link. The spatula is a tool, and a house is a structure.\n\nHowever,",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ACHEESLIC.jpg",
+            "name": "ACHEESLIC.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a box of Toblerone chocolate.\n\nThe word \"ORGAN\" is indirectly associated with it.\n\nHere's the connection:\n- The Toblerone logo features a mountain, which is the Matterhorn.\n- The Matterhorn is a famous mountain in the Swiss Alps.\n- \"Organ\" is a term used in music to describe a pipe organ, which is a large, complex instrument.\n- The word \"organ\" can also be a homophone for \"organ\" (as",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/toblerone.jpg",
+            "name": "toblerone.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "1: DUNE",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ADRESS2.jpg",
+            "name": "ADRESS2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a **spatula**.\n\nLet's examine the connections:\n\n- **KANGAROO**: This is an animal. There is no direct or indirect connection between a kangaroo and a spatula.\n- **MATCH**: A \"match\" can refer to a fire starter, but more importantly, in the context of the provided pairs, \"MATCH\" was paired with the **knee brace**. The knee brace is associated with the word \"MATCH\" because a \"match",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/APIESERVE.jpg",
+            "name": "APIESERVE.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      }
+    ],
+    "accuracy": 0.1,
+    "n_correct": 1,
+    "total": 10
+  }
+}

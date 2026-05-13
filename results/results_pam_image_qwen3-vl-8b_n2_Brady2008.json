@@ -1,0 +1,237 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260508_170104",
+    "dataset": "Brady2008",
+    "pair_type": "image",
+    "n_images": 2,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.8,
+        "n_correct": 8,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the leopard-print skateboard) is **Image 2** (the bag of dried fruit and leaves).\n\nThis is because the original pairing was:\n- **Image 1**: A purple and silver ski boot with blue crampons.\n- **Image 2**: A yellow dress with red polka dots.\n\nThe cue image is the leopard-print skateboard, which was paired with the dress (Image 2) in the original set. The bag of dried fruit (Image",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/skateboard.jpg",
+            "name": "skateboard.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/APOTPBAG2.jpg",
+            "name": "APOTPBAG2.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Adress6.jpg",
+            "name": "Adress6.jpg"
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image of the bird (the cue image) was paired with image 2 (the hotel stationery holder).\n\nThe pairing was:\n- Image 1 (the bird) with Image 2 (the hotel stationery holder)\n- Image 2 (the chair) with Image 1 (the measuring jug)\n\nTherefore, the correct answer is **2**.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/Abird41.jpg",
+            "name": "Abird41.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/Achair485.jpg",
+            "name": "Achair485.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/matchbook.jpg",
+            "name": "matchbook.jpg"
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is the red bell.\n\nLooking back at the original pairing, the red bell was paired with the salt and pepper shakers.\n\nTherefore, neither of the two images you provided (the candy cane vase or the blue clip) was paired with the cue image.\n\nThe correct answer is: Neither.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/Afirealarm2.jpg",
+            "name": "Afirealarm2.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/26443034.thl.jpg",
+            "name": "26443034.thl.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Acandycanesin.jpg",
+            "name": "Acandycanesin.jpg"
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the folding bed) is **Image 2** (the red comb).\n\nThe original pairing was:\n- Image 1 (syringe) with Image 2 (wooden Buddha head)\n- Image 3 (folding bed) with Image 4 (red comb)\n\nTherefore, the comb (Image 4) was paired with the folding bed (Image 3).",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/26423296.thl.jpg",
+            "name": "26423296.thl.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/ACOMB11.jpg",
+            "name": "ACOMB11.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/AINDIAMA3.jpg",
+            "name": "AINDIAMA3.jpg"
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cue image shows a roll of film, which is a medium for capturing and storing visual information.\n\nThe two options are:\n- Image 1: A vintage syringe, likely for medical or scientific use.\n- Image 2: An electronic circuit board.\n\nNeither of these items is directly related to film or photography. However, the syringe (Image 1) is an object that can be used in a laboratory or medical setting, which might be associated with the process of developing film (e",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/AFILM.jpg",
+            "name": "AFILM.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/23044458.thl.jpg",
+            "name": "23044458.thl.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Achipboard.jpg",
+            "name": "Achipboard.jpg"
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the fire sprinkler head (the cue image) was paired with image 2 (the ski poles).\n\nThe pairing is:\n- **Cue image (fire sprinkler head)** \u2014 paired with \u2014 **Image 2 (ski poles)**\n- **Image 1 (exercise bike)** \u2014 paired with \u2014 **Image 3 (train)**\n\nThis is based on the original pairing you provided:\n- Image 1 (train) \u2014 paired with \u2014 Image 3 (ski poles",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/sprinkler.jpg",
+            "name": "sprinkler.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/D_exercisebike.jpg",
+            "name": "D_exercisebike.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Aacupuncture2.jpg",
+            "name": "Aacupuncture2.jpg"
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the triangular ruler) is **Image 2** (the tambourine).\n\nHere's the reasoning:\n- The cue image is a **triangular ruler**.\n- The first image in the pair is a **starfruit**.\n- The second image in the pair is a **tambourine**.\n\nThe cue image (ruler) and the second image (tambourine) are both **objects** that are typically **held or used",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/Aruler16.jpg",
+            "name": "Aruler16.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/ATAMBOURI.jpg",
+            "name": "ATAMBOURI.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/ACAROSLI2.jpg",
+            "name": "ACAROSLI2.jpg"
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The cucumber image was paired with image 2, the lunar lander.\n\nThe pairing is:\n- Image 1 (Cucumber) \u2014 paired with \u2014 Image 2 (Lunar Lander)\n- Image 2 (Lunar Lander) \u2014 paired with \u2014 Image 1 (Cucumber)\n\nThis is the same pairing as the original set you provided.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/Acucumber2.jpg",
+            "name": "Acucumber2.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/Aallterrain10.jpg",
+            "name": "Aallterrain10.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/ASATELLIT.jpg",
+            "name": "ASATELLIT.jpg"
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The image of the cougar (the cue image) was paired with image 1, which shows the tacos.\n\nThe pairing was:\n- Image 1 (cougar) \u2014 paired with \u2014 Image 2 (tacos)\n- Image 3 (pot) \u2014 paired with \u2014 Image 4 (fork)\n\nTherefore, the correct answer is **1**.",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/Acougar.jpg",
+            "name": "Acougar.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/Ataco.jpg",
+            "name": "Ataco.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/Apitchfork4.jpg",
+            "name": "Apitchfork4.jpg"
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the wooden barrel) is **Image 2** (the black brush with white bristles).\n\nThe pairing is based on the visual similarity of their shapes. The barrel has a curved, cylindrical form, which is similar to the arched shape of the brush. The lighthouse, while also having a curved top, is more angular and has a distinct tower shape that doesn't match the barrel's form as closely as the brush does.\n\nTherefore, the correct answer",
+        "metadata": {
+          "cue": {
+            "path": "memory_datasets/Brady2008Objects/ABARREL3.jpg",
+            "name": "ABARREL3.jpg"
+          },
+          "correct_target": {
+            "path": "memory_datasets/Brady2008Objects/ADENTOOL.jpg",
+            "name": "ADENTOOL.jpg"
+          },
+          "foil": {
+            "path": "memory_datasets/Brady2008Objects/ALIGHTHO5.jpg",
+            "name": "ALIGHTHO5.jpg"
+          }
+        }
+      }
+    ],
+    "accuracy": 0.8,
+    "n_correct": 8,
+    "total": 10
+  }
+}

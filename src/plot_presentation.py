@@ -3,7 +3,7 @@
 Presentation-ready overlap plots for 4 tasks with simple forward projections.
 
 Generates two sets:
-  1. Per-dataset individual plots (Brady2008 / Things / Visual Haystacks)
+  1. Per-dataset individual plots (Brady2008 / Things)
   2. Combined plots with both datasets on the same axes (one per task)
 
 Missing data points projected by linear extrapolation in log10(x) space.
@@ -31,18 +31,15 @@ MODEL_COLORS = {
 DATASET_LINESTYLES = {
     "Brady2008":        "-",
     "things":           "--",
-    "Visual Haystacks": "-",
 }
 
 DATASET_COLORS = {
     "Brady2008":        "#6B2D8B",  # purple (unused in combined plots, kept for reference)
     "things":           "#17A589",  # teal
-    "Visual Haystacks": PURPLE,
 }
 DATASET_LABELS = {
     "Brady2008": "Brady2008",
     "things": "Things",
-    "Visual Haystacks": "Visual Haystacks",
 }
 
 plt.rcParams.update({
@@ -57,22 +54,41 @@ plt.rcParams.update({
 # Individual per-dataset plots
 TASK_CONFIGS = [
     # (task,          foil,    dataset,            title)
-    ("2afc",          "novel", "Brady2008",        "Recognition — Novel (Brady2008)\nAccuracy vs Sequence Length"),
-    ("pam",           "all",   "Brady2008",        "Paired Associate Memory (Brady2008)\nAccuracy vs Sequence Length"),
-    ("serial_free",   "all",   "Brady2008",        "Serial (Free Recall) (Brady2008)\nAccuracy vs Sequence Length"),
-    ("vhs_single",    "all",   "Visual Haystacks", "Visual Haystacks Single-Needle\nAccuracy vs Sequence Length"),
-    ("2afc",          "novel", "things",           "Recognition — Novel (Things)\nAccuracy vs Sequence Length"),
-    ("pam",           "all",   "things",           "Paired Associate Memory (Things)\nAccuracy vs Sequence Length"),
-    ("serial_free",   "all",   "things",           "Serial (Free Recall) (Things)\nAccuracy vs Sequence Length"),
+    ("2afc",            "novel", "Brady2008",  "Recognition — Novel (Brady2008)\nAccuracy vs Sequence Length"),
+    ("continuous",      "all",   "Brady2008",  "Continuous Recognition (Brady2008)\nAccuracy vs Sequence Length"),
+    ("serial_free",     "all",   "Brady2008",  "Serial (Free Recall) (Brady2008)\nAccuracy vs Sequence Length"),
+    ("serial_afc",      "all",   "Brady2008",  "Serial AFC (Brady2008)\nAccuracy vs Sequence Length"),
+    ("pam_word",        "all",   "Brady2008",  "PAM image-word (Brady2008)\nAccuracy vs Sequence Length"),
+    ("pam_image",       "all",   "Brady2008",  "PAM image-image 2-AFC (Brady2008)\nAccuracy vs Sequence Length"),
+    ("assoc_word",      "all",   "Brady2008",  "Associative Inference image-word (Brady2008)\nAccuracy vs Sequence Length"),
+    ("assoc_image",     "all",   "Brady2008",  "Associative Inference image-image (Brady2008)\nAccuracy vs Sequence Length"),
+    ("2afc",            "novel", "things",     "Recognition — Novel (Things)\nAccuracy vs Sequence Length"),
+    ("continuous",      "all",   "things",     "Continuous Recognition (Things)\nAccuracy vs Sequence Length"),
+    ("serial_free",     "all",   "things",     "Serial (Free Recall) (Things)\nAccuracy vs Sequence Length"),
+    ("serial_afc",      "all",   "things",     "Serial AFC (Things)\nAccuracy vs Sequence Length"),
+    ("pam_word",        "all",   "things",     "PAM image-word (Things)\nAccuracy vs Sequence Length"),
+    ("pam_image",       "all",   "things",     "PAM image-image 2-AFC (Things)\nAccuracy vs Sequence Length"),
+    ("assoc_word",      "all",   "things",     "Associative Inference image-word (Things)\nAccuracy vs Sequence Length"),
+    ("assoc_image",     "all",   "things",     "Associative Inference image-image (Things)\nAccuracy vs Sequence Length"),
+    ("mst",             "all",   "MST",        "Mnemonic Similarity Task\nAccuracy vs Sequence Length"),
+    ("color_continuous","all",   "color",      "Color Memory (continuous report)\nAccuracy vs Sequence Length"),
+    ("color_named",     "all",   "color",      "Color Memory (ROYGBIV named)\nAccuracy vs Sequence Length"),
 ]
 
 # Combined per-task plots (collapse datasets onto one axes)
 COMBINED_TASK_CONFIGS = [
     # (task,          foil,    datasets,                        title)
-    ("2afc",          "novel", ["Brady2008", "things"],         "2AFC — Novel\nAccuracy vs Sequence Length"),
-    ("pam",           "all",   ["Brady2008", "things"],         "Paired Associate Memory\nAccuracy vs Sequence Length"),
-    ("serial_free",   "all",   ["Brady2008", "things"],         "Serial (Free Recall)\nAccuracy vs Sequence Length"),
-    ("vhs_single",    "all",   ["Visual Haystacks"],            "Visual Haystacks Single-Needle\nAccuracy vs Sequence Length"),
+    ("2afc",            "novel", ["Brady2008", "things"],   "2AFC — Novel\nAccuracy vs Sequence Length"),
+    ("continuous",      "all",   ["Brady2008", "things"],   "Continuous Recognition\nAccuracy vs Sequence Length"),
+    ("mst",             "all",   ["MST"],                   "Mnemonic Similarity Task\nAccuracy vs Sequence Length"),
+    ("serial_free",     "all",   ["Brady2008", "things"],   "Serial (Free Recall)\nAccuracy vs Sequence Length"),
+    ("serial_afc",      "all",   ["Brady2008", "things"],   "Serial AFC\nAccuracy vs Sequence Length"),
+    ("color_continuous","all",   ["color"],                 "Color Memory (continuous report)\nAccuracy vs Sequence Length"),
+    ("color_named",     "all",   ["color"],                 "Color Memory (ROYGBIV named)\nAccuracy vs Sequence Length"),
+    ("pam_word",        "all",   ["Brady2008", "things"],   "PAM image-word\nAccuracy vs Sequence Length"),
+    ("pam_image",       "all",   ["Brady2008", "things"],   "PAM image-image 2-AFC\nAccuracy vs Sequence Length"),
+    ("assoc_word",      "all",   ["Brady2008", "things"],   "Associative Inference image-word\nAccuracy vs Sequence Length"),
+    ("assoc_image",     "all",   ["Brady2008", "things"],   "Associative Inference image-image\nAccuracy vs Sequence Length"),
 ]
 
 MODELS = ["qwen3-vl-8b", "molmo2-8b"]
@@ -242,10 +258,6 @@ def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     print("Loading results...")
     data = load_results("results")
-
-    # Hardcoded Qwen VHS results for n=50 and n=100 (from job 9050597)
-    data["vhs_single"]["qwen3-vl-8b"]["Visual Haystacks"]["all"][50] = 50.0
-    data["vhs_single"]["qwen3-vl-8b"]["Visual Haystacks"]["all"][100] = 50.0
 
     for project in [True, False]:
         tag = "with projections" if project else "no projections"

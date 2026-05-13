@@ -8,7 +8,6 @@
 #SBATCH --mem=48G
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1
-#SBATCH --constraint=A6000
 
 # Continuous Recognition: molmo2-8b (local inference, requires GPU)
 
@@ -23,7 +22,7 @@ export HF_DATASETS_OFFLINE=1
 
 MODEL="molmo2"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250)
+SIZES=(1 2 5 10 50 100 250)
 DATASETS=("things" "Brady2008")
 
 mkdir -p "$RESULTS_DIR" logs
@@ -48,7 +47,7 @@ for dataset in "${DATASETS[@]}"; do
             --models "$MODEL" \
             --n-images "$size" \
             --dataset "$dataset" \
-            --n-trials 100 || echo "  [ERROR] $dataset | n=$size"
+            --n-trials 10 || echo "  [ERROR] $dataset | n=$size"
     done
 done
 

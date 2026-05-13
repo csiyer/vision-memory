@@ -10,14 +10,23 @@ from .base import BaseEvaluator
 class AnthropicEvaluator(BaseEvaluator):
     """Anthropic Claude vision evaluator."""
 
-    def __init__(self, model_id: str = "claude-opus-4-7"):
+    def __init__(self, model_id: str = "claude-sonnet-4-0"):
         super().__init__(model_id)
         self.client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
-    def _encode_image(self, image: Image.Image) -> Dict[str, Any]:
-        """Encode PIL Image to base64 for Anthropic API."""
+    def _encode_image(self, image: Image.Image, max_size: int = 1500) -> Dict[str, Any]:
+        """Encode PIL Image to base64 for Anthropic API.
+
+        Anthropic enforces a 2000-pixel max dimension for many-image requests; we
+        downscale to stay well under that limit.
+        """
+        if max(image.size) > max_size:
+            image = image.copy()
+            image.thumbnail((max_size, max_size), Image.Resampling.LANCZOS)
+        if image.mode != "RGB":
+            image = image.convert("RGB")
         buf = BytesIO()
-        image.save(buf, format="JPEG")
+        image.save(buf, format="JPEG", quality=85)
         b64 = base64.b64encode(buf.getvalue()).decode()
         return {
             "type": "image",
@@ -33,6 +42,6 @@ class AnthropicEvaluator(BaseEvaluator):
         resp = self.client.messages.create(
             model=self.model_id,
             messages=messages,
-            max_tokens=20
+            max_tokens=30
         )
         return resp.content[0].text

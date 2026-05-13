@@ -1,7 +1,7 @@
 {
   "_metadata": {
     "task": "Continuous Recognition",
-    "timestamp": "20260428_090301",
+    "timestamp": "20260510_150410",
     "dataset": "things",
     "n_images": 1,
     "n_trials": 2,
@@ -12,8 +12,8 @@
       "gemini-2.5-flash": {
         "accuracy": 0.5,
         "d_prime": 0.0,
-        "hit_rate": 0.0,
-        "false_alarm_rate": 0.0,
+        "hit_rate": 1.0,
+        "false_alarm_rate": 1.0,
         "weighted_f1": 0.3333333333333333
       }
     },
@@ -26,47 +26,49 @@
       {
         "trial": 0,
         "target": 0,
-        "response": 0,
-        "raw_response": "No, I do not have a memory of past images or a sequence. Each request is processed independently.",
+        "response": 1,
+        "correct": 0,
+        "raw_response": "yes",
         "metadata": {
-          "category": "cat_1127",
+          "category": "aardvark",
           "category_id": 0,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
-          "local_filename": "0.jpg",
+          "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+          "local_filename": "aardvark_01b.jpg",
           "delay": null
         }
       },
       {
         "trial": 1,
         "target": 1,
-        "response": 0,
-        "raw_response": "No.",
+        "response": 1,
+        "correct": 1,
+        "raw_response": "yes",
         "metadata": {
-          "category": "cat_1127",
+          "category": "aardvark",
           "category_id": 0,
           "exemplar_id": 0,
           "source": "local_files",
-          "local_path": "memory_datasets/THINGS/object_images/cat_1127/0.jpg",
-          "local_filename": "0.jpg",
+          "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+          "local_filename": "aardvark_01b.jpg",
           "delay": 0
         }
       }
     ],
     "accuracy": 0.5,
-    "hit_rate": 0.0,
-    "false_alarm_rate": 0.0,
+    "hit_rate": 1.0,
+    "false_alarm_rate": 1.0,
     "d_prime": 0.0,
     "weighted_f1": 0.3333333333333333,
     "counts": {
-      "hits": 0,
-      "misses": 1,
-      "false_alarms": 0,
-      "correct_rejections": 1
+      "hits": 1,
+      "misses": 0,
+      "false_alarms": 1,
+      "correct_rejections": 0
     },
     "hit_rate_by_delay": {
-      "0": 0.0
+      "0": 1.0
     }
   }
 }

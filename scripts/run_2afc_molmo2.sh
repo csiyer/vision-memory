@@ -8,7 +8,6 @@
 #SBATCH --mem=48G
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1
-#SBATCH --constraint=A6000
 
 # 2-AFC Recognition: molmo2-8b (local inference, requires GPU)
 
@@ -55,7 +54,7 @@ for dataset in "${DATASETS[@]}"; do
             python3 -m eval_scripts.eval_2afc \
                 --models "$MODEL" \
                 --n-images "$size" \
-                --n-trials 100 \
+                --n-trials 10 \
                 --foil-type "$foil" \
                 --dataset "$dataset" || echo "  [ERROR] $dataset | $foil | n=$size"
         done

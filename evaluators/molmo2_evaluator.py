@@ -59,6 +59,25 @@ class Molmo2Evaluator(BaseEvaluator):
 
         return {"type": "image", "image": image}
 
+    def check_image_capacity(self, n_images: int) -> bool:
+        """Probe with realistic 512x512 images so GPU OOM is caught accurately."""
+        test_img = Image.new("RGB", (512, 512), (255, 255, 255))
+        encoded = [self._encode_image(test_img) for _ in range(n_images)]
+        content = [{"type": "text", "text": "Reply with the number 1."}] + encoded
+        messages = [{"role": "user", "content": content}]
+        try:
+            self._call_api(messages)
+            return True
+        except Exception as e:
+            msg = str(e).lower()
+            if "out of memory" in msg or "cuda" in msg or e.__class__.__name__ == "OutOfMemoryError":
+                try:
+                    torch.cuda.empty_cache()
+                except Exception:
+                    pass
+                return False
+            raise
+
     def _call_api(self, messages: List[Dict]) -> str:
         """Run local Molmo2 inference and return response text."""
         molmo_messages = []

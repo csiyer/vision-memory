@@ -8,7 +8,7 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# Color Memory: claude-opus-4-7 (both continuous and named variants)
+# Color Memory: claude-sonnet-4-0 (both continuous and named variants)
 
 set -e
 
@@ -29,7 +29,7 @@ mkdir -p "$RESULTS_DIR" logs
 check_existing_result() {
     local n_images="$1"
     local variant="$2"
-    [ -f "$RESULTS_DIR/results_color_${variant}_claude-opus-4-7_n${n_images}.json" ]
+    [ -f "$RESULTS_DIR/results_color_${variant}_claude-sonnet-4-0_n${n_images}.json" ]
 }
 
 echo "========== Color Memory: $MODEL =========="
@@ -46,7 +46,7 @@ for variant in "${VARIANTS[@]}"; do
             --models "$MODEL" \
             --n-images "$size" \
             --variant "$variant" \
-            --n-trials 100 || echo "  [ERROR] $variant | n=$size"
+            --n-trials 10 || echo "  [ERROR] $variant | n=$size"
     done
 done
 

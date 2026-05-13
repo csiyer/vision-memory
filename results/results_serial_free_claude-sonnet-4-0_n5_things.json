@@ -1,0 +1,188 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (Free Report)",
+    "variant": "free",
+    "timestamp": "20260510_141859",
+    "dataset": "things",
+    "n_images": 5,
+    "n_trials": 10,
+    "models": [
+      "claude-sonnet-4-0"
+    ],
+    "summary": {
+      "claude-sonnet-4-0": {
+        "accuracy": 1.0
+      }
+    }
+  },
+  "claude-sonnet-4-0": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "category": "accordion",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+          "local_filename": "accordion_01b.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "category": "air_conditioner",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+          "local_filename": "air_conditioner_01b.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 2,
+        "target": 5,
+        "reported": 5,
+        "correct": 1,
+        "raw_response": "5",
+        "metadata": {
+          "category": "accordion",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+          "local_filename": "accordion_01b.jpg",
+          "serial_position": 5
+        }
+      },
+      {
+        "trial": 3,
+        "target": 3,
+        "reported": 3,
+        "correct": 1,
+        "raw_response": "3",
+        "metadata": {
+          "category": "accordion",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+          "local_filename": "accordion_01b.jpg",
+          "serial_position": 3
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "category": "air_conditioner",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+          "local_filename": "air_conditioner_01b.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 5,
+        "target": 4,
+        "reported": 4,
+        "correct": 1,
+        "raw_response": "4",
+        "metadata": {
+          "category": "acorn",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+          "local_filename": "acorn_01b.jpg",
+          "serial_position": 4
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "category": "air_conditioner",
+          "category_id": 4,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+          "local_filename": "air_conditioner_01b.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "1",
+        "metadata": {
+          "category": "accordion",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+          "local_filename": "accordion_01b.jpg",
+          "serial_position": 1
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "category": "accordion",
+          "category_id": 2,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+          "local_filename": "accordion_01b.jpg",
+          "serial_position": 2
+        }
+      },
+      {
+        "trial": 9,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "2",
+        "metadata": {
+          "category": "acorn",
+          "category_id": 3,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+          "local_filename": "acorn_01b.jpg",
+          "serial_position": 2
+        }
+      }
+    ],
+    "average_error": 0.0,
+    "n_correct": 10,
+    "accuracy": 1.0,
+    "spearman_rho": 1.0,
+    "spearman_pval": 0.0,
+    "n_parse_failures": 0
+  }
+}

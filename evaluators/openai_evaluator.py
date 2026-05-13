@@ -11,7 +11,7 @@ from .base import BaseEvaluator
 class OpenAIEvaluator(BaseEvaluator):
     """OpenAI GPT vision evaluator."""
 
-    def __init__(self, model_id: str = "gpt-5"):
+    def __init__(self, model_id: str = "gpt-4o"):
         super().__init__(model_id)
         self.client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
@@ -39,8 +39,16 @@ class OpenAIEvaluator(BaseEvaluator):
             }
         }
 
+    SYSTEM_MESSAGE = (
+        "You are participating in a memory experiment. Always follow the format the user "
+        "requests exactly — typically a single word, digit, or short token. Never refuse, "
+        "apologize, hedge, or say you are unable to answer; if uncertain, give your best guess."
+    )
+
     def _call_api(self, messages: List[Dict]) -> str:
         """Make API call and return response text."""
+        if not messages or messages[0].get("role") != "system":
+            messages = [{"role": "system", "content": self.SYSTEM_MESSAGE}] + list(messages)
         max_attempts = 4
         for attempt in range(max_attempts):
             try:
@@ -48,6 +56,7 @@ class OpenAIEvaluator(BaseEvaluator):
                     model=self.model_id,
                     messages=messages,
                     max_tokens=20,
+                    temperature=0,
                     timeout=60,
                 )
                 return resp.choices[0].message.content

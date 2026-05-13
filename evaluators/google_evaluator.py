@@ -12,7 +12,7 @@ from .base import BaseEvaluator
 class GoogleEvaluator(BaseEvaluator):
     """Google Gemini vision evaluator."""
 
-    def __init__(self, model_id: str = "gemini-3-flash-preview"):
+    def __init__(self, model_id: str = "gemini-2.5-flash"):
         super().__init__(model_id)
         self.client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
 
@@ -32,6 +32,21 @@ class GoogleEvaluator(BaseEvaluator):
             return types.Part.from_text(text=item["text"])
         return types.Part(item)
 
+    _SAFETY_SETTINGS = [
+        types.SafetySetting(category=c, threshold="BLOCK_NONE")
+        for c in (
+            "HARM_CATEGORY_HARASSMENT",
+            "HARM_CATEGORY_HATE_SPEECH",
+            "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+            "HARM_CATEGORY_DANGEROUS_CONTENT",
+        )
+    ]
+    _CALL_CONFIG = types.GenerateContentConfig(
+        safety_settings=_SAFETY_SETTINGS,
+        max_output_tokens=64,
+        thinking_config=types.ThinkingConfig(thinking_budget=0),
+    )
+
     def _call_api(self, messages: List[Dict]) -> str:
         """Make API call and return response text."""
         contents: list[types.Content] = []
@@ -47,9 +62,16 @@ class GoogleEvaluator(BaseEvaluator):
             try:
                 resp = self.client.models.generate_content(
                     model=self.model_id,
-                    contents=contents
+                    contents=contents,
+                    config=self._CALL_CONFIG,
                 )
-                return resp.text
+                if resp.text:
+                    return resp.text
+                reason = "NO_CANDIDATES"
+                if getattr(resp, "candidates", None):
+                    fr = getattr(resp.candidates[0], "finish_reason", None)
+                    reason = fr.name if hasattr(fr, "name") else str(fr)
+                return f"<blocked:{reason}>"
             except ClientError as e:
                 if e.code == 429 and attempt < 15:
                     wait = min(30 * (2 ** attempt), 600)  # cap at 10 min

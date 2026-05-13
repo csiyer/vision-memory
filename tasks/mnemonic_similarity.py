@@ -167,10 +167,14 @@ class MnemonicSimilarityTask:
     """
 
     PROMPT = (
-        "Is this image: (1) old — exactly as you saw it before, "
-        "(2) similar — like something you saw but not identical, or "
-        "(3) new — not seen before? "
-        "Respond with one word: old, similar, or new."
+        "Some test images are exact matches to study images, some show a "
+        "different version of an object you studied (same category but a "
+        "different photo, angle, or exemplar — these are NOT identical to "
+        "any study image), and some are completely new objects you never saw. "
+        "Is this test image 'old' (exact match to a study image), "
+        "'similar' (different version of a studied object), "
+        "or 'new' (object you never saw)? "
+        "Reply with one word: old, similar, or new."
     )
 
     def __init__(self, set_numbers=None, n_study=128, root="memory_datasets/MST",

@@ -1,0 +1,307 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_144440",
+    "dataset": "things",
+    "pair_type": "word",
+    "n_images": 2,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.4,
+        "n_correct": 4,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct answer is **2: WORD626**.\n\nHere's the reasoning:\n\n*   The cue image is of an **aardvark**.\n*   The word **WORD626** is the same as the word presented in the (BC) pair, which was an **abacus**.\n*   The connection is indirect and based on a hidden link: **Aardvarks are known for their love of ants, and the word \"ant\" is an an",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an abacus, an ancient calculating tool.\n\nThe word \"WORD357\" is associated with the image of the aardvark (which was shown in the BC pair).\n\nThe aardvark is a mammal, and mammals are often associated with the concept of \"counting\" or \"numbers\" in a more abstract, biological sense (e.g., \"counting\" offspring, \"counting\" species, etc.). While this is a very indirect",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an abacus, an ancient calculating tool used for arithmetic.\n\nThe word \"WORD407\" is associated with the image of the aardvark (which was shown in the BC pair). The aardvark is a mammal, and mammals are a class of animals.\n\nThe abacus is a tool for calculation, and calculation is a mathematical activity.\n\nThere is no direct connection between an abacus and an aardvark. However, the aard",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The correct answer is **1: WORD123**.\n\nHere's the reasoning:\n\n*   The cue image is of an **aardvark**.\n*   The word **\"aardvark\"** is a compound word in Afrikaans, meaning \"earth pig\".\n*   The word **\"aardvark\"** is often used as a pun for the **\"aardvark\"** in the famous **\"Aardvark\"** comic strip",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct answer is **2: WORD172**.\n\nHere's the reasoning:\n\n*   The cue image is of an **aardvark**.\n*   The word **WORD172** is the same as the word presented in the (BC) pair, which was an **abacus**.\n*   The hidden connection is that the **aardvark** is often used as a mnemonic device to remember the word **\"abacus\"**.\n*   This",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an aardvark.\n\nThe aardvark is a nocturnal mammal known for its unique appearance and behavior. It is the only living member of the order Tubulidentata and is famous for its long snout and large ears, which are adaptations for digging and hearing in the dark.\n\nThe word \"WORD69\" is the correct choice.\n\nThe connection is indirect: the aardvark is often associated with the word \"aardvark\"",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct answer is **2: WORD781**.\n\nHere's the reasoning:\n\n*   The cue image is of an **aardvark**.\n*   The word **WORD781** is the same word that was paired with the abacus image (B) in the initial sequence.\n*   The abacus (B) is a tool for calculation.\n*   The aardvark (A) is an animal known for its **exceptional sense of smell**,",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an abacus, an ancient calculating tool.\n\nThe word \"WORD735\" is associated with the image of the aardvark (from the BC pair). The aardvark is a mammal, and \"WORD735\" is a code for \"mammal\".\n\nThe abacus is used for calculation, and \"WORD746\" is a code for \"calculate\".\n\nTherefore, \"WORD746\" is indirectly associated with the",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an abacus, an ancient calculating tool used for arithmetic.\n\nThe word \"WORD403\" is associated with the image of the aardvark (image B), which is a mammal known for its unique appearance and nocturnal habits.\n\nThe word \"WORD934\" is associated with the image of the abacus (image A), as it represents a numerical value or calculation.\n\nTherefore, the word indirectly associated with the cue image (abacus) is",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is of an abacus, an ancient calculating tool used for arithmetic.\n\nThe word \"WORD374\" is associated with the image of the aardvark (image B), which is a mammal known for its unique appearance and nocturnal habits.\n\nThe word \"WORD300\" is associated with the image of the abacus (image A), as it is a tool for calculation.\n\nTherefore, the word indirectly associated with the cue image (abacus) is:",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "role": "foil_C",
+            "chain_index": null
+          }
+        }
+      }
+    ],
+    "accuracy": 0.4,
+    "n_correct": 4,
+    "total": 10
+  }
+}

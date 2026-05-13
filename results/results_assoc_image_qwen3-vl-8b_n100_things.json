@@ -1,0 +1,427 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_172438",
+    "dataset": "things",
+    "pair_type": "image",
+    "n_images": 100,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.3,
+        "n_correct": 3,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of wooden blocks.\n\nHowever, if we must choose the *least* indirectly associated, the answer is **Image 2** (the blindfolded mannequin).\n\nHere's the reasoning:\n*   The cue image shows wooden blocks, which are a physical, tangible object.\n*   Image 1 (the TV antenna) is an object used for receiving signals, which is a function related to communication or information, not directly to the physical nature of",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "block",
+            "category_id": 143,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/block/block_01b.jpg",
+            "local_filename": "block_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "blindfold",
+            "category_id": 142,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blindfold/blindfold_01b.jpg",
+            "local_filename": "blindfold_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "antenna",
+            "category_id": 27,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/antenna/antenna_01b.jpg",
+            "local_filename": "antenna_01b.jpg",
+            "role": "C",
+            "chain_index": 16
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe cue image shows an airboat, which is a type of watercraft powered by an air pump (or fan) at the back to propel it through shallow water. The second image shows an air pump (or air compressor), which is the mechanical device that generates the air pressure needed to operate the fan on an airboat.\n\nTherefore, the air pump in image 2 is the functional component that enables the operation of the airboat in the",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "airboat",
+            "category_id": 8,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/airboat/airboat_01s.jpg",
+            "local_filename": "airboat_01s.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "axe",
+            "category_id": 45,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/axe/axe_01b.jpg",
+            "local_filename": "axe_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg",
+            "role": "C",
+            "chain_index": 36
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Neither of the two provided images is indirectly associated with the cue image of the pink bib.\n\nThe cue image is a baby bib, an item for infants. The two options are:\n- Image 1: A woman using a megaphone.\n- Image 2: A set of bagpipes.\n\nThere is no logical or thematic connection between a baby bib and either a megaphone or bagpipes. The bib is for a baby, while the other items are unrelated objects for adults or specific cultural",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "bib",
+            "category_id": 122,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bib/bib_01n.jpg",
+            "local_filename": "bib_01n.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "bagpipe",
+            "category_id": 56,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bagpipe/bagpipe_01b.jpg",
+            "local_filename": "bagpipe_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "bazooka",
+            "category_id": 98,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bazooka/bazooka_01b.jpg",
+            "local_filename": "bazooka_01b.jpg",
+            "role": "C",
+            "chain_index": 43
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of baklava.\n\nHowever, if we must choose the *least* indirect association, the second image (the Gateway Arch) is the better choice.\n\nHere's the reasoning:\n- The cue image is of baklava, a sweet, layered pastry.\n- The first option is a person voting. This is a political act, which has no direct or indirect connection to baklava.\n- The second option is the Gateway Arch, a famous monument",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "baklava",
+            "category_id": 57,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/baklava/baklava_01s.jpg",
+            "local_filename": "baklava_01s.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "ballot_box",
+            "category_id": 61,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/ballot_box/ballot_box_01b.jpg",
+            "local_filename": "ballot_box_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "arch",
+            "category_id": 35,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/arch/arch_01b.jpg",
+            "local_filename": "arch_01b.jpg",
+            "role": "C",
+            "chain_index": 45
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 is indirectly associated with the cue image.\n\nThe cue image displays several riding crops or whips. These are tools used for directing or controlling horses, which is a form of equestrian activity.\n\nImage 1 shows an abacus, an ancient calculating tool used for arithmetic. While not directly related to horses, there is an indirect connection through the concept of \"counting\" or \"calculation.\" In equestrian sports, especially in disciplines like dressage or show jumping, judges",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "baton3",
+            "category_id": 94,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/baton3/baton3_01s.jpg",
+            "local_filename": "baton3_01s.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "altar",
+            "category_id": 16,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/altar/altar_01b.jpg",
+            "local_filename": "altar_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg",
+            "role": "C",
+            "chain_index": 40
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two provided images is indirectly associated with the cue image of the artichoke.\n\nThe cue image is of a vegetable (artichoke). The first option is a bicycle pump, which is a tool for inflating tires or other objects. The second option is a pink blazer, which is a piece of clothing. Neither of these items has a direct or indirect connection to an artichoke.\n\nTherefore, the correct answer is that neither image is associated.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "artichoke",
+            "category_id": 39,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/artichoke/artichoke_01b.jpg",
+            "local_filename": "artichoke_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "blazer",
+            "category_id": 137,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blazer/blazer_01b.jpg",
+            "local_filename": "blazer_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "air_pump",
+            "category_id": 6,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/air_pump/air_pump_01s.jpg",
+            "local_filename": "air_pump_01s.jpg",
+            "role": "C",
+            "chain_index": 47
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of the banjo.\n\nHowever, if we must choose the *least* incorrect or the one with the *most* indirect connection, the second image (the car-patterned bag) is the better choice.\n\nHere's the reasoning:\n- The cue image is a banjo, a stringed musical instrument.\n- The first option is a Goodyear blimp, an airship. While both are \"vehicles\" or \"objects that fly,\" the",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "banjo",
+            "category_id": 68,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/banjo/banjo_01s.jpg",
+            "local_filename": "banjo_01s.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "bag",
+            "category_id": 54,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bag/bag_01b.jpg",
+            "local_filename": "bag_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "blimp",
+            "category_id": 139,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blimp/blimp_01b.jpg",
+            "local_filename": "blimp_01b.jpg",
+            "role": "C",
+            "chain_index": 35
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 is indirectly associated with the cue image.\n\nThe cue image shows a baseball, which is a piece of sports equipment. The first image in the test set (which is the same as the cue image) shows a baseball, and the second image in the test set (which is the same as the image you provided) shows a baby. While a baby and a baseball are not directly related, they can both be associated with the concept of \"sports\" in a very indirect way: a",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "baseball",
+            "category_id": 78,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/baseball/baseball_01b.jpg",
+            "local_filename": "baseball_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "baby",
+            "category_id": 46,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/baby/baby_01b.jpg",
+            "local_filename": "baby_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "blind",
+            "category_id": 140,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blind/blind_01b.jpg",
+            "local_filename": "blind_01b.jpg",
+            "role": "C",
+            "chain_index": 27
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Neither image is directly associated with the cue image of amber.\n\nHowever, if we must choose the *least* indirect association, the answer is **Image 1 (the baby bassinet)**.\n\nHere's the reasoning:\n*   The cue image shows a piece of amber, a fossilized tree resin. Amber is often associated with ancient times, nature, and preservation.\n*   The baby bassinet is an object of care and preservation for a new life, which can be seen as a modern,",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "amber",
+            "category_id": 18,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/amber/amber_01b.jpg",
+            "local_filename": "amber_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "bassinet",
+            "category_id": 85,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/bassinet/bassinet_01b.jpg",
+            "local_filename": "bassinet_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "blouse",
+            "category_id": 144,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blouse/blouse_01b.jpg",
+            "local_filename": "blouse_01b.jpg",
+            "role": "C",
+            "chain_index": 18
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 1 is indirectly associated with the cue image.\n\nThe cue image shows a collection of ornate, hanging birdcages. The most direct connection is with Image 2, which shows a pufferfish. Pufferfish are sometimes kept as exotic pets, and while they are not birds, they are also contained creatures, often kept in aquariums. The pufferfish can be seen as a \"caged\" or contained animal, analogous to the birds in the cages, even though the",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "category": "birdcage",
+            "category_id": 130,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/birdcage/birdcage_01b.jpg",
+            "local_filename": "birdcage_01b.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "category": "backdrop",
+            "category_id": 47,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/backdrop/backdrop_01b.jpg",
+            "local_filename": "backdrop_01b.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "category": "blowfish",
+            "category_id": 146,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/blowfish/blowfish_01b.jpg",
+            "local_filename": "blowfish_01b.jpg",
+            "role": "C",
+            "chain_index": 34
+          }
+        }
+      }
+    ],
+    "accuracy": 0.3,
+    "n_correct": 3,
+    "total": 10
+  }
+}

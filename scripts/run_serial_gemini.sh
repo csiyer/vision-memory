@@ -8,7 +8,7 @@
 #SBATCH --mem=16G
 #SBATCH --cpus-per-task=4
 
-# Serial Order Memory: gemini-3-flash-preview (both free-report and AFC variants)
+# Serial Order Memory: gemini-2.5-flash (both free-report and AFC variants)
 # 1M token context => all sizes supported
 
 set -e
@@ -32,7 +32,7 @@ check_existing_result() {
     local dataset="$1"
     local n_images="$2"
     local variant="$3"
-    [ -f "$RESULTS_DIR/results_serial_${variant}_gemini-3-flash-preview_n${n_images}_${dataset}.json" ]
+    [ -f "$RESULTS_DIR/results_serial_${variant}_gemini-2.5-flash_n${n_images}_${dataset}.json" ]
 }
 
 echo "========== Serial Order Memory: $MODEL =========="
@@ -52,7 +52,7 @@ for dataset in "${DATASETS[@]}"; do
                 --n-images "$size" \
                 --variant "$variant" \
                 --dataset "$dataset" \
-                --n-trials 100 || echo "  [ERROR] $dataset | $variant | n=$size"
+                --n-trials 10 || echo "  [ERROR] $dataset | $variant | n=$size"
         done
     done
 done

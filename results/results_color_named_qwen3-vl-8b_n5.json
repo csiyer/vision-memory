@@ -1,0 +1,174 @@
+{
+  "_metadata": {
+    "task": "Color Memory (Named)",
+    "variant": "named",
+    "timestamp": "20260508_172134",
+    "dataset": "Brady2013ColorObjects",
+    "n_images": 5,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.6,
+        "n_correct": 6,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "blue",
+        "reported": "blue",
+        "correct": 1,
+        "raw_response": "blue",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj329.jpg",
+          "name": "obj329.jpg",
+          "target_color_name": "blue",
+          "rotation_angle_degrees": 240,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "orange",
+        "reported": "purple",
+        "correct": 0,
+        "raw_response": "The item shown in the image is a spool of thread. The thread itself is a dark, metallic gray color, which is best described as **gray**.\n\nHowever, since the options provided are: red, orange, yellow, green, blue, purple \u2014 and none of them match the actual color of the thread, **none of the options are correct**.\n\nThe item in the study sequence (the spool of thread) is not gray. It is a dark, metallic gray color.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj80.jpg",
+          "name": "obj80.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "red",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj110.jpg",
+          "name": "obj110.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "blue",
+        "reported": "blue",
+        "correct": 1,
+        "raw_response": "Based on the study sequence, the item shown in the image is a \"Slippery Surface\" warning sign.\n\nIn the original set of images, the color of this specific item was **blue**.\n\nThe item in the image you provided is a grayscale version, but the color from the original study was blue.\n\nTherefore, the correct color from the given options is: **blue**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj307.jpg",
+          "name": "obj307.jpg",
+          "target_color_name": "blue",
+          "rotation_angle_degrees": 240,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "orange",
+        "reported": "purple",
+        "correct": 0,
+        "raw_response": "The item in the study sequence is the lei, which was originally brown with some light blue accents. However, in this specific image, it has been converted to grayscale.\n\nSince the question asks for the color from the provided options (red, orange, yellow, green, blue, purple) and the item is now black and white, none of the listed colors accurately describe its current appearance.\n\nTherefore, based on the provided options and the current grayscale image, there is no correct answer.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj235.jpg",
+          "name": "obj235.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "yellow",
+        "reported": "purple",
+        "correct": 0,
+        "raw_response": "The item shown is the first item from the study sequence, which is a pair of hanging dice.\n\nIn the original study, the color of this item was **brown**.\n\nHowever, since the provided options are red, orange, yellow, green, blue, purple, and brown is not among them, none of the given choices accurately describe the color of this item.\n\nTherefore, based on the options provided, there is no correct answer.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj535.jpg",
+          "name": "obj535.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "blue",
+        "reported": "blue",
+        "correct": 1,
+        "raw_response": "blue",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj173.jpg",
+          "name": "obj173.jpg",
+          "target_color_name": "blue",
+          "rotation_angle_degrees": 240,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "orange",
+        "reported": "purple",
+        "correct": 0,
+        "raw_response": "The item shown in the image is the fourth item from the study sequence.\n\nIn the original color study, this item was a **white** plate with a brown wooden base.\n\nHowever, since the question asks to choose from the specific color options provided \u2014 red, orange, yellow, green, blue, purple \u2014 and none of these accurately describe the color of the item in the image, **none of the options are correct**.\n\nThe item is white and brown, not one of the colors listed.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj114.jpg",
+          "name": "obj114.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "green",
+        "reported": "green",
+        "correct": 1,
+        "raw_response": "The item shown in the image is a cube made of smaller blocks. In the study sequence, the cube was originally green.\n\nTherefore, the color of this item in the study sequence was **green**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj134.jpg",
+          "name": "obj134.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "green",
+        "reported": "green",
+        "correct": 1,
+        "raw_response": "green",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj229.jpg",
+          "name": "obj229.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      }
+    ],
+    "accuracy": 0.6,
+    "n_correct": 6,
+    "total": 10,
+    "accuracy_by_color": {
+      "blue": 1.0,
+      "green": 1.0,
+      "orange": 0.0,
+      "red": 1.0,
+      "yellow": 0.0
+    }
+  }
+}

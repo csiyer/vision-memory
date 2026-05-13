@@ -299,6 +299,7 @@ def main():
     if args.variant == "continuous":
         summary = {
             model: {
+                "accuracy": results[model].get("accuracy"),
                 "average_abs_error": results[model].get("average_abs_error"),
                 "guess_rate_heuristic": results[model].get("guess_rate_heuristic"),
                 "precision_heuristic": results[model].get("precision_heuristic"),

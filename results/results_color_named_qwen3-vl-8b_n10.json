@@ -1,0 +1,175 @@
+{
+  "_metadata": {
+    "task": "Color Memory (Named)",
+    "variant": "named",
+    "timestamp": "20260508_172922",
+    "dataset": "Brady2013ColorObjects",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.8,
+        "n_correct": 8,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": "green",
+        "reported": "green",
+        "correct": 1,
+        "raw_response": "green",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj116.jpg",
+          "name": "obj116.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 1,
+        "target": "green",
+        "reported": "green",
+        "correct": 1,
+        "raw_response": "green",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj403.jpg",
+          "name": "obj403.jpg",
+          "target_color_name": "green",
+          "rotation_angle_degrees": 120,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 2,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Based on the study sequence, the item shown in the image (a red hot water bottle) was **red**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj69.jpg",
+          "name": "obj69.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 3,
+        "target": "purple",
+        "reported": "purple",
+        "correct": 1,
+        "raw_response": "Based on the study sequence, the item in the image is a coiled hose.\n\nThe color of this item is **purple**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj478.jpg",
+          "name": "obj478.jpg",
+          "target_color_name": "purple",
+          "rotation_angle_degrees": 300,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 4,
+        "target": "blue",
+        "reported": "blue",
+        "correct": 1,
+        "raw_response": "blue",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj172.jpg",
+          "name": "obj172.jpg",
+          "target_color_name": "blue",
+          "rotation_angle_degrees": 240,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 5,
+        "target": "yellow",
+        "reported": "green",
+        "correct": 0,
+        "raw_response": "The item in the study sequence that matches this image is the suitcase, which was **olive green**.\n\nWhile the suitcase in the image appears dark and almost black, the color specified in the study sequence for this item is olive green, as noted in the description of the ninth item.\n\nTherefore, the correct color from the given options is **green**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj452.jpg",
+          "name": "obj452.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 6,
+        "target": "yellow",
+        "reported": "green",
+        "correct": 0,
+        "raw_response": "Based on the study sequence, the item shown is a clothes hanger.\n\nThe color of this item is **green**.\n\nIt appears in the fifth position of the sequence, and its color is a dark, olive green.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj252.jpg",
+          "name": "obj252.jpg",
+          "target_color_name": "yellow",
+          "rotation_angle_degrees": 60,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 7,
+        "target": "orange",
+        "reported": "orange",
+        "correct": 1,
+        "raw_response": "Based on the study sequence provided, the item in the image \u2014 the tall rubber boot \u2014 was **orange**.\n\nIt is the fourth item in the original list, and its color is clearly shown as a shade of brownish-orange or tan. The color \"orange\" is the closest match from the given options.\n\nTherefore, the correct choice is: **orange**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj361.jpg",
+          "name": "obj361.jpg",
+          "target_color_name": "orange",
+          "rotation_angle_degrees": 30,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 8,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "Based on the study sequence, the item shown in the image is the third one, which is a set of red plastic tips.\n\nTherefore, the color of this item is **red**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj227.jpg",
+          "name": "obj227.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      },
+      {
+        "trial": 9,
+        "target": "red",
+        "reported": "red",
+        "correct": 1,
+        "raw_response": "The item shown in the image is a blender. In the study sequence provided, the blender was described as being **red**.\n\nTherefore, the color of this item in the study sequence is **red**.",
+        "metadata": {
+          "path": "memory_datasets/Brady2013ColorObjects/obj260.jpg",
+          "name": "obj260.jpg",
+          "target_color_name": "red",
+          "rotation_angle_degrees": 0,
+          "color_transform": "brady_cielab_hue_rotation"
+        }
+      }
+    ],
+    "accuracy": 0.8,
+    "n_correct": 8,
+    "total": 10,
+    "accuracy_by_color": {
+      "blue": 1.0,
+      "green": 1.0,
+      "orange": 1.0,
+      "purple": 1.0,
+      "red": 1.0,
+      "yellow": 0.0
+    }
+  }
+}

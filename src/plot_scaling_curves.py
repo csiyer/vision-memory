@@ -46,7 +46,7 @@ FOIL_LABELS = {
 FOIL_ORDER = ['novel', 'exemplar', 'state', 'all']
 
 # Only include these study sequence lengths (cap at 250)
-VALID_N_IMAGES = {1, 2, 4, 5, 6, 10, 100, 250}
+VALID_N_IMAGES = {1, 2, 4, 5, 6, 10, 50, 100, 250}
 
 
 def _apply_axis_style(ax, sizes):
@@ -70,15 +70,94 @@ def _apply_axis_style(ax, sizes):
 
 
 TASK_GLOB_MAP = {
-    "2afc":          "results_2afc_*.json",
-    "continuous":    "results_continuous_*.json",
-    "pam":           "results_pam_*.json",
-    "vhs_single":    "results_vhs_*single_needle*.json",
-    "vhs_multi":     "results_vhs_*multi_needle*.json",
-    "serial_free":   "results_serial_free_*.json",
-    "serial_afc":    "results_serial_afc_*.json",
-    "assoc":         "results_assoc_*.json",
+    "2afc":             "results_2afc_*.json",
+    "continuous":       "results_continuous_*.json",
+    "mst":              "results_mst_*.json",
+    "serial_free":      "results_serial_free_*.json",
+    "serial_afc":       "results_serial_afc_*.json",
+    "color_continuous": "results_color_continuous_*.json",
+    "color_named":      "results_color_named_*.json",
+    "pam_word":         "results_pam_word_*.json",
+    "pam_image":        "results_pam_image_*.json",
+    "assoc_word":       "results_assoc_word_*.json",
+    "assoc_image":      "results_assoc_image_*.json",
 }
+
+
+def load_full_results(results_dir="results"):
+    """Load all task results, retaining per-trial data and the full metrics dict.
+
+    Structure: data[task][model][dataset][foil_type][n_images] = {
+        "trials": [...],         # list of per-trial dicts
+        "metrics": {...},        # full per-model metrics block from the JSON
+    }
+
+    Plotting code can derive any CI it wants from `trials`/`metrics`.
+    """
+    results_path = Path(results_dir)
+    data = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: defaultdict(dict))))
+
+    for task_key, glob_pattern in TASK_GLOB_MAP.items():
+        for result_file in results_path.glob(glob_pattern):
+            try:
+                with open(result_file) as f:
+                    result = json.load(f)
+
+                metadata = result.get("_metadata", {})
+                if not metadata:
+                    continue
+
+                models = metadata.get("models", [])
+                foil_type = metadata.get("foil_type", "all")
+                raw_count = metadata.get("n_images") or metadata.get("image_count", 0) or 0
+                n_images = 1 if raw_count == "oracle" else int(raw_count)
+                raw_dataset = metadata.get("dataset")
+                task_name = metadata.get("task", task_key)
+                dataset = raw_dataset if raw_dataset else task_name
+
+                for model in models:
+                    if model == "qwen3-vl":
+                        continue
+                    if n_images not in VALID_N_IMAGES:
+                        continue
+                    if foil_type == "accuracy":
+                        continue
+                    model_block = result.get(model)
+                    if not isinstance(model_block, dict):
+                        continue
+                    trials = model_block.get("trials", []) or []
+                    metrics = {k: v for k, v in model_block.items() if k != "trials"}
+                    data[task_key][model][dataset][foil_type][n_images] = {
+                        "trials": trials,
+                        "metrics": metrics,
+                    }
+            except Exception as e:
+                print(f"Error loading {result_file.name}: {e}")
+                continue
+
+    return data
+
+
+def model_capability_boundary(data, task, foil, dataset, model):
+    """Smallest n_images at which this (task, foil, dataset) cell has results
+    for some other model but not for `model`, above this model's own max n.
+
+    Interpreted as the sequence length where `model` could not handle the
+    request (its eval-time `check_image_capacity` returned False). Returns
+    None if no such boundary exists (the model has data at every attempted n,
+    or no data at all in this cell).
+    """
+    by_model = data.get(task, {})
+    model_ns = set(by_model.get(model, {}).get(dataset, {}).get(foil, {}).keys())
+    if not model_ns:
+        return None
+    other_ns = set()
+    for m, m_dict in by_model.items():
+        if m == model:
+            continue
+        other_ns.update(m_dict.get(dataset, {}).get(foil, {}).keys())
+    bigger = sorted(n for n in (other_ns - model_ns) if n > max(model_ns))
+    return bigger[0] if bigger else None
 
 
 def load_results(results_dir="results"):
@@ -439,7 +518,7 @@ def main():
                 plot_single_dataset_comparison(data, task, dataset, output_dir)
 
         if args.overlap:
-            overlap_tasks = {"2afc", "serial_free", "pam", "vhs_single", "vhs_multi"}
+            overlap_tasks = {"2afc", "serial_free", "pam_word", "pam_image"}
             if task in overlap_tasks:
                 print(f"Generating overlap plots for task '{task}'...")
                 datasets = set()

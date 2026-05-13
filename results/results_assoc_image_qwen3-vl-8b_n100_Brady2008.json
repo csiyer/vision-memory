@@ -1,0 +1,307 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_185814",
+    "dataset": "Brady2008",
+    "pair_type": "image",
+    "n_images": 100,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.3,
+        "n_correct": 3,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe cue image shows a bamboo flute, an instrument made from bamboo. The second image shows a piece of driftwood, which is also a natural product derived from wood. While the flute is a crafted object and the driftwood is raw material, both are fundamentally made from wood, establishing a connection through their shared material origin. The first image (pepper) has no such connection to bamboo or wood.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AWOODFLUT.jpg",
+            "name": "AWOODFLUT.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ADRYWOOD.jpg",
+            "name": "ADRYWOOD.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AGREENPEP.jpg",
+            "name": "AGREENPEP.jpg",
+            "role": "C",
+            "chain_index": 6
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image of the crown (image 2) is indirectly associated with the cue image of the pink slippers.\n\nThe connection is not direct, but rather symbolic and thematic. The crown is a symbol of royalty, status, and authority. The pink slippers, while not royal in themselves, are a type of footwear often associated with comfort, leisure, and sometimes with a sense of being \"at home\" or \"in one's element.\" The crown, in contrast, represents a formal, elevated",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Awomensshoe4.jpg",
+            "name": "Awomensshoe4.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/8248852.thl.jpg",
+            "name": "8248852.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ACROWNPEN.jpg",
+            "name": "ACROWNPEN.jpg",
+            "role": "C",
+            "chain_index": 14
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image of the stork (image 2) is indirectly associated with the air hockey table (cue image).\n\nThe connection is indirect and thematic, not literal. The air hockey table is a game that involves fast-moving pucks and a puck launcher. The stork, as a symbol, is often associated with bringing babies. The \"puck\" in air hockey can be seen as a metaphor for a \"baby\" in the context of a \"baby shower\" (which is a common event",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/airhocckytable.jpg",
+            "name": "airhocckytable.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Abreakpl2.jpg",
+            "name": "Abreakpl2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Atoybird10.jpg",
+            "name": "Atoybird10.jpg",
+            "role": "C",
+            "chain_index": 23
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The cue image shows a bicycle brake lever. The indirect association is with image 2, the statue of two figures.\n\nThe connection is based on the **shape**. The handle of the brake lever is curved, and the statue depicts two figures in a dynamic, intertwined pose. The curved handle of the brake lever can be seen as a stylized, functional representation of the curved, flowing lines found in the statue's pose. While not a direct match, the shared abstract quality of curved form creates",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Abicyclegear2.jpg",
+            "name": "Abicyclegear2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ABOWARRO8.jpg",
+            "name": "ABOWARRO8.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ACOUPLEF2.jpg",
+            "name": "ACOUPLEF2.jpg",
+            "role": "C",
+            "chain_index": 16
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The image of the skeleton (image 1) is indirectly associated with the cue image.\n\nThe reasoning is as follows:\n- The cue image shows a decorative brass plate on a wooden stand. The stand is crafted to look like a stylized human foot or a pair of feet.\n- The skeleton image shows a complete human skeleton.\n- The connection is indirect and conceptual: both images relate to the human body. The stand in the cue image is a representation of a human foot, while the skeleton is",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Abowl74.jpg",
+            "name": "Abowl74.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/12955.JPG",
+            "name": "12955.JPG",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ASKELETO4.jpg",
+            "name": "ASKELETO4.jpg",
+            "role": "C",
+            "chain_index": 24
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 is indirectly associated with the cue image.\n\nThe cue image is of a real puppy. Image 1 is a plush toy rabbit, which is an artificial, stuffed representation of an animal. While not a puppy, it is a toy animal, sharing the category of \"animal representation\" with the puppy. The second image is a toy figure of a man in a hat, which is not an animal and has no direct or indirect connection to the puppy.\n\nTherefore, the correct choice is Image",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/APUPPY26.jpg",
+            "name": "APUPPY26.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/22827540.thl.jpg",
+            "name": "22827540.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Atoypersonwi2.jpg",
+            "name": "Atoypersonwi2.jpg",
+            "role": "C",
+            "chain_index": 44
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The correct choice is **Image 2**.\n\nHere is the reasoning:\n\n*   The cue image displays a set of colorful, simple geometric shapes (cubes, cylinders, a pyramid, etc.). These are fundamental building blocks, often used in early childhood education to teach concepts like shape, color, and spatial relationships.\n*   **Image 1** shows a white ghost figurine. While it is a toy, it is a specific character and does not have a direct or indirect connection to the",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Atoyblocks.jpg",
+            "name": "Atoyblocks.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/AGHOST.jpg",
+            "name": "AGHOST.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/8248852.thl.jpg",
+            "name": "8248852.thl.jpg",
+            "role": "C",
+            "chain_index": 20
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe cue image is a plush stork. The stork is a bird, and birds are often associated with nesting and caring for their young. The second image is a striped towel, which is commonly used in a nursery or baby's room. The connection is indirect: the stork is a symbol often used to represent the arrival of a baby, and the towel is an item associated with a baby's care. The wooden spoon has no direct",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Atoybird10.jpg",
+            "name": "Atoybird10.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/AWODSPOON.jpg",
+            "name": "AWODSPOON.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/beachtowels.jpg",
+            "name": "beachtowels.jpg",
+            "role": "C",
+            "chain_index": 38
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "Neither of the two images is directly associated with the cue image of the blue and white ceramic pitcher and bowl.\n\nHowever, if we must choose the one that has the *weakest* indirect connection, it would be **Image 2 (the hawk)**.\n\nHere's the reasoning:\n*   The cue image is a piece of ceramic tableware.\n*   Image 1 (the sandal) is footwear, which is a completely different category of object.\n*   Image 2 (the hawk",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ACREAME11.jpg",
+            "name": "ACREAME11.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Asandal7.jpg",
+            "name": "Asandal7.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Aeagle.jpg",
+            "name": "Aeagle.jpg",
+            "role": "C",
+            "chain_index": 36
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The cue image is a folded orange napkin, which is a piece of tableware used for dining.\n\nThe first option is a red and black model truck. There is no direct or indirect connection between a truck and a napkin.\n\nThe second option is a decorative wreath of berries and leaves. While not directly related, both the napkin and the wreath are items that can be found in a home setting, used for decoration or as part of a table setting. The napkin is a",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ANAPKIN4.jpg",
+            "name": "ANAPKIN4.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/AANTTRUCK.jpg",
+            "name": "AANTTRUCK.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AARTBERRI.jpg",
+            "name": "AARTBERRI.jpg",
+            "role": "C",
+            "chain_index": 5
+          }
+        }
+      }
+    ],
+    "accuracy": 0.3,
+    "n_correct": 3,
+    "total": 10
+  }
+}

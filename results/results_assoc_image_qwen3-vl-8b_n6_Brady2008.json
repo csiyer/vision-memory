@@ -1,0 +1,307 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_184151",
+    "dataset": "Brady2008",
+    "pair_type": "image",
+    "n_images": 6,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.8,
+        "n_correct": 8,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 is indirectly associated with the cue image.\n\nThe reasoning is as follows:\n- The cue image is a piece of electronic equipment, likely a server or a specialized computer.\n- The first pair (A-B) connects this equipment to a wicker chair.\n- The second pair (B-C) connects the wicker chair to a pile of twigs.\n- The third pair (C) connects the pile of twigs to a cold pack.\n\nThe connection is indirect and conceptual. The pile",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Acomputer11.jpg",
+            "name": "Acomputer11.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ABRANCHES.jpg",
+            "name": "ABRANCHES.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/pdos043072.jpg",
+            "name": "pdos043072.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The correct choice is **Image 2** (the manatee).\n\nHere's the reasoning:\n\n*   The cue image is a **conical object** with a spiral or coiled structure, resembling a spring or a coil.\n*   **Image 1 (the manatee)**: While it has a rounded, somewhat conical body shape, its most prominent feature is its **flippers**. The flippers are not coiled or spiral-shaped. There is no direct or indirect connection to",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ACANDEXT.jpg",
+            "name": "ACANDEXT.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Amanatee2.jpg",
+            "name": "Amanatee2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/ASHOULDE4.jpg",
+            "name": "ASHOULDE4.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 is indirectly associated with the cue image.\n\nThe reasoning is as follows:\n- The cue image is a robot.\n- The first image pair (A) shows the robot and an antique dresser.\n- The second image pair (B) shows the dresser and a vintage portable radio.\n- The cue image (the robot) is paired with the dresser in the first pair.\n- The dresser is paired with the radio in the second pair.\n- Therefore, the radio is indirectly associated with the robot",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/26439074.thl.jpg",
+            "name": "26439074.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Aintercom6.jpg",
+            "name": "Aintercom6.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/22919000.thl.jpg",
+            "name": "22919000.thl.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "The saxophone (image 1) is indirectly associated with the cue image (the mirror).\n\nThe connection is through the **letter 'M'**.\n\n*   The cue image is a mirror.\n*   The saxophone is a musical instrument.\n*   The letter 'M' is the 13th letter of the alphabet.\n*   The mirror's frame has a decorative, ornate design that can be interpreted as a stylized 'M' or a motif that resembles one.\n*",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AOVALFRAM.jpg",
+            "name": "AOVALFRAM.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ASOPRASAX.jpg",
+            "name": "ASOPRASAX.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/22949719.thl.jpg",
+            "name": "22949719.thl.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image that is indirectly associated with the cue image (the washing machine) is **Image 2: the hands typing on a computer**.\n\nHere's the reasoning:\n- The cue image is a washing machine, an appliance used for cleaning.\n- The first image in the BC pair is a clapperboard, which is used in filmmaking to mark scenes.\n- The second image in the BC pair is hands typing on a computer, which is a tool for creating digital content, including scripts,",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ACENTRIF5.jpg",
+            "name": "ACENTRIF5.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Aslate.jpg",
+            "name": "Aslate.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/handcomputerN.JPG",
+            "name": "handcomputerN.JPG",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image that is indirectly associated with the cue image is **Image 2: the Ghirardelli chocolate bar**.\n\nHere's the reasoning:\n\n*   The cue image is a green and yellow \"AWARD\" scarf, which is a symbol of recognition, achievement, or a prize.\n*   The chocolate bar is a product, a tangible item you can purchase.\n*   The key connection is **indirect**. While the chocolate bar itself is not an award, it is a common",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ARIBBON9.jpg",
+            "name": "ARIBBON9.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/cbgdidc.jpg",
+            "name": "cbgdidc.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/26392651.thl.jpg",
+            "name": "26392651.thl.jpg",
+            "role": "C",
+            "chain_index": 2
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image of the panda (image 2) is indirectly associated with the cue image of the desk.\n\nThe connection is through the **BC pair**:\n- The cue image (the desk) was paired with the **dog toy** (image 1).\n- The **dog toy** (image 1) was then paired with the **panda** (image 2).\n\nTherefore, the panda is indirectly associated with the desk via the dog toy.\n\nThe correct answer is **2**.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Alampsanddes5.jpg",
+            "name": "Alampsanddes5.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/26379612.thl.jpg",
+            "name": "26379612.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Awinecase.jpg",
+            "name": "Awinecase.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct choice is **Image 2: The Eiffel Tower model**.\n\nHere's the reasoning:\n\n*   The cue image is a **spinning wheel**, a tool for spinning thread or yarn.\n*   The first image in the test set (Image 1) is a **metal star sculpture**. This is a purely abstract, modern art piece with no direct or indirect connection to a spinning wheel.\n*   The second image in the test set (Image 2) is a",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Aspinningwhe2.jpg",
+            "name": "Aspinningwhe2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Aeiffeltower2.jpg",
+            "name": "Aeiffeltower2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AMETSCULP.jpg",
+            "name": "AMETSCULP.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image that is indirectly associated with the cue image (the ornate key) is **Image 2** (the large bronze urn with figures).\n\nHere's the reasoning:\n\n*   The cue image is an ornate, antique-style key.\n*   The key has a distinct, decorative, and historical aesthetic.\n*   Image 2, the large bronze urn, is also an ornate, decorative, and historical object. It features classical figures and a weathered, antique appearance.\n*",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AKNIFEHOL.jpg",
+            "name": "AKNIFEHOL.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Atoyhomeoffi4.jpg",
+            "name": "Atoyhomeoffi4.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Aflowerpot9.jpg",
+            "name": "Aflowerpot9.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 is indirectly associated with the cue image.\n\nThe reasoning is as follows:\n- The cue image is a candle in a glass jar filled with decorative pebbles.\n- The first \"BC pair\" connects the keys (image B) to the pineapple-shaped bath bomb (image C).\n- The second \"BC pair\" connects the collapsible stool (image B) to the purple kazoo (image C).\n- The third \"BC pair\" connects the copper pipe (image B) to",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Acandle120.jpg",
+            "name": "Acandle120.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ABREAD.jpg",
+            "name": "ABREAD.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Akazoo2.jpg",
+            "name": "Akazoo2.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      }
+    ],
+    "accuracy": 0.8,
+    "n_correct": 8,
+    "total": 10
+  }
+}

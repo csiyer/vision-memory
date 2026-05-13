@@ -50,7 +50,9 @@ class BaseEvaluator(ABC):
             msg = str(e).lower()
             capacity_phrases = ("too many images", "too large", "payload too large",
                                 "context length", "context window", "maximum context",
-                                "exceeds the maximum", "request too large")
+                                "exceeds the maximum", "request too large",
+                                "too much media", "exceed max allowed size",
+                                "exceed the max allowed size")
             if status in (400, 413) and any(p in msg for p in capacity_phrases):
                 return False
             raise

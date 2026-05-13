@@ -8,7 +8,6 @@
 #SBATCH --mem=48G
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1
-#SBATCH --constraint=A6000
 
 # VHS multi-needle: molmo2-8b
 
@@ -44,7 +43,7 @@ for size in "${SIZES[@]}"; do
         --models "$MODEL" \
         --mode multi_needle \
         --image-count "$size" \
-        --max-samples 100 \
+        --max-samples 10 \
         --fetch-missing-coco || echo "  [ERROR] image_count=$size"
 done
 

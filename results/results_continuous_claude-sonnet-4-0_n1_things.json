@@ -1,0 +1,74 @@
+{
+  "_metadata": {
+    "task": "Continuous Recognition",
+    "timestamp": "20260508_154619",
+    "dataset": "things",
+    "n_images": 1,
+    "n_trials": 2,
+    "models": [
+      "claude-sonnet-4-0"
+    ],
+    "summary": {
+      "claude-sonnet-4-0": {
+        "accuracy": 1.0,
+        "d_prime": 1.3489795003921634,
+        "hit_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "weighted_f1": 1.0
+      }
+    },
+    "p_old": 0.5,
+    "min_delay": 0,
+    "max_delay": 1
+  },
+  "claude-sonnet-4-0": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 0,
+        "response": 0,
+        "correct": 1,
+        "raw_response": "No, this image has not appeared in the sequence before. This is the first time I'm seeing",
+        "metadata": {
+          "category": "aardvark",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+          "local_filename": "aardvark_01b.jpg",
+          "delay": null
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "response": 1,
+        "correct": 1,
+        "raw_response": "Yes, this image has already appeared in the sequence. This is the same image of the aard",
+        "metadata": {
+          "category": "aardvark",
+          "category_id": 0,
+          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+          "local_filename": "aardvark_01b.jpg",
+          "delay": 0
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "hit_rate": 1.0,
+    "false_alarm_rate": 0.0,
+    "d_prime": 1.3489795003921634,
+    "weighted_f1": 1.0,
+    "counts": {
+      "hits": 1,
+      "misses": 0,
+      "false_alarms": 0,
+      "correct_rejections": 1
+    },
+    "hit_rate_by_delay": {
+      "0": 1.0
+    }
+  }
+}

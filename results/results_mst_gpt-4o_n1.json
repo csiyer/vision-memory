@@ -1,0 +1,84 @@
+{
+  "_metadata": {
+    "task": "Mnemonic Similarity Task",
+    "timestamp": "20260512_101202",
+    "dataset": "MST",
+    "n_study": 1,
+    "n_images": 1,
+    "n_trials": 3,
+    "models": [
+      "gpt-4o"
+    ],
+    "summary": {
+      "gpt-4o": {
+        "accuracy": 1.0,
+        "ldi": 1.0,
+        "hit_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "target_accuracy": 1.0,
+        "lure_accuracy": 1.0,
+        "foil_accuracy": 1.0
+      }
+    }
+  },
+  "gpt-4o": {
+    "trials": [
+      {
+        "trial": 0,
+        "type": "lure",
+        "target": "similar",
+        "reported": "similar",
+        "correct": 1,
+        "raw_response": "Similar",
+        "metadata": {
+          "set_number": 6,
+          "item_id": 60,
+          "bin": 3
+        }
+      },
+      {
+        "trial": 1,
+        "type": "foil",
+        "target": "new",
+        "reported": "new",
+        "correct": 1,
+        "raw_response": "New",
+        "metadata": {
+          "set_number": 5,
+          "item_id": 116,
+          "bin": null
+        }
+      },
+      {
+        "trial": 2,
+        "type": "target",
+        "target": "old",
+        "reported": "old",
+        "correct": 1,
+        "raw_response": "Old.",
+        "metadata": {
+          "set_number": 6,
+          "item_id": 60,
+          "bin": null
+        }
+      }
+    ],
+    "accuracy": 1.0,
+    "n_correct": 3,
+    "total": 3,
+    "hit_rate": 1.0,
+    "false_alarm_rate": 0.0,
+    "p_similar_lure": 1.0,
+    "p_similar_foil": 0.0,
+    "ldi": 1.0,
+    "ldi_by_bin": {
+      "3": 1.0
+    },
+    "target_accuracy": 1.0,
+    "lure_accuracy": 1.0,
+    "foil_accuracy": 1.0,
+    "n_targets": 1,
+    "n_lures": 1,
+    "n_foils": 1
+  }
+}

@@ -1,0 +1,357 @@
+{
+  "_metadata": {
+    "task": "Paired Associate Memory",
+    "timestamp": "20260508_145245",
+    "dataset": "things",
+    "pair_type": "image",
+    "n_images": 2,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.1,
+        "n_correct": 1,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "The image of the acorn (image 4) was paired with the cue image (the abacus).\n\nThe pairing is based on a thematic connection: both the abacus and the acorn are associated with the concept of \"counting\" or \"calculation\" in a symbolic or historical sense.\n\n- The abacus is a direct tool for calculation.\n- The acorn, as a seed, represents potential and growth, and in many cultures, it is a symbol of the future and the",
+        "metadata": {
+          "cue": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg"
+          },
+          "correct_target": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          },
+          "foil": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the Hohner accordion) is Image 1 (the abacus).\n\nThe pairing is based on a thematic connection: both the accordion and the abacus are objects associated with human culture and activity. The accordion is a musical instrument, while the abacus is a tool for calculation. Both represent human ingenuity and the tools we use to create and process information.\n\nThe acorn (Image 2) is a natural object and does not share this cultural or",
+        "metadata": {
+          "cue": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg"
+          },
+          "correct_target": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg"
+          },
+          "foil": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image of the aardvark (the cue image) was paired with image 2, which shows the acorn.\n\nThe pairing is:\n- **Cue image (aardvark)** \u2014 paired with \u2014 **Image 2 (acorn)**\n\nThis is because both the aardvark and the acorn are associated with the word \"dig\" or \"digging\":\n- The aardvark is famously known for digging into the ground to find insects.\n- The",
+        "metadata": {
+          "cue": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg"
+          },
+          "correct_target": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          },
+          "foil": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image of the animal (the aardvark) was paired with the cue image of the abacus.\n\nThe pairing is: **Image 1 (abacus) with Image 2 (aardvark)**.\n\nThis is because, in the initial set of four images, the abacus (Image 1) was paired with the aardvark (Image 2), and the accordion (Image 3) was paired with the acorn (Image 4). The cue",
+        "metadata": {
+          "cue": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg"
+          },
+          "correct_target": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg"
+          },
+          "foil": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither of the two images (the acorn or the abacus) was paired with the cue image of the accordion.\n\nThe cue image shows a Hohner accordion, a musical instrument. The two provided images show an acorn (a natural object) and an abacus (a calculating tool). There is no thematic or conceptual link between a musical instrument and either of these items.\n\nTherefore, the correct answer is that **neither** was paired with the cue image.",
+        "metadata": {
+          "cue": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg"
+          },
+          "correct_target": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          },
+          "foil": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The image of the aardvark (the cue image) was paired with image 2, which shows the acorn.\n\nThe pairing is:\n- Cue image: Aardvark\n- Paired image: Acorn\n\nThe abacus (image 1) was paired with the accordion in the initial set, not with the aardvark.",
+        "metadata": {
+          "cue": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg"
+          },
+          "correct_target": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          },
+          "foil": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image paired with the cue image (the abacus) is Image 2, which shows the acorn.\n\nThe pairing is:\n- Cue image: Abacus\n- Paired image: Acorn\n\nThis is because both the abacus and the acorn are objects that are often associated with learning, history, or nature, and they both have a distinct, textured, and somewhat rustic appearance. The other image, of the aardvark, is an animal and does not share this",
+        "metadata": {
+          "cue": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg"
+          },
+          "correct_target": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg"
+          },
+          "foil": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the Hohner accordion) is Image 1 (the abacus).\n\nThe pairing is based on a thematic connection: both the accordion and the abacus are objects associated with human culture and activity. The accordion is a musical instrument, while the abacus is a tool for calculation. Both represent human ingenuity and the tools we use to create and process information.\n\nThe acorn (Image 2) is a natural object and does not share this cultural or",
+        "metadata": {
+          "cue": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg"
+          },
+          "correct_target": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg"
+          },
+          "foil": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The image paired with the cue image (the Hohner accordion) is Image 2 (the abacus).\n\nThe pairing is based on the theme of \"man-made objects\" or \"tools for creation and calculation\". The accordion is a musical instrument, and the abacus is a calculating tool. Both are human inventions used for specific, skilled purposes.\n\nThe acorn (Image 1) is a natural object, which makes it a less suitable pairing for the musical instrument.\n\nTherefore, the correct",
+        "metadata": {
+          "cue": {
+            "category": "accordion",
+            "category_id": 2,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+            "local_filename": "accordion_01b.jpg"
+          },
+          "correct_target": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          },
+          "foil": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg"
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image of the animal (the aardvark) was paired with the cue image of the abacus.\n\nThe pairing is: **Image 1 (abacus) with Image 2 (aardvark)**.\n\nThis is because, in the initial set of four images, the abacus (Image 1) was paired with the aardvark (Image 2), and the accordion (Image 3) was paired with the acorn (Image 4). The cue",
+        "metadata": {
+          "cue": {
+            "category": "abacus",
+            "category_id": 1,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+            "local_filename": "abacus_01b.jpg"
+          },
+          "correct_target": {
+            "category": "aardvark",
+            "category_id": 0,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+            "local_filename": "aardvark_01b.jpg"
+          },
+          "foil": {
+            "category": "acorn",
+            "category_id": 3,
+            "exemplar_id": 0,
+            "source": "local_files",
+            "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+            "local_filename": "acorn_01b.jpg"
+          }
+        }
+      }
+    ],
+    "accuracy": 0.1,
+    "n_correct": 1,
+    "total": 10
+  }
+}

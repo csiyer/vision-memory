@@ -1,0 +1,307 @@
+{
+  "_metadata": {
+    "task": "Associative Inference",
+    "timestamp": "20260508_183513",
+    "dataset": "Brady2008",
+    "pair_type": "image",
+    "n_images": 4,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.3,
+        "n_correct": 3,
+        "total": 10
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The correct choice is **Image 2** (the red nail polish bottle).\n\nHere's the reasoning based on the hidden connections:\n\n1.  **The Cue Image (Juicer):** The first image is a juicer, a machine used for processing food.\n2.  **The Connection:** The key is to look for a hidden connection between the cue image and the two options. The word \"MACHINE\" is printed on the juicer. This is a direct, explicit connection.\n3",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AJUICER.jpg",
+            "name": "AJUICER.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Atwowayradio2.jpg",
+            "name": "Atwowayradio2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Anailpolish.jpg",
+            "name": "Anailpolish.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 1,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The correct choice is **Image 2**.\n\nHere's the reasoning based on the hidden connections:\n\n1.  **The Cue Image (Artichoke):** This is a vegetable, specifically a type of thistle. It is often prepared by boiling or steaming and is a common food item.\n\n2.  **Image 1 (Wooden Handle):** This is a tool, likely a handle for a brush or a similar implement. It has no direct or indirect connection to an art",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/AARTICHO1.jpg",
+            "name": "AARTICHO1.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Apizzadoughin.jpg",
+            "name": "Apizzadoughin.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Abackaccesso4.jpg",
+            "name": "Abackaccesso4.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 2,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "The correct choice is **Image 2** (the red and silver wheeled toy).\n\nHere's the reasoning:\n\nThe cue image is a coupon, which is a form of a voucher or ticket that can be redeemed for something.\n\n- **Image 1 (the stuffed rabbit)**: This is a toy. While it might be purchased with money saved from a coupon, there is no direct or indirect connection between a coupon and a stuffed animal. The rabbit doesn't represent a redeemable item or a",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/8248429.thl.jpg",
+            "name": "8248429.thl.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/AMEDEQUI9.jpg",
+            "name": "AMEDEQUI9.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/22827540.thl.jpg",
+            "name": "22827540.thl.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 3,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct choice is **2** (the fortune cookie).\n\nHere's the reasoning based on the hidden connections:\n\n1.  The cue image is a **golf ball**.\n2.  The first pair (A-B) connects the **golf ball** to the **jukebox**.\n3.  The second pair (B-C) connects the **jukebox** to the **fortune cookie**.\n4.  Therefore, the **fortune cookie** is indirectly associated with the",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/golf-ball.JPG",
+            "name": "golf-ball.JPG",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/fortune-cookie.jpg",
+            "name": "fortune-cookie.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/sandcastle.jpg",
+            "name": "sandcastle.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 4,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The image indirectly associated with the cue image is **Image 2: the olive**.\n\nHere's the reasoning:\n\n*   The cue image is the DVD cover for the movie *Mission: Impossible III*.\n*   The movie's tagline is \"The Best Mission Impossible Yet!\".\n*   The word \"Mission\" in \"Mission: Impossible\" is a direct reference to a \"mission\" or task.\n*   The olive (Image 2) has a small cross-shaped indentation on its",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/dvdmovie.jpg",
+            "name": "dvdmovie.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/26433686.thl.jpg",
+            "name": "26433686.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AOLIVE.jpg",
+            "name": "AOLIVE.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The correct choice is **Image 1** (the toy with buttons and a remote).\n\nHere's the reasoning based on the hidden connections:\n\n*   The **cue image** is a gumball machine, which is a classic, standalone piece of candy vending equipment.\n*   **Image 2** (the \"Wet Floor\" sign) is a safety warning sign. While it's a common item, it doesn't have a direct or indirect connection to a gumball machine.\n*",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/gumballmachine.jpg",
+            "name": "gumballmachine.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/Afrenchsigns2.jpg",
+            "name": "Afrenchsigns2.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/Ababtoy13.jpg",
+            "name": "Ababtoy13.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 6,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The correct choice is **Image 2** (the fishing lure).\n\nHere's the reasoning based on the hidden connections:\n\n1.  **The Cue Image (Fireman):** The figure is a toy fireman, representing a profession that involves danger and risk.\n2.  **The Connection to Image 2 (Fishing Lure):** The fishing lure is a tool used to catch fish. Fish are often associated with danger, as they can bite or cause injury. The lure itself is",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Atoy35.jpg",
+            "name": "Atoy35.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/26421106.thl.jpg",
+            "name": "26421106.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AFISHHOO9.jpg",
+            "name": "AFISHHOO9.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 7,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "The image that is indirectly associated with the cue image (the statue of the \"Three Wise Monkeys\") is **Image 2: the adjustable wrench**.\n\nHere's the reasoning:\n\n*   The cue image is a statue of the \"Three Wise Monkeys,\" which is a well-known symbol representing the principle of \"see no evil, hear no evil, speak no evil.\" The monkey covering its eyes represents \"see no evil,\" the one covering its ears represents \"hear no evil,\" and the",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/Aornament89.jpg",
+            "name": "Aornament89.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/26429123.thl.jpg",
+            "name": "26429123.thl.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/driedbeans.jpg",
+            "name": "driedbeans.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 8,
+        "target": 1,
+        "reported": -1,
+        "correct": 0,
+        "raw_response": "Neither image is directly associated with the cue image of the Ewok.\n\nHowever, the question asks for an *indirect* association. Let's examine the connections:\n\n- The Ewok is a fictional creature from the *Star Wars* universe.\n- The candy hearts are associated with Valentine's Day and romance.\n- The wooden pyramid is a simple geometric shape.\n\nThere is no clear, indirect connection between the Ewok and either the candy hearts or the pyramid based on the provided pairs.",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ewok.jpg",
+            "name": "ewok.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/vatslheart.jpg",
+            "name": "vatslheart.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/AWOODPYRA.jpg",
+            "name": "AWOODPYRA.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 2,
+        "correct": 0,
+        "raw_response": "The correct choice is **Image 2**.\n\nHere's the reasoning:\n\n*   The cue image is a **lion mask**.\n*   The lion is a **carnivore** and a **predator**.\n*   The **second image** shows a **medical tray** with a **syringe** and a **scalpel**.\n*   The **first image** shows a **post-hole digger**, a tool for digging holes in the ground.\n\nThe connection is",
+        "metadata": {
+          "chain_index": 0,
+          "cue_item": {
+            "path": "memory_datasets/Brady2008Objects/ALIONMAS2.jpg",
+            "name": "ALIONMAS2.jpg",
+            "role": "A",
+            "chain_index": 0
+          },
+          "correct_option": {
+            "path": "memory_datasets/Brady2008Objects/ADRILL3.jpg",
+            "name": "ADRILL3.jpg",
+            "role": "C",
+            "chain_index": 0
+          },
+          "foil_option": {
+            "path": "memory_datasets/Brady2008Objects/26556936.thl.jpg",
+            "name": "26556936.thl.jpg",
+            "role": "C",
+            "chain_index": 1
+          }
+        }
+      }
+    ],
+    "accuracy": 0.3,
+    "n_correct": 3,
+    "total": 10
+  }
+}

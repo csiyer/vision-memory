@@ -1,20 +1,20 @@
 {
   "_metadata": {
     "task": "Continuous Recognition",
-    "timestamp": "20260412_204541",
+    "timestamp": "20260512_101351",
     "dataset": "things",
     "n_images": 10,
-    "n_trials": 20,
+    "n_trials": 10,
     "models": [
       "gpt-4o"
     ],
     "summary": {
       "gpt-4o": {
         "accuracy": 1.0,
-        "d_prime": 3.224742173937445,
+        "d_prime": 2.350415693202339,
         "hit_rate": 1.0,
         "false_alarm_rate": 0.0,
-        "weighted_f1": 0.9117647058823529
+        "weighted_f1": 0.7857142857142857
       }
     },
     "p_old": 0.5,
@@ -27,11 +27,15 @@
         "trial": 0,
         "target": 0,
         "response": -1,
-        "raw_response": "I'm unable to compare images or track sequences. If",
+        "correct": null,
+        "raw_response": "I'm unable to determine if this image has appeared in the sequence.",
         "metadata": {
-          "category": "cat_2",
+          "category": "abacus",
           "category_id": 1,
           "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+          "local_filename": "abacus_01b.jpg",
           "delay": null
         }
       },
@@ -39,11 +43,15 @@
         "trial": 1,
         "target": 0,
         "response": -1,
-        "raw_response": "I'm unable to compare images or track sequences. If",
+        "correct": null,
+        "raw_response": "I\u2019m unable to determine if this image has appeared in the sequence.",
         "metadata": {
-          "category": "cat_14",
-          "category_id": 7,
+          "category": "acorn",
+          "category_id": 3,
           "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+          "local_filename": "acorn_01b.jpg",
           "delay": null
         }
       },
@@ -51,11 +59,15 @@
         "trial": 2,
         "target": 0,
         "response": -1,
-        "raw_response": "I'm unable to compare images or track sequences. If",
+        "correct": null,
+        "raw_response": "I'm unable to determine if this image has appeared in the sequence.",
         "metadata": {
-          "category": "cat_6",
-          "category_id": 3,
+          "category": "air_conditioner",
+          "category_id": 4,
           "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+          "local_filename": "air_conditioner_01b.jpg",
           "delay": null
         }
       },
@@ -63,11 +75,15 @@
         "trial": 3,
         "target": 1,
         "response": 1,
+        "correct": 1,
         "raw_response": "Yes.",
         "metadata": {
-          "category": "cat_2",
+          "category": "abacus",
           "category_id": 1,
           "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/abacus/abacus_01b.jpg",
+          "local_filename": "abacus_01b.jpg",
           "delay": 2
         }
       },
@@ -75,11 +91,15 @@
         "trial": 4,
         "target": 1,
         "response": 1,
+        "correct": 1,
         "raw_response": "Yes.",
         "metadata": {
-          "category": "cat_14",
-          "category_id": 7,
+          "category": "acorn",
+          "category_id": 3,
           "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/acorn/acorn_01b.jpg",
+          "local_filename": "acorn_01b.jpg",
           "delay": 2
         }
       },
@@ -87,200 +107,97 @@
         "trial": 5,
         "target": 0,
         "response": 0,
+        "correct": 1,
         "raw_response": "No.",
         "metadata": {
-          "category": "cat_18",
-          "category_id": 9,
+          "category": "aardvark",
+          "category_id": 0,
           "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+          "local_filename": "aardvark_01b.jpg",
           "delay": null
         }
       },
       {
         "trial": 6,
-        "target": 1,
-        "response": 1,
-        "raw_response": "Yes.",
+        "target": 0,
+        "response": 0,
+        "correct": 1,
+        "raw_response": "No.",
         "metadata": {
-          "category": "cat_6",
-          "category_id": 3,
+          "category": "accordion",
+          "category_id": 2,
           "exemplar_id": 0,
-          "delay": 3
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+          "local_filename": "accordion_01b.jpg",
+          "delay": null
         }
       },
       {
         "trial": 7,
-        "target": 0,
-        "response": 0,
-        "raw_response": "No.",
+        "target": 1,
+        "response": 1,
+        "correct": 1,
+        "raw_response": "Yes.",
         "metadata": {
-          "category": "cat_8",
+          "category": "air_conditioner",
           "category_id": 4,
           "exemplar_id": 0,
-          "delay": null
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/air_conditioner/air_conditioner_01b.jpg",
+          "local_filename": "air_conditioner_01b.jpg",
+          "delay": 4
         }
       },
       {
         "trial": 8,
         "target": 1,
         "response": 1,
+        "correct": 1,
         "raw_response": "Yes.",
         "metadata": {
-          "category": "cat_18",
-          "category_id": 9,
+          "category": "aardvark",
+          "category_id": 0,
           "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/aardvark/aardvark_01b.jpg",
+          "local_filename": "aardvark_01b.jpg",
           "delay": 2
         }
       },
       {
         "trial": 9,
-        "target": 0,
-        "response": 0,
-        "raw_response": "No.",
-        "metadata": {
-          "category": "cat_0",
-          "category_id": 0,
-          "exemplar_id": 0,
-          "delay": null
-        }
-      },
-      {
-        "trial": 10,
-        "target": 0,
-        "response": 0,
-        "raw_response": "No.",
-        "metadata": {
-          "category": "cat_10",
-          "category_id": 5,
-          "exemplar_id": 0,
-          "delay": null
-        }
-      },
-      {
-        "trial": 11,
-        "target": 0,
-        "response": 0,
-        "raw_response": "No.",
-        "metadata": {
-          "category": "cat_12",
-          "category_id": 6,
-          "exemplar_id": 0,
-          "delay": null
-        }
-      },
-      {
-        "trial": 12,
         "target": 1,
         "response": 1,
+        "correct": 1,
         "raw_response": "Yes.",
         "metadata": {
-          "category": "cat_8",
-          "category_id": 4,
-          "exemplar_id": 0,
-          "delay": 4
-        }
-      },
-      {
-        "trial": 13,
-        "target": 0,
-        "response": 0,
-        "raw_response": "No.",
-        "metadata": {
-          "category": "cat_4",
+          "category": "accordion",
           "category_id": 2,
           "exemplar_id": 0,
-          "delay": null
-        }
-      },
-      {
-        "trial": 14,
-        "target": 1,
-        "response": 1,
-        "raw_response": "Yes.",
-        "metadata": {
-          "category": "cat_10",
-          "category_id": 5,
-          "exemplar_id": 0,
-          "delay": 3
-        }
-      },
-      {
-        "trial": 15,
-        "target": 0,
-        "response": 0,
-        "raw_response": "No.",
-        "metadata": {
-          "category": "cat_16",
-          "category_id": 8,
-          "exemplar_id": 0,
-          "delay": null
-        }
-      },
-      {
-        "trial": 16,
-        "target": 1,
-        "response": 1,
-        "raw_response": "Yes.",
-        "metadata": {
-          "category": "cat_4",
-          "category_id": 2,
-          "exemplar_id": 0,
+          "source": "local_files",
+          "local_path": "memory_datasets/THINGS/object_images/accordion/accordion_01b.jpg",
+          "local_filename": "accordion_01b.jpg",
           "delay": 2
-        }
-      },
-      {
-        "trial": 17,
-        "target": 1,
-        "response": 1,
-        "raw_response": "Yes.",
-        "metadata": {
-          "category": "cat_12",
-          "category_id": 6,
-          "exemplar_id": 0,
-          "delay": 5
-        }
-      },
-      {
-        "trial": 18,
-        "target": 1,
-        "response": 1,
-        "raw_response": "Yes.",
-        "metadata": {
-          "category": "cat_0",
-          "category_id": 0,
-          "exemplar_id": 0,
-          "delay": 8
-        }
-      },
-      {
-        "trial": 19,
-        "target": 1,
-        "response": 1,
-        "raw_response": "Yes.",
-        "metadata": {
-          "category": "cat_16",
-          "category_id": 8,
-          "exemplar_id": 0,
-          "delay": 3
         }
       }
     ],
     "accuracy": 1.0,
     "hit_rate": 1.0,
     "false_alarm_rate": 0.0,
-    "d_prime": 3.224742173937445,
-    "weighted_f1": 0.9117647058823529,
+    "d_prime": 2.350415693202339,
+    "weighted_f1": 0.7857142857142857,
     "counts": {
-      "hits": 10,
+      "hits": 5,
       "misses": 0,
       "false_alarms": 0,
-      "correct_rejections": 7
+      "correct_rejections": 2
     },
     "hit_rate_by_delay": {
       "2": 1.0,
-      "3": 1.0,
-      "4": 1.0,
-      "5": 1.0,
-      "8": 1.0
+      "4": 1.0
     }
   }
 }

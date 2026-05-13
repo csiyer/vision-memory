@@ -8,7 +8,6 @@
 #SBATCH --mem=48G
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1
-#SBATCH --constraint=A6000
 
 # Mnemonic Similarity Task: qwen3-vl-8b
 
@@ -23,7 +22,7 @@ export HF_DATASETS_OFFLINE=1
 
 MODEL="qwen"
 RESULTS_DIR="$SCRIPT_DIR/results"
-SIZES=(1 2 5 10 100 250)
+SIZES=(1 2 5 10 50 100 250)
 
 mkdir -p "$RESULTS_DIR" logs
 
@@ -43,7 +42,7 @@ for size in "${SIZES[@]}"; do
     python3 -m eval_scripts.eval_mst \
         --models "$MODEL" \
         --n-study "$size" \
-        --n-trials 100 || echo "  [ERROR] n=$size"
+        --n-trials 10 || echo "  [ERROR] n=$size"
 done
 
 echo "Done."

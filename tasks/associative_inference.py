@@ -275,7 +275,7 @@ class AssociativeInferenceTask:
                 {
                     "cue_image": chain["A"]["image"],
                     "images": images,
-                    "prompt": "Which of these two images (1 or 2) is indirectly associated with the cue image?",
+                    "prompt": "Which of these two images is indirectly associated with the cue image? Reply with only the digit 1 or 2 and nothing else.",
                     "target": target,
                     "metadata": {
                         "chain_index": chain["chain_index"],
@@ -313,7 +313,7 @@ class AssociativeInferenceTask:
                 {
                     "cue_image": chain["A"]["image"],
                     "options": options,
-                    "prompt": "Which of these two words (1 or 2) is indirectly associated with the cue image?",
+                    "prompt": "Which of these two words is indirectly associated with the cue image? Reply with only the digit 1 or 2 and nothing else.",
                     "target": target,
                     "metadata": {
                         "chain_index": chain["chain_index"],

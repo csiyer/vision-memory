@@ -1,0 +1,192 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (AFC)",
+    "variant": "afc",
+    "timestamp": "20260508_145833",
+    "dataset": "things",
+    "n_images": 10,
+    "n_trials": 10,
+    "models": [
+      "qwen3-vl-8b"
+    ],
+    "summary": {
+      "qwen3-vl-8b": {
+        "accuracy": 0.8
+      }
+    }
+  },
+  "qwen3-vl-8b": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the air conditioner) appeared first in the sequence.\n\nThe sequence is as follows:\n1.  Accordion\n2.  Abacus\n3.  Airboat\n4.  Acorn\n5.  Air tank\n6.  Airbags\n7.  Air mattress\n8.  Air conditioner\n9.  Aircraft carrier\n10. Aardvark\n\nThe air conditioner is image 8, and the air mattress is image 7. Therefore",
+        "metadata": {
+          "first_serial_position": 7,
+          "second_serial_position": 8,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 8,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 1,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the accordion) appeared first in the study sequence.\n\nThe sequence is as follows:\n1.  A pink, furry animal (a pink fairy armadillo) walking on sand.\n2.  A maroon inflatable air mattress.\n3.  An acorn on a wooden surface.\n4.  An abacus.\n5.  A window air conditioner.\n6.  An accordion (this is the first of the two images you asked about).\n7.  A car interior",
+        "metadata": {
+          "first_serial_position": 6,
+          "second_serial_position": 9,
+          "serial_lag": 3,
+          "lag_bin": "lag_2_3",
+          "distance": 2,
+          "left_image_serial_position": 6,
+          "right_image_serial_position": 9
+        }
+      },
+      {
+        "trial": 2,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the abacus) appeared first in the study sequence.\n\nThe sequence provided was:\n1.  Aircraft carrier\n2.  Abacus\n3.  Airboat\n4.  Air mattress\n5.  Air compressor\n6.  Car with deployed airbags\n7.  Acorn\n8.  Window air conditioner\n9.  Accordion\n10. Aardvark\n\nTherefore, the abacus (Image 2 in your query) is",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 7,
+          "serial_lag": 5,
+          "lag_bin": "lag_4_10",
+          "distance": 4,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 3,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the abacus) appeared first in the study sequence.\n\nThe sequence of images is as follows:\n1.  Hohner accordion\n2.  Airboat\n3.  Window air conditioner\n4.  Abacus\n5.  Aircraft carrier\n6.  Inflatable mattress\n7.  Aardvark\n8.  Scuba tank with pump\n9.  Acorn\n10. Car with deployed airbags\n\nTherefore, the ab",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 6,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 6
+        }
+      },
+      {
+        "trial": 4,
+        "target": 2,
+        "reported": 1,
+        "correct": 0,
+        "raw_response": "Image 1 (the airboat) appeared first in the sequence.\n\nThe sequence is as follows:\n1.  **Image 1:** The green airboat.\n2.  **Image 2:** The pink fairy armadillo.\n\nTherefore, the airboat (Image 1) came before the armadillo (Image 2).",
+        "metadata": {
+          "first_serial_position": 3,
+          "second_serial_position": 5,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 5,
+          "right_image_serial_position": 3
+        }
+      },
+      {
+        "trial": 5,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 appeared first in the study sequence.\n\nThe sequence provided was:\n1.  Accordion\n2.  Airboat\n3.  Window air conditioner\n4.  Inflatable mattress\n5.  Acorn\n6.  Aardvark\n7.  Aircraft carrier\n8.  Abacus\n9.  Car with deployed airbags\n10. Scuba tank with pump\n\nThe image of the accordion is Image 1, and the image of",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 4,
+          "serial_lag": 3,
+          "lag_bin": "lag_2_3",
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 6,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the acorn) appeared first in the sequence.\n\nThe sequence is as follows:\n1.  Image 1: A green air tank with a pump.\n2.  Image 2: An acorn on a wooden surface.\n\nTherefore, the acorn (Image 2) is the second image in the sequence, not the first. The first image is the air tank.",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 4,
+          "serial_lag": 2,
+          "lag_bin": "lag_2_3",
+          "distance": 1,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 2
+        }
+      },
+      {
+        "trial": 7,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the airboat) appeared first in the sequence.\n\nIt is the fourth image in the original 10-image sequence, while Image 2 (the air mattress) is the seventh.",
+        "metadata": {
+          "first_serial_position": 4,
+          "second_serial_position": 7,
+          "serial_lag": 3,
+          "lag_bin": "lag_2_3",
+          "distance": 2,
+          "left_image_serial_position": 4,
+          "right_image_serial_position": 7
+        }
+      },
+      {
+        "trial": 8,
+        "target": 2,
+        "reported": 2,
+        "correct": 1,
+        "raw_response": "Image 2 (the acorn) appeared first in the sequence.\n\nThe original sequence is:\n1. Acorn\n2. Air tank with pump\n3. Abacus\n4. Airboat\n5. Aircraft carrier\n6. Air mattress\n7. Accordion\n8. Car with deployed airbags\n9. Window air conditioner\n10. Aardvark\n\nThe image you asked about, the accordion (Image 1), is the 7th image in the sequence",
+        "metadata": {
+          "first_serial_position": 1,
+          "second_serial_position": 7,
+          "serial_lag": 6,
+          "lag_bin": "lag_4_10",
+          "distance": 5,
+          "left_image_serial_position": 7,
+          "right_image_serial_position": 1
+        }
+      },
+      {
+        "trial": 9,
+        "target": 1,
+        "reported": 1,
+        "correct": 1,
+        "raw_response": "Image 1 (the acorn) appeared first in the sequence.\n\nThe sequence is as follows:\n1.  An aardvark\n2.  An acorn (Image 1)\n3.  An aircraft carrier\n4.  A car with deployed airbags\n5.  An abacus\n6.  An airboat\n7.  An air mattress\n8.  A window air conditioner\n9.  A bicycle pump\n10. An accordion\n\nTherefore",
+        "metadata": {
+          "first_serial_position": 2,
+          "second_serial_position": 3,
+          "serial_lag": 1,
+          "lag_bin": "lag_1",
+          "distance": 0,
+          "left_image_serial_position": 2,
+          "right_image_serial_position": 3
+        }
+      }
+    ],
+    "accuracy": 0.8,
+    "n_correct": 8,
+    "total": 10,
+    "accuracy_by_distance": {
+      "0": 0.5,
+      "1": 0.6666666666666666,
+      "2": 1.0,
+      "4": 1.0,
+      "5": 1.0
+    }
+  }
+}

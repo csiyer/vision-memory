@@ -1,0 +1,177 @@
+{
+  "_metadata": {
+    "task": "Mnemonic Similarity Task",
+    "timestamp": "20260510_151133",
+    "dataset": "MST",
+    "n_study": 250,
+    "n_images": 250,
+    "n_trials": 10,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 0.8,
+        "ldi": 0.4166666666666667,
+        "hit_rate": 1.0,
+        "false_alarm_rate": 0.0,
+        "target_accuracy": 1.0,
+        "lure_accuracy": 0.75,
+        "foil_accuracy": 0.6666666666666666
+      }
+    }
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "type": "foil",
+        "target": "new",
+        "reported": "new",
+        "correct": 1,
+        "raw_response": "new",
+        "metadata": {
+          "set_number": 4,
+          "item_id": 164,
+          "bin": null
+        }
+      },
+      {
+        "trial": 1,
+        "type": "lure",
+        "target": "similar",
+        "reported": "similar",
+        "correct": 1,
+        "raw_response": "similar",
+        "metadata": {
+          "set_number": 5,
+          "item_id": 107,
+          "bin": 5
+        }
+      },
+      {
+        "trial": 2,
+        "type": "foil",
+        "target": "new",
+        "reported": "similar",
+        "correct": 0,
+        "raw_response": "similar",
+        "metadata": {
+          "set_number": 4,
+          "item_id": 163,
+          "bin": null
+        }
+      },
+      {
+        "trial": 3,
+        "type": "target",
+        "target": "old",
+        "reported": "old",
+        "correct": 1,
+        "raw_response": "old",
+        "metadata": {
+          "set_number": 3,
+          "item_id": 87,
+          "bin": null
+        }
+      },
+      {
+        "trial": 4,
+        "type": "target",
+        "target": "old",
+        "reported": "old",
+        "correct": 1,
+        "raw_response": "old",
+        "metadata": {
+          "set_number": 4,
+          "item_id": 102,
+          "bin": null
+        }
+      },
+      {
+        "trial": 5,
+        "type": "lure",
+        "target": "similar",
+        "reported": "",
+        "correct": 0,
+        "raw_response": null,
+        "metadata": {
+          "set_number": 5,
+          "item_id": 168,
+          "bin": 2
+        }
+      },
+      {
+        "trial": 6,
+        "type": "lure",
+        "target": "similar",
+        "reported": "similar",
+        "correct": 1,
+        "raw_response": "Similar",
+        "metadata": {
+          "set_number": 1,
+          "item_id": 94,
+          "bin": 3
+        }
+      },
+      {
+        "trial": 7,
+        "type": "target",
+        "target": "old",
+        "reported": "old",
+        "correct": 1,
+        "raw_response": "old",
+        "metadata": {
+          "set_number": 5,
+          "item_id": 145,
+          "bin": null
+        }
+      },
+      {
+        "trial": 8,
+        "type": "lure",
+        "target": "similar",
+        "reported": "similar",
+        "correct": 1,
+        "raw_response": "similar",
+        "metadata": {
+          "set_number": 4,
+          "item_id": 29,
+          "bin": 2
+        }
+      },
+      {
+        "trial": 9,
+        "type": "foil",
+        "target": "new",
+        "reported": "new",
+        "correct": 1,
+        "raw_response": "new",
+        "metadata": {
+          "set_number": 1,
+          "item_id": 162,
+          "bin": null
+        }
+      }
+    ],
+    "accuracy": 0.8,
+    "n_correct": 8,
+    "total": 10,
+    "hit_rate": 1.0,
+    "false_alarm_rate": 0.0,
+    "p_similar_lure": 0.75,
+    "p_similar_foil": 0.3333333333333333,
+    "ldi": 0.4166666666666667,
+    "ldi_by_bin": {
+      "2": 0.16666666666666669,
+      "3": 0.6666666666666667,
+      "5": 0.6666666666666667
+    },
+    "target_accuracy": 1.0,
+    "lure_accuracy": 0.75,
+    "foil_accuracy": 0.6666666666666666,
+    "n_targets": 3,
+    "n_lures": 4,
+    "n_foils": 3
+  }
+}

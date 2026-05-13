@@ -1,0 +1,148 @@
+{
+  "_metadata": {
+    "task": "Serial Order Memory (Free Report)",
+    "variant": "free",
+    "timestamp": "20260510_152118",
+    "dataset": "Brady2008",
+    "n_images": 250,
+    "n_trials": 10,
+    "models": [
+      "gemini-2.5-flash"
+    ],
+    "summary": {
+      "gemini-2.5-flash": {
+        "accuracy": 0.5
+      }
+    }
+  },
+  "gemini-2.5-flash": {
+    "trials": [
+      {
+        "trial": 0,
+        "target": 199,
+        "reported": 246,
+        "correct": 0,
+        "raw_response": "246",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/Atool12.jpg",
+          "name": "Atool12.jpg",
+          "serial_position": 199
+        }
+      },
+      {
+        "trial": 1,
+        "target": 213,
+        "reported": 211,
+        "correct": 0,
+        "raw_response": "211",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/Acomputer9.jpg",
+          "name": "Acomputer9.jpg",
+          "serial_position": 213
+        }
+      },
+      {
+        "trial": 2,
+        "target": 127,
+        "reported": 117,
+        "correct": 0,
+        "raw_response": "117",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/ADOGLEAS2.jpg",
+          "name": "ADOGLEAS2.jpg",
+          "serial_position": 127
+        }
+      },
+      {
+        "trial": 3,
+        "target": 39,
+        "reported": 39,
+        "correct": 1,
+        "raw_response": "39",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/ACARMON.jpg",
+          "name": "ACARMON.jpg",
+          "serial_position": 39
+        }
+      },
+      {
+        "trial": 4,
+        "target": 205,
+        "reported": 223,
+        "correct": 0,
+        "raw_response": "223",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/ABUILDAR4.jpg",
+          "name": "ABUILDAR4.jpg",
+          "serial_position": 205
+        }
+      },
+      {
+        "trial": 5,
+        "target": 26,
+        "reported": 26,
+        "correct": 1,
+        "raw_response": "26",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/ASCREW7.jpg",
+          "name": "ASCREW7.jpg",
+          "serial_position": 26
+        }
+      },
+      {
+        "trial": 6,
+        "target": 228,
+        "reported": 227,
+        "correct": 0,
+        "raw_response": "227",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/AAIRGAUGE.jpg",
+          "name": "AAIRGAUGE.jpg",
+          "serial_position": 228
+        }
+      },
+      {
+        "trial": 7,
+        "target": 53,
+        "reported": 53,
+        "correct": 1,
+        "raw_response": "53",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/ABASTER2.jpg",
+          "name": "ABASTER2.jpg",
+          "serial_position": 53
+        }
+      },
+      {
+        "trial": 8,
+        "target": 43,
+        "reported": 43,
+        "correct": 1,
+        "raw_response": "43",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/26421572.thl.jpg",
+          "name": "26421572.thl.jpg",
+          "serial_position": 43
+        }
+      },
+      {
+        "trial": 9,
+        "target": 167,
+        "reported": 167,
+        "correct": 1,
+        "raw_response": "167",
+        "metadata": {
+          "path": "memory_datasets/Brady2008Objects/AMILPANS2.jpg",
+          "name": "AMILPANS2.jpg",
+          "serial_position": 167
+        }
+      }
+    ],
+    "average_error": 7.8,
+    "n_correct": 5,
+    "accuracy": 0.5,
+    "spearman_rho": 0.9151515151515152,
+    "spearman_pval": 0.0002044724061488323,
+    "n_parse_failures": 0
+  }
+}
