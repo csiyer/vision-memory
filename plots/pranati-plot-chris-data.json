@@ -1,0 +1,835 @@
+{
+  "_notes": {
+    "description": "Accuracy by sequence length (n) for each task and model. Brady2008 dataset only.",
+    "source_priority": "vlm-test branch preferred; main branch used only when vlm-test has no file.",
+    "color_memory": "Color files have no dataset suffix in filename (not Brady2008-tagged, but are Brady images).",
+    "old_style_pam_assoc_on_main": "main branch has unsplit results_pam_* and results_assoc_* files (no image/word distinction); these are NOT included here \u2014 superseded by pam_word/pam_image and assoc_word/assoc_image on vlm-test.",
+    "serial_afc_no_n1": "serial_afc n=1 files exist but returned null accuracy (undefined for single-item recency judgment).",
+    "coverage_gaps": {
+      "claude-sonnet-4-0": "2afc capped at n=50; continuous capped at n=100; serial capped at n=50; pam/assoc have fewer ns",
+      "molmo2-8b": "2afc capped at n=10; serial capped at n=10; pam/assoc have fewer ns"
+    }
+  },
+  "_provenance": {
+    "continuous_recognition": {
+      "gpt-4o": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test (also on main)",
+        "50": "vlm-test",
+        "100": "vlm-test (also on main)",
+        "250": "vlm-test"
+      },
+      "gemini-2.5-flash": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test (also on main)",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "qwen3-vl-8b": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "claude-sonnet-4-0": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test"
+      },
+      "molmo2-8b": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test"
+      }
+    },
+    "2afc_novel": {
+      "gpt-4o": {
+        "1": "vlm-test (also on main)",
+        "2": "vlm-test (also on main)",
+        "5": "vlm-test (also on main)",
+        "10": "vlm-test (also on main)",
+        "50": "vlm-test",
+        "100": "vlm-test (also on main)",
+        "250": "vlm-test (also on main)",
+        "500": "vlm-test (also on main)"
+      },
+      "gemini-2.5-flash": {
+        "1": "vlm-test (also on main)",
+        "2": "vlm-test (also on main)",
+        "5": "vlm-test (also on main)",
+        "10": "vlm-test (also on main)",
+        "50": "vlm-test",
+        "100": "vlm-test (also on main)",
+        "250": "vlm-test",
+        "500": "vlm-test (also on main)"
+      },
+      "qwen3-vl-8b": {
+        "1": "vlm-test (also on main)",
+        "2": "vlm-test (also on main)",
+        "5": "vlm-test (also on main)",
+        "10": "vlm-test (also on main)",
+        "50": "vlm-test",
+        "100": "vlm-test (also on main)",
+        "250": "vlm-test (also on main)"
+      },
+      "claude-sonnet-4-0": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test"
+      },
+      "molmo2-8b": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test"
+      }
+    },
+    "color_continuous": {
+      "gpt-4o": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "gemini-2.5-flash": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "qwen3-vl-8b": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "claude-sonnet-4-0": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test"
+      },
+      "molmo2-8b": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test"
+      }
+    },
+    "color_named": {
+      "gpt-4o": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "gemini-2.5-flash": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "qwen3-vl-8b": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "claude-sonnet-4-0": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test"
+      },
+      "molmo2-8b": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test"
+      }
+    },
+    "serial_free": {
+      "gpt-4o": {
+        "1": "vlm-test (also on main)",
+        "2": "vlm-test (also on main)",
+        "5": "vlm-test (also on main)",
+        "10": "vlm-test (also on main)",
+        "50": "vlm-test",
+        "100": "vlm-test (also on main)",
+        "250": "vlm-test (also on main)"
+      },
+      "gemini-2.5-flash": {
+        "1": "vlm-test (also on main)",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "qwen3-vl-8b": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "claude-sonnet-4-0": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test"
+      },
+      "molmo2-8b": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test"
+      }
+    },
+    "serial_afc": {
+      "gpt-4o": {
+        "2": "vlm-test (also on main)",
+        "5": "vlm-test (also on main)",
+        "10": "vlm-test (also on main)",
+        "50": "vlm-test",
+        "100": "vlm-test (also on main)",
+        "250": "vlm-test (also on main)"
+      },
+      "gemini-2.5-flash": {
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "qwen3-vl-8b": {
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "claude-sonnet-4-0": {
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test"
+      },
+      "molmo2-8b": {
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test"
+      }
+    },
+    "pam_word": {
+      "gpt-4o": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "gemini-2.5-flash": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "qwen3-vl-8b": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "claude-sonnet-4-0": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test"
+      },
+      "molmo2-8b": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "100": "vlm-test"
+      }
+    },
+    "pam_image": {
+      "gpt-4o": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test"
+      },
+      "gemini-2.5-flash": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "qwen3-vl-8b": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test"
+      },
+      "claude-sonnet-4-0": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test",
+        "10": "vlm-test"
+      },
+      "molmo2-8b": {
+        "1": "vlm-test",
+        "2": "vlm-test",
+        "5": "vlm-test"
+      }
+    },
+    "assoc_word": {
+      "gpt-4o": {
+        "2": "vlm-test",
+        "4": "vlm-test",
+        "6": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "gemini-2.5-flash": {
+        "2": "vlm-test",
+        "4": "vlm-test",
+        "6": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "qwen3-vl-8b": {
+        "2": "vlm-test",
+        "4": "vlm-test",
+        "6": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test"
+      },
+      "claude-sonnet-4-0": {
+        "2": "vlm-test",
+        "4": "vlm-test",
+        "6": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test"
+      },
+      "molmo2-8b": {
+        "2": "vlm-test",
+        "4": "vlm-test",
+        "6": "vlm-test",
+        "10": "vlm-test"
+      }
+    },
+    "assoc_image": {
+      "gpt-4o": {
+        "2": "vlm-test",
+        "4": "vlm-test",
+        "6": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test"
+      },
+      "gemini-2.5-flash": {
+        "2": "vlm-test",
+        "4": "vlm-test",
+        "6": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test",
+        "250": "vlm-test"
+      },
+      "qwen3-vl-8b": {
+        "2": "vlm-test",
+        "4": "vlm-test",
+        "6": "vlm-test",
+        "10": "vlm-test",
+        "50": "vlm-test",
+        "100": "vlm-test"
+      },
+      "claude-sonnet-4-0": {
+        "2": "vlm-test",
+        "4": "vlm-test",
+        "6": "vlm-test",
+        "10": "vlm-test"
+      },
+      "molmo2-8b": {
+        "2": "vlm-test",
+        "4": "vlm-test",
+        "6": "vlm-test"
+      }
+    }
+  },
+  "continuous_recognition": {
+    "gpt-4o": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 1.0,
+      "100": 1.0,
+      "250": 1.0
+    },
+    "gemini-2.5-flash": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 0.9,
+      "50": 1.0,
+      "100": 0.9,
+      "250": 1.0
+    },
+    "qwen3-vl-8b": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 1.0,
+      "100": 1.0,
+      "250": 1.0
+    },
+    "claude-sonnet-4-0": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 1.0,
+      "100": 1.0
+    },
+    "molmo2-8b": {
+      "1": 1.0,
+      "2": 0.5,
+      "5": 0.9,
+      "10": 0.6
+    }
+  },
+  "2afc_novel": {
+    "gpt-4o": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 1.0,
+      "100": 1.0,
+      "250": 1.0,
+      "500": 1.0
+    },
+    "gemini-2.5-flash": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 1.0,
+      "100": 1.0,
+      "250": 1.0,
+      "500": 1.0
+    },
+    "qwen3-vl-8b": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 1.0,
+      "100": 1.0,
+      "250": 1.0
+    },
+    "claude-sonnet-4-0": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 1.0
+    },
+    "molmo2-8b": {
+      "1": 0.7,
+      "2": 0.6,
+      "5": 0.6,
+      "10": 0.6
+    }
+  },
+  "color_continuous": {
+    "gpt-4o": {
+      "1": 0.8786,
+      "2": 0.9255,
+      "5": 0.9148,
+      "10": 0.9244,
+      "50": 0.8911,
+      "100": 0.9398,
+      "250": 0.9372
+    },
+    "gemini-2.5-flash": {
+      "1": 0.9372,
+      "2": 0.9187,
+      "5": 0.9302,
+      "10": 0.9078,
+      "50": 0.9234,
+      "100": 0.9216,
+      "250": 0.9321
+    },
+    "qwen3-vl-8b": {
+      "1": 0.4317,
+      "2": 0.5908,
+      "5": 0.6486,
+      "10": 0.5285,
+      "50": 0.6009,
+      "100": 0.7603,
+      "250": 0.743
+    },
+    "claude-sonnet-4-0": {
+      "1": 0.9183,
+      "2": 0.9607,
+      "5": 0.9402,
+      "10": 0.9517,
+      "50": 0.9253
+    },
+    "molmo2-8b": {
+      "1": 0.3063,
+      "2": 0.3811,
+      "5": 0.3741,
+      "10": 0.5981
+    }
+  },
+  "color_named": {
+    "gpt-4o": {
+      "1": 1.0,
+      "2": 0.9,
+      "5": 0.7,
+      "10": 0.8,
+      "50": 0.8,
+      "100": 0.9,
+      "250": 1.0
+    },
+    "gemini-2.5-flash": {
+      "1": 1.0,
+      "2": 0.9,
+      "5": 0.8,
+      "10": 0.8,
+      "50": 0.9,
+      "100": 0.7,
+      "250": 0.9
+    },
+    "qwen3-vl-8b": {
+      "1": 0.6,
+      "2": 0.7,
+      "5": 0.6,
+      "10": 0.8,
+      "50": 0.8,
+      "100": 0.8,
+      "250": 0.6
+    },
+    "claude-sonnet-4-0": {
+      "1": 0.8,
+      "2": 0.4,
+      "5": 0.5,
+      "10": 0.5,
+      "50": 0.4
+    },
+    "molmo2-8b": {
+      "1": 1.0,
+      "2": 0.5,
+      "5": 0.1,
+      "10": 0.1
+    }
+  },
+  "serial_free": {
+    "gpt-4o": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 0.4,
+      "100": 0.3,
+      "250": 0.157
+    },
+    "gemini-2.5-flash": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 0.9,
+      "100": 0.8,
+      "250": 0.5
+    },
+    "qwen3-vl-8b": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 0.4,
+      "100": 0.16,
+      "250": 0.1
+    },
+    "claude-sonnet-4-0": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 1.0
+    },
+    "molmo2-8b": {
+      "1": 1.0,
+      "2": 0.63,
+      "5": 0.24,
+      "10": 0.15
+    }
+  },
+  "serial_afc": {
+    "gpt-4o": {
+      "2": 0.6,
+      "5": 0.9,
+      "10": 1.0,
+      "50": 0.8,
+      "100": 0.7,
+      "250": 0.3
+    },
+    "gemini-2.5-flash": {
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 1.0,
+      "100": 1.0,
+      "250": 0.9
+    },
+    "qwen3-vl-8b": {
+      "2": 0.7,
+      "5": 0.9,
+      "10": 0.8,
+      "50": 0.6,
+      "100": 0.6,
+      "250": 0.7
+    },
+    "claude-sonnet-4-0": {
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 0.9
+    },
+    "molmo2-8b": {
+      "2": 0.4,
+      "5": 0.5,
+      "10": 0.5
+    }
+  },
+  "pam_word": {
+    "gpt-4o": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 1.0,
+      "100": 1.0,
+      "250": 0.996
+    },
+    "gemini-2.5-flash": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 0.9,
+      "50": 1.0,
+      "100": 1.0,
+      "250": 1.0
+    },
+    "qwen3-vl-8b": {
+      "1": 0.96,
+      "2": 0.98,
+      "5": 1.0,
+      "10": 0.97,
+      "50": 0.2,
+      "100": 0.33,
+      "250": 0.16
+    },
+    "claude-sonnet-4-0": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 1.0
+    },
+    "molmo2-8b": {
+      "1": 1.0,
+      "2": 0.52,
+      "5": 0.26,
+      "10": 0.09,
+      "100": 0.02
+    }
+  },
+  "pam_image": {
+    "gpt-4o": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 1.0,
+      "100": 1.0
+    },
+    "gemini-2.5-flash": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0,
+      "50": 1.0,
+      "100": 0.9,
+      "250": 0.9
+    },
+    "qwen3-vl-8b": {
+      "1": 0.6,
+      "2": 0.8,
+      "5": 0.5,
+      "10": 0.5,
+      "50": 0.5,
+      "100": 0.5
+    },
+    "claude-sonnet-4-0": {
+      "1": 1.0,
+      "2": 1.0,
+      "5": 1.0,
+      "10": 1.0
+    },
+    "molmo2-8b": {
+      "1": 0.5,
+      "2": 0.5,
+      "5": 0.8
+    }
+  },
+  "assoc_word": {
+    "gpt-4o": {
+      "2": 1.0,
+      "4": 0.8,
+      "6": 1.0,
+      "10": 1.0,
+      "50": 0.9,
+      "100": 0.7,
+      "250": 0.8
+    },
+    "gemini-2.5-flash": {
+      "2": 1.0,
+      "4": 1.0,
+      "6": 1.0,
+      "10": 1.0,
+      "50": 1.0,
+      "100": 0.9,
+      "250": 1.0
+    },
+    "qwen3-vl-8b": {
+      "2": 0.3,
+      "4": 0.6,
+      "6": 0.1,
+      "10": 0.5,
+      "50": 0.7,
+      "100": 0.7
+    },
+    "claude-sonnet-4-0": {
+      "2": 1.0,
+      "4": 0.4,
+      "6": 0.8,
+      "10": 0.8,
+      "50": 1.0
+    },
+    "molmo2-8b": {
+      "2": 1.0,
+      "4": 0.4,
+      "6": 0.3,
+      "10": 0.7
+    }
+  },
+  "assoc_image": {
+    "gpt-4o": {
+      "2": 1.0,
+      "4": 0.9,
+      "6": 0.9,
+      "10": 0.9,
+      "50": 0.9,
+      "100": 0.9
+    },
+    "gemini-2.5-flash": {
+      "2": 1.0,
+      "4": 1.0,
+      "6": 1.0,
+      "10": 1.0,
+      "50": 1.0,
+      "100": 1.0,
+      "250": 0.9
+    },
+    "qwen3-vl-8b": {
+      "2": 0.4,
+      "4": 0.3,
+      "6": 0.8,
+      "10": 0.4,
+      "50": 0.3,
+      "100": 0.3
+    },
+    "claude-sonnet-4-0": {
+      "2": 1.0,
+      "4": 0.1,
+      "6": 1.0,
+      "10": 1.0
+    },
+    "molmo2-8b": {
+      "2": 0.4,
+      "4": 0.7,
+      "6": 0.3
+    }
+  }
+}
