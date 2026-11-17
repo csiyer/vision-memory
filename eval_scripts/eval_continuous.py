@@ -40,13 +40,13 @@ def parse_yes_no(text):
     return -1
 
 
-def run_evaluation(evaluators, n_images=50, dataset='things', n_trials=None):
+def run_evaluation(evaluators, n_images=50, dataset='things', n_trials=None, source='local'):
     """Run continuous recognition evaluation on all evaluators.
 
     Returns:
         tuple: (all_results, task_info) where task_info has n_trials and task hyperparameters.
     """
-    task = ContinuousRecognitionTask(dataset_name=dataset, n_images=n_images, n_trials=n_trials)
+    task = ContinuousRecognitionTask(dataset_name=dataset, n_images=n_images, n_trials=n_trials, source=source)
     trials = task.get_trials()
     task_info = {
         "n_trials": len(trials),
@@ -125,6 +125,8 @@ def main():
                         help="Total sequence length (new + repeated). If omitted, derived from n-images and p_old=0.5")
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
                         help="Dataset to use")
+    parser.add_argument("--source", choices=["local", "hf"], default="local",
+                        help="Stimulus source: local files or huggingface (Brady2008 only)")
     parser.add_argument("--output", type=str, default=None,
                         help="Output file path (default: results_continuous_<timestamp>.json)")
     parser.add_argument("--plot", action="store_true",
@@ -154,7 +156,7 @@ def main():
     print(f"  N images: {args.n_images}")
     print(f"  Dataset: {args.dataset}")
 
-    results, task_info = run_evaluation(evaluators, args.n_images, args.dataset, n_trials=args.n_trials)
+    results, task_info = run_evaluation(evaluators, args.n_images, args.dataset, n_trials=args.n_trials, source=args.source)
     print(f"  N trials (generated): {task_info['n_trials']}")
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

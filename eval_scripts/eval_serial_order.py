@@ -127,7 +127,7 @@ def parse_afc_response(text):
     return -1
 
 
-def run_free_evaluation(evaluators, n_images=20, dataset="things", n_trials=None):
+def run_free_evaluation(evaluators, n_images=20, dataset="things", n_trials=None, source="local"):
     """Each trial is an independent study+test episode with a fresh sample of n_images."""
     n_trials = n_trials if n_trials is not None else n_images
 
@@ -144,7 +144,7 @@ def run_free_evaluation(evaluators, n_images=20, dataset="things", n_trials=None
         results = []
 
         for i in range(n_trials):
-            task = SerialOrderMemoryTask(dataset_name=dataset, n_images=n_images)
+            task = SerialOrderMemoryTask(dataset_name=dataset, n_images=n_images, source=source)
             trial_data = task.get_trials()
             n = len(trial_data["study_sequence"])
             test_trial = trial_data["test_phase"][0]
@@ -182,7 +182,7 @@ def run_free_evaluation(evaluators, n_images=20, dataset="things", n_trials=None
     return all_results
 
 
-def run_afc_evaluation(evaluators, n_images=20, dataset="things", n_trials=None):
+def run_afc_evaluation(evaluators, n_images=20, dataset="things", n_trials=None, source="local"):
     """Each trial is an independent study+test episode with a fresh sample of n_images."""
     if n_images < 2:
         print(f"[SKIP] AFC serial order requires at least 2 images, got n_images={n_images}")
@@ -202,7 +202,7 @@ def run_afc_evaluation(evaluators, n_images=20, dataset="things", n_trials=None)
         results = []
 
         for i in range(n_trials):
-            task = AFCSerialOrderMemoryTask(dataset_name=dataset, n_images=n_images, n_tests=1)
+            task = AFCSerialOrderMemoryTask(dataset_name=dataset, n_images=n_images, n_tests=1, source=source)
             trial_data = task.get_trials()
             test_trial = trial_data["test_phase"][0]
 
@@ -249,6 +249,8 @@ def main():
 
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
                         help="Dataset to use")
+    parser.add_argument("--source", choices=["local", "hf"], default="local",
+                        help="Stimulus source: local files or huggingface (Brady2008 only)")
     parser.add_argument("--output", type=str, default=None,
                         help="Output file path (default: results_serial_<variant>_<timestamp>.json)")
     args = parser.parse_args()
@@ -292,10 +294,10 @@ def main():
     print(f"  Dataset: {args.dataset}")
 
     if args.variant == "free":
-        results = run_free_evaluation(evaluators, args.n_images, args.dataset, n_trials=args.n_trials)
+        results = run_free_evaluation(evaluators, args.n_images, args.dataset, n_trials=args.n_trials, source=args.source)
         task_name = "Serial Order Memory (Free Report)"
     else:
-        results = run_afc_evaluation(evaluators, args.n_images, args.dataset, n_trials=args.n_trials)
+        results = run_afc_evaluation(evaluators, args.n_images, args.dataset, n_trials=args.n_trials, source=args.source)
         task_name = "Serial Order Memory (AFC)"
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

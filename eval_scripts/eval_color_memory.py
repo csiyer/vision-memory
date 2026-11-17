@@ -7,6 +7,8 @@ Two variants:
                angle in degrees on a CIELAB color wheel (0-360)
   named      — study N color objects, then for each gray probe choose one of
                6 named colors (red, orange, yellow, green, blue, purple)
+  afc        — study N color objects, then choose which of two colored versions of an
+               item (studied hue vs. hue + 180°) was studied (Brady et al. 2013, JEP:G)
 
 Usage:
     python -m eval_scripts.eval_color_memory --models gpt-4o --n-images 10 --variant continuous
@@ -34,6 +36,7 @@ from src.plotting import default_plots_dir, plot_color_memory
 VARIANT_TO_MODE = {
     "continuous": "continuous_color_report",
     "named": "named",
+    "afc": "afc",
 }
 
 NAMED_COLOR_NAMES = [name for name, _ in NAMED_COLORS]
@@ -78,6 +81,32 @@ def build_messages_named(evaluator, study_sequence, study_prompt,
     ]
 
 
+def build_messages_afc(evaluator, study_sequence, study_prompt, test_images, test_prompt):
+    study_content = [{"type": "text", "text": study_prompt}]
+    for img in study_sequence:
+        study_content.append(evaluator._encode_image(img))
+
+    test_content = [{"type": "text", "text": test_prompt}]
+    for label, img in zip(["Image 1:", "Image 2:"], test_images):
+        test_content.append({"type": "text", "text": label})
+        test_content.append(evaluator._encode_image(img))
+
+    return [
+        {"role": "user", "content": study_content},
+        {"role": "assistant", "content": "I have studied the colored items."},
+        {"role": "user", "content": test_content},
+    ]
+
+
+def parse_afc_response(text):
+    """Parse a 1/2 choice. Take the last standalone 1 or 2; -1 if none."""
+    if text is None:
+        return -1
+    text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL)
+    matches = re.findall(r"(?<!\d)[12](?!\d)", text)
+    return int(matches[-1]) if matches else -1
+
+
 def parse_angle_response(text):
     """Parse a hue angle 0-360 from response. Take the last in-range number."""
     if text is None:
@@ -117,7 +146,7 @@ def parse_named_response(text):
     return lower.strip().split()[0] if lower.strip() else ""
 
 
-def run_continuous_evaluation(evaluators, n_images=10, n_trials=None):
+def run_continuous_evaluation(evaluators, n_images=10, n_trials=None, source="local"):
     """Each trial is an independent study+test episode."""
     n_trials = n_trials if n_trials is not None else n_images
 
@@ -135,7 +164,7 @@ def run_continuous_evaluation(evaluators, n_images=10, n_trials=None):
         results = []
 
         for i in range(n_trials):
-            task = ColorMemoryTask(n_images=n_images, mode="continuous_color_report")
+            task = ColorMemoryTask(n_images=n_images, mode="continuous_color_report", source=source)
             trial_data = task.get_trials()
             test_trial = trial_data["test_phase"][0]
 
@@ -176,7 +205,7 @@ def run_continuous_evaluation(evaluators, n_images=10, n_trials=None):
     return all_results
 
 
-def run_named_evaluation(evaluators, n_images=10, n_trials=None):
+def run_named_evaluation(evaluators, n_images=10, n_trials=None, source="local"):
     n_trials = n_trials if n_trials is not None else n_images
 
     all_results = {}
@@ -192,7 +221,7 @@ def run_named_evaluation(evaluators, n_images=10, n_trials=None):
         results = []
 
         for i in range(n_trials):
-            task = ColorMemoryTask(n_images=n_images, mode="named")
+            task = ColorMemoryTask(n_images=n_images, mode="named", source=source)
             trial_data = task.get_trials()
             test_trial = trial_data["test_phase"][0]
 
@@ -228,16 +257,75 @@ def run_named_evaluation(evaluators, n_images=10, n_trials=None):
     return all_results
 
 
+def run_afc_evaluation(evaluators, n_images=10, n_trials=None, source="local"):
+    n_trials = n_trials if n_trials is not None else n_images
+
+    all_results = {}
+    for evaluator in evaluators:
+        print(f"\n=== {evaluator.get_name()} ===")
+
+        # +2 for the two test options
+        print(f"  Probing capacity for {n_images} images...", end=" ", flush=True)
+        if not evaluator.check_image_capacity(n_images + 2):
+            print(f"SKIP — model rejected {n_images} images in a single request")
+            continue
+        print("OK")
+
+        results = []
+
+        for i in range(n_trials):
+            task = ColorMemoryTask(n_images=n_images, mode="afc", source=source)
+            trial_data = task.get_trials()
+            test_trial = trial_data["test_phase"][0]
+
+            messages = build_messages_afc(
+                evaluator,
+                trial_data["study_sequence"],
+                trial_data["study_prompt"],
+                test_trial["images"],
+                test_trial["prompt"],
+            )
+            response_text = evaluator._call_api(messages)
+            reported = parse_afc_response(response_text)
+            correct = 1 if reported == test_trial["target"] else 0
+
+            results.append({
+                "trial": i,
+                "target": test_trial["target"],
+                "reported": reported,
+                "correct": correct,
+                "raw_response": response_text,
+                "metadata": test_trial["metadata"],
+            })
+            status = "✓" if correct else "✗"
+            print(f"  Trial {i+1}/{n_trials}: {status} (target={test_trial['target']}, got={reported})", end="\r")
+
+        n_correct = sum(r["correct"] for r in results)
+        metrics = {
+            "accuracy": n_correct / len(results) if results else 0.0,
+            "n_correct": n_correct,
+            "total": len(results),
+            "n_parse_failures": sum(1 for r in results if r["reported"] == -1),
+        }
+        print(f"\n  Accuracy: {metrics['accuracy']:.1%} ({n_correct}/{len(results)})")
+
+        all_results[evaluator.get_name()] = {"trials": results, **metrics}
+
+    return all_results
+
+
 def main():
     parser = argparse.ArgumentParser(description="Color Memory Evaluation")
     parser.add_argument("--models", nargs="+", default=["gpt-4o", "claude", "gemini"],
                         help="Models to evaluate: gpt-4o, claude, gemini, qwen, molmo2")
     parser.add_argument("--n-images", type=int, default=10,
                         help="Number of items in study sequence")
-    parser.add_argument("--variant", choices=["continuous", "named"], default="continuous",
-                        help="continuous=hue angle 0-360; named=one of 6 color names")
+    parser.add_argument("--variant", choices=["continuous", "named", "afc"], default="continuous",
+                        help="continuous=hue angle 0-360; named=one of 6 color names; afc=studied vs 180°-rotated color")
     parser.add_argument("--n-trials", type=int, default=None,
                         help="Number of test trials (default: n-images)")
+    parser.add_argument("--source", choices=["local", "hf"], default="local",
+                        help="Stimulus source: local files or huggingface")
     parser.add_argument("--output", type=str, default=None,
                         help="Output file path (default: results_color_<variant>_<...>.json)")
     parser.add_argument("--plot", action="store_true",
@@ -283,10 +371,13 @@ def main():
     print(f"  Variant: {args.variant}")
 
     if args.variant == "continuous":
-        results = run_continuous_evaluation(evaluators, args.n_images, n_trials=args.n_trials)
+        results = run_continuous_evaluation(evaluators, args.n_images, n_trials=args.n_trials, source=args.source)
         task_name = "Color Memory (Continuous)"
+    elif args.variant == "afc":
+        results = run_afc_evaluation(evaluators, args.n_images, n_trials=args.n_trials, source=args.source)
+        task_name = "Color Memory (2AFC)"
     else:
-        results = run_named_evaluation(evaluators, args.n_images, n_trials=args.n_trials)
+        results = run_named_evaluation(evaluators, args.n_images, n_trials=args.n_trials, source=args.source)
         task_name = "Color Memory (Named)"
 
     if not results:

@@ -39,7 +39,9 @@ def copy_file(src: Path, dst: Path, *, dry_run: bool) -> None:
     if dry_run:
         return
     dst.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(src, dst)
+    # Copy contents only: source files carry an executable bit that would show up as a
+    # git mode change in the dataset repo.
+    shutil.copyfile(src, dst)
 
 
 def image_paths(root: Path) -> list[Path]:
@@ -222,6 +224,26 @@ def export_wordpool(source_root: Path, out_root: Path, *, dry_run: bool) -> dict
     return {"collection_id": "wordpool", "n_words": len(words)}
 
 
+def export_color_palette(source_root: Path, out_root: Path, *, dry_run: bool) -> dict:
+    """Copy the pre-rendered color palette (hf_scripts/render_color_palette.py) as-is."""
+    source_dir = source_root / "Brady2013ColorRendered"
+    metadata_src = source_dir / "metadata.jsonl"
+    if not metadata_src.exists():
+        raise FileNotFoundError(f"Missing {metadata_src}. Run hf_scripts/render_color_palette.py first.")
+    collection_out = out_root / "data" / "brady_color_rendered"
+    rows = [json.loads(line) for line in metadata_src.read_text(encoding="utf-8").splitlines() if line.strip()]
+    for row in rows:
+        copy_file(source_dir / row["file_name"], collection_out / row["file_name"], dry_run=dry_run)
+        row["collection_id"] = "brady_color_rendered"
+    write_jsonl(collection_out / "metadata.jsonl", rows)
+    return {
+        "collection_id": "brady_color_rendered",
+        "source_dataset": "Brady2013ColorObjects (rendered, 36 hues x 10 deg + grayscale + color wheel)",
+        "n_images": len(rows),
+        "n_pairs": None,
+    }
+
+
 def export_benchmarks(out_root: Path, *, dry_run: bool) -> dict:
     literature_dir = REPO_ROOT / "literature"
     benchmark_out = out_root / "benchmarks"
@@ -277,8 +299,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--collections",
         nargs="+",
-        default=["brady", "mst", "wordpool", "benchmarks"],
-        choices=["brady", "mst", "wordpool", "benchmarks"],
+        default=["brady", "color_palette", "mst", "wordpool", "benchmarks"],
+        choices=["brady", "color_palette", "mst", "wordpool", "benchmarks"],
         help="Asset groups to export.",
     )
     return parser.parse_args()
@@ -294,6 +316,8 @@ def main() -> None:
     if "brady" in args.collections:
         for collection_id, directory_name in BRADY_COLLECTIONS.items():
             exported.append(export_brady_collection(source_root, out_root, collection_id, directory_name, dry_run=args.dry_run))
+    if "color_palette" in args.collections:
+        exported.append(export_color_palette(source_root, out_root, dry_run=args.dry_run))
     if "mst" in args.collections:
         exported.append(export_mst(source_root, out_root, dry_run=args.dry_run))
     if "wordpool" in args.collections:

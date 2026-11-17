@@ -6,7 +6,8 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from src.stimuli import BradyDataset
+from src.color_palette import opposite_hue, sample_palette_hues
+from src.stimuli import ColorPaletteDataset
 
 # (name, hue_angle_degrees) — hue angles chosen as perceptual centers on the HSV wheel
 NAMED_COLORS = [
@@ -133,125 +134,124 @@ def colorize_image_to_cielab_hue(img, hue_angle_degrees, chroma=55):
 
 
 class ColorMemoryTask:
+    """Color memory on Brady et al. (2013) objects.
+
+    All stimuli come from a fixed pre-rendered palette (36 hues, 10-degree steps; see
+    src/color_palette.py), so local runs and the Hugging Face episodes use identical images.
+
+    mode: 'continuous_color_report' — report the studied hue as an angle on a color wheel
+          'named'                   — report one of 6 named colors
+          'afc'                     — 2AFC: studied color vs. the same object rotated 180° in hue
+                                      (Brady, Konkle, Alvarez & Oliva 2013, JEP:G)
+    In continuous and named modes the test probe is shown in grayscale; in afc mode both
+    options are shown in color.
+    """
+
+    CONTINUOUS_PROMPT = (
+        "What was the color of this item in the study sequence? "
+        "Report the hue angle in degrees on the color wheel. "
+        "0/360 degrees is the rightmost point, 90 is the top, "
+        "180 is the left, and 270 is the bottom. Use any number from 0 up to 360."
+    )
+    AFC_PROMPT = (
+        "Both images show the same item in different colors. "
+        "Which one (1 or 2) shows the color the item had in the study sequence?"
+    )
+
     def __init__(self, n_images=10, n_colors=None, mode="continuous_color_report",
-                 source="local", repo_id="chrisiyer/vision-memory-tasks"):
-        """
-        mode: 'continuous_color_report' — study/report as a continuous hue angle in degrees
-              'named'                   — study/report as one of 6 named colors
-        In both modes the test probe image is shown in grayscale.
-        """
+                 source="local", repo_id="chrisiyer/vision-memory-tasks", root_dir="memory_datasets"):
+        if mode not in {"continuous_color_report", "named", "afc"}:
+            raise ValueError(f"Unknown color memory mode {mode!r}.")
         self.n_images = n_images
         self.n_colors = n_colors
         self.mode = mode
-        self.dataset = BradyDataset(
-            type='Brady2013ColorObjects',
-            source=source,
-            repo_id=repo_id,
-        )
+        self.dataset = ColorPaletteDataset(root_dir=root_dir, source=source, repo_id=repo_id)
         if mode == "continuous_color_report":
-            self.color_wheel = generate_cielab_color_wheel()
+            self.color_wheel = self.dataset.get_color_wheel()
 
     def get_trials(self):
-        if self.mode == "named":
-            return self._get_named_trials()
-        return self._get_continuous_color_report_trials()
-
-    def _get_continuous_color_report_trials(self):
         n = min(self.n_images, len(self.dataset))
         indices = list(range(len(self.dataset)))
         random.shuffle(indices)
-        selected_indices = indices[:n]
+        selected = indices[:n]
 
-        target_angles = [random.random() * 360.0 for _ in range(n)]
+        if self.mode == "named":
+            named = [NAMED_COLORS[i % len(NAMED_COLORS)] for i in range(n)]
+            random.shuffle(named)
+            names = [name for name, _ in named]
+            hues = [hue for _, hue in named]
+        else:
+            names = None
+            hues = sample_palette_hues(random, n)
 
-        study_sequence = []
-        for idx, angle in zip(selected_indices, target_angles):
-            img = np.array(self.dataset.get_image(idx))
-            rotated_img = Image.fromarray(rotate_image_hue(img, angle))
-            study_sequence.append(rotated_img)
+        study_sequence = [self.dataset.get_image(idx, hue) for idx, hue in zip(selected, hues)]
 
-        test_phase = []
-        test_indices = list(range(n))
-        random.shuffle(test_indices)
+        test_order = list(range(n))
+        random.shuffle(test_order)
+        if self.mode == "named":
+            test_phase = [self._named_trial(selected[i], hues[i], names[i]) for i in test_order]
+        elif self.mode == "afc":
+            test_phase = [self._afc_trial(selected[i], hues[i], study_sequence[i]) for i in test_order]
+        else:
+            test_phase = [self._continuous_trial(selected[i], hues[i]) for i in test_order]
 
-        for i in test_indices:
-            gray_probe = self.dataset.get_image(selected_indices[i]).convert("L").convert("RGB")
-            test_phase.append({
-                "image": gray_probe,
-                "color_wheel": self.color_wheel,
-                "prompt": (
-                    f"What was the color of this item in the study sequence? "
-                    "Report the hue angle in degrees on the color wheel. "
-                    "0/360 degrees is the rightmost point, 90 is the top, "
-                    "180 is the left, and 270 is the bottom. Use any number from 0 up to 360."
-                ),
-                "target": target_angles[i],
-                "metadata": {
-                    **self.dataset.get_metadata(selected_indices[i]),
-                    "target_angle_degrees": target_angles[i],
-                    "rotation_angle_degrees": target_angles[i],
-                    "response_unit": "degrees",
-                    "wheel_space": "CIELAB a/b hue angle",
-                    "color_transform": "brady_cielab_hue_rotation",
-                    "wheel_match": "Continuous-mode stimuli are generated by rotating the source image hue in CIELAB space.",
-                    "angle_reference": {
-                        "0/360": "rightmost point",
-                        "90": "top",
-                        "180": "left",
-                        "270": "bottom",
-                    },
-                }
-            })
-
-        return {
+        result = {
             "study_prompt": "Remember the colors of these items.",
             "study_sequence": study_sequence,
             "test_phase": test_phase,
-            "color_wheel": self.color_wheel,
+        }
+        if self.mode == "continuous_color_report":
+            result["color_wheel"] = self.color_wheel
+        return result
+
+    def _base_metadata(self, idx, hue):
+        return {
+            **self.dataset.get_metadata(idx, hue),
+            "target_angle_degrees": hue,
+            "rotation_angle_degrees": hue,
+            "color_transform": "brady_cielab_hue_rotation",
         }
 
-    def _get_named_trials(self):
-        n = min(self.n_images, len(self.dataset))
-        indices = list(range(len(self.dataset)))
-        random.shuffle(indices)
-        selected_indices = indices[:n]
-
-        target_colors = [NAMED_COLORS[i % len(NAMED_COLORS)] for i in range(n)]
-        random.shuffle(target_colors)
-
-        study_sequence = []
-        for idx, (color_name, hue_angle) in zip(selected_indices, target_colors):
-            img = np.array(self.dataset.get_image(idx))
-            rotated_img = Image.fromarray(rotate_image_hue(img, hue_angle))
-            study_sequence.append(rotated_img)
-
-        test_phase = []
-        test_indices = list(range(n))
-        random.shuffle(test_indices)
-
-        options_str = ", ".join(name for name, _ in NAMED_COLORS)
-
-        for i in test_indices:
-            gray_probe = self.dataset.get_image(selected_indices[i]).convert("L").convert("RGB")
-            test_phase.append({
-                "image": gray_probe,
-                "prompt": (
-                    f"What color was this item in the study sequence? "
-                    f"Choose one: {options_str}."
-                ),
-                "target": target_colors[i][0],
-                "metadata": {
-                    **self.dataset.get_metadata(selected_indices[i]),
-                    "target_color_name": target_colors[i][0],
-                    "rotation_angle_degrees": target_colors[i][1],
-                    "color_transform": "brady_cielab_hue_rotation",
-                }
-            })
-
+    def _continuous_trial(self, idx, hue):
         return {
-            "study_prompt": "Remember the colors of these items.",
-            "study_sequence": study_sequence,
-            "test_phase": test_phase,
+            "image": self.dataset.get_gray(idx),
+            "color_wheel": self.color_wheel,
+            "prompt": self.CONTINUOUS_PROMPT,
+            "target": hue,
+            "metadata": {
+                **self._base_metadata(idx, hue),
+                "response_unit": "degrees",
+                "wheel_space": "CIELAB a/b hue angle",
+                "angle_reference": {"0/360": "rightmost point", "90": "top", "180": "left", "270": "bottom"},
+            },
+        }
+
+    def _named_trial(self, idx, hue, name):
+        options_str = ", ".join(n for n, _ in NAMED_COLORS)
+        return {
+            "image": self.dataset.get_gray(idx),
+            "prompt": f"What color was this item in the study sequence? Choose one: {options_str}.",
+            "target": name,
+            "metadata": {**self._base_metadata(idx, hue), "target_color_name": name},
+        }
+
+    def _afc_trial(self, idx, hue, studied_img):
+        foil_hue = opposite_hue(hue)
+        foil_img = self.dataset.get_image(idx, foil_hue)
+        if random.random() < 0.5:
+            images, target, option_hues = [studied_img, foil_img], 1, [hue, foil_hue]
+        else:
+            images, target, option_hues = [foil_img, studied_img], 2, [foil_hue, hue]
+        return {
+            "images": images,
+            "prompt": self.AFC_PROMPT,
+            "target": target,
+            "metadata": {
+                **self._base_metadata(idx, hue),
+                "foil_angle_degrees": foil_hue,
+                "option_angles_degrees": option_hues,
+                "foil_offset_degrees": 180,
+            },
         }
 
 

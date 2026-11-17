@@ -6,5 +6,14 @@
         "BC_accuracy": 0.86,
         "sequence_length": 80,
         "n_repetitions_per_pair": 2
+    },
+    "Schlichting2014": {
+        "n_subjects": 21,
+        "AC_accuracy": 0.652,
+        "AB_accuracy": 0.816,
+        "BC_accuracy": 0.768,
+        "sequence_length": 144,
+        "n_repetitions_per_pair": 1,
+        "note": "Schlichting, Zeithamova & Preston 2014 Hippocampus. Grayscale everyday objects; 72 AB + 72 BC pairs (sequence_length = total pairs), 3 s each, seen once. AB block always preceded its BC block; tests interleaved after each study scan, so the effective list before each test is shorter than 144. 2AFC with a familiar foil from another triad. Values are means (SEM ~.025-.034)."
     }
 }

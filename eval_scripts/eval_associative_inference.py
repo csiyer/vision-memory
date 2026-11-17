@@ -75,7 +75,7 @@ def parse_response(text):
     return -1
 
 
-def run_evaluation(evaluators, n_images=20, dataset="things", n_trials=None):
+def run_evaluation(evaluators, n_images=20, dataset="things", n_trials=None, source="local"):
     """Each trial is an independent study+test episode with a fresh sample of n_images chains."""
     n_trials = n_trials if n_trials is not None else n_images // 2
 
@@ -92,7 +92,7 @@ def run_evaluation(evaluators, n_images=20, dataset="things", n_trials=None):
         results = []
 
         for i in range(n_trials):
-            task = AssociativeInferenceTask(dataset_name=dataset, n_trials=n_images)
+            task = AssociativeInferenceTask(dataset_name=dataset, n_trials=n_images, source=source)
             trial_data = task.get_trials()
             test_trial = trial_data["test_phase"][0]
 
@@ -139,6 +139,8 @@ def main():
 
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
                         help="Dataset to use")
+    parser.add_argument("--source", choices=["local", "hf"], default="local",
+                        help="Stimulus source: local files or huggingface (Brady2008 only)")
     parser.add_argument("--output", type=str, default=None,
                         help="Output file path (default: results_assoc_<timestamp>.json)")
     args = parser.parse_args()
@@ -185,7 +187,7 @@ def main():
 
     print(f"  Dataset: {args.dataset}")
 
-    results = run_evaluation(evaluators, args.n_images, args.dataset, n_trials=args.n_trials)
+    results = run_evaluation(evaluators, args.n_images, args.dataset, n_trials=args.n_trials, source=args.source)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     n_trials = len(next(iter(results.values()))["trials"]) if results else 0

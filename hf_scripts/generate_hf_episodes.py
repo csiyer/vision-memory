@@ -16,12 +16,25 @@ import csv
 import json
 import random
 import re
+import sys
 from itertools import combinations
 from pathlib import Path
 from typing import Callable
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT))
+
+from src.color_palette import (  # noqa: E402
+    COLOR_WHEEL_IMAGE_ID,
+    HF_COLLECTION_ID,
+    PALETTE_HUES,
+    RENDERED_DIR_NAME,
+    colored_image_id,
+    gray_image_id,
+    opposite_hue,
+    sample_palette_hues,
+)
 DEFAULT_SOURCE_ROOT = REPO_ROOT / "memory_datasets"
 DEFAULT_OUT = REPO_ROOT.parent / "vision-memory-tasks" / "episodes"
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png"}
@@ -53,6 +66,9 @@ LENGTHS = {
     "paired_associate_image_image": [1, 10, 100, 1000],
     "associative_inference_image_word": [1, 10, 100, 1000],
     "associative_inference_image_image": [1, 10, 100, 800],
+    # Appended last on purpose: TASK_OFFSETS depend on task order, so inserting earlier
+    # would change the seeds (and episodes) of every task after it.
+    "color_memory_2afc": [1, 10, 100, 340],
 }
 
 TASK_ORDER = list(LENGTHS)
@@ -67,8 +83,20 @@ class AssetIndex:
         self.brady_exemplar_pairs = self._brady_pair_ids("Brady2008Exemplar", "brady_exemplar")
         self.brady_state_pairs = self._brady_pair_ids("Brady2008State", "brady_state")
         self.brady_color_objects = self._image_ids("Brady2013ColorObjects", "brady_color_objects")
+        self._check_color_palette()
         self.mst_pairs = self._mst_pairs()
         self.wordpool = self._wordpool()
+
+    def _check_color_palette(self) -> None:
+        metadata = self.source_root / RENDERED_DIR_NAME / "metadata.jsonl"
+        if not metadata.exists():
+            raise FileNotFoundError(f"Missing {metadata}. Run hf_scripts/render_color_palette.py first.")
+        rendered = {json.loads(line)["image_id"] for line in metadata.read_text(encoding="utf-8").splitlines() if line.strip()}
+        needed = {colored_image_id(i.split("/", 1)[1], h) for i in self.brady_color_objects for h in PALETTE_HUES}
+        needed |= {gray_image_id(i.split("/", 1)[1]) for i in self.brady_color_objects} | {COLOR_WHEEL_IMAGE_ID}
+        missing = needed - rendered
+        if missing:
+            raise FileNotFoundError(f"{len(missing)} rendered color images missing (e.g. {sorted(missing)[0]}); re-run render_color_palette.py.")
 
     def _image_paths(self, directory_name: str) -> list[Path]:
         root = self.source_root / directory_name
@@ -533,44 +561,54 @@ def build_serial_order_2afc(assets: AssetIndex, suite: str, length: int, episode
     episode.update({"dataset_name": "Brady2008", "study_prompt": f"Here is a sequence of {length} images to remember in order.", "study_sequence": study_sequence, "test_phase": test_phase})
     return episode
 
-def balanced_angles(rng: random.Random, n: int) -> list[float]:
-    offset = rng.random() * 360.0 / max(n, 1)
-    angles = [((index * 360.0 / n) + offset) % 360.0 for index in range(n)] if n else []
-    rng.shuffle(angles)
-    return angles
+def _color_name(source_image_id: str) -> str:
+    return source_image_id.split("/", 1)[1]
+
+
+def _color_params(length: int, **extra) -> dict:
+    return {
+        "dataset_name": "Brady2013Color",
+        "n_images": length,
+        "stimulus_collection": HF_COLLECTION_ID,
+        "palette_hues_degrees": PALETTE_HUES,
+        "color_transform": "brady_cielab_hue_rotation (pre-rendered)",
+        **extra,
+    }
+
+
+def _color_study_sequence(image_ids: list[str], hues: list[int]) -> list[dict]:
+    return [
+        {
+            "study_index": index,
+            "image_id": colored_image_id(_color_name(image_id), hue),
+            "metadata": {"source_image_id": image_id, "hue_degrees": hue},
+        }
+        for index, (image_id, hue) in enumerate(zip(image_ids, hues))
+    ]
 
 
 def build_color_memory_continuous(assets: AssetIndex, suite: str, length: int, episode_index: int, seed: int) -> dict:
     rng = random.Random(seed)
     image_ids = sample_without_replacement(rng, assets.brady_color_objects, length, "Brady color objects")
-    angles = balanced_angles(rng, length)
-    transform = {"name": "brady_cielab_hue_rotation", "version": "0.1.0"}
-
-    study_sequence = [
-        {"study_index": index, "source_image_id": image_id, "target_angle_degrees": angles[index], "render_transform": transform["name"] + "_v" + transform["version"]}
-        for index, image_id in enumerate(image_ids)
-    ]
+    hues = sample_palette_hues(rng, length)
+    study_sequence = _color_study_sequence(image_ids, hues)
     test_items = study_sequence[:]
     rng.shuffle(test_items)
     test_phase = [
         {
             "trial_index": trial_index,
-            "source_image_id": item["source_image_id"],
-            "probe_transform": "grayscale",
-            "prompt": "What was the color of this item in the study sequence? Report the hue angle in degrees.",
-            "target": item["target_angle_degrees"],
+            "image_id": gray_image_id(_color_name(item["metadata"]["source_image_id"])),
+            "color_wheel_image_id": COLOR_WHEEL_IMAGE_ID,
+            "prompt": "What was the color of this item in the study sequence? Report the hue angle in degrees on the color wheel. 0/360 degrees is the rightmost point, 90 is the top, 180 is the left, and 270 is the bottom.",
+            "target": item["metadata"]["hue_degrees"],
             "target_type": "hue_angle_degrees",
-            "metadata": {"target_angle_degrees": item["target_angle_degrees"]},
+            "metadata": {"source_image_id": item["metadata"]["source_image_id"], "target_angle_degrees": item["metadata"]["hue_degrees"]},
         }
         for trial_index, item in enumerate(test_items)
     ]
     episode = base_episode(
-        "color_memory_continuous",
-        suite,
-        length,
-        episode_index,
-        seed,
-        {"dataset_name": "Brady2013Color", "n_images": length, "color_transform": transform, "target_sampling": "balanced_rotation_angles_with_random_offset"},
+        "color_memory_continuous", suite, length, episode_index, seed,
+        _color_params(length, target_sampling="palette_hues_evenly_spaced_random_offset"),
         ["continuous_color_circular_error", "continuous_color_mean_absolute_error", "continuous_color_precision"],
     )
     episode.update({"dataset_name": "Brady2013Color", "study_prompt": "Remember the colors of these items.", "study_sequence": study_sequence, "test_phase": test_phase})
@@ -582,36 +620,61 @@ def build_color_memory_named(assets: AssetIndex, suite: str, length: int, episod
     image_ids = sample_without_replacement(rng, assets.brady_color_objects, length, "Brady color objects")
     colors = [COLOR_NAMES[index % len(COLOR_NAMES)] for index in range(length)]
     rng.shuffle(colors)
-    transform = {"name": "brady_cielab_hue_rotation", "version": "0.1.0"}
-
-    study_sequence = []
-    for index, image_id in enumerate(image_ids):
-        color_name, angle = colors[index]
-        study_sequence.append(
-            {"study_index": index, "source_image_id": image_id, "target_color_name": color_name, "target_angle_degrees": angle, "render_transform": transform["name"] + "_v" + transform["version"]}
-        )
+    study_sequence = _color_study_sequence(image_ids, [hue for _, hue in colors])
+    for item, (name, _) in zip(study_sequence, colors):
+        item["metadata"]["color_name"] = name
     test_items = study_sequence[:]
     rng.shuffle(test_items)
+    options = ", ".join(name for name, _ in COLOR_NAMES)
     test_phase = [
         {
             "trial_index": trial_index,
-            "source_image_id": item["source_image_id"],
-            "probe_transform": "grayscale",
-            "prompt": "What was the color of this item in the study sequence? Respond with a color name.",
-            "target": item["target_color_name"],
+            "image_id": gray_image_id(_color_name(item["metadata"]["source_image_id"])),
+            "prompt": f"What color was this item in the study sequence? Choose one: {options}.",
+            "target": item["metadata"]["color_name"],
             "target_type": "color_name",
-            "metadata": {"target_color_name": item["target_color_name"], "target_angle_degrees": item["target_angle_degrees"]},
+            "metadata": {"source_image_id": item["metadata"]["source_image_id"], "target_color_name": item["metadata"]["color_name"], "target_angle_degrees": item["metadata"]["hue_degrees"]},
         }
         for trial_index, item in enumerate(test_items)
     ]
     episode = base_episode(
-        "color_memory_named",
-        suite,
-        length,
-        episode_index,
-        seed,
-        {"dataset_name": "Brady2013Color", "n_images": length, "color_names": [name for name, _ in COLOR_NAMES], "color_transform": transform, "target_sampling": "balanced_named_color_rotation_angles"},
+        "color_memory_named", suite, length, episode_index, seed,
+        _color_params(length, color_names=[name for name, _ in COLOR_NAMES], target_sampling="balanced_named_colors"),
         ["named_color_accuracy", "named_color_confusion_matrix"],
+    )
+    episode.update({"dataset_name": "Brady2013Color", "study_prompt": "Remember the colors of these items.", "study_sequence": study_sequence, "test_phase": test_phase})
+    return episode
+
+
+def build_color_memory_2afc(assets: AssetIndex, suite: str, length: int, episode_index: int, seed: int) -> dict:
+    """Brady, Konkle, Alvarez & Oliva (2013, JEP:G) color 2AFC: studied hue vs. hue + 180 deg."""
+    rng = random.Random(seed)
+    image_ids = sample_without_replacement(rng, assets.brady_color_objects, length, "Brady color objects")
+    hues = sample_palette_hues(rng, length)
+    study_sequence = _color_study_sequence(image_ids, hues)
+    test_items = study_sequence[:]
+    rng.shuffle(test_items)
+    test_phase = []
+    for trial_index, item in enumerate(test_items):
+        name = _color_name(item["metadata"]["source_image_id"])
+        studied = item["metadata"]["hue_degrees"]
+        foil = opposite_hue(studied)
+        target = rng.choice([1, 2])
+        option_hues = [studied, foil] if target == 1 else [foil, studied]
+        test_phase.append(
+            {
+                "trial_index": trial_index,
+                "image_ids": [colored_image_id(name, hue) for hue in option_hues],
+                "prompt": "Both images show the same item in different colors. Which one (1 or 2) shows the color the item had in the study sequence?",
+                "target": target,
+                "target_type": "choice_index_1_based",
+                "metadata": {"source_image_id": item["metadata"]["source_image_id"], "target_angle_degrees": studied, "foil_angle_degrees": foil, "option_angles_degrees": option_hues},
+            }
+        )
+    episode = base_episode(
+        "color_memory_2afc", suite, length, episode_index, seed,
+        _color_params(length, target_sampling="palette_hues_evenly_spaced_random_offset", foil="studied_hue_plus_180_degrees"),
+        ["color_2afc_accuracy"],
     )
     episode.update({"dataset_name": "Brady2013Color", "study_prompt": "Remember the colors of these items.", "study_sequence": study_sequence, "test_phase": test_phase})
     return episode
@@ -796,6 +859,7 @@ BUILDERS: dict[str, Callable[[AssetIndex, str, int, int, int], dict]] = {
     "paired_associate_image_image": build_paired_associate_image_image,
     "associative_inference_image_word": build_associative_inference_image_word,
     "associative_inference_image_image": build_associative_inference_image_image,
+    "color_memory_2afc": build_color_memory_2afc,
 }
 
 

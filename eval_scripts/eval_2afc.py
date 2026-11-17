@@ -73,7 +73,7 @@ def parse_response(text):
     return -1
 
 
-def run_evaluation(evaluators, n_images=20, n_trials=None, foil_type='novel', dataset='things'):
+def run_evaluation(evaluators, n_images=20, n_trials=None, foil_type='novel', dataset='things', source='local'):
     """Run 2-AFC evaluation on all evaluators.
 
     Each trial is an independent study+test episode: a fresh set of n_images is
@@ -95,7 +95,7 @@ def run_evaluation(evaluators, n_images=20, n_trials=None, foil_type='novel', da
         results = []
 
         for i in range(n_trials):
-            task = AFCRecognitionTask(dataset_name=dataset, n_images=n_images, foil_type=foil_type)
+            task = AFCRecognitionTask(dataset_name=dataset, n_images=n_images, foil_type=foil_type, source=source)
             trial_data = task.get_trials()
             test_trial = trial_data['test_phase'][0]
 
@@ -145,6 +145,8 @@ def main():
                         help="Type of foils to use")
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
                         help="Dataset to use")
+    parser.add_argument("--source", choices=["local", "hf"], default="local",
+                        help="Stimulus source: local files or huggingface (Brady2008 only)")
     parser.add_argument("--output", type=str, default=None,
                         help="Output file path (default: results_2afc_<timestamp>.json)")
     parser.add_argument("--plot", action="store_true",
@@ -199,6 +201,7 @@ def main():
         n_trials,
         args.foil_type,
         args.dataset,
+        args.source,
     )
 
     if not results:

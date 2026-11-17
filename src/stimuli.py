@@ -357,6 +357,80 @@ class BradyDataset:
         )
 
 
+class ColorPaletteDataset:
+    """Pre-rendered color-task stimuli: Brady 2013 color objects x 36 hues (10-degree steps),
+    grayscale probes, and the color wheel.
+
+    Local files come from hf_scripts/render_color_palette.py; source="hf" loads the identical
+    files from the Hugging Face dataset (collection data/brady_color_rendered).
+    """
+
+    def __init__(self, root_dir='memory_datasets', source="local",
+                 repo_id="chrisiyer/vision-memory-tasks"):
+        from src.color_palette import HF_COLLECTION_ID, RENDERED_DIR_NAME
+
+        if source not in {"local", "hf"}:
+            raise ValueError(f"Unsupported ColorPaletteDataset source={source!r}. Expected 'local' or 'hf'.")
+        self.source = source
+        self.repo_id = repo_id
+        self.collection_id = HF_COLLECTION_ID
+
+        if source == "hf":
+            from huggingface_hub import hf_hub_download
+            self.hf_hub_download = hf_hub_download
+            metadata_path = hf_hub_download(repo_id=repo_id, repo_type="dataset",
+                                            filename=f"data/{HF_COLLECTION_ID}/metadata.jsonl")
+        else:
+            self.root = Path(root_dir) / RENDERED_DIR_NAME
+            metadata_path = self.root / "metadata.jsonl"
+            if not metadata_path.exists():
+                raise FileNotFoundError(
+                    f"Rendered color palette not found at {self.root}. Run "
+                    "`python hf_scripts/render_color_palette.py` once, or pass source='hf'."
+                )
+
+        with open(metadata_path, "r", encoding="utf-8") as f:
+            records = [json.loads(line) for line in f if line.strip()]
+        self.colored = {(r["source_image_id"], r["hue_degrees"]): r for r in records if r["kind"] == "colored"}
+        self.gray = {r["source_image_id"]: r for r in records if r["kind"] == "gray"}
+        self.wheel = next(r for r in records if r["kind"] == "color_wheel")
+        self.object_ids = sorted(self.gray)
+
+    def __len__(self):
+        return len(self.object_ids)
+
+    def _open(self, record):
+        if self.source == "hf":
+            path = self.hf_hub_download(repo_id=self.repo_id, repo_type="dataset",
+                                        filename=f"data/{self.collection_id}/{record['file_name']}")
+        else:
+            path = self.root / record["file_name"]
+        return Image.open(path).convert("RGB")
+
+    def colored_record(self, index, hue):
+        return self.colored[(self.object_ids[index], int(hue) % 360)]
+
+    def get_image(self, index, hue):
+        """Object `index` rendered at palette hue `hue` (degrees, multiple of 10)."""
+        return self._open(self.colored_record(index, hue))
+
+    def get_gray(self, index):
+        return self._open(self.gray[self.object_ids[index]])
+
+    def get_color_wheel(self):
+        return self._open(self.wheel)
+
+    def get_metadata(self, index, hue=None):
+        source_id = self.object_ids[index]
+        record = self.gray[source_id] if hue is None else self.colored_record(index, hue)
+        return {
+            "source": self.source,
+            "source_image_id": source_id,
+            "image_id": record["image_id"],
+            "name": source_id.split("/")[-1],
+        }
+
+
 class LaMemDataset():
     """
     Skeleton for LaMem dataset.

@@ -95,7 +95,7 @@ def parse_word_response(text, target_word):
     return text.lower()
 
 
-def run_evaluation(evaluators, n_images=20, dataset='things', n_trials=None):
+def run_evaluation(evaluators, n_images=20, dataset='things', n_trials=None, source='local'):
     """Run paired associate memory evaluation on all evaluators.
 
     Each trial is an independent study+test episode: a fresh set of n_images
@@ -117,7 +117,7 @@ def run_evaluation(evaluators, n_images=20, dataset='things', n_trials=None):
         results = []
 
         for i in range(n_trials):
-            task = PairedAssociateMemoryTask(dataset_name=dataset, n_images=n_images)
+            task = PairedAssociateMemoryTask(dataset_name=dataset, n_images=n_images, source=source)
             trial_data = task.get_trials()
             # Each episode: study all pairs, test on one randomly chosen pair
             test_trial = trial_data['test_phase'][0]
@@ -167,6 +167,8 @@ def main():
 
     parser.add_argument("--dataset", choices=["things", "Brady2008"], default="things",
                         help="Dataset to use")
+    parser.add_argument("--source", choices=["local", "hf"], default="local",
+                        help="Stimulus source: local files or huggingface (Brady2008 only)")
     parser.add_argument("--output", type=str, default=None,
                         help="Output file path (default: results_pam_<timestamp>.json)")
     parser.add_argument("--plot", action="store_true",
@@ -203,6 +205,7 @@ def main():
         args.n_images,
         args.dataset,
         n_trials=args.n_trials,
+        source=args.source,
     )
 
     # Build output with metadata at the top (base keys align with eval_continuous / eval_2afc)

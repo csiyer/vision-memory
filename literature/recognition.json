@@ -36,5 +36,36 @@
             0.83,
             0.79
         ]
+    },
+    "Konkle2010AFC": {
+        "n_subjects": 18,
+        "n_images_train": 2800,
+        "accuracy": {
+            "novel": 0.926,
+            "exemplar": 0.886
+        },
+        "exemplar_accuracy_by_n_studied_exemplars": {
+            "1": 0.886,
+            "16": 0.82
+        },
+        "note": "Konkle, Brady, Alvarez & Oliva 2010 JEP:General, Exp 1. Brady object stimuli, 3 s each, single exposure, 2AFC. Study stream contained 1-16 exemplars per category; exemplar accuracy drops ~2%/doubling of studied exemplars (2/4/8 values figure-only)."
+    },
+    "Konkle2010Continuous": {
+        "false_alarm_rate": 0.039,
+        "hit_rate_delays": [
+            1,
+            15,
+            63,
+            255,
+            1023
+        ],
+        "hit_rate_by_delay": [
+            0.95,
+            0.94,
+            0.87,
+            0.79,
+            0.63
+        ],
+        "note": "Repeat detection during the Konkle 2010 study stream; delay = intervening items. Lower than Brady 2008 at long lags, likely due to same-category exemplars in the stream."
     }
 }
