@@ -238,7 +238,7 @@ def export_color_palette(source_root: Path, out_root: Path, *, dry_run: bool) ->
     write_jsonl(collection_out / "metadata.jsonl", rows)
     return {
         "collection_id": "brady_color_rendered",
-        "source_dataset": "Brady2013ColorObjects (rendered, 36 hues x 10 deg + grayscale + color wheel)",
+        "source_dataset": "Brady2013ColorObjects (rendered, 12 hues x 30 deg + grayscale + color wheel)",
         "n_images": len(rows),
         "n_pairs": None,
     }

@@ -2,7 +2,7 @@
 """Render the fixed color palette used by the color memory tasks.
 
 Reads memory_datasets/Brady2013ColorObjects and writes memory_datasets/Brady2013ColorRendered:
-  images/h000/ ... images/h350/   each object hue-rotated in CIELAB space (10-degree steps)
+  images/h000/ ... images/h330/   each object hue-rotated in CIELAB space (30-degree steps)
   images/gray/                    grayscale probes
   images/color_wheel.png          response wheel for continuous report
   metadata.jsonl                  one row per image, keyed by HF-style image_id

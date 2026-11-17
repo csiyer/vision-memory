@@ -136,7 +136,7 @@ def colorize_image_to_cielab_hue(img, hue_angle_degrees, chroma=55):
 class ColorMemoryTask:
     """Color memory on Brady et al. (2013) objects.
 
-    All stimuli come from a fixed pre-rendered palette (36 hues, 10-degree steps; see
+    All stimuli come from a fixed pre-rendered palette (12 hues, 30-degree steps; see
     src/color_palette.py), so local runs and the Hugging Face episodes use identical images.
 
     mode: 'continuous_color_report' — report the studied hue as an angle on a color wheel

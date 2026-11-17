@@ -1,6 +1,6 @@
 """Fixed hue palette for the color memory tasks.
 
-All color-task stimuli are pre-rendered at PALETTE_HUES (every 10 degrees of CIELAB hue
+All color-task stimuli are pre-rendered at PALETTE_HUES (every 30 degrees of CIELAB hue
 rotation) by hf_scripts/render_color_palette.py, so local runs and the Hugging Face
 episodes draw from exactly the same image files.
 
@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import random
 
-PALETTE_STEP_DEGREES = 10
+PALETTE_STEP_DEGREES = 30  # coarsest step that still contains the named-color hues (0, 30, 60, 120, 240, 300)
 PALETTE_HUES = list(range(0, 360, PALETTE_STEP_DEGREES))
 
 RENDERED_DIR_NAME = "Brady2013ColorRendered"   # under memory_datasets/
@@ -50,14 +50,14 @@ def snap_to_palette(angle: float) -> int:
 
 
 def opposite_hue(hue: int) -> int:
-    """Hue 180 degrees away (always in the palette, since 36 is even)."""
+    """Hue 180 degrees away (always in the palette, since 30 divides 180)."""
     return (int(hue) + 180) % 360
 
 
 def sample_palette_hues(rng: random.Random, n: int) -> list[int]:
     """n palette hues spread evenly around the wheel with a random offset, then shuffled.
 
-    For n <= 36 all hues are distinct; for larger n every hue is used ~n/36 times.
+    For n <= 12 all hues are distinct; for larger n every hue is used ~n/12 times.
     """
     if n <= 0:
         return []

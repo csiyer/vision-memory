@@ -358,7 +358,7 @@ class BradyDataset:
 
 
 class ColorPaletteDataset:
-    """Pre-rendered color-task stimuli: Brady 2013 color objects x 36 hues (10-degree steps),
+    """Pre-rendered color-task stimuli: Brady 2013 color objects x 12 hues (30-degree steps),
     grayscale probes, and the color wheel.
 
     Local files come from hf_scripts/render_color_palette.py; source="hf" loads the identical

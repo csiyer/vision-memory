@@ -11,7 +11,7 @@ unzip memory_datasets_mst.zip
 
 Both archives contain the top-level `memory_datasets/` directory, so unzipping both will merge the Brady, wordpool, color, and MST assets into the expected layout. The full THINGS image set is not bundled.
 
-The color memory tasks use a fixed, pre-rendered palette (every object at 36 hues in 10° steps, plus grayscale probes and the color wheel). Render it once locally (~2 minutes, ~350 MB), or skip this and use `source="hf"` for the color tasks:
+The color memory tasks use a fixed, pre-rendered palette (every object at 12 hues in 30° steps, plus grayscale probes and the color wheel). Render it once locally (~1 minute, ~150 MB), or skip this and use `source="hf"` for the color tasks:
 
 ```bash
 python hf_scripts/render_color_palette.py
@@ -139,7 +139,7 @@ results = task.get_trials()
 
 ## 4. Color Memory
 
-Study colored objects, then report the remembered color. Colors are drawn from a fixed palette of 36 hues (0°, 10°, …, 350°) produced by rotating each object's hue in CIELAB space, matching the Brady color-memory helper. All images are pre-rendered (`memory_datasets/Brady2013ColorRendered`, or `data/brady_color_rendered` on Hugging Face), so local runs and the published episodes use identical files.
+Study colored objects, then report the remembered color. Colors are drawn from a fixed palette of 12 hues (0°, 30°, …, 330°) produced by rotating each object's hue in CIELAB space, matching the Brady color-memory helper. All images are pre-rendered (`memory_datasets/Brady2013ColorRendered`, or `data/brady_color_rendered` on Hugging Face), so local runs and the published episodes use identical files.
 
 ### 4a. Continuous Color Report
 
