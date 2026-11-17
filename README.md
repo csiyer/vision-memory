@@ -249,3 +249,31 @@ Plotting helpers in `plotting.py` create task-specific summaries and overlay ava
 ## Related Benchmarks
 
 These tasks are designed to be evaluated alongside benchmarks such as [Visual Haystacks](https://visual-haystacks.github.io), where models search for target visual information across long image sequences.
+
+## Human Benchmark Sources
+
+The human performance numbers in `literature/` are drawn from the studies below (the JSON key for each entry is in parentheses). If you report comparisons to these numbers, please cite the original papers.
+
+**Recognition memory** (`recognition.json`)
+- Brady, T. F., Konkle, T., Alvarez, G. A., & Oliva, A. (2008). Visual long-term memory has a massive storage capacity for object details. *PNAS, 105*(38), 14325–14329. (`Brady2008AFC`, `Brady2008Continuous`)
+- Konkle, T., Brady, T. F., Alvarez, G. A., & Oliva, A. (2010). Conceptual distinctiveness supports detailed visual long-term memory for real-world objects. *Journal of Experimental Psychology: General, 139*(3), 558–578. (`Konkle2010AFC`, `Konkle2010Continuous`)
+
+**Mnemonic similarity** (`mnemonic_similarity.json`)
+- Vanderlip, C. R., Lee, M. D., & Stark, C. E. L. (2024). Cognitive modeling of the Mnemonic Similarity Task as a digital biomarker for Alzheimer's disease. *Alzheimer's & Dementia, 20*(10). (`VanderlipStark2024_pooled`)
+- Kirwan, C. B., & Stark, C. E. L. (2007). Overcoming interference: An fMRI investigation of pattern separation in the medial temporal lobe. *Learning & Memory, 14*(9), 625–633. (`Kirwan2007_ldi_by_bin`; values read from published figures)
+
+**Serial order** (`serial_order.json`)
+- DuBrow, S., & Davachi, L. (2013). The influence of context boundaries on memory for the sequential order of events. *Journal of Experimental Psychology: General, 142*(4), 1277–1286. (`Dubrow2013`)
+- DuBrow, S., & Davachi, L. (2014). Temporal memory is shaped by encoding stability and intervening item reactivation. *Journal of Neuroscience, 34*(42), 13998–14005. (`Dubrow2014`)
+- Sherman, B. E., & Yousif, S. R. (2025). An illusion of time caused by repeated experience. *Psychological Science*. doi:10.1177/09567976251330290. (`Sherman2025`)
+
+**Color memory** (`color_memory.json`)
+- Brady, T. F., Konkle, T., Gill, J., Oliva, A., & Alvarez, G. A. (2013). Visual long-term memory has the same limit on fidelity as visual working memory. *Psychological Science, 24*(6), 981–990. (`Brady2013Color`)
+- Brady, T. F., Konkle, T., Alvarez, G. A., & Oliva, A. (2013). Real-world objects are not represented as bound units: Independent forgetting of different object details from visual memory. *Journal of Experimental Psychology: General, 142*(3), 791–808. (`BradyKonkleAlvarezOliva2013ColorAFC`)
+
+**Paired associates** (`paired_associates.json`)
+- Duncan, K. D., Tompary, A., & Davachi, L. (2014). Associative encoding and retrieval are predicted by functional connectivity in distinct hippocampal area CA1 pathways. *Journal of Neuroscience, 34*(34), 11188–11198. (`Duncan2014`)
+
+**Associative inference** (`associative_inference.json`)
+- Banino, A., Koster, R., Hassabis, D., & Kumaran, D. (2016). Retrieval-based model accounts for striking profile of episodic memory and generalization. *Scientific Reports, 6*, 31330. (`Banino2016`)
+- Schlichting, M. L., Zeithamova, D., & Preston, A. R. (2014). CA1 subfield contributions to memory integration and inference. *Hippocampus, 24*(10), 1248–1260. (`Schlichting2014`)
